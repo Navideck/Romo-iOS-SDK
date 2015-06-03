@@ -1,0 +1,124 @@
+{
+    "RMEventTickle": [
+        "Prova a\nsolleticarmi!"
+    ],
+    
+    "RMEventTickle:nose": [
+        "Solleticami\nil naso!",
+        "Prova a\nsolleticami il naso!"
+    ],
+    
+    "RMEventTickle:chin": [
+        "Solleticami\nil mento!"
+    ],
+    
+    "RMEventTickle:forehead": [
+        "Solleticami\nla fronte"
+    ],
+
+    "RMEventPokeAnywhere": [
+        "Toccami!\nToccami!",
+        "Prova a\ntoccarmi la faccia!",
+        "Toccami\nla faccia!"
+    ],
+
+    "RMEventPoke": [
+        "\nToccami la faccia!"
+    ],
+    
+    "RMEventPoke:chin": [
+        "Prova a\ntoccarmi il mento",
+        "Toccami il mento!",
+        "Toccami\nil mento!"
+    ],
+    
+    "RMEventPoke:forehead": [
+        "Prova a\ntoccarmi la fronte",
+        "Toccami\nla fronte!"
+    ],
+    
+    "RMEventPoke:nose": [
+        "Prova a\ntoccarmi il naso",
+        "Toccami\nil NASO!"
+    ],
+    
+    "RMEventPoke:eye": [
+        "Prova a\ntoccarmi l'occhio",
+        "Toccami\nl'occhio",
+        "Toccami uno\ndegli occhi",
+        "Toccami l'occhio!",
+        "Toccami\nl'OCCHIO!"
+    ],
+
+    "RMEventShake": [
+        "\nScuotimi!",
+        "Scuotimi come\nuna polaroid!",
+        "Scuoti scuoti scuoti\nSCUOTIMI!",
+        "Scuotimi!\nScuotimi!"
+    ],
+
+    "RMEventPickedUp": [
+        "\nTirami su!",
+        "Tirami\nSU!"
+    ],
+
+    "RMEventDock": [
+        "Rimettimi\nnella base!\nUrrà!",
+        "Mi sento stordito!\nRimettimi\nnella base",
+        "Presto!\nRimettimi nella\nbase robot!",
+        "Rimettimi nella\nbase robot!"
+    ],
+
+    "RMEventUndock": [
+        "Prova a scollegarmi\npiano piano",
+        "Staccami\ndalla base!",
+        "Staccami da questa\nbase robot!"
+    ],
+
+    "RMEventFaceAppear": [
+        "Mostrami il\ntuo viso",
+        "Fammi vedere\nil tuo VISO!",
+        "Dov'è il\ntuo viso?",
+        "Ehi!\nDove sei?"
+    ],
+
+    "RMEventFaceDisappear": [
+        ""
+    ],
+    
+    "RMEventHearsLoudSound": [
+                  "Batti le\nmani!",
+                  "Batti forte\nle mani!",
+                  "Fai un rumore\nforte!",
+                  "Batti!"
+                  ],
+    
+    "RMEventSeesMotion": [
+                "Moviti davanti\na me",
+                "Cammina davanti\na me",
+                "Mostrami\nqualcosa!",
+                "Mostrami qualcosa\nche si muove!"
+                ],
+    
+    "RMEventStasis": [
+                ""
+                ],
+    
+    "RMEventLightsOff": [
+                "Spegni la\nluce!",
+                "Spegni la\nluce!",
+                "Spegni\nla luce!",
+                "Fai\nbuio qui"
+                ],
+    
+    "RMEventLightsOn": [
+                "Accendi un po'\nla luce!",
+                "Fai luce\nqui",
+                "Accendi\nuna luce",
+                "Accendi la\nluce!"
+                ],
+    
+    "RMEventFavoriteColor": [
+                "Mostrami il mio\ncolore preferito!"
+                ]
+}

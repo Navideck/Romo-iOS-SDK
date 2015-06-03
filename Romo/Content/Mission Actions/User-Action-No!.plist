@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>selector</key>
+		<string>turnByAngle:(angle)angle radius:(radius)radius clockwise:(direction)clockwise</string>
+		<key>library</key>
+		<string>Drive</string>
+		<key>parameterValues</key>
+		<array>
+			<integer>15</integer>
+			<integer>0</integer>
+			<true/>
+		</array>
+	</dict>
+	<dict>
+		<key>selector</key>
+		<string>turnByAngle:(angle)angle radius:(radius)radius clockwise:(direction)clockwise</string>
+		<key>library</key>
+		<string>Drive</string>
+		<key>parameterValues</key>
+		<array>
+			<integer>15</integer>
+			<integer>0</integer>
+			<false/>
+		</array>
+	</dict>
+	<dict>
+		<key>selector</key>
+		<string>turnByAngle:(angle)angle radius:(radius)radius clockwise:(direction)clockwise</string>
+		<key>library</key>
+		<string>Drive</string>
+		<key>parameterValues</key>
+		<array>
+			<integer>15</integer>
+			<integer>0</integer>
+			<true/>
+		</array>
+	</dict>
+</array>
+</plist>

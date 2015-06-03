@@ -1,0 +1,28 @@
+{
+    "script":{
+        "name":"Character-Script-2-2",
+        "description":"Romo explains The Lab",
+        "blocks":[
+                  {
+                  "description":"Explain The Lab",
+                  "condition":{
+                  "name":"none"
+                  },
+                  "actions":[
+                             {
+                             "name":"expressionWithText",
+                             "args":["none","excited","I'm racking up\nmy skills!"]
+                             },
+                             {
+                             "name":"expressionWithText",
+                             "args":["talking","excited","The Lab is a place for\nextra training."]
+                             },
+                             {
+                             "name":"say",
+                             "args":["Everything we unlock\nis available in The Lab!"]
+                             }
+                             ]
+                  }
+                  ]
+    }
+}

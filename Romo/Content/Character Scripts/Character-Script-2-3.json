@@ -1,0 +1,95 @@
+{
+	"script": 
+	{
+		"name": "Character-Script-2-4",
+		"description": "Object permanence",
+	"blocks": 
+		[
+			{
+			"description": "Ask to play peekaboo",
+			"condition": 
+				{
+					"name": "none"
+					},
+				"actions": 
+				[
+					{
+						"name": "say",
+						"args": ["Let's play\nPeek-a-Boo!"]
+					}
+				]
+			},
+			{
+			"description": "Ask to see their face",
+			"condition": 
+				{
+					"name": "none"
+				},
+				"actions": 
+				[
+					{
+						"name": "say",
+						"args": ["Lemme see\nyour face."]
+					}
+				]
+			},
+			{
+			"description": "play",
+			"condition": 
+				{
+					"name": "face",
+					"args": ["appear"]
+					},
+				"actions": 
+				[
+					{
+						"name": "expression",
+						"args": ["yippee"]
+					},
+					{
+						"name": "say",
+						"args": ["Now cover\nyour face."]
+					}
+				]
+			},
+			{
+			"description": "Sees the face, waits for hiding",
+			"condition": 
+				{
+					"name": "face",
+					"args": ["disappear"]
+				},
+				"actions": 
+				[
+					{
+						"name": "expressionWithText",
+						"args": [
+							"sad", 
+							"sad",
+							"Where'd\nya go?"
+						]
+					}
+				]
+			},
+			{
+			"description": "",
+			"condition": 
+				{
+					"name": "face",
+					"args": ["appear"]
+				},
+				"actions": 
+				[
+					{
+						"name": "expressionWithText",
+						"args": ["excited", "excited", "I missed ya,\n${userName}!"]
+					},
+					{
+						"name": "expressionWithText",
+						"args": ["none", "curious", "Now I know\nhow to follow your face."]
+					}
+				]
+			}
+		]
+	}
+}

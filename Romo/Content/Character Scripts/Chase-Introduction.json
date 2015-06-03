@@ -1,0 +1,24 @@
+{
+	"script": {
+		"name": "Chase-Introduction",
+		"description": "Romo explains how to play Chase",
+		"blocks": [
+                   {
+                   "description": "Explain the game",
+                   "condition": {
+                   "name": "none"
+                   },
+                   "actions": [
+                               {
+                               "name": "mumbleWithRandomTextFromList",
+                               "args": ["Find something\ncolorful","Go find\na colorful ball","Show me something\ncolorful","Show me any\nbright color"]
+                               },
+                               {
+                               "name": "mumbleWithRandomTextFromList",
+                               "args": ["And I will\nchase after it!", "And I'll\nCHASE IT!", "And I'll chase anything\nthat color!", "And I'll\nchase it!", "And I'll chase\nthat color!"]
+                               }
+                               ]
+                   }
+            ]
+	}
+}

@@ -1,0 +1,27 @@
+{
+	"script":
+	{
+		"name": "Character-Script-3-6",
+		"description": "Set up line follow",
+		"blocks": [
+                   {
+                   "description": "",
+                   "condition":
+                   {
+                   "name": "none"
+                   },
+                   "actions":
+                   [
+				{
+				"name": "mumbleWithText",
+				"args": ["Now that I can\ndrive on a path"]
+				},
+                        {
+                        "name": "mumbleWithText",
+                        "args": ["I'm ready \nto follow a line!"]
+                        }
+                    ]
+                   }
+                   ]
+	}
+}

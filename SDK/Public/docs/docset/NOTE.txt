@@ -1,0 +1,3 @@
+NOTE: If you click on the top-level "RomotiveSDK" section in the XCode Organizer, XCode will crash. This is a known bug in XCode, and it has already been filed with Apple.
+
+You can click the arrow to expand the documentation and access all of the internal files.

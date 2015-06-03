@@ -1,0 +1,44 @@
+{
+	"script": {
+		"name": "Favorite-Color-Introduction",
+		"description": "Romo explains how to play Favorite Color",
+		"blocks": [
+                   {
+                   "description": "Explain the game",
+                   "condition": {
+                   "name": "none"
+                   },
+                   "actions": [
+                               {
+                               "name": "sayRandomFromList",
+                               "args": ["I have a\nfavorite color", "I have one\nfavorite color", "Try to find\nmy favorite color"]
+                               },
+                               {
+                               "name": "sayRandomFromList",
+                               "args": ["I'll give you\na hint...", "I'll help\nyou out...", "I'll give\nONE hint...", "Here's a hint..."]
+                               },
+                               {
+                               "name": "expressionToEmotion",
+                               "args": ["ponder","curious"]
+                               },
+                               {
+                               "name": "sayRandomFromList",
+                               "args": ["This color is\nbright and vivid!", "Its name is 01010010\nback home...", "The color is\nVERY BRIGHT!", "You'd see it\nin a rainbow!", "My favorite color\nis VERY bright!", "It's a solid and\nbright color!", "It's vibrant...\nand AWESOME!"]
+                               },
+                               {
+                               "name": "sayRandomFromList",
+                               "args": ["Find something\ncolorful","Go find\ncolorful stuff","Show me something\ncolorful","Show me any\nsolid color"]
+                               },
+                               {
+                               "name": "sayRandomFromList",
+                               "args": ["Wave it in front\nof me"]
+                               },
+                               {
+                               "name": "sayRandomFromList",
+                               "args": ["And let me get\na good look!", "And I'll tell you\nif I like it!", "And if I don't like it,\nkeep guessing!"]
+                               }
+                               ]
+                   }
+            ]
+	}
+}

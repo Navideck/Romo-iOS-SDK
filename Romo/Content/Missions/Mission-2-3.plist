@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>title</key>
+	<string>Peek-a-Boo</string>
+	<key>briefing</key>
+	<string>Teach me what to do when I see your Face, and when I don&apos;t see your Face.</string>
+	<key>actions</key>
+	<array>
+		<dict>
+			<key>selector</key>
+			<string>express:(expression)expression</string>
+			<key>library</key>
+			<string>Character</string>
+			<key>available count</key>
+			<string>2</string>
+		</dict>
+		<dict>
+			<key>selector</key>
+			<string>driveForwardWithSpeed:(speed)speed distance:(distance)distance</string>
+			<key>library</key>
+			<string>Drive</string>
+			<key>available count</key>
+			<string>2</string>
+		</dict>
+		<dict>
+			<key>selector</key>
+			<string>driveBackwardWithSpeed:(speed)speed distance:(distance)distance</string>
+			<key>library</key>
+			<string>Drive</string>
+			<key>available count</key>
+			<string>2</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Nod &quot;Yes!&quot;</string>
+			<key>shortTitle</key>
+			<string>Yes!</string>
+			<key>isScripted</key>
+			<true/>
+			<key>available count</key>
+			<string>1</string>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Shake &quot;No!&quot;</string>
+			<key>shortTitle</key>
+			<string>No!</string>
+			<key>isScripted</key>
+			<true/>
+			<key>available count</key>
+			<string>1</string>
+		</dict>
+	</array>
+	<key>events</key>
+	<array>
+		<string>RMEventFaceAppear</string>
+		<string>RMEventFaceDisappear</string>
+	</array>
+	<key>initial solution</key>
+	<array>
+		<dict>
+			<key>event</key>
+			<string>RMEventFaceAppear</string>
+			<key>script</key>
+			<array/>
+		</dict>
+		<dict>
+			<key>event</key>
+			<string>RMEventFaceDisappear</string>
+			<key>script</key>
+			<array/>
+		</dict>
+	</array>
+	<key>adding events</key>
+	<true/>
+	<key>editing parameters</key>
+	<true/>
+	<key>three star solution</key>
+	<array>
+		<dict>
+			<key>event</key>
+			<string>RMEventFaceAppear</string>
+			<key>properties</key>
+			<array>
+				<dict>
+					<key>count</key>
+					<true/>
+					<key>minCount</key>
+					<integer>2</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>event</key>
+			<string>RMEventFaceDisappear</string>
+			<key>properties</key>
+			<array>
+				<dict>
+					<key>count</key>
+					<true/>
+					<key>minCount</key>
+					<integer>2</integer>
+				</dict>
+			</array>
+		</dict>
+	</array>
+	<key>two star solution</key>
+	<array>
+		<dict>
+			<key>event</key>
+			<string>RMEventFaceAppear</string>
+			<key>properties</key>
+			<array>
+				<dict>
+					<key>count</key>
+					<true/>
+					<key>minCount</key>
+					<integer>1</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>event</key>
+			<string>RMEventFaceDisappear</string>
+			<key>properties</key>
+			<array>
+				<dict>
+					<key>count</key>
+					<true/>
+					<key>minCount</key>
+					<integer>1</integer>
+				</dict>
+			</array>
+		</dict>
+	</array>
+	<key>failure debriefing</key>
+	<string>Create reactions for when I see your Face and when I don&apos;t see your Face.</string>
+	<key>success debriefing</key>
+	<string>Teach me to have longer reactions.</string>
+	<key>congrats debriefing</key>
+	<string>You&apos;re good looking...for a human!</string>
+	<key>unlockables</key>
+	<array>
+		<dict>
+			<key>event</key>
+			<string>RMEventFaceAppear</string>
+		</dict>
+		<dict>
+			<key>event</key>
+			<string>RMEventFaceDisappear</string>
+		</dict>
+		<dict>
+			<key>mission</key>
+			<string>2-4</string>
+		</dict>
+	</array>
+</dict>
+</plist>

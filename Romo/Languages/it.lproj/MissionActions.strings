@@ -1,0 +1,149 @@
+/* Action title: Drive forward */
+"Action-title-Drive forward" = "Andare avanti";
+
+/* Action shortTitle: Drive forward */
+"Action-shortTitle-Drive forward" = "Andare avanti";
+
+/* Action title: Drive backward */
+"Action-title-Drive backward" = "Andare indietro";
+
+/* Action shortTitle: Drive backward */
+"Action-shortTitle-Drive backward" = "Andare indietro";
+
+/* Action title: Turn */
+"Action-title-Turn" = "Girare";
+
+/* Action shortTitle: Turn */
+"Action-shortTitle-Turn" = "Girare";
+
+/* Action title: Tilt */
+"Action-title-Tilt" = "Inclinare";
+
+/* Action shortTitle: Tilt */
+"Action-shortTitle-Tilt" = "Inclinare";
+
+/* Action title: Pause */
+"Action-title-Pause" = "Pausa";
+
+/* Action shortTitle: Pause */
+"Action-shortTitle-Pause" = "Pausa";
+
+/* Action title: Play $ */
+"Action-title-Play $" = "Riprodurre $";
+
+/* Action shortTitle: Play a song */
+"Action-shortTitle-Play a song" = "Riproduci una canzone";
+
+/* Action title: Shuffle Music */
+"Action-title-Shuffle Music" = "Riproduzione casuale";
+
+/* Action shortTitle: Shuffe Music */
+"Action-shortTitle-Shuffe Music" = "Riproduzione casuale";
+
+/* Action title: Turn on Romo's light */
+"Action-title-Turn on Romo's light" = "Accendere la luce di Romo";
+
+/* Action shortTitle: Light on */
+"Action-shortTitle-Light on" = "Luce accesa";
+
+/* Action title: Turn off Romo's light */
+"Action-title-Turn off Romo's light" = "Spegnere la luce di Romo";
+
+/* Action shortTitle: Light off */
+"Action-shortTitle-Light off" = "Luce spenta";
+
+/* Action title: Blink Romo's light */
+"Action-title-Blink Romo's light" = "Luce Romo lampeggiante";
+
+/* Action shortTitle: Blink light */
+"Action-shortTitle-Blink light" = "Luce lampeggiante";
+
+/* Action title: Act $ */
+"Action-title-Act $" = "Mostrarsi $";
+
+/* Action shortTitle: Make a face */
+"Action-shortTitle-Make a face" = "Fare una faccina";
+
+/* Action title: Become $ */
+"Action-title-Become $" = "Fare $";
+
+/* Action shortTitle: Change Romo's Mood */
+"Action-shortTitle-Change Romo's Mood" = "Cambia l'umore di Romo";
+
+/* Action title: Say */
+"Action-title-Say" = "Dire";
+
+/* Action shortTitle: Say something */
+"Action-shortTitle-Say something" = "Dire qualcosa";
+
+/* Action title: Look */
+"Action-title-Look" = "Guardare";
+
+/* Action shortTitle: Look */
+"Action-shortTitle-Look" = "Guardare";
+
+/* Action title: Backfire */
+"Action-title-Backfire" = "Restituire l'attacco";
+
+/* Action shortTitle: Backfire */
+"Action-shortTitle-Backfire" = "Restituire l'attacco";
+
+/* Action title: Take a photo */
+"Action-title-Take a photo" = "Scattare una foto";
+
+/* Action shortTitle: Photo */
+"Action-shortTitle-Photo" = "Foto";
+
+/* Action title: Record a video */
+"Action-title-Record a video" = "Registrare un video";
+
+/* Action shortTitle: Video */
+"Action-shortTitle-Video" = "Video";
+
+/* Action title: Doodle */
+"Action-title-Doodle" = "Ghirigori";
+
+/* Action shortTitle: Doodle */
+"Action-shortTitle-Doodle" = "Ghirigori";
+
+/* Action title: Sound the Alarm */
+"Action-title-Sound the Alarm" = "Fare suonare l'allarme";
+
+/* Action shortTitle: Alarm */
+"Action-shortTitle-Alarm" = "Allarme";
+
+/* Action title: Start Exploring */
+"Action-title-Start Exploring" = "Iniziare a esplorare";
+
+/* Action shortTitle: Explore */
+"Action-shortTitle-Explore" = "Esplorare";
+
+/* Action title: Stop Exploring */
+"Action-title-Stop Exploring" = "Interrompere esplorazione";
+
+/* Action shortTitle: Stop Explore */
+"Action-shortTitle-Stop Explore" = "Interrompere esplorazione";
+
+/* Action title: Change my color */
+"Action-title-Change my color" = "Cambiare colore";
+
+/* Action shortTitle: Color */
+"Action-shortTitle-Color" = "Colore";
+
+/* Action title: Drive in a Square */
+"Action-title-Drive in a Square" = "Guidare in quadrato";
+
+/* Action shortTitle: Square */
+"Action-shortTitle-Square" = "Quadrato";
+
+/* Action title: Nod "Yes!" */
+"Action-title-Nod \"Yes!\"" = "Fare \"Sì\" con la testa";
+
+/* Action shortTitle: Yes! */
+"Action-shortTitle-Yes!" = "Sì!";
+
+/* Action title: Shake "No!" */
+"Action-title-Shake \"No!\"" = "Fare \"No\" con la testa";
+
+/* Action shortTitle: No! */
+"Action-shortTitle-No!" = "No!";

@@ -1,0 +1,150 @@
+/* Action title: Drive forward */
+"Action-title-Drive forward" = "Drive forward";
+
+/* Action shortTitle: Drive forward */
+"Action-shortTitle-Drive forward" = "Drive forward";
+
+/* Action title: Drive backward */
+"Action-title-Drive backward" = "Drive backward";
+
+/* Action shortTitle: Drive backward */
+"Action-shortTitle-Drive backward" = "Drive backward";
+
+/* Action title: Turn */
+"Action-title-Turn" = "Turn";
+
+/* Action shortTitle: Turn */
+"Action-shortTitle-Turn" = "Turn";
+
+/* Action title: Tilt */
+"Action-title-Tilt" = "Tilt";
+
+/* Action shortTitle: Tilt */
+"Action-shortTitle-Tilt" = "Tilt";
+
+/* Action title: Pause */
+"Action-title-Pause" = "Pause";
+
+/* Action shortTitle: Pause */
+"Action-shortTitle-Pause" = "Pause";
+
+/* Action title: Play $ */
+"Action-title-Play $" = "Play $";
+
+/* Action shortTitle: Play a song */
+"Action-shortTitle-Play a song" = "Play a song";
+
+/* Action title: Shuffle Music */
+"Action-title-Shuffle Music" = "Shuffle Music";
+
+/* Action shortTitle: Shuffe Music */
+"Action-shortTitle-Shuffe Music" = "Shuffe Music";
+
+/* Action title: Turn on Romo's light */
+"Action-title-Turn on Romo's light" = "Turn on Romo's light";
+
+/* Action shortTitle: Light on */
+"Action-shortTitle-Light on" = "Light on";
+
+/* Action title: Turn off Romo's light */
+"Action-title-Turn off Romo's light" = "Turn off Romo's light";
+
+/* Action shortTitle: Light off */
+"Action-shortTitle-Light off" = "Light off";
+
+/* Action title: Blink Romo's light */
+"Action-title-Blink Romo's light" = "Blink Romo's light";
+
+/* Action shortTitle: Blink light */
+"Action-shortTitle-Blink light" = "Blink light";
+
+/* Action title: Act $ */
+"Action-title-Act $" = "Act $";
+
+/* Action shortTitle: Make a face */
+"Action-shortTitle-Make a face" = "Make a face";
+
+/* Action title: Become $ */
+"Action-title-Become $" = "Become $";
+
+/* Action shortTitle: Change Romo's Mood */
+"Action-shortTitle-Change Romo's Mood" = "Change Romo's Mood";
+
+/* Action title: Say */
+"Action-title-Say" = "Say";
+
+/* Action shortTitle: Say something */
+"Action-shortTitle-Say something" = "Say something";
+
+/* Action title: Look */
+"Action-title-Look" = "Look";
+
+/* Action shortTitle: Look */
+"Action-shortTitle-Look" = "Look";
+
+/* Action title: Backfire */
+"Action-title-Backfire" = "Backfire";
+
+/* Action shortTitle: Backfire */
+"Action-shortTitle-Backfire" = "Backfire";
+
+/* Action title: Take a photo */
+"Action-title-Take a photo" = "Take a photo";
+
+/* Action shortTitle: Photo */
+"Action-shortTitle-Photo" = "Photo";
+
+/* Action title: Record a video */
+"Action-title-Record a video" = "Record a video";
+
+/* Action shortTitle: Video */
+"Action-shortTitle-Video" = "Video";
+
+/* Action title: Doodle */
+"Action-title-Doodle" = "Doodle";
+
+/* Action shortTitle: Doodle */
+"Action-shortTitle-Doodle" = "Doodle";
+
+/* Action title: Sound the Alarm */
+"Action-title-Sound the Alarm" = "Sound the Alarm";
+
+/* Action shortTitle: Alarm */
+"Action-shortTitle-Alarm" = "Alarm";
+
+/* Action title: Start Exploring */
+"Action-title-Start Exploring" = "Start Exploring";
+
+/* Action shortTitle: Explore */
+"Action-shortTitle-Explore" = "Explore";
+
+/* Action title: Stop Exploring */
+"Action-title-Stop Exploring" = "Stop Exploring";
+
+/* Action shortTitle: Stop Explore */
+"Action-shortTitle-Stop Explore" = "Stop Explore";
+
+/* Action title: Change my color */
+"Action-title-Change my color" = "Change my color";
+
+/* Action shortTitle: Color */
+"Action-shortTitle-Color" = "Color";
+
+/* Action title: Drive in a Square */
+"Action-title-Drive in a Square" = "Drive in a Square";
+
+/* Action shortTitle: Square */
+"Action-shortTitle-Square" = "Square";
+
+/* Action title: Nod "Yes!" */
+"Action-title-Nod \"Yes!\"" = "Nod \"Yes!\"";
+
+/* Action shortTitle: Yes! */
+"Action-shortTitle-Yes!" = "Yes!";
+
+/* Action title: Shake "No!" */
+"Action-title-Shake \"No!\"" = "Shake \"No!\"";
+
+/* Action shortTitle: No! */
+"Action-shortTitle-No!" = "No!";
+

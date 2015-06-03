@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>title</key>
+	<string>Tickle Fight</string>
+	<key>briefing</key>
+	<string>Prepare for a tickle fight! Add Actions for when I am Tickled.</string>
+	<key>prompt</key>
+	<string>Help me prepare\nfor a tickle fight!</string>
+	<key>initial solution</key>
+	<array>
+		<dict>
+			<key>event</key>
+			<string>RMEventTickle</string>
+			<key>eventParameter</key>
+			<string>chin</string>
+			<key>script</key>
+			<array/>
+		</dict>
+		<dict>
+			<key>event</key>
+			<string>RMEventTickle</string>
+			<key>eventParameter</key>
+			<string>forehead</string>
+			<key>script</key>
+			<array/>
+		</dict>
+		<dict>
+			<key>event</key>
+			<string>RMEventTickle</string>
+			<key>eventParameter</key>
+			<string>nose</string>
+			<key>script</key>
+			<array/>
+		</dict>
+	</array>
+	<key>actions</key>
+	<array>
+		<dict>
+			<key>selector</key>
+			<string>express:(expression)expression</string>
+			<key>library</key>
+			<string>Character</string>
+			<key>available count</key>
+			<string>3</string>
+		</dict>
+		<dict>
+			<key>selector</key>
+			<string>driveForwardWithSpeed:(speed)speed distance:(distance)distance</string>
+			<key>library</key>
+			<string>Drive</string>
+			<key>available count</key>
+			<string>3</string>
+		</dict>
+		<dict>
+			<key>selector</key>
+			<string>driveBackwardWithSpeed:(speed)speed distance:(distance)distance</string>
+			<key>library</key>
+			<string>Drive</string>
+			<key>available count</key>
+			<string>3</string>
+		</dict>
+		<dict>
+			<key>selector</key>
+			<string>turnByAngle:(angle)angle radius:(radius)radius clockwise:(direction)clockwise</string>
+			<key>library</key>
+			<string>Drive</string>
+			<key>available count</key>
+			<string>3</string>
+		</dict>
+		<dict>
+			<key>selector</key>
+			<string>tiltToAngle:(angle)angle</string>
+			<key>library</key>
+			<string>Tilt</string>
+			<key>available count</key>
+			<string>3</string>
+		</dict>
+	</array>
+	<key>events</key>
+	<array>
+		<string>RMEventTickle</string>
+	</array>
+	<key>adding events</key>
+	<true/>
+	<key>editing parameters</key>
+	<true/>
+	<key>three star solution</key>
+	<array>
+		<dict>
+			<key>event</key>
+			<string>RMEventTickle</string>
+			<key>eventParameter</key>
+			<string>chin</string>
+			<key>properties</key>
+			<array>
+				<dict>
+					<key>count</key>
+					<true/>
+					<key>minCount</key>
+					<integer>3</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>event</key>
+			<string>RMEventTickle</string>
+			<key>eventParameter</key>
+			<string>nose</string>
+			<key>properties</key>
+			<array>
+				<dict>
+					<key>count</key>
+					<true/>
+					<key>minCount</key>
+					<integer>3</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>event</key>
+			<string>RMEventTickle</string>
+			<key>eventParameter</key>
+			<string>forehead</string>
+			<key>properties</key>
+			<array>
+				<dict>
+					<key>count</key>
+					<true/>
+					<key>minCount</key>
+					<integer>3</integer>
+				</dict>
+			</array>
+		</dict>
+	</array>
+	<key>two star solution</key>
+	<array>
+		<dict>
+			<key>event</key>
+			<string>RMEventTickle</string>
+			<key>eventParameter</key>
+			<string>chin</string>
+			<key>properties</key>
+			<array>
+				<dict>
+					<key>count</key>
+					<true/>
+					<key>minCount</key>
+					<integer>2</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>event</key>
+			<string>RMEventTickle</string>
+			<key>eventParameter</key>
+			<string>nose</string>
+			<key>properties</key>
+			<array>
+				<dict>
+					<key>count</key>
+					<true/>
+					<key>minCount</key>
+					<integer>2</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>event</key>
+			<string>RMEventTickle</string>
+			<key>eventParameter</key>
+			<string>forehead</string>
+			<key>properties</key>
+			<array>
+				<dict>
+					<key>count</key>
+					<true/>
+					<key>minCount</key>
+					<integer>2</integer>
+				</dict>
+			</array>
+		</dict>
+	</array>
+	<key>one star solution</key>
+	<array>
+		<dict>
+			<key>event</key>
+			<string>RMEventTickle</string>
+			<key>eventParameter</key>
+			<string>chin</string>
+			<key>properties</key>
+			<array>
+				<dict>
+					<key>count</key>
+					<true/>
+					<key>minCount</key>
+					<integer>1</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>event</key>
+			<string>RMEventTickle</string>
+			<key>eventParameter</key>
+			<string>nose</string>
+			<key>properties</key>
+			<array>
+				<dict>
+					<key>count</key>
+					<true/>
+					<key>minCount</key>
+					<integer>1</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>event</key>
+			<string>RMEventTickle</string>
+			<key>eventParameter</key>
+			<string>forehead</string>
+			<key>properties</key>
+			<array>
+				<dict>
+					<key>count</key>
+					<true/>
+					<key>minCount</key>
+					<integer>1</integer>
+				</dict>
+			</array>
+		</dict>
+	</array>
+	<key>failure debriefing</key>
+	<string>Make sure that you create reactions to all three Tickle Events.</string>
+	<key>success debriefing</key>
+	<string>Teach me to have longer reactions.</string>
+	<key>congrats debriefing</key>
+	<string>Who knew training could be so fun!</string>
+	<key>unlockables</key>
+	<array>
+		<dict>
+			<key>event</key>
+			<string>RMEventTickle</string>
+			<key>presented</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>mission</key>
+			<string>2-3</string>
+		</dict>
+	</array>
+</dict>
+</plist>

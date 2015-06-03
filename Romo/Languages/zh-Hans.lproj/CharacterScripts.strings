@@ -1,0 +1,744 @@
+/* Character-Script-Intro After a second, become curious and investigate with a sniff */
+"Who are%nyou?" = "你是谁？";
+
+/* Character-Script-Intro Realize it's a human & Earth */
+"A real-life%nhuman!" = "真正的地球人！";
+
+/* Character-Script-Intro Realize it's a human & Earth */
+"Wait%na minute!" = "等一下！";
+
+/* Character-Script-Intro Realize it's a human & Earth */
+"That%nmust mean..." = "这意思就是说…";
+
+/* Character-Script-Intro Realize it's a human & Earth */
+"Holy%nRobot!" = "神圣的%n机器人！";
+
+/* Character-Script-Intro Realize it's a human & Earth */
+"I made it%nto Earth!" = "我终于来到%n地球了！";
+
+/* Character-Script-Intro Ask their name */
+"So what's your name,%nhuman?" = "所以你叫什么名字？";
+
+/* Character-Script-Intro Ask their name */
+"Your Name" = "你的名字";
+
+/* Character-Script-Intro Say that's strange */
+"%n${userName}?!" = "%n${userName}?!";
+
+/* Character-Script-Intro Ask to be named */
+"Now that I'm here,%nI need an Earth name." = "既然我到了这里%n我就会需要一个地球的名字。";
+
+/* Character-Script-Intro Ask to be named */
+"What do you%nwanna call me?" = "你想叫我%n什么名字？";
+
+/* Character-Script-Intro Ask to be named */
+"Your Romo's Name" = "你的 Romo 名字";
+
+/* Character-Script-Intro Respond to name */
+"Ooooh!%n${romoName}!" = "哦！%n${romoName}!";
+
+/* Character-Script-Intro Romo asks you to train for the RSR */
+"Back to%nbusiness!" = "回到正题！";
+
+/* Character-Script-Intro Romo asks you to train for the RSR */
+"I'm here to train for the%nRobot Space Race." = "我要在这里练习准备机器人的太空大赛。";
+
+/* Character-Script-Intro Romo asks you to train for the RSR */
+"Wanna help me?" = "你想帮我吗？";
+
+/* Character-Script-Intro Romo asks you to train for the RSR */
+"No" = "不想";
+
+/* Character-Script-Intro Romo asks you to train for the RSR */
+"Help me Train" = "帮我训练";
+
+/* Character-Script-Intro Tell the user tough luck. */
+"I traveled across%nthe galaxy for this." = "我走遍太空就是为了这个。";
+
+/* Character-Script-Intro Tell the user tough luck. */
+"If we train hard%n I know we can win!" = "如果我们加强训练%n我有信心一定会赢！";
+
+/* Character-Script-Intro Explain the race */
+"Only robots can%nenter the race." = "只有机器人才可以参加比赛。";
+
+/* Character-Script-Intro Explain the race */
+"I never thought%nI'd compete..." = "我从来没有想过我也可以竞赛...";
+
+/* Character-Script-Intro Explain the race */
+"But now I've got%nWHEELS!" = "但我现在有滑轮！";
+
+/* Character-Script-Intro Try to move around more */
+"That doesn't%nseem right..." = "好像有点不对...";
+
+/* Character-Script-Intro Be excited about your platform */
+"Maybe I can%nturn..." = "我可能不能转动...";
+
+/* Character-Script-Intro Try to turn */
+"If we're gonna win,%nI need to learn to drive." = "如果我们要获胜，我需要学习如何驾驶。";
+
+/* Character-Script-1-1 Be thrilled */
+"I can%ndrive!" = "我能驾驶了！";
+
+/* Character-Script-1-1 Be thrilled */
+"You rock,%n${userName}!" = "你好棒，%n${userName}!";
+
+/* Character-Script-1-1 Prompt for next Mission */
+"BUT...%n to win the %n Robot Space Race" = "但...%n 如果要赢 %n 机器人太空大赛";
+
+/* Character-Script-1-1 Prompt for next Mission */
+"I need to go%nWAY faster" = "我还需要再快一点";
+
+/* Character-Script-1-2 Ask to be put on the ground */
+"That's more%nlike it!" = "这就像样！";
+
+/* Character-Script-1-2 Ask to be put on the ground */
+"Let's do some%nhigh-speed practice!" = "我们来尝试%n高速训练！";
+
+/* Character-Script-1-2 Ask to be put on the ground */
+"I should be%non the floor%nfor this..." = "你应该要把我放在地上...";
+
+/* Character-Script-1-2 Ask to be put on the ground */
+"Do I have room%nto move around?" = "我是不是有足够的空间走动？";
+
+/* Character-Script-1-2 Ask to be put on the ground */
+"Nope" = "不用";
+
+/* Character-Script-1-2 Ask to be put on the ground */
+"Yep!" = "对!";
+
+/* Character-Script-1-2 Oh well */
+"Oh well...%nMeanie" = "哦，好吧...%n讨厌鬼";
+
+/* Character-Script-1-2 Show off the speed */
+"OK..." = "好...";
+
+/* Character-Script-1-2 Show off the speed */
+"3..." = "3...";
+
+/* Character-Script-1-2 Show off the speed */
+"2..." = "2...";
+
+/* Character-Script-1-2 Show off the speed */
+"1..." = "1...";
+
+/* Character-Script-1-2 Show off the speed */
+"That was%nawesome!" = "好棒啊！";
+
+/* Character-Script-1-3 Try your best to turn */
+"I'm getting%nthe hang of%nall this driving" = "我开始抓到驾驶%n的窍门了";
+
+/* Character-Script-1-3 Try your best to turn */
+"Let's try turning left" = "我们来试试向左转";
+
+/* Character-Script-1-3 Spin way too far to the left! */
+"Whoa... too fast!" = "哇... 太快了！";
+
+/* Character-Script-1-3 Nope, didn't work either */
+"I guess I still%nneed some work." = "我觉得我还需要再加强。";
+
+/* Character-Script-1-4 Tell the user you're going to show off a little bit */
+"Check%nthis out!" = "快过来%n看看！";
+
+/* Character-Script-1-4 Get excited */
+"Let's%nkeep going!" = "我们继续吧！";
+
+/* Character-Script-1-5 Romo asks you how he got here. */
+"Do you know %nhow I got to%nEarth?" = "你知不知道我怎样来到地球的？";
+
+/* Character-Script-1-5 Romo asks you how he got here. */
+"My memory is%n pretty hazy" = "我的记忆很%n模糊";
+
+/* Character-Script-1-5 Romo asks you how he got here. */
+"I was on my%nhome planet,%nAmorino..." = "我在自己的星球名字叫%n Amorino...";
+
+/* Character-Script-1-5 Romo asks you how he got here. */
+"And I went into%na glowing blue door" = "我走进一道发光的%n蓝色大门";
+
+/* Character-Script-1-5 Romo asks you how he got here. */
+"All of a sudden..." = "然后突然间...";
+
+/* Character-Script-1-5 Romo asks you how he got here. */
+"%nSHAZAM!%n" = "%n啥喳%n";
+
+/* Character-Script-1-5 Romo asks you how he got here. */
+"%nEARTH%n" = "%n地球%n";
+
+/* Character-Script-1-5 Romo asks you how he got here. */
+"Hopefully %nwith time %n I'll remember more" = "希望时间可以%n帮我想起更多";
+
+/* Character-Script-1-6 The sandwich */
+"You're doing%npretty good..." = "你已经做得相当不错了...";
+
+/* Character-Script-1-6 The sandwich */
+"%nfor a human!%n" = "%n对于一个人类来说！%n";
+
+/* Character-Script-1-6 The sandwich */
+"But we're just%ngetting started." = "但我们才刚开始。";
+
+/* Character-Script-1-6 The sandwich */
+"Let's see you%ntry something harder!%n" = "让我们来看看%n你试试更难的！%n";
+
+/* Character-Script-1-7 The sandwich */
+"Wow, we've been%ntraining like crazy." = "哇，我们一直%n疯狂地练习。";
+
+/* Character-Script-1-7 The sandwich */
+"I already feel%nfaster and smarter." = "我已经觉得我跑得%n更快、更灵活了。";
+
+/* Character-Script-1-7 The sandwich */
+"But I've still got%na lot to learn!" = "但我还是有很多地方%n需要学习！";
+
+/* Character-Script-1-7 The sandwich */
+"Soon, I'll%nlearn to see%ndifferent colors." = "再不久，我就要%学习分辨颜色。";
+
+/* Character-Script-1-7 The sandwich */
+"Then, I'll be able%nto race around a track" = "然后，我就可以在%n轨道上比赛";
+
+/* Character-Script-1-7 The sandwich */
+"After that, we'll be ready%nfor the Robot Space Race!" = "接着，我们就可以准备参加机器人太空大赛！";
+
+/* Character-Script-1-7 The sandwich */
+"But first, let's%nlearn to nod my head!" = "但首先，我们先学习怎样点头！";
+
+/* Character-Script-1-8 Look straight and say your neck is stiff */
+"My neck %nis so stiff!" = "我的脖子%n很紧！";
+
+/* Character-Script-1-8 Look up and yawn */
+"MMM%nstretches...%n" = "MMM%n伸展一下...%n";
+
+/* Character-Script-1-8 Look up and yawn */
+"%nMuch better!%n" = "%n好多了！%n";
+
+/* Character-Script-1-9  */
+"Ask me if%nanyone will beat me%nin the Space Race" = "问我看看会不会%n有对手在太空大赛中赢过我";
+
+/* Character-Script-1-9 Say no */
+"%nNO!%n" = "%n不会!%n";
+
+/* Character-Script-1-9 Say no */
+"%nNOO!%n" = "%n不会啊!%n";
+
+/* Character-Script-1-9 Say no */
+"%nNOOOOOO!%n" = "%n肯定不会!%n";
+
+/* Character-Script-1-9  */
+"Hey I'm %npretty good%nat that" = "嘿，我对%n这个很在行";
+
+/* Character-Script-1000-0  */
+"WE DID IT!" = "我们做到了！";
+
+/* Character-Script-1000-0  */
+"All our hard work%npaid off!" = "所有的付出都是值得的！";
+
+/* Character-Script-1000-0  */
+"Thank you! Thank you!%nTHANK YOU!" = "谢谢！谢谢！非常感谢！";
+
+/* Character-Script-1000-0 Explain Romo Control */
+"There's still more%nwe can do together." = "还是有更多我们可以一起做的事。";
+
+/* Character-Script-1000-0 Explain Romo Control */
+"You can control me%nfrom another device." = "您可以从另一个设备来控制我。";
+
+/* Character-Script-1000-0 Explain Romo Control */
+"Have you tried Romo Control?" = "您有尝试过 Romo 控制程序吗？";
+
+/* Character-Script-1000-0 Explain Romo Control */
+"Yes" = "试过";
+
+/* Character-Script-1000-0 Explain Romo Control */
+"Not yet" = "没有";
+
+/* Character-Script-1000-0 Push The Lab. */
+"Oh, right!" = "哦，对了！";
+
+/* Character-Script-1000-0 Push The Lab. */
+"Well, everything you taught me%nis unlocked in The Lab!" = "好吧，你教我的一切已经在实验室解封了！";
+
+/* Character-Script-1000-0 Explain Romo Control. */
+"Really?" = "真的吗？";
+
+/* Character-Script-1000-0 Explain Romo Control. */
+"Romo Control lets you%ndrive me from anywhere%nin the WORLD!" = "通过 Romo 控制程序%n你可以在世界任何一个角落驾驶我！";
+
+/* Character-Script-1000-0 Explain Romo Control. */
+"It's easy to set up..." = "设置非常容易...";
+
+/* Character-Script-1000-0 Explain Romo Control. */
+"And a whole lot%nof fun!" = "也非常有趣！";
+
+/* Character-Script-1000-0 Explain Romo Control. */
+"Grab your iPad, iPhone,%nor a computer." = "拿起你的 iPad、iPhone、%n或电脑。";
+
+/* Character-Script-1000-0 Explain Romo Control. */
+"Open http://romo.tv%non your other device" = "在您的设备访问%nhttp://romo.tv";
+
+/* Character-Script-1000-0 Explain Romo Control. */
+"Not now" = "等会兒";
+
+/* Character-Script-1000-0 Explain Romo Control. */
+"Got it!" = "明白了！";
+
+/* Character-Script-1000-0 Explain Romo Control. */
+"Well, you can control me%nat any time." = "嗯，你可以在任何时候控制我。";
+
+/* Character-Script-1000-0 Explain Romo Control. */
+"Just follow%nthose instructions!" = "只要按照这些说明！";
+
+/* Character-Script-1000-0 Explain Romo Control. */
+"I'll be waiting%nright here." = "我会在这里等着。";
+
+/* Character-Script-2-1 Ask to be poked */
+"Poke me,%nslow poke!" = "点碰我，慢点兒！";
+
+/* Character-Script-2-1 Get poked */
+"Again!" = "再来！";
+
+/* Character-Script-2-1 Get poked again */
+"AGAINNN!!!" = "再一次！！！";
+
+/* Character-Script-2-1 Get poked again */
+"Once%nmore..." = "再试%n一次...";
+
+/* Character-Script-2-1 Get poked again */
+"Still%nhappening..." = "继续%n点碰我...";
+
+/* Character-Script-2-1 Get poked again */
+"Faster!" = "快点！";
+
+/* Character-Script-2-1 Get poked again */
+"%n5..." = "%n5...";
+
+/* Character-Script-2-1 Get poked again */
+"%n4..." = "%n4...";
+
+/* Character-Script-2-1 Get poked again */
+"%n3..." = "%n3...";
+
+/* Character-Script-2-1 Get poked again */
+"%n2..." = "%n2...";
+
+/* Character-Script-2-1 Get poked again */
+"%n1..." = "%n1...";
+
+/* Character-Script-2-1 Back to work */
+"Much%nbetter!" = "差不多了！";
+
+/* Character-Script-2-2 Explain The Lab */
+"I'm racking up%nmy skills!" = "用我的技能%n全力以赴！";
+
+/* Character-Script-2-2 Explain The Lab */
+"The Lab is a place for%nextra training." = "到实验室来做更多的练习。";
+
+/* Character-Script-2-2 Explain The Lab */
+"Everything we unlock%nis available in The Lab!" = "所有解封的技能都在实验室内！";
+
+/* Character-Script-2-4 Ask to play peekaboo */
+"Let's play%nPeek-a-Boo!" = "我们玩躲躲猫吧！";
+
+/* Character-Script-2-4 Ask to see their face */
+"Lemme see%nyour face." = "让我看看你的脸。";
+
+/* Character-Script-2-4 play */
+"Now cover%nyour face." = "现在，盖住%n你的脸。";
+
+/* Character-Script-2-4 Sees the face, waits for hiding */
+"Where'd%nya go?" = "你去哪兒呢？";
+
+/* Character-Script-2-4  */
+"I missed ya,%n${userName}!" = "我看不到你，%n${userName}！";
+
+/* Character-Script-2-4  */
+"Now I know%nhow to follow your face." = "现在我知道%n怎么跟随你的脸了。";
+
+/* Character-Script-2-5 Ask to be removed from base */
+"Getting un-docked%n feels...%n" = "正在离开对接口，感觉...%n";
+
+/* Character-Script-2-5 Ask to be removed from base */
+"%nWeird!%n" = "%n怪怪的！%n";
+
+/* Character-Script-2-5 Ask to be removed from base */
+"Try %nun-docking%n me again." = "再一次把我我从对接口%n拿开看看。";
+
+/* Character-Script-2-5 When undocked */
+"Ahhh!%nThat's a little%nTOO weird!" = "唉！%n感觉非常奇怪！";
+
+/* Character-Script-2-5 When undocked */
+"Put me %nback please!" = "把我放回%n原处吧！";
+
+/* Character-Script-2-5 When docked */
+"It's gonna take a while%nto get used to THAT!" = "还需要一段时间才能适应！";
+
+/* Character-Script-2-6 Romo enjoys his new trumpet. */
+"This is my new%n favorite ability." = "这是我最喜欢的%n新功能。";
+
+/* Character-Script-2-6 Romo explains that he'll always backfire when shaken */
+"Now, whenever you%nshake me..." = "现在，无论你怎么摇我%n...";
+
+/* Character-Script-2-6 Romo explains that he'll always backfire when shaken */
+"I'll always%ndefend myself!" = "我随时都能%n自我保护！";
+
+/* Character-Script-2-7 Tell the player to pick him up */
+"Hey%n${userName}!" = "喂%n${userName}!";
+
+/* Character-Script-2-7 Prompt for pickup */
+"Pick me up%nand bring me to%nyour favorite place." = "带我到你最喜欢%n的地方吧。";
+
+/* Character-Script-2-7 get picked up */
+"Tell me when%nwe're there!" = "到了就跟我讲！";
+
+/* Character-Script-2-7 get picked up */
+"Not Now" = "不是现在";
+
+/* Character-Script-2-7 get picked up */
+"We Made It!" = "终于到了！";
+
+/* Character-Script-2-7 something */
+"Let me%ntake a look!" = "让我看看！";
+
+/* Character-Script-2-7 Explain that you like it here */
+"I see why you%nlike it here!" = "我明白你为什么%n喜欢这里！";
+
+/* Character-Script-2-7 Ask for photo */
+"%nWant me to snap a photo?" = "%n需要我拍照吗？";
+
+/* Character-Script-2-7 Ask for photo */
+"Nope" = "不用";
+
+/* Character-Script-2-7 Ask for photo */
+"Take a Photo" = "拍照吧";
+
+/* Character-Script-2-7 Be sad and say you understand */
+"Guess I need my own%nspecial place!" = "我想我也需要一个特别%n的地方！";
+
+/* Character-Script-2-7 Takes picture */
+"%nReady..." = "%n真的吗...";
+
+/* Character-Script-2-7 Hint at exploration */
+"I'm ready for%nmore exploration!" = "我已经准备好%n继续探索！";
+
+/* Character-Script-3-1  */
+"Now that %nI can detect%nloud sounds" = "现在我可以侦测到%n很大的声音";
+
+/* Character-Script-3-1  */
+"I can hear when %nthe starting gun fires%n" = "我可以听到起步枪的声音%n";
+
+/* Character-Script-3-1  */
+"But just %nto be sure..." = "但需要确定...";
+
+/* Character-Script-3-1  */
+"Let's practice %nour starts" = "让我们实习起步吧";
+
+/* Character-Script-3-1  */
+"You clap, %nand I'll dart forward" = "你拍手，%n我就往前冲";
+
+/* Character-Script-3-1  */
+"First put me somewhere%nwith plenty of room" = "首先带我到有很多空间的地方";
+
+/* Character-Script-3-1  */
+"Do I have room%nto move around?" = "我有足够空间走动吗？";
+
+/* Character-Script-3-1  */
+"Nope" = "没有";
+
+/* Character-Script-3-1  */
+"Yep!" = "有！";
+
+/* Character-Script-3-1 Getting ready to start */
+"Let me get ready" = "让我准备一下";
+
+/* Character-Script-3-1 Getting ready to start */
+"Okay...%nbe ready to catch me" = "好吧...%n随时准备抓住我";
+
+/* Character-Script-3-1 Wiggle back into starting position */
+"Are you ready?" = "准备好了没有？";
+
+/* Character-Script-3-1 Really shout that you're ready */
+"I can't hear you!!!%nClap when you're ready!" = "我没有听到！！！%n准备好就拍手吧！";
+
+/* Character-Script-3-1 Wait */
+"There you go!%nClap Again!" = "差不多了！%n再拍手！";
+
+/* Character-Script-3-1 Activated on loud sound */
+"Looking better, %nKeep Clapping!" = "好多了，继续拍手！";
+
+/* Character-Script-3-1 Activated on loud sound */
+"We did it!" = "听到！";
+
+/* Character-Script-3-1 Activated on loud sound */
+"Let's keep going!" = "我们继续吧！";
+
+/* Character-Script-3-2 Explain wtf is about to happen */
+"Whoa...%nAll this motion..." = "哇...%n那么多动作...";
+
+/* Character-Script-3-2 Explain wtf is about to happen */
+"I'm gonna%nchill out%nfor a sec." = "让我休息一下。";
+
+/* Character-Script-3-2 Explain wtf is about to happen */
+"Ooh!%nShow me your best%nFreeze Dance." = "哦！%n让我看看你最棒的%n冻结舞蹈。";
+
+/* Character-Script-3-2 Explain wtf is about to happen */
+"Do you guys do%nFreeze Dance%non Earth?" = "你们在地球跳%n冻结舞蹈吗？";
+
+/* Character-Script-3-2 Explain wtf is about to happen */
+"It's easy!%nYou ~wiggle~ around..." = "非常容易的！%n你左右扭动...";
+
+/* Character-Script-3-2 Explain wtf is about to happen */
+"And then you FREEZE.%nJust remember..." = "然后你突然停止不动%n记着...";
+
+/* Character-Script-3-2 Explain wtf is about to happen */
+"When you move around...%nyou'll hear the sound." = "当你到处摆动时...%n你会听到声音。";
+
+/* Character-Script-3-2 Explain wtf is about to happen */
+"But if you freeze...%nthen it's just the breeze." = "但当你冻结时...%n就是那么容易。";
+
+/* Character-Script-3-2 Explain wtf is about to happen */
+"OK, talk is cheap.%nLet's see your best..." = "好，说得容易。%n看看你表现得怎么样...";
+
+/* Character-Script-3-2 Do the freeze dance */
+"That dance was..." = "那舞步是...";
+
+/* Character-Script-3-2 Do the freeze dance */
+"Incredible!%nYour arms%nare so wobbly!" = "好棒啊！%n手势非常优美！";
+
+/* Character-Script-3-3 Looks up and chuckles */
+"That's...%npretty neat." = "这...%n很特别。";
+
+/* Character-Script-3-3 Looks up and chuckles */
+"Can we%ntrain some more?" = "我们可以%n再多练习吗？";
+
+/* Character-Script-3-4 Set-up Photo Safari */
+"I can explore%nall on my own!" = "我可以自己探索一切！";
+
+/* Character-Script-3-4 Set-up Photo Safari */
+"Do you remember%nmy favorite color?" = "还记得我最喜欢的%n颜色吗？";
+
+/* Character-Script-3-4 Set-up Photo Safari */
+"Well it's time for a%nPhoto Safari!" = "是时候拍游猎照记录！";
+
+/* Character-Script-3-5 Show off them photos */
+"Look at the photos%nI snapped!" = "先看看我拍的照片！";
+
+/* Character-Script-3-5 Show off them photos */
+"I'll save these in%nyour Camera app." = "我会把照片保存到您的%n摄像头程序。";
+
+/* Character-Script-3-6  */
+"Now that I can%ndrive on a path" = "现在我可以再路径上%n驾驶";
+
+/* Character-Script-3-6  */
+"I'm ready %nto follow a line!" = "我已经准备好%n跟路线行走！";
+
+/* Chase-Introduction-First-Run Explains Chase */
+"The Robot Space Race%nis almost here!" = "机器人太空大赛快到了！";
+
+/* Chase-Introduction-First-Run Explains Chase */
+"It's time for%nsome practice." = "是时候准备练习了。";
+
+/* Chase-Introduction-First-Run Explains Chase */
+"The first leg of%nthe race is Chase." = "第一站比赛是追逐。";
+
+/* Chase-Introduction-First-Run Explains Chase */
+"Robots race after%na colorful ball." = "机器人跟着彩球走动。";
+
+/* Chase-Introduction-First-Run Explains Chase */
+"Let's use everying%nyou taught me..." = "让我试试你教我的一切...";
+
+/* Chase-Introduction-First-Run Explains Chase */
+"...and%nstart chasing!" = "...现在%n开始！";
+
+/* Chase-Introduction Explain the game */
+"Find something%ncolorful" = "找色彩丰富的东西";
+
+/* Chase-Introduction Explain the game */
+"Go find%na colorful ball" = "去找一个有颜色的球";
+
+/* Chase-Introduction Explain the game */
+"Show me something%ncolorful" = "让我看看一个有颜色的东西";
+
+/* Chase-Introduction Explain the game */
+"Show me any%nbright color" = "让我看看一个色彩鲜艳的东西";
+
+/* Chase-Introduction Explain the game */
+"And I will%nchase after it!" = "然后我会追着！";
+
+/* Chase-Introduction Explain the game */
+"And I'll%nCHASE IT!" = "我会追着！";
+
+/* Chase-Introduction Explain the game */
+"And I'll chase anything%nthat color!" = "我会跟着这个颜色追逐！";
+
+/* Chase-Introduction Explain the game */
+"And I'll%nchase it!" = "我会追着！";
+
+/* Chase-Introduction Explain the game */
+"And I'll chase%nthat color!" = "我会追着这个颜色跑！";
+
+/* Favorite-Color-Introduction-First-Run Romo didn't realize how pretty Earth was */
+"I came to Earth%nto learn to race" = "我到地球来练习怎样%n赛跑";
+
+/* Favorite-Color-Introduction-First-Run Romo didn't realize how pretty Earth was */
+"All work%nand no play" = "一直在训练，%n不好玩";
+
+/* Favorite-Color-Introduction-First-Run Romo didn't realize how pretty Earth was */
+"Boy%nwas I wrong!" = "唉，是我错了！";
+
+/* Favorite-Color-Introduction-First-Run Romo didn't realize how pretty Earth was */
+"On Earth, there's%nso much to explore!" = "在地球有很多新事物%n等我去探索！";
+
+/* Favorite-Color-Introduction-First-Run Lead in to interactive help */
+"Let me%nshow you something" = "让我给你%n看看这个";
+
+/* Favorite-Color-Introduction Explain the game */
+"I have a%nfavorite color" = "我有喜欢的%n颜色";
+
+/* Favorite-Color-Introduction Explain the game */
+"I have one%nfavorite color" = "我有一个最喜欢的%n颜色";
+
+/* Favorite-Color-Introduction Explain the game */
+"Try to find%nmy favorite color" = "去找找我最%n喜欢的颜色";
+
+/* Favorite-Color-Introduction Explain the game */
+"I'll give you%na hint..." = "我会给你一个提示...";
+
+/* Favorite-Color-Introduction Explain the game */
+"I'll help%nyou out..." = "我来帮帮你ba...";
+
+/* Favorite-Color-Introduction Explain the game */
+"I'll give%nONE hint..." = "我给你一个%n提示...";
+
+/* Favorite-Color-Introduction Explain the game */
+"Here's a hint..." = "提示是...";
+
+/* Favorite-Color-Introduction Explain the game */
+"This color is%nbright and vivid!" = "这个颜色比较%n鲜艳和生动！";
+
+/* Favorite-Color-Introduction Explain the game */
+"Its name is 01010010%nback home..." = "我们那边称呼这个颜色是%n01010010";
+
+/* Favorite-Color-Introduction Explain the game */
+"The color is%nVERY BRIGHT!" = "颜色非常鲜艳！";
+
+/* Favorite-Color-Introduction Explain the game */
+"You'd see it%nin a rainbow!" = "你可以在彩虹内%n找到的！";
+
+/* Favorite-Color-Introduction Explain the game */
+"My favorite color%nis VERY bright!" = "我最喜欢的颜色很鲜艳！";
+
+/* Favorite-Color-Introduction Explain the game */
+"It's a solid and%nbright color!" = "是一个既纯又鲜艳的颜色！";
+
+/* Favorite-Color-Introduction Explain the game */
+"It's vibrant...%nand AWESOME!" = "是充满活力的...%n同时也很棒！";
+
+/* Favorite-Color-Introduction Explain the game */
+"Find something%ncolorful" = "找一样充满色彩的东西";
+
+/* Favorite-Color-Introduction Explain the game */
+"Go find%ncolorful stuff" = "去找充满色彩%n的东西";
+
+/* Favorite-Color-Introduction Explain the game */
+"Show me something%ncolorful" = "让我看看充满色彩%n的东西吧";
+
+/* Favorite-Color-Introduction Explain the game */
+"Show me any%nsolid color" = "让我看看任何有纯色的东西";
+
+/* Favorite-Color-Introduction Explain the game */
+"Wave it in front%nof me" = "在我前面摇动一下";
+
+/* Favorite-Color-Introduction Explain the game */
+"And let me get%na good look!" = "让我看清楚！";
+
+/* Favorite-Color-Introduction Explain the game */
+"And I'll tell you%nif I like it!" = "如果我喜欢就会跟你讲！";
+
+/* Favorite-Color-Introduction Explain the game */
+"And if I don't like it,%nkeep guessing!" = "如果我不喜欢你就继续猜吧！";
+
+/* LineFollow-Introduction-First-Run  */
+"Our final training is..." = "最后一项训练是...";
+
+/* LineFollow-Introduction-First-Run  */
+"%nFollowing a line!%n" = "%n跟随路线走！%n";
+
+/* LineFollow-Introduction-First-Run  */
+"At the Robot Space Race,%nthe line is made of..." = "在机器人太空大赛中，%n线路构造是...";
+
+/* LineFollow-Introduction-First-Run  */
+"Hyper-charged photons!" = "超带电的光子！";
+
+/* LineFollow-Introduction-First-Run  */
+"On Earth,%nwe'll use colored tape." = "在地球，%n我们将用彩色胶带。";
+
+/* LineFollow-Introduction-First-Run  */
+"Go get colored tape!%nI'll wait for you." = "去拿彩色胶带！%n我会等你。";
+
+/* LineFollow-Introduction-First-Run Ask for tape */
+"Do you have%ncolored tape?" = "你有没有%n颜色胶带？";
+
+/* LineFollow-Introduction-First-Run Ask for tape */
+"No tape" = "没有胶带";
+
+/* LineFollow-Introduction-First-Run Ask for tape */
+"Yep!" = "有！";
+
+/* LineFollow-Introduction-First-Run No tape */
+"Come on, ${userName}!" = "不会这样吧，${userName}!";
+
+/* LineFollow-Introduction-First-Run No tape */
+"I'll show you how%nit works." = "我会示范给你看怎样做。";
+
+/* LineFollow-Introduction-First-Run No tape */
+"And when you have tape,%nwe can play." = "当你有胶带的时候，%n我们就可以开始玩。";
+
+/* LineFollow-Introduction-First-Run Yes tape */
+"Let's get started!" = "让我们准备好开始！";
+
+/* LineFollow-Introduction-First-Run Continue instructions for laying tape */
+"On the ground, build a%nracetrack with tape." = "在地面上，用胶带建起一条路线。";
+
+/* LineFollow-Introduction-First-Run Continue instructions for laying tape */
+"Take your time!%n" = "慢慢来！%n";
+
+/* LineFollow-Introduction-First-Run Give them an option to see a video */
+"Wanna see a video of%nLine Follow in action?" = "想看看跟随路线的视频吗？";
+
+/* LineFollow-Introduction-First-Run Give them an option to see a video */
+"No" = "不用";
+
+/* LineFollow-Introduction-First-Run Give them an option to see a video */
+"Watch video" = "看视频";
+
+/* LineFollow-Introduction-First-Run See Video */
+"Got it?" = "明白吗？";
+
+/* LineFollow-Introduction-First-Run See Video */
+"Now go build%nyour track!" = "现在开始建立你的%n赛道吧！";
+
+/* LineFollow-Introduction-First-Run DO NOT See Video */
+"Okay, I'll leave you to%nbuild your track." = "好吧，我让你独自建立您的赛道。";
+
+/* LineFollow-Introduction-First-Run Ask them to let Romo know when they are done! */
+"Tell me when you're%ndone building." = "建好的时候跟我说一声吧。";
+
+/* LineFollow-Introduction-First-Run Ask them to let Romo know when they are done! */
+"Not Yet" = "还没好";
+
+/* LineFollow-Introduction-First-Run Ask them to let Romo know when they are done! */
+"Ready!" = "准备好了！";
+
+/* LineFollow-Introduction-First-Run When they are ready, progress! */
+"Let's do this!" = "我们来试试看吧！";
+
+/* LineFollow-Introduction-First-Run Not Yet done, say you'll wait */
+"Okay, I'll wait." = "好，我等着。";
+
+/* LineFollow-Introduction-First-Run Not Yet done, say you'll wait */
+"Tell me when you're%ndone building my racetrack." = "建好赛道的时候跟我说一声哦。";
+
+/* LineFollow-Introduction-First-Run Not Yet done, say you'll wait */
+"Not Yet" = "还没好";
+
+/* LineFollow-Introduction-First-Run Not Yet done, say you'll wait */
+"Ready!" = "准备好了！";
+
+/* LineFollow-Introduction-First-Run Not done again? let's use what we have */
+"Let's use%nwhat you have so far!" = "让我使用%n你所建成的赛道吧！";
+

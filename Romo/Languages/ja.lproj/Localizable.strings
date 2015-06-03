@@ -1,0 +1,1106 @@
+﻿/* Action-Duration-Input-Label-Title */
+"Action-Duration-Input-Label-Title" = "この時間は何もしない";
+
+/* Action-Emotion-Bewildered-Title */
+"Action-Emotion-Bewildered-Title" = "こまる";
+
+/* Action-Emotion-Curious-Title */
+"Action-Emotion-Curious-Title" = "きょうみをもつ";
+
+/* Action-Emotion-Delighted-Title */
+"Action-Emotion-Delighted-Title" = "楽しくなる";
+
+/* Action-Emotion-Excited-Title */
+"Action-Emotion-Excited-Title" = "ワクワクする";
+
+/* Action-Emotion-Happy-Title */
+"Action-Emotion-Happy-Title" = "ハッピーになる";
+
+/* Action-Emotion-Indifferent-Title */
+"Action-Emotion-Indifferent-Title" = "むかんしんになる";
+
+/* Action-Emotion-Sad-Title */
+"Action-Emotion-Sad-Title" = "かなしくなる";
+
+/* Action-Emotion-Scared-Title */
+"Action-Emotion-Scared-Title" = "こわがる";
+
+/* Action-Emotion-Sleep-Title */
+"Action-Emotion-Sleep-Title" = "ねむる";
+
+/* Action-Emotion-Sleepy-Title */
+"Action-Emotion-Sleepy-Title" = "ねむくなる";
+
+/* Action-Expression-Angry-Title */
+"Action-Expression-Angry-Title" = "おこる";
+
+/* Action-Expression-Backfire-Title */
+"Action-Expression-Backfire-Title" = "バックファイヤー";
+
+/* Action-Expression-Bewildered-Title */
+"Action-Expression-Bewildered-Title" = "こまる";
+
+/* Action-Expression-Bored-Title */
+"Action-Expression-Bored-Title" = "たいくつそうにする";
+
+/* Action-Expression-Chuckle-Title */
+"Action-Expression-Chuckle-Title" = "クスクスわらう";
+
+/* Action-Expression-Curious-Title */
+"Action-Expression-Curious-Title" = "きになる";
+
+/* Action-Expression-Dizzy-Title */
+"Action-Expression-Dizzy-Title" = "ふらふらする";
+
+/* Action-Expression-Embarrassed-Title */
+"Action-Expression-Embarrassed-Title" = "はずかしそうにする";
+
+/* Action-Expression-Excited-Title */
+"Action-Expression-Excited-Title" = "ワクワクする";
+
+/* Action-Expression-Exhausted-Title */
+"Action-Expression-Exhausted-Title" = "つかれる";
+
+/* Action-Expression-Happy-Title */
+"Action-Expression-Happy-Title" = "ハッピーになる";
+
+/* Action-Expression-Hiccup-Title */
+"Action-Expression-Hiccup-Title" = "しゃっくりする";
+
+/* Action-Expression-HoldBreath-Title */
+"Action-Expression-HoldBreath-Title" = "いきをのむ";
+
+/* Action-Expression-Laugh-Title */
+"Action-Expression-Laugh-Title" = "わらう";
+
+/* Action-Expression-LetDown-Title */
+"Action-Expression-LetDown-Title" = "がっかりする";
+
+/* Action-Expression-LookAround-Title */
+"Action-Expression-LookAround-Title" = "見回す";
+
+/* Action-Expression-Love-Title */
+"Action-Expression-Love-Title" = "こいにおちる";
+
+/* Action-Expression-Mumbling-Title */
+"Action-Expression-Mumbling-Title" = "ぶつぶつ言いはじめる";
+
+/* Action-Expression-None-Title */
+"Action-Expression-None-Title" = "顔をしかめる";
+
+/* Action-Expression-Ponder-Title */
+"Action-Expression-Ponder-Title" = "じっくり考える";
+
+/* Action-Expression-Proud-Title */
+"Action-Expression-Proud-Title" = "ほこらしげにする";
+
+/* Action-Expression-Sad-Title */
+"Action-Expression-Sad-Title" = "かなしくなる";
+
+/* Action-Expression-Scared-Title */
+"Action-Expression-Scared-Title" = "こわがる";
+
+/* Action-Expression-Sleepy-Title */
+"Action-Expression-Sleepy-Title" = "ねむくなる";
+
+/* Action-Expression-Smack-Title */
+"Action-Expression-Smack-Title" = "がめんにぶつかる";
+
+/* Action-Expression-Sneeze-Title */
+"Action-Expression-Sneeze-Title" = "くしゃみをする";
+
+/* Action-Expression-Sniff-Title */
+"Action-Expression-Sniff-Title" = "においをかぐ";
+
+/* Action-Expression-Startled-Title */
+"Action-Expression-Startled-Title" = "びっくりしたようにする";
+
+/* Action-Expression-Struggle-Title */
+"Action-Expression-Struggle-Title" = "ひっしで動く";
+
+/* Action-Expression-Want-Title */
+"Action-Expression-Want-Title" = "それがほしい";
+
+/* Action-Expression-Wee-Title */
+"Action-Expression-Wee-Title" = "イェーイ！";
+
+/* Action-Expression-Yawn-Title */
+"Action-Expression-Yawn-Title" = "あくびをする";
+
+/* Action-Expression-Yippee-Title */
+"Action-Expression-Yippee-Title" = "わーい！";
+
+/* Action-Look-Direction-Ahead */
+"Action-Look-Direction-Ahead" = "前";
+
+/* Action-Look-Direction-down */
+"Action-Look-Direction-down" = "下";
+
+/* Action-Look-Direction-left */
+"Action-Look-Direction-left" = "左";
+
+/* Action-Look-Direction-right */
+"Action-Look-Direction-right" = "右";
+
+/* Action-Look-Direction-up */
+"Action-Look-Direction-up" = "上";
+
+/* Action-Parameter-Distance-Unit */
+"Action-Parameter-Distance-Unit" = " cm";
+
+/* Action-Parameter-Percent-Unit */
+"Action-Parameter-Percent-Unit" = "%";
+
+/* Action-Parameter-Time-Unit */
+"Action-Parameter-Time-Unit" = " びょう";
+
+/* Chase-Title */
+"Chase-Title" = "追いかける";
+
+/* Chase-Object-Ready-Prompt */
+"Chase-Object-Ready-Prompt" = "カラフルなものを\nじゅんびできた？";
+
+/* Chase-Different-Color-Prompt */
+"Chase-Different-Color-Prompt" = "べつの色を追いかける？";
+
+/* Chase-Different-Color-Yes */
+"Chase-Different-Color-Yes" = "あたらしい色";
+
+/*Chase-Fill-Training-Prompt-1 */
+"Chase-Fill-Training-Prompt-1" = "カラフルなもので円をうめよう";
+
+/*Chase-Fill-Training-Prompt-2 */
+"Chase-Fill-Training-Prompt-2" = "目の前のものを全てどけよう";
+
+/*Chase-Fill-Training-Prompt-Final */
+"Chase-Fill-Training-Prompt-Final" = "ぼくの前でものをふって！\n色がうつってる？";
+
+/*Chase-Fill-Training-Prompt-Again */
+"Chase-Fill-Training-Prompt-Again" = "もう一回";
+
+/* Chase-Motivation-No */
+"Chase-Motivation-No" = "また後で";
+
+/* Chase-Motivation-Prompt-1 */
+"Chase-Motivation-Prompt-1" = "走り回って\n何かを追いかけよう！";
+
+/* Chase-Motivation-Prompt-2 */
+"Chase-Motivation-Prompt-2" = "追いかけて遊びたいな！";
+
+/* Chase-Motivation-Prompt-3 */
+"Chase-Motivation-Prompt-3" = "何かを追いかけたいな！";
+
+/* Chase-Motivation-Prompt-4 */
+"Chase-Motivation-Prompt-4" = "おねがいだから\n追いかけっこしてくれる？！";
+
+/* Chase-Motivation-Prompt-5 */
+"Chase-Motivation-Prompt-5" = "追いかける時間だよ！";
+
+/* Chase-Motivation-Yes */
+"Chase-Motivation-Yes" = "追いかけっこしよう！";
+
+/* Chase-Wave-Prompt */
+"Chase-Wave-Prompt" = "追いかけるために\n色のあるものをふろう！";
+
+/* Chase-Grab-Ball-Prompt */
+"Chase-Grab-Ball-Prompt" = "なにかカラフルな\nものをもってきて！";
+
+/* Compile-MicPerms-Alert-Message */
+"Compile-MicPerms-Alert-Message" = "ロモが大きな音を聞けるように、マイクへのアクセスを許可してください。\n\n設定 > プライバシー > マイクを開きます。\n\nつぎにロモに対してアクセスを許可します。";
+
+/* Compile-MicPerms-Alert-Title */
+"Compile-MicPerms-Alert-Title" = "マイクの許可が必要です。";
+
+/* Compile-PhotoPerms-Alert-Message */
+"Compile-PhotoPerms-Alert-Message" = "ロモが写真とビデオを撮れるように、写真ライブラリへのアクセスを許可してください。\n\n設定 > プライバシー > 写真を開きます。\n\n次にロモに対してアクセスを許可します。";
+
+/* Compile-PhotoPerms-Alert-Title */
+"Compile-PhotoPerms-Alert-Title" = "写真の許可が必要です。";
+
+/* Compile-Stage-1 */
+"Compile-Stage-1" = "Romo準備中";
+
+/* Compile-Stage-2 */
+"Compile-Stage-2" = "3…";
+
+/* Compile-Stage-3 */
+"Compile-Stage-3" = "2…";
+
+/* Compile-Stage-4 */
+"Compile-Stage-4" = "1…";
+
+/* Debriefing-ContinueButton-Title */
+"Debriefing-ContinueButton-Title" = "つづける";
+
+/* Debriefing-FailForFlip */
+"Debriefing-FailForFlip" = "ずっとひっくりかえっていたら、ロボット宇宙レースで勝つなんてむりだよ";
+
+/* Debriefing-FailForRobotDisconnect */
+"Debriefing-FailForRobotDisconnect" = "ミッションをかんりょうするまでドックから外すことはできないよ！";
+
+/* Debriefing-FailForTilt */
+"Debriefing-FailForTilt" = "さいごまでかたむけられなかった。たいらなばしょでトレーニングしてね！";
+
+/* Debriefing-FailForTimeout */
+"Debriefing-FailForTimeout" = "時間ぎれ！もういちどやってみよう";
+
+/* Debriefing-FailForTurn */
+"Debriefing-FailForTurn" = "曲がろうとして動けなくなった！かたい地面において、そこに何もないようにしよう";
+
+/* Debriefing-Failure-Title */
+"Debriefing-Failure-Title" = "しっぱい";
+
+/* Debriefing-HINT: */
+"Debriefing-HINT:" = "ヒント: ";
+
+/* Debriefing-RetryButton-Replay */
+"Debriefing-RetryButton-Replay" = "リプレイ？";
+
+/* Debriefing-RetryButton-TryAgain */
+"Debriefing-RetryButton-TryAgain" = "もう一回";
+
+/* Debriefing-Success-Title */
+"Debriefing-Success-Title" = "せいこう！";
+
+/* DockingRequired-BuyButton-Title */
+"DockingRequired-BuyButton-Title" = "今すぐロモをうけ入れよう";
+
+/* DockingRequired-controlButtonTitle */
+"DockingRequired-controlButtonTitle" = "べつのロモをそうさする";
+
+/* DockingRequired-RomoControl-Download-Alert-Message */
+"DockingRequired-RomoControl-Download-Alert-Message" = "ロモをそうさするために、App Storeからあたらしいロモコントロールアプリをダウンロードしてください。";
+
+/* DockingRequired-RomoControl-Download-Alert-No */
+"DockingRequired-RomoControl-Download-Alert-No" = "そうさしない";
+
+/* DockingRequired-RomoControl-Download-Alert-Title */
+"DockingRequired-RomoControl-Download-Alert-Title" = "ロモコントロールをダウンロード";
+
+/* DockingRequired-RomoControl-Download-Alert-Yes */
+"DockingRequired-RomoControl-Download-Alert-Yes" = "ダウンロード";
+
+/* DockingRequired-Subtitle */
+"DockingRequired-Subtitle" = "始める前に、ボクを\nベースに接続して！";
+
+/* DockingRequired-Title */
+"DockingRequired-Title" = "タイヤを、お願い！";
+
+/* DockingRequired-titleLabelDefaultText */
+"DockingRequired-titleLabelDefaultText" = "接続してない";
+
+/* Event-ParameterlessName-Dock */
+"Event-ParameterlessName-Dock" = "ドック";
+
+/* Event-ParameterlessName-FaceAppear */
+"Event-ParameterlessName-FaceAppear" = "顔を見る";
+
+/* Event-ParameterlessName-FaceDisappear */
+"Event-ParameterlessName-FaceDisappear" = "顔がない";
+
+/* Favorite-Color-Title */
+"Favorite-Color-Title" = "好きな色";
+
+/* Event-ParameterlessName-FavoriteColor */
+"Event-ParameterlessName-FavoriteColor" = "好きな色";
+
+/* Event-ParameterlessName-HearsLoudSound */
+"Event-ParameterlessName-HearsLoudSound" = "大きな音";
+
+/* Event-ParameterlessName-LightsOff */
+"Event-ParameterlessName-LightsOff" = "ライトを消す";
+
+/* Event-ParameterlessName-LightsOn */
+"Event-ParameterlessName-LightsOn" = "ライトをつける";
+
+/* Event-ParameterlessName-MissionStart */
+"Event-ParameterlessName-MissionStart" = "ミッションスタート";
+
+/* Event-ParameterlessName-PickedUp */
+"Event-ParameterlessName-PickedUp" = "もちあげる";
+
+/* Event-ParameterlessName-Poke */
+"Event-ParameterlessName-Poke" = "つつく";
+
+/* Event-ParameterlessName-PokeAnywhere */
+"Event-ParameterlessName-PokeAnywhere" = "つつく";
+
+/* Event-ParameterlessName-PutDown */
+"Event-ParameterlessName-PutDown" = "下におく";
+
+/* Event-ParameterlessName-SeesMotion */
+"Event-ParameterlessName-SeesMotion" = "動き";
+
+/* Event-ParameterlessName-Shake */
+"Event-ParameterlessName-Shake" = "ふる";
+
+/* Event-ParameterlessName-Stasis */
+"Event-ParameterlessName-Stasis" = "動けない";
+
+/* Event-ParameterlessName-Tickle */
+"Event-ParameterlessName-Tickle" = "くすぐる";
+
+/* Event-ParameterlessName-Time */
+"Event-ParameterlessName-Time" = "時間";
+
+/* Event-ParameterlessName-Undock */
+"Event-ParameterlessName-Undock" = "ドックから外す";
+
+/* Event-ReadableName-Dock */
+"Event-ReadableName-Dock" = "ドックにつなげる時";
+
+/* Event-ReadableName-FaceAppear */
+"Event-ReadableName-FaceAppear" = "顔が見える時";
+
+/* Event-ReadableName-FaceDisappear */
+"Event-ReadableName-FaceDisappear" = "顔が見えない時";
+
+/* Event-ReadableName-FavoriteColor */
+"Event-ReadableName-FavoriteColor" = "好きな色が見えた時";
+
+/* Event-ReadableName-HearsLoudSound */
+"Event-ReadableName-HearsLoudSound" = "大きな音を聞いた時";
+
+/* Event-ReadableName-LightsOff */
+"Event-ReadableName-LightsOff" = "ライトがきえる時";
+
+/* Event-ReadableName-LightsOn */
+"Event-ReadableName-LightsOn" = "ライトがつく時";
+
+/* Event-ReadableName-MissionStart */
+"Event-ReadableName-MissionStart" = "スライドして開始したあと";
+
+/* Event-ReadableName-PickedUp */
+"Event-ReadableName-PickedUp" = "もちあげられる時";
+
+/* Event-ReadableName-Poke */
+"Event-ReadableName-Poke" = "ボクの$をつつく時";
+
+/* Event-ReadableName-PokeAnywhere */
+"Event-ReadableName-PokeAnywhere" = "ボクをつつく時";
+
+/* Event-ReadableName-PutDown */
+"Event-ReadableName-PutDown" = "下におかれる時";
+
+/* Event-ReadableName-SeesMotion */
+"Event-ReadableName-SeesMotion" = "動きを見た時";
+
+/* Event-ReadableName-Shake */
+"Event-ReadableName-Shake" = "ボクをふる時";
+
+/* Event-ReadableName-Stasis */
+"Event-ReadableName-Stasis" = "動けなくなった時";
+
+/* Event-ReadableName-Tickle */
+"Event-ReadableName-Tickle" = "ボクの$をくすぐる時";
+
+/* Event-ReadableName-Time */
+"Event-ReadableName-Time" = "$の時";
+
+/* Event-ReadableName-Undock */
+"Event-ReadableName-Undock" = "ボクをドックから外す時";
+
+/* Event-ShortName-Dock */
+"Event-ShortName-Dock" = "ドックにつないで";
+
+/* Event-ShortName-FaceAppear */
+"Event-ShortName-FaceAppear" = "顔";
+
+/* Event-ShortName-FaceDisappear */
+"Event-ShortName-FaceDisappear" = "顔がない";
+
+/* Event-ShortName-FavoriteColor */
+"Event-ShortName-FavoriteColor" = "好きな色";
+
+/* Event-ShortName-HearsLoudSound */
+"Event-ShortName-HearsLoudSound" = "大きな音";
+
+/* Event-ShortName-LightsOff */
+"Event-ShortName-LightsOff" = "ライトを消す";
+
+/* Event-ShortName-LightsOn */
+"Event-ShortName-LightsOn" = "ライトをつける";
+
+/* Event-ShortName-MissionStart */
+"Event-ShortName-MissionStart" = "ミッションスタート";
+
+/* Event-ShortName-PickedUp */
+"Event-ShortName-PickedUp" = "もち上げる";
+
+/* Event-ShortName-Poke */
+"Event-ShortName-Poke" = "ボクの$をつついて";
+
+/* Event-ShortName-PokeAnywhere */
+"Event-ShortName-PokeAnywhere" = "ボクをつついて";
+
+/* Event-ShortName-PutDown */
+"Event-ShortName-PutDown" = "下におく";
+
+/* Event-ShortName-SeesMotion */
+"Event-ShortName-SeesMotion" = "動き";
+
+/* Event-ShortName-Shake */
+"Event-ShortName-Shake" = "ふる";
+
+/* Event-ShortName-Stasis */
+"Event-ShortName-Stasis" = "動けない";
+
+/* Event-ShortName-Tickle */
+"Event-ShortName-Tickle" = "ボクの$をくすぐって";
+
+/* Event-ShortName-Time */
+"Event-ShortName-Time" = "$で";
+
+/* Event-ShortName-Undock */
+"Event-ShortName-Undock" = "ボクをドックから外して";
+
+/* EventBrowser-DismissButton-Title */
+"EventBrowser-DismissButton-Title" = "かんりょう";
+
+/* EventBrowser-View-Title */
+"EventBrowser-View-Title" = "イベントをついか";
+
+/* FavColor-BoredPrompt1 */
+"FavColor-BoredPrompt1" = "なにか明るいもの\nを見せて！";
+
+/* FavColor-BoredPrompt10 */
+"FavColor-BoredPrompt10" = "考えつづけてね！";
+
+/* FavColor-BoredPrompt11 */
+"FavColor-BoredPrompt11" = "べつの色を考えて";
+
+/* FavColor-BoredPrompt12 */
+"FavColor-BoredPrompt12" = "ボクの前で色をふって！";
+
+/* FavColor-BoredPrompt13 */
+"FavColor-BoredPrompt13" = "ボクの前でものをふって！";
+
+/* FavColor-BoredPrompt2 */
+"FavColor-BoredPrompt2" = "ふーむ…\nあたたかそうな色を見せて！";
+
+/* FavColor-BoredPrompt3 */
+"FavColor-BoredPrompt3" = "カラフルなおもちゃ\nをもってる？";
+
+/* FavColor-BoredPrompt4 */
+"FavColor-BoredPrompt4" = "ボクはもっと明るい色が\n好きなんだよ！";
+
+/* FavColor-BoredPrompt5 */
+"FavColor-BoredPrompt5" = "何か色を見せて！";
+
+/* FavColor-BoredPrompt6 */
+"FavColor-BoredPrompt6" = "にじの色は\n全部ためしてみた？";
+
+/* FavColor-BoredPrompt7 */
+"FavColor-BoredPrompt7" = "ヒント…\nあかるい色だよ！";
+
+/* FavColor-BoredPrompt8 */
+"FavColor-BoredPrompt8" = "ヒント…\nあざやかな色だよ";
+
+/* FavColor-BoredPrompt9 */
+"FavColor-BoredPrompt9" = "ヒントがあるよ…\nくろじゃないよ！";
+
+/* FavColor-ColorTrainingHelpPrompt1 */
+"FavColor-ColorTrainingHelpPrompt1" = "こんなふうにぼくには\n世界が見えてるよ！";
+
+/* FavColor-ColorTrainingHelpPrompt2 */
+"FavColor-ColorTrainingHelpPrompt2" = "カラフルなもの\nしか見えないんだ";
+
+/* FavColor-ColorTrainingHelpPrompt3 */
+"FavColor-ColorTrainingHelpPrompt3" = "それに動いている色\nにひきつけられるよ";
+
+/* FavColor-ColorTrainingHelpPrompt4 */
+"FavColor-ColorTrainingHelpPrompt4" = "やってみて！";
+
+/* FavColor-ColorTrainingHelpPrompt5 */
+"FavColor-ColorTrainingHelpPrompt5" = "カラフルなもの\nをふり回そう！";
+
+/* FavColor-ColorTrainingHelpPrompt6 */
+"FavColor-ColorTrainingHelpPrompt6" = "いい感じ！";
+
+/* FavColor-ColorTrainingHelpPrompt7 */
+"FavColor-ColorTrainingHelpPrompt7" = "さあゲームに\nもどろう";
+
+/* FavColor-ConclusionPrompt1 */
+"FavColor-ConclusionPrompt1" = "ぼくの好きな色が\nわかったようだね！";
+
+/* FavColor-ConclusionPrompt2 */
+"FavColor-ConclusionPrompt2" = "ぼくの好きな色\nがわかったね！";
+
+/* FavColor-ConclusionPrompt3 */
+"FavColor-ConclusionPrompt3" = "それはたしかに\nぼくの好きな色だよ！";
+
+/* FavColor-ConclusionPrompt4 */
+"FavColor-ConclusionPrompt4" = "その色がすごく好きなんだ！";
+
+/* FavColor-ConclusionPrompt5 */
+"FavColor-ConclusionPrompt5" = "その色が好き！";
+
+/* FavColor-CorrectColorPrompt1 */
+"FavColor-CorrectColorPrompt1" = "わかった！";
+
+/* FavColor-CorrectColorPrompt10 */
+"FavColor-CorrectColorPrompt10" = "それ！それ！それだよ！";
+
+/* FavColor-CorrectColorPrompt11 */
+"FavColor-CorrectColorPrompt11" = "びっくりだ！";
+
+/* FavColor-CorrectColorPrompt12 */
+"FavColor-CorrectColorPrompt12" = "なんてことだ！";
+
+/* FavColor-CorrectColorPrompt13 */
+"FavColor-CorrectColorPrompt13" = "わーお！";
+
+/* FavColor-CorrectColorPrompt14 */
+"FavColor-CorrectColorPrompt14" = "ビックリ！";
+
+/* FavColor-CorrectColorPrompt15 */
+"FavColor-CorrectColorPrompt15" = "大せいかい！";
+
+/* FavColor-CorrectColorPrompt16 */
+"FavColor-CorrectColorPrompt16" = "やったーー！！！";
+
+/* FavColor-CorrectColorPrompt2 */
+"FavColor-CorrectColorPrompt2" = "カンカンカン！";
+
+/* FavColor-CorrectColorPrompt3 */
+"FavColor-CorrectColorPrompt3" = "その通り！";
+
+/* FavColor-CorrectColorPrompt4 */
+"FavColor-CorrectColorPrompt4" = "かんぺき！";
+
+/* FavColor-CorrectColorPrompt5 */
+"FavColor-CorrectColorPrompt5" = "やったー！";
+
+/* FavColor-CorrectColorPrompt6 */
+"FavColor-CorrectColorPrompt6" = "ちょうだいちょうだい！";
+
+/* FavColor-CorrectColorPrompt7 */
+"FavColor-CorrectColorPrompt7" = "ちょうだい！ちょうだい！！";
+
+/* FavColor-CorrectColorPrompt8 */
+"FavColor-CorrectColorPrompt8" = "うーん、ボクのお気に入り！";
+
+/* FavColor-CorrectColorPrompt9 */
+"FavColor-CorrectColorPrompt9" = "わーい！ちょうだい！！";
+
+/* FavColor-Motivation-No */
+"FavColor-Motivation-No" = "また後で";
+
+/* FavColor-Motivation-Prompt */
+"FavColor-Motivation-Prompt" = "ボクの好きな色を当てたい？";
+
+/* FavColor-Motivation-Yes */
+"FavColor-Motivation-Yes" = "ゲームをプレイ";
+
+/* FavColor-Wave-Something */
+"FavColor-Wave-Something" = "カラフルな物をふって！";
+
+/* FavColor-WrongColorPrompt1 */
+"FavColor-WrongColorPrompt1" = "ちがうよ！考えつづけてね！";
+
+/* FavColor-WrongColorPrompt10 */
+"FavColor-WrongColorPrompt10" = "ちがうけど、それは{userName}の\n好きな色？";
+
+/* FavColor-WrongColorPrompt11 */
+"FavColor-WrongColorPrompt11" = "うーん…その色じゃないよ";
+
+/* FavColor-WrongColorPrompt12 */
+"FavColor-WrongColorPrompt12" = "うーん…ちがうよ！";
+
+/* FavColor-WrongColorPrompt13 */
+"FavColor-WrongColorPrompt13" = "また考えてみて！";
+
+/* FavColor-WrongColorPrompt14 */
+"FavColor-WrongColorPrompt14" = "ちがう、べつのものを見せて！";
+
+/* FavColor-WrongColorPrompt15 */
+"FavColor-WrongColorPrompt15" = "それじゃないよ。\nボクのことを知ってる\nと思ってたのにな！";
+
+/* FavColor-WrongColorPrompt16 */
+"FavColor-WrongColorPrompt16" = "その色じゃない！";
+
+/* FavColor-WrongColorPrompt17 */
+"FavColor-WrongColorPrompt17" = "ちがう！";
+
+/* FavColor-WrongColorPrompt18 */
+"FavColor-WrongColorPrompt18" = "ちがう！ちがう！ちがう！";
+
+/* FavColor-WrongColorPrompt19 */
+"FavColor-WrongColorPrompt19" = "ちがう！\nちがう！\nちがう！";
+
+/* FavColor-WrongColorPrompt2 */
+"FavColor-WrongColorPrompt2" = "うーーん…\nなんかちかう";
+
+/* FavColor-WrongColorPrompt20 */
+"FavColor-WrongColorPrompt20" = "ちがう！\nその色はゾッとするよ！";
+
+/* FavColor-WrongColorPrompt21 */
+"FavColor-WrongColorPrompt21" = "その色は\nきもちわるいよ！";
+
+/* FavColor-WrongColorPrompt3 */
+"FavColor-WrongColorPrompt3" = "オェッ！";
+
+/* FavColor-WrongColorPrompt4 */
+"FavColor-WrongColorPrompt4" = "ちがうちがうちがう\nちがうちがう！";
+
+/* FavColor-WrongColorPrompt5 */
+"FavColor-WrongColorPrompt5" = "ゲーッ！";
+
+/* FavColor-WrongColorPrompt6 */
+"FavColor-WrongColorPrompt6" = "うーん、ちがう\nな〜！";
+
+/* FavColor-WrongColorPrompt7 */
+"FavColor-WrongColorPrompt7" = "ちがうよ！";
+
+/* FavColor-WrongColorPrompt8 */
+"FavColor-WrongColorPrompt8" = "ちかづいたけど…";
+
+/* FavColor-WrongColorPrompt9 */
+"FavColor-WrongColorPrompt9" = "ちがうよ、ぼくの好きな色\nはもっといい色だよ";
+
+/* FirmwareUpdate-Available-No */
+"FirmwareUpdate-Available-No" = "また後で";
+
+/* FirmwareUpdate-Available-Prompt */
+"FirmwareUpdate-Available-Prompt" = "ボクに\nアップデートがあるよ！";
+
+/* FirmwareUpdate-Available-Yes */
+"FirmwareUpdate-Available-Yes" = "アップデート";
+
+/* FirmwareUpdate-Dock-Prompt */
+"FirmwareUpdate-Dock-Prompt" = "キミの%@を\nベースに戻そう";
+
+/* FirmwareUpdate-NeedUpdate-Remove-Prompt */
+"FirmwareUpdate-NeedUpdate-Remove-Prompt" = "アップデートがひつようだよ！\nキミの%@を\nベースから外そう";
+
+/* FirmwareUpdate-NotFinished-Dock-Prompt */
+"FirmwareUpdate-NotFinished-Dock-Prompt" = "まだおわってなかったよ！\nつなぎなおして！";
+
+/* FirmwareUpdate-Remove-Prompt */
+"FirmwareUpdate-Remove-Prompt" = "キミの%@を\nベースからとりはずそう！";
+
+/* FirmwareUpdate-Updating-Prompt */
+"FirmwareUpdate-Updating-Prompt" = "アップデート中…動かさないでね！";
+
+/* FirmwareUpdate-Verifying-Prompt */
+"FirmwareUpdate-Verifying-Prompt" = "検証中…";
+
+/* FirmwareUpdating-InternetRequied-Dismiss */
+"FirmwareUpdating-InternetRequied-Dismiss" = "終了";
+
+/* FirmwareUpdating-InternetRequired-Message */
+"FirmwareUpdating-InternetRequired-Message" = "ロモのアップデート中に問題が起こりました。彼が走り回るには、新しいアップデートをインストールするためにインターネット接続が必要です。";
+
+/* FirmwareUpdating-InternetRequired-Title */
+"FirmwareUpdating-InternetRequired-Title" = "ロモにはインターネット接続が必要です";
+
+/* Follow-Different-Line-No */
+"Follow-Different-Line-No" = "いいえ";
+
+/* Follow-Different-Line-Prompt */
+"Follow-Different-Line-Prompt" = "べつの線をたどる？";
+
+/* Follow-Different-Line-Yes */
+"Follow-Different-Line-Yes" = "新しい線";
+
+/* Follow-Line-Put-On-Line */
+"Follow-Line-Put-On-Line" = "線にそってレースするために\n線の上においてね！";
+
+/* Follow-Line-Poke-Eye-When-Ready */
+"Follow-Line-Poke-Eye-When-Ready" = "ぼくが線にいる時に\n目をつついてね！";
+
+/* Follow-Line-Right-Line-Question */
+"Follow-Line-Right-Line-Question" = "この線であってる？";
+
+/* Follow-Line-Take-Look */
+"Follow-Line-Take-Look" = "よく\n見せて…";
+
+/* Follow-Line-Tap-Line-To-Follow */
+"Follow-Line-Tap-Line-To-Follow" = "ぼくにたどってほしい\n線をタップしよう！";
+
+/* Follow-Line-Right-Line-No */
+"Follow-Line-Right-Line-No" = "新しいしゃしんをとる";
+
+/* Follow-Line-Right-Line-Yes */
+"Follow-Line-Right-Line-Yes" = "この線をたどる";
+
+/* Follow-Line-Photo-Trouble */
+"Follow-Line-Photo-Trouble" = "うーん、そのしゃしん\nにはもんだいがある…";
+
+/* Follow-Line-Different-Spot */
+"Follow-Line-Different-Spot" = "べつの場所を見せてくれる？";
+
+/* Generic-Mission-Title */
+"Generic-Mission-Title" = "ミッション%d～%d";
+
+/* Generic-Prompt-Yes */
+"Generic-Prompt-Yes" = "はい";
+
+/* Generic-Prompt-No */
+"Generic-Prompt-No" = "いいえ";
+
+/* Help-Button-Accessibility-Label */
+"Help-Button-Accessibility-Label" = "ヘルプボタン";
+
+/* Info-Label-AppVersion */
+"Info-Label-AppVersion" = "アプリのバージョン";
+
+/* Info-Label-Firmware */
+"Info-Label-Firmware" = "ファームウェア/ブートローダー";
+
+/* Info-Label-Hardware */
+"Info-Label-Hardware" = "ハードウェア";
+
+/* Info-Label-Wi-Fi */
+"Info-Label-Network" = "ネットワーク名";
+
+/* Info-Label-License */
+"Info-Label-License" = "ライセンス";
+
+/* Info-Label-Name */
+"Info-Label-Name" = "名前";
+
+/* Info-Label-RomoNumber */
+"Info-Label-RomoNumber" = "ロモナンバー";
+
+/* Info-Label-Serial */
+"Info-Label-Serial" = "シリアルナンバー";
+
+/* Info-Label-SoundEffects */
+"Info-Label-SoundEffects" = "効果音";
+
+/* Idle Movement */
+"Info-Label-IdleMovement" = "アイドル時に動き回る";
+
+/* Info-View-Title */
+"Info-View-Title" = "ダッシュボード";
+
+/* Interaction-FreezeDance-Start */
+"Interaction-FreezeDance-Start" = "フリーズダンス！";
+
+/* iPad-Drive-Continue */
+"iPad-Drive-Continue" = "続ける";
+
+/* iPad-Drive-Subtitle */
+"iPad-Drive-Subtitle" = "ロモを操作するために、App Storeから全く新しいロモコントロールアプリをダウンロードしてください。";
+
+/* iPad-Drive-Title */
+"iPad-Drive-Title" = "ロモコントロールをダウンロード";
+
+/* Lab-Mission-Subtitle */
+"Lab-Mission-Subtitle" = "マスターしたすべてのもので遊ぶ場所";
+
+/* Lab-Mission-Title */
+"Lab-Mission-Title" = "じっけん室";
+
+/* Lab-Motivation-No */
+"Lab-Motivation-No" = "また後で";
+
+/* Lab-Motivation-Prompt-1 */
+"Lab-Motivation-Prompt-1" = "じっけん室で\n何かを作ってみよう！";
+
+/* Lab-Motivation-Prompt-2 */
+"Lab-Motivation-Prompt-2" = "じっけん室で\n遊ぼう！";
+
+/* Lab-Motivation-Prompt-3 */
+"Lab-Motivation-Prompt-3" = "一休みして\nじっけん室で遊ぼう！";
+
+/* Lab-Motivation-Prompt-4 */
+"Lab-Motivation-Prompt-4" = "じっけん室で何か\nかっこいいことの\nやり方を教えて！";
+
+/* Lab-Motivation-Prompt-5 */
+"Lab-Motivation-Prompt-5" = "じっけん室は\nトレーニングに\nピッタリだよ！";
+
+/* Lab-Motivation-Yes */
+"Lab-Motivation-Yes" = "じっけん室に入る";
+
+/* LearnDrive-Motivation-No */
+"LearnDrive-Motivation-No" = "いいえ";
+
+/* LearnDrive-Motivation-Prompt-1 */
+"LearnDrive-Motivation-Prompt-1" = "走り方を教えて！";
+
+/* LearnDrive-Motivation-Yes */
+"LearnDrive-Motivation-Yes" = "トレーニングする";
+
+/* LED-Action-Brightness-Label */
+"LED-Action-Brightness-Label" = "ライトの輝度";
+
+/* LED-Action-Brightness-Unit */
+"LED-Action-Brightness-Unit" = "輝度%d%%";
+
+/* Line-Follow-Title */
+"Line-Follow-Title" = "線をたどる";
+
+/* LineFollow-Motivation-No */
+"LineFollow-Motivation-No" = "また後で";
+
+/* LineFollow-Motivation-Prompt-1 */
+"LineFollow-Motivation-Prompt-1" = "道を\nたどろう！";
+
+/* LineFollow-Motivation-Prompt-2 */
+"LineFollow-Motivation-Prompt-2" = "線をたどり\nたいな！";
+
+/* LineFollow-Motivation-Prompt-3 */
+"LineFollow-Motivation-Prompt-3" = "コースを回って\nレースしたいな！";
+
+/* LineFollow-Motivation-Prompt-4 */
+"LineFollow-Motivation-Prompt-4" = "道を\n作れるかな？！";
+
+/* LineFollow-Motivation-Prompt-5 */
+"LineFollow-Motivation-Prompt-5" = "たどれる\n道を作って！";
+
+/* LineFollow-Motivation-Yes */
+"LineFollow-Motivation-Yes" = "線をたどる";
+
+/* Mission-Chapter-Type-Bonus-Title */
+"Mission-Chapter-Type-Bonus-Title" = "ボーナス";
+
+/* Mission-Chapter-Type-Comet-Title */
+"Mission-Chapter-Type-Comet-Title" = "すいせい";
+
+/* Mission-Chapter-Type-Planet-Title */
+"Mission-Chapter-Type-Planet-Title" = "わくせい";
+
+/* Mission-Chapters-View-Subtitle */
+"Mission-Chapters-View-Subtitle" = "%dのマスター";
+
+/* Mission-Chapters-View-Title */
+"Mission-Chapters-View-Title" = "わくせいをえらぶ";
+
+/* Mission-Motivation-No */
+"Mission-Motivation-No" = "いいえ";
+
+/* Mission-Motivation-Prompt-1 */
+"Mission-Motivation-Prompt-1" = "新しいミッション！\n「%@」！";
+
+/* Mission-Motivation-Prompt-2 */
+"Mission-Motivation-Prompt-2" = "「%@」\nをやってみたい？";
+
+/* Mission-Motivation-Prompt-3 */
+"Mission-Motivation-Prompt-3" = "新しいミッション:\n「%@」";
+
+/* Mission-Motivation-Prompt-4 */
+"Mission-Motivation-Prompt-4" = "トレーニング\nをつづけよう！";
+
+/* Mission-Motivation-Prompt-5 */
+"Mission-Motivation-Prompt-5" = "次のミッション\nをプレイしよう！";
+
+/* Mission-Motivation-Prompt-6 */
+"Mission-Motivation-Prompt-6" = "次のミッション\nをプレイしたい？";
+
+/* Mission-Motivation-Yes */
+"Mission-Motivation-Yes" = "いいよ";
+
+/* Mission-Plea-1 */
+"Mission-Plea-1" = "おねがい？！";
+
+/* Mission-Plea-2 */
+"Mission-Plea-2" = "がんばって、%@！";
+
+/* Mission-Plea-3 */
+"Mission-Plea-3" = "でもやり方が\nわからないんだ！";
+
+/* Mission-Plea-4 */
+"Mission-Plea-4" = "どうやって\n地球をたんけんすればいいの？";
+
+/* Mission-Plea-5 */
+"Mission-Plea-5" = "どうやって\n地球をたんけんすればいいの？";
+
+/* Mission-Plea-6 */
+"Mission-Plea-6" = "そのために\nここにやって来たんだ！";
+
+/* Mission-Status-Subtitle-1 */
+"Mission-Status-Subtitle-1" = " ベストスコア: ★☆☆";
+
+/* Mission-Status-Subtitle-2 */
+"Mission-Status-Subtitle-2" = " ベストスコア: ★★☆";
+
+/* Mission-Status-Subtitle-3 */
+"Mission-Status-Subtitle-3" = " ベストスコア: ★★★";
+
+/* MissionEditor-DeleteEvent-Alert-Message */
+"MissionEditor-DeleteEvent-Alert-Message" = "本当にこのイベントを消しますか？";
+
+/* MissionEditor-DeleteEvent-Alert-No */
+"MissionEditor-DeleteEvent-Alert-No" = "キャンセル";
+
+/* MissionEditor-DeleteEvent-Alert-Title */
+"MissionEditor-DeleteEvent-Alert-Title" = "イベントを消す？";
+
+/* MissionEditor-DeleteEvent-Alert-Yes */
+"MissionEditor-DeleteEvent-Alert-Yes" = "消す";
+
+/* Paramter-Say-Default-Value */
+"Paramter-Say-Default-Value" = "こんにちは、地球";
+
+/* Play-Action-Empty-Library-Message */
+"Play-Action-Empty-Library-Message" = "iTunesライブラリで音楽が見つかりませんでした";
+
+/* Play-Action-Generic-Song-Title */
+"Play-Action-Generic-Song-Title" = "曲を再生";
+
+/* Play-Action-Specific-Song-Title */
+"Play-Action-Specific-Song-Title" = "「%@」を再生";
+
+/* RateApp-Alert-Message */
+"RateApp-Alert-Message" = "キミのアプリのレビューはボクがトレーニングを続けるのをゆうきづけてくれるよ！";
+
+/* RateApp-Alert-No */
+"RateApp-Alert-No" = "しない";
+
+/* RateApp-Alert-Title */
+"RateApp-Alert-Title" = "アプリのレビューをしてね！";
+
+/* RateApp-Alert-Yes */
+"RateApp-Alert-Yes" = "レビューする";
+
+/* RetryMission-Motivation-No */
+"RetryMission-Motivation-No" = "いいえ";
+
+/* RetryMission-Motivation-Prompt-1 */
+"RetryMission-Motivation-Prompt-1" = "3つ星を手に入れるために\nミッション%d～%dにちょうせんする？";
+
+/* RetryMission-Motivation-Prompt-2 */
+"RetryMission-Motivation-Prompt-2" = "ミッション%d～%d\nでもっと上手くできるよ！";
+
+/* RetryMission-Motivation-Prompt-3 */
+"RetryMission-Motivation-Prompt-3" = "3つ星を手に入れるために\nミッション%d～%dをプレイしよう！";
+
+/* RetryMission-Motivation-Prompt-4 */
+"RetryMission-Motivation-Prompt-4" = "ミッション%d～%dで\n3つ星をかくとくしよう！";
+
+/* RetryMission-Motivation-Yes */
+"RetryMission-Motivation-Yes" = "もう一度ちょうせんしよう";
+
+/* RomoControl-Alert-Title */
+"RomoControl-Alert-Title" = "ロモコントロール";
+
+/* RomoControl-Message-Compatible-Device */
+"RomoControl-Message-Compatible-Device" = "べつのiデバイスかコンピューターからhttp://romo.tvを開いて、ボクをそうさしてね。\n\nボクのロモばんごう:\n%@";
+
+/* RomoControl-Message-NonCompatible-Device */
+"RomoControl-Message-NonCompatible-Device" = "べつのローカルiデバイスからhttp://romo.tvをひらいて、ボクをそうさしてね。";
+
+/* RomoControl-Message-Number-Error */
+"RomoControl-Message-Number-Error" = "ロモ番号の取得で問題が発生しました。インターネットに接続していることを確認してください。";
+
+/* Say-Action-Default-Title */
+"Say-Action-Default-Title" = "「やあ！」?";
+
+/* Script-Repeat-Button-Off */
+"Script-Repeat-Button-Off" = "くりかえしオフ";
+
+/* Script-Repeat-Button-On */
+"Script-Repeat-Button-On" = "くりかえし";
+
+/* Slide-To-Start-Title */
+"Slide-To-Start-Title" = "スライドでスタート";
+
+/* SolveMission-Button-Title */
+"SolveMission-Button-Title" = "ミッションを解決する";
+
+/* Sweeeeeet! */
+"Sweeeeeet!" = "ひょうげんをしゅうりょう";
+
+/* Time-Duration-Input-Unit */
+"Time-Duration-Input-Unit" = "びょう";
+
+/* tooDarkStatePrompt */
+"tooDarkStatePrompt" = "ライト\nをつけて！";
+
+/* TP-Client-CallFailed-Alert-Message */
+"TP-Client-CallFailed-Alert-Message" = "リモートロモのオーナーがこたえませんでした";
+
+/* TP-Client-CallFailed-Alert-Title */
+"TP-Client-CallFailed-Alert-Title" = "発信に失敗";
+
+/* TP-Client-Calling-Title */
+"TP-Client-Calling-Title" = "%@に発信中";
+
+/* TP-Incoming-Call-No */
+"TP-Incoming-Call-No" = "きょひ";
+
+/* TP-Incoming-Call-Prompt */
+"TP-Incoming-Call-Prompt" = "受信中！";
+
+/* TP-Incoming-Call-Yes */
+"TP-Incoming-Call-Yes" = "こたえる";
+
+/* TP-Number-Loading-Title */
+"TP-Number-Loading-Title" = "ロード中…";
+
+/* Turn-Action-Parameters-Left */
+"Turn-Action-Parameters-Left" = "左";
+
+/* Turn-Action-Parameters-Right */
+"Turn-Action-Parameters-Right" = "右";
+
+/* Turn-Action-Parameters-Subtitle */
+"Turn-Action-Parameters-Subtitle" = "%d cmの円・%d度の回転";
+
+/* Turn-Action-Parameters-Title */
+"Turn-Action-Parameters-Title" = "%@に曲がる";
+
+/* Unlock-Message */
+"Unlock-Message" = "かくしアイテムを見つけたよ！";
+
+/* Unlocked-Continue-Button-Title */
+"Unlocked-Continue-Button-Title" = "つづける";
+
+/* Unlocked-Title */
+"Unlocked-Title" = "マスターしたもの";
+
+/* Vision-IdealBrightnessPrompt1 */
+"Vision-IdealBrightnessPrompt1" = "よくなったよ！\n見えるようになった！";
+
+/* Vision-IdealBrightnessPrompt2 */
+"Vision-IdealBrightnessPrompt2" = "ありがとう！";
+
+/* Vision-IdealBrightnessPrompt3 */
+"Vision-IdealBrightnessPrompt3" = "やったー！";
+
+/* Vision-IdealBrightnessPrompt4 */
+"Vision-IdealBrightnessPrompt4" = "色が見える\nようになったよ！";
+
+/* Vision-TooBrightPrompt1 */
+"Vision-TooBrightPrompt1" = "おっと！%n明るすぎるよ！";
+
+/* Vision-TooBrightPrompt2 */
+"Vision-TooBrightPrompt2" = "日があたって\n見えないよ！";
+
+/* Vision-TooBrightStatePrompt */
+"Vision-TooBrightStatePrompt" = "日のあたらないところへ\nつれて行って！";
+
+/* Vision-TooDarkPrompt1 */
+"Vision-TooDarkPrompt1" = "暗い中でどうやって\n見ればいいの！";
+
+/* Vision-TooDarkPrompt2 */
+"Vision-TooDarkPrompt2" = "暗い中じゃ見えないって\n知ってるでしょ！";
+
+/* Vision-TooDarkPrompt3 */
+"Vision-TooDarkPrompt3" = "暗いところに\nおいてかないで！！！";
+
+/* Vision-TooDarkPrompt4 */
+"Vision-TooDarkPrompt4" = "暗いのは\nきらいなんだ！！！";
+
+/* Action Pameter Labels */
+"Distance" = "きょり";
+
+/* Action Pameter Labels */
+"Speed" = "速度";
+
+/* Action Pameter Labels */
+"Angle" = "角度";
+
+/* Action Pameter Labels */
+"Diameter" = "直径";
+
+/* Generic Mission Title */
+"Mission" = "ミッション";
+
+/* Generic Mission Title Plural */
+"Missions" = "ミッション";
+
+/* Generic No Wi-Fi Title */
+"No Wi-Fi" = "無線LANがありません";

@@ -1,0 +1,528 @@
+{
+    "script": {
+        "name": "Character-Script-Intro",
+        "description": "The first interaction Romo has after viewing the initial cutscene",
+        "blocks": [
+                   {
+                   "description": "Startled by the thing (human) in front of him",
+                   "condition": {
+                   "name": "none"
+                   },
+                   "actions": [{
+                               "name": "expressionToEmotion",
+                               "args": ["startled", "scared"]
+                               }]
+                   },
+                   {
+                   "description": "After a second, become curious and investigate with a sniff",
+                   "condition": {
+                   "name": "wait",
+                   "args": [1.0]
+                   },
+                   "actions": [{
+                               "name": "expressionWithText",
+                               "args": [
+                                        "none",
+                                        "curious",
+                                        "Who are\nyou?"
+                                        ]
+                               },
+                               {
+                               "name": "move",
+                               "args": ["forward", 0.75, 0.20]
+                               },
+                               {
+                               "name": "tilt",
+                               "args": ["down", 20]
+                               },
+                               {
+                               "name": "expressionToEmotion",
+                               "args": ["sniff", "indifferent", "no"]
+                               },
+                               {
+                               "name": "move",
+                               "args": ["backward", 0.22, 1.0]
+                               },
+                               {
+                               "name": "tilt",
+                               "args": ["up", 10]
+                               }
+                               ]
+                   },
+                   {
+                   "description": "Become curious",
+                   "condition": {
+                   "name": "wait",
+                   "args": [2.5]
+                   },
+                   "actions": [
+                               {
+                               "name": "emotion",
+                               "args": ["curious"]
+                               }
+                               ]
+                   },
+                   {
+                   "description": "Check out the human by looking up",
+                   "condition": {
+                   "name": "wait",
+                   "args": [1.0]
+                   },
+                   "actions": [
+                               {
+                               "name": "look",
+                               "args": [0, -0.85]
+                               },
+                               {
+                               "name": "tilt",
+                               "args": ["up", 50]
+                               }]
+                   },
+                   {
+                   "description": "Then look down",
+                   "condition": {
+                   "name": "wait",
+                   "args": [0.25]
+                   },
+                   "actions": [
+                               {
+                               "name": "look",
+                               "args": [0, 0.65]
+                               },
+                               {
+                               "name": "tilt",
+                               "args": ["down", 60]
+                               }]
+                   },
+                   {
+                   "description": "Look back up",
+                   "condition": {
+                   "name": "wait",
+                   "args": [0.75]
+                   },
+                   "actions": [
+                               {
+                               "name": "look",
+                               "args": [0, -0.9]
+                               },
+                               {
+                               "name": "tilt",
+                               "args": ["up", 30]
+                               },
+                               {
+                               "name": "look",
+                               "args": [0, 0]
+                               }]
+                   },
+                   {
+                   "description": "Realize it's a human & Earth",
+                   "condition": {
+                   "name": "none"
+                   },
+                   "actions": [
+                               {
+                               "name": "emotion",
+                               "args": ["happy"]
+                               },
+                               {
+                               "name": "mumbleWithText",
+                               "args": ["A real-life\nhuman!"]
+                               },
+                               {
+                               "name": "move",
+                               "args": ["backward", 0.30, 0.22]
+                               },
+                               {
+                               "name": "expressionWithText",
+                               "args": ["looking-around", "curious", "Wait\na minute!"]
+                               },
+                               {
+                               "name": "mumbleWithText",
+                               "args": ["That\nmust mean..."]
+                               },
+                               {
+                               "name": "expressionWithText",
+                               "args": ["none", "excited", "Holy\nRobot!"]
+                               },
+                               {
+                               "name": "expressionWithText",
+                               "args": ["excited", "excited", "I made it\nto Earth!"]
+                               }]
+                   },
+                   {
+                   "description": "Ask their name",
+                   "condition": {
+                   "name": "none"
+                   },
+                   "actions": [{
+                               "name": "emotion",
+                               "args": ["curious"]
+                               },
+                               {
+                               "name": "tiltTo",
+                               "args": [130]
+                               },
+                               {
+                               "name": "ask",
+                               "args": ["So what's your name,\nhuman?", "Your Name"],
+                               "store-id": "userName"
+                               }
+                               ]
+                   },
+                   {
+                   "description": "Say that's strange",
+                   "condition": {
+                   "name": "none"
+                   },
+                   "actions": [{
+                               "name": "expressionWithText",
+                               "args": ["bewildered", "bewildered", "\n${userName}?!"]
+                               }
+                               ]
+                   },
+                   {
+                   "description": "Ask to be named",
+                   "condition": {
+                   "name": "wait",
+                   "args": [1.75]
+                   },
+                   "actions": [
+                               {
+                               "name": "expressionWithText",
+                               "args": ["curious", "curious", "Now that I'm here,\nI need an Earth name."]
+                               },
+                               {
+                               "name": "tiltTo",
+                               "args": [130]
+                               },
+                               {
+                               "name": "ask",
+                               "args": ["What do you\nwanna call me?", "Your Romo's Name"],
+                               "store-id": "romoName"
+                               }
+                               ]
+                   },
+                   {
+                   "description": "Respond to name",
+                   "condition": {
+                   "name": "none"
+                   },
+                   "actions": [{
+                               "name": "expressionWithText",
+                               "args": ["talking", "excited", "Ooooh!\n${romoName}!"]
+                               }
+                               ]
+                   },
+                   {
+                   "description": "Romo asks you to train for the RSR",
+                   "condition": {
+                   "name": "wait",
+                   "args": [3.0]
+                   },
+                   "actions": [
+                               {
+                               "name": "emotion",
+                               "args": ["indifferent"]
+                               },
+                               {
+                               "name": "mumbleWithText",
+                               "args": ["Back to\nbusiness!"]
+                               },
+                               {
+                               "name": "emotion",
+                               "args": ["happy"]
+                               },
+                               {
+                               "name": "mumbleWithText",
+                               "args": ["I'm here to train for the\nRobot Space Race."]
+                               },
+                               {
+                               "name": "emotion",
+                               "args": ["curious"]
+                               },
+                               {
+                               "name": "tiltTo",
+                               "args": [130]
+                               },
+                               {
+                               "name": "ask",
+                               "args": ["Wanna help me?", "No", "Help me Train"],
+                               "store-id": "interaction/intro/initialHelpResponse"
+                               }
+                               ]
+                   },
+                   {
+                   "description": "Tell the user tough luck.",
+                   "condition": {
+                   "name": "store-id",
+                   "args": ["interaction/intro/initialHelpResponse", "No"]
+                   },
+                   "actions": [{
+                               "name": "expressionToEmotion",
+                               "args": ["sad", "sad"]
+                               },
+                               {
+                               "name": "mumbleWithText",
+                               "args": ["I traveled across\nthe galaxy for this."]
+                               },
+                               {
+                               "name": "expressionWithText",
+                               "args": ["talking","happy", "If we train hard\n I know we can win!"]
+                               }
+                               ]
+                   },
+                   {
+                   "description": "Be excited.",
+                   "condition": {
+                   "name": "store-id",
+                   "args": ["interaction/intro/initialHelpResponse", "Help me Train"]
+                   },
+                   "actions": [{
+                               "name": "expressionToEmotion",
+                               "args": ["yippee", "excited"]
+                               }
+                               ]
+                   },
+                   {
+                   "description": "Explain the race",
+                   "condition": {
+                   "name": "wait",
+                   "args": [1.0]
+                   },
+                   "actions": [{
+                               "name": "mumbleWithText",
+                               "args": ["Only robots can\nenter the race."]
+                               },
+                               {
+                               "name": "expressionWithText",
+                               "args": ["ponder", "curious", "I never thought\nI'd compete..."]
+                               },
+                               {
+                               "name": "expressionWithText",
+                               "args": ["none", "excited", "But now I've got\nWHEELS!"]
+                               }
+                               ]
+                   },
+                   {
+                   "description": "Look down at your treads",
+                   "condition": {
+                   "name": "wait",
+                   "args": [1.0]
+                   },
+                   "actions": [
+                               {
+                               "name": "look",
+                               "args": [0, 1]
+                               },
+                               {
+                               "name": "tilt",
+                               "args": ["down", 70]
+                               }]
+                   },
+                   {
+                   "description": "Try to move around",
+                   "condition": {
+                   "name": "wait",
+                   "args": [0.5]
+                   },
+                   "actions": [
+                               {
+                               "name": "move",
+                               "args": ["backward", 0.13]
+                               }]
+                   },
+                   {
+                   "description": "Try to move around",
+                   "condition": {
+                   "name": "wait",
+                   "args": [0.5]
+                   },
+                   "actions": [
+                               {
+                               "name": "move",
+                               "args": ["forward", 0.13]
+                               }]
+                   },
+                   {
+                   "description": "Try to move around",
+                   "condition": {
+                   "name": "wait",
+                   "args": [0.5]
+                   },
+                   "actions": [
+                               {
+                               "name": "move",
+                               "args": ["backward", 0.13]
+                               }]
+                   },
+                   {
+                   "description": "Try to move around",
+                   "condition": {
+                   "name": "wait",
+                   "args": [0.5]
+                   },
+                   "actions": [
+                               {
+                               "name": "expressionToEmotion",
+                               "args": ["ponder", "excited"]
+                               }]
+                   },
+                   {
+                   "description": "Try to move around more",
+                   "condition": {
+                   "name": "wait",
+                   "args": [0.75]
+                   },
+                   "actions": [
+                               {
+                               "name": "move",
+                               "args": ["forward", 0.1]
+                               },
+                               {
+                               "name": "move",
+                               "args": ["backward", 0.1]
+                               },
+                               {
+                               "name": "move",
+                               "args": ["forward", 0.1]
+                               },
+                               {
+                               "name": "move",
+                               "args": ["backward", 0.1]
+                               },
+                               {
+                               "name": "move",
+                               "args": ["forward", 0.1]
+                               },
+                               {
+                               "name": "emotion",
+                               "args": ["sad"]
+                               },
+                               {
+                               "name": "tiltTo",
+                               "args": [120]
+                               },
+                               {
+                               "name": "say",
+                               "args": ["That doesn't\nseem right..."]
+                               }
+                               ]
+                   },
+                   {
+                   "description": "Be excited about your platform",
+                   "condition": {
+                   "name": "wait",
+                   "args": [0.5]
+                   },
+                   "actions": [
+                               {
+                               "name": "look",
+                               "args": [0, 0]
+                               },
+                               {
+                               "name": "tiltTo",
+                               "args": [95]
+                               },
+                               
+                               {
+                               "name": "mumbleWithText",
+                               "args": ["Maybe I can\nturn..."]
+                               },
+                               {
+                               "name": "look",
+                               "args": [1.0, 0]
+                               },
+                               {
+                               "name": "turn",
+                               "args": ["left", 15]
+                               }]
+                   },
+                   {
+                   "description": "Try to turn",
+                   "condition": {
+                   "name": "wait",
+                   "args": [1.25]
+                   },
+                   "actions": [
+                               {
+                               "name": "turn",
+                               "args": ["left", 20]
+                               }]
+                   },
+                   {
+                   "description": "Try to turn",
+                   "condition": {
+                   "name": "wait",
+                   "args": [1.0]
+                   },
+                   "actions": [
+                               {
+                               "name": "turn",
+                               "args": ["left", 15]
+                               }]
+                   },
+                   {
+                   "description": "Try to turn",
+                   "condition": {
+                   "name": "wait",
+                   "args": [2.0]
+                   },
+                   "actions": [
+                               {
+                               "name": "look",
+                               "args": [-1.0, 0]
+                               },
+                               {
+                               "name": "turn",
+                               "args": ["right", 15]
+                               }]
+                   },
+                   {
+                   "description": "Try to turn",
+                   "condition": {
+                   "name": "wait",
+                   "args": [1.0]
+                   },
+                   "actions": [
+                               {
+                               "name": "look",
+                               "args": [-1.0, 0]
+                               },
+                               {
+                               "name": "turn",
+                               "args": ["right", 20]
+                               }]
+                   },
+                   {
+                   "description": "Try to turn",
+                   "condition": {
+                   "name": "wait",
+                   "args": [1.0]
+                   },
+                   "actions": [
+                               {
+                               "name": "look",
+                               "args": [-1.0, 0]
+                               },
+                               {
+                               "name": "turn",
+                               "args": ["right", 15]
+                               },
+                               {
+                               "name": "expression",
+                               "args": ["embarrassed", "curious"]
+                               },
+                               {
+                               "name": "tiltTo",
+                               "args": [120]
+                               },
+                               {
+                               "name": "mumbleWithText",
+                               "args": ["If we're gonna win,\nI need to learn to drive."]
+                               }
+                               ]
+                   }
+                   ]
+    }
+}
+

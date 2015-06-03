@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>driving-method</key>
+	<dict>
+		<key>title</key>
+		<string>Driving Method</string>
+		<key>type</key>
+		<string>gallery</string>
+		<key>values</key>
+		<array>
+			<dict>
+				<key>key</key>
+				<string>dpad</string>
+				<key>title</key>
+				<string>D-Pad</string>
+				<key>image</key>
+				<string>R3UI-Controller-Dpad</string>
+			</dict>
+			<dict>
+				<key>key</key>
+				<string>joystick</string>
+				<key>title</key>
+				<string>Joystick</string>
+				<key>image</key>
+				<string>R3UI-Controller-Joystick</string>
+			</dict>
+			<dict>
+				<key>key</key>
+				<string>tank</string>
+				<key>title</key>
+				<string>Tank Drive</string>
+				<key>image</key>
+				<string>R3UI-Controller-Tank</string>
+			</dict>
+		</array>
+	</dict>
+</dict>
+</plist>

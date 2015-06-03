@@ -1,0 +1,113 @@
+{
+    "script": {
+        "name": "Character-Script-1-9",
+        "description": "Romo Shakes His Body",
+        "blocks": [
+            {
+                "description": "",
+                "condition": {
+                    "name": "none"
+                },
+                "actions": [
+                    {
+                        "name": "emotion",
+                        "args": ["curious"]
+                    },
+                    {
+                       "name": "say",
+                       "args": ["Ask me if\nanyone will beat me\nin the Space Race"]
+                    }
+                ]
+            },
+            {
+                "description": "Say no",
+                "condition": {
+                    "name": "wait",
+                    "args":[2.0]
+                },
+                "actions": [
+                    {
+                        "name": "emotion",
+                        "args": ["indifferent"]
+                    },
+                    {
+                       "name": "spin",
+                       "args": ["right", 0.075]
+                    },
+                    {
+                       "name": "spin",
+                       "args": ["left", 0.075]
+                    },
+                    {
+                       "name": "spin",
+                       "args": ["right", 0.075]
+                    },
+                    {
+                       "name": "spin",
+                       "args": ["left", 0.075]
+                    },
+                    {
+                       "name": "say",
+                       "args": ["\nNO!\n"]
+                    },
+                    {
+                       "name": "spin",
+                       "args": ["right", 0.075]
+                    },
+                    {
+                       "name": "spin",
+                       "args": ["left", 0.075]
+                    },
+                    {
+                       "name": "spin",
+                       "args": ["right", 0.075]
+                    },
+                    {
+                       "name": "spin",
+                       "args": ["left", 0.075]
+                    },
+                    {
+                       "name": "say",
+                       "args": ["\nNOO!\n"]
+                    },
+                    {
+                       "name": "spin",
+                       "args": ["right", 0.075]
+                    },
+                    {
+                       "name": "spin",
+                       "args": ["left", 0.075]
+                    },
+                    {
+                       "name": "spin",
+                       "args": ["right", 0.075]
+                    },
+                    {
+                       "name": "spin",
+                       "args": ["left", 0.075]
+                    },
+                    {
+                       "name": "say",
+                       "args": ["\nNOOOOOO!\n"]
+                    }
+                ]
+            },
+            {
+                "description": "",
+                "condition": {
+                    "name": "none"
+                },
+                "actions": [
+                    {
+                        "name": "emotion",
+                        "args": ["happy"]
+                    },
+                    {
+                       "name": "say",
+                       "args": ["Hey I'm \npretty good\nat that"]
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,354 @@
+/* Mission-1-1: title */
+"Mission-1-1-title" = "A Little Wheel Power";
+
+/* Mission-1-1: briefing */
+"Mission-1-1-briefing" = "Train me to drive using my new wheels!";
+
+/* Mission-1-1: congrats debriefing */
+"Mission-1-1-congrats debriefing" = "Huzzah! Now we're rolling.";
+
+/* Mission-1-10: title */
+"Mission-1-10-title" = "The Romotion Tango";
+
+/* Mission-1-10: briefing */
+"Mission-1-10-briefing" = "A classic dance where you pause between each step. Give me some Actions and pause my movement between each step.";
+
+/* Mission-1-10: prompt */
+"Mission-1-10-prompt" = "Can you teach me\nto dance?";
+
+/* Mission-1-10: failure debriefing */
+"Mission-1-10-failure debriefing" = "The Romotion Tango goes Action, Pause, Action, Pause, Action, Pause...";
+
+/* Mission-1-10: success debriefing */
+"Mission-1-10-success debriefing" = "Make my Tango longer.";
+
+/* Mission-1-10: congrats debriefing */
+"Mission-1-10-congrats debriefing" = "Work hard, play hard!";
+
+/* Mission-1-2: title */
+"Mission-1-2-title" = "Burning Rubber";
+
+/* Mission-1-2: briefing */
+"Mission-1-2-briefing" = "Whoa, driving is fun! See if you can make me go faster! Tap the Drive Action to change my speed.";
+
+/* Mission-1-2: prompt */
+"Mission-1-2-prompt" = "Teach me to\ndrive faster!";
+
+/* Mission-1-2: failure debriefing */
+"Mission-1-2-failure debriefing" = "Tap the Drive Action to edit my speed. I know I can drive faster than that!";
+
+/* Mission-1-2: success debriefing */
+"Mission-1-2-success debriefing" = "Faster! Farther!";
+
+/* Mission-1-2: congrats debriefing */
+"Mission-1-2-congrats debriefing" = "Did you see how fast I went?!";
+
+/* Mission-1-3: title */
+"Mission-1-3-title" = "String Theory";
+
+/* Mission-1-3: briefing */
+"Mission-1-3-briefing" = "This time, add two different Actions.";
+
+/* Mission-1-3: prompt */
+"Mission-1-3-prompt" = "I think I'm\nready to turn!";
+
+/* Mission-1-3: failure debriefing */
+"Mission-1-3-failure debriefing" = "Make sure you add two Actions.";
+
+/* Mission-1-3: success debriefing */
+"Mission-1-3-success debriefing" = "That's good, but you didn't edit the parameters in those Actions!";
+
+/* Mission-1-3: congrats debriefing */
+"Mission-1-3-congrats debriefing" = "Keep this up, and we'll be able to explore Earth in no time!";
+
+/* Mission-1-4: title */
+"Mission-1-4-title" = "Out of Order";
+
+/* Mission-1-4: briefing */
+"Mission-1-4-briefing" = "Tap and hold to reorder these so I drive forward, then backward, and then repeat those actions.";
+
+/* Mission-1-4: failure debriefing */
+"Mission-1-4-failure debriefing" = "Tap and hold an Action to move it around. I want to drive back and forth!";
+
+/* Mission-1-4: success debriefing */
+"Mission-1-4-success debriefing" = "Drive Forward first, then Drive Backward.";
+
+/* Mission-1-4: congrats debriefing */
+"Mission-1-4-congrats debriefing" = "We're getting the hang of this!";
+
+/* Mission-1-5: title */
+"Mission-1-5-title" = "Cut It Out";
+
+/* Mission-1-5: briefing */
+"Mission-1-5-briefing" = "Delete the Actions that tell me to Drive Backward. Try swiping them to the left!";
+
+/* Mission-1-5: failure debriefing */
+"Mission-1-5-failure debriefing" = "To delete an Action, just swipe across it! Now try deleting the Drive Backward Actions.";
+
+/* Mission-1-5: success debriefing */
+"Mission-1-5-success debriefing" = "Don't delete the Turn Actions!";
+
+/* Mission-1-5: congrats debriefing */
+"Mission-1-5-congrats debriefing" = "Sometimes less is more!";
+
+/* Mission-1-6: title */
+"Mission-1-6-title" = "Acute Shape";
+
+/* Mission-1-6: briefing */
+"Mission-1-6-briefing" = "I want to Drive in a Triangle. Make sure all Turns go the same direction.";
+
+/* Mission-1-6: prompt */
+"Mission-1-6-prompt" = "Wanna help me\ndraw some shapes?";
+
+/* Mission-1-6: failure debriefing */
+"Mission-1-6-failure debriefing" = "Make sure all the Turns are in the same direction.";
+
+/* Mission-1-6: success debriefing */
+"Mission-1-6-success debriefing" = "Close! Make sure all my turns are clockwise and 180°.";
+
+/* Mission-1-6: congrats debriefing */
+"Mission-1-6-congrats debriefing" = "I wonder what other shapes I can draw...";
+
+/* Mission-1-7: title */
+"Mission-1-7-title" = "Squared Off";
+
+/* Mission-1-7: briefing */
+"Mission-1-7-briefing" = "See if you can teach me to drive a square. I think I know how it starts.";
+
+/* Mission-1-7: prompt */
+"Mission-1-7-prompt" = "Teach me to\ndrive in a square!";
+
+/* Mission-1-7: failure debriefing */
+"Mission-1-7-failure debriefing" = "Remember, a square is equal on all sides and has perfect, sharp turns!";
+
+/* Mission-1-7: success debriefing */
+"Mission-1-7-success debriefing" = "I need to be more accurate with my angles and distances if we're gonna win the Robot Space Race!";
+
+/* Mission-1-7: congrats debriefing */
+"Mission-1-7-congrats debriefing" = "Keep up the training and we'll win the Robot Space Race!";
+
+/* Mission-1-8: title */
+"Mission-1-8-title" = "Aye Aye!";
+
+/* Mission-1-8: briefing */
+"Mission-1-8-briefing" = "I want to be able to say \"yes,\" by nodding my head! Teach me to tilt my head back and forth.";
+
+/* Mission-1-8: failure debriefing */
+"Mission-1-8-failure debriefing" = "Nodding \"Yes!\" should make my head shake back and forth.";
+
+/* Mission-1-8: success debriefing */
+"Mission-1-8-success debriefing" = "More nods will create a more convincing \"Yes!\"";
+
+/* Mission-1-8: congrats debriefing */
+"Mission-1-8-congrats debriefing" = "Yes. Yes! YES!";
+
+/* Mission-1-9: title */
+"Mission-1-9-title" = "Nay Sayer";
+
+/* Mission-1-9: briefing */
+"Mission-1-9-briefing" = "Teach me how to shake my head to say \"No\" with back and forth Turns in place.";
+
+/* Mission-1-9: failure debriefing */
+"Mission-1-9-failure debriefing" = "Add a few left and right Turns, but make sure I stay in place.";
+
+/* Mission-1-9: success debriefing */
+"Mission-1-9-success debriefing" = "Quick Turns left and right will make my \"No!\" more realistic.";
+
+/* Mission-1-9: congrats debriefing */
+"Mission-1-9-congrats debriefing" = "I now know how to shake \"No!\"";
+
+/* Mission-2-1: title */
+"Mission-2-1-title" = "Poker Face";
+
+/* Mission-2-1: briefing */
+"Mission-2-1-briefing" = "What should I do when you Poke my Face?";
+
+/* Mission-2-1: failure debriefing */
+"Mission-2-1-failure debriefing" = "Tell me how to react to being poked!";
+
+/* Mission-2-1: congrats debriefing */
+"Mission-2-1-congrats debriefing" = "There we go!";
+
+/* Mission-2-2: title */
+"Mission-2-2-title" = "Tickle Fight";
+
+/* Mission-2-2: briefing */
+"Mission-2-2-briefing" = "Prepare for a tickle fight! Add Actions for when I am Tickled.";
+
+/* Mission-2-2: prompt */
+"Mission-2-2-prompt" = "Help me prepare\nfor a tickle fight!";
+
+/* Mission-2-2: failure debriefing */
+"Mission-2-2-failure debriefing" = "Make sure that you create reactions to all three Tickle Events.";
+
+/* Mission-2-2: success debriefing */
+"Mission-2-2-success debriefing" = "Teach me to have longer reactions.";
+
+/* Mission-2-2: congrats debriefing */
+"Mission-2-2-congrats debriefing" = "Who knew training could be so fun!";
+
+/* Mission-2-3: title */
+"Mission-2-3-title" = "Peek-a-Boo";
+
+/* Mission-2-3: briefing */
+"Mission-2-3-briefing" = "Teach me what to do when I see your Face, and when I don't see your Face.";
+
+/* Mission-2-3: failure debriefing */
+"Mission-2-3-failure debriefing" = "Create reactions for when I see your Face and when I don't see your Face.";
+
+/* Mission-2-3: success debriefing */
+"Mission-2-3-success debriefing" = "Teach me to have longer reactions.";
+
+/* Mission-2-3: congrats debriefing */
+"Mission-2-3-congrats debriefing" = "You're good looking...for a human!";
+
+/* Mission-2-4: title */
+"Mission-2-4-title" = "Baseless";
+
+/* Mission-2-4: briefing */
+"Mission-2-4-briefing" = "I can't Drive when I have no wheels! Delete all Actions that use my robot base when I'm Undocked.";
+
+/* Mission-2-4: failure debriefing */
+"Mission-2-4-failure debriefing" = "Delete all Drive Actions for when I'm Undocked.";
+
+/* Mission-2-4: success debriefing */
+"Mission-2-4-success debriefing" = "You deleted too many Actions! I can still Drive when I'm Docked.";
+
+/* Mission-2-4: congrats debriefing */
+"Mission-2-4-congrats debriefing" = "Talk about an out-of-body experience!";
+
+/* Mission-2-5: title */
+"Mission-2-5-title" = "Contents Under Pressure";
+
+/* Mission-2-5: briefing */
+"Mission-2-5-briefing" = "I really don't like when people Shake me. Help me out with a way to scare humans away if they Shake me.";
+
+/* Mission-2-5: prompt */
+"Mission-2-5-prompt" = "Teach me how to\ndefend myself!";
+
+/* Mission-2-5: failure debriefing */
+"Mission-2-5-failure debriefing" = "I think a certain gas might help scare away humans that try to Shake me.";
+
+/* Mission-2-5: congrats debriefing */
+"Mission-2-5-congrats debriefing" = "Excuse me!";
+
+/* Mission-2-6: title */
+"Mission-2-6-title" = "Ups and Downs";
+
+/* Mission-2-6: briefing */
+"Mission-2-6-briefing" = "What should I do when you Pick me Up? What about when you Put me Down? I shouldn't try to Drive when I'm in the air!";
+
+/* Mission-2-6: failure debriefing */
+"Mission-2-6-failure debriefing" = "Add an Event for picking me up AND putting me down. I can't drive when picked up!";
+
+/* Mission-2-6: success debriefing */
+"Mission-2-6-success debriefing" = "You can come up with a better reaction than that!";
+
+/* Mission-2-6: congrats debriefing */
+"Mission-2-6-congrats debriefing" = "I can't wait to explore some more!";
+
+/* Mission-3-1: title */
+"Mission-3-1-title" = "Scare Away the Hiccups";
+
+/* Mission-3-1: briefing */
+"Mission-3-1-briefing" = "My Hiccups will repeat until an Event occurs. Add a Loud Sound Event to get started.";
+
+/* Mission-3-1: prompt */
+"Mission-3-1-prompt" = "Help me cure\nmy hiccups!";
+
+/* Mission-3-1: failure debriefing */
+"Mission-3-1-failure debriefing" = "A Loud Sound can help scare away my hiccups! Change my face when I hear a Loud Sound.";
+
+/* Mission-3-1: congrats debriefing */
+"Mission-3-1-congrats debriefing" = "Just so you know, I won't hear Loud Sounds when I'm driving.";
+
+/* Mission-3-2: title */
+"Mission-3-2-title" = "Guard Dog";
+
+/* Mission-3-2: briefing */
+"Mission-3-2-briefing" = "Teach me to stand guard when I see motion.";
+
+/* Mission-3-2: prompt */
+"Mission-3-2-prompt" = "Teach me to be\nyour guard dog!";
+
+/* Mission-3-2: failure debriefing */
+"Mission-3-2-failure debriefing" = "Add an Alarm Action to warn people and take a photo to catch the perpetrator.";
+
+/* Mission-3-2: success debriefing */
+"Mission-3-2-success debriefing" = "Snap a photo of the perpetrator and sound the alarm to scare them off!";
+
+/* Mission-3-2: congrats debriefing */
+"Mission-3-2-congrats debriefing" = "Pictures I take are saved to your Camera Roll!";
+
+/* Mission-3-3: title */
+"Mission-3-3-title" = "Nightlight";
+
+/* Mission-3-3: briefing */
+"Mission-3-3-briefing" = "Help me see a bit better in the dark.";
+
+/* Mission-3-3: prompt */
+"Mission-3-3-prompt" = "Teach me how to use\nmy nightlight!";
+
+/* Mission-3-3: failure debriefing */
+"Mission-3-3-failure debriefing" = "My headlight will help me see in the dark.";
+
+/* Mission-3-3: success debriefing */
+"Mission-3-3-success debriefing" = "I only need my headlight on when it's dark and off when it's bright.";
+
+/* Mission-3-3: congrats debriefing */
+"Mission-3-3-congrats debriefing" = "I'm less afraid of the dark now!";
+
+/* Mission-3-4: title */
+"Mission-3-4-title" = "Evasive Maneuver";
+
+/* Mission-3-4: briefing */
+"Mission-3-4-briefing" = "Help me get around obstacles when I get stuck while Exploring. You have 60 seconds!";
+
+/* Mission-3-4: prompt */
+"Mission-3-4-prompt" = "Let's go exploring!";
+
+/* Mission-3-4: failure debriefing */
+"Mission-3-4-failure debriefing" = "When I Bump something, I should back up and turn to avoid it.";
+
+/* Mission-3-4: success debriefing */
+"Mission-3-4-success debriefing" = "Help me get Stuck more before time runs out!";
+
+/* Mission-3-4: congrats debriefing */
+"Mission-3-4-congrats debriefing" = "I can finally Explore on my own!";
+
+/* Mission-3-5: title */
+"Mission-3-5-title" = "Photo Safari";
+
+/* Mission-3-5: briefing */
+"Mission-3-5-briefing" = "It's time for the Photo Safari! I should Explore and snap Photos of my Favorite Color. You have 90 seconds to snap as many Photos as you can!";
+
+/* Mission-3-5: prompt */
+"Mission-3-5-prompt" = "Let's go on a\nPhoto Safari!";
+
+/* Mission-3-5: failure debriefing */
+"Mission-3-5-failure debriefing" = "I need to Take a Photo when I see an object of my favorite color.";
+
+/* Mission-3-5: success debriefing */
+"Mission-3-5-success debriefing" = "Take more Photos for more stars!";
+
+/* Mission-3-5: congrats debriefing */
+"Mission-3-5-congrats debriefing" = "I'm a real Explorer now!";
+
+/* Mission-3-6: title */
+"Mission-3-6-title" = "Doodle Drive";
+
+/* Mission-3-6: briefing */
+"Mission-3-6-briefing" = "Draw a path on screen and watch me drive that path on the ground.";
+
+/* Mission-3-6: prompt */
+"Mission-3-6-prompt" = "Let's try Doodle Drive!";
+
+/* Mission-3-6: failure debriefing */
+"Mission-3-6-failure debriefing" = "You need to add a Doodle for me to trace!";
+
+/* Mission-3-6: success debriefing */
+"Mission-3-6-success debriefing" = "Gimme a harder Doodle to drive!";
+
+/* Mission-3-6: congrats debriefing */
+"Mission-3-6-congrats debriefing" = "Now we're going to dominate the Space Race!";
+

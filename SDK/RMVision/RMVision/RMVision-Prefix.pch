@@ -1,0 +1,20 @@
+//
+// Prefix header for all source files of the 'RMVision' target in the 'RMVision' project
+//
+// OpenCV inclusion for C++ files
+#ifdef __cplusplus
+    #import <opencv2/opencv.hpp>
+#endif
+
+#ifdef __OBJC__
+#import <Foundation/Foundation.h>
+#import <RMShared/RMSharedDefines.h>
+#import <RMShared/DDLog.h>
+
+#ifdef DEBUG
+static int ddLogLevel __unused = LOG_LEVEL_VERBOSE;
+#else
+static int ddLogLevel __unused = LOG_LEVEL_INFO;
+#endif
+
+#endif

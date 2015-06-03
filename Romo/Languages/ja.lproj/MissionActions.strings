@@ -1,0 +1,150 @@
+﻿/* Action title: Drive forward */
+"Action-title-Drive forward" = "前にすすむ";
+
+/* Action shortTitle: Drive forward */
+"Action-shortTitle-Drive forward" = "前にすすむ";
+
+/* Action title: Drive backward */
+"Action-title-Drive backward" = "後ろに下がる";
+
+/* Action shortTitle: Drive backward */
+"Action-shortTitle-Drive backward" = "後ろに下がる";
+
+/* Action title: Turn */
+"Action-title-Turn" = "回転";
+
+/* Action shortTitle: Turn */
+"Action-shortTitle-Turn" = "回転";
+
+/* Action title: Tilt */
+"Action-title-Tilt" = "かたむける";
+
+/* Action shortTitle: Tilt */
+"Action-shortTitle-Tilt" = "かたむける";
+
+/* Action title: Pause */
+"Action-title-Pause" = "ポーズ";
+
+/* Action shortTitle: Pause */
+"Action-shortTitle-Pause" = "ポーズ";
+
+/* Action title: Play $ */
+"Action-title-Play $" = "$を再生";
+
+/* Action shortTitle: Play a song */
+"Action-shortTitle-Play a song" = "曲を再生";
+
+/* Action title: Shuffle Music */
+"Action-title-Shuffle Music" = "音楽をシャッフル";
+
+/* Action shortTitle: Shuffe Music */
+"Action-shortTitle-Shuffe Music" = "音楽をシャッフル";
+
+/* Action title: Turn on Romo's light */
+"Action-title-Turn on Romo's light" = "ロモのライトをつける";
+
+/* Action shortTitle: Light on */
+"Action-shortTitle-Light on" = "つける";
+
+/* Action title: Turn off Romo's light */
+"Action-title-Turn off Romo's light" = "ロモのライトを消す";
+
+/* Action shortTitle: Light off */
+"Action-shortTitle-Light off" = "消す";
+
+/* Action title: Blink Romo's light */
+"Action-title-Blink Romo's light" = "ロモのライトを点めつ";
+
+/* Action shortTitle: Blink light */
+"Action-shortTitle-Blink light" = "点めつ";
+
+/* Action title: Act $ */
+"Action-title-Act $" = "$のたいどになる";
+
+/* Action shortTitle: Make a face */
+"Action-shortTitle-Make a face" = "顔をしかめる";
+
+/* Action title: Become $ */
+"Action-title-Become $" = "$になる";
+
+/* Action shortTitle: Change Romo's Mood */
+"Action-shortTitle-Change Romo's Mood" = "ロモの気分をかえる";
+
+/* Action title: Say */
+"Action-title-Say" = "話す";
+
+/* Action shortTitle: Say something */
+"Action-shortTitle-Say something" = "何かを話す";
+
+/* Action title: Look */
+"Action-title-Look" = "見る";
+
+/* Action shortTitle: Look */
+"Action-shortTitle-Look" = "見る";
+
+/* Action title: Backfire */
+"Action-title-Backfire" = "おなら";
+
+/* Action shortTitle: Backfire */
+"Action-shortTitle-Backfire" = "おなら";
+
+/* Action title: Take a photo */
+"Action-title-Take a photo" = "しゃしんをとる";
+
+/* Action shortTitle: Photo */
+"Action-shortTitle-Photo" = "しゃしん";
+
+/* Action title: Record a video */
+"Action-title-Record a video" = "ビデオをとる";
+
+/* Action shortTitle: Video */
+"Action-shortTitle-Video" = "ビデオ";
+
+/* Action title: Doodle */
+"Action-title-Doodle" = "お絵かき";
+
+/* Action shortTitle: Doodle */
+"Action-shortTitle-Doodle" = "お絵かき";
+
+/* Action title: Sound the Alarm */
+"Action-title-Sound the Alarm" = "アラームをならす";
+
+/* Action shortTitle: Alarm */
+"Action-shortTitle-Alarm" = "アラーム";
+
+/* Action title: Start Exploring */
+"Action-title-Start Exploring" = "たんけんを始める";
+
+/* Action shortTitle: Explore */
+"Action-shortTitle-Explore" = "たんけん";
+
+/* Action title: Stop Exploring */
+"Action-title-Stop Exploring" = "たんけんを止める";
+
+/* Action shortTitle: Stop Explore */
+"Action-shortTitle-Stop Explore" = "たんけんを止める";
+
+/* Action title: Change my color */
+"Action-title-Change my color" = "色をかえる";
+
+/* Action shortTitle: Color */
+"Action-shortTitle-Color" = "色";
+
+/* Action title: Drive in a Square */
+"Action-title-Drive in a Square" = "四角に走る";
+
+/* Action shortTitle: Square */
+"Action-shortTitle-Square" = "四角";
+
+/* Action title: Nod "Yes!" */
+"Action-title-Nod \"Yes!\"" = "「うん！」とうなずく";
+
+/* Action shortTitle: Yes! */
+"Action-shortTitle-Yes!" = "うん！";
+
+/* Action title: Shake "No!" */
+"Action-title-Shake \"No!\"" = "「ううん！」と首をふる";
+
+/* Action shortTitle: No! */
+"Action-shortTitle-No!" = "ううん！";
+

@@ -1,0 +1,124 @@
+{
+    "RMEventTickle": [
+        "Versuche,\nmich zu kitzeln!"
+    ],
+    
+    "RMEventTickle:nose": [
+        "Kitzel\nmeine Nase!",
+        "Versuche, meine\nNase zu kitzeln!"
+    ],
+    
+    "RMEventTickle:chin": [
+        "Kitzel\nmein Kinn!"
+    ],
+    
+    "RMEventTickle:forehead": [
+        "Kitzel\nmeine Stirn"
+    ],
+
+    "RMEventPokeAnywhere": [
+        "Stupse mich an!\nStupse mich an!",
+        "Versuche, mein\nGesicht anzustupsen!",
+        "Stupse mein\nGesicht an!"
+    ],
+
+    "RMEventPoke": [
+        "\nStupse mein Gesicht an!"
+    ],
+    
+    "RMEventPoke:chin": [
+        "Versuche, mein\nKinn anzustupsen",
+        "Stupse mein Kinn an!",
+        "Stupse mein\nKinn an!"
+    ],
+    
+    "RMEventPoke:forehead": [
+        "Versuche, meine\nStirn anzustupsen",
+        "Stupse meine\nStirn an!"
+    ],
+    
+    "RMEventPoke:nose": [
+        "Versuche, meine\nNase anzustupsen",
+        "Stupse meine\nNASE an!"
+    ],
+    
+    "RMEventPoke:eye": [
+        "Versuche, mein\nAuge anzustupsen",
+        "Piekse mir in\nmein Auge",
+        "Stupse eines meiner\nAugen an!",
+        "Stupse mein Auge an!",
+        "Stupse mein\nAUGE an!"
+    ],
+
+    "RMEventShake": [
+        "\nSchüttel mich!",
+        "Schüttel mich wie\nein Polaroidfoto!",
+        "Schüttel schüttel\nSCHÜTTEL MICH!",
+        "Schüttel mich!\nSchüttel mich!"
+    ],
+
+    "RMEventPickedUp": [
+        "\nHebe mich hoch!",
+        "Hebe mich\nHOCH!"
+    ],
+
+    "RMEventDock": [
+        "Verbinde mich wieder\nmit meiner Basisstation!\nSchnell!",
+        "Ich fühle mich benommen!\nVerbinde mich wieder\nmit meiner Basisstation",
+        "Schnell!\nVerbinde mich mit meiner\nRoboterbasisstation!",
+        "Verbinde mich mit meiner\nRoboterbasisstation!"
+    ],
+
+    "RMEventUndock": [
+        "Versuche, mich\nlangsam auszudocken",
+        "Docke mich aus\nmeiner Basisstation aus!",
+        "Nimm mich aus dieser\nRoboterbasisstation!"
+    ],
+
+    "RMEventFaceAppear": [
+        "Zeige mir\ndein Gesicht",
+        "Lass mich dein\nGESICHT sehen!",
+        "Wo ist dein\nGesicht?",
+        "Hey!\nWohin bist du gegangen?"
+    ],
+
+    "RMEventFaceDisappear": [
+        ""
+    ],
+    
+    "RMEventHearsLoudSound": [
+                  "Klatsche mit deinen\nHänden!",
+                  "Gib laute\nKlatschgeräusche von dir!",
+                  "Gib einen\nlauten Ton von dir!",
+                  "Klatsche!"
+                  ],
+    
+    "RMEventSeesMotion": [
+                "Bewege dich\nvor mir",
+                "Gehe\nvor mir",
+                "Zeige mir\netwas!",
+                "Zeige mir etwas,\ndas sich bewegt!"
+                ],
+    
+    "RMEventStasis": [
+                ""
+                ],
+    
+    "RMEventLightsOff": [
+                "Schalte das\nLicht aus!",
+                "Knipse das\nLicht aus!",
+                "Schalte das\nLicht aus!",
+                "Mache es\nhier dunkler"
+                ],
+    
+    "RMEventLightsOn": [
+                "Schalte das\nLicht ein!",
+                "Mache es\nhier heller!",
+                "Schalte eine\nLampe ein",
+                "Schalte das\nLicht ein!"
+                ],
+    
+    "RMEventFavoriteColor": [
+                "Zeige mir meine\nLieblingsfarbe!"
+                ]
+}

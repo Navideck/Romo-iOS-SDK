@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>1</key>
+	<dict>
+		<key>title</key>
+		<string>Ruedas nuevas</string>
+		<key>description</key>
+		<string>Enséñame a moverme</string>
+	</dict>
+	<key>2</key>
+	<dict>
+		<key>title</key>
+		<string>Horizonte de sucesos</string>
+		<key>description</key>
+		<string>Vivir con un humano</string>
+	</dict>
+	<key>3</key>
+	<dict>
+		<key>title</key>
+		<string>Explorador</string>
+		<key>description</key>
+		<string>Demos una vuelta</string>
+	</dict>
+	<key>101</key>
+	<dict>
+		<key>title</key>
+		<string>Color favorito</string>
+		<key>description</key>
+		<string>Enséñame cosas para adivinar mi color favorito</string>
+	</dict>
+	<key>102</key>
+	<dict>
+		<key>title</key>
+		<string>Persecución</string>
+		<key>description</key>
+		<string>Ir detrás de cualquier color</string>
+	</dict>
+	<key>103</key>
+	<dict>
+		<key>title</key>
+		<string>Seguir una línea</string>
+		<key>description</key>
+		<string>Correr siguiendo una ruta</string>
+	</dict>
+	<key>201</key>
+	<dict>
+		<key>title</key>
+		<string>El Laboratorio</string>
+		<key>description</key>
+		<string>Experimentar con todo lo aprendido</string>
+	</dict>
+	<key>202</key>
+	<dict>
+		<key>title</key>
+		<string>Romo Control</string>
+		<key>description</key>
+		<string>Contrólame desde otro dispositivo iOS u ordenador</string>
+	</dict>
+</dict>
+</plist>

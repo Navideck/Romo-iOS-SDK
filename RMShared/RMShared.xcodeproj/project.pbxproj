@@ -1,0 +1,497 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4303258118202A86006678B8 /* UIDevice+Hardware.m in Sources */ = {isa = PBXBuildFile; fileRef = 4303258018202A86006678B8 /* UIDevice+Hardware.m */; };
+		4303258218202C4D006678B8 /* UIDevice+Hardware.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 4303257F18202A86006678B8 /* UIDevice+Hardware.h */; };
+		4D66392B18046AB100294A94 /* RMRingBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D66392A18046AB100294A94 /* RMRingBuffer.m */; };
+		71CCF68A17F0FEDD00EC4578 /* base64.c in Sources */ = {isa = PBXBuildFile; fileRef = 71CCF68317F0FEDD00EC4578 /* base64.c */; };
+		71CCF68B17F0FEDD00EC4578 /* NSData+SRB64Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 71CCF68617F0FEDD00EC4578 /* NSData+SRB64Additions.m */; };
+		71CCF68C17F0FEDD00EC4578 /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 71CCF68917F0FEDD00EC4578 /* SRWebSocket.m */; };
+		71CCF69C17F0FF3C00EC4578 /* DDASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 71CCF69517F0FF3C00EC4578 /* DDASLLogger.m */; };
+		71CCF69D17F0FF3C00EC4578 /* DDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 71CCF69717F0FF3C00EC4578 /* DDFileLogger.m */; };
+		71CCF69E17F0FF3C00EC4578 /* DDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 71CCF69917F0FF3C00EC4578 /* DDLog.m */; };
+		71CCF69F17F0FF3C00EC4578 /* DDTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 71CCF69B17F0FF3C00EC4578 /* DDTTYLogger.m */; };
+		71CCF6A517F0FF6300EC4578 /* RMLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 71CCF6A217F0FF6300EC4578 /* RMLogFormatter.m */; };
+		71CCF6A617F0FF6300EC4578 /* RMWebSocketLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 71CCF6A417F0FF6300EC4578 /* RMWebSocketLogger.m */; };
+		71CCF6AA17F0FFBB00EC4578 /* RMWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 71CCF6A917F0FFBB00EC4578 /* RMWebSocket.m */; };
+		71CCF6AE17F100D300EC4578 /* UIApplication+Environment.m in Sources */ = {isa = PBXBuildFile; fileRef = 71CCF6AD17F100D300EC4578 /* UIApplication+Environment.m */; };
+		71CCF6B317F101BE00EC4578 /* UIDevice+UDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 71CCF6B017F101BE00EC4578 /* UIDevice+UDID.m */; };
+		71CCF6B417F101BE00EC4578 /* NSString+createSHA512.m in Sources */ = {isa = PBXBuildFile; fileRef = 71CCF6B217F101BE00EC4578 /* NSString+createSHA512.m */; };
+		9435AD1217E2198B00331DBE /* RMSharedDefines.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 9435AD1117E2197F00331DBE /* RMSharedDefines.h */; };
+		945B81CE1746AF07003C6903 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 945B81CD1746AF07003C6903 /* Foundation.framework */; };
+		945B81D31746AF07003C6903 /* RMShared.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 945B81D21746AF07003C6903 /* RMShared.h */; };
+		945B81E41746AF73003C6903 /* RMCircleMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 945B81DF1746AF73003C6903 /* RMCircleMath.m */; };
+		945B81E51746AF73003C6903 /* RMMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 945B81E11746AF73003C6903 /* RMMath.m */; };
+		945B81E61746AF73003C6903 /* RMQuaternion.m in Sources */ = {isa = PBXBuildFile; fileRef = 945B81E31746AF73003C6903 /* RMQuaternion.m */; };
+		945B81E71746AF79003C6903 /* RMCircleMath.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 945B81DE1746AF73003C6903 /* RMCircleMath.h */; };
+		945B81E81746AF79003C6903 /* RMMath.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 945B81E01746AF73003C6903 /* RMMath.h */; };
+		945B81E91746AF79003C6903 /* RMQuaternion.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 945B81E21746AF73003C6903 /* RMQuaternion.h */; };
+		947E3DA917DFF09100A0AE4B /* RMDispatchTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 947E3DA817DFF09100A0AE4B /* RMDispatchTimer.m */; };
+		947E3DAA17DFF0AD00A0AE4B /* RMDispatchTimer.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 947E3DA717DFF09100A0AE4B /* RMDispatchTimer.h */; };
+		94CEF850180DE8FA00D735AA /* DDLog.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 71CCF69817F0FF3C00EC4578 /* DDLog.h */; };
+		94CEF851180DEAA600D735AA /* RMRingBuffer.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 4D66392918046AB100294A94 /* RMRingBuffer.h */; };
+		94CEF852180DEAAE00D735AA /* UIDevice+UDID.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 71CCF6AF17F101BE00EC4578 /* UIDevice+UDID.h */; };
+		94CEF853180DEAAE00D735AA /* NSString+createSHA512.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 71CCF6B117F101BE00EC4578 /* NSString+createSHA512.h */; };
+		94CEF854180DEAAE00D735AA /* UIApplication+Environment.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 71CCF6AC17F100D300EC4578 /* UIApplication+Environment.h */; };
+		94CEF855180DEAB700D735AA /* RMWebSocket.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 71CCF6A817F0FFBB00EC4578 /* RMWebSocket.h */; };
+		94CEF856180DEAB700D735AA /* RMLogFormatter.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 71CCF6A117F0FF6300EC4578 /* RMLogFormatter.h */; };
+		94CEF857180DEAB700D735AA /* RMWebSocketLogger.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 71CCF6A317F0FF6300EC4578 /* RMWebSocketLogger.h */; };
+		94CEF858180DEAB700D735AA /* DDASLLogger.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 71CCF69417F0FF3C00EC4578 /* DDASLLogger.h */; };
+		94CEF859180DEAB700D735AA /* DDFileLogger.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 71CCF69617F0FF3C00EC4578 /* DDFileLogger.h */; };
+		94CEF85A180DEAB700D735AA /* DDTTYLogger.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 71CCF69A17F0FF3C00EC4578 /* DDTTYLogger.h */; };
+		94CEF85B180DEAB700D735AA /* base64.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 71CCF68417F0FEDD00EC4578 /* base64.h */; };
+		94CEF85C180DEAB700D735AA /* NSData+SRB64Additions.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 71CCF68517F0FEDD00EC4578 /* NSData+SRB64Additions.h */; };
+		94CEF85D180DEAB700D735AA /* SRWebSocket.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 71CCF68817F0FEDD00EC4578 /* SRWebSocket.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		945B81C81746AF07003C6903 /* Copy Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				4303258218202C4D006678B8 /* UIDevice+Hardware.h in Copy Files */,
+				94CEF855180DEAB700D735AA /* RMWebSocket.h in Copy Files */,
+				94CEF856180DEAB700D735AA /* RMLogFormatter.h in Copy Files */,
+				94CEF857180DEAB700D735AA /* RMWebSocketLogger.h in Copy Files */,
+				94CEF858180DEAB700D735AA /* DDASLLogger.h in Copy Files */,
+				94CEF859180DEAB700D735AA /* DDFileLogger.h in Copy Files */,
+				94CEF85A180DEAB700D735AA /* DDTTYLogger.h in Copy Files */,
+				94CEF85B180DEAB700D735AA /* base64.h in Copy Files */,
+				94CEF85C180DEAB700D735AA /* NSData+SRB64Additions.h in Copy Files */,
+				94CEF85D180DEAB700D735AA /* SRWebSocket.h in Copy Files */,
+				94CEF852180DEAAE00D735AA /* UIDevice+UDID.h in Copy Files */,
+				94CEF853180DEAAE00D735AA /* NSString+createSHA512.h in Copy Files */,
+				94CEF854180DEAAE00D735AA /* UIApplication+Environment.h in Copy Files */,
+				94CEF851180DEAA600D735AA /* RMRingBuffer.h in Copy Files */,
+				94CEF850180DE8FA00D735AA /* DDLog.h in Copy Files */,
+				9435AD1217E2198B00331DBE /* RMSharedDefines.h in Copy Files */,
+				947E3DAA17DFF0AD00A0AE4B /* RMDispatchTimer.h in Copy Files */,
+				945B81E71746AF79003C6903 /* RMCircleMath.h in Copy Files */,
+				945B81E81746AF79003C6903 /* RMMath.h in Copy Files */,
+				945B81E91746AF79003C6903 /* RMQuaternion.h in Copy Files */,
+				945B81D31746AF07003C6903 /* RMShared.h in Copy Files */,
+			);
+			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		4303257F18202A86006678B8 /* UIDevice+Hardware.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Hardware.h"; sourceTree = "<group>"; };
+		4303258018202A86006678B8 /* UIDevice+Hardware.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Hardware.m"; sourceTree = "<group>"; };
+		4D66392918046AB100294A94 /* RMRingBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMRingBuffer.h; sourceTree = "<group>"; };
+		4D66392A18046AB100294A94 /* RMRingBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMRingBuffer.m; sourceTree = "<group>"; };
+		71CCF68317F0FEDD00EC4578 /* base64.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = base64.c; sourceTree = "<group>"; };
+		71CCF68417F0FEDD00EC4578 /* base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base64.h; sourceTree = "<group>"; };
+		71CCF68517F0FEDD00EC4578 /* NSData+SRB64Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+SRB64Additions.h"; sourceTree = "<group>"; };
+		71CCF68617F0FEDD00EC4578 /* NSData+SRB64Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+SRB64Additions.m"; sourceTree = "<group>"; };
+		71CCF68717F0FEDD00EC4578 /* SocketRocket-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SocketRocket-Prefix.pch"; sourceTree = "<group>"; };
+		71CCF68817F0FEDD00EC4578 /* SRWebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRWebSocket.h; sourceTree = "<group>"; };
+		71CCF68917F0FEDD00EC4578 /* SRWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRWebSocket.m; sourceTree = "<group>"; };
+		71CCF69417F0FF3C00EC4578 /* DDASLLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDASLLogger.h; sourceTree = "<group>"; };
+		71CCF69517F0FF3C00EC4578 /* DDASLLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDASLLogger.m; sourceTree = "<group>"; };
+		71CCF69617F0FF3C00EC4578 /* DDFileLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDFileLogger.h; sourceTree = "<group>"; };
+		71CCF69717F0FF3C00EC4578 /* DDFileLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDFileLogger.m; sourceTree = "<group>"; };
+		71CCF69817F0FF3C00EC4578 /* DDLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDLog.h; sourceTree = "<group>"; };
+		71CCF69917F0FF3C00EC4578 /* DDLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDLog.m; sourceTree = "<group>"; };
+		71CCF69A17F0FF3C00EC4578 /* DDTTYLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTTYLogger.h; sourceTree = "<group>"; };
+		71CCF69B17F0FF3C00EC4578 /* DDTTYLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTTYLogger.m; sourceTree = "<group>"; };
+		71CCF6A117F0FF6300EC4578 /* RMLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMLogFormatter.h; sourceTree = "<group>"; };
+		71CCF6A217F0FF6300EC4578 /* RMLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMLogFormatter.m; sourceTree = "<group>"; };
+		71CCF6A317F0FF6300EC4578 /* RMWebSocketLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMWebSocketLogger.h; sourceTree = "<group>"; };
+		71CCF6A417F0FF6300EC4578 /* RMWebSocketLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMWebSocketLogger.m; sourceTree = "<group>"; };
+		71CCF6A817F0FFBB00EC4578 /* RMWebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMWebSocket.h; sourceTree = "<group>"; };
+		71CCF6A917F0FFBB00EC4578 /* RMWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMWebSocket.m; sourceTree = "<group>"; };
+		71CCF6AC17F100D300EC4578 /* UIApplication+Environment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+Environment.h"; sourceTree = "<group>"; };
+		71CCF6AD17F100D300EC4578 /* UIApplication+Environment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+Environment.m"; sourceTree = "<group>"; };
+		71CCF6AF17F101BE00EC4578 /* UIDevice+UDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+UDID.h"; sourceTree = "<group>"; };
+		71CCF6B017F101BE00EC4578 /* UIDevice+UDID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+UDID.m"; sourceTree = "<group>"; };
+		71CCF6B117F101BE00EC4578 /* NSString+createSHA512.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+createSHA512.h"; sourceTree = "<group>"; };
+		71CCF6B217F101BE00EC4578 /* NSString+createSHA512.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+createSHA512.m"; sourceTree = "<group>"; };
+		9435AD1117E2197F00331DBE /* RMSharedDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMSharedDefines.h; sourceTree = "<group>"; };
+		945B81CA1746AF07003C6903 /* libRMShared.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRMShared.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		945B81CD1746AF07003C6903 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		945B81D11746AF07003C6903 /* RMShared-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RMShared-Prefix.pch"; sourceTree = "<group>"; };
+		945B81D21746AF07003C6903 /* RMShared.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMShared.h; sourceTree = "<group>"; };
+		945B81DE1746AF73003C6903 /* RMCircleMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMCircleMath.h; sourceTree = "<group>"; };
+		945B81DF1746AF73003C6903 /* RMCircleMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = RMCircleMath.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		945B81E01746AF73003C6903 /* RMMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMMath.h; sourceTree = "<group>"; };
+		945B81E11746AF73003C6903 /* RMMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = RMMath.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		945B81E21746AF73003C6903 /* RMQuaternion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = RMQuaternion.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		945B81E31746AF73003C6903 /* RMQuaternion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = RMQuaternion.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		947E3DA717DFF09100A0AE4B /* RMDispatchTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMDispatchTimer.h; sourceTree = "<group>"; };
+		947E3DA817DFF09100A0AE4B /* RMDispatchTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMDispatchTimer.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		945B81C71746AF07003C6903 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				945B81CE1746AF07003C6903 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4D66392818046AB100294A94 /* Data Structures */ = {
+			isa = PBXGroup;
+			children = (
+				4D66392918046AB100294A94 /* RMRingBuffer.h */,
+				4D66392A18046AB100294A94 /* RMRingBuffer.m */,
+			);
+			path = "Data Structures";
+			sourceTree = "<group>";
+		};
+		71CCF68017F0FEDD00EC4578 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				71CCF6AB17F100D300EC4578 /* Categories */,
+				71CCF6A717F0FFBB00EC4578 /* Web Socket */,
+				71CCF6A017F0FF6300EC4578 /* Loggers */,
+				71CCF68117F0FEDD00EC4578 /* ext */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		71CCF68117F0FEDD00EC4578 /* ext */ = {
+			isa = PBXGroup;
+			children = (
+				71CCF69317F0FF3C00EC4578 /* CocoaLumberjack */,
+				71CCF68217F0FEDD00EC4578 /* SocketRocket */,
+			);
+			path = ext;
+			sourceTree = "<group>";
+		};
+		71CCF68217F0FEDD00EC4578 /* SocketRocket */ = {
+			isa = PBXGroup;
+			children = (
+				71CCF68317F0FEDD00EC4578 /* base64.c */,
+				71CCF68417F0FEDD00EC4578 /* base64.h */,
+				71CCF68517F0FEDD00EC4578 /* NSData+SRB64Additions.h */,
+				71CCF68617F0FEDD00EC4578 /* NSData+SRB64Additions.m */,
+				71CCF68717F0FEDD00EC4578 /* SocketRocket-Prefix.pch */,
+				71CCF68817F0FEDD00EC4578 /* SRWebSocket.h */,
+				71CCF68917F0FEDD00EC4578 /* SRWebSocket.m */,
+			);
+			path = SocketRocket;
+			sourceTree = "<group>";
+		};
+		71CCF69317F0FF3C00EC4578 /* CocoaLumberjack */ = {
+			isa = PBXGroup;
+			children = (
+				71CCF69417F0FF3C00EC4578 /* DDASLLogger.h */,
+				71CCF69517F0FF3C00EC4578 /* DDASLLogger.m */,
+				71CCF69617F0FF3C00EC4578 /* DDFileLogger.h */,
+				71CCF69717F0FF3C00EC4578 /* DDFileLogger.m */,
+				71CCF69817F0FF3C00EC4578 /* DDLog.h */,
+				71CCF69917F0FF3C00EC4578 /* DDLog.m */,
+				71CCF69A17F0FF3C00EC4578 /* DDTTYLogger.h */,
+				71CCF69B17F0FF3C00EC4578 /* DDTTYLogger.m */,
+			);
+			path = CocoaLumberjack;
+			sourceTree = "<group>";
+		};
+		71CCF6A017F0FF6300EC4578 /* Loggers */ = {
+			isa = PBXGroup;
+			children = (
+				71CCF6A117F0FF6300EC4578 /* RMLogFormatter.h */,
+				71CCF6A217F0FF6300EC4578 /* RMLogFormatter.m */,
+				71CCF6A317F0FF6300EC4578 /* RMWebSocketLogger.h */,
+				71CCF6A417F0FF6300EC4578 /* RMWebSocketLogger.m */,
+			);
+			path = Loggers;
+			sourceTree = "<group>";
+		};
+		71CCF6A717F0FFBB00EC4578 /* Web Socket */ = {
+			isa = PBXGroup;
+			children = (
+				71CCF6A817F0FFBB00EC4578 /* RMWebSocket.h */,
+				71CCF6A917F0FFBB00EC4578 /* RMWebSocket.m */,
+			);
+			path = "Web Socket";
+			sourceTree = "<group>";
+		};
+		71CCF6AB17F100D300EC4578 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				4303257F18202A86006678B8 /* UIDevice+Hardware.h */,
+				4303258018202A86006678B8 /* UIDevice+Hardware.m */,
+				71CCF6AF17F101BE00EC4578 /* UIDevice+UDID.h */,
+				71CCF6B017F101BE00EC4578 /* UIDevice+UDID.m */,
+				71CCF6B117F101BE00EC4578 /* NSString+createSHA512.h */,
+				71CCF6B217F101BE00EC4578 /* NSString+createSHA512.m */,
+				71CCF6AC17F100D300EC4578 /* UIApplication+Environment.h */,
+				71CCF6AD17F100D300EC4578 /* UIApplication+Environment.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		945B81C11746AF07003C6903 = {
+			isa = PBXGroup;
+			children = (
+				945B81CF1746AF07003C6903 /* RMShared */,
+				945B81CC1746AF07003C6903 /* Frameworks */,
+				945B81CB1746AF07003C6903 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		945B81CB1746AF07003C6903 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				945B81CA1746AF07003C6903 /* libRMShared.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		945B81CC1746AF07003C6903 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				945B81CD1746AF07003C6903 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		945B81CF1746AF07003C6903 /* RMShared */ = {
+			isa = PBXGroup;
+			children = (
+				71CCF68017F0FEDD00EC4578 /* lib */,
+				945B81D21746AF07003C6903 /* RMShared.h */,
+				9435AD1117E2197F00331DBE /* RMSharedDefines.h */,
+				947E3DA717DFF09100A0AE4B /* RMDispatchTimer.h */,
+				947E3DA817DFF09100A0AE4B /* RMDispatchTimer.m */,
+				4D66392818046AB100294A94 /* Data Structures */,
+				945B81DD1746AF73003C6903 /* Math */,
+				945B81D01746AF07003C6903 /* Supporting Files */,
+			);
+			path = RMShared;
+			sourceTree = "<group>";
+		};
+		945B81D01746AF07003C6903 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				945B81D11746AF07003C6903 /* RMShared-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		945B81DD1746AF73003C6903 /* Math */ = {
+			isa = PBXGroup;
+			children = (
+				945B81DE1746AF73003C6903 /* RMCircleMath.h */,
+				945B81DF1746AF73003C6903 /* RMCircleMath.m */,
+				945B81E01746AF73003C6903 /* RMMath.h */,
+				945B81E11746AF73003C6903 /* RMMath.m */,
+				945B81E21746AF73003C6903 /* RMQuaternion.h */,
+				945B81E31746AF73003C6903 /* RMQuaternion.m */,
+			);
+			path = Math;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		945B81C91746AF07003C6903 /* RMShared */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 945B81D81746AF07003C6903 /* Build configuration list for PBXNativeTarget "RMShared" */;
+			buildPhases = (
+				945B81C61746AF07003C6903 /* Sources */,
+				945B81C71746AF07003C6903 /* Frameworks */,
+				945B81C81746AF07003C6903 /* Copy Files */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RMShared;
+			productName = RMShared;
+			productReference = 945B81CA1746AF07003C6903 /* libRMShared.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		945B81C21746AF07003C6903 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Romotive, Inc";
+			};
+			buildConfigurationList = 945B81C51746AF07003C6903 /* Build configuration list for PBXProject "RMShared" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 945B81C11746AF07003C6903;
+			productRefGroup = 945B81CB1746AF07003C6903 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				945B81C91746AF07003C6903 /* RMShared */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		945B81C61746AF07003C6903 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71CCF69E17F0FF3C00EC4578 /* DDLog.m in Sources */,
+				71CCF69C17F0FF3C00EC4578 /* DDASLLogger.m in Sources */,
+				4303258118202A86006678B8 /* UIDevice+Hardware.m in Sources */,
+				4D66392B18046AB100294A94 /* RMRingBuffer.m in Sources */,
+				71CCF68B17F0FEDD00EC4578 /* NSData+SRB64Additions.m in Sources */,
+				71CCF68A17F0FEDD00EC4578 /* base64.c in Sources */,
+				71CCF69F17F0FF3C00EC4578 /* DDTTYLogger.m in Sources */,
+				947E3DA917DFF09100A0AE4B /* RMDispatchTimer.m in Sources */,
+				945B81E41746AF73003C6903 /* RMCircleMath.m in Sources */,
+				71CCF68C17F0FEDD00EC4578 /* SRWebSocket.m in Sources */,
+				71CCF6AE17F100D300EC4578 /* UIApplication+Environment.m in Sources */,
+				71CCF6B317F101BE00EC4578 /* UIDevice+UDID.m in Sources */,
+				71CCF6A517F0FF6300EC4578 /* RMLogFormatter.m in Sources */,
+				945B81E51746AF73003C6903 /* RMMath.m in Sources */,
+				71CCF6AA17F0FFBB00EC4578 /* RMWebSocket.m in Sources */,
+				71CCF69D17F0FF3C00EC4578 /* DDFileLogger.m in Sources */,
+				71CCF6A617F0FF6300EC4578 /* RMWebSocketLogger.m in Sources */,
+				945B81E61746AF73003C6903 /* RMQuaternion.m in Sources */,
+				71CCF6B417F101BE00EC4578 /* NSString+createSHA512.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		945B81D61746AF07003C6903 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RMShared/RMShared-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		945B81D71746AF07003C6903 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEAD_CODE_STRIPPING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RMShared/RMShared-Prefix.pch";
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		945B81D91746AF07003C6903 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
+				DEAD_CODE_STRIPPING = NO;
+				DSTROOT = /tmp/RMShared.dst;
+				GCC_PREFIX_HEADER = "RMShared/RMShared-Prefix.pch";
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRIP_STYLE = "non-global";
+				VALID_ARCHS = "armv7 armv7s";
+			};
+			name = Debug;
+		};
+		945B81DA1746AF07003C6903 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
+				DEAD_CODE_STRIPPING = NO;
+				DSTROOT = /tmp/RMShared.dst;
+				GCC_PREFIX_HEADER = "RMShared/RMShared-Prefix.pch";
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRIP_STYLE = "non-global";
+				VALID_ARCHS = "armv7 armv7s";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		945B81C51746AF07003C6903 /* Build configuration list for PBXProject "RMShared" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				945B81D61746AF07003C6903 /* Debug */,
+				945B81D71746AF07003C6903 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		945B81D81746AF07003C6903 /* Build configuration list for PBXNativeTarget "RMShared" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				945B81D91746AF07003C6903 /* Debug */,
+				945B81DA1746AF07003C6903 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 945B81C21746AF07003C6903 /* Project object */;
+}

@@ -1,0 +1,124 @@
+{
+    "RMEventTickle": [
+        "¡Intenta hacerme\ncosquillas!"
+    ],
+    
+    "RMEventTickle:nose": [
+        "¡Hazme cosquillas\nen la nariz!",
+        "¡Intenta hacerme\ncosquillas en la nariz!"
+    ],
+    
+    "RMEventTickle:chin": [
+        "¡Hazme cosquillas\nen la barbilla!"
+    ],
+    
+    "RMEventTickle:forehead": [
+        "Hazme cosquillas\nen la frente"
+    ],
+
+    "RMEventPokeAnywhere": [
+        "¡Dame un toque!\n¡Un toque!",
+        "¡Intenta darme un\ntoque en la cara!",
+        "¡Dame un toque\nen la cara!"
+    ],
+
+    "RMEventPoke": [
+        "\n¡Dame un toque\nen la cara!"
+    ],
+    
+    "RMEventPoke:chin": [
+        "Intenta darme un\ntoque en la barbilla",
+        "¡Dame un toque\nen la barbilla!",
+        "¡Dame un toque\nen la barbilla!"
+    ],
+    
+    "RMEventPoke:forehead": [
+        "Intenta darme un\ntoque en la frente",
+        "¡Dame un toque\nen la frente!"
+    ],
+    
+    "RMEventPoke:nose": [
+        "Intenta darme un\ntoque en la nariz",
+        "¡Dame un toque\nen la NARIZ!"
+    ],
+    
+    "RMEventPoke:eye": [
+        "Intenta darme un\ntoque en el ojo",
+        "Dame un toque\nen el ojo",
+        "¡Dame un toque\nen un ojo!",
+        "¡Dame un toque\nen el ojo!",
+        "¡Dame un toque\nen el OJO!"
+    ],
+
+    "RMEventShake": [
+        "\n¡Agítame!",
+        "¡Agítame como a\nuna foto polaroid!",
+        "Mueve, mueve, mueve\n¡AGÍTAME!",
+        "¡Agítame!\n¡Agítame!"
+    ],
+
+    "RMEventPickedUp": [
+        "\n¡Sácame de la base!",
+        "¡SÁCAME!"
+    ],
+
+    "RMEventDock": [
+        "¡Vuelve a conectarme\na la base!\n¡Rápido!",
+        "¡Qué mareo!\nConéctame otra\nvez a la base",
+        "¡Rápido!\n¡Conéctame a mi\nbase de robot!",
+        "¡Conéctame otra vez a\nmi base de robot!"
+    ],
+
+    "RMEventUndock": [
+        "Intenta desacoplarme\npoco a poco",
+        "¡Desacóplame\nde la base!",
+        "¡Sácame de esta\nbase de robot!"
+    ],
+
+    "RMEventFaceAppear": [
+        "Enséñame\nla cara",
+        "¡Déjame verte\nla CARA!",
+        "¿Dónde está\ntu cara?",
+        "¡Eh!\n¿Dónde te has metido?"
+    ],
+
+    "RMEventFaceDisappear": [
+        ""
+    ],
+    
+    "RMEventHearsLoudSound": [
+                  "¡Da una\npalmada!",
+                  "¡Da una\npalmada fuerte!",
+                  "¡Haz un\nsonido fuerte!",
+                  "¡Aplaude!"
+                  ],
+    
+    "RMEventSeesMotion": [
+                "Muévete\ndelante mío",
+                "Camina\ndelante mío",
+                "¡Enséñame\nalgo!",
+                "¡Enséñame algo\nque se mueva!"
+                ],
+    
+    "RMEventStasis": [
+                ""
+                ],
+    
+    "RMEventLightsOff": [
+                "¡Apaga\nlas luces!",
+                "¡Quita\nlas luces!",
+                "¡Fuera\nluces!",
+                "Haz que\nesté oscuro"
+                ],
+    
+    "RMEventLightsOn": [
+                "¡Enciende\nalguna luz!",
+                "¡Haz que se\nvea más!",
+                "Enciende\nuna luz",
+                "¡Enciende\nlas luces!"
+                ],
+    
+    "RMEventFavoriteColor": [
+                "¡Enséñame mi\ncolor favorito!"
+                ]
+}

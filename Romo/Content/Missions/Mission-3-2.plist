@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>title</key>
+	<string>Guard Dog</string>
+	<key>briefing</key>
+	<string>Teach me to stand guard when I see motion.</string>
+	<key>prompt</key>
+	<string>Teach me to be\nyour guard dog!</string>
+	<key>events</key>
+	<array>
+		<string>RMEventSeesMotion</string>
+	</array>
+	<key>actions</key>
+	<array>
+		<dict>
+			<key>selector</key>
+			<string>playAlarmSound</string>
+			<key>library</key>
+			<string>Sound</string>
+			<key>available count</key>
+			<string>1</string>
+		</dict>
+		<dict>
+			<key>selector</key>
+			<string>takePhoto</string>
+			<key>library</key>
+			<string>Camera</string>
+			<key>available count</key>
+			<string>1</string>
+		</dict>
+		<dict>
+			<key>selector</key>
+			<string>express:(expression)expression</string>
+			<key>library</key>
+			<string>Character</string>
+			<key>available count</key>
+			<string>1</string>
+		</dict>
+	</array>
+	<key>initial solution</key>
+	<array>
+		<dict>
+			<key>event</key>
+			<string>RMEventSeesMotion</string>
+			<key>script</key>
+			<array>
+				<dict>
+					<key>selector</key>
+					<string>express:(expression)expression</string>
+					<key>title</key>
+					<string>Act $</string>
+					<key>shortTitle</key>
+					<string>Make a face</string>
+					<key>library</key>
+					<string>Character</string>
+					<key>locked</key>
+					<true/>
+					<key>deletable</key>
+					<false/>
+					<key>parameterValues</key>
+					<array>
+						<integer>1</integer>
+					</array>
+				</dict>
+			</array>
+		</dict>
+	</array>
+	<key>adding events</key>
+	<false/>
+	<key>editing parameters</key>
+	<false/>
+	<key>three star solution</key>
+	<array>
+		<dict>
+			<key>event</key>
+			<string>RMEventSeesMotion</string>
+			<key>properties</key>
+			<array>
+				<dict>
+					<key>library</key>
+					<string>Sound</string>
+					<key>minCount</key>
+					<integer>1</integer>
+				</dict>
+				<dict>
+					<key>library</key>
+					<string>Camera</string>
+					<key>minCount</key>
+					<integer>1</integer>
+				</dict>
+			</array>
+		</dict>
+	</array>
+	<key>two star solution</key>
+	<array>
+		<dict>
+			<key>event</key>
+			<string>RMEventSeesMotion</string>
+			<key>properties</key>
+			<array>
+				<dict>
+					<key>library</key>
+					<string>Camera</string>
+					<key>minCount</key>
+					<integer>1</integer>
+				</dict>
+			</array>
+		</dict>
+	</array>
+	<key>one star solution</key>
+	<array>
+		<dict>
+			<key>event</key>
+			<string>RMEventSeesMotion</string>
+			<key>properties</key>
+			<array>
+				<dict>
+					<key>library</key>
+					<string>Sound</string>
+					<key>minCount</key>
+					<integer>1</integer>
+				</dict>
+			</array>
+		</dict>
+	</array>
+	<key>failure debriefing</key>
+	<string>Add an Alarm Action to warn people and take a photo to catch the perpetrator.</string>
+	<key>success debriefing</key>
+	<string>Snap a photo of the perpetrator and sound the alarm to scare them off!</string>
+	<key>congrats debriefing</key>
+	<string>Pictures I take are saved to your Camera Roll!</string>
+	<key>unlockables</key>
+	<array>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>selector</key>
+				<string>playAlarmSound</string>
+				<key>library</key>
+				<string>Sound</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>selector</key>
+				<string>takePhoto</string>
+				<key>library</key>
+				<string>Camera</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>selector</key>
+				<string>recordVideoForDuration:(duration)duration</string>
+				<key>library</key>
+				<string>Camera</string>
+			</dict>
+			<key>presented</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>event</key>
+			<string>RMEventSeesMotion</string>
+			<key>presented</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>mission</key>
+			<string>3-3</string>
+		</dict>
+	</array>
+</dict>
+</plist>

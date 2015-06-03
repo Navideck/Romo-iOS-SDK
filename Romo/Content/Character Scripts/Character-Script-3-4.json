@@ -1,0 +1,35 @@
+{
+	"script":
+	{
+		"name": "Character-Script-3-4",
+		"description": "Evasive Maneuver",
+		"blocks": [
+                   {
+                   "description": "Set-up Photo Safari",
+                   "condition":
+                   {
+                   "name": "none"
+                   },
+                   "actions":
+                   [
+					{
+					"name": "expression",
+					"args": ["yippee"]
+					},
+					{
+					"name": "mumbleWithText",
+					"args": ["I can explore\nall on my own!"]
+					},
+					{
+					"name": "expressionWithText",
+					"args": ["curious","bewildered","Do you remember\nmy favorite color?"]
+					},
+					{
+					"name": "expressionWithText",
+					"args": ["none","excited","Well it's time for a\nPhoto Safari!"]
+					}
+                    ]
+                   }
+                   ]
+	}
+}

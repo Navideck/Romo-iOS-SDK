@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>title</key>
+	<string>Baseless</string>
+	<key>briefing</key>
+	<string>I can&apos;t Drive when I have no wheels! Delete all Actions that use my robot base when I&apos;m Undocked.</string>
+	<key>actions</key>
+	<array>
+		<dict>
+			<key>selector</key>
+			<string>express:(expression)expression</string>
+			<key>library</key>
+			<string>Character</string>
+			<key>available count</key>
+			<string>2</string>
+		</dict>
+		<dict>
+			<key>selector</key>
+			<string>driveForwardWithSpeed:(speed)speed distance:(distance)distance</string>
+			<key>library</key>
+			<string>Drive</string>
+			<key>available count</key>
+			<string>1</string>
+		</dict>
+		<dict>
+			<key>selector</key>
+			<string>driveBackwardWithSpeed:(speed)speed distance:(distance)distance</string>
+			<key>library</key>
+			<string>Drive</string>
+			<key>available count</key>
+			<string>1</string>
+		</dict>
+		<dict>
+			<key>selector</key>
+			<string>turnByAngle:(angle)angle radius:(radius)radius clockwise:(direction)clockwise</string>
+			<key>library</key>
+			<string>Drive</string>
+			<key>available count</key>
+			<string>2</string>
+		</dict>
+	</array>
+	<key>events</key>
+	<array>
+		<string>RMEventDock</string>
+		<string>RMEventUndock</string>
+	</array>
+	<key>initial solution</key>
+	<array>
+		<dict>
+			<key>event</key>
+			<string>RMEventDock</string>
+			<key>script</key>
+			<array>
+				<dict>
+					<key>selector</key>
+					<string>express:(expression)expression</string>
+					<key>title</key>
+					<string>Act $</string>
+					<key>shortTitle</key>
+					<string>Make a face</string>
+					<key>library</key>
+					<string>Character</string>
+					<key>parameterValues</key>
+					<array>
+						<integer>8</integer>
+					</array>
+				</dict>
+				<dict>
+					<key>selector</key>
+					<string>emote:(emotion)emotion</string>
+					<key>title</key>
+					<string>Become $</string>
+					<key>shortTitle</key>
+					<string>Change Romo&apos;s Mood</string>
+					<key>library</key>
+					<string>Character</string>
+					<key>parameterValues</key>
+					<array>
+						<integer>2</integer>
+					</array>
+				</dict>
+				<dict>
+					<key>selector</key>
+					<string>turnByAngle:(angle)angle radius:(radius)radius clockwise:(direction)clockwise</string>
+					<key>title</key>
+					<string>Turn</string>
+					<key>shortTitle</key>
+					<string>Turn</string>
+					<key>library</key>
+					<string>Drive</string>
+					<key>parameterValues</key>
+					<array>
+						<integer>90</integer>
+						<integer>0</integer>
+						<false/>
+					</array>
+				</dict>
+				<dict>
+					<key>selector</key>
+					<string>turnByAngle:(angle)angle radius:(radius)radius clockwise:(direction)clockwise</string>
+					<key>title</key>
+					<string>Turn</string>
+					<key>shortTitle</key>
+					<string>Turn</string>
+					<key>library</key>
+					<string>Drive</string>
+					<key>parameterValues</key>
+					<array>
+						<integer>45</integer>
+						<integer>0</integer>
+						<true/>
+					</array>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>event</key>
+			<string>RMEventUndock</string>
+			<key>script</key>
+			<array>
+				<dict>
+					<key>selector</key>
+					<string>express:(expression)expression</string>
+					<key>title</key>
+					<string>Act $</string>
+					<key>shortTitle</key>
+					<string>Make a face</string>
+					<key>library</key>
+					<string>Character</string>
+					<key>parameterValues</key>
+					<array>
+						<integer>15</integer>
+					</array>
+				</dict>
+				<dict>
+					<key>selector</key>
+					<string>emote:(emotion)emotion</string>
+					<key>title</key>
+					<string>Become $</string>
+					<key>shortTitle</key>
+					<string>Change Romo&apos;s Mood</string>
+					<key>library</key>
+					<string>Character</string>
+					<key>parameterValues</key>
+					<array>
+						<integer>5</integer>
+					</array>
+				</dict>
+				<dict>
+					<key>selector</key>
+					<string>driveBackwardWithSpeed:(speed)speed distance:(distance)distance</string>
+					<key>library</key>
+					<string>Drive</string>
+				</dict>
+				<dict>
+					<key>selector</key>
+					<string>driveForwardWithSpeed:(speed)speed distance:(distance)distance</string>
+					<key>library</key>
+					<string>Drive</string>
+					<key>available count</key>
+					<string>2</string>
+				</dict>
+			</array>
+		</dict>
+	</array>
+	<key>adding events</key>
+	<true/>
+	<key>editing parameters</key>
+	<true/>
+	<key>disable flip detection</key>
+	<true/>
+	<key>three star solution</key>
+	<array>
+		<dict>
+			<key>event</key>
+			<string>RMEventUndock</string>
+			<key>rules</key>
+			<array>
+				<dict>
+					<key>action</key>
+					<string>express:(expression)expression</string>
+				</dict>
+				<dict>
+					<key>action</key>
+					<string>emote:(emotion)emotion</string>
+				</dict>
+			</array>
+			<key>properties</key>
+			<array>
+				<dict>
+					<key>library</key>
+					<string>Drive</string>
+					<key>maxCount</key>
+					<integer>0</integer>
+				</dict>
+				<dict>
+					<key>library</key>
+					<string>Tilt</string>
+					<key>maxCount</key>
+					<integer>0</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>event</key>
+			<string>RMEventDock</string>
+			<key>rules</key>
+			<array>
+				<dict>
+					<key>action</key>
+					<string>express:(expression)expression</string>
+				</dict>
+				<dict>
+					<key>action</key>
+					<string>emote:(emotion)emotion</string>
+				</dict>
+				<dict>
+					<key>action</key>
+					<string>turnByAngle:(angle)angle radius:(radius)radius clockwise:(direction)clockwise</string>
+				</dict>
+				<dict>
+					<key>action</key>
+					<string>turnByAngle:(angle)angle radius:(radius)radius clockwise:(direction)clockwise</string>
+				</dict>
+			</array>
+		</dict>
+	</array>
+	<key>two star solution</key>
+	<array>
+		<dict>
+			<key>event</key>
+			<string>RMEventUndock</string>
+			<key>rules</key>
+			<array>
+				<dict>
+					<key>action</key>
+					<string>express:(expression)expression</string>
+				</dict>
+				<dict>
+					<key>action</key>
+					<string>emote:(emotion)emotion</string>
+				</dict>
+			</array>
+			<key>properties</key>
+			<array>
+				<dict>
+					<key>library</key>
+					<string>Drive</string>
+					<key>maxCount</key>
+					<integer>0</integer>
+				</dict>
+				<dict>
+					<key>library</key>
+					<string>Tilt</string>
+					<key>maxCount</key>
+					<integer>0</integer>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>event</key>
+			<string>RMEventDock</string>
+			<key>properties</key>
+			<array>
+				<dict>
+					<key>library</key>
+					<string>Character</string>
+					<key>minCount</key>
+					<integer>2</integer>
+				</dict>
+			</array>
+		</dict>
+	</array>
+	<key>one star solution</key>
+	<array>
+		<dict>
+			<key>event</key>
+			<string>RMEventUndock</string>
+			<key>properties</key>
+			<array>
+				<dict>
+					<key>library</key>
+					<string>Drive</string>
+					<key>maxCount</key>
+					<integer>0</integer>
+				</dict>
+				<dict>
+					<key>library</key>
+					<string>Tilt</string>
+					<key>maxCount</key>
+					<integer>0</integer>
+				</dict>
+			</array>
+		</dict>
+	</array>
+	<key>failure debriefing</key>
+	<string>Delete all Drive Actions for when I&apos;m Undocked.</string>
+	<key>success debriefing</key>
+	<string>You deleted too many Actions! I can still Drive when I&apos;m Docked.</string>
+	<key>congrats debriefing</key>
+	<string>Talk about an out-of-body experience!</string>
+	<key>unlockables</key>
+	<array>
+		<dict>
+			<key>event</key>
+			<string>RMEventUndock</string>
+		</dict>
+		<dict>
+			<key>event</key>
+			<string>RMEventDock</string>
+		</dict>
+		<dict>
+			<key>mission</key>
+			<string>2-5</string>
+		</dict>
+	</array>
+</dict>
+</plist>

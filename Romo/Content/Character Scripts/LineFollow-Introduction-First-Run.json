@@ -1,0 +1,245 @@
+{
+	"script": {
+		"name": "LineFollow-Introduction-First-Run",
+		"description": "Romo tells the user that this is the last training exercise before the space race. He needs this to win",
+		"blocks": [
+                  {
+                  "description": "",
+                  "condition": {
+                  "name": "wait",
+                  "args": [1.0]
+                  },
+                  "actions": 
+                        [
+                              {
+                              "name": "mumbleWithText",
+                              "args": ["Our final training is..."]
+                              },
+                              {
+                              "name": "mumbleWithText",
+                              "args": ["\nFollowing a line!\n"]
+                              },
+                              {
+                              "name": "mumbleWithText",
+                              "args": ["At the Robot Space Race,\nthe line is made of..."]
+                              },
+                              {
+                              "name": "mumbleWithText",
+                              "args": ["Hyper-charged photons!"]
+                              },
+                              {
+                              "name": "mumbleWithText",
+                              "args": ["On Earth,\nwe'll use colored tape."]
+                              },
+                              {
+                              "name": "mumbleWithText",
+                              "args": ["Go get colored tape!\nI'll wait for you."]
+                              }
+                        ]
+                  },
+                  {
+                  "description": "Ask for tape",
+                  "condition": {
+                  "name": "wait",
+                  "args": [1.0]
+                  },
+                  "actions": 
+                        [
+                              {
+                              "name": "ask",
+                              "args": ["Do you have\ncolored tape?", "No tape", "Yep!"],
+                              "store-id": "interaction/LineFollow/haveTape"
+                              }
+                        ]
+                  },
+                  {
+                  "description": "No tape",
+                  "condition":
+                  {
+                  "name": "store-id",
+                  "args": ["interaction/LineFollow/haveTape", "No tape"]
+                  },
+                  "actions":
+                        [
+                              {
+                              "name": "expressionToEmotion",
+                              "args": ["letdown","sad"]
+                              },
+                              {
+                              "name": "say",
+                              "args": ["Come on, ${userName}!"]
+                              },
+                              {
+                              "name": "mumbleWithText",
+                              "args": ["I'll show you how\nit works."]
+                              },
+                              {
+                              "name": "say",
+                              "args": ["And when you have tape,\nwe can play."]
+                              }
+                        ]
+                  },
+                  {
+                  "description": "Yes tape",
+                  "condition":
+                  {
+                  "name": "store-id",
+                  "args": ["interaction/LineFollow/haveTape", "Yep!"]
+                  },
+                  "actions":
+                        [
+                              {
+                              "name": "expression",
+                              "args": [
+                                    "yippee"
+                                    ]
+                              },
+                              {
+                              "name": "mumbleWithText",
+                              "args": ["Let's get started!"]
+                              }
+                        ]
+                  },
+                  {
+                  "description": "Continue instructions for laying tape",
+                  "condition":
+                  {
+                  "name": "none"
+                  },
+                  "actions":
+                        [     {
+                              "name": "emotion",
+                              "args": ["happy"]
+                              },
+                              {
+                              "name": "mumbleWithText",
+                              "args": ["On the ground, build a\nracetrack with tape."]
+                              },
+                              {
+                              "name": "mumbleWithText",
+                              "args": ["Take your time!\n"]
+                              }
+                        ]
+                  },
+                  {
+                  "description": "Give them an option to see a video",
+                  "condition":
+                  {
+                  "name": "none"
+                  },
+                  "actions":
+                        [
+                              {
+                              "name": "ask",
+                              "args": ["Wanna see a video of\nLine Follow in action?", "No", "Watch video"],
+                              "store-id": "interaction/LineFollow/seeVideo"
+                              }
+                        ]
+                  },
+                  {
+                  "description": "See Video",
+                  "condition":
+                  {
+                  "name": "store-id",
+                  "args": ["interaction/LineFollow/seeVideo", "Watch video"]
+                  },
+                  "actions":
+                        [
+
+                              {
+                              "name": "cutscene",
+                              "args": [1001]
+                              },
+                              {
+                              "name": "mumbleWithText",
+                              "args": ["Got it?"]
+                              },
+                              {
+                              "name": "mumbleWithText",
+                              "args": ["Now go build\nyour track!"]
+                              }
+                        ]
+                  },
+                  {
+                  "description": "DO NOT See Video",
+                  "condition":
+                  {
+                  "name": "store-id",
+                  "args": ["interaction/LineFollow/seeVideo", "No"]
+                  },
+                  "actions":
+                        [
+                              {
+                              "name": "mumbleWithText",
+                              "args": ["Okay, I'll leave you to\nbuild your track."]
+                              }
+                        ]
+                  },
+                  {
+                  "description": "Ask them to let Romo know when they are done!",
+                  "condition":
+                  {
+                  "name": "none"
+                  },
+                  "actions":
+                        [
+                              {
+                              "name": "ask",
+                              "args": ["Tell me when you're\ndone building.", "Not Yet", "Ready!"],
+                              "store-id": "interaction/LineFollow/courseBuilt"
+                              }
+                        ]
+                  },
+                  {
+                  "description": "When they are ready, progress!",
+                  "condition":
+                  {
+                  "name": "store-id",
+                  "args": ["interaction/LineFollow/courseBuilt", "Ready!"]
+                  },
+                  "actions":
+                        [
+                              {
+                              "name": "mumbleWithText",
+                              "args": ["Let's do this!"]
+                              }
+                        ]
+                  },
+                  {
+                  "description": "Not Yet done, say you'll wait",
+                  "condition":
+                  {
+                  "name": "store-id",
+                  "args": ["interaction/LineFollow/courseBuilt", "Not Yet"]
+                  },
+                  "actions":
+                        [
+                              {
+                              "name": "mumbleWithText",
+                              "args": ["Okay, I'll wait."]
+                              },
+                              {
+                              "name": "ask",
+                               "args": ["Tell me when you're\ndone building my racetrack.", "Not Yet", "Ready!"],
+                              "store-id": "interaction/LineFollow/courseBuilt"
+                              }
+                        ]
+                  },
+                  {
+                  "description": "Not done again? let's use what we have",
+                  "condition":
+                  {
+                  "name": "store-id",
+                  "args": ["interaction/LineFollow/courseBuilt", "Not Yet"]
+                  },
+                  "actions":
+                        [
+                              {
+                              "name": "mumbleWithText",
+                              "args": ["Let's use\nwhat you have so far!"]
+                              }
+                        ]
+                  }
+            ]
+	}
+}

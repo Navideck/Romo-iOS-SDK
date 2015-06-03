@@ -1,0 +1,124 @@
+{
+    "RMEventTickle": [
+        "试试\n挠我痒！"
+    ],
+    
+    "RMEventTickle:nose": [
+        "挠痒\n我的鼻子！",
+        "尝试挠痒\n我的鼻子！"
+    ],
+    
+    "RMEventTickle:chin": [
+        "挠痒\n我的下巴！"
+    ],
+    
+    "RMEventTickle:forehead": [
+        "挠痒\n我的额头"
+    ],
+
+    "RMEventPokeAnywhere": [
+        "点碰我！\n点碰我！",
+        "尝试点碰\n我的脸！",
+        "点碰\n我的脸！"
+    ],
+
+    "RMEventPoke": [
+        "\n点碰我的脸！"
+    ],
+    
+    "RMEventPoke:chin": [
+        "尝试点碰\n我的下巴",
+        "点碰我的下巴！",
+        "点碰我的\n下巴！"
+    ],
+    
+    "RMEventPoke:forehead": [
+        "尝试点碰\n我的额头",
+        "点碰\n我的额头！"
+    ],
+    
+    "RMEventPoke:nose": [
+        "尝试点碰\n鼻子",
+        "点碰我的\n鼻子！"
+    ],
+    
+    "RMEventPoke:eye": [
+        "尝试点碰\n我的眼睛",
+        "点碰\n我的眼睛",
+        "点碰我其中\n一只眼睛！",
+        "点碰眼睛啦!”,
+        "点碰我的\n眼睛！"
+    ],
+
+    "RMEventShake": [
+        "\n摇我！",
+        "就好像宝丽来相片\n那样摇我！",
+        "摇、摇、摇\n摇我！",
+        "摇我！\n摇我！"
+    ],
+
+    "RMEventPickedUp": [
+        "\n拿起我！",
+        "拿起我！"
+    ],
+
+    "RMEventDock": [
+        "把我放回\n对接口！\n快点！",
+        "我感觉有点晕！\n把我放回\n对接口",
+        "快点！\n把我放回机器人\n对接口！",
+        "把我放回机器人对接口！"
+    ],
+
+    "RMEventUndock": [
+        "尝试慢慢把我拿开\n对接口",
+        “把我从对接口\n拿开！",
+        "把我从机器人\n底座拿开！"
+    ],
+
+    "RMEventFaceAppear": [
+        "让我看看\n您的脸",
+        "让我看清楚\n您的脸！",
+        "您的脸在哪儿？",
+        “喂！\n你去了哪儿？"
+    ],
+
+    "RMEventFaceDisappear": [
+        ""
+    ],
+    
+    "RMEventHearsLoudSound": [
+                  "拍拍你的手！",
+                  "做出一个\n响亮的拍掌声！",
+                  "做出响声",
+                  "拍掌！"
+                  ],
+    
+    "RMEventSeesMotion": [
+                "移动到我前面",
+                "走到我前面",
+                "让我看看\n一样东西！",
+                "让我看看一样在动的\n东西！"
+                ],
+    
+    "RMEventStasis": [
+                ""
+                ],
+    
+    "RMEventLightsOff": [
+                "关灯！",
+                “把灯的开关\n关掉！”,
+                "把灯关掉！",
+                “让这里变暗"
+                ],
+    
+    "RMEventLightsOn": [
+                "开灯！",
+                “让这里亮一点！”,
+                "打开一盏灯",
+                "把灯开着！"
+                ],
+    
+    "RMEventFavoriteColor": [
+                "看看我最\n喜欢的颜色！"
+                ]
+}

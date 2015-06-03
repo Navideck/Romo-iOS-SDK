@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>title</key>
+	<string>A Little Wheel Power</string>
+	<key>briefing</key>
+	<string>Train me to drive using my new wheels!</string>
+	<key>initial solution</key>
+	<array>
+		<dict>
+			<key>event</key>
+			<string>RMEventMissionStart</string>
+			<key>script</key>
+			<array/>
+		</dict>
+	</array>
+	<key>events</key>
+	<array>
+		<string>RMEventMissionStart</string>
+	</array>
+	<key>actions</key>
+	<array>
+		<dict>
+			<key>selector</key>
+			<string>driveForwardWithSpeed:(speed)speed distance:(distance)distance</string>
+			<key>library</key>
+			<string>Drive</string>
+			<key>available count</key>
+			<string>1</string>
+		</dict>
+	</array>
+	<key>adding events</key>
+	<false/>
+	<key>editing parameters</key>
+	<false/>
+	<key>max action count</key>
+	<integer>1</integer>
+	<key>three star solution</key>
+	<array>
+		<dict>
+			<key>event</key>
+			<string>RMEventMissionStart</string>
+			<key>rules</key>
+			<array>
+				<dict>
+					<key>action</key>
+					<string>driveForwardWithSpeed:(speed)speed distance:(distance)distance</string>
+				</dict>
+			</array>
+		</dict>
+	</array>
+	<key>congrats debriefing</key>
+	<string>Huzzah! Now we&apos;re rolling.</string>
+	<key>unlockables</key>
+	<array>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>selector</key>
+				<string>driveForwardWithSpeed:(speed)speed distance:(distance)distance</string>
+				<key>library</key>
+				<string>Drive</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>selector</key>
+				<string>driveBackwardWithSpeed:(speed)speed distance:(distance)distance</string>
+				<key>library</key>
+				<string>Drive</string>
+			</dict>
+			<key>presented</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>event</key>
+			<string>RMEventMissionStart</string>
+			<key>presented</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>mission</key>
+			<string>1-2</string>
+		</dict>
+	</array>
+</dict>
+</plist>

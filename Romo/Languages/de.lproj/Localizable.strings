@@ -1,0 +1,1106 @@
+/* Action-Duration-Input-Label-Title */
+"Action-Duration-Input-Label-Title" = "Für diese Dauer nichts tun";
+
+/* Action-Emotion-Bewildered-Title */
+"Action-Emotion-Bewildered-Title" = "Verwirrt werden";
+
+/* Action-Emotion-Curious-Title */
+"Action-Emotion-Curious-Title" = "Neugierig werden";
+
+/* Action-Emotion-Delighted-Title */
+"Action-Emotion-Delighted-Title" = "Erfreut werden";
+
+/* Action-Emotion-Excited-Title */
+"Action-Emotion-Excited-Title" = "Begeistert werden";
+
+/* Action-Emotion-Happy-Title */
+"Action-Emotion-Happy-Title" = "Fröhlich werden";
+
+/* Action-Emotion-Indifferent-Title */
+"Action-Emotion-Indifferent-Title" = "Gleichgültig werden";
+
+/* Action-Emotion-Sad-Title */
+"Action-Emotion-Sad-Title" = "Traurig werden";
+
+/* Action-Emotion-Scared-Title */
+"Action-Emotion-Scared-Title" = "Ängstlich werden";
+
+/* Action-Emotion-Sleep-Title */
+"Action-Emotion-Sleep-Title" = "Zu Bett gehen";
+
+/* Action-Emotion-Sleepy-Title */
+"Action-Emotion-Sleepy-Title" = "Müde werden";
+
+/* Action-Expression-Angry-Title */
+"Action-Expression-Angry-Title" = "Wütend verhalten";
+
+/* Action-Expression-Backfire-Title */
+"Action-Expression-Backfire-Title" = "Verteidigen";
+
+/* Action-Expression-Bewildered-Title */
+"Action-Expression-Bewildered-Title" = "Verwirrt verhalten";
+
+/* Action-Expression-Bored-Title */
+"Action-Expression-Bored-Title" = "Gelangweilt verhalten";
+
+/* Action-Expression-Chuckle-Title */
+"Action-Expression-Chuckle-Title" = "Kichern";
+
+/* Action-Expression-Curious-Title */
+"Action-Expression-Curious-Title" = "Neugierig verhalten";
+
+/* Action-Expression-Dizzy-Title */
+"Action-Expression-Dizzy-Title" = "Schwindelig verhalten";
+
+/* Action-Expression-Embarrassed-Title */
+"Action-Expression-Embarrassed-Title" = "Verlegen verhalten";
+
+/* Action-Expression-Excited-Title */
+"Action-Expression-Excited-Title" = "Begeistert verhalten";
+
+/* Action-Expression-Exhausted-Title */
+"Action-Expression-Exhausted-Title" = "Erschöpft verhalten";
+
+/* Action-Expression-Happy-Title */
+"Action-Expression-Happy-Title" = "Fröhlich verhalten";
+
+/* Action-Expression-Hiccup-Title */
+"Action-Expression-Hiccup-Title" = "Schluckauf";
+
+/* Action-Expression-HoldBreath-Title */
+"Action-Expression-HoldBreath-Title" = "Luft anhalten";
+
+/* Action-Expression-Laugh-Title */
+"Action-Expression-Laugh-Title" = "Lachen";
+
+/* Action-Expression-LetDown-Title */
+"Action-Expression-LetDown-Title" = "Enttäuscht verhalten";
+
+/* Action-Expression-LookAround-Title */
+"Action-Expression-LookAround-Title" = "Umschauen";
+
+/* Action-Expression-Love-Title */
+"Action-Expression-Love-Title" = "Verlieben";
+
+/* Action-Expression-Mumbling-Title */
+"Action-Expression-Mumbling-Title" = "Gemurmel beginnen";
+
+/* Action-Expression-None-Title */
+"Action-Expression-None-Title" = "Grimasse schneiden";
+
+/* Action-Expression-Ponder-Title */
+"Action-Expression-Ponder-Title" = "Nachdenken";
+
+/* Action-Expression-Proud-Title */
+"Action-Expression-Proud-Title" = "Stolz verhalten";
+
+/* Action-Expression-Sad-Title */
+"Action-Expression-Sad-Title" = "Traurig verhalten";
+
+/* Action-Expression-Scared-Title */
+"Action-Expression-Scared-Title" = "Ängstlich verhalten";
+
+/* Action-Expression-Sleepy-Title */
+"Action-Expression-Sleepy-Title" = "Müde verhalten";
+
+/* Action-Expression-Smack-Title */
+"Action-Expression-Smack-Title" = "Auf den Bildschirm schlagen";
+
+/* Action-Expression-Sneeze-Title */
+"Action-Expression-Sneeze-Title" = "Niesen";
+
+/* Action-Expression-Sniff-Title */
+"Action-Expression-Sniff-Title" = "Schnuppern";
+
+/* Action-Expression-Startled-Title */
+"Action-Expression-Startled-Title" = "Erschrocken verhalten";
+
+/* Action-Expression-Struggle-Title */
+"Action-Expression-Struggle-Title" = "Mit Bewegungen abmühen";
+
+/* Action-Expression-Want-Title */
+"Action-Expression-Want-Title" = "Ich will es";
+
+/* Action-Expression-Wee-Title */
+"Action-Expression-Wee-Title" = "Pipi machen";
+
+/* Action-Expression-Yawn-Title */
+"Action-Expression-Yawn-Title" = "Gähnen";
+
+/* Action-Expression-Yippee-Title */
+"Action-Expression-Yippee-Title" = "Hurra!";
+
+/* Action-Look-Direction-Ahead */
+"Action-Look-Direction-Ahead" = "Vorwärts";
+
+/* Action-Look-Direction-down */
+"Action-Look-Direction-down" = "nach unten";
+
+/* Action-Look-Direction-left */
+"Action-Look-Direction-left" = "nach links";
+
+/* Action-Look-Direction-right */
+"Action-Look-Direction-right" = "nach rechts";
+
+/* Action-Look-Direction-up */
+"Action-Look-Direction-up" = "nach oben";
+
+/* Action-Parameter-Distance-Unit */
+"Action-Parameter-Distance-Unit" = " cm";
+
+/* Action-Parameter-Percent-Unit */
+"Action-Parameter-Percent-Unit" = "%";
+
+/* Action-Parameter-Time-Unit */
+"Action-Parameter-Time-Unit" = " Sek.";
+
+/* Chase-Title */
+"Chase-Title" = "Verfolgungsjagd";
+
+/* Chase-Different-Color-Prompt */
+"Chase-Different-Color-Prompt" = "Eine andere\nFarbe verfolgen?";
+
+/* Chase-Object-Ready-Prompt */
+"Chase-Object-Ready-Prompt" = "Hast du den bunten\nGegenstand bereit?";
+
+/* Chase-Different-Color-Yes */
+"Chase-Different-Color-Yes" = "Neue Farbe";
+
+/*Chase-Fill-Training-Prompt-1 */
+"Chase-Fill-Training-Prompt-1" = "Fülle den Kreis mit einem bunten Gegenstand";
+
+/*Chase-Fill-Training-Prompt-2 */
+"Chase-Fill-Training-Prompt-2" = "Nehme den Gegenstand völlig aus dem Sichtfeld";
+
+/*Chase-Fill-Training-Prompt-Final */
+"Chase-Fill-Training-Prompt-Final" = "Wink mit dem Gegenstand vor mir.\nSiehst du wie es hervorgehoben ist?";
+
+/*Chase-Fill-Training-Prompt-Again */
+"Chase-Fill-Training-Prompt-Again" = "Noch mal trainieren";
+
+/* Chase-Motivation-No */
+"Chase-Motivation-No" = "Später";
+
+/* Chase-Motivation-Prompt-1 */
+"Chase-Motivation-Prompt-1" = "Lass uns herumlaufen und\netwas verfolgen!";
+
+/* Chase-Motivation-Prompt-2 */
+"Chase-Motivation-Prompt-2" = "Ich möchte\nVERFOLGEN spielen.";
+
+/* Chase-Motivation-Prompt-3 */
+"Chase-Motivation-Prompt-3" = "Ich möchte\netwas VERFOLGEN.";
+
+/* Chase-Motivation-Prompt-4 */
+"Chase-Motivation-Prompt-4" = "Können wir BITTE\nVerfolgen spielen?";
+
+/* Chase-Motivation-Prompt-5 */
+"Chase-Motivation-Prompt-5" = "Es ist Zeit für\neine Verfolgung.";
+
+/* Chase-Motivation-Yes */
+"Chase-Motivation-Yes" = "Verfolgen spielen";
+
+/* Chase-Wave-Prompt */
+"Chase-Wave-Prompt" = "Winke eine Farbe,\ndie ich verfolgen soll.";
+
+/* Chase-Grab-Ball-Prompt */
+"Chase-Grab-Ball-Prompt" = "Go grab a colorful ball\nfor me to chase!";
+
+/* Compile-MicPerms-Alert-Message */
+"Compile-MicPerms-Alert-Message" = "Damit Romo laute Töne hören kann, erlaube den Zugriff auf das Mikrofon.\n\nÖffne die App „Einstellungen“ und wähle „Datenschutz > Mikrofon“ aus.\n\nAktiviere dann den Zugriff für Romo.";
+
+/* Compile-MicPerms-Alert-Title */
+"Compile-MicPerms-Alert-Title" = "Berechtigung für Mikrofon erforderlich";
+
+/* Compile-PhotoPerms-Alert-Message */
+"Compile-PhotoPerms-Alert-Message" = "Damit Romo Fotos und Videos aufnehmen kann, erlaube den Zugriff auf dein Fotoarchiv.\n\nÖffne die App „Einstellungen“ und wähle dann „Datenschutz > Fotos“ aus.\n\nAktiviere dann den Zugriff für Romo.";
+
+/* Compile-PhotoPerms-Alert-Title */
+"Compile-PhotoPerms-Alert-Title" = "Berechtigung für Fotos erforderlich";
+
+/* Compile-Stage-1 */
+"Compile-Stage-1" = "Quantifizieren …";
+
+/* Compile-Stage-2 */
+"Compile-Stage-2" = "Kompilieren …";
+
+/* Compile-Stage-3 */
+"Compile-Stage-3" = "Sandboxing …";
+
+/* Compile-Stage-4 */
+"Compile-Stage-4" = "Zusammenstellen …";
+
+/* Debriefing-ContinueButton-Title */
+"Debriefing-ContinueButton-Title" = "WEITER";
+
+/* Debriefing-FailForFlip */
+"Debriefing-FailForFlip" = "Ich habe keine Chance, dass Roboterweltraumrennen zu gewinnen, wenn ich weiterhin überkippe.";
+
+/* Debriefing-FailForRobotDisconnect */
+"Debriefing-FailForRobotDisconnect" = "Du kannst mich erst ausdocken, wenn ich meine Aufgabe abgeschlossen habe.";
+
+/* Debriefing-FailForTilt */
+"Debriefing-FailForTilt" = "Ich konnte mich nicht vollständig neigen. Stelle sicher, dass wir auf ebenem Boden trainieren.";
+
+/* Debriefing-FailForTimeout */
+"Debriefing-FailForTimeout" = "Die Zeit ist abgelaufen. Lass es uns noch mal versuchen.";
+
+/* Debriefing-FailForTurn */
+"Debriefing-FailForTurn" = "Beim Drehen bin ich stecken geblieben. Stelle sicher, dass ich auf festem Boden bin und nichts in meinem Weg ist.";
+
+/* Debriefing-Failure-Title */
+"Debriefing-Failure-Title" = "MISSERFOLG";
+
+/* Debriefing-HINT: */
+"Debriefing-HINT:" = "TIPP: ";
+
+/* Debriefing-RetryButton-Replay */
+"Debriefing-RetryButton-Replay" = "SPIEL WIEDERHOLEN?";
+
+/* Debriefing-RetryButton-TryAgain */
+"Debriefing-RetryButton-TryAgain" = "WIEDERHOLEN";
+
+/* Debriefing-Success-Title */
+"Debriefing-Success-Title" = "ERFOLG";
+
+/* DockingRequired-BuyButton-Title */
+"DockingRequired-BuyButton-Title" = "Jetzt einen Romo adoptieren";
+
+/* DockingRequired-controlButtonTitle */
+"DockingRequired-controlButtonTitle" = "Anderen Romo steuern";
+
+/* DockingRequired-RomoControl-Download-Alert-Message */
+"DockingRequired-RomoControl-Download-Alert-Message" = "Um einen Romo zu steuern, lade die komplett neue App Romo Control aus dem App Store herunter.";
+
+/* DockingRequired-RomoControl-Download-Alert-No */
+"DockingRequired-RomoControl-Download-Alert-No" = "Nicht steuern";
+
+/* DockingRequired-RomoControl-Download-Alert-Title */
+"DockingRequired-RomoControl-Download-Alert-Title" = "Romo Control herunterladen";
+
+/* DockingRequired-RomoControl-Download-Alert-Yes */
+"DockingRequired-RomoControl-Download-Alert-Yes" = "Herunterladen";
+
+/* DockingRequired-Subtitle */
+"DockingRequired-Subtitle" = "Bevor wir anfangen, verbinde\nmich mit der Basisstation.";
+
+/* DockingRequired-Title */
+"DockingRequired-Title" = "Räder, bitte.";
+
+/* DockingRequired-titleLabelDefaultText */
+"DockingRequired-titleLabelDefaultText" = "Fast fertig.";
+
+/* Event-ParameterlessName-Dock */
+"Event-ParameterlessName-Dock" = "Andocken";
+
+/* Event-ParameterlessName-FaceAppear */
+"Event-ParameterlessName-FaceAppear" = "Ein Gesicht sehen";
+
+/* Event-ParameterlessName-FaceDisappear */
+"Event-ParameterlessName-FaceDisappear" = "Kein Gesicht";
+
+/* Favorite-Color-Title */
+"Favorite-Color-Title" = "Lieblingsfarbe";
+
+/* Event-ParameterlessName-FavoriteColor */
+"Event-ParameterlessName-FavoriteColor" = "Lieblingsfarbe";
+
+/* Event-ParameterlessName-HearsLoudSound */
+"Event-ParameterlessName-HearsLoudSound" = "Lauter Ton";
+
+/* Event-ParameterlessName-LightsOff */
+"Event-ParameterlessName-LightsOff" = "Licht aus";
+
+/* Event-ParameterlessName-LightsOn */
+"Event-ParameterlessName-LightsOn" = "Licht ein";
+
+/* Event-ParameterlessName-MissionStart */
+"Event-ParameterlessName-MissionStart" = "Aufgabenstart";
+
+/* Event-ParameterlessName-PickedUp */
+"Event-ParameterlessName-PickedUp" = "Hochgehoben";
+
+/* Event-ParameterlessName-Poke */
+"Event-ParameterlessName-Poke" = "Stupsen";
+
+/* Event-ParameterlessName-PokeAnywhere */
+"Event-ParameterlessName-PokeAnywhere" = "Stupsen";
+
+/* Event-ParameterlessName-PutDown */
+"Event-ParameterlessName-PutDown" = "Absetzen";
+
+/* Event-ParameterlessName-SeesMotion */
+"Event-ParameterlessName-SeesMotion" = "Bewegung";
+
+/* Event-ParameterlessName-Shake */
+"Event-ParameterlessName-Shake" = "Schütteln";
+
+/* Event-ParameterlessName-Stasis */
+"Event-ParameterlessName-Stasis" = "Stecken geblieben";
+
+/* Event-ParameterlessName-Tickle */
+"Event-ParameterlessName-Tickle" = "Kitzeln";
+
+/* Event-ParameterlessName-Time */
+"Event-ParameterlessName-Time" = "Zeit";
+
+/* Event-ParameterlessName-Undock */
+"Event-ParameterlessName-Undock" = "Ausdocken";
+
+/* Event-ReadableName-Dock */
+"Event-ReadableName-Dock" = "Wenn du mich andockst";
+
+/* Event-ReadableName-FaceAppear */
+"Event-ReadableName-FaceAppear" = "Wenn ich ein Gesicht sehe";
+
+/* Event-ReadableName-FaceDisappear */
+"Event-ReadableName-FaceDisappear" = "Wenn ich kein Gesicht sehe";
+
+/* Event-ReadableName-FavoriteColor */
+"Event-ReadableName-FavoriteColor" = "Wenn ich meine Lieblingsfarbe sehe";
+
+/* Event-ReadableName-HearsLoudSound */
+"Event-ReadableName-HearsLoudSound" = "Wenn ich einen lauten Ton höre";
+
+/* Event-ReadableName-LightsOff */
+"Event-ReadableName-LightsOff" = "Wenn das Licht ausgeht";
+
+/* Event-ReadableName-LightsOn */
+"Event-ReadableName-LightsOn" = "Wenn das Licht angeht";
+
+/* Event-ReadableName-MissionStart */
+"Event-ReadableName-MissionStart" = "Nachdem du zum Starten streichst";
+
+/* Event-ReadableName-PickedUp */
+"Event-ReadableName-PickedUp" = "Wenn ich hochgehoben bin";
+
+/* Event-ReadableName-Poke */
+"Event-ReadableName-Poke" = "Wenn du $ anstupst";
+
+/* Event-ReadableName-PokeAnywhere */
+"Event-ReadableName-PokeAnywhere" = "Wenn du mich anstupst";
+
+/* Event-ReadableName-PutDown */
+"Event-ReadableName-PutDown" = "Wenn ich abgesetzt bin";
+
+/* Event-ReadableName-SeesMotion */
+"Event-ReadableName-SeesMotion" = "Wenn ich Bewegung sehe";
+
+/* Event-ReadableName-Shake */
+"Event-ReadableName-Shake" = "Wenn du mich schüttelst";
+
+/* Event-ReadableName-Stasis */
+"Event-ReadableName-Stasis" = "Wenn ich stecken bleibe";
+
+/* Event-ReadableName-Tickle */
+"Event-ReadableName-Tickle" = "Wenn du $ kitzelst";
+
+/* Event-ReadableName-Time */
+"Event-ReadableName-Time" = "Wenn es $ ist";
+
+/* Event-ReadableName-Undock */
+"Event-ReadableName-Undock" = "Wenn du mich ausdockst";
+
+/* Event-ShortName-Dock */
+"Event-ShortName-Dock" = "Docke mich an";
+
+/* Event-ShortName-FaceAppear */
+"Event-ShortName-FaceAppear" = "Gesicht";
+
+/* Event-ShortName-FaceDisappear */
+"Event-ShortName-FaceDisappear" = "Kein Gesicht";
+
+/* Event-ShortName-FavoriteColor */
+"Event-ShortName-FavoriteColor" = "Lieblingsfarbe";
+
+/* Event-ShortName-HearsLoudSound */
+"Event-ShortName-HearsLoudSound" = "Lauter Ton";
+
+/* Event-ShortName-LightsOff */
+"Event-ShortName-LightsOff" = "Licht aus";
+
+/* Event-ShortName-LightsOn */
+"Event-ShortName-LightsOn" = "Licht ein";
+
+/* Event-ShortName-MissionStart */
+"Event-ShortName-MissionStart" = "Aufgabenstart";
+
+/* Event-ShortName-PickedUp */
+"Event-ShortName-PickedUp" = "Hochgehoben";
+
+/* Event-ShortName-Poke */
+"Event-ShortName-Poke" = "Stupse $ an";
+
+/* Event-ShortName-PokeAnywhere */
+"Event-ShortName-PokeAnywhere" = "Stupse mich an";
+
+/* Event-ShortName-PutDown */
+"Event-ShortName-PutDown" = "Absetzen";
+
+/* Event-ShortName-SeesMotion */
+"Event-ShortName-SeesMotion" = "Bewegung";
+
+/* Event-ShortName-Shake */
+"Event-ShortName-Shake" = "Schütteln";
+
+/* Event-ShortName-Stasis */
+"Event-ShortName-Stasis" = "Stecken geblieben";
+
+/* Event-ShortName-Tickle */
+"Event-ShortName-Tickle" = "Kitzel $";
+
+/* Event-ShortName-Time */
+"Event-ShortName-Time" = "Um $";
+
+/* Event-ShortName-Undock */
+"Event-ShortName-Undock" = "Docke mich aus";
+
+/* EventBrowser-DismissButton-Title */
+"EventBrowser-DismissButton-Title" = "FERTIG";
+
+/* EventBrowser-View-Title */
+"EventBrowser-View-Title" = "Ereignis hinzufügen";
+
+/* FavColor-BoredPrompt1 */
+"FavColor-BoredPrompt1" = "Zeige mir etwas\nHELLES!";
+
+/* FavColor-BoredPrompt10 */
+"FavColor-BoredPrompt10" = "Rate\nweiter!";
+
+/* FavColor-BoredPrompt11 */
+"FavColor-BoredPrompt11" = "Rate eine andere\nFarbe";
+
+/* FavColor-BoredPrompt12 */
+"FavColor-BoredPrompt12" = "Winke eine Farbe\nvor mir.";
+
+/* FavColor-BoredPrompt13 */
+"FavColor-BoredPrompt13" = "Winke etwas\nvor mir.";
+
+/* FavColor-BoredPrompt2 */
+"FavColor-BoredPrompt2" = "Hmm …\nZeig mir eine warme Farbe.";
+
+/* FavColor-BoredPrompt3 */
+"FavColor-BoredPrompt3" = "Hast du\nbuntes Spielzeug?";
+
+/* FavColor-BoredPrompt4 */
+"FavColor-BoredPrompt4" = "Vergiss nicht, ich\nmag hellere Farben.";
+
+/* FavColor-BoredPrompt5 */
+"FavColor-BoredPrompt5" = "Zeige mir\nFARBE.";
+
+/* FavColor-BoredPrompt6 */
+"FavColor-BoredPrompt6" = "Hast du alle Farben des\nRegenbogens ausprobiert?";
+
+/* FavColor-BoredPrompt7 */
+"FavColor-BoredPrompt7" = "Tipp:\nEs ist eine helle Farbe.";
+
+/* FavColor-BoredPrompt8 */
+"FavColor-BoredPrompt8" = "Tipp:\nDiese Farbe leuchtet.";
+
+/* FavColor-BoredPrompt9 */
+"FavColor-BoredPrompt9" = "Hier ist ein Tipp:\nEs ist nicht schwarz.";
+
+/* FavColor-ColorTrainingHelpPrompt1 */
+"FavColor-ColorTrainingHelpPrompt1" = "So sehe ich\ndie Welt!";
+
+/* FavColor-ColorTrainingHelpPrompt2 */
+"FavColor-ColorTrainingHelpPrompt2" = "Ich kann nur\nFARBIGE Dinge sehen";
+
+/* FavColor-ColorTrainingHelpPrompt3 */
+"FavColor-ColorTrainingHelpPrompt3" = "Und sich bewegende\nFarben erregen meine\nAufmerksamkeit.";
+
+/* FavColor-ColorTrainingHelpPrompt4 */
+"FavColor-ColorTrainingHelpPrompt4" = "Leg los!";
+
+/* FavColor-ColorTrainingHelpPrompt5 */
+"FavColor-ColorTrainingHelpPrompt5" = "Winke etwas\nBuntes herum.";
+
+/* FavColor-ColorTrainingHelpPrompt6 */
+"FavColor-ColorTrainingHelpPrompt6" = "Na also!";
+
+/* FavColor-ColorTrainingHelpPrompt7 */
+"FavColor-ColorTrainingHelpPrompt7" = "Lass uns jetzt zu diesem\nSpiel zurückgehen";
+
+/* FavColor-ConclusionPrompt1 */
+"FavColor-ConclusionPrompt1" = "Sieht so aus, als ob\ndu meine Lieblingsfrequenz\nerraten hast.";
+
+/* FavColor-ConclusionPrompt2 */
+"FavColor-ConclusionPrompt2" = "Jetzt kennst du\nmeine Lieblingsfarbe.";
+
+/* FavColor-ConclusionPrompt3 */
+"FavColor-ConclusionPrompt3" = "Das ist auf alle Fälle\nmeine Lieblingsfarbe.";
+
+/* FavColor-ConclusionPrompt4 */
+"FavColor-ConclusionPrompt4" = "Ich liebe diese\nFarbe einfach!";
+
+/* FavColor-ConclusionPrompt5 */
+"FavColor-ConclusionPrompt5" = "Ich liebe\ndiese Farbe!";
+
+/* FavColor-CorrectColorPrompt1 */
+"FavColor-CorrectColorPrompt1" = "Du hast es erfasst!";
+
+/* FavColor-CorrectColorPrompt10 */
+"FavColor-CorrectColorPrompt10" = "Ja! Ja!\nJa, ja, ja!";
+
+/* FavColor-CorrectColorPrompt11 */
+"FavColor-CorrectColorPrompt11" = "Heiliger Roboter!";
+
+/* FavColor-CorrectColorPrompt12 */
+"FavColor-CorrectColorPrompt12" = "Schrauben und Muttern!";
+
+/* FavColor-CorrectColorPrompt13 */
+"FavColor-CorrectColorPrompt13" = "Heilige Firmware!";
+
+/* FavColor-CorrectColorPrompt14 */
+"FavColor-CorrectColorPrompt14" = "Juhu!";
+
+/* FavColor-CorrectColorPrompt15 */
+"FavColor-CorrectColorPrompt15" = "Wir haben\neinen Sieger!";
+
+/* FavColor-CorrectColorPrompt16 */
+"FavColor-CorrectColorPrompt16" = "JAAA!";
+
+/* FavColor-CorrectColorPrompt2 */
+"FavColor-CorrectColorPrompt2" = "Kling kling kling!";
+
+/* FavColor-CorrectColorPrompt3 */
+"FavColor-CorrectColorPrompt3" = "Richtig!";
+
+/* FavColor-CorrectColorPrompt4 */
+"FavColor-CorrectColorPrompt4" = "Perfekt!";
+
+/* FavColor-CorrectColorPrompt5 */
+"FavColor-CorrectColorPrompt5" = "Na also!";
+
+/* FavColor-CorrectColorPrompt6 */
+"FavColor-CorrectColorPrompt6" = "Super, super!";
+
+/* FavColor-CorrectColorPrompt7 */
+"FavColor-CorrectColorPrompt7" = "Super!\nSuper!";
+
+/* FavColor-CorrectColorPrompt8 */
+"FavColor-CorrectColorPrompt8" = "Mmh, meine Lieblingsfarbe!";
+
+/* FavColor-CorrectColorPrompt9 */
+"FavColor-CorrectColorPrompt9" = "Oooooh!\nSuper!";
+
+/* FavColor-Motivation-No */
+"FavColor-Motivation-No" = "Später";
+
+/* FavColor-Motivation-Prompt */
+"FavColor-Motivation-Prompt" = "Möchtest du meine\nLieblingsfarbe erraten?";
+
+/* FavColor-Motivation-Yes */
+"FavColor-Motivation-Yes" = "Spielen";
+
+/* FavColor-Wave-Something */
+"FavColor-Wave-Something" = "Wink mit einem\nfarbigen Objekt!";
+
+/* FavColor-WrongColorPrompt1 */
+"FavColor-WrongColorPrompt1" = "Nee!\nRate weiter.";
+
+/* FavColor-WrongColorPrompt10 */
+"FavColor-WrongColorPrompt10" = "Nein, aber ist das\ndeine Lieblingsfarbe?";
+
+/* FavColor-WrongColorPrompt11 */
+"FavColor-WrongColorPrompt11" = "Hmm …\n… nicht diese";
+
+/* FavColor-WrongColorPrompt12 */
+"FavColor-WrongColorPrompt12" = "Umm …\n… nee!";
+
+/* FavColor-WrongColorPrompt13 */
+"FavColor-WrongColorPrompt13" = "Rate noch mal.";
+
+/* FavColor-WrongColorPrompt14 */
+"FavColor-WrongColorPrompt14" = "Nein, zeige mir\netwas anderes.";
+
+/* FavColor-WrongColorPrompt15 */
+"FavColor-WrongColorPrompt15" = "Nein, nicht diese.\nIch dachte, du\nkennst mich.";
+
+/* FavColor-WrongColorPrompt16 */
+"FavColor-WrongColorPrompt16" = "Nicht diese Farbe.";
+
+/* FavColor-WrongColorPrompt17 */
+"FavColor-WrongColorPrompt17" = "Nein!";
+
+/* FavColor-WrongColorPrompt18 */
+"FavColor-WrongColorPrompt18" = "Nein! Nein! Nein!";
+
+/* FavColor-WrongColorPrompt19 */
+"FavColor-WrongColorPrompt19" = "Nein!\nNein!\nNein!";
+
+/* FavColor-WrongColorPrompt2 */
+"FavColor-WrongColorPrompt2" = "Hmmm …\nfast";
+
+/* FavColor-WrongColorPrompt20 */
+"FavColor-WrongColorPrompt20" = "Nein!\nDiese Farbe\nist scheußlich!";
+
+/* FavColor-WrongColorPrompt21 */
+"FavColor-WrongColorPrompt21" = "DIESE Farbe ist\nABSCHEULICH!";
+
+/* FavColor-WrongColorPrompt3 */
+"FavColor-WrongColorPrompt3" = "Igitt!";
+
+/* FavColor-WrongColorPrompt4 */
+"FavColor-WrongColorPrompt4" = "Nein nein nein nein\nnein nein!";
+
+/* FavColor-WrongColorPrompt5 */
+"FavColor-WrongColorPrompt5" = "Huh!";
+
+/* FavColor-WrongColorPrompt6 */
+"FavColor-WrongColorPrompt6" = "Hmm, ich\nglaube nicht.";
+
+/* FavColor-WrongColorPrompt7 */
+"FavColor-WrongColorPrompt7" = "Nee!";
+
+/* FavColor-WrongColorPrompt8 */
+"FavColor-WrongColorPrompt8" = "Wärmer …";
+
+/* FavColor-WrongColorPrompt9 */
+"FavColor-WrongColorPrompt9" = "Nein, meine\nLieblingsfarbe ist\nviel schöner";
+
+/* FirmwareUpdate-Available-No */
+"FirmwareUpdate-Available-No" = "Später";
+
+/* FirmwareUpdate-Available-Prompt */
+"FirmwareUpdate-Available-Prompt" = "Es ist ein\nUpdate verfügbar.";
+
+/* FirmwareUpdate-Available-Yes */
+"FirmwareUpdate-Available-Yes" = "Update installieren";
+
+/* FirmwareUpdate-Dock-Prompt */
+"FirmwareUpdate-Dock-Prompt" = "Stecke jetzt\ndein %@ wieder\nin meine Basisstation";
+
+/* FirmwareUpdate-NeedUpdate-Remove-Prompt */
+"FirmwareUpdate-NeedUpdate-Remove-Prompt" = "Ich muss aktualisiert\nwerden. Nimm dein %@\naus meiner Basisstation";
+
+/* FirmwareUpdate-NotFinished-Dock-Prompt */
+"FirmwareUpdate-NotFinished-Dock-Prompt" = "Ich war nicht fertig.\nSchließ mich wieder an.";
+
+/* FirmwareUpdate-Remove-Prompt */
+"FirmwareUpdate-Remove-Prompt" = "Entferne dein %@\naus meiner Basisstation.";
+
+/* FirmwareUpdate-Updating-Prompt */
+"FirmwareUpdate-Updating-Prompt" = "Aktualisieren … beweg mich nicht.";
+
+/* FirmwareUpdate-Verifying-Prompt */
+"FirmwareUpdate-Verifying-Prompt" = "Überprüfen …";
+
+/* FirmwareUpdating-InternetRequied-Dismiss */
+"FirmwareUpdating-InternetRequied-Dismiss" = "Verwerfen";
+
+/* FirmwareUpdating-InternetRequired-Message */
+"FirmwareUpdating-InternetRequired-Message" = "Beim AkFtualisieren von Romo ist ein Fehler aufgetreten. Jetzt benötigt er zur Installation eines neuen Updates eine Internetverbindung, bevor er weiter umherfahren kann.";
+
+/* FirmwareUpdating-InternetRequired-Title */
+"FirmwareUpdating-InternetRequired-Title" = "Romo benötigt eine Internetverbindung";
+
+/* Follow-Different-Line-No */
+"Follow-Different-Line-No" = "Nein";
+
+/* Follow-Different-Line-Prompt */
+"Follow-Different-Line-Prompt" = "Einer anderen\nLinie folgen?";
+
+/* Follow-Different-Line-Yes */
+"Follow-Different-Line-Yes" = "Neue Linie";
+
+/* Follow-Line-Put-On-Line */
+"Follow-Line-Put-On-Line" = "Stell mich auf die Linie,\nso daß ich rennen kann.";
+
+/* Follow-Line-Poke-Eye-When-Ready */
+"Follow-Line-Poke-Eye-When-Ready" = "Stich mir ins Auge\nwenn ich auf der Linie stehe!";
+
+/* Follow-Line-Right-Line-Question */
+"Follow-Line-Right-Line-Question" = "Ist das die richtige Linie?";
+
+/* Follow-Line-Right-Line-No */
+"Follow-Line-Right-Line-No" = "Mach ein neues Foto";
+
+/* Follow-Line-Right-Line-Yes */
+"Follow-Line-Right-Line-Yes" = "Verfolge diese Linie";
+
+/* Follow-Line-Take-Look */
+"Follow-Line-Take-Look" = "Laß mich ma\ngenau sehen...";
+
+/* Follow-Line-Tap-Line-To-Follow */
+"Follow-Line-Tap-Line-To-Follow" = "Tatste die Linie\nan die ich verfolgen soll!";
+
+/* Follow-Line-Photo-Trouble */
+"Follow-Line-Photo-Trouble" = "Hmm, ich habe\nmit diesem Foto Schwierigkeiten...";
+
+/* Follow-Line-Different-Spot */
+"Follow-Line-Different-Spot" = "Kannst du mir eine\nandere Stelle zeigen";
+
+/* Generic-Mission-Title */
+"Generic-Mission-Title" = "Aufgabe %d-%d";
+
+/* Generic-Prompt-Yes */
+"Generic-Prompt-Yes" = "Ja";
+
+/* Generic-Prompt-No */
+"Generic-Prompt-No" = "Nein";
+
+/* Help-Button-Accessibility-Label */
+"Help-Button-Accessibility-Label" = "Hilfe-Schaltfläche";
+
+/* Info-Label-AppVersion */
+"Info-Label-AppVersion" = "App-Version";
+
+/* Info-Label-Firmware */
+"Info-Label-Firmware" = "Firmware/Bootloader";
+
+/* Info-Label-Hardware */
+"Info-Label-Hardware" = "Hardware";
+
+/* Info-Label-Wi-Fi */
+"Info-Label-Network" = "Netzwerkname";
+
+/* Info-Label-License */
+"Info-Label-License" = "Lizenz";
+
+/* Info-Label-Name */
+"Info-Label-Name" = "Name";
+
+/* Info-Label-RomoNumber */
+"Info-Label-RomoNumber" = "Romo-Nummer";
+
+/* Info-Label-Serial */
+"Info-Label-Serial" = "Seriennummer";
+
+/* Info-Label-SoundEffects */
+"Info-Label-SoundEffects" = "Toneffekte";
+
+/* Idle Movement */
+"Info-Label-IdleMovement" = "Bewegen, wenn im Leerlauf";
+
+/* Info-View-Title */
+"Info-View-Title" = "Dashboard";
+
+/* Interaction-FreezeDance-Start */
+"Interaction-FreezeDance-Start" = "Stopptanz!";
+
+/* iPad-Drive-Continue */
+"iPad-Drive-Continue" = "WEITER";
+
+/* iPad-Drive-Subtitle */
+"iPad-Drive-Subtitle" = "Um einen Romo zu steuern, lade die komplett neue App Romo Control aus dem App Store herunter.";
+
+/* iPad-Drive-Title */
+"iPad-Drive-Title" = "Romo Control herunterladen";
+
+/* Lab-Mission-Subtitle */
+"Lab-Mission-Subtitle" = "Ein Ort, um mit allem zu spielen, was du freigeschaltet hast.";
+
+/* Lab-Mission-Title */
+"Lab-Mission-Title" = "Das Labor";
+
+/* Lab-Motivation-No */
+"Lab-Motivation-No" = "Später";
+
+/* Lab-Motivation-Prompt-1 */
+"Lab-Motivation-Prompt-1" = "Lass uns etwas\nim Labor bauen.";
+
+/* Lab-Motivation-Prompt-2 */
+"Lab-Motivation-Prompt-2" = "Lass uns\nim Labor spielen.";
+
+/* Lab-Motivation-Prompt-3 */
+"Lab-Motivation-Prompt-3" = "Lass uns eine Pause\nmachen und im\nLabor spielen.";
+
+/* Lab-Motivation-Prompt-4 */
+"Lab-Motivation-Prompt-4" = "Bringe mir im Labor\netwas Cooles bei.";
+
+/* Lab-Motivation-Prompt-5 */
+"Lab-Motivation-Prompt-5" = "Das Labor ist ein\ntoller Ort zum Üben.";
+
+/* Lab-Motivation-Yes */
+"Lab-Motivation-Yes" = "Das Labor betreten";
+
+/* LearnDrive-Motivation-No */
+"LearnDrive-Motivation-No" = "Nein";
+
+/* LearnDrive-Motivation-Prompt-1 */
+"LearnDrive-Motivation-Prompt-1" = "Bringe mir das\nFahren bei!";
+
+/* LearnDrive-Motivation-Yes */
+"LearnDrive-Motivation-Yes" = "Training beginnen";
+
+/* LED-Action-Brightness-Label */
+"LED-Action-Brightness-Label" = "Lichthelligkeit";
+
+/* LED-Action-Brightness-Unit */
+"LED-Action-Brightness-Unit" = "%d%% Helligkeit";
+
+/* Line-Follow-Title */
+"Line-Follow-Title" = "Netzfolge";
+
+/* LineFollow-Motivation-No */
+"LineFollow-Motivation-No" = "Später";
+
+/* LineFollow-Motivation-Prompt-1 */
+"LineFollow-Motivation-Prompt-1" = "Lass uns einem\nPfad folgen.";
+
+/* LineFollow-Motivation-Prompt-2 */
+"LineFollow-Motivation-Prompt-2" = "Ich möchte einer\nLinie folgen.";
+
+/* LineFollow-Motivation-Prompt-3 */
+"LineFollow-Motivation-Prompt-3" = "Ich möchte auf einer\nRennstrecke fahren.";
+
+/* LineFollow-Motivation-Prompt-4 */
+"LineFollow-Motivation-Prompt-4" = "Können wir einen\nPfad bauen?";
+
+/* LineFollow-Motivation-Prompt-5 */
+"LineFollow-Motivation-Prompt-5" = "Bau mir einen Pfad,\ndem ich folgen kann.";
+
+/* LineFollow-Motivation-Yes */
+"LineFollow-Motivation-Yes" = "Linie folgen";
+
+/* Mission-Chapter-Type-Bonus-Title */
+"Mission-Chapter-Type-Bonus-Title" = "Bonus";
+
+/* Mission-Chapter-Type-Comet-Title */
+"Mission-Chapter-Type-Comet-Title" = "Komet";
+
+/* Mission-Chapter-Type-Planet-Title */
+"Mission-Chapter-Type-Planet-Title" = "Planet";
+
+/* Mission-Chapters-View-Subtitle */
+"Mission-Chapters-View-Subtitle" = "%d freigeschaltet";
+
+/* Mission-Chapters-View-Title */
+"Mission-Chapters-View-Title" = "Planeten auswählen";
+
+/* Mission-Motivation-No */
+"Mission-Motivation-No" = "Nein";
+
+/* Mission-Motivation-Prompt-1 */
+"Mission-Motivation-Prompt-1" = "Neue Aufgabe!\nLass uns „%@“ spielen.";
+
+/* Mission-Motivation-Prompt-2 */
+"Mission-Motivation-Prompt-2" = "Möchtest du\n„%@“ ausprobieren?";
+
+/* Mission-Motivation-Prompt-3 */
+"Mission-Motivation-Prompt-3" = "Nächste Aufgabe:\n„%@“";
+
+/* Mission-Motivation-Prompt-4 */
+"Mission-Motivation-Prompt-4" = "Lass uns das\nTraining fortsetzen.";
+
+/* Mission-Motivation-Prompt-5 */
+"Mission-Motivation-Prompt-5" = "Lass uns eine andere\nAufgabe bewältigen.";
+
+/* Mission-Motivation-Prompt-6 */
+"Mission-Motivation-Prompt-6" = "Möchtest du die\nnächste Aufgabe\nbewältigen?";
+
+/* Mission-Motivation-Yes */
+"Mission-Motivation-Yes" = "Aufgabe bewältigen";
+
+/* Mission-Plea-1 */
+"Mission-Plea-1" = "Bitte!";
+
+/* Mission-Plea-2 */
+"Mission-Plea-2" = "Komm schon, %@!";
+
+/* Mission-Plea-3 */
+"Mission-Plea-3" = "Aber ich weiß\nnicht wie!";
+
+/* Mission-Plea-4 */
+"Mission-Plea-4" = "Wie soll ich die\nErde erkunden?";
+
+/* Mission-Plea-5 */
+"Mission-Plea-5" = "Wie soll ich die\nErde erkunden?";
+
+/* Mission-Plea-6 */
+"Mission-Plea-6" = "Aber aus diesem Grund\nbin ich hierher gereist.";
+
+/* Mission-Status-Subtitle-1 */
+"Mission-Status-Subtitle-1" = " Bestes Ergebnis: ★☆☆";
+
+/* Mission-Status-Subtitle-2 */
+"Mission-Status-Subtitle-2" = " Bestes Ergebnis: ★★☆";
+
+/* Mission-Status-Subtitle-3 */
+"Mission-Status-Subtitle-3" = " Bestes Ergebnis: ★★★";
+
+/* MissionEditor-DeleteEvent-Alert-Message */
+"MissionEditor-DeleteEvent-Alert-Message" = "Möchtest du dieses Ereignis wirklich löschen?";
+
+/* MissionEditor-DeleteEvent-Alert-No */
+"MissionEditor-DeleteEvent-Alert-No" = "Abbrechen";
+
+/* MissionEditor-DeleteEvent-Alert-Title */
+"MissionEditor-DeleteEvent-Alert-Title" = "Ereignis löschen?";
+
+/* MissionEditor-DeleteEvent-Alert-Yes */
+"MissionEditor-DeleteEvent-Alert-Yes" = "Löschen";
+
+/* Paramter-Say-Default-Value */
+"Paramter-Say-Default-Value" = "Hallo Erde";
+
+/* Play-Action-Empty-Library-Message */
+"Play-Action-Empty-Library-Message" = "In deiner iTunes-Mediathek wurde keine Musik gefunden";
+
+/* Play-Action-Generic-Song-Title */
+"Play-Action-Generic-Song-Title" = "Lied wiedergeben";
+
+/* Play-Action-Specific-Song-Title */
+"Play-Action-Specific-Song-Title" = "„%@“ wiedergeben";
+
+/* RateApp-Alert-Message */
+"RateApp-Alert-Message" = "Deine App-Rezension ermutigt mich, weiter zu trainieren!";
+
+/* RateApp-Alert-No */
+"RateApp-Alert-No" = "Nein";
+
+/* RateApp-Alert-Title */
+"RateApp-Alert-Title" = "Bewerte mich mit fünf Sternen!";
+
+/* RateApp-Alert-Yes */
+"RateApp-Alert-Yes" = "App bewerten";
+
+/* RetryMission-Motivation-No */
+"RetryMission-Motivation-No" = "Nein";
+
+/* RetryMission-Motivation-Prompt-1 */
+"RetryMission-Motivation-Prompt-1" = "Möchtest du\ndrei Sterne für die\nAufgabe %d-%d holen?";
+
+/* RetryMission-Motivation-Prompt-2 */
+"RetryMission-Motivation-Prompt-2" = "Die Aufgabe %d-%d\nbewältigen wir besser!";
+
+/* RetryMission-Motivation-Prompt-3 */
+"RetryMission-Motivation-Prompt-3" = "Lass uns die\nAufgabe %d-%d mit\ndrei Sternen abschließen!";
+
+/* RetryMission-Motivation-Prompt-4 */
+"RetryMission-Motivation-Prompt-4" = "Lass uns drei Sterne\nbei Aufgabe %d-%d holen!";
+
+/* RetryMission-Motivation-Yes */
+"RetryMission-Motivation-Yes" = "Erneut versuchen";
+
+/* RomoControl-Alert-Title */
+"RomoControl-Alert-Title" = "Romo Control";
+
+/* RomoControl-Message-Compatible-Device */
+"RomoControl-Message-Compatible-Device" = "Rufe http://romo.tv auf einem anderen iOS-Gerät oder Computer auf, um mich zu steuern.\n\nMeine Romo-Nummer ist:\n%@";
+
+/* RomoControl-Message-NonCompatible-Device */
+"RomoControl-Message-NonCompatible-Device" = "Rufe http://romo.tv auf einem anderen lokalen iOS-Gerät auf, um mich zu steuern.";
+
+/* RomoControl-Message-Number-Error */
+"RomoControl-Message-Number-Error" = "Beim Abrufen meiner Romo-Nummer ist ein Fehler aufgetreten. Stelle sicher, dass eine Verbindung mit dem Internet vorhanden ist.";
+
+/* Say-Action-Default-Title */
+"Say-Action-Default-Title" = "„Hallo!“";
+
+/* Script-Repeat-Button-Off */
+"Script-Repeat-Button-Off" = "Wiederholen aus";
+
+/* Script-Repeat-Button-On */
+"Script-Repeat-Button-On" = "Wiederholen";
+
+/* Slide-To-Start-Title */
+"Slide-To-Start-Title" = "Streichen zum Starten";
+
+/* SolveMission-Button-Title */
+"SolveMission-Button-Title" = "AUFGABE LÖSEN";
+
+/* Sweeeeeet! */
+"Sweeeeeet!" = "Begeisterter Ausdruck";
+
+/* Time-Duration-Input-Unit */
+"Time-Duration-Input-Unit" = "Sekunden";
+
+/* tooDarkStatePrompt */
+"tooDarkStatePrompt" = "Schalte das\nLicht ein!";
+
+/* TP-Client-CallFailed-Alert-Message */
+"TP-Client-CallFailed-Alert-Message" = "Der Besitzer des entfernten Romos hat nicht geantwortet.";
+
+/* TP-Client-CallFailed-Alert-Title */
+"TP-Client-CallFailed-Alert-Title" = "Anruf fehlgeschlagen";
+
+/* TP-Client-Calling-Title */
+"TP-Client-Calling-Title" = "%@ anrufen";
+
+/* TP-Incoming-Call-No */
+"TP-Incoming-Call-No" = "Ablehnen";
+
+/* TP-Incoming-Call-Prompt */
+"TP-Incoming-Call-Prompt" = "Eingehender Anruf";
+
+/* TP-Incoming-Call-Yes */
+"TP-Incoming-Call-Yes" = "Anruf annehmen";
+
+/* TP-Number-Loading-Title */
+"TP-Number-Loading-Title" = "Laden …";
+
+/* Turn-Action-Parameters-Left */
+"Turn-Action-Parameters-Left" = "Nach links";
+
+/* Turn-Action-Parameters-Right */
+"Turn-Action-Parameters-Right" = "Nach rechts";
+
+/* Turn-Action-Parameters-Subtitle */
+"Turn-Action-Parameters-Subtitle" = "%d cm Kreis • %dº Drehung";
+
+/* Turn-Action-Parameters-Title */
+"Turn-Action-Parameters-Title" = "%@ drehen";
+
+/* Unlock-Message */
+"Unlock-Message" = "Du hast ein verstecktes Objekt entdeckt!";
+
+/* Unlocked-Continue-Button-Title */
+"Unlocked-Continue-Button-Title" = "WEITER";
+
+/* Unlocked-Title */
+"Unlocked-Title" = "FREIGESCHALTET:";
+
+/* Vision-IdealBrightnessPrompt1 */
+"Vision-IdealBrightnessPrompt1" = "Viel besser.\nJetzt kann ich sehen!";
+
+/* Vision-IdealBrightnessPrompt2 */
+"Vision-IdealBrightnessPrompt2" = "Vielen Dank!";
+
+/* Vision-IdealBrightnessPrompt3 */
+"Vision-IdealBrightnessPrompt3" = "Na also!";
+
+/* Vision-IdealBrightnessPrompt4 */
+"Vision-IdealBrightnessPrompt4" = "Jetzt kann ich einige\nFarben sehen.";
+
+/* Vision-TooBrightPrompt1 */
+"Vision-TooBrightPrompt1" = "Uff! Das ist\nzu hell!";
+
+/* Vision-TooBrightPrompt2 */
+"Vision-TooBrightPrompt2" = "Ich kann nicht\nin die Sonne sehen.";
+
+/* Vision-TooBrightStatePrompt */
+"Vision-TooBrightStatePrompt" = "Nimm mich\naus der Sonne!";
+
+/* Vision-TooDarkPrompt1 */
+"Vision-TooDarkPrompt1" = "Wie soll ich im Dunkeln\nsehen können?";
+
+/* Vision-TooDarkPrompt2 */
+"Vision-TooDarkPrompt2" = "Du weißt, dass ich im\nDunkeln nicht sehen kann.";
+
+/* Vision-TooDarkPrompt3 */
+"Vision-TooDarkPrompt3" = "Lass mich nicht\nim Dunkeln!";
+
+/* Vision-TooDarkPrompt4 */
+"Vision-TooDarkPrompt4" = "Ich mag die\nDunkelheit nicht.";
+
+/* Action Pameter Labels */
+"Distance" = "Distanz";
+
+/* Action Pameter Labels */
+"Speed" = "Geschwindigkeit";
+
+/* Action Pameter Labels */
+"Angle" = "Winkel";
+
+/* Action Pameter Labels */
+"Diameter" = "Durchmesser";
+
+/* Generic Mission Title */
+"Mission" = "Aufgabe";
+
+/* Generic Mission Title Plural */
+"Missions" = "Aufgaben";
+
+/* Generic No Wi-Fi Title */
+"No Wi-Fi" = "Kein Wi-Fi";

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>selector</key>
+		<string>driveForwardWithSpeed:(speed)speed distance:(distance)distance</string>
+		<key>title</key>
+		<string>Drive forward</string>
+		<key>shortTitle</key>
+		<string>Drive forward</string>
+		<key>library</key>
+		<string>Drive</string>
+	</dict>
+	<dict>
+		<key>selector</key>
+		<string>driveBackwardWithSpeed:(speed)speed distance:(distance)distance</string>
+		<key>title</key>
+		<string>Drive backward</string>
+		<key>shortTitle</key>
+		<string>Drive backward</string>
+		<key>library</key>
+		<string>Drive</string>
+	</dict>
+	<dict>
+		<key>selector</key>
+		<string>turnByAngle:(angle)angle radius:(radius)radius clockwise:(direction)clockwise</string>
+		<key>title</key>
+		<string>Turn</string>
+		<key>shortTitle</key>
+		<string>Turn</string>
+		<key>library</key>
+		<string>Drive</string>
+	</dict>
+	<dict>
+		<key>selector</key>
+		<string>tiltToAngle:(angle)angle</string>
+		<key>title</key>
+		<string>Tilt</string>
+		<key>shortTitle</key>
+		<string>Tilt</string>
+		<key>library</key>
+		<string>Tilt</string>
+	</dict>
+	<dict>
+		<key>selector</key>
+		<string>waitForDuration:(duration)duration</string>
+		<key>title</key>
+		<string>Pause</string>
+		<key>shortTitle</key>
+		<string>Pause</string>
+		<key>library</key>
+		<string>More</string>
+	</dict>
+	<dict>
+		<key>selector</key>
+		<string>playSong:(song)songID</string>
+		<key>title</key>
+		<string>Play $</string>
+		<key>shortTitle</key>
+		<string>Play a song</string>
+		<key>library</key>
+		<string>More</string>
+	</dict>
+	<dict>
+		<key>selector</key>
+		<string>shuffleMusic</string>
+		<key>title</key>
+		<string>Shuffle Music</string>
+		<key>shortTitle</key>
+		<string>Shuffe Music</string>
+		<key>library</key>
+		<string>More</string>
+	</dict>
+	<dict>
+		<key>selector</key>
+		<string>turnOnLights:(lightBrightness)brightness</string>
+		<key>title</key>
+		<string>Turn on Romo&apos;s light</string>
+		<key>shortTitle</key>
+		<string>Light on</string>
+		<key>library</key>
+		<string>Lights</string>
+	</dict>
+	<dict>
+		<key>selector</key>
+		<string>turnOffLights</string>
+		<key>title</key>
+		<string>Turn off Romo&apos;s light</string>
+		<key>shortTitle</key>
+		<string>Light off</string>
+		<key>library</key>
+		<string>Lights</string>
+	</dict>
+	<dict>
+		<key>selector</key>
+		<string>blinkLights</string>
+		<key>title</key>
+		<string>Blink Romo&apos;s light</string>
+		<key>shortTitle</key>
+		<string>Blink light</string>
+		<key>library</key>
+		<string>Lights</string>
+	</dict>
+	<dict>
+		<key>selector</key>
+		<string>express:(expression)expression</string>
+		<key>title</key>
+		<string>Act $</string>
+		<key>shortTitle</key>
+		<string>Make a face</string>
+		<key>library</key>
+		<string>Character</string>
+	</dict>
+	<dict>
+		<key>selector</key>
+		<string>emote:(emotion)emotion</string>
+		<key>title</key>
+		<string>Become $</string>
+		<key>shortTitle</key>
+		<string>Change Romo&apos;s Mood</string>
+		<key>library</key>
+		<string>Character</string>
+	</dict>
+	<dict>
+		<key>selector</key>
+		<string>say:(text)text</string>
+		<key>title</key>
+		<string>Say</string>
+		<key>shortTitle</key>
+		<string>Say something</string>
+		<key>library</key>
+		<string>Character</string>
+	</dict>
+	<dict>
+		<key>selector</key>
+		<string>lookAtPoint:(pointValue)point</string>
+		<key>title</key>
+		<string>Look</string>
+		<key>shortTitle</key>
+		<string>Look</string>
+		<key>library</key>
+		<string>Character</string>
+	</dict>
+	<dict>
+		<key>selector</key>
+		<string>fart</string>
+		<key>title</key>
+		<string>Backfire</string>
+		<key>shortTitle</key>
+		<string>Backfire</string>
+		<key>library</key>
+		<string>Character</string>
+	</dict>
+	<dict>
+		<key>selector</key>
+		<string>takePhoto</string>
+		<key>title</key>
+		<string>Take a photo</string>
+		<key>shortTitle</key>
+		<string>Photo</string>
+		<key>library</key>
+		<string>Camera</string>
+	</dict>
+	<dict>
+		<key>selector</key>
+		<string>recordVideoForDuration:(duration)duration</string>
+		<key>title</key>
+		<string>Record a video</string>
+		<key>shortTitle</key>
+		<string>Video</string>
+		<key>library</key>
+		<string>Camera</string>
+	</dict>
+	<dict>
+		<key>selector</key>
+		<string>doodle:(doodle)doodle</string>
+		<key>title</key>
+		<string>Doodle</string>
+		<key>shortTitle</key>
+		<string>Doodle</string>
+		<key>library</key>
+		<string>Drive</string>
+	</dict>
+	<dict>
+		<key>selector</key>
+		<string>playAlarmSound</string>
+		<key>title</key>
+		<string>Sound the Alarm</string>
+		<key>shortTitle</key>
+		<string>Alarm</string>
+		<key>library</key>
+		<string>Sound</string>
+	</dict>
+	<dict>
+		<key>selector</key>
+		<string>startExploring</string>
+		<key>title</key>
+		<string>Start Exploring</string>
+		<key>shortTitle</key>
+		<string>Explore</string>
+		<key>library</key>
+		<string>Explore</string>
+	</dict>
+	<dict>
+		<key>selector</key>
+		<string>stopExploring</string>
+		<key>title</key>
+		<string>Stop Exploring</string>
+		<key>shortTitle</key>
+		<string>Stop Explore</string>
+		<key>library</key>
+		<string>Explore</string>
+	</dict>
+	<dict>
+		<key>selector</key>
+		<string>changeFaceColor:(color)color</string>
+		<key>title</key>
+		<string>Change my color</string>
+		<key>shortTitle</key>
+		<string>Color</string>
+		<key>library</key>
+		<string>Character</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Drive in a Square</string>
+		<key>shortTitle</key>
+		<string>Square</string>
+		<key>isScripted</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Nod &quot;Yes!&quot;</string>
+		<key>shortTitle</key>
+		<string>Yes!</string>
+		<key>isScripted</key>
+		<true/>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Shake &quot;No!&quot;</string>
+		<key>shortTitle</key>
+		<string>No!</string>
+		<key>isScripted</key>
+		<true/>
+	</dict>
+</array>
+</plist>

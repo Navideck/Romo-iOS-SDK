@@ -1,0 +1,124 @@
+{
+    "RMEventTickle": [
+        "Essaie\nde me chatouiller!"
+    ],
+    
+    "RMEventTickle:nose": [
+        "Chatouille\nmon nez!",
+        "Essaie de chatouiller\nmon nez!"
+    ],
+    
+    "RMEventTickle:chin": [
+        "Chatouille\nmon menton!"
+    ],
+    
+    "RMEventTickle:forehead": [
+        "Chatouille\nmon front"
+    ],
+
+    "RMEventPokeAnywhere": [
+        "Tapote-moi!\nTapote-moi!",
+        "Essaie de tapoter\n mon visage!",
+        "Tapote\nmon visage!"
+    ],
+
+    "RMEventPoke": [
+        "\nTapote mon visage!"
+    ],
+    
+    "RMEventPoke:chin": [
+        "Essaie de tapoter\n mon menton!",
+        "Tapote mon menton!",
+        "Tapote\nmon menton!"
+    ],
+    
+    "RMEventPoke:forehead": [
+        "Essaie de tapoter\n mon front",
+        "Tapote\nmon front!"
+    ],
+    
+    "RMEventPoke:nose": [
+        "Essaie de tapoter\n mon nez!",
+        "Tapote\nmon NEZ!"
+    ],
+    
+    "RMEventPoke:eye": [
+        "Essaie de tapoter\nmon œil",
+        "Tapote\nmon œil",
+        "Tapote\nl’un de mes yeux!",
+        "Tapote mon œil!",
+        "Tapote\nmon ŒIL!"
+    ],
+
+    "RMEventShake": [
+        "\nSecoue-moi!",
+        "Secoue-moi comme une\nphoto Polaroid!",
+        "Secoue, secoue, secoue\nSECOUE-MOI!",
+        "Secoue-moi!\nSecoue-moi!"
+    ],
+
+    "RMEventPickedUp": [
+        "\nRamasse-moi!",
+        "RAMASSE-\nMOI!"
+    ],
+
+    "RMEventDock": [
+        "Rebranche-moi\nà ma base!\nVite!",
+        "J’ai mal au cœur!\nRebranche-moi\nà ma base!",
+        "Vite!\nBranche-moi à ma\nbase de robot!",
+        "Rebranche-moi à ma\nbase de robot!"
+    ],
+
+    "RMEventUndock": [
+        "Essaie de me retirer\ndoucement de la base",
+        "Retire-moi\nde ma base!",
+        "Retire-moi de\ncette base de robot!"
+    ],
+
+    "RMEventFaceAppear": [
+        "Montre-moi\nton visage",
+        "Montre-moi\nton VISAGE!",
+        "Où est ton\nvisage ?",
+        "Hé!\nOù-es tu parti ?"
+    ],
+
+    "RMEventFaceDisappear": [
+        ""
+    ],
+    
+    "RMEventHearsLoudSound": [
+                  "Frappe dans tes\nmains!",
+                  "Frappe fort\ndans tes mains!",
+                  "Fais\nbeaucoup de bruit!",
+                  "Frappe dans tes mains!"
+                  ],
+    
+    "RMEventSeesMotion": [
+                "Mets-toi\ndevant moi",
+                "Marche\ndevant moi",
+                "Montre-moi\nquelque chose!",
+                "Montre-moi quelque chose\nqui bouge!"
+                ],
+    
+    "RMEventStasis": [
+                ""
+                ],
+    
+    "RMEventLightsOff": [
+                "Éteins\nles lumières!",
+                "Éteins\nles lumières!",
+                "Éteins\nles lumières!",
+                "Assombris\nla pièce"
+                ],
+    
+    "RMEventLightsOn": [
+                "Allume\ndes lumières!",
+                "Éclaircis\nla pièce!",
+                "Allume\nune lumière",
+                "Allume\nles lumières!"
+                ],
+    
+    "RMEventFavoriteColor": [
+                "Montre-moi ma\ncouleur préférée!"
+                ]
+}

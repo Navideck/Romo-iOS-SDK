@@ -1,0 +1,54 @@
+{
+    "script": {
+        "name": "Character-Script-1-6",
+        "description": "Romo compliments and insults you a the same time",
+        "blocks": [
+            {
+                "description": "The sandwich",
+                "condition": {
+                    "name": "none"
+                },
+                "actions": [
+                    {
+                    "name": "emotion",
+                    "args": [
+                        "happy"
+                      ]
+                    },
+                    {
+                    "name": "tiltTo",
+                    "args": [120]
+                    },
+                    {
+                    "name": "say",
+                    "args": [
+                          "You're doing\npretty good..."
+                        ]
+                    },
+                    {
+                       "name": "expressionWithText",
+                       "args": [
+                          "laugh",
+                          "happy",
+                          "\nfor a human!\n"
+                        ]
+                    },
+                    {
+                        "name": "expressionWithText",
+                        "args": [
+                          "talking",
+                          "excited",
+                          "But we're just\ngetting started."
+                        ]
+                    },
+                    {
+                       "name": "say",
+                       "args": [
+                          "Let's see you\ntry something harder!\n"
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

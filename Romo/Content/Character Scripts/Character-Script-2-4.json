@@ -1,0 +1,89 @@
+{
+	"script": 
+	{
+			"name": "Character-Script-2-5",
+			"description": "Baseless",
+		"blocks": 
+		[
+			{
+			"description": "Ask to be removed from base",
+			"condition": 
+				{
+					"name": "dock",
+					"args": [0],
+					"on": "exit"
+				},
+				"actions": 
+				[
+					{
+						"name": "expressionWithText",
+						"args": [
+							"ponder", 
+							"curious",
+							"Getting un-docked\n feels...\n"]
+					},
+					{
+						"name": "say",
+						"args": ["\nWeird!\n"]
+					},
+					{
+						"name": "say",
+						"args": ["Try \nun-docking\n me again."]
+					}
+				]
+			},
+			{
+			"description": "When undocked",
+			"condition": 
+				{
+					"name": "none"
+				},
+				"actions": 
+				[
+					{
+						"name": "expressionWithText",
+						"args": [
+							"startled", 
+							"scared",
+							"Ahhh!\nThat's a little\nTOO weird!"
+						]
+					}
+				]
+			},
+			{
+			"description": "When undocked",
+			"condition": 
+				{
+					"name": "dock",
+					"args": [1],
+					"on": "exit"
+				},
+				"actions": 
+				[
+					{
+						"name": "say",
+						"args": ["Put me \nback please!"]
+					}
+				]
+			},
+			{
+			"description": "When docked",
+			"condition": 
+				{
+					"name": "none"
+				},
+				"actions": 
+				[
+					{
+						"name": "expressionWithText",
+						"args": [
+							"embarrassed", 
+							"happy",
+							"It's gonna take a while\nto get used to THAT!"
+						]
+					}
+				]
+			}
+		]
+	}
+}

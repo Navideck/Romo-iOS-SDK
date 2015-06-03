@@ -1,0 +1,121 @@
+{
+	"script":
+	{
+		"name": "Character-Script-3-2",
+		"description": "Freeze Dance!",
+		"blocks": [
+                  {
+                        "description": "Explain wtf is about to happen",
+                        "condition":
+                        {
+                              "name": "none"
+                        },
+                        "actions":
+                        [
+                              {
+                              "name": "emotion",
+                              "args": ["indifferent"]
+                              },
+                              {
+                              "name": "expressionWithText",
+                              "args": ["dizzy", "Whoa...\nAll this motion..."]
+                              },
+                              {
+                              "name": "say",
+                              "args": ["I'm gonna\nchill out\nfor a sec."]
+                              },
+                              {
+                              "name": "emotion",
+                              "args": ["happy"]
+                              },
+                              {
+                              "name": "expressionWithText",
+                              "args": ["want", "Ooh!\nShow me your best\nFreeze Dance."]
+                              },
+                              {
+                              "name": "emotion",
+                              "args": ["curious"]
+                              },
+                              {
+                              "name": "mumbleWithText",
+                              "args": ["Do you guys do\nFreeze Dance\non Earth?"]
+                              },
+                              {
+                              "name": "emotion",
+                              "args": ["happy"]
+                              },
+                              {
+                              "name": "mumbleWithText",
+                              "args": ["It's easy!\nYou ~wiggle~ around..."]
+                              },
+                              {
+                              "name": "expressionWithText",
+                              "args": ["talking", "And then you FREEZE.\nJust remember..."]
+                              },
+                              {
+                              "name": "mumbleWithText",
+                              "args": ["When you move around...\nyou'll hear the sound."]
+                              },
+                              {
+                              "name": "mumbleWithText",
+                              "args": ["But if you freeze...\nthen it's just the breeze."]
+                              },
+                              {
+                              "name": "expressionWithText",
+                              "args": ["happy", "OK, talk is cheap.\nLet's see your best..."]
+                              }
+                        ]
+                  },
+                  {
+                        "description": "Do the freeze dance",
+                        "condition":
+                        {
+                              "name": "none"
+                        },
+                        "actions":
+                        [
+                              {
+                                    "name": "runBehavior",
+                                    "args": ["freezedance"]
+                              },
+                              {
+                                    "name": "emotion",
+                                    "args": ["indifferent"]
+                              },
+                              {
+                                    "name": "say",
+                                    "args": ["That dance was..."]
+                              },
+                              {
+                                    "name": "look",
+                                    "args": [-1.0, 0.1, 0.75]
+                              },
+                              {
+                                    "name": "wait",
+                                    "args": [0.5]
+                              },
+                              {
+                                    "name": "look",
+                                    "args": [1.0, -0.05, 0.75]
+                              },
+                              {
+                                    "name": "wait",
+                                    "args": [1.0]
+                              },
+                              {
+                                    "name": "look",
+                                    "args": [0.0, 0.0, 0.75]
+                              },
+                              {
+                                    "name": "wait",
+                                    "args": [0.3]
+                              },
+                              {
+                                    "name": "expressionWithText",
+                                    "args": ["love", "Incredible!\nYour arms\nare so wobbly!"]
+                              }
+                        ]
+                  }
+            ]
+	}
+}

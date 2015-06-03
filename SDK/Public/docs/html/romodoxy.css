@@ -1,0 +1,46 @@
+#titlearea {
+	color: white;
+    background-color: #333333;
+    font-family:"brandon-grotesque","Helvetica Neue", Helvetica, Arial, sans-serif;
+    height: 90px;
+    background-color: #01aedd;
+    width: 100%;
+}
+
+#projectname {
+	color: #ffffff;
+    /*color: #4a5063;*/
+	padding-top: 8px;
+    padding-left: 13px;
+}
+
+#projectbrief {
+	margin-top: 4px;
+    color: #333333;
+    padding-left: 13px;
+}
+
+#titlearea:before 
+{ 
+    content:url('logo-240-white.png'); 
+    position:absolute; 
+    right:15px; 
+} 
+
+/* @group Link Styling */
+
+a {
+    color: #01aedd;
+}
+
+.contents a:visited {
+    color: #01aedd;
+}
+
+a.code, a.code:visited {
+    color: #01aedd; 
+}
+
+a.codeRef, a.codeRef:visited {
+    color: #01aedd; 
+}

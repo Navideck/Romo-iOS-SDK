@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>1</key>
+	<dict>
+		<key>title</key>
+		<string>Nieuwe wielen</string>
+		<key>description</key>
+		<string>Leer me rondbewegen</string>
+	</dict>
+	<key>2</key>
+	<dict>
+		<key>title</key>
+		<string>Horizon gebeurtenis</string>
+		<key>description</key>
+		<string>Leven met een echte mens</string>
+	</dict>
+	<key>3</key>
+	<dict>
+		<key>title</key>
+		<string>Verkenner</string>
+		<key>description</key>
+		<string>Laten we eens kijken</string>
+	</dict>
+	<key>101</key>
+	<dict>
+		<key>title</key>
+		<string>Favoriete kleur</string>
+		<key>description</key>
+		<string>Toon me kleurrijke dingen\nom mijn favoriete kleur\nte raden</string>
+	</dict>
+	<key>102</key>
+	<dict>
+		<key>title</key>
+		<string>Jaag</string>
+		<key>description</key>
+		<string>Jaag op iets kleurrijks</string>
+	</dict>
+	<key>103</key>
+	<dict>
+		<key>title</key>
+		<string>Lijn volgen</string>
+		<key>description</key>
+		<string>Race langs een pad</string>
+	</dict>
+	<key>201</key>
+	<dict>
+		<key>title</key>
+		<string>Het laboratorium</string>
+		<key>description</key>
+		<string>Experimenteer met\nalles wat we geleerd hebben</string>
+	</dict>
+	<key>202</key>
+	<dict>
+		<key>title</key>
+		<string>Romo Control</string>
+		<key>description</key>
+		<string>Bestuur mij met een ander iApparaat of computer</string>
+	</dict>
+</dict>
+</plist>

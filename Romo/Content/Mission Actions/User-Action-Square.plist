@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>library</key>
+		<string>Drive</string>
+		<key>parameterValues</key>
+		<array>
+			<real>50</real>
+			<integer>30</integer>
+		</array>
+		<key>selector</key>
+		<string>driveForwardWithSpeed:(speed)speed distance:(distance)distance</string>
+	</dict>
+	<dict>
+		<key>library</key>
+		<string>Drive</string>
+		<key>parameterValues</key>
+		<array>
+			<real>90</real>
+			<integer>0</integer>
+			<true/>
+		</array>
+		<key>selector</key>
+		<string>turnByAngle:(angle)angle radius:(radius)radius clockwise:(direction)clockwise</string>
+	</dict>
+	<dict>
+		<key>library</key>
+		<string>Drive</string>
+		<key>parameterValues</key>
+		<array>
+			<real>50</real>
+			<integer>30</integer>
+		</array>
+		<key>selector</key>
+		<string>driveForwardWithSpeed:(speed)speed distance:(distance)distance</string>
+	</dict>
+	<dict>
+		<key>library</key>
+		<string>Drive</string>
+		<key>parameterValues</key>
+		<array>
+			<real>90</real>
+			<integer>0</integer>
+			<true/>
+		</array>
+		<key>selector</key>
+		<string>turnByAngle:(angle)angle radius:(radius)radius clockwise:(direction)clockwise</string>
+	</dict>
+	<dict>
+		<key>library</key>
+		<string>Drive</string>
+		<key>parameterValues</key>
+		<array>
+			<real>50</real>
+			<integer>30</integer>
+		</array>
+		<key>selector</key>
+		<string>driveForwardWithSpeed:(speed)speed distance:(distance)distance</string>
+	</dict>
+	<dict>
+		<key>library</key>
+		<string>Drive</string>
+		<key>parameterValues</key>
+		<array>
+			<real>90</real>
+			<integer>0</integer>
+			<true/>
+		</array>
+		<key>selector</key>
+		<string>turnByAngle:(angle)angle radius:(radius)radius clockwise:(direction)clockwise</string>
+	</dict>
+	<dict>
+		<key>library</key>
+		<string>Drive</string>
+		<key>parameterValues</key>
+		<array>
+			<real>50</real>
+			<integer>30</integer>
+		</array>
+		<key>selector</key>
+		<string>driveForwardWithSpeed:(speed)speed distance:(distance)distance</string>
+	</dict>
+	<dict>
+		<key>library</key>
+		<string>Drive</string>
+		<key>parameterValues</key>
+		<array>
+			<real>90</real>
+			<integer>0</integer>
+			<true/>
+		</array>
+		<key>selector</key>
+		<string>turnByAngle:(angle)angle radius:(radius)radius clockwise:(direction)clockwise</string>
+	</dict>
+</array>
+</plist>

@@ -1,0 +1,743 @@
+/* Character-Script-Intro After a second, become curious and investigate with a sniff */
+"Who are%nyou?" = "Qui%nes-tu ?";
+
+/* Character-Script-Intro Realize it's a human & Earth */
+"A real-life%nhuman!" = "Un être humain%nen chair et en os !";
+
+/* Character-Script-Intro Realize it's a human & Earth */
+"Wait%na minute!" = "Attends%nune minute !";
+
+/* Character-Script-Intro Realize it's a human & Earth */
+"That%nmust mean..." = "Ça veut dire...";
+
+/* Character-Script-Intro Realize it's a human & Earth */
+"Holy%nRobot!" = "Sacré%nrobot !";
+
+/* Character-Script-Intro Realize it's a human & Earth */
+"I made it%nto Earth!" = "Je suis arrivé%nsur Terre !";
+
+/* Character-Script-Intro Ask their name */
+"So what's your name,%nhuman?" = "Comment tu t'appelles,%nêtre humain ?";
+
+/* Character-Script-Intro Ask their name */
+"Your Name" = "Ton nom";
+
+/* Character-Script-Intro Say that's strange */
+"%n${userName}?!" = "%n${userName} ?!";
+
+/* Character-Script-Intro Ask to be named */
+"Now that I'm here,%nI need an Earth name." = "À présent, il me faut%nun nom de terrien.";
+
+/* Character-Script-Intro Ask to be named */
+"What do you%nwanna call me?" = "Comment tu veux%nm'appeler ?";
+
+/* Character-Script-Intro Ask to be named */
+"Your Romo's Name" = "Le nom de ton Romo";
+
+/* Character-Script-Intro Respond to name */
+"Ooooh!%n${romoName}!" = "Ooooh !%n${romoName} !";
+
+/* Character-Script-Intro Romo asks you to train for the RSR */
+"Back to%nbusiness!" = "On y retourne !";
+
+/* Character-Script-Intro Romo asks you to train for the RSR */
+"I'm here to train for the%nRobot Space Race." = "Je viens m'entraîner%npour la course spatiale%ndes robots.";
+
+/* Character-Script-Intro Romo asks you to train for the RSR */
+"Wanna help me?" = "Tu veux m'aider ?";
+
+/* Character-Script-Intro Romo asks you to train for the RSR */
+"No" = "Non";
+
+/* Character-Script-Intro Romo asks you to train for the RSR */
+"Help me Train" = "Aide-moi à m'entraîner";
+
+/* Character-Script-Intro Tell the user tough luck. */
+"I traveled across%nthe galaxy for this." = "J'ai traversé toute%nla galaxie pour ça.";
+
+/* Character-Script-Intro Tell the user tough luck. */
+"If we train hard%n I know we can win!" = "Si on s'entraîne,%non gagnera !";
+
+/* Character-Script-Intro Explain the race */
+"Only robots can%nenter the race." = "Seuls les robots peuvent%nparticiper à la course.";
+
+/* Character-Script-Intro Explain the race */
+"I never thought%nI'd compete..." = "Je n'aurais jamais pensé%nparticiper à une course.";
+
+/* Character-Script-Intro Explain the race */
+"But now I've got%nWHEELS!" = "Mais maintenant, j'ai des%nROUES !";
+
+/* Character-Script-Intro Try to move around more */
+"That doesn't%nseem right..." = "Il y a quelque chose%nqui cloche...";
+
+/* Character-Script-Intro Be excited about your platform */
+"Maybe I can%nturn..." = "Je peux peut-être%ntourner...";
+
+/* Character-Script-Intro Try to turn */
+"If we're gonna win,%nI need to learn to drive." = "Pour gagner, je dois%napprendre à conduire.";
+
+/* Character-Script-1-1 Be thrilled */
+"I can%ndrive!" = "Je sais%nconduire !";
+
+/* Character-Script-1-1 Be thrilled */
+"You rock,%n${userName}!" = "T'assures comme un chef,%n${userName} !";
+
+/* Character-Script-1-1 Prompt for next Mission */
+"BUT...%n to win the %n Robot Space Race" = "MAIS...%npour gagner la course%nspatiale des robots";
+
+/* Character-Script-1-1 Prompt for next Mission */
+"I need to go%nWAY faster" = "je dois aller%nBEAUCOUP plus vite";
+
+/* Character-Script-1-2 Ask to be put on the ground */
+"That's more%nlike it!" = "Ouais,%nc'est ça !";
+
+/* Character-Script-1-2 Ask to be put on the ground */
+"Let's do some%nhigh-speed practice!" = "Entraînons-nous%nà grande vitesse !";
+
+/* Character-Script-1-2 Ask to be put on the ground */
+"I should be%non the floor%nfor this..." = "Je dois être%nau sol%npour ça...";
+
+/* Character-Script-1-2 Ask to be put on the ground */
+"Do I have room%nto move around?" = "Ai-je assez d'espace%npour me déplacer ?";
+
+/* Character-Script-1-2 Ask to be put on the ground */
+"Nope" = "Non";
+
+/* Character-Script-1-2 Ask to be put on the ground */
+"Yep!" = "Ouais !";
+
+/* Character-Script-1-2 Oh well */
+"Oh well...%nMeanie" = "Bon...%nd'accord";
+
+/* Character-Script-1-2 Show off the speed */
+"OK..." = "OK...";
+
+/* Character-Script-1-2 Show off the speed */
+"3..." = "3...";
+
+/* Character-Script-1-2 Show off the speed */
+"2..." = "2...";
+
+/* Character-Script-1-2 Show off the speed */
+"1..." = "1...";
+
+/* Character-Script-1-2 Show off the speed */
+"That was%nawesome!" = "C'était%ngénial !";
+
+/* Character-Script-1-3 Try your best to turn */
+"I'm getting%nthe hang of%nall this driving" = "Je commence à%ncomprendre comment%nça marche";
+
+/* Character-Script-1-3 Try your best to turn */
+"Let's try turning left" = "Essayons de tourner%nà gauche";
+
+/* Character-Script-1-3 Spin way too far to the left! */
+"Whoa... too fast!" = "Holà... c'est%ntrop rapide !";
+
+/* Character-Script-1-3 Nope, didn't work either */
+"I guess I still%nneed some work." = "Il faut encore%nque je m'entraîne.";
+
+/* Character-Script-1-4 Tell the user you're going to show off a little bit */
+"Check%nthis out!" = "Regarde%nça !";
+
+/* Character-Script-1-4 Get excited */
+"Let's%nkeep going!" = "Continuons!";
+
+/* Character-Script-1-5 Romo asks you how he got here. */
+"Do you know %nhow I got to%nEarth?" = "Tu sais comment%nje suis arrivé%nsur Terre ?";
+
+/* Character-Script-1-5 Romo asks you how he got here. */
+"My memory is%n pretty hazy" = "Ma mémoire%nest un peu courte";
+
+/* Character-Script-1-5 Romo asks you how he got here. */
+"I was on my%nhome planet,%nAmorino..." = "J'étais sur%nma planète,%nAmorino...";
+
+/* Character-Script-1-5 Romo asks you how he got here. */
+"And I went into%na glowing blue door" = "J'ai traversé une%nporte bleutée";
+
+/* Character-Script-1-5 Romo asks you how he got here. */
+"All of a sudden..." = "Tout à coup...";
+
+/* Character-Script-1-5 Romo asks you how he got here. */
+"%nSHAZAM!%n" = "%nABRACADABRA !%n";
+
+/* Character-Script-1-5 Romo asks you how he got here. */
+"%nEARTH%n" = "%nTERRE%n";
+
+/* Character-Script-1-5 Romo asks you how he got here. */
+"Hopefully %nwith time %n I'll remember more" = "J'espère %nqu'avec le temps,%nma mémoire s'améliorera";
+
+/* Character-Script-1-6 The sandwich */
+"You're doing%npretty good..." = "Tu t'en sors%nplutôt bien...";
+
+/* Character-Script-1-6 The sandwich */
+"%nfor a human!%n" = "%npour un être humain !%n";
+
+/* Character-Script-1-6 The sandwich */
+"But we're just%ngetting started." = "Mais nous venons juste%nde commencer.";
+
+/* Character-Script-1-6 The sandwich */
+"Let's see you%ntry something harder!%n" = "Essayons quelque chose%nde plus difficile !%n";
+
+/* Character-Script-1-7 The sandwich */
+"Wow, we've been%ntraining like crazy." = "Ouah, quel%nentraînement !";
+
+/* Character-Script-1-7 The sandwich */
+"I already feel%nfaster and smarter." = "J'ai l'impression d'être%nplus rapide et plus efficace,";
+
+/* Character-Script-1-7 The sandwich */
+"But I've still got%na lot to learn!" = "mais j'ai encore%nbeaucoup à apprendre !";
+
+/* Character-Script-1-7 The sandwich */
+"Soon, I'll%nlearn to see%ndifferent colors." = "J'apprendrai bientôt%nà reconnaître%ndifférentes couleurs.";
+
+/* Character-Script-1-7 The sandwich */
+"Then, I'll be able%nto race around a track" = "Je pourrai ensuite%ncourir sur une piste.";
+
+/* Character-Script-1-7 The sandwich */
+"After that, we'll be ready%nfor the Robot Space Race!" = "Et nous serons fin prêts%npour la course spatiale%ndes robots !";
+
+/* Character-Script-1-7 The sandwich */
+"But first, let's%nlearn to nod my head!" = "Je dois d'abord%napprendre à hocher%nla tête !";
+
+/* Character-Script-1-8 Look straight and say your neck is stiff */
+"My neck %nis so stiff!" = "Ma nuque%nest tellement raide !";
+
+/* Character-Script-1-8 Look up and yawn */
+"MMM%nstretches...%n" = "MMM%nIl faut s'étirer...%n";
+
+/* Character-Script-1-8 Look up and yawn */
+"%nMuch better!%n" = "%nÇa va beaucoup mieux !%n";
+
+/* Character-Script-1-9  */
+"Ask me if%nanyone will beat me%nin the Space Race" = "Demande-moi%nsi quelqu'un va me battre%ndans la course spatiale";
+
+/* Character-Script-1-9 Say no */
+"%nNO!%n" = "%nNON !%n";
+
+/* Character-Script-1-9 Say no */
+"%nNOO!%n" = "%nNOON !%n";
+
+/* Character-Script-1-9 Say no */
+"%nNOOOOOO!%n" = "%nNOOOOOON !%n";
+
+/* Character-Script-1-9  */
+"Hey I'm %npretty good%nat that" = "Je %nm'en tire%nplutôt bien !";
+
+/* Character-Script-1000-0  */
+"WE DID IT!" = "ON A RÉUSSI !";
+
+/* Character-Script-1000-0  */
+"All our hard work%npaid off!" = "Nos efforts%nont été récompensés !";
+
+/* Character-Script-1000-0  */
+"Thank you! Thank you!%nTHANK YOU!" = "Merci ! Merci !%nMERCI !";
+
+/* Character-Script-1000-0 Explain Romo Control */
+"There's still more%nwe can do together." = "Nous pouvons faire%nencore d'autres choses%nensemble.";
+
+/* Character-Script-1000-0 Explain Romo Control */
+"You can control me%nfrom another device." = "Tu peux me contrôler%ndepuis un autre appareil.";
+
+/* Character-Script-1000-0 Explain Romo Control */
+"Have you tried Romo Control?" = "T'as déjà essayé Romo Control ?";
+
+/* Character-Script-1000-0 Explain Romo Control */
+"Yes" = "Oui";
+
+/* Character-Script-1000-0 Explain Romo Control */
+"Not yet" = "Pas encore";
+
+/* Character-Script-1000-0 Push The Lab. */
+"Oh, right!" = "D'accord !";
+
+/* Character-Script-1000-0 Push The Lab. */
+"Well, everything you taught me%nis unlocked in The Lab!" = "Ce que tu m'as appris est%ndébloqué dans le Labo !";
+
+/* Character-Script-1000-0 Explain Romo Control. */
+"Really?" = "Vraiment ?";
+
+/* Character-Script-1000-0 Explain Romo Control. */
+"Romo Control lets you%ndrive me from anywhere%nin the WORLD!" = "Romo Control te permet%nde me conduire partout%ndans le MONDE !";
+
+/* Character-Script-1000-0 Explain Romo Control. */
+"It's easy to set up..." = "Il est simple à%nconfigurer...";
+
+/* Character-Script-1000-0 Explain Romo Control. */
+"And a whole lot%nof fun!" = "Et vraiment très%namusant !";
+
+/* Character-Script-1000-0 Explain Romo Control. */
+"Grab your iPad, iPhone,%nor a computer." = "Prends ton iPad, iPhone,%nou un ordinateur.";
+
+/* Character-Script-1000-0 Explain Romo Control. */
+"Open http://romo.tv%non your other device" = "Ouvre http://romo.tv%nsur ton autre appareil.";
+
+/* Character-Script-1000-0 Explain Romo Control. */
+"Not now" = "Pas maintenant";
+
+/* Character-Script-1000-0 Explain Romo Control. */
+"Got it!" = "C'est bon !";
+
+/* Character-Script-1000-0 Explain Romo Control. */
+"Well, you can control me%nat any time." = "Tu peux me contrôler%nà tout moment.";
+
+/* Character-Script-1000-0 Explain Romo Control. */
+"Just follow%nthose instructions!" = "Il te suffit de suivre%nces instructions !";
+
+/* Character-Script-1000-0 Explain Romo Control. */
+"I'll be waiting%nright here." = "Je t'attends%nici.";
+
+/* Character-Script-2-1 Ask to be poked */
+"Poke me,%nslow poke!" = "Tapote-moi,%ndoucement !";
+
+/* Character-Script-2-1 Get poked */
+"Again!" = "Encore !";
+
+/* Character-Script-2-1 Get poked again */
+"AGAINNN!!!" = "ENCOOOORE !!!";
+
+/* Character-Script-2-1 Get poked again */
+"Once%nmore..." = "Encore%nune fois...";
+
+/* Character-Script-2-1 Get poked again */
+"Still%nhappening..." = "Continue...";
+
+/* Character-Script-2-1 Get poked again */
+"Faster!" = "Plus vite !";
+
+/* Character-Script-2-1 Get poked again */
+"%n5..." = "%n5...";
+
+/* Character-Script-2-1 Get poked again */
+"%n4..." = "%n4...";
+
+/* Character-Script-2-1 Get poked again */
+"%n3..." = "%n3...";
+
+/* Character-Script-2-1 Get poked again */
+"%n2..." = "%n2...";
+
+/* Character-Script-2-1 Get poked again */
+"%n1..." = "%n1...";
+
+/* Character-Script-2-1 Back to work */
+"Much%nbetter!" = "C'est beaucoup%nmieux !";
+
+/* Character-Script-2-2 Explain The Lab */
+"I'm racking up%nmy skills!" = "J'accumule%ndes compétences !";
+
+/* Character-Script-2-2 Explain The Lab */
+"The Lab is a place for%nextra training." = "Le Labo est un espace%nde perfectionnement.";
+
+/* Character-Script-2-2 Explain The Lab */
+"Everything we unlock%nis available in The Lab!" = "Tout ce qui est débloqué%nse trouve dans le Labo !";
+
+/* Character-Script-2-4 Ask to play peekaboo */
+"Let's play%nPeek-a-Boo!" = "Jouons à dire%ncoucou !";
+
+/* Character-Script-2-4 Ask to see their face */
+"Lemme see%nyour face." = "Montre-moi%nton visage.";
+
+/* Character-Script-2-4 play */
+"Now cover%nyour face." = "Maintenant, cache%nton visage.";
+
+/* Character-Script-2-4 Sees the face, waits for hiding */
+"Where'd%nya go?" = "Où es-tu%npassé ?";
+
+/* Character-Script-2-4  */
+"I missed ya,%n${userName}!" = "Tu m'as manqué,%n${userName} !";
+
+/* Character-Script-2-4  */
+"Now I know%nhow to follow your face." = "Je sais comment suivre%ndes yeux ton visage.";
+
+/* Character-Script-2-5 Ask to be removed from base */
+"Getting un-docked%n feels...%n" = "Ça fait bizarre%nd'être déconnecté...%n";
+
+/* Character-Script-2-5 Ask to be removed from base */
+"%nWeird!%n" = "%nde la base !%n";
+
+/* Character-Script-2-5 Ask to be removed from base */
+"Try %nun-docking%n me again." = "Essaie %nde me déconnecter%nà nouveau.";
+
+/* Character-Script-2-5 When undocked */
+"Ahhh!%nThat's a little%nTOO weird!" = "Aaah !%nC'est%nTROP bizarre !";
+
+/* Character-Script-2-5 When undocked */
+"Put me %nback please!" = "Repose-moi sur la base,%ns'il te plaît !";
+
+/* Character-Script-2-5 When docked */
+"It's gonna take a while%nto get used to THAT!" = "Ça va prendre du temps%nde s'habituer à ÇA !";
+
+/* Character-Script-2-6 Romo enjoys his new trumpet. */
+"This is my new%n favorite ability." = "Voici ma nouvelle%n fonctionnalité préférée.";
+
+/* Character-Script-2-6 Romo explains that he'll always backfire when shaken */
+"Now, whenever you%nshake me..." = "À chaque fois que tu%nme secoueras...";
+
+/* Character-Script-2-6 Romo explains that he'll always backfire when shaken */
+"I'll always%ndefend myself!" = "je me%ndéfendrai !";
+
+/* Character-Script-2-7 Tell the player to pick him up */
+"Hey%n${userName}!" = "Salut%n${userName} !";
+
+/* Character-Script-2-7 Prompt for pickup */
+"Pick me up%nand bring me to%nyour favorite place." = "Ramasse-moi%net emmène-moi%ndans ton endroit préféré.";
+
+/* Character-Script-2-7 get picked up */
+"Tell me when%nwe're there!" = "Préviens-moi dès que%nnous serons arrivés !";
+
+/* Character-Script-2-7 get picked up */
+"Not Now" = "Pas maintenant";
+
+/* Character-Script-2-7 get picked up */
+"We Made It!" = "Nous avons réussi !";
+
+/* Character-Script-2-7 something */
+"Let me%ntake a look!" = "Laisse-moi%njeter un coup d'oeil !";
+
+/* Character-Script-2-7 Explain that you like it here */
+"I see why you%nlike it here!" = "Je comprends pourquoi%ntu aimes cet endroit !";
+
+/* Character-Script-2-7 Ask for photo */
+"%nWant me to snap a photo?" = "%nJe prends une photo ?";
+
+/* Character-Script-2-7 Ask for photo */
+"Nope" = "Non";
+
+/* Character-Script-2-7 Ask for photo */
+"Take a Photo" = "Prends une photo";
+
+/* Character-Script-2-7 Be sad and say you understand */
+"Guess I need my own%nspecial place!" = "Je crois que j'ai besoin%nd'un endroit à moi !";
+
+/* Character-Script-2-7 Takes picture */
+"%nReady..." = "%nPrêt...";
+
+/* Character-Script-2-7 Hint at exploration */
+"I'm ready for%nmore exploration!" = "Je suis prêt à%nexplorer d'autres lieux !";
+
+/* Character-Script-3-1  */
+"Now that %nI can detect%nloud sounds" = "Maintenant que%nje détecte%nles sons bruyants,";
+
+/* Character-Script-3-1  */
+"I can hear when %nthe starting gun fires%n" = "je peux entendre%nle signal de départ%n";
+
+/* Character-Script-3-1  */
+"But just %nto be sure..." = "Pour plus de%nprécautions...";
+
+/* Character-Script-3-1  */
+"Let's practice %nour starts" = "revoyons%nmon départ";
+
+/* Character-Script-3-1  */
+"You clap, %nand I'll dart forward" = "Toi tu frappes%ndans tes mains%net moi je m'élancerai en avant.";
+
+/* Character-Script-3-1  */
+"First put me somewhere%nwith plenty of room" = "Dépose-moi dans un endroit%navec beaucoup d'espace.";
+
+/* Character-Script-3-1  */
+"Do I have room%nto move around?" = "Ai-je assez d'espace%npour me déplacer ?";
+
+/* Character-Script-3-1  */
+"Nope" = "Non";
+
+/* Character-Script-3-1  */
+"Yep!" = "Ouais !";
+
+/* Character-Script-3-1 Getting ready to start */
+"Let me get ready" = "Laisse-moi me préparer.";
+
+/* Character-Script-3-1 Getting ready to start */
+"Okay...%nbe ready to catch me" = "OK...%nPrépare-toi%nà m'attraper !";
+
+/* Character-Script-3-1 Wiggle back into starting position */
+"Are you ready?" = "T'es prêt ?";
+
+/* Character-Script-3-1 Really shout that you're ready */
+"I can't hear you!!!%nClap when you're ready!" = "Je ne t'entends pas !%nFrappe quand t'es prêt !";
+
+/* Character-Script-3-1 Wait */
+"There you go!%nClap Again!" = "Bien ! Frappe encore%ndans tes mains !";
+
+/* Character-Script-3-1 Activated on loud sound */
+"Looking better, %nKeep Clapping!" = "C'est mieux, continue%nà frapper dans tes mains!";
+
+/* Character-Script-3-1 Activated on loud sound */
+"We did it!" = "Nous avons réussi !";
+
+/* Character-Script-3-1 Activated on loud sound */
+"Let's keep going!" = "Continuons !";
+
+/* Character-Script-3-2 Explain wtf is about to happen */
+"Whoa...%nAll this motion..." = "Holà...%nQuelle agitation...";
+
+/* Character-Script-3-2 Explain wtf is about to happen */
+"I'm gonna%nchill out%nfor a sec." = "Je%nme détends%nune seconde.";
+
+/* Character-Script-3-2 Explain wtf is about to happen */
+"Ooh!%nShow me your best%nFreeze Dance." = "Oh !%nMontre-moi comment tu%nfais la Danse Immobile.";
+
+/* Character-Script-3-2 Explain wtf is about to happen */
+"Do you guys do%nFreeze Dance%non Earth?" = "Vous faites la%nDanse Immobile%nsur Terre ?";
+
+/* Character-Script-3-2 Explain wtf is about to happen */
+"It's easy!%nYou ~wiggle~ around..." = "C'est facile ! Tu bouges%ndans tous les sens...";
+
+/* Character-Script-3-2 Explain wtf is about to happen */
+"And then you FREEZE.%nJust remember..." = "puis tu t'IMMOBILISES.%nN'oublie pas...";
+
+/* Character-Script-3-2 Explain wtf is about to happen */
+"When you move around...%nyou'll hear the sound." = "Si tu bouges...%ntu entendras le son.";
+
+/* Character-Script-3-2 Explain wtf is about to happen */
+"But if you freeze...%nthen it's just the breeze." = "Si tu t'immobilises...%ntu n'entendras plus rien.";
+
+/* Character-Script-3-2 Explain wtf is about to happen */
+"OK, talk is cheap.%nLet's see your best..." = "OK, assez parlé. Voyons%nce que tu sais faire...";
+
+/* Character-Script-3-2 Do the freeze dance */
+"That dance was..." = "Cette danse était...";
+
+/* Character-Script-3-2 Do the freeze dance */
+"Incredible!%nYour arms%nare so wobbly!" = "incroyable !%nTes bras%nsont parfaits !";
+
+/* Character-Script-3-3 Looks up and chuckles */
+"That's...%npretty neat." = "C'est...%npas mal du tout.";
+
+/* Character-Script-3-3 Looks up and chuckles */
+"Can we%ntrain some more?" = "On s'entraîne%nencore ?";
+
+/* Character-Script-3-4 Set-up Photo Safari */
+"I can explore%nall on my own!" = "Je peux explorer%nles lieux tout seul !";
+
+/* Character-Script-3-4 Set-up Photo Safari */
+"Do you remember%nmy favorite color?" = "Tu te souviens%nde ma couleur préférée ?";
+
+/* Character-Script-3-4 Set-up Photo Safari */
+"Well it's time for a%nPhoto Safari!" = "C'est l'heure du%nSafari-photo !";
+
+/* Character-Script-3-5 Show off them photos */
+"Look at the photos%nI snapped!" = "Regarde les photos%nque nous avons prises !";
+
+/* Character-Script-3-5 Show off them photos */
+"I'll save these in%nyour Camera app." = "Sauvegardons-les dans%nton application Caméra.";
+
+/* Character-Script-3-6  */
+"Now that I can%ndrive on a path" = "Maintenant que je peux%nconduire sur une piste,";
+
+/* Character-Script-3-6  */
+"I'm ready %nto follow a line!" = "je suis prêt %nà suivre un tracé !";
+
+/* Chase-Introduction-First-Run Explains Chase */
+"The Robot Space Race%nis almost here!" = "La course spatiale%nva bientôt commencer !";
+
+/* Chase-Introduction-First-Run Explains Chase */
+"It's time for%nsome practice." = "Il est grand temps%nde s'entraîner.";
+
+/* Chase-Introduction-First-Run Explains Chase */
+"The first leg of%nthe race is Chase." = "La première étape%nest une course-poursuite.";
+
+/* Chase-Introduction-First-Run Explains Chase */
+"Robots race after%na colorful ball." = "Les robots courent après%nune balle colorée.";
+
+/* Chase-Introduction-First-Run Explains Chase */
+"Let's use everying%nyou taught me..." = "Utilisons tout ce que%ntu m'as appris...";
+
+/* Chase-Introduction-First-Run Explains Chase */
+"...and%nstart chasing!" = "...et%ncommençons la course !";
+
+/* Chase-Introduction Explain the game */
+"Find something%ncolorful" = "Trouve un objet%ncoloré";
+
+/* Chase-Introduction Explain the game */
+"Go find%na colorful ball" = "Va chercher%nune balle colorée";
+
+/* Chase-Introduction Explain the game */
+"Show me something%ncolorful" = "Montre-moi un objet%ncoloré";
+
+/* Chase-Introduction Explain the game */
+"Show me any%nbright color" = "Montre-moi une%ncouleur vive";
+
+/* Chase-Introduction Explain the game */
+"And I will%nchase after it!" = "Et j'essaierai%nde l'attraper !";
+
+/* Chase-Introduction Explain the game */
+"And I'll%nCHASE IT!" = "Et j'essaierai%nde L'ATTRAPER !";
+
+/* Chase-Introduction Explain the game */
+"And I'll chase anything%nthat color!" = "J'essaierai d'attraper%ntout objet de cette couleur !";
+
+/* Chase-Introduction Explain the game */
+"And I'll%nchase it!" = "Et j'essaierai%nde l'attraper !";
+
+/* Chase-Introduction Explain the game */
+"And I'll chase%nthat color!" = "Et je poursuivrai%ncette couleur !";
+
+/* Favorite-Color-Introduction-First-Run Romo didn't realize how pretty Earth was */
+"I came to Earth%nto learn to race" = "Je suis venu ici pour%napprendre à courir.";
+
+/* Favorite-Color-Introduction-First-Run Romo didn't realize how pretty Earth was */
+"All work%nand no play" = "Je ne voulais%nrien faire d'autre%nque de m'entraîner.";
+
+/* Favorite-Color-Introduction-First-Run Romo didn't realize how pretty Earth was */
+"Boy%nwas I wrong!" = "Comme%nje me suis trompé !";
+
+/* Favorite-Color-Introduction-First-Run Romo didn't realize how pretty Earth was */
+"On Earth, there's%nso much to explore!" = "Il y a tant à%nexplorer sur Terre !";
+
+/* Favorite-Color-Introduction-First-Run Lead in to interactive help */
+"Let me%nshow you something" = "Laisse-moi%nte montrer quelque chose.";
+
+/* Favorite-Color-Introduction Explain the game */
+"I have a%nfavorite color" = "J'ai une%ncouleur préférée.";
+
+/* Favorite-Color-Introduction Explain the game */
+"I have one%nfavorite color" = "J'ai une%ncouleur préférée.";
+
+/* Favorite-Color-Introduction Explain the game */
+"Try to find%nmy favorite color" = "Devine quelle est%nma couleur préférée.";
+
+/* Favorite-Color-Introduction Explain the game */
+"I'll give you%na hint..." = "Je vais te donner%nun indice...";
+
+/* Favorite-Color-Introduction Explain the game */
+"I'll help%nyou out..." = "Je vais%nt'aider...";
+
+/* Favorite-Color-Introduction Explain the game */
+"I'll give%nONE hint..." = "Je vais te donner%nUN indice...";
+
+/* Favorite-Color-Introduction Explain the game */
+"Here's a hint..." = "Voici un indice...";
+
+/* Favorite-Color-Introduction Explain the game */
+"This color is%nbright and vivid!" = "Cette couleur est%nvive et lumineuse !";
+
+/* Favorite-Color-Introduction Explain the game */
+"Its name is 01010010%nback home..." = "On l'appelle 01010010%nchez moi...";
+
+/* Favorite-Color-Introduction Explain the game */
+"The color is%nVERY BRIGHT!" = "Cette couleur est%nTRÈS VIVE !";
+
+/* Favorite-Color-Introduction Explain the game */
+"You'd see it%nin a rainbow!" = "C'est une couleur%nde l'arc-en-ciel !";
+
+/* Favorite-Color-Introduction Explain the game */
+"My favorite color%nis VERY bright!" = "Ma couleur préférée%nest TRÈS vive !";
+
+/* Favorite-Color-Introduction Explain the game */
+"It's a solid and%nbright color!" = "C'est une couleur%npleine et lumineuse !";
+
+/* Favorite-Color-Introduction Explain the game */
+"It's vibrant...%nand AWESOME!" = "Elle est saisissante...%net MAGNIFIQUE !";
+
+/* Favorite-Color-Introduction Explain the game */
+"Find something%ncolorful" = "Trouve un objet%ncoloré";
+
+/* Favorite-Color-Introduction Explain the game */
+"Go find%ncolorful stuff" = "Va chercher%nun objet coloré";
+
+/* Favorite-Color-Introduction Explain the game */
+"Show me something%ncolorful" = "Montre-moi un objet%ncoloré";
+
+/* Favorite-Color-Introduction Explain the game */
+"Show me any%nsolid color" = "Montre-moi une%ncouleur pleine";
+
+/* Favorite-Color-Introduction Explain the game */
+"Wave it in front%nof me" = "Agite-la%ndevant moi";
+
+/* Favorite-Color-Introduction Explain the game */
+"And let me get%na good look!" = "Laisse-moi%nl'observer !";
+
+/* Favorite-Color-Introduction Explain the game */
+"And I'll tell you%nif I like it!" = "Je vais te dire%nsi elle me plaît !";
+
+/* Favorite-Color-Introduction Explain the game */
+"And if I don't like it,%nkeep guessing!" = "Si elle ne me plaît pas,%ncontinue à deviner!";
+
+/* LineFollow-Introduction-First-Run  */
+"Our final training is..." = "Notre dernier%nentraînement%nconsiste à...";
+
+/* LineFollow-Introduction-First-Run  */
+"%nFollowing a line!%n" = "%nsuivre un tracé !%n";
+
+/* LineFollow-Introduction-First-Run  */
+"At the Robot Space Race,%nthe line is made of..." = "Dans la course spatiale%ndes robots, le tracé%nest constitué de...";
+
+/* LineFollow-Introduction-First-Run  */
+"Hyper-charged photons!" = "photons hyper chargés !";
+
+/* LineFollow-Introduction-First-Run  */
+"On Earth,%nwe'll use colored tape." = "Sur Terre, utilisons%ndu ruban de couleur.";
+
+/* LineFollow-Introduction-First-Run  */
+"Go get colored tape!%nI'll wait for you." = "Va chercher du ruban !%nJe t'attends.";
+
+/* LineFollow-Introduction-First-Run Ask for tape */
+"Do you have%ncolored tape?" = "As-tu du%nruban de couleur ?";
+
+/* LineFollow-Introduction-First-Run Ask for tape */
+"No tape" = "Pas de ruban";
+
+/* LineFollow-Introduction-First-Run Ask for tape */
+"Yep!" = "Ouais !";
+
+/* LineFollow-Introduction-First-Run No tape */
+"Come on, ${userName}!" = "Allez, ${userName} !";
+
+/* LineFollow-Introduction-First-Run No tape */
+"I'll show you how%nit works." = "Je vais te montrer%ncomment ça marche.";
+
+/* LineFollow-Introduction-First-Run No tape */
+"And when you have tape,%nwe can play." = "Quand tu auras du ruban,%nnous pourrons jouer.";
+
+/* LineFollow-Introduction-First-Run Yes tape */
+"Let's get started!" = "C'est parti !";
+
+/* LineFollow-Introduction-First-Run Continue instructions for laying tape */
+"On the ground, build a%nracetrack with tape." = "Sur le sol, construis une%npiste avec du ruban.";
+
+/* LineFollow-Introduction-First-Run Continue instructions for laying tape */
+"Take your time!%n" = "Prends ton temps !%n";
+
+/* LineFollow-Introduction-First-Run Give them an option to see a video */
+"Wanna see a video of%nLine Follow in action?" = "Tu veux voir une vidéo%npour mieux comprendre ?";
+
+/* LineFollow-Introduction-First-Run Give them an option to see a video */
+"No" = "Non";
+
+/* LineFollow-Introduction-First-Run Give them an option to see a video */
+"Watch video" = "Regarder la vidéo";
+
+/* LineFollow-Introduction-First-Run See Video */
+"Got it?" = "C'est bon ?";
+
+/* LineFollow-Introduction-First-Run See Video */
+"Now go build%nyour track!" = "Maintenant, construis%nta piste !";
+
+/* LineFollow-Introduction-First-Run DO NOT See Video */
+"Okay, I'll leave you to%nbuild your track." = "OK, je te laisse%nconstruire ta piste.";
+
+/* LineFollow-Introduction-First-Run Ask them to let Romo know when they are done! */
+"Tell me when you're%ndone building." = "Préviens-moi quand%ntu as terminé.";
+
+/* LineFollow-Introduction-First-Run Ask them to let Romo know when they are done! */
+"Not Yet" = "Pas encore";
+
+/* LineFollow-Introduction-First-Run Ask them to let Romo know when they are done! */
+"Ready!" = "C'est prêt !";
+
+/* LineFollow-Introduction-First-Run When they are ready, progress! */
+"Let's do this!" = "Continuons !";
+
+/* LineFollow-Introduction-First-Run Not Yet done, say you'll wait */
+"Okay, I'll wait." = "OK, j'attends.";
+
+/* LineFollow-Introduction-First-Run Not Yet done, say you'll wait */
+"Tell me when you're%ndone building my racetrack." = "Préviens-moi quand%ntu as terminé la piste.";
+
+/* LineFollow-Introduction-First-Run Not Yet done, say you'll wait */
+"Not Yet" = "Pas encore";
+
+/* LineFollow-Introduction-First-Run Not Yet done, say you'll wait */
+"Ready!" = "C'est prêt !";
+
+/* LineFollow-Introduction-First-Run Not done again? let's use what we have */
+"Let's use%nwhat you have so far!" = "Utilisons%ndéjà ce que tu as !";

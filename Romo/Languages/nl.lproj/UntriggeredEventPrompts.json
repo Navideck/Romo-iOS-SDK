@@ -1,0 +1,124 @@
+{
+    "RMEventTickle": [
+        "Probeer\nmij te kietelen!"
+    ],
+    
+    "RMEventTickle:nose": [
+        "Kietel\n mijn neus!",
+        "Probeer\nmijn neus te kietelen!"
+    ],
+    
+    "RMEventTickle:chin": [
+        "Kietel\nmijn kin!"
+    ],
+    
+    "RMEventTickle:forehead": [
+        "Kietel\nmijn voorhoofd"
+    ],
+
+    "RMEventPokeAnywhere": [
+        "Por mij!\nPor mij!",
+        "Probeer in\nmijn gezicht te porren.",
+        "Por in\nmijn gezicht!"
+    ],
+
+    "RMEventPoke": [
+        "\nPor in mijn gezicht!"
+    ],
+    
+    "RMEventPoke:chin": [
+        "Probeer\nmijn kin te porren.",
+        "Por mijn kin!",
+        "Por\nmijn kin!"
+    ],
+    
+    "RMEventPoke:forehead": [
+        "Probeer\nmijn voorhoofd te porren.",
+        "Por\nmijn voorhoofd!"
+    ],
+    
+    "RMEventPoke:nose": [
+        "Probeer mijn\nneus te porren.",
+        "Por\nmijn NEUS!"
+    ],
+    
+    "RMEventPoke:eye": [
+        "Probeer mijn\noog te porren.",
+        "Por mij\nin mijn oog",
+        "Por in een\nvan mijn ogen!",
+        "Por mijn oog!",
+        "Por\nmijn OOG!"
+    ],
+
+    "RMEventShake": [
+        "\nSchud mij!",
+        "Schud me zoals\neen Polaroidfoto!",
+        "Schud schud schud schud\nSCHUD ME!",
+        "Schud me!\nSchud me!"
+    ],
+
+    "RMEventPickedUp": [
+        "\nTil me op!",
+        "Til me\nOP!"
+    ],
+
+    "RMEventDock": [
+        "Sluit me\nweer aan in mijn voet!\nHaast je!",
+        "Ik voel me duizelig!\nSluit me weer\naan in mijn voet",
+        "Snel!\nSluit me weer aan in mijn\nrobotvoet!",
+        "Sluit me weer aan\nin mijn robotvoet!"
+    ],
+
+    "RMEventUndock": [
+        "Probeer me langzaam\nuit de dock te nemen",
+        "Koppel me los\nvan mijn voet!",
+        "Neem me weg van\ndeze robotvoet!"
+    ],
+
+    "RMEventFaceAppear": [
+        "Toon me\nje gezicht",
+        "Toon me\nje GEZICHT!",
+        "Waar is je\ngezicht?",
+        "Hé!\nWaar ben je naartoe?"
+    ],
+
+    "RMEventFaceDisappear": [
+        ""
+    ],
+    
+    "RMEventHearsLoudSound": [
+                  "Klap in \nje handen!",
+                  "Maak een luid\nklappend geluid!",
+                  "Maak een\nluid geluid!",
+                  "Klap!"
+                  ],
+    
+    "RMEventSeesMotion": [
+                "Beweeg\nvoor mijn neus",
+                "Wandel direct\nvoor mij",
+                "Toon mij\niets!",
+                "Toon me iets\ndat beweegt!"
+                ],
+    
+    "RMEventStasis": [
+                ""
+                ],
+    
+    "RMEventLightsOff": [
+                "Doe het\nlicht uit!",
+                "Schakel het\nlicht uit!",
+                "Licht\nuitdoen!",
+                "Maak het\nhier donkerder"
+                ],
+    
+    "RMEventLightsOn": [
+                "Schakel\nwat lichten in!",
+                "Maak het\nhier helderder!",
+                "Schakel\neen licht in",
+                "Doe het\nlicht aan!"
+                ],
+    
+    "RMEventFavoriteColor": [
+                "Toon mij mijn\nfavoriete kleur!"
+                ]
+}

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>title</key>
+	<string>Burning Rubber</string>
+	<key>briefing</key>
+	<string>Whoa, driving is fun! See if you can make me go faster! Tap the Drive Action to change my speed.</string>
+	<key>prompt</key>
+	<string>Teach me to\ndrive faster!</string>
+	<key>initial solution</key>
+	<array>
+		<dict>
+			<key>event</key>
+			<string>RMEventMissionStart</string>
+			<key>script</key>
+			<array/>
+		</dict>
+	</array>
+	<key>actions</key>
+	<array>
+		<dict>
+			<key>selector</key>
+			<string>driveForwardWithSpeed:(speed)speed distance:(distance)distance</string>
+			<key>library</key>
+			<string>Drive</string>
+			<key>available count</key>
+			<string>1</string>
+		</dict>
+	</array>
+	<key>events</key>
+	<array>
+		<string>RMEventMissionStart</string>
+	</array>
+	<key>adding events</key>
+	<false/>
+	<key>editing parameters</key>
+	<true/>
+	<key>max action count</key>
+	<integer>1</integer>
+	<key>glow action views</key>
+	<true/>
+	<key>three star solution</key>
+	<array>
+		<dict>
+			<key>event</key>
+			<string>RMEventMissionStart</string>
+			<key>rules</key>
+			<array>
+				<dict>
+					<key>action</key>
+					<string>driveForwardWithSpeed:(speed)speed distance:(distance)distance</string>
+					<key>constraints</key>
+					<array>
+						<dict>
+							<key>leftValue</key>
+							<dict>
+								<key>parameterName</key>
+								<string>(speed)</string>
+							</dict>
+							<key>comparisonType</key>
+							<string>=</string>
+							<key>rightValue</key>
+							<integer>100</integer>
+						</dict>
+						<dict>
+							<key>leftValue</key>
+							<dict>
+								<key>parameterName</key>
+								<string>(distance)</string>
+							</dict>
+							<key>comparisonType</key>
+							<string>=</string>
+							<key>rightValue</key>
+							<integer>100</integer>
+						</dict>
+					</array>
+				</dict>
+			</array>
+		</dict>
+	</array>
+	<key>two star solution</key>
+	<array>
+		<dict>
+			<key>event</key>
+			<string>RMEventMissionStart</string>
+			<key>rules</key>
+			<array>
+				<dict>
+					<key>action</key>
+					<string>driveForwardWithSpeed:(speed)speed distance:(distance)distance</string>
+					<key>constraints</key>
+					<array>
+						<dict>
+							<key>leftValue</key>
+							<dict>
+								<key>parameterName</key>
+								<string>(speed)</string>
+							</dict>
+							<key>comparisonType</key>
+							<string>&gt;</string>
+							<key>rightValue</key>
+							<integer>65</integer>
+						</dict>
+						<dict>
+							<key>leftValue</key>
+							<dict>
+								<key>parameterName</key>
+								<string>(distance)</string>
+							</dict>
+							<key>comparisonType</key>
+							<string>&gt;</string>
+							<key>rightValue</key>
+							<integer>15</integer>
+						</dict>
+					</array>
+				</dict>
+			</array>
+		</dict>
+	</array>
+	<key>one star solution</key>
+	<array>
+		<dict>
+			<key>event</key>
+			<string>RMEventMissionStart</string>
+			<key>rules</key>
+			<array>
+				<dict>
+					<key>action</key>
+					<string>driveForwardWithSpeed:(speed)speed distance:(distance)distance</string>
+					<key>constraints</key>
+					<array>
+						<dict>
+							<key>leftValue</key>
+							<dict>
+								<key>parameterName</key>
+								<string>(speed)</string>
+							</dict>
+							<key>comparisonType</key>
+							<string>&gt;</string>
+							<key>rightValue</key>
+							<integer>52</integer>
+						</dict>
+					</array>
+				</dict>
+			</array>
+		</dict>
+	</array>
+	<key>failure debriefing</key>
+	<string>Tap the Drive Action to edit my speed. I know I can drive faster than that!</string>
+	<key>success debriefing</key>
+	<string>Faster! Farther!</string>
+	<key>congrats debriefing</key>
+	<string>Did you see how fast I went?!</string>
+	<key>unlockables</key>
+	<array>
+		<dict>
+			<key>mission</key>
+			<string>1-3</string>
+		</dict>
+	</array>
+</dict>
+</plist>

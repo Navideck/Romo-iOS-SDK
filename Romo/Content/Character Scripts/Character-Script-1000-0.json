@@ -1,0 +1,152 @@
+{
+	"script":
+	{
+		"name": "Character-Script-1000-0",
+		"description": "Explain that the Robot Space Race is over",
+		"blocks": [
+                   {
+                   "description": "",
+                   "condition":
+                   {
+                   "name": "none"
+                   },
+                   "actions":
+                   [
+                    {
+                    "name": "expressionWithText",
+                    "args": ["proud", "excited", "WE DID IT!"]
+                    },
+                    {
+                    "name": "move",
+                    "args": ["forward", 0.1]
+                    },
+                    {
+                    "name": "move",
+                    "args": ["backward", 0.1]
+                    },
+                    {
+                    "name": "move",
+                    "args": ["forward", 0.1]
+                    },
+                    {
+                    "name": "move",
+                    "args": ["backward", 0.1]
+                    },
+                    {
+                    "name": "mumbleWithText",
+                    "args": ["All our hard work\npaid off!"]
+                    },
+                    {
+                    "name": "mumbleWithText",
+                    "args": ["Thank you! Thank you!\nTHANK YOU!"]
+                    }
+                    ]
+                   },
+                   {
+                   "description": "Explain Romo Control",
+                   "condition":
+                   {
+                   "name": "wait",
+                   "args": [1.5]
+                   },
+                   "actions":
+                   [
+                    {
+                    "name": "mumbleWithText",
+                    "args": ["There's still more\nwe can do together."]
+                    },
+                    {
+                    "name": "emotion",
+                    "args": ["happy"]
+                    },
+                    {
+                    "name": "mumbleWithText",
+                    "args": ["You can control me\nfrom another device."]
+                    },
+                    {
+                    "name": "ask",
+                    "args": ["Have you tried Romo Control?", "Yes", "Not yet"],
+                    "store-id": "interaction/final/romoControl"
+                    }
+                    ]
+                   },
+                   {
+                   "description": "Push The Lab.",
+                   "condition": {
+                   "name": "store-id",
+                   "args": ["interaction/final/romoControl", "Yes"]
+                   },
+                   "actions": [{
+                               "name": "expressionWithText",
+                               "args": ["embarrassed", "happy", "Oh, right!"]
+                               },
+                               {
+                               "name": "mumbleWithText",
+                               "args": ["Well, everything you taught me\nis unlocked in The Lab!"]
+                               }
+                               ]
+                   },
+                   {
+                   "description": "Explain Romo Control.",
+                   "condition": {
+                   "name": "store-id",
+                   "args": ["interaction/final/romoControl", "Not yet"]
+                   },
+                   "actions": [{
+                               "name": "expressionWithText",
+                               "args": ["curious", "curious", "Really?"]
+                               },
+                               {
+                               "name": "mumbleWithText",
+                               "args": ["Romo Control lets you\ndrive me from anywhere\nin the WORLD!"]
+                               },
+                               {
+                               "name": "mumbleWithText",
+                               "args": ["It's easy to set up..."]
+                               },
+                               {
+                               "name": "mumbleWithText",
+                               "args": ["And a whole lot\nof fun!"]
+                               },
+                               {
+                               "name": "mumbleWithText",
+                               "args": ["Grab your iPad, iPhone,\nor a computer."]
+                               },
+                               {
+                               "name": "ask",
+                               "args": ["Open http://romo.tv\non your other device", "Not now", "Got it!"],
+                               "store-id": "interaction/final/romo.tv"
+                               }
+                               ]
+                   },
+                   {
+                   "description": "Explain Romo Control.",
+                   "condition": {
+                   "name": "store-id",
+                   "args": ["interaction/final/romo.tv", "Not now"]
+                   },
+                   "actions": [{
+                               "name": "mumbleWithText",
+                               "args": ["Well, you can control me\nat any time."]
+                               }
+                               ]
+                   },
+                   {
+                   "description": "Explain Romo Control.",
+                   "condition": {
+                   "name": "store-id",
+                   "args": ["interaction/final/romo.tv", "Got it!"]
+                   },
+                   "actions": [{
+                               "name": "mumbleWithText",
+                               "args": ["Just follow\nthose instructions!"]
+                               },
+                               {
+                               "name": "mumbleWithText",
+                               "args": ["I'll be waiting\nright here."]
+                               }
+                               ]
+                   }
+                   ]
+	}
+}

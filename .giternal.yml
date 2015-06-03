@@ -1,0 +1,5 @@
+FirmwareCommon:
+    repo: git.romotive.com:/git/RMCoreFirmwareCommon
+    path: iOS/SDK/RMCore/RMCore/Communication
+
+

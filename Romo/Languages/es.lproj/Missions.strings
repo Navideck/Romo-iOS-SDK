@@ -1,0 +1,353 @@
+/* Mission-1-1: title */
+"Mission-1-1-title" = "Potencia sobre ruedas";
+
+/* Mission-1-1: briefing */
+"Mission-1-1-briefing" = "¡Entréname para conducir con mis ruedas nuevas!";
+
+/* Mission-1-1: congrats debriefing */
+"Mission-1-1-congrats debriefing" = "¡Hurra! Ahora rodamos.";
+
+/* Mission-1-10: title */
+"Mission-1-10-title" = "Tango del Romovimiento";
+
+/* Mission-1-10: briefing */
+"Mission-1-10-briefing" = "Un baile clásico en el que haces una pausa entre cada paso. Dame algunas acciones y ponme una pausa entre cada paso.";
+
+/* Mission-1-10: prompt */
+"Mission-1-10-prompt" = "¿Puedes enseñarme\na bailar?";
+
+/* Mission-1-10: failure debriefing */
+"Mission-1-10-failure debriefing" = "El Tango del Romovimiento es acción, pausa, acción, pausa, acción, pausa...";
+
+/* Mission-1-10: success debriefing */
+"Mission-1-10-success debriefing" = "Haz que mi tango dure más.";
+
+/* Mission-1-10: congrats debriefing */
+"Mission-1-10-congrats debriefing" = "¡Trabajar mucho, jugar mucho!";
+
+/* Mission-1-2: title */
+"Mission-1-2-title" = "Quemando las gomas";
+
+/* Mission-1-2: briefing */
+"Mission-1-2-briefing" = "¡Guau, qué divertido es conducir! ¡A ver si me haces correr más! Toca la acción de conducir para cambiar la velocidad.";
+
+/* Mission-1-2: prompt */
+"Mission-1-2-prompt" = "¡Enséñame a\nir más rápido!";
+
+/* Mission-1-2: failure debriefing */
+"Mission-1-2-failure debriefing" = "Toca la acción de conducir para cambiar la velocidad. ¡Sé que puedo correr más!";
+
+/* Mission-1-2: success debriefing */
+"Mission-1-2-success debriefing" = "¡Más rápido! ¡Más lejos!";
+
+/* Mission-1-2: congrats debriefing */
+"Mission-1-2-congrats debriefing" = "¡¿Has visto cómo corría?!";
+
+/* Mission-1-3: title */
+"Mission-1-3-title" = "Teoría de cuerdas";
+
+/* Mission-1-3: briefing */
+"Mission-1-3-briefing" = "Esta vez, añade dos acciones distintas.";
+
+/* Mission-1-3: prompt */
+"Mission-1-3-prompt" = "¡Creo que estoy\nlisto para girar!";
+
+/* Mission-1-3: failure debriefing */
+"Mission-1-3-failure debriefing" = "Asegúrate de añadir dos acciones.";
+
+/* Mission-1-3: success debriefing */
+"Mission-1-3-success debriefing" = "¡Bien, pero no has cambiado los parámetros de las acciones!";
+
+/* Mission-1-3: congrats debriefing */
+"Mission-1-3-congrats debriefing" = "¡Sigue así y podremos explorar la Tierra ya mismo!";
+
+/* Mission-1-4: title */
+"Mission-1-4-title" = "Fuera de servicio";
+
+/* Mission-1-4: briefing */
+"Mission-1-4-briefing" = "Pulsa y aguanta para cambiar el orden y que pueda avanzar, retroceder y repetir esas acciones.";
+
+/* Mission-1-4: failure debriefing */
+"Mission-1-4-failure debriefing" = "Pulsa y aguanta en una acción para moverla. ¡Quiero avanzar y retroceder!";
+
+/* Mission-1-4: success debriefing */
+"Mission-1-4-success debriefing" = "Primero adelante y luego atrás.";
+
+/* Mission-1-4: congrats debriefing */
+"Mission-1-4-congrats debriefing" = "¡Le estamos cogiendo el truco!";
+
+/* Mission-1-5: title */
+"Mission-1-5-title" = "Corta";
+
+/* Mission-1-5: briefing */
+"Mission-1-5-briefing" = "Borra las acciones que me indican que retroceda. ¡Prueba deslizando a la izquierda!";
+
+/* Mission-1-5: failure debriefing */
+"Mission-1-5-failure debriefing" = "Para borrar una acción, ¡desliza el dedo encima! Intenta borrar las acciones de retroceder.";
+
+/* Mission-1-5: success debriefing */
+"Mission-1-5-success debriefing" = "¡No borres las acciones de girar!";
+
+/* Mission-1-5: congrats debriefing */
+"Mission-1-5-congrats debriefing" = "¡A veces, menos es más!";
+
+/* Mission-1-6: title */
+"Mission-1-6-title" = "Forma aguda";
+
+/* Mission-1-6: briefing */
+"Mission-1-6-briefing" = "Quiero conducir en triángulos. Comprueba que todos los giros van en la misma dirección.";
+
+/* Mission-1-6: prompt */
+"Mission-1-6-prompt" = "¿Me ayudas\na dibujar formas?";
+
+/* Mission-1-6: failure debriefing */
+"Mission-1-6-failure debriefing" = "Comprueba que todos los giros son en la misma dirección.";
+
+/* Mission-1-6: success debriefing */
+"Mission-1-6-success debriefing" = "¡Cerrar! Comprueba que los giros son como en las agujas del reloj y de 180°.";
+
+/* Mission-1-6: congrats debriefing */
+"Mission-1-6-congrats debriefing" = "Me pregunto qué otras formas puedo dibujar...";
+
+/* Mission-1-7: title */
+"Mission-1-7-title" = "Encuadrado";
+
+/* Mission-1-7: briefing */
+"Mission-1-7-briefing" = "A ver si me enseñas a dibujar un cuadrado. Creo que sé cómo empieza.";
+
+/* Mission-1-7: prompt */
+"Mission-1-7-prompt" = "¡Enséñame a conducir\nen cuadrados!";
+
+/* Mission-1-7: failure debriefing */
+"Mission-1-7-failure debriefing" = "¡Recuerda, un cuadrado tiene todos los lados iguales y ángulos rectos perfectos!";
+
+/* Mission-1-7: success debriefing */
+"Mission-1-7-success debriefing" = "¡Tengo que ser más preciso con los ángulos y distancias si queremos ganar la Carrera Espacial de Robots!";
+
+/* Mission-1-7: congrats debriefing */
+"Mission-1-7-congrats debriefing" = "¡Sigue entrenando y ganaremos la Carrera Espacial de Robots!";
+
+/* Mission-1-8: title */
+"Mission-1-8-title" = "¡Sí, sí!";
+
+/* Mission-1-8: briefing */
+"Mission-1-8-briefing" = "¡Quiero poder decir que sí asintiendo con la cabeza! Enséñame a inclinar la cabeza adelante y atrás.";
+
+/* Mission-1-8: failure debriefing */
+"Mission-1-8-failure debriefing" = "Para asentir, mi cabeza debería moverse adelante y atrás.";
+
+/* Mission-1-8: success debriefing */
+"Mission-1-8-success debriefing" = "¡Asentir más veces resulta más convincente!";
+
+/* Mission-1-8: congrats debriefing */
+"Mission-1-8-congrats debriefing" = "Sí. ¡Sí! ¡SÍ!";
+
+/* Mission-1-9: title */
+"Mission-1-9-title" = "Nanay";
+
+/* Mission-1-9: briefing */
+"Mission-1-9-briefing" = "Enséñame a mover la cabeza para decir que no con giros de ida y vuelta.";
+
+/* Mission-1-9: failure debriefing */
+"Mission-1-9-failure debriefing" = "Añade un par de giros a izquierda y derecha sin moverme del sitio.";
+
+/* Mission-1-9: success debriefing */
+"Mission-1-9-success debriefing" = "Unos giros rápidos a izquierda y derecha lo harán más realista.";
+
+/* Mission-1-9: congrats debriefing */
+"Mission-1-9-congrats debriefing" = "Ahora sé cómo decir \"¡no!\"";
+
+/* Mission-2-1: title */
+"Mission-2-1-title" = "Cara de póquer";
+
+/* Mission-2-1: briefing */
+"Mission-2-1-briefing" = "¿Qué hago cuando me des un toque en la cara?";
+
+/* Mission-2-1: failure debriefing */
+"Mission-2-1-failure debriefing" = "Dime cómo reaccionar cuando me den un toque.";
+
+/* Mission-2-1: congrats debriefing */
+"Mission-2-1-congrats debriefing" = "¡Allá vamos!";
+
+/* Mission-2-2: title */
+"Mission-2-2-title" = "Pelea de cosquillas";
+
+/* Mission-2-2: briefing */
+"Mission-2-2-briefing" = "¡Prepárate para una pelea de cosquillas! Añade acciones para cuando me hagan cosquillas.";
+
+/* Mission-2-2: prompt */
+"Mission-2-2-prompt" = "¡Ayúdame a prepararme\npara una pelea de\ncosquillas!";
+
+/* Mission-2-2: failure debriefing */
+"Mission-2-2-failure debriefing" = "Asegúrate de crear reacciones a los tres eventos de cosquillas.";
+
+/* Mission-2-2: success debriefing */
+"Mission-2-2-success debriefing" = "Enséñame a tener reacciones más largas.";
+
+/* Mission-2-2: congrats debriefing */
+"Mission-2-2-congrats debriefing" = "¡Quién imaginaba que entrenar sería tan díver!";
+
+/* Mission-2-3: title */
+"Mission-2-3-title" = "Cu-cu";
+
+/* Mission-2-3: briefing */
+"Mission-2-3-briefing" = "Enséñame qué hacer cuando veo tu cara y cuando no la veo.";
+
+/* Mission-2-3: failure debriefing */
+"Mission-2-3-failure debriefing" = "Crea reacciones para cuando veo tu cara y cuando no la veo.";
+
+/* Mission-2-3: success debriefing */
+"Mission-2-3-success debriefing" = "Enséñame a tener reacciones más largas.";
+
+/* Mission-2-3: congrats debriefing */
+"Mission-2-3-congrats debriefing" = "Tienes buen aspecto... ¡para ser un humano!";
+
+/* Mission-2-4: title */
+"Mission-2-4-title" = "Sin base";
+
+/* Mission-2-4: briefing */
+"Mission-2-4-briefing" = "¡No puedo conducir si no tengo ruedas! Elimina las acciones que usan mi base de robot cuando estoy desacoplado.";
+
+/* Mission-2-4: failure debriefing */
+"Mission-2-4-failure debriefing" = "Elimina las acciones de conducir cuando estoy desacoplado.";
+
+/* Mission-2-4: success debriefing */
+"Mission-2-4-success debriefing" = "¡Has borrado demasiadas acciones! Aún puedo conducir cuando estoy en la base.";
+
+/* Mission-2-4: congrats debriefing */
+"Mission-2-4-congrats debriefing" = "¡Una experiencia extracorporal!";
+
+/* Mission-2-5: title */
+"Mission-2-5-title" = "Contenido bajo presión";
+
+/* Mission-2-5: briefing */
+"Mission-2-5-briefing" = "No me gusta nada que me agiten. Ayúdame a aprender cómo asustar a los humanos si lo hacen.";
+
+/* Mission-2-5: prompt */
+"Mission-2-5-prompt" = "¡Enséñame a\ndefenderme!";
+
+/* Mission-2-5: failure debriefing */
+"Mission-2-5-failure debriefing" = "Creo que cierto gas podría ayudarme a ahuyentar a los humanos que intenten agitarme.";
+
+/* Mission-2-5: congrats debriefing */
+"Mission-2-5-congrats debriefing" = "¡Disculpa!";
+
+/* Mission-2-6: title */
+"Mission-2-6-title" = "Arriba y abajo";
+
+/* Mission-2-6: briefing */
+"Mission-2-6-briefing" = "¿Qué hago cuando me sacas de la base? ¿Y cuándo me pones? ¡No debería intentar conducir en el aire!";
+
+/* Mission-2-6: failure debriefing */
+"Mission-2-6-failure debriefing" = "Añade un evento para cuando me sacan Y me ponen en la base. ¡No puedo conducir si me sacan de la base!";
+
+/* Mission-2-6: success debriefing */
+"Mission-2-6-success debriefing" = "¡Puedes pensar una reacción mejor que esa!";
+
+/* Mission-2-6: congrats debriefing */
+"Mission-2-6-congrats debriefing" = "¡Qué ganas tengo de explorar!";
+
+/* Mission-3-1: title */
+"Mission-3-1-title" = "Quitar el hipo de un susto";
+
+/* Mission-3-1: briefing */
+"Mission-3-1-briefing" = "Tendré hipo hasta que se dé un evento. Añade un evento de sonido fuerte para empezar.";
+
+/* Mission-3-1: prompt */
+"Mission-3-1-prompt" = "¡Ayúdame a que\nse me pase el hipo!";
+
+/* Mission-3-1: failure debriefing */
+"Mission-3-1-failure debriefing" = "¡Un sonido fuerte puede ayudarme a quitarme el hipo! Cámbiame la cara cuando oigo un sonido fuerte.";
+
+/* Mission-3-1: congrats debriefing */
+"Mission-3-1-congrats debriefing" = "Que sepas que mientras conduzco, no oigo sonidos.";
+
+/* Mission-3-2: title */
+"Mission-3-2-title" = "Perro guardián";
+
+/* Mission-3-2: briefing */
+"Mission-3-2-briefing" = "Enséñame a ponerme en guardia cuando veo movimiento.";
+
+/* Mission-3-2: prompt */
+"Mission-3-2-prompt" = "¡Enséñame a ser\ntu perro guardián!";
+
+/* Mission-3-2: failure debriefing */
+"Mission-3-2-failure debriefing" = "Añade una acción de alarma para dar un aviso y hacer una foto y ver quién ha sido.";
+
+/* Mission-3-2: success debriefing */
+"Mission-3-2-success debriefing" = "¡Haz una foto del autor y haz sonar la alarma para asustarlo!";
+
+/* Mission-3-2: congrats debriefing */
+"Mission-3-2-congrats debriefing" = "¡Las fotos que hago se guardan en el Carrete!";
+
+/* Mission-3-3: title */
+"Mission-3-3-title" = "Luz nocturna";
+
+/* Mission-3-3: briefing */
+"Mission-3-3-briefing" = "Ayúdame a ver un poco mejor en la oscuridad.";
+
+/* Mission-3-3: prompt */
+"Mission-3-3-prompt" = "¡Enséñame a usar mi luz nocturna!";
+
+/* Mission-3-3: failure debriefing */
+"Mission-3-3-failure debriefing" = "Mi faro me ayudará a ver en la oscuridad.";
+
+/* Mission-3-3: success debriefing */
+"Mission-3-3-success debriefing" = "Sólo necesito el faro cuando está oscuro y no cuando hay luz.";
+
+/* Mission-3-3: congrats debriefing */
+"Mission-3-3-congrats debriefing" = "¡Ya me asusta menos la oscuridad!";
+
+/* Mission-3-4: title */
+"Mission-3-4-title" = "Maniobra evasiva";
+
+/* Mission-3-4: briefing */
+"Mission-3-4-briefing" = "Ayúdame a esquivar obstáculos cuando estoy explorando y me atasco. ¡Tienes 60 segundos!";
+
+/* Mission-3-4: prompt */
+"Mission-3-4-prompt" = "¡Vamos a explorar!";
+
+/* Mission-3-4: failure debriefing */
+"Mission-3-4-failure debriefing" = "Cuando choco con algo, debo retroceder y girar para esquivarlo.";
+
+/* Mission-3-4: success debriefing */
+"Mission-3-4-success debriefing" = "¡Ayúdame a desatascarme antes de que se acabe el tiempo!";
+
+/* Mission-3-4: congrats debriefing */
+"Mission-3-4-congrats debriefing" = "¡Por fin puedo explorar por mi cuenta!";
+
+/* Mission-3-5: title */
+"Mission-3-5-title" = "Safari fotográfico";
+
+/* Mission-3-5: briefing */
+"Mission-3-5-briefing" = "¡Es la hora del Safari fotográfico! Debería explorar y hacer fotos de mi color favorito. ¡Tienes 90 segundos para hacer todas las fotos que puedas!";
+
+/* Mission-3-5: prompt */
+"Mission-3-5-prompt" = "¡Nos vamos de\nSafari fotográfico!";
+
+/* Mission-3-5: failure debriefing */
+"Mission-3-5-failure debriefing" = "Tengo que hacer una foto cuando vea un objeto de mi color favorito.";
+
+/* Mission-3-5: success debriefing */
+"Mission-3-5-success debriefing" = "¡Haz más fotos para ganar más estrellas!";
+
+/* Mission-3-5: congrats debriefing */
+"Mission-3-5-congrats debriefing" = "¡Ahora soy un auténtico explorador!";
+
+/* Mission-3-6: title */
+"Mission-3-6-title" = "Garabatos";
+
+/* Mission-3-6: briefing */
+"Mission-3-6-briefing" = "Dibuja una ruta en la pantalla y mira cómo la recorro por el suelo.";
+
+/* Mission-3-6: prompt */
+"Mission-3-6-prompt" = "¡Probemos algún garabato!";
+
+/* Mission-3-6: failure debriefing */
+"Mission-3-6-failure debriefing" = "¡Tienes que añadir un garabato para que lo siga!";
+
+/* Mission-3-6: success debriefing */
+"Mission-3-6-success debriefing" = "¡Ponme un garabato más difícil!";
+
+/* Mission-3-6: congrats debriefing */
+"Mission-3-6-congrats debriefing" = "¡Ahora dominaremos la Carrera Espacial!";
