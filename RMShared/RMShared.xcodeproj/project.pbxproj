@@ -32,7 +32,7 @@
 		AF07A73C1EFA9EF800CB9EB4 /* RMQuaternion.m in Sources */ = {isa = PBXBuildFile; fileRef = AF07A45D1EFA9EF700CB9EB4 /* RMQuaternion.m */; };
 		AF07A73D1EFA9EF800CB9EB4 /* RMDispatchTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07A45E1EFA9EF700CB9EB4 /* RMDispatchTimer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AF07A73E1EFA9EF800CB9EB4 /* RMDispatchTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = AF07A45F1EFA9EF700CB9EB4 /* RMDispatchTimer.m */; };
-		AF07A7401EFA9EF800CB9EB4 /* RMSharedDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07A4611EFA9EF700CB9EB4 /* RMSharedDefines.h */; };
+		AF07A7401EFA9EF800CB9EB4 /* RMSharedDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07A4611EFA9EF700CB9EB4 /* RMSharedDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AF07A7E11EFA9F7900CB9EB4 /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF07A7DE1EFA9F7900CB9EB4 /* CocoaLumberjack.framework */; };
 		AF07A7E21EFA9F7900CB9EB4 /* NMSSH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF07A7DF1EFA9F7900CB9EB4 /* NMSSH.framework */; };
 		AF07A7E31EFA9F7900CB9EB4 /* SocketRocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF07A7E01EFA9F7900CB9EB4 /* SocketRocket.framework */; };
@@ -228,9 +228,9 @@
 				AF07A7391EFA9EF700CB9EB4 /* RMMath.h in Headers */,
 				AF07A7371EFA9EF700CB9EB4 /* RMCircleMath.h in Headers */,
 				AF07A73B1EFA9EF800CB9EB4 /* RMQuaternion.h in Headers */,
+				AF07A7401EFA9EF800CB9EB4 /* RMSharedDefines.h in Headers */,
 				AF07A73D1EFA9EF800CB9EB4 /* RMDispatchTimer.h in Headers */,
 				AF07A4641EFA9EF700CB9EB4 /* NSString+createSHA512.h in Headers */,
-				AF07A7401EFA9EF800CB9EB4 /* RMSharedDefines.h in Headers */,
 				AF07A7301EFA9EF700CB9EB4 /* RMLogFormatter.h in Headers */,
 				AF07A7321EFA9EF700CB9EB4 /* RMWebSocketLogger.h in Headers */,
 				AF07A4621EFA9EF700CB9EB4 /* RMRingBuffer.h in Headers */,
