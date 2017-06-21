@@ -1,0 +1,3 @@
+github "CocoaLumberjack/CocoaLumberjack"
+
+# Build using "carthage build --platform iOS"

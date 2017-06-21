@@ -144,6 +144,8 @@
 		946387D21741507A0023FC7D /* RMCoreRobotMotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 946387CF1741507A0023FC7D /* RMCoreRobotMotion.m */; };
 		946387D6174150800023FC7D /* RMCoreLEDs.m in Sources */ = {isa = PBXBuildFile; fileRef = 946387D5174150800023FC7D /* RMCoreLEDs.m */; };
 		94DEFB581746BDA700A3CE41 /* libRMShared.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9480A88B1746B79B0031CCB6 /* libRMShared.a */; };
+		AF07A7E91EFAAC0400CB9EB4 /* RMShared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC52AADF174B037700C66318 /* RMShared.framework */; };
+		AF07AE231EFAB03C00CB9EB4 /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF07AE221EFAB03C00CB9EB4 /* CocoaLumberjack.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,7 +153,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 94DEFB591746BEC700A3CE41 /* RMShared.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 945B81C91746AF07003C6903;
+			remoteGlobalIDString = AF07A0541EFA9E8200CB9EB4;
 			remoteInfo = RMShared;
 		};
 		AC52AADE174B037700C66318 /* PBXContainerItemProxy */ = {
@@ -165,7 +167,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 94DEFB591746BEC700A3CE41 /* RMShared.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 945B81C91746AF07003C6903;
+			remoteGlobalIDString = AF07A0541EFA9E8200CB9EB4;
 			remoteInfo = RMShared;
 		};
 /* End PBXContainerItemProxy section */
@@ -309,6 +311,7 @@
 		9480A88B1746B79B0031CCB6 /* libRMShared.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libRMShared.a; path = "../../../../../Library/Developer/Xcode/DerivedData/Romo-gtpaigptrljynjccbvdmzcptvvcs/Build/Products/Debug-iphoneos/libRMShared.a"; sourceTree = "<group>"; };
 		94A80197174ACA93005E62F1 /* RMCoreLEDs_Internal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = RMCoreLEDs_Internal.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		94DEFB591746BEC700A3CE41 /* RMShared.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RMShared.xcodeproj; path = ../../RMShared/RMShared.xcodeproj; sourceTree = SOURCE_ROOT; };
+		AF07AE221EFAB03C00CB9EB4 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjack.framework; path = Carthage/Build/iOS/CocoaLumberjack.framework; sourceTree = "<group>"; };
 		B7CF0104174AE64D00B2F81F /* RMProgrammingProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMProgrammingProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -317,6 +320,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF07A7E91EFAAC0400CB9EB4 /* RMShared.framework in Frameworks */,
+				AF07AE231EFAB03C00CB9EB4 /* CocoaLumberjack.framework in Frameworks */,
 				9463878C174150040023FC7D /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -402,6 +407,7 @@
 		9463878D174150040023FC7D /* RMCore */ = {
 			isa = PBXGroup;
 			children = (
+				AF07AB021EFAB01900CB9EB4 /* lib */,
 				94638790174150040023FC7D /* RMCore.h */,
 				94638792174150040023FC7D /* RMCore.m */,
 				94638799174150640023FC7D /* Robot */,
@@ -616,9 +622,25 @@
 		AC52AAD8174B037700C66318 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AC52AADF174B037700C66318 /* libRMShared.a */,
+				AC52AADF174B037700C66318 /* RMShared.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		AF07AB021EFAB01900CB9EB4 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				AF07AB031EFAB01900CB9EB4 /* ext */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		AF07AB031EFAB01900CB9EB4 /* ext */ = {
+			isa = PBXGroup;
+			children = (
+				AF07AE221EFAB03C00CB9EB4 /* CocoaLumberjack.framework */,
+			);
+			path = ext;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -730,6 +752,8 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				English,
+				Base,
 			);
 			mainGroup = 9463877F174150040023FC7D;
 			productRefGroup = 94638789174150040023FC7D /* Products */;
@@ -749,10 +773,10 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		AC52AADF174B037700C66318 /* libRMShared.a */ = {
+		AC52AADF174B037700C66318 /* RMShared.framework */ = {
 			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libRMShared.a;
+			fileType = wrapper.framework;
+			path = RMShared.framework;
 			remoteRef = AC52AADE174B037700C66318 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -1004,6 +1028,10 @@
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = NO;
 				DSTROOT = /tmp/RMCore.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RMCore/lib/ext/Carthage/Build/iOS",
+				);
 				GCC_PREFIX_HEADER = "RMCore/RMCore-Prefix.pch";
 				HEADER_SEARCH_PATHS = "";
 				LIBRARY_SEARCH_PATHS = (
@@ -1026,6 +1054,10 @@
 				COMPRESS_PNG_FILES = NO;
 				DEAD_CODE_STRIPPING = NO;
 				DSTROOT = /tmp/RMCore.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RMCore/lib/ext/Carthage/Build/iOS",
+				);
 				GCC_PREFIX_HEADER = "RMCore/RMCore-Prefix.pch";
 				HEADER_SEARCH_PATHS = "";
 				LIBRARY_SEARCH_PATHS = (
