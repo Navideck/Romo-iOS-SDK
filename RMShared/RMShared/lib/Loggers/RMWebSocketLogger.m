@@ -39,7 +39,7 @@ DDLOG_ENABLE_DYNAMIC_LEVELS
     
     if (self) {
         NSString *host = [UIApplication environmentVariableWithKey:@"ROMO_LOG_SERVER"];
-        [DDLog setLogLevel:LOG_LEVEL_INFO forClassWithName:NSStringFromClass(self.class)];
+        [DDLog setLevel:DDLogLevelInfo forClassWithName:NSStringFromClass(self.class)];
         if (host) {
             [self reconnectToServerAfterTimeout:0];
         }
@@ -77,7 +77,7 @@ DDLOG_ENABLE_DYNAMIC_LEVELS
 
 - (void)sendLogMessage:(DDLogMessage *)logMessage
 {
-    NSString *message = logMessage->logMsg;
+    NSString *message = logMessage->_message;
     
     [self.socket sendEvent:@"logger/message" withData:@{
      @"message": message,
@@ -85,10 +85,10 @@ DDLOG_ENABLE_DYNAMIC_LEVELS
      @"deviceId": [UIDevice currentDevice].UDID,
      @"date": @([[NSDate date] timeIntervalSince1970]),
      @"fileName": logMessage.fileName,
-     @"function": logMessage.methodName,
-     @"line": @(logMessage->lineNumber),
+     @"function": logMessage.function,
+     @"line": @(logMessage->_line),
      @"appName": @"Romo",
-     @"logLeve": @(logMessage->logLevel)
+     @"logLeve": @(logMessage->_level)
      }];
 }
 
@@ -125,24 +125,24 @@ DDLOG_ENABLE_DYNAMIC_LEVELS
     int logLevel = ddLogLevel;
     
     if ([logLevelName isEqualToString:@"verbose"]) {
-        logLevel = LOG_LEVEL_VERBOSE;
+        logLevel = DDLogLevelVerbose;
     }
     else if ([logLevelName isEqualToString:@"info"]) {
-        logLevel = LOG_LEVEL_INFO;
+        logLevel = DDLogLevelInfo;
     }
     else if ([logLevelName isEqualToString:@"warn"]) {
-        logLevel = LOG_LEVEL_WARN;
+        logLevel = DDLogLevelWarning;
     }
     else if ([logLevelName isEqualToString:@"error"]) {
-        logLevel = LOG_LEVEL_ERROR;
+        logLevel = DDLogLevelError;
     }
     
     if ([className isEqualToString:@"all"]) {
         [[DDLog registeredClasses] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-            [DDLog setLogLevel:logLevel forClass:obj];
+            [DDLog setLevel:logLevel forClass:obj];
         }];
     } else {
-        [DDLog setLogLevel:logLevel forClassWithName:className];
+        [DDLog setLevel:logLevel forClassWithName:className];
     }
     
     [self.socket sendEvent:@"logger/didChangeLogLevel" withData:@{

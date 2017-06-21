@@ -55,20 +55,20 @@
     static NSString *appName = @"Romo";
     
     NSString *className = logMessage.fileName;
-    NSString *dateString = [self.dateFormatter stringFromDate:logMessage->timestamp];
+    NSString *dateString = [self.dateFormatter stringFromDate:logMessage->_timestamp];
     
     if (self.colorsEnabled) {
         NSString *messageColorEscape = XCODE_COLORS_ESCAPE @"fg0,0,0;";
-        
-        if (logMessage->logFlag == LOG_FLAG_ERROR) {
+
+        if (logMessage->_flag == DDLogFlagError) {
             messageColorEscape = XCODE_COLORS_ESCAPE @"fg220,0,0;";
-        } else if (logMessage->logFlag == LOG_FLAG_WARN) {
+        } else if (logMessage->_flag == DDLogFlagWarning) {
             messageColorEscape = XCODE_COLORS_ESCAPE @"fg255,102,0;";
         }
         
-        return [NSString stringWithFormat:XCODE_COLORS_ESCAPE @"fg110,110,110;%@ %@ [%@ %s]:%i" XCODE_COLORS_RESET @" %@%@" XCODE_COLORS_RESET, dateString, appName, className, logMessage->function, logMessage->lineNumber, messageColorEscape, logMessage->logMsg];
+        return [NSString stringWithFormat:XCODE_COLORS_ESCAPE @"fg110,110,110;%@ %@ [%@ %@]:%i" XCODE_COLORS_RESET @" %@%@" XCODE_COLORS_RESET, dateString, appName, className, logMessage->_function, logMessage->_line, messageColorEscape, logMessage->_message];
     } else {
-        return [NSString stringWithFormat:@"%@ %@ [%@ %s]:%i %@", dateString, appName, className, logMessage->function, logMessage->lineNumber, logMessage->logMsg];
+        return [NSString stringWithFormat:@"%@ %@ [%@ %@]:%i %@", dateString, appName, className, logMessage->_function, logMessage->_line, logMessage->_message];
     }
 }
 
