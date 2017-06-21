@@ -3,7 +3,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <CoreMotion/CMattitude.h>
+#import <CoreMotion/CMAttitude.h>
 #import "RMMath.h"
 
 /* --Constants-- */
