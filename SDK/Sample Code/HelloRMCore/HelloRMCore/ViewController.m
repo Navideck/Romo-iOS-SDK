@@ -30,20 +30,20 @@
 
 #pragma mark -- RMCoreDelegate Methods --
 
-- (void)didConnectToRobot:(RMCoreRobot *)robot
+- (void)robotDidConnect:(RMCoreRobot *)robot;
 {
     // Currently the only kind of robot is Romo3, so this is just future-proofing
     if ([robot isKindOfClass:[RMCoreRobotRomo3 class]]) {
         self.Romo3 = (RMCoreRobotRomo3 *)robot;
         
         // Change Romo's LED to be solid at 80% power
-        [self.Romo3.LEDs solidWithBrightness:0.8];
+        [self.Romo3.LEDs setSolidWithBrightness:0.8];
         
         [self layoutForConnected];
     }
 }
 
-- (void)didDisconnectFromRobot:(RMCoreRobot *)robot
+- (void)robotDidDisconnect:(RMCoreRobot *)robot;
 {
     if (robot == self.Romo3) {
         self.Romo3 = nil;
@@ -60,7 +60,7 @@
     BOOL RomoIsDriving = (self.Romo3.leftDriveMotor.powerLevel != 0) || (self.Romo3.rightDriveMotor.powerLevel != 0);
     if (RomoIsDriving) {
         // Change Romo's LED to be solid at 80% power
-        [self.Romo3.LEDs solidWithBrightness:0.8];
+        [self.Romo3.LEDs setSolidWithBrightness:0.8];
         
         // Tell Romo3 to stop
         [self.Romo3 stopDriving];
