@@ -19,7 +19,7 @@
  @brief Public header for creating and interfacing with an RMCore object.
  
  Contains a simple RMCore interface for connecting and disconnecting to robots,
- as well as an RMCoreDelegate protocol for receiving events about state changes 
+ as well as an RMCoreDelegate protocol for receiving events about state changes
  in connectivity.
  */
 #import <Foundation/Foundation.h>
@@ -42,14 +42,14 @@
 /**
  @brief RMCore is the public interface for connecting to Romotive robots.
  
- By implementing the RMCoreDelegate protocol and setting the RMCore delegate 
- to the appropriate class, messages are received regarding connection 
+ By implementing the RMCoreDelegate protocol and setting the RMCore delegate
+ to the appropriate class, messages are received regarding connection
  and disconnection events.
  */
 @interface RMCore : NSObject
 
 /**
- The delegate to which RMCore will send all events regarding robot 
+ The delegate to which RMCore will send all events regarding robot
  connection and disconnection.
  */
 + (void)setDelegate:(id<RMCoreDelegate>)delegate;
@@ -80,7 +80,7 @@
 /**
  @brief A protocol for receiving messages from an RMCore object.
  
- This protocol handles receiving all messages from RMCore. Currently includes 
+ This protocol handles receiving all messages from RMCore. Currently includes
  connection to robots and disconnection from robots.
  */
 @protocol RMCoreDelegate <NSObject>
@@ -91,7 +91,7 @@
 - (void)robotDidConnect:(RMCoreRobot *)robot;
 
 /**
- Delegate method that is triggered when the iDevice is disconnected from a 
+ Delegate method that is triggered when the iDevice is disconnected from a
  robot.
  */
 - (void)robotDidDisconnect:(RMCoreRobot *)robot;

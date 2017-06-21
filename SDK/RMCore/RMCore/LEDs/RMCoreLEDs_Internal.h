@@ -3,7 +3,7 @@
 //  RMCore
 //
 
-#import <RMCore/RMCore.h>
+#import "RMCore.h"
 #import "RMCoreLEDs.h"
 
 @class RMCoreRobot;
