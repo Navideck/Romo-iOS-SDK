@@ -7,7 +7,7 @@
 //
 
 #import "RMWebSocket.h"
-#import "SRWebSocket.h"
+#import <SocketRocket/SRWebSocket.h>
 
 /**
  * The values of the following enum are important. They match up directly with

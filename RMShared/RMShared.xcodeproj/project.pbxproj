@@ -10,13 +10,6 @@
 		4303258118202A86006678B8 /* UIDevice+Hardware.m in Sources */ = {isa = PBXBuildFile; fileRef = 4303258018202A86006678B8 /* UIDevice+Hardware.m */; };
 		4303258218202C4D006678B8 /* UIDevice+Hardware.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 4303257F18202A86006678B8 /* UIDevice+Hardware.h */; };
 		4D66392B18046AB100294A94 /* RMRingBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D66392A18046AB100294A94 /* RMRingBuffer.m */; };
-		71CCF68A17F0FEDD00EC4578 /* base64.c in Sources */ = {isa = PBXBuildFile; fileRef = 71CCF68317F0FEDD00EC4578 /* base64.c */; };
-		71CCF68B17F0FEDD00EC4578 /* NSData+SRB64Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 71CCF68617F0FEDD00EC4578 /* NSData+SRB64Additions.m */; };
-		71CCF68C17F0FEDD00EC4578 /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 71CCF68917F0FEDD00EC4578 /* SRWebSocket.m */; };
-		71CCF69C17F0FF3C00EC4578 /* DDASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 71CCF69517F0FF3C00EC4578 /* DDASLLogger.m */; };
-		71CCF69D17F0FF3C00EC4578 /* DDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 71CCF69717F0FF3C00EC4578 /* DDFileLogger.m */; };
-		71CCF69E17F0FF3C00EC4578 /* DDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 71CCF69917F0FF3C00EC4578 /* DDLog.m */; };
-		71CCF69F17F0FF3C00EC4578 /* DDTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 71CCF69B17F0FF3C00EC4578 /* DDTTYLogger.m */; };
 		71CCF6A517F0FF6300EC4578 /* RMLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 71CCF6A217F0FF6300EC4578 /* RMLogFormatter.m */; };
 		71CCF6A617F0FF6300EC4578 /* RMWebSocketLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 71CCF6A417F0FF6300EC4578 /* RMWebSocketLogger.m */; };
 		71CCF6AA17F0FFBB00EC4578 /* RMWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 71CCF6A917F0FFBB00EC4578 /* RMWebSocket.m */; };
@@ -34,7 +27,6 @@
 		945B81E91746AF79003C6903 /* RMQuaternion.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 945B81E21746AF73003C6903 /* RMQuaternion.h */; };
 		947E3DA917DFF09100A0AE4B /* RMDispatchTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 947E3DA817DFF09100A0AE4B /* RMDispatchTimer.m */; };
 		947E3DAA17DFF0AD00A0AE4B /* RMDispatchTimer.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 947E3DA717DFF09100A0AE4B /* RMDispatchTimer.h */; };
-		94CEF850180DE8FA00D735AA /* DDLog.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 71CCF69817F0FF3C00EC4578 /* DDLog.h */; };
 		94CEF851180DEAA600D735AA /* RMRingBuffer.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 4D66392918046AB100294A94 /* RMRingBuffer.h */; };
 		94CEF852180DEAAE00D735AA /* UIDevice+UDID.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 71CCF6AF17F101BE00EC4578 /* UIDevice+UDID.h */; };
 		94CEF853180DEAAE00D735AA /* NSString+createSHA512.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 71CCF6B117F101BE00EC4578 /* NSString+createSHA512.h */; };
@@ -42,12 +34,9 @@
 		94CEF855180DEAB700D735AA /* RMWebSocket.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 71CCF6A817F0FFBB00EC4578 /* RMWebSocket.h */; };
 		94CEF856180DEAB700D735AA /* RMLogFormatter.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 71CCF6A117F0FF6300EC4578 /* RMLogFormatter.h */; };
 		94CEF857180DEAB700D735AA /* RMWebSocketLogger.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 71CCF6A317F0FF6300EC4578 /* RMWebSocketLogger.h */; };
-		94CEF858180DEAB700D735AA /* DDASLLogger.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 71CCF69417F0FF3C00EC4578 /* DDASLLogger.h */; };
-		94CEF859180DEAB700D735AA /* DDFileLogger.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 71CCF69617F0FF3C00EC4578 /* DDFileLogger.h */; };
-		94CEF85A180DEAB700D735AA /* DDTTYLogger.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 71CCF69A17F0FF3C00EC4578 /* DDTTYLogger.h */; };
-		94CEF85B180DEAB700D735AA /* base64.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 71CCF68417F0FEDD00EC4578 /* base64.h */; };
-		94CEF85C180DEAB700D735AA /* NSData+SRB64Additions.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 71CCF68517F0FEDD00EC4578 /* NSData+SRB64Additions.h */; };
-		94CEF85D180DEAB700D735AA /* SRWebSocket.h in Copy Files */ = {isa = PBXBuildFile; fileRef = 71CCF68817F0FEDD00EC4578 /* SRWebSocket.h */; };
+		AF07A04D1EFA992D00CB9EB4 /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF07A04A1EFA992D00CB9EB4 /* CocoaLumberjack.framework */; };
+		AF07A04E1EFA992D00CB9EB4 /* NMSSH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF07A04B1EFA992D00CB9EB4 /* NMSSH.framework */; };
+		AF07A04F1EFA992D00CB9EB4 /* SocketRocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF07A04C1EFA992D00CB9EB4 /* SocketRocket.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -61,17 +50,10 @@
 				94CEF855180DEAB700D735AA /* RMWebSocket.h in Copy Files */,
 				94CEF856180DEAB700D735AA /* RMLogFormatter.h in Copy Files */,
 				94CEF857180DEAB700D735AA /* RMWebSocketLogger.h in Copy Files */,
-				94CEF858180DEAB700D735AA /* DDASLLogger.h in Copy Files */,
-				94CEF859180DEAB700D735AA /* DDFileLogger.h in Copy Files */,
-				94CEF85A180DEAB700D735AA /* DDTTYLogger.h in Copy Files */,
-				94CEF85B180DEAB700D735AA /* base64.h in Copy Files */,
-				94CEF85C180DEAB700D735AA /* NSData+SRB64Additions.h in Copy Files */,
-				94CEF85D180DEAB700D735AA /* SRWebSocket.h in Copy Files */,
 				94CEF852180DEAAE00D735AA /* UIDevice+UDID.h in Copy Files */,
 				94CEF853180DEAAE00D735AA /* NSString+createSHA512.h in Copy Files */,
 				94CEF854180DEAAE00D735AA /* UIApplication+Environment.h in Copy Files */,
 				94CEF851180DEAA600D735AA /* RMRingBuffer.h in Copy Files */,
-				94CEF850180DE8FA00D735AA /* DDLog.h in Copy Files */,
 				9435AD1217E2198B00331DBE /* RMSharedDefines.h in Copy Files */,
 				947E3DAA17DFF0AD00A0AE4B /* RMDispatchTimer.h in Copy Files */,
 				945B81E71746AF79003C6903 /* RMCircleMath.h in Copy Files */,
@@ -89,21 +71,6 @@
 		4303258018202A86006678B8 /* UIDevice+Hardware.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Hardware.m"; sourceTree = "<group>"; };
 		4D66392918046AB100294A94 /* RMRingBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMRingBuffer.h; sourceTree = "<group>"; };
 		4D66392A18046AB100294A94 /* RMRingBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMRingBuffer.m; sourceTree = "<group>"; };
-		71CCF68317F0FEDD00EC4578 /* base64.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = base64.c; sourceTree = "<group>"; };
-		71CCF68417F0FEDD00EC4578 /* base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base64.h; sourceTree = "<group>"; };
-		71CCF68517F0FEDD00EC4578 /* NSData+SRB64Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+SRB64Additions.h"; sourceTree = "<group>"; };
-		71CCF68617F0FEDD00EC4578 /* NSData+SRB64Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+SRB64Additions.m"; sourceTree = "<group>"; };
-		71CCF68717F0FEDD00EC4578 /* SocketRocket-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SocketRocket-Prefix.pch"; sourceTree = "<group>"; };
-		71CCF68817F0FEDD00EC4578 /* SRWebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRWebSocket.h; sourceTree = "<group>"; };
-		71CCF68917F0FEDD00EC4578 /* SRWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRWebSocket.m; sourceTree = "<group>"; };
-		71CCF69417F0FF3C00EC4578 /* DDASLLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDASLLogger.h; sourceTree = "<group>"; };
-		71CCF69517F0FF3C00EC4578 /* DDASLLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDASLLogger.m; sourceTree = "<group>"; };
-		71CCF69617F0FF3C00EC4578 /* DDFileLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDFileLogger.h; sourceTree = "<group>"; };
-		71CCF69717F0FF3C00EC4578 /* DDFileLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDFileLogger.m; sourceTree = "<group>"; };
-		71CCF69817F0FF3C00EC4578 /* DDLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDLog.h; sourceTree = "<group>"; };
-		71CCF69917F0FF3C00EC4578 /* DDLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDLog.m; sourceTree = "<group>"; };
-		71CCF69A17F0FF3C00EC4578 /* DDTTYLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTTYLogger.h; sourceTree = "<group>"; };
-		71CCF69B17F0FF3C00EC4578 /* DDTTYLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTTYLogger.m; sourceTree = "<group>"; };
 		71CCF6A117F0FF6300EC4578 /* RMLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMLogFormatter.h; sourceTree = "<group>"; };
 		71CCF6A217F0FF6300EC4578 /* RMLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMLogFormatter.m; sourceTree = "<group>"; };
 		71CCF6A317F0FF6300EC4578 /* RMWebSocketLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMWebSocketLogger.h; sourceTree = "<group>"; };
@@ -129,6 +96,9 @@
 		945B81E31746AF73003C6903 /* RMQuaternion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = RMQuaternion.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		947E3DA717DFF09100A0AE4B /* RMDispatchTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMDispatchTimer.h; sourceTree = "<group>"; };
 		947E3DA817DFF09100A0AE4B /* RMDispatchTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMDispatchTimer.m; sourceTree = "<group>"; };
+		AF07A04A1EFA992D00CB9EB4 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjack.framework; path = Carthage/Build/iOS/CocoaLumberjack.framework; sourceTree = "<group>"; };
+		AF07A04B1EFA992D00CB9EB4 /* NMSSH.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NMSSH.framework; path = Carthage/Build/iOS/NMSSH.framework; sourceTree = "<group>"; };
+		AF07A04C1EFA992D00CB9EB4 /* SocketRocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SocketRocket.framework; path = Carthage/Build/iOS/SocketRocket.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,7 +106,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF07A04E1EFA992D00CB9EB4 /* NMSSH.framework in Frameworks */,
+				AF07A04D1EFA992D00CB9EB4 /* CocoaLumberjack.framework in Frameworks */,
 				945B81CE1746AF07003C6903 /* Foundation.framework in Frameworks */,
+				AF07A04F1EFA992D00CB9EB4 /* SocketRocket.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,39 +139,11 @@
 		71CCF68117F0FEDD00EC4578 /* ext */ = {
 			isa = PBXGroup;
 			children = (
-				71CCF69317F0FF3C00EC4578 /* CocoaLumberjack */,
-				71CCF68217F0FEDD00EC4578 /* SocketRocket */,
+				AF07A04A1EFA992D00CB9EB4 /* CocoaLumberjack.framework */,
+				AF07A04B1EFA992D00CB9EB4 /* NMSSH.framework */,
+				AF07A04C1EFA992D00CB9EB4 /* SocketRocket.framework */,
 			);
 			path = ext;
-			sourceTree = "<group>";
-		};
-		71CCF68217F0FEDD00EC4578 /* SocketRocket */ = {
-			isa = PBXGroup;
-			children = (
-				71CCF68317F0FEDD00EC4578 /* base64.c */,
-				71CCF68417F0FEDD00EC4578 /* base64.h */,
-				71CCF68517F0FEDD00EC4578 /* NSData+SRB64Additions.h */,
-				71CCF68617F0FEDD00EC4578 /* NSData+SRB64Additions.m */,
-				71CCF68717F0FEDD00EC4578 /* SocketRocket-Prefix.pch */,
-				71CCF68817F0FEDD00EC4578 /* SRWebSocket.h */,
-				71CCF68917F0FEDD00EC4578 /* SRWebSocket.m */,
-			);
-			path = SocketRocket;
-			sourceTree = "<group>";
-		};
-		71CCF69317F0FF3C00EC4578 /* CocoaLumberjack */ = {
-			isa = PBXGroup;
-			children = (
-				71CCF69417F0FF3C00EC4578 /* DDASLLogger.h */,
-				71CCF69517F0FF3C00EC4578 /* DDASLLogger.m */,
-				71CCF69617F0FF3C00EC4578 /* DDFileLogger.h */,
-				71CCF69717F0FF3C00EC4578 /* DDFileLogger.m */,
-				71CCF69817F0FF3C00EC4578 /* DDLog.h */,
-				71CCF69917F0FF3C00EC4578 /* DDLog.m */,
-				71CCF69A17F0FF3C00EC4578 /* DDTTYLogger.h */,
-				71CCF69B17F0FF3C00EC4578 /* DDTTYLogger.m */,
-			);
-			path = CocoaLumberjack;
 			sourceTree = "<group>";
 		};
 		71CCF6A017F0FF6300EC4578 /* Loggers */ = {
@@ -348,22 +293,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71CCF69E17F0FF3C00EC4578 /* DDLog.m in Sources */,
-				71CCF69C17F0FF3C00EC4578 /* DDASLLogger.m in Sources */,
 				4303258118202A86006678B8 /* UIDevice+Hardware.m in Sources */,
 				4D66392B18046AB100294A94 /* RMRingBuffer.m in Sources */,
-				71CCF68B17F0FEDD00EC4578 /* NSData+SRB64Additions.m in Sources */,
-				71CCF68A17F0FEDD00EC4578 /* base64.c in Sources */,
-				71CCF69F17F0FF3C00EC4578 /* DDTTYLogger.m in Sources */,
 				947E3DA917DFF09100A0AE4B /* RMDispatchTimer.m in Sources */,
 				945B81E41746AF73003C6903 /* RMCircleMath.m in Sources */,
-				71CCF68C17F0FEDD00EC4578 /* SRWebSocket.m in Sources */,
 				71CCF6AE17F100D300EC4578 /* UIApplication+Environment.m in Sources */,
 				71CCF6B317F101BE00EC4578 /* UIDevice+UDID.m in Sources */,
 				71CCF6A517F0FF6300EC4578 /* RMLogFormatter.m in Sources */,
 				945B81E51746AF73003C6903 /* RMMath.m in Sources */,
 				71CCF6AA17F0FFBB00EC4578 /* RMWebSocket.m in Sources */,
-				71CCF69D17F0FF3C00EC4578 /* DDFileLogger.m in Sources */,
 				71CCF6A617F0FF6300EC4578 /* RMWebSocketLogger.m in Sources */,
 				945B81E61746AF73003C6903 /* RMQuaternion.m in Sources */,
 				71CCF6B417F101BE00EC4578 /* NSString+createSHA512.m in Sources */,
@@ -441,6 +379,11 @@
 				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
 				DEAD_CODE_STRIPPING = NO;
 				DSTROOT = /tmp/RMShared.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RMShared/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/RMShared/lib/ext/Carthage/Build/iOS",
+				);
 				GCC_PREFIX_HEADER = "RMShared/RMShared-Prefix.pch";
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -459,6 +402,11 @@
 				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
 				DEAD_CODE_STRIPPING = NO;
 				DSTROOT = /tmp/RMShared.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RMShared/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/RMShared/lib/ext/Carthage/Build/iOS",
+				);
 				GCC_PREFIX_HEADER = "RMShared/RMShared-Prefix.pch";
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;

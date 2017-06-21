@@ -1,0 +1,5 @@
+github "facebook/SocketRocket" "master"
+github "NMSSH/NMSSH"
+github "CocoaLumberjack/CocoaLumberjack"
+
+# Build using "carthage build --platform iOS"
