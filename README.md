@@ -52,7 +52,6 @@ There seems to be plenty of stock in online stores.
 - [ ] Refactor RMVision
 - [ ] Refactor RMCharacter
 - [ ] Refactor HelloRomo
-- [ ] Refactor HelloRomo
 - [ ] Refactor Romo.xcworkspace
 - [ ] Clean up duplicate projects and folder structure
 - [ ] Add Swift example
