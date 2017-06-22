@@ -30,10 +30,10 @@
 		AF5F819B1EFAC042004BCAF5 /* NMSSH.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AF5F81921EFAC032004BCAF5 /* NMSSH.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AF5F819C1EFAC042004BCAF5 /* SocketRocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF5F81931EFAC032004BCAF5 /* SocketRocket.framework */; };
 		AF5F819D1EFAC042004BCAF5 /* SocketRocket.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AF5F81931EFAC032004BCAF5 /* SocketRocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AF6E66B81EFBADE100FA1708 /* RMShared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF6E66B71EFBADE100FA1708 /* RMShared.framework */; };
+		AF6E66B91EFBADE100FA1708 /* RMShared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AF6E66B71EFBADE100FA1708 /* RMShared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AF91546C1EFAC0A2002C23C3 /* RMCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF07B3DD1EFAB9D700CB9EB4 /* RMCore.framework */; };
 		AF91546D1EFAC0A2002C23C3 /* RMCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AF07B3DD1EFAB9D700CB9EB4 /* RMCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		AF9154711EFAC0A7002C23C3 /* RMShared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF9154701EFAC0A7002C23C3 /* RMShared.framework */; };
-		AF9154721EFAC0A7002C23C3 /* RMShared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AF9154701EFAC0A7002C23C3 /* RMShared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +67,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				AF9154721EFAC0A7002C23C3 /* RMShared.framework in Embed Frameworks */,
+				AF6E66B91EFBADE100FA1708 /* RMShared.framework in Embed Frameworks */,
 				AF91546D1EFAC0A2002C23C3 /* RMCore.framework in Embed Frameworks */,
 				AF5F819B1EFAC042004BCAF5 /* NMSSH.framework in Embed Frameworks */,
 				AF5F819D1EFAC042004BCAF5 /* SocketRocket.framework in Embed Frameworks */,
@@ -98,13 +98,10 @@
 		942AC66D16E7F9800062CA8A /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		942AC67116E7F9AD0062CA8A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		AF07B3D71EFAB9D700CB9EB4 /* RMCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RMCore.xcodeproj; path = ../../RMCore/RMCore.xcodeproj; sourceTree = "<group>"; };
-		AF07B3E91EFABE0500CB9EB4 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjack.framework; path = "../Sample Code/HelloRMCore/HelloRMCore/Carthage/Build/iOS/CocoaLumberjack.framework"; sourceTree = "<group>"; };
-		AF07B3EA1EFABE0500CB9EB4 /* NMSSH.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NMSSH.framework; path = "../Sample Code/HelloRMCore/HelloRMCore/Carthage/Build/iOS/NMSSH.framework"; sourceTree = "<group>"; };
-		AF07B3EB1EFABE0500CB9EB4 /* SocketRocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SocketRocket.framework; path = "../Sample Code/HelloRMCore/HelloRMCore/Carthage/Build/iOS/SocketRocket.framework"; sourceTree = "<group>"; };
 		AF5F81921EFAC032004BCAF5 /* NMSSH.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NMSSH.framework; path = HelloRMCore/Carthage/Build/iOS/NMSSH.framework; sourceTree = "<group>"; };
 		AF5F81931EFAC032004BCAF5 /* SocketRocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SocketRocket.framework; path = HelloRMCore/Carthage/Build/iOS/SocketRocket.framework; sourceTree = "<group>"; };
 		AF5F81941EFAC032004BCAF5 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjack.framework; path = HelloRMCore/Carthage/Build/iOS/CocoaLumberjack.framework; sourceTree = "<group>"; };
-		AF9154701EFAC0A7002C23C3 /* RMShared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RMShared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF6E66B71EFBADE100FA1708 /* RMShared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RMShared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF9154711EFAC0A7002C23C3 /* RMShared.framework in Frameworks */,
+				AF6E66B81EFBADE100FA1708 /* RMShared.framework in Frameworks */,
 				AF5F819A1EFAC042004BCAF5 /* NMSSH.framework in Frameworks */,
 				AF07B3E21EFABA7600CB9EB4 /* RMCore.framework in Frameworks */,
 				942AC64716E7F6820062CA8A /* UIKit.framework in Frameworks */,
@@ -136,11 +133,10 @@
 		942AC63A16E7F6820062CA8A = {
 			isa = PBXGroup;
 			children = (
-				AF9154701EFAC0A7002C23C3 /* RMShared.framework */,
+				AF6E66B71EFBADE100FA1708 /* RMShared.framework */,
 				942AC64C16E7F6820062CA8A /* HelloRMCore */,
 				942AC64516E7F6820062CA8A /* Frameworks */,
 				942AC64416E7F6820062CA8A /* Products */,
-				AF5F818D1EFABEDD004BCAF5 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -201,16 +197,6 @@
 				AF07B3DD1EFAB9D700CB9EB4 /* RMCore.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		AF5F818D1EFABEDD004BCAF5 /* Recovered References */ = {
-			isa = PBXGroup;
-			children = (
-				AF07B3E91EFABE0500CB9EB4 /* CocoaLumberjack.framework */,
-				AF07B3EA1EFABE0500CB9EB4 /* NMSSH.framework */,
-				AF07B3EB1EFABE0500CB9EB4 /* SocketRocket.framework */,
-			);
-			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -33,9 +33,9 @@
 		AF07A73D1EFA9EF800CB9EB4 /* RMDispatchTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07A45E1EFA9EF700CB9EB4 /* RMDispatchTimer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AF07A73E1EFA9EF800CB9EB4 /* RMDispatchTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = AF07A45F1EFA9EF700CB9EB4 /* RMDispatchTimer.m */; };
 		AF07A7401EFA9EF800CB9EB4 /* RMSharedDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07A4611EFA9EF700CB9EB4 /* RMSharedDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AF07A7E11EFA9F7900CB9EB4 /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF07A7DE1EFA9F7900CB9EB4 /* CocoaLumberjack.framework */; };
-		AF07A7E21EFA9F7900CB9EB4 /* NMSSH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF07A7DF1EFA9F7900CB9EB4 /* NMSSH.framework */; };
-		AF07A7E31EFA9F7900CB9EB4 /* SocketRocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF07A7E01EFA9F7900CB9EB4 /* SocketRocket.framework */; };
+		AF6E66B41EFBAD0200FA1708 /* NMSSH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF6E66B11EFBAD0100FA1708 /* NMSSH.framework */; };
+		AF6E66B51EFBAD0200FA1708 /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF6E66B21EFBAD0200FA1708 /* CocoaLumberjack.framework */; };
+		AF6E66B61EFBAD0200FA1708 /* SocketRocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF6E66B31EFBAD0200FA1708 /* SocketRocket.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,9 +69,9 @@
 		AF07A45E1EFA9EF700CB9EB4 /* RMDispatchTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMDispatchTimer.h; sourceTree = "<group>"; };
 		AF07A45F1EFA9EF700CB9EB4 /* RMDispatchTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMDispatchTimer.m; sourceTree = "<group>"; };
 		AF07A4611EFA9EF700CB9EB4 /* RMSharedDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMSharedDefines.h; sourceTree = "<group>"; };
-		AF07A7DE1EFA9F7900CB9EB4 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjack.framework; path = Carthage/Build/iOS/CocoaLumberjack.framework; sourceTree = "<group>"; };
-		AF07A7DF1EFA9F7900CB9EB4 /* NMSSH.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NMSSH.framework; path = Carthage/Build/iOS/NMSSH.framework; sourceTree = "<group>"; };
-		AF07A7E01EFA9F7900CB9EB4 /* SocketRocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SocketRocket.framework; path = Carthage/Build/iOS/SocketRocket.framework; sourceTree = "<group>"; };
+		AF6E66B11EFBAD0100FA1708 /* NMSSH.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NMSSH.framework; path = RMShared/Carthage/Build/iOS/NMSSH.framework; sourceTree = "<group>"; };
+		AF6E66B21EFBAD0200FA1708 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjack.framework; path = RMShared/Carthage/Build/iOS/CocoaLumberjack.framework; sourceTree = "<group>"; };
+		AF6E66B31EFBAD0200FA1708 /* SocketRocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SocketRocket.framework; path = RMShared/Carthage/Build/iOS/SocketRocket.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +79,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF07A7E21EFA9F7900CB9EB4 /* NMSSH.framework in Frameworks */,
-				AF07A7E31EFA9F7900CB9EB4 /* SocketRocket.framework in Frameworks */,
-				AF07A7E11EFA9F7900CB9EB4 /* CocoaLumberjack.framework in Frameworks */,
+				AF6E66B51EFBAD0200FA1708 /* CocoaLumberjack.framework in Frameworks */,
+				AF6E66B61EFBAD0200FA1708 /* SocketRocket.framework in Frameworks */,
+				AF6E66B41EFBAD0200FA1708 /* NMSSH.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +109,9 @@
 		945B81CC1746AF07003C6903 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AF6E66B21EFBAD0200FA1708 /* CocoaLumberjack.framework */,
+				AF6E66B11EFBAD0100FA1708 /* NMSSH.framework */,
+				AF6E66B31EFBAD0200FA1708 /* SocketRocket.framework */,
 				945B81CD1746AF07003C6903 /* Foundation.framework */,
 			);
 			name = Frameworks;
@@ -150,7 +153,6 @@
 			isa = PBXGroup;
 			children = (
 				AF07A0611EFA9EF500CB9EB4 /* Categories */,
-				AF07A06A1EFA9EF500CB9EB4 /* ext */,
 				AF07A44E1EFA9EF700CB9EB4 /* Loggers */,
 				AF07A4541EFA9EF700CB9EB4 /* Web Socket */,
 			);
@@ -170,16 +172,6 @@
 				AF07A0691EFA9EF500CB9EB4 /* UIDevice+UDID.m */,
 			);
 			path = Categories;
-			sourceTree = "<group>";
-		};
-		AF07A06A1EFA9EF500CB9EB4 /* ext */ = {
-			isa = PBXGroup;
-			children = (
-				AF07A7DE1EFA9F7900CB9EB4 /* CocoaLumberjack.framework */,
-				AF07A7DF1EFA9F7900CB9EB4 /* NMSSH.framework */,
-				AF07A7E01EFA9F7900CB9EB4 /* SocketRocket.framework */,
-			);
-			path = ext;
 			sourceTree = "<group>";
 		};
 		AF07A44E1EFA9EF700CB9EB4 /* Loggers */ = {
@@ -449,6 +441,7 @@
 					"$(PROJECT_DIR)/RMShared/lib/ext/Carthage/Checkouts/NMSSH/NMSSHTests/Settings/lib",
 					"$(PROJECT_DIR)/RMShared/lib/ext/Carthage/Checkouts/SocketRocket/Carthage/Build/iOS",
 					"$(PROJECT_DIR)/RMShared/lib",
+					"$(PROJECT_DIR)/RMShared/Carthage/Build/iOS",
 				);
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -507,6 +500,7 @@
 					"$(PROJECT_DIR)/RMShared/lib/ext/Carthage/Checkouts/NMSSH/NMSSHTests/Settings/lib",
 					"$(PROJECT_DIR)/RMShared/lib/ext/Carthage/Checkouts/SocketRocket/Carthage/Build/iOS",
 					"$(PROJECT_DIR)/RMShared/lib",
+					"$(PROJECT_DIR)/RMShared/Carthage/Build/iOS",
 				);
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
