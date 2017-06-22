@@ -49,14 +49,14 @@ There seems to be plenty of stock in online stores.
 - [x] Refactor RMShared
 - [x] Refactor RMCore
 - [x] Refactor HelloRMCore
-- [] Refactor RMVision
-- [] Refactor RMCharacter
-- [] Refactor HelloRomo
-- [] Refactor HelloRomo
-- [] Refactor Romo.xcworkspace
-- [] Clean up duplicate projects and folder structure
-- [] Add Swift example
+- [ ] Refactor RMVision
+- [ ] Refactor RMCharacter
+- [ ] Refactor HelloRomo
+- [ ] Refactor HelloRomo
+- [ ] Refactor Romo.xcworkspace
+- [ ] Clean up duplicate projects and folder structure
+- [ ] Add Swift example
 
 Is somebody has access to Romo's firmware or schematics I would love to add them to the repo.
-Pull requests and issues opening are welcome!
+Pull requests and issue opening are welcome!
 
