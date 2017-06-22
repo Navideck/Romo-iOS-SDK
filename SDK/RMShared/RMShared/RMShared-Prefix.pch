@@ -1,0 +1,31 @@
+//
+// Prefix header for all source files of the 'RMShared' target in the 'RMShared' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+    #import <CocoaLumberjack/CocoaLumberjack.h>
+
+#ifdef DEBUG
+static int ddLogLevel __unused = DDLogLevelVerbose;
+#else
+static int ddLogLevel __unused = DDLogLevelInfo;
+#endif
+
+#ifdef DEBUG
+#define DDLOG_ENABLE_DYNAMIC_LEVELS \
++ (int)ddLogLevel \
+{ \
+return ddLogLevel; \
+} \
++ (void)ddSetLogLevel:(int)logLevel \
+{ \
+ddLogLevel = logLevel; \
+}
+#else
+#define DDLOG_ENABLE_DYNAMIC_LEVELS
+#endif
+
+#endif
+
+#include "RMSharedDefines.h"
