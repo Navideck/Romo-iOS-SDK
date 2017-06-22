@@ -20,20 +20,18 @@
 		942AC66C16E7F9700062CA8A /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942AC66B16E7F9700062CA8A /* ExternalAccessory.framework */; };
 		942AC66E16E7F9800062CA8A /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942AC66D16E7F9800062CA8A /* CoreMotion.framework */; };
 		942AC67216E7F9AD0062CA8A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942AC67116E7F9AD0062CA8A /* QuartzCore.framework */; };
-		AF07B3E21EFABA7600CB9EB4 /* RMCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF07B3DD1EFAB9D700CB9EB4 /* RMCore.framework */; };
 		AF5F81951EFAC03B004BCAF5 /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF5F81941EFAC032004BCAF5 /* CocoaLumberjack.framework */; };
 		AF5F81961EFAC03B004BCAF5 /* NMSSH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF5F81921EFAC032004BCAF5 /* NMSSH.framework */; };
 		AF5F81971EFAC03B004BCAF5 /* SocketRocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF5F81931EFAC032004BCAF5 /* SocketRocket.framework */; };
 		AF5F81981EFAC042004BCAF5 /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF5F81941EFAC032004BCAF5 /* CocoaLumberjack.framework */; };
 		AF5F81991EFAC042004BCAF5 /* CocoaLumberjack.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AF5F81941EFAC032004BCAF5 /* CocoaLumberjack.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		AF5F819A1EFAC042004BCAF5 /* NMSSH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF5F81921EFAC032004BCAF5 /* NMSSH.framework */; };
 		AF5F819B1EFAC042004BCAF5 /* NMSSH.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AF5F81921EFAC032004BCAF5 /* NMSSH.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AF5F819C1EFAC042004BCAF5 /* SocketRocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF5F81931EFAC032004BCAF5 /* SocketRocket.framework */; };
 		AF5F819D1EFAC042004BCAF5 /* SocketRocket.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AF5F81931EFAC032004BCAF5 /* SocketRocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		AF6E66B81EFBADE100FA1708 /* RMShared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF6E66B71EFBADE100FA1708 /* RMShared.framework */; };
-		AF6E66B91EFBADE100FA1708 /* RMShared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AF6E66B71EFBADE100FA1708 /* RMShared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		AF91546C1EFAC0A2002C23C3 /* RMCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF07B3DD1EFAB9D700CB9EB4 /* RMCore.framework */; };
-		AF91546D1EFAC0A2002C23C3 /* RMCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AF07B3DD1EFAB9D700CB9EB4 /* RMCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AF6E66C21EFBB17900FA1708 /* RMCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF07B3DD1EFAB9D700CB9EB4 /* RMCore.framework */; };
+		AF6E66C31EFBB17900FA1708 /* RMCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AF07B3DD1EFAB9D700CB9EB4 /* RMCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AFAFB11B1EFBB93000DB92B5 /* RMShared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFAFB11A1EFBB93000DB92B5 /* RMShared.framework */; };
+		AFAFB11C1EFBB93000DB92B5 /* RMShared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AFAFB11A1EFBB93000DB92B5 /* RMShared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +42,7 @@
 			remoteGlobalIDString = AF07AE291EFAB17400CB9EB4;
 			remoteInfo = RMCore;
 		};
-		AF07B3E51EFABAA400CB9EB4 /* PBXContainerItemProxy */ = {
+		AF6E66C41EFBB17900FA1708 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AF07B3D71EFAB9D700CB9EB4 /* RMCore.xcodeproj */;
 			proxyType = 1;
@@ -67,8 +65,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				AF6E66B91EFBADE100FA1708 /* RMShared.framework in Embed Frameworks */,
-				AF91546D1EFAC0A2002C23C3 /* RMCore.framework in Embed Frameworks */,
+				AFAFB11C1EFBB93000DB92B5 /* RMShared.framework in Embed Frameworks */,
+				AF6E66C31EFBB17900FA1708 /* RMCore.framework in Embed Frameworks */,
 				AF5F819B1EFAC042004BCAF5 /* NMSSH.framework in Embed Frameworks */,
 				AF5F819D1EFAC042004BCAF5 /* SocketRocket.framework in Embed Frameworks */,
 				AF5F81991EFAC042004BCAF5 /* CocoaLumberjack.framework in Embed Frameworks */,
@@ -98,10 +96,11 @@
 		942AC66D16E7F9800062CA8A /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		942AC67116E7F9AD0062CA8A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		AF07B3D71EFAB9D700CB9EB4 /* RMCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RMCore.xcodeproj; path = ../../RMCore/RMCore.xcodeproj; sourceTree = "<group>"; };
+		AF599BDF1EFBB308004B9306 /* RMShared.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RMShared.framework; sourceTree = "<group>"; };
 		AF5F81921EFAC032004BCAF5 /* NMSSH.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NMSSH.framework; path = HelloRMCore/Carthage/Build/iOS/NMSSH.framework; sourceTree = "<group>"; };
 		AF5F81931EFAC032004BCAF5 /* SocketRocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SocketRocket.framework; path = HelloRMCore/Carthage/Build/iOS/SocketRocket.framework; sourceTree = "<group>"; };
 		AF5F81941EFAC032004BCAF5 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjack.framework; path = HelloRMCore/Carthage/Build/iOS/CocoaLumberjack.framework; sourceTree = "<group>"; };
-		AF6E66B71EFBADE100FA1708 /* RMShared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RMShared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFAFB11A1EFBB93000DB92B5 /* RMShared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RMShared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,14 +108,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF6E66B81EFBADE100FA1708 /* RMShared.framework in Frameworks */,
-				AF5F819A1EFAC042004BCAF5 /* NMSSH.framework in Frameworks */,
-				AF07B3E21EFABA7600CB9EB4 /* RMCore.framework in Frameworks */,
 				942AC64716E7F6820062CA8A /* UIKit.framework in Frameworks */,
 				AF5F81951EFAC03B004BCAF5 /* CocoaLumberjack.framework in Frameworks */,
-				AF91546C1EFAC0A2002C23C3 /* RMCore.framework in Frameworks */,
 				AF5F819C1EFAC042004BCAF5 /* SocketRocket.framework in Frameworks */,
 				942AC64916E7F6820062CA8A /* Foundation.framework in Frameworks */,
+				AF6E66C21EFBB17900FA1708 /* RMCore.framework in Frameworks */,
+				AFAFB11B1EFBB93000DB92B5 /* RMShared.framework in Frameworks */,
 				942AC64B16E7F6820062CA8A /* CoreGraphics.framework in Frameworks */,
 				AF5F81981EFAC042004BCAF5 /* CocoaLumberjack.framework in Frameworks */,
 				942AC66C16E7F9700062CA8A /* ExternalAccessory.framework in Frameworks */,
@@ -133,10 +130,11 @@
 		942AC63A16E7F6820062CA8A = {
 			isa = PBXGroup;
 			children = (
-				AF6E66B71EFBADE100FA1708 /* RMShared.framework */,
+				AFAFB11A1EFBB93000DB92B5 /* RMShared.framework */,
 				942AC64C16E7F6820062CA8A /* HelloRMCore */,
 				942AC64516E7F6820062CA8A /* Frameworks */,
 				942AC64416E7F6820062CA8A /* Products */,
+				AFAFB10D1EFBB38100DB92B5 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -199,6 +197,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		AFAFB10D1EFBB38100DB92B5 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				AF599BDF1EFBB308004B9306 /* RMShared.framework */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -214,8 +220,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				AF07B3E61EFABAA400CB9EB4 /* PBXTargetDependency */,
 				AF91546F1EFAC0A2002C23C3 /* PBXTargetDependency */,
+				AF6E66C51EFBB17900FA1708 /* PBXTargetDependency */,
 			);
 			name = HelloRMCore;
 			productName = HelloRMCore;
@@ -297,10 +303,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		AF07B3E61EFABAA400CB9EB4 /* PBXTargetDependency */ = {
+		AF6E66C51EFBB17900FA1708 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = RMCore;
-			targetProxy = AF07B3E51EFABAA400CB9EB4 /* PBXContainerItemProxy */;
+			targetProxy = AF6E66C41EFBB17900FA1708 /* PBXContainerItemProxy */;
 		};
 		AF91546F1EFAC0A2002C23C3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -416,8 +422,7 @@
 				DEVELOPMENT_TEAM = 52RU2XXUH6;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../RMCore/Products/Release-iphoneos\"",
-					"$(PROJECT_DIR)/HelloRMCore/Carthage/Build/iOS",
+					"$(SRCROOT)/HelloRMCore/Carthage/Build/iOS",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HelloRMCore/HelloRMCore-Prefix.pch";
@@ -436,8 +441,7 @@
 				DEVELOPMENT_TEAM = 52RU2XXUH6;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../RMCore/Products/Release-iphoneos\"",
-					"$(PROJECT_DIR)/HelloRMCore/Carthage/Build/iOS",
+					"$(SRCROOT)/HelloRMCore/Carthage/Build/iOS",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HelloRMCore/HelloRMCore-Prefix.pch";
