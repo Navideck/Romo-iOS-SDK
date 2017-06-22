@@ -30,8 +30,7 @@
 		AF5F819D1EFAC042004BCAF5 /* SocketRocket.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AF5F81931EFAC032004BCAF5 /* SocketRocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AF6E66C21EFBB17900FA1708 /* RMCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF07B3DD1EFAB9D700CB9EB4 /* RMCore.framework */; };
 		AF6E66C31EFBB17900FA1708 /* RMCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AF07B3DD1EFAB9D700CB9EB4 /* RMCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		AFAFB11B1EFBB93000DB92B5 /* RMShared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFAFB11A1EFBB93000DB92B5 /* RMShared.framework */; };
-		AFAFB11C1EFBB93000DB92B5 /* RMShared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AFAFB11A1EFBB93000DB92B5 /* RMShared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AFAFB14A1EFBC22200DB92B5 /* RMShared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AFAFB1491EFBC21700DB92B5 /* RMShared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +55,13 @@
 			remoteGlobalIDString = AF07AE281EFAB17400CB9EB4;
 			remoteInfo = RMCore;
 		};
+		AFAFB1481EFBC21700DB92B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AFAFB1441EFBC21700DB92B5 /* RMShared.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AF07A0551EFA9E8200CB9EB4;
+			remoteInfo = RMShared;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -65,7 +71,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				AFAFB11C1EFBB93000DB92B5 /* RMShared.framework in Embed Frameworks */,
+				AFAFB14A1EFBC22200DB92B5 /* RMShared.framework in Embed Frameworks */,
 				AF6E66C31EFBB17900FA1708 /* RMCore.framework in Embed Frameworks */,
 				AF5F819B1EFAC042004BCAF5 /* NMSSH.framework in Embed Frameworks */,
 				AF5F819D1EFAC042004BCAF5 /* SocketRocket.framework in Embed Frameworks */,
@@ -96,11 +102,10 @@
 		942AC66D16E7F9800062CA8A /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		942AC67116E7F9AD0062CA8A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		AF07B3D71EFAB9D700CB9EB4 /* RMCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RMCore.xcodeproj; path = ../../RMCore/RMCore.xcodeproj; sourceTree = "<group>"; };
-		AF599BDF1EFBB308004B9306 /* RMShared.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RMShared.framework; sourceTree = "<group>"; };
 		AF5F81921EFAC032004BCAF5 /* NMSSH.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NMSSH.framework; path = HelloRMCore/Carthage/Build/iOS/NMSSH.framework; sourceTree = "<group>"; };
 		AF5F81931EFAC032004BCAF5 /* SocketRocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SocketRocket.framework; path = HelloRMCore/Carthage/Build/iOS/SocketRocket.framework; sourceTree = "<group>"; };
 		AF5F81941EFAC032004BCAF5 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjack.framework; path = HelloRMCore/Carthage/Build/iOS/CocoaLumberjack.framework; sourceTree = "<group>"; };
-		AFAFB11A1EFBB93000DB92B5 /* RMShared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RMShared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFAFB1441EFBC21700DB92B5 /* RMShared.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RMShared.xcodeproj; path = ../../RMShared/RMShared.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +118,6 @@
 				AF5F819C1EFAC042004BCAF5 /* SocketRocket.framework in Frameworks */,
 				942AC64916E7F6820062CA8A /* Foundation.framework in Frameworks */,
 				AF6E66C21EFBB17900FA1708 /* RMCore.framework in Frameworks */,
-				AFAFB11B1EFBB93000DB92B5 /* RMShared.framework in Frameworks */,
 				942AC64B16E7F6820062CA8A /* CoreGraphics.framework in Frameworks */,
 				AF5F81981EFAC042004BCAF5 /* CocoaLumberjack.framework in Frameworks */,
 				942AC66C16E7F9700062CA8A /* ExternalAccessory.framework in Frameworks */,
@@ -130,11 +134,9 @@
 		942AC63A16E7F6820062CA8A = {
 			isa = PBXGroup;
 			children = (
-				AFAFB11A1EFBB93000DB92B5 /* RMShared.framework */,
 				942AC64C16E7F6820062CA8A /* HelloRMCore */,
 				942AC64516E7F6820062CA8A /* Frameworks */,
 				942AC64416E7F6820062CA8A /* Products */,
-				AFAFB10D1EFBB38100DB92B5 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -152,6 +154,7 @@
 				AF5F81941EFAC032004BCAF5 /* CocoaLumberjack.framework */,
 				AF5F81921EFAC032004BCAF5 /* NMSSH.framework */,
 				AF5F81931EFAC032004BCAF5 /* SocketRocket.framework */,
+				AFAFB1441EFBC21700DB92B5 /* RMShared.xcodeproj */,
 				AF07B3D71EFAB9D700CB9EB4 /* RMCore.xcodeproj */,
 				942AC66D16E7F9800062CA8A /* CoreMotion.framework */,
 				942AC66B16E7F9700062CA8A /* ExternalAccessory.framework */,
@@ -197,12 +200,12 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AFAFB10D1EFBB38100DB92B5 /* Recovered References */ = {
+		AFAFB1451EFBC21700DB92B5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AF599BDF1EFBB308004B9306 /* RMShared.framework */,
+				AFAFB1491EFBC21700DB92B5 /* RMShared.framework */,
 			);
-			name = "Recovered References";
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +260,10 @@
 					ProductGroup = AF07B3D81EFAB9D700CB9EB4 /* Products */;
 					ProjectRef = AF07B3D71EFAB9D700CB9EB4 /* RMCore.xcodeproj */;
 				},
+				{
+					ProductGroup = AFAFB1451EFBC21700DB92B5 /* Products */;
+					ProjectRef = AFAFB1441EFBC21700DB92B5 /* RMShared.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -271,6 +278,13 @@
 			fileType = wrapper.framework;
 			path = RMCore.framework;
 			remoteRef = AF07B3DC1EFAB9D700CB9EB4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AFAFB1491EFBC21700DB92B5 /* RMShared.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RMShared.framework;
+			remoteRef = AFAFB1481EFBC21700DB92B5 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -369,6 +383,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -409,6 +424,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
