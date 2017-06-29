@@ -19,12 +19,4 @@ DerivedData
 *~
 #*
 \#*
-iOS/SDK/Release/Romo.framework/Versions/A/A
-iOS/SDK/Release/Romo.framework/Versions/A/Headers/Headers
-iOS/SDK/Release/Romo.framework/Versions/A/Resources/Resources
-iOS/SDK/RMCore/RMCore/Communication/SerialCommunication
-iOS/SDK/RMCharacter/Products
-iOS/SDK/RMCore/Products
-iOS/SDK/RMCharacter/build
-iOS/SDK/RMCore/build
-iOS/SDK/RMCore/RMCore/Communication/FirmwareCommon
+SDK/RMVision/RMVision/lib/OpenCV/opencv2.framework
