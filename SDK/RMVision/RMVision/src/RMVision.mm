@@ -30,7 +30,7 @@
 #import "UIDevice+VisionHardware.h"
 #import "UIImage+OpenCV.h"
 
-#import "GPUImage.h"
+#import <GPUImage/GPUImageRawDataInput.h>
 #import "GPUImageRawDataInput+RMAdditions.h"
 
 #ifdef VISION_DEBUG
@@ -65,7 +65,7 @@ NSString *const RMVisionModule_GPUImageExample  = @"GPUImageExample";
 @property (nonatomic, strong) AVCaptureDeviceInput        *audioInput;
 @property (nonatomic, strong) AVCaptureVideoDataOutput    *videoOutput;
 @property (nonatomic, strong) AVCaptureAudioDataOutput    *audioOutput;
-@property (nonatomic, strong) AVPlayerLayer               *videoPreviewLayer;
+@property (nonatomic, strong) AVCaptureVideoPreviewLayer  *videoPreviewLayer;
 
 // Capture information
 @property (nonatomic) float width;
@@ -406,6 +406,9 @@ NSString *const RMVisionModule_GPUImageExample  = @"GPUImageExample";
     
     // Commit the configuration!
     [self.session commitConfiguration];
+    
+    [AVCaptureVideoPreviewLayer layerWithSession:self.session];
+    
     
     self.videoPreviewLayer = [AVCaptureVideoPreviewLayer layerWithSession:self.session];
     

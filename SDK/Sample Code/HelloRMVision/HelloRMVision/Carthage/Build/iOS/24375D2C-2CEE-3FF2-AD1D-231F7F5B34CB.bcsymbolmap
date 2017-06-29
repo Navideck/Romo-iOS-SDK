@@ -1,0 +1,2564 @@
+BCSymbolMap Version: 2.0
+-[GPUImageContext init]
++[GPUImageContext contextKey]
++[GPUImageContext sharedImageProcessingContext]
+___47+[GPUImageContext sharedImageProcessingContext]_block_invoke
+___copy_helper_block_
+___destroy_helper_block_
++[GPUImageContext sharedContextQueue]
++[GPUImageContext sharedFramebufferCache]
++[GPUImageContext useImageProcessingContext]
+-[GPUImageContext useAsCurrentContext]
++[GPUImageContext setActiveShaderProgram:]
+-[GPUImageContext setContextShaderProgram:]
++[GPUImageContext maximumTextureSizeForThisDevice]
+___50+[GPUImageContext maximumTextureSizeForThisDevice]_block_invoke
+___copy_helper_block_.33
+___destroy_helper_block_.34
++[GPUImageContext maximumTextureUnitsForThisDevice]
+___51+[GPUImageContext maximumTextureUnitsForThisDevice]_block_invoke
+___copy_helper_block_.37
+___destroy_helper_block_.38
++[GPUImageContext maximumVaryingVectorsForThisDevice]
+___53+[GPUImageContext maximumVaryingVectorsForThisDevice]_block_invoke
+___copy_helper_block_.41
+___destroy_helper_block_.42
++[GPUImageContext deviceSupportsOpenGLESExtension:]
+___51+[GPUImageContext deviceSupportsOpenGLESExtension:]_block_invoke
++[GPUImageContext deviceSupportsRedTextures]
+___44+[GPUImageContext deviceSupportsRedTextures]_block_invoke
++[GPUImageContext deviceSupportsFramebufferReads]
+___49+[GPUImageContext deviceSupportsFramebufferReads]_block_invoke
++[GPUImageContext sizeThatFitsWithinATextureForSize:]
+-[GPUImageContext presentBufferForDisplay]
+-[GPUImageContext programForVertexShaderString:fragmentShaderString:]
+-[GPUImageContext useSharegroup:]
+-[GPUImageContext createContext]
++[GPUImageContext supportsFastTextureUpload]
+-[GPUImageContext context]
+-[GPUImageContext coreVideoTextureCache]
+-[GPUImageContext framebufferCache]
+-[GPUImageContext currentShaderProgram]
+-[GPUImageContext setCurrentShaderProgram:]
+-[GPUImageContext contextQueue]
+-[GPUImageContext .cxx_destruct]
+_openGLESContextQueueKey
+_OBJC_IVAR_$_GPUImageContext._contextQueue
+_OBJC_IVAR_$_GPUImageContext.shaderProgramCache
+_OBJC_IVAR_$_GPUImageContext.shaderProgramUsageHistory
+_sharedImageProcessingContext.pred
+_sharedImageProcessingContext.sharedImageProcessingContext
+___block_descriptor_tmp
+_maximumTextureSizeForThisDevice.pred
+_maximumTextureSizeForThisDevice.maxTextureSize
+___block_descriptor_tmp.36
+_maximumTextureUnitsForThisDevice.pred
+_maximumTextureUnitsForThisDevice.maxTextureUnits
+___block_descriptor_tmp.40
+_maximumVaryingVectorsForThisDevice.pred
+_maximumVaryingVectorsForThisDevice.maxVaryingVectors
+___block_descriptor_tmp.44
+_deviceSupportsOpenGLESExtension:.pred
+_deviceSupportsOpenGLESExtension:.extensionNames
+___block_descriptor_tmp.51
+___block_literal_global
+_deviceSupportsRedTextures.pred
+_deviceSupportsRedTextures.supportsRedTextures
+___block_descriptor_tmp.58
+___block_literal_global.59
+_deviceSupportsFramebufferReads.pred
+_deviceSupportsFramebufferReads.supportsFramebufferReads
+___block_descriptor_tmp.62
+___block_literal_global.63
+_OBJC_IVAR_$_GPUImageContext._context
+_OBJC_IVAR_$_GPUImageContext._sharegroup
+_OBJC_IVAR_$_GPUImageContext._coreVideoTextureCache
+_OBJC_IVAR_$_GPUImageContext._framebufferCache
+_OBJC_IVAR_$_GPUImageContext._currentShaderProgram
+Apple LLVM version 8.1.0 (clang-802.0.42)
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/iOS/GPUImageContext.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/iOS/GPUImageContext.h
+__49+[GPUImageContext deviceSupportsFramebufferReads]_block_invoke
+_dispatch_once
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/usr/include/dispatch/once.h
+__44+[GPUImageContext deviceSupportsRedTextures]_block_invoke
+__51+[GPUImageContext deviceSupportsOpenGLESExtension:]_block_invoke
+__destroy_helper_block_
+__copy_helper_block_
+__53+[GPUImageContext maximumVaryingVectorsForThisDevice]_block_invoke
+__51+[GPUImageContext maximumTextureUnitsForThisDevice]_block_invoke
+__50+[GPUImageContext maximumTextureSizeForThisDevice]_block_invoke
+__47+[GPUImageContext sharedImageProcessingContext]_block_invoke
+-[GLProgram initWithVertexShaderString:fragmentShaderString:]
+-[GLProgram initWithVertexShaderString:fragmentShaderFilename:]
+-[GLProgram initWithVertexShaderFilename:fragmentShaderFilename:]
+-[GLProgram compileShader:type:string:]
+-[GLProgram addAttribute:]
+-[GLProgram attributeIndex:]
+-[GLProgram uniformIndex:]
+-[GLProgram link]
+-[GLProgram use]
+-[GLProgram validate]
+-[GLProgram dealloc]
+-[GLProgram initialized]
+-[GLProgram setInitialized:]
+-[GLProgram vertexShaderLog]
+-[GLProgram setVertexShaderLog:]
+-[GLProgram fragmentShaderLog]
+-[GLProgram setFragmentShaderLog:]
+-[GLProgram programLog]
+-[GLProgram setProgramLog:]
+-[GLProgram .cxx_destruct]
+_OBJC_IVAR_$_GLProgram._initialized
+_OBJC_IVAR_$_GLProgram._vertexShaderLog
+_OBJC_IVAR_$_GLProgram._fragmentShaderLog
+_OBJC_IVAR_$_GLProgram._programLog
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GLProgram.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GLProgram.h
+-[GPUImageFramebuffer initWithSize:textureOptions:onlyTexture:]
+___63-[GPUImageFramebuffer initWithSize:textureOptions:onlyTexture:]_block_invoke
+-[GPUImageFramebuffer initWithSize:overriddenTexture:]
+-[GPUImageFramebuffer initWithSize:]
+-[GPUImageFramebuffer dealloc]
+-[GPUImageFramebuffer generateTexture]
+-[GPUImageFramebuffer generateFramebuffer]
+___42-[GPUImageFramebuffer generateFramebuffer]_block_invoke
+-[GPUImageFramebuffer destroyFramebuffer]
+___41-[GPUImageFramebuffer destroyFramebuffer]_block_invoke
+___copy_helper_block_.40
+___destroy_helper_block_.41
+-[GPUImageFramebuffer activateFramebuffer]
+-[GPUImageFramebuffer lock]
+-[GPUImageFramebuffer unlock]
+-[GPUImageFramebuffer clearAllLocks]
+-[GPUImageFramebuffer disableReferenceCounting]
+-[GPUImageFramebuffer enableReferenceCounting]
+-[GPUImageFramebuffer newCGImageFromFramebufferContents]
+___56-[GPUImageFramebuffer newCGImageFromFramebufferContents]_block_invoke
+___copy_helper_block_.67
+___destroy_helper_block_.68
+-[GPUImageFramebuffer restoreRenderTarget]
+-[GPUImageFramebuffer lockForReading]
+-[GPUImageFramebuffer unlockAfterReading]
+-[GPUImageFramebuffer bytesPerRow]
+-[GPUImageFramebuffer byteBuffer]
+-[GPUImageFramebuffer texture]
+-[GPUImageFramebuffer size]
+-[GPUImageFramebuffer textureOptions]
+-[GPUImageFramebuffer missingFramebuffer]
+_OBJC_IVAR_$_GPUImageFramebuffer._textureOptions
+_OBJC_IVAR_$_GPUImageFramebuffer._size
+_OBJC_IVAR_$_GPUImageFramebuffer.framebufferReferenceCount
+_OBJC_IVAR_$_GPUImageFramebuffer.referenceCountingDisabled
+_OBJC_IVAR_$_GPUImageFramebuffer._missingFramebuffer
+_OBJC_IVAR_$_GPUImageFramebuffer.framebuffer
+_OBJC_IVAR_$_GPUImageFramebuffer._texture
+_OBJC_IVAR_$_GPUImageFramebuffer.renderTarget
+_OBJC_IVAR_$_GPUImageFramebuffer.renderTexture
+___block_descriptor_tmp.39
+___block_descriptor_tmp.42
+___block_descriptor_tmp.69
+_OBJC_IVAR_$_GPUImageFramebuffer.readLockCount
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageFramebuffer.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageFramebuffer.h
+__56-[GPUImageFramebuffer newCGImageFromFramebufferContents]_block_invoke
+dataProviderUnlockCallback
+dataProviderReleaseCallback
+__41-[GPUImageFramebuffer destroyFramebuffer]_block_invoke
+__42-[GPUImageFramebuffer generateFramebuffer]_block_invoke
+__63-[GPUImageFramebuffer initWithSize:textureOptions:onlyTexture:]_block_invoke
+-[GPUImageFramebufferCache init]
+___32-[GPUImageFramebufferCache init]_block_invoke
+-[GPUImageFramebufferCache hashForSize:textureOptions:onlyTexture:]
+-[GPUImageFramebufferCache fetchFramebufferForSize:textureOptions:onlyTexture:]
+___Block_byref_object_copy_
+___Block_byref_object_dispose_
+___79-[GPUImageFramebufferCache fetchFramebufferForSize:textureOptions:onlyTexture:]_block_invoke
+___copy_helper_block_.36
+___destroy_helper_block_.37
+-[GPUImageFramebufferCache fetchFramebufferForSize:onlyTexture:]
+-[GPUImageFramebufferCache returnFramebufferToCache:]
+___53-[GPUImageFramebufferCache returnFramebufferToCache:]_block_invoke
+___copy_helper_block_.52
+___destroy_helper_block_.53
+-[GPUImageFramebufferCache purgeAllUnassignedFramebuffers]
+___58-[GPUImageFramebufferCache purgeAllUnassignedFramebuffers]_block_invoke
+___copy_helper_block_.62
+___destroy_helper_block_.63
+-[GPUImageFramebufferCache addFramebufferToActiveImageCaptureList:]
+___67-[GPUImageFramebufferCache addFramebufferToActiveImageCaptureList:]_block_invoke
+-[GPUImageFramebufferCache removeFramebufferFromActiveImageCaptureList:]
+___72-[GPUImageFramebufferCache removeFramebufferFromActiveImageCaptureList:]_block_invoke
+___copy_helper_block_.72
+___destroy_helper_block_.73
+-[GPUImageFramebufferCache .cxx_destruct]
+_OBJC_IVAR_$_GPUImageFramebufferCache.memoryWarningObserver
+_OBJC_IVAR_$_GPUImageFramebufferCache.framebufferCache
+_OBJC_IVAR_$_GPUImageFramebufferCache.framebufferTypeCounts
+_OBJC_IVAR_$_GPUImageFramebufferCache.activeImageCaptureList
+_OBJC_IVAR_$_GPUImageFramebufferCache.framebufferCacheQueue
+___block_descriptor_tmp.54
+___block_descriptor_tmp.64
+___block_descriptor_tmp.74
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageFramebufferCache.m
+__72-[GPUImageFramebufferCache removeFramebufferFromActiveImageCaptureList:]_block_invoke
+__67-[GPUImageFramebufferCache addFramebufferToActiveImageCaptureList:]_block_invoke
+__58-[GPUImageFramebufferCache purgeAllUnassignedFramebuffers]_block_invoke
+__53-[GPUImageFramebufferCache returnFramebufferToCache:]_block_invoke
+__79-[GPUImageFramebufferCache fetchFramebufferForSize:textureOptions:onlyTexture:]_block_invoke
+__Block_byref_object_dispose_
+__Block_byref_object_copy_
+__32-[GPUImageFramebufferCache init]_block_invoke
+-[GPUImageOutput init]
+-[GPUImageOutput dealloc]
+-[GPUImageOutput setInputFramebufferForTarget:atIndex:]
+-[GPUImageOutput framebufferForOutput]
+-[GPUImageOutput removeOutputFramebuffer]
+-[GPUImageOutput notifyTargetsAboutNewOutputTexture]
+-[GPUImageOutput targets]
+-[GPUImageOutput addTarget:]
+-[GPUImageOutput addTarget:atTextureLocation:]
+___46-[GPUImageOutput addTarget:atTextureLocation:]_block_invoke
+-[GPUImageOutput removeTarget:]
+___31-[GPUImageOutput removeTarget:]_block_invoke
+___copy_helper_block_.64
+___destroy_helper_block_.65
+-[GPUImageOutput removeAllTargets]
+___34-[GPUImageOutput removeAllTargets]_block_invoke
+___copy_helper_block_.69
+___destroy_helper_block_.70
+-[GPUImageOutput forceProcessingAtSize:]
+-[GPUImageOutput forceProcessingAtSizeRespectingAspectRatio:]
+-[GPUImageOutput useNextFrameForImageCapture]
+-[GPUImageOutput newCGImageFromCurrentlyProcessedOutput]
+-[GPUImageOutput newCGImageByFilteringCGImage:]
+-[GPUImageOutput providesMonochromeOutput]
+-[GPUImageOutput imageFromCurrentFramebuffer]
+-[GPUImageOutput imageFromCurrentFramebufferWithOrientation:]
+-[GPUImageOutput imageByFilteringImage:]
+-[GPUImageOutput newCGImageByFilteringImage:]
+-[GPUImageOutput setAudioEncodingTarget:]
+-[GPUImageOutput setOutputTextureOptions:]
+-[GPUImageOutput shouldSmoothlyScaleOutput]
+-[GPUImageOutput setShouldSmoothlyScaleOutput:]
+-[GPUImageOutput shouldIgnoreUpdatesToThisTarget]
+-[GPUImageOutput setShouldIgnoreUpdatesToThisTarget:]
+-[GPUImageOutput audioEncodingTarget]
+-[GPUImageOutput targetToIgnoreForUpdates]
+-[GPUImageOutput setTargetToIgnoreForUpdates:]
+-[GPUImageOutput frameProcessingCompletionBlock]
+-[GPUImageOutput setFrameProcessingCompletionBlock:]
+-[GPUImageOutput enabled]
+-[GPUImageOutput setEnabled:]
+-[GPUImageOutput outputTextureOptions]
+-[GPUImageOutput .cxx_destruct]
+_OBJC_IVAR_$_GPUImageOutput._enabled
+_OBJC_IVAR_$_GPUImageOutput._outputTextureOptions
+_OBJC_IVAR_$_GPUImageOutput._targetToIgnoreForUpdates
+___block_descriptor_tmp.66
+___block_descriptor_tmp.71
+_OBJC_IVAR_$_GPUImageOutput._audioEncodingTarget
+_OBJC_IVAR_$_GPUImageOutput._shouldSmoothlyScaleOutput
+_OBJC_IVAR_$_GPUImageOutput._shouldIgnoreUpdatesToThisTarget
+_OBJC_IVAR_$_GPUImageOutput._frameProcessingCompletionBlock
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageOutput.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageOutput.h
+__34-[GPUImageOutput removeAllTargets]_block_invoke
+__31-[GPUImageOutput removeTarget:]_block_invoke
+__46-[GPUImageOutput addTarget:atTextureLocation:]_block_invoke
+reportAvailableMemoryForGPUImage
+runAsynchronouslyOnContextQueue
+runSynchronouslyOnContextQueue
+runAsynchronouslyOnVideoProcessingQueue
+runSynchronouslyOnVideoProcessingQueue
+runOnMainQueueWithoutDeadlocking
+-[GPUImageVideoCamera init]
+-[GPUImageVideoCamera initWithSessionPreset:cameraPosition:]
+___60-[GPUImageVideoCamera initWithSessionPreset:cameraPosition:]_block_invoke
+-[GPUImageVideoCamera framebufferForOutput]
+-[GPUImageVideoCamera dealloc]
+-[GPUImageVideoCamera addAudioInputsAndOutputs]
+-[GPUImageVideoCamera removeAudioInputsAndOutputs]
+-[GPUImageVideoCamera removeInputsAndOutputs]
+-[GPUImageVideoCamera addTarget:atTextureLocation:]
+-[GPUImageVideoCamera startCameraCapture]
+-[GPUImageVideoCamera stopCameraCapture]
+-[GPUImageVideoCamera pauseCameraCapture]
+-[GPUImageVideoCamera resumeCameraCapture]
+-[GPUImageVideoCamera rotateCamera]
+-[GPUImageVideoCamera cameraPosition]
++[GPUImageVideoCamera isBackFacingCameraPresent]
+-[GPUImageVideoCamera isBackFacingCameraPresent]
++[GPUImageVideoCamera isFrontFacingCameraPresent]
+-[GPUImageVideoCamera isFrontFacingCameraPresent]
+-[GPUImageVideoCamera setCaptureSessionPreset:]
+-[GPUImageVideoCamera setFrameRate:]
+-[GPUImageVideoCamera frameRate]
+-[GPUImageVideoCamera videoCaptureConnection]
+-[GPUImageVideoCamera updateTargetsForVideoCameraUsingCacheTextureAtWidth:height:time:]
+-[GPUImageVideoCamera processVideoSampleBuffer:]
+-[GPUImageVideoCamera processAudioSampleBuffer:]
+-[GPUImageVideoCamera convertYUVToRGBOutput]
+-[GPUImageVideoCamera averageFrameDurationDuringCapture]
+-[GPUImageVideoCamera resetBenchmarkAverage]
+-[GPUImageVideoCamera captureOutput:didOutputSampleBuffer:fromConnection:]
+___74-[GPUImageVideoCamera captureOutput:didOutputSampleBuffer:fromConnection:]_block_invoke
+___copy_helper_block_.237
+___destroy_helper_block_.238
+-[GPUImageVideoCamera setAudioEncodingTarget:]
+-[GPUImageVideoCamera updateOrientationSendToTargets]
+___53-[GPUImageVideoCamera updateOrientationSendToTargets]_block_invoke
+___copy_helper_block_.248
+___destroy_helper_block_.249
+-[GPUImageVideoCamera setOutputImageOrientation:]
+-[GPUImageVideoCamera setHorizontallyMirrorFrontFacingCamera:]
+-[GPUImageVideoCamera setHorizontallyMirrorRearFacingCamera:]
+-[GPUImageVideoCamera captureSessionPreset]
+-[GPUImageVideoCamera captureSession]
+-[GPUImageVideoCamera inputCamera]
+-[GPUImageVideoCamera runBenchmark]
+-[GPUImageVideoCamera setRunBenchmark:]
+-[GPUImageVideoCamera outputImageOrientation]
+-[GPUImageVideoCamera delegate]
+-[GPUImageVideoCamera setDelegate:]
+-[GPUImageVideoCamera horizontallyMirrorFrontFacingCamera]
+-[GPUImageVideoCamera horizontallyMirrorRearFacingCamera]
+-[GPUImageVideoCamera .cxx_destruct]
+_OBJC_IVAR_$_GPUImageVideoCamera.cameraProcessingQueue
+_OBJC_IVAR_$_GPUImageVideoCamera.audioProcessingQueue
+_OBJC_IVAR_$_GPUImageVideoCamera._frameRate
+_OBJC_IVAR_$_GPUImageVideoCamera._runBenchmark
+_OBJC_IVAR_$_GPUImageVideoCamera._preferredConversion
+_OBJC_IVAR_$_GPUImageVideoCamera.isFullYUVRange
+_OBJC_IVAR_$_GPUImageVideoCamera.yuvConversionProgram
+_OBJC_IVAR_$_GPUImageVideoCamera.yuvConversionPositionAttribute
+_OBJC_IVAR_$_GPUImageVideoCamera.yuvConversionTextureCoordinateAttribute
+_OBJC_IVAR_$_GPUImageVideoCamera.yuvConversionLuminanceTextureUniform
+_OBJC_IVAR_$_GPUImageVideoCamera.yuvConversionChrominanceTextureUniform
+_OBJC_IVAR_$_GPUImageVideoCamera.yuvConversionMatrixUniform
+_OBJC_IVAR_$_GPUImageVideoCamera._captureSessionPreset
+_OBJC_IVAR_$_GPUImageVideoCamera.audioOutput
+_OBJC_IVAR_$_GPUImageVideoCamera.audioInput
+_OBJC_IVAR_$_GPUImageVideoCamera.startingCaptureTime
+_OBJC_IVAR_$_GPUImageVideoCamera._outputImageOrientation
+_OBJC_IVAR_$_GPUImageVideoCamera.imageBufferWidth
+_OBJC_IVAR_$_GPUImageVideoCamera.imageBufferHeight
+_convertYUVToRGBOutput.squareVertices
+___block_descriptor_tmp.239
+_OBJC_IVAR_$_GPUImageVideoCamera.addedAudioInputsDueToEncodingTarget
+_OBJC_IVAR_$_GPUImageVideoCamera._horizontallyMirrorRearFacingCamera
+_OBJC_IVAR_$_GPUImageVideoCamera._horizontallyMirrorFrontFacingCamera
+___block_descriptor_tmp.250
+l_OBJC_PROTOCOL_$_NSObject
+l_OBJC_LABEL_PROTOCOL_$_NSObject
+l_OBJC_PROTOCOL_$_AVCaptureVideoDataOutputSampleBufferDelegate
+l_OBJC_LABEL_PROTOCOL_$_AVCaptureVideoDataOutputSampleBufferDelegate
+l_OBJC_PROTOCOL_$_AVCaptureAudioDataOutputSampleBufferDelegate
+l_OBJC_LABEL_PROTOCOL_$_AVCaptureAudioDataOutputSampleBufferDelegate
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageVideoCamera.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageVideoCamera.h
+__53-[GPUImageVideoCamera updateOrientationSendToTargets]_block_invoke
+__74-[GPUImageVideoCamera captureOutput:didOutputSampleBuffer:fromConnection:]_block_invoke
+CGSizeMake
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGGeometry.h
+__60-[GPUImageVideoCamera initWithSessionPreset:cameraPosition:]_block_invoke
+-[GPUImageStillCamera initWithSessionPreset:cameraPosition:]
+-[GPUImageStillCamera init]
+-[GPUImageStillCamera removeInputsAndOutputs]
+-[GPUImageStillCamera capturePhotoAsSampleBufferWithCompletionHandler:]
+-[GPUImageStillCamera capturePhotoAsImageProcessedUpToFilter:withCompletionHandler:]
+___84-[GPUImageStillCamera capturePhotoAsImageProcessedUpToFilter:withCompletionHandler:]_block_invoke
+-[GPUImageStillCamera capturePhotoAsImageProcessedUpToFilter:withOrientation:withCompletionHandler:]
+___100-[GPUImageStillCamera capturePhotoAsImageProcessedUpToFilter:withOrientation:withCompletionHandler:]_block_invoke
+___copy_helper_block_.54
+___destroy_helper_block_.55
+-[GPUImageStillCamera capturePhotoAsJPEGProcessedUpToFilter:withCompletionHandler:]
+___83-[GPUImageStillCamera capturePhotoAsJPEGProcessedUpToFilter:withCompletionHandler:]_block_invoke
+___copy_helper_block_.59
+___destroy_helper_block_.60
+-[GPUImageStillCamera capturePhotoAsJPEGProcessedUpToFilter:withOrientation:withCompletionHandler:]
+___99-[GPUImageStillCamera capturePhotoAsJPEGProcessedUpToFilter:withOrientation:withCompletionHandler:]_block_invoke
+-[GPUImageStillCamera capturePhotoAsPNGProcessedUpToFilter:withCompletionHandler:]
+___82-[GPUImageStillCamera capturePhotoAsPNGProcessedUpToFilter:withCompletionHandler:]_block_invoke
+___copy_helper_block_.65
+___destroy_helper_block_.66
+-[GPUImageStillCamera capturePhotoAsPNGProcessedUpToFilter:withOrientation:withCompletionHandler:]
+___98-[GPUImageStillCamera capturePhotoAsPNGProcessedUpToFilter:withOrientation:withCompletionHandler:]_block_invoke
+___copy_helper_block_.68
+___destroy_helper_block_.69
+-[GPUImageStillCamera capturePhotoProcessedUpToFilter:withImageOnGPUHandler:]
+___77-[GPUImageStillCamera capturePhotoProcessedUpToFilter:withImageOnGPUHandler:]_block_invoke
+___copy_helper_block_.105
+___destroy_helper_block_.106
+-[GPUImageStillCamera currentCaptureMetadata]
+-[GPUImageStillCamera jpegCompressionQuality]
+-[GPUImageStillCamera setJpegCompressionQuality:]
+-[GPUImageStillCamera .cxx_destruct]
+_OBJC_IVAR_$_GPUImageStillCamera.requiresFrontCameraTextureCacheCorruptionWorkaround
+_OBJC_IVAR_$_GPUImageStillCamera.photoOutput
+___block_descriptor_tmp.56
+___block_descriptor_tmp.61
+___block_descriptor_tmp.67
+___block_descriptor_tmp.70
+_OBJC_IVAR_$_GPUImageStillCamera._currentCaptureMetadata
+___block_descriptor_tmp.108
+_OBJC_IVAR_$_GPUImageStillCamera._jpegCompressionQuality
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageStillCamera.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageStillCamera.h
+__77-[GPUImageStillCamera capturePhotoProcessedUpToFilter:withImageOnGPUHandler:]_block_invoke
+__CGSizeEqualToSize
+__98-[GPUImageStillCamera capturePhotoAsPNGProcessedUpToFilter:withOrientation:withCompletionHandler:]_block_invoke
+__82-[GPUImageStillCamera capturePhotoAsPNGProcessedUpToFilter:withCompletionHandler:]_block_invoke
+__99-[GPUImageStillCamera capturePhotoAsJPEGProcessedUpToFilter:withOrientation:withCompletionHandler:]_block_invoke
+__83-[GPUImageStillCamera capturePhotoAsJPEGProcessedUpToFilter:withCompletionHandler:]_block_invoke
+__100-[GPUImageStillCamera capturePhotoAsImageProcessedUpToFilter:withOrientation:withCompletionHandler:]_block_invoke
+__84-[GPUImageStillCamera capturePhotoAsImageProcessedUpToFilter:withCompletionHandler:]_block_invoke
+GPUImageCreateResizedSampleBuffer
+stillImageDataReleaseCallback
+-[GPUImagePicture initWithURL:]
+-[GPUImagePicture initWithData:]
+-[GPUImagePicture initWithImage:]
+-[GPUImagePicture initWithCGImage:]
+-[GPUImagePicture initWithImage:smoothlyScaleOutput:]
+-[GPUImagePicture initWithCGImage:smoothlyScaleOutput:]
+___55-[GPUImagePicture initWithCGImage:smoothlyScaleOutput:]_block_invoke
+-[GPUImagePicture dealloc]
+-[GPUImagePicture removeAllTargets]
+-[GPUImagePicture processImage]
+-[GPUImagePicture processImageWithCompletionHandler:]
+___53-[GPUImagePicture processImageWithCompletionHandler:]_block_invoke
+___copy_helper_block_.71
+___destroy_helper_block_.72
+-[GPUImagePicture processImageUpToFilter:withCompletionHandler:]
+___64-[GPUImagePicture processImageUpToFilter:withCompletionHandler:]_block_invoke
+___copy_helper_block_.78
+___destroy_helper_block_.79
+-[GPUImagePicture outputImageSize]
+-[GPUImagePicture addTarget:atTextureLocation:]
+-[GPUImagePicture .cxx_destruct]
+___block_descriptor_tmp.73
+___block_descriptor_tmp.80
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/iOS/GPUImagePicture.m
+__64-[GPUImagePicture processImageUpToFilter:withCompletionHandler:]_block_invoke
+__53-[GPUImagePicture processImageWithCompletionHandler:]_block_invoke
+__55-[GPUImagePicture initWithCGImage:smoothlyScaleOutput:]_block_invoke
+CGRectMake
+-[GPUImageMovie initWithURL:]
+-[GPUImageMovie initWithAsset:]
+-[GPUImageMovie initWithPlayerItem:]
+-[GPUImageMovie yuvConversionSetup]
+___35-[GPUImageMovie yuvConversionSetup]_block_invoke
+-[GPUImageMovie dealloc]
+-[GPUImageMovie enableSynchronizedEncodingUsingMovieWriter:]
+-[GPUImageMovie startProcessing]
+___32-[GPUImageMovie startProcessing]_block_invoke
+___32-[GPUImageMovie startProcessing]_block_invoke_2
+___copy_helper_block_.93
+___destroy_helper_block_.94
+___copy_helper_block_.96
+___destroy_helper_block_.97
+-[GPUImageMovie createAssetReader]
+-[GPUImageMovie processAsset]
+___29-[GPUImageMovie processAsset]_block_invoke
+___copy_helper_block_.146
+___destroy_helper_block_.147
+___29-[GPUImageMovie processAsset]_block_invoke.152
+___copy_helper_block_.155
+___destroy_helper_block_.156
+___29-[GPUImageMovie processAsset]_block_invoke.167
+___copy_helper_block_.170
+___destroy_helper_block_.171
+-[GPUImageMovie processPlayerItem]
+___34-[GPUImageMovie processPlayerItem]_block_invoke
+___copy_helper_block_.196
+___destroy_helper_block_.197
+-[GPUImageMovie outputMediaDataWillChange:]
+-[GPUImageMovie displayLinkCallback:]
+___37-[GPUImageMovie displayLinkCallback:]_block_invoke
+-[GPUImageMovie readNextVideoFrameFromOutput:]
+___46-[GPUImageMovie readNextVideoFrameFromOutput:]_block_invoke
+-[GPUImageMovie readNextAudioSampleFromOutput:]
+-[GPUImageMovie processMovieFrame:]
+-[GPUImageMovie progress]
+-[GPUImageMovie processMovieFrame:withSampleTime:]
+-[GPUImageMovie endProcessing]
+___30-[GPUImageMovie endProcessing]_block_invoke
+___30-[GPUImageMovie endProcessing]_block_invoke_2
+-[GPUImageMovie cancelProcessing]
+-[GPUImageMovie convertYUVToRGBOutput]
+-[GPUImageMovie assetReader]
+-[GPUImageMovie audioEncodingIsFinished]
+-[GPUImageMovie videoEncodingIsFinished]
+-[GPUImageMovie url]
+-[GPUImageMovie setUrl:]
+-[GPUImageMovie asset]
+-[GPUImageMovie setAsset:]
+-[GPUImageMovie runBenchmark]
+-[GPUImageMovie setRunBenchmark:]
+-[GPUImageMovie playAtActualSpeed]
+-[GPUImageMovie setPlayAtActualSpeed:]
+-[GPUImageMovie delegate]
+-[GPUImageMovie setDelegate:]
+-[GPUImageMovie shouldRepeat]
+-[GPUImageMovie setShouldRepeat:]
+-[GPUImageMovie playerItem]
+-[GPUImageMovie setPlayerItem:]
+-[GPUImageMovie .cxx_destruct]
+_OBJC_IVAR_$_GPUImageMovie._preferredConversion
+_OBJC_IVAR_$_GPUImageMovie.isFullYUVRange
+_OBJC_IVAR_$_GPUImageMovie.yuvConversionProgram
+_OBJC_IVAR_$_GPUImageMovie.yuvConversionPositionAttribute
+_OBJC_IVAR_$_GPUImageMovie.yuvConversionTextureCoordinateAttribute
+_OBJC_IVAR_$_GPUImageMovie.yuvConversionLuminanceTextureUniform
+_OBJC_IVAR_$_GPUImageMovie.yuvConversionChrominanceTextureUniform
+_OBJC_IVAR_$_GPUImageMovie.yuvConversionMatrixUniform
+_OBJC_IVAR_$_GPUImageMovie.synchronizedMovieWriter
+_OBJC_IVAR_$_GPUImageMovie._shouldRepeat
+_OBJC_IVAR_$_GPUImageMovie.keepLooping
+_OBJC_IVAR_$_GPUImageMovie.previousFrameTime
+_OBJC_IVAR_$_GPUImageMovie.previousActualFrameTime
+___block_descriptor_tmp.95
+___block_descriptor_tmp.98
+_OBJC_IVAR_$_GPUImageMovie.reader
+_OBJC_IVAR_$_GPUImageMovie.audioEncodingIsFinished
+___block_descriptor_tmp.149
+___block_descriptor_tmp.158
+___block_descriptor_tmp.172
+_OBJC_IVAR_$_GPUImageMovie.displayLink
+_OBJC_IVAR_$_GPUImageMovie.playerItemOutput
+_OBJC_IVAR_$_GPUImageMovie._playerItem
+___block_descriptor_tmp.198
+___block_descriptor_tmp.212
+_OBJC_IVAR_$_GPUImageMovie.videoEncodingIsFinished
+_OBJC_IVAR_$_GPUImageMovie._playAtActualSpeed
+___block_descriptor_tmp.218
+_OBJC_IVAR_$_GPUImageMovie.processingFrameTime
+_OBJC_IVAR_$_GPUImageMovie.imageBufferWidth
+_OBJC_IVAR_$_GPUImageMovie.imageBufferHeight
+_OBJC_IVAR_$_GPUImageMovie.luminanceTexture
+_OBJC_IVAR_$_GPUImageMovie.chrominanceTexture
+_OBJC_IVAR_$_GPUImageMovie._runBenchmark
+___block_descriptor_tmp.251
+___block_descriptor_tmp.252
+___block_literal_global.253
+_convertYUVToRGBOutput.textureCoordinates
+_OBJC_IVAR_$_GPUImageMovie._url
+_OBJC_IVAR_$_GPUImageMovie._asset
+_OBJC_IVAR_$_GPUImageMovie._delegate
+l_OBJC_PROTOCOL_$_AVPlayerItemOutputPullDelegate
+l_OBJC_LABEL_PROTOCOL_$_AVPlayerItemOutputPullDelegate
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageMovie.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageMovie.h
+__30-[GPUImageMovie endProcessing]_block_invoke_2
+__30-[GPUImageMovie endProcessing]_block_invoke
+__46-[GPUImageMovie readNextVideoFrameFromOutput:]_block_invoke
+__37-[GPUImageMovie displayLinkCallback:]_block_invoke
+__34-[GPUImageMovie processPlayerItem]_block_invoke
+__29-[GPUImageMovie processAsset]_block_invoke.167
+__29-[GPUImageMovie processAsset]_block_invoke.152
+__29-[GPUImageMovie processAsset]_block_invoke
+__32-[GPUImageMovie startProcessing]_block_invoke_2
+__32-[GPUImageMovie startProcessing]_block_invoke
+__35-[GPUImageMovie yuvConversionSetup]_block_invoke
+-[GPUImageMovieComposition initWithComposition:andVideoComposition:andAudioMix:]
+-[GPUImageMovieComposition createAssetReader]
+-[GPUImageMovieComposition compositon]
+-[GPUImageMovieComposition setCompositon:]
+-[GPUImageMovieComposition videoComposition]
+-[GPUImageMovieComposition setVideoComposition:]
+-[GPUImageMovieComposition audioMix]
+-[GPUImageMovieComposition setAudioMix:]
+-[GPUImageMovieComposition .cxx_destruct]
+_OBJC_IVAR_$_GPUImageMovieComposition._compositon
+_OBJC_IVAR_$_GPUImageMovieComposition._videoComposition
+_OBJC_IVAR_$_GPUImageMovieComposition._audioMix
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageMovieComposition.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageMovieComposition.h
+-[GPUImageTextureInput initWithTexture:size:]
+___45-[GPUImageTextureInput initWithTexture:size:]_block_invoke
+___45-[GPUImageTextureInput initWithTexture:size:]_block_invoke_2
+-[GPUImageTextureInput processTextureWithFrameTime:]
+___52-[GPUImageTextureInput processTextureWithFrameTime:]_block_invoke
+___copy_helper_block_.23
+___destroy_helper_block_.24
+___block_descriptor_tmp.8
+___block_descriptor_tmp.25
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageTextureInput.m
+__52-[GPUImageTextureInput processTextureWithFrameTime:]_block_invoke
+__45-[GPUImageTextureInput initWithTexture:size:]_block_invoke_2
+__45-[GPUImageTextureInput initWithTexture:size:]_block_invoke
+-[GPUImageRawDataInput initWithBytes:size:]
+-[GPUImageRawDataInput initWithBytes:size:pixelFormat:]
+-[GPUImageRawDataInput initWithBytes:size:pixelFormat:type:]
+-[GPUImageRawDataInput dealloc]
+-[GPUImageRawDataInput uploadBytes:]
+-[GPUImageRawDataInput updateDataFromBytes:size:]
+-[GPUImageRawDataInput processData]
+___35-[GPUImageRawDataInput processData]_block_invoke
+-[GPUImageRawDataInput processDataForTimestamp:]
+___48-[GPUImageRawDataInput processDataForTimestamp:]_block_invoke
+-[GPUImageRawDataInput outputImageSize]
+-[GPUImageRawDataInput pixelFormat]
+-[GPUImageRawDataInput setPixelFormat:]
+-[GPUImageRawDataInput pixelType]
+-[GPUImageRawDataInput setPixelType:]
+-[GPUImageRawDataInput .cxx_destruct]
+_OBJC_IVAR_$_GPUImageRawDataInput._pixelFormat
+_OBJC_IVAR_$_GPUImageRawDataInput._pixelType
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageRawDataInput.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageRawDataInput.h
+__48-[GPUImageRawDataInput processDataForTimestamp:]_block_invoke
+__35-[GPUImageRawDataInput processData]_block_invoke
+-[GPUImageUIElement initWithView:]
+-[GPUImageUIElement initWithLayer:]
+-[GPUImageUIElement layerSizeInPixels]
+-[GPUImageUIElement update]
+-[GPUImageUIElement updateUsingCurrentTime]
+-[GPUImageUIElement updateWithTimestamp:]
+-[GPUImageUIElement .cxx_destruct]
+_OBJC_IVAR_$_GPUImageUIElement.view
+_OBJC_IVAR_$_GPUImageUIElement.layer
+_OBJC_IVAR_$_GPUImageUIElement.previousLayerSizeInPixels
+_OBJC_IVAR_$_GPUImageUIElement.time
+_OBJC_IVAR_$_GPUImageUIElement.actualTimeOfLastUpdate
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageUIElement.m
+-[GPUImageFilterPipeline initWithConfiguration:input:output:]
+-[GPUImageFilterPipeline initWithConfigurationFile:input:output:]
+-[GPUImageFilterPipeline _parseConfiguration:]
+-[GPUImageFilterPipeline initWithOrderedFilters:input:output:]
+-[GPUImageFilterPipeline addFilter:atIndex:]
+-[GPUImageFilterPipeline addFilter:]
+-[GPUImageFilterPipeline replaceFilterAtIndex:withFilter:]
+-[GPUImageFilterPipeline removeFilter:]
+-[GPUImageFilterPipeline removeFilterAtIndex:]
+-[GPUImageFilterPipeline removeAllFilters]
+-[GPUImageFilterPipeline replaceAllFilters:]
+-[GPUImageFilterPipeline _refreshFilters]
+-[GPUImageFilterPipeline currentFilteredFrame]
+-[GPUImageFilterPipeline currentFilteredFrameWithOrientation:]
+-[GPUImageFilterPipeline newCGImageFromCurrentFilteredFrame]
+-[GPUImageFilterPipeline filters]
+-[GPUImageFilterPipeline setFilters:]
+-[GPUImageFilterPipeline input]
+-[GPUImageFilterPipeline setInput:]
+-[GPUImageFilterPipeline output]
+-[GPUImageFilterPipeline setOutput:]
+-[GPUImageFilterPipeline .cxx_destruct]
+_OBJC_IVAR_$_GPUImageFilterPipeline._filters
+_OBJC_IVAR_$_GPUImageFilterPipeline._input
+_OBJC_IVAR_$_GPUImageFilterPipeline._output
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageFilterPipeline.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageFilterPipeline.h
+CGPointMake
+-[GPUImageFilter initWithVertexShaderFromString:fragmentShaderFromString:]
+___74-[GPUImageFilter initWithVertexShaderFromString:fragmentShaderFromString:]_block_invoke
+-[GPUImageFilter initWithFragmentShaderFromString:]
+-[GPUImageFilter initWithFragmentShaderFromFile:]
+-[GPUImageFilter init]
+-[GPUImageFilter initializeAttributes]
+-[GPUImageFilter setupFilterForSize:]
+-[GPUImageFilter dealloc]
+-[GPUImageFilter useNextFrameForImageCapture]
+-[GPUImageFilter newCGImageFromCurrentlyProcessedOutput]
+-[GPUImageFilter sizeOfFBO]
++[GPUImageFilter textureCoordinatesForRotation:]
+-[GPUImageFilter renderToTextureWithVertices:textureCoordinates:]
+-[GPUImageFilter informTargetsAboutNewFrameAtTime:]
+-[GPUImageFilter outputFrameSize]
+-[GPUImageFilter setBackgroundColorRed:green:blue:alpha:]
+-[GPUImageFilter setInteger:forUniformName:]
+-[GPUImageFilter setFloat:forUniformName:]
+-[GPUImageFilter setSize:forUniformName:]
+-[GPUImageFilter setPoint:forUniformName:]
+-[GPUImageFilter setFloatVec3:forUniformName:]
+-[GPUImageFilter setFloatVec4:forUniform:]
+-[GPUImageFilter setFloatArray:length:forUniform:]
+-[GPUImageFilter setMatrix3f:forUniform:program:]
+___49-[GPUImageFilter setMatrix3f:forUniform:program:]_block_invoke
+___49-[GPUImageFilter setMatrix3f:forUniform:program:]_block_invoke_2
+___copy_helper_block_.138
+___destroy_helper_block_.139
+-[GPUImageFilter setMatrix4f:forUniform:program:]
+___49-[GPUImageFilter setMatrix4f:forUniform:program:]_block_invoke
+___49-[GPUImageFilter setMatrix4f:forUniform:program:]_block_invoke_2
+___copy_helper_block_.143
+___destroy_helper_block_.144
+-[GPUImageFilter setFloat:forUniform:program:]
+___46-[GPUImageFilter setFloat:forUniform:program:]_block_invoke
+___46-[GPUImageFilter setFloat:forUniform:program:]_block_invoke_2
+___copy_helper_block_.148
+___destroy_helper_block_.149
+-[GPUImageFilter setPoint:forUniform:program:]
+___46-[GPUImageFilter setPoint:forUniform:program:]_block_invoke
+___46-[GPUImageFilter setPoint:forUniform:program:]_block_invoke_2
+___copy_helper_block_.153
+___destroy_helper_block_.154
+-[GPUImageFilter setSize:forUniform:program:]
+___45-[GPUImageFilter setSize:forUniform:program:]_block_invoke
+___45-[GPUImageFilter setSize:forUniform:program:]_block_invoke_2
+___copy_helper_block_.158
+___destroy_helper_block_.159
+-[GPUImageFilter setVec3:forUniform:program:]
+___45-[GPUImageFilter setVec3:forUniform:program:]_block_invoke
+___45-[GPUImageFilter setVec3:forUniform:program:]_block_invoke_2
+___copy_helper_block_.163
+___destroy_helper_block_.164
+-[GPUImageFilter setVec4:forUniform:program:]
+___45-[GPUImageFilter setVec4:forUniform:program:]_block_invoke
+___45-[GPUImageFilter setVec4:forUniform:program:]_block_invoke_2
+___copy_helper_block_.168
+___destroy_helper_block_.169
+-[GPUImageFilter setFloatArray:length:forUniform:program:]
+___58-[GPUImageFilter setFloatArray:length:forUniform:program:]_block_invoke
+___58-[GPUImageFilter setFloatArray:length:forUniform:program:]_block_invoke_2
+___copy_helper_block_.176
+___destroy_helper_block_.177
+___copy_helper_block_.179
+___destroy_helper_block_.180
+-[GPUImageFilter setInteger:forUniform:program:]
+___48-[GPUImageFilter setInteger:forUniform:program:]_block_invoke
+___48-[GPUImageFilter setInteger:forUniform:program:]_block_invoke_2
+___copy_helper_block_.184
+___destroy_helper_block_.185
+-[GPUImageFilter setAndExecuteUniformStateCallbackAtIndex:forProgram:toBlock:]
+-[GPUImageFilter setUniformsForProgramAtIndex:]
+___47-[GPUImageFilter setUniformsForProgramAtIndex:]_block_invoke
+-[GPUImageFilter newFrameReadyAtTime:atIndex:]
+-[GPUImageFilter nextAvailableTextureIndex]
+-[GPUImageFilter setInputFramebuffer:atIndex:]
+-[GPUImageFilter rotatedSize:forIndex:]
+-[GPUImageFilter rotatedPoint:forRotation:]
+-[GPUImageFilter setInputSize:atIndex:]
+-[GPUImageFilter setInputRotation:atIndex:]
+-[GPUImageFilter forceProcessingAtSize:]
+-[GPUImageFilter forceProcessingAtSizeRespectingAspectRatio:]
+-[GPUImageFilter maximumOutputSize]
+-[GPUImageFilter endProcessing]
+-[GPUImageFilter wantsMonochromeInput]
+-[GPUImageFilter preventRendering]
+-[GPUImageFilter setPreventRendering:]
+-[GPUImageFilter currentlyReceivingMonochromeInput]
+-[GPUImageFilter setCurrentlyReceivingMonochromeInput:]
+-[GPUImageFilter renderTarget]
+-[GPUImageFilter .cxx_destruct]
+_OBJC_IVAR_$_GPUImageFilter._preventRendering
+_textureCoordinatesForRotation:.noRotationTextureCoordinates
+_textureCoordinatesForRotation:.rotateLeftTextureCoordinates
+_textureCoordinatesForRotation:.rotateRightTextureCoordinates
+_textureCoordinatesForRotation:.verticalFlipTextureCoordinates
+_textureCoordinatesForRotation:.horizontalFlipTextureCoordinates
+_textureCoordinatesForRotation:.rotateRightVerticalFlipTextureCoordinates
+_textureCoordinatesForRotation:.rotateRightHorizontalFlipTextureCoordinates
+_textureCoordinatesForRotation:.rotate180TextureCoordinates
+___block_descriptor_tmp.135
+___block_descriptor_tmp.140
+___block_descriptor_tmp.142
+___block_descriptor_tmp.145
+___block_descriptor_tmp.147
+___block_descriptor_tmp.150
+___block_descriptor_tmp.152
+___block_descriptor_tmp.155
+___block_descriptor_tmp.157
+___block_descriptor_tmp.160
+___block_descriptor_tmp.162
+___block_descriptor_tmp.165
+___block_descriptor_tmp.167
+___block_descriptor_tmp.170
+___block_descriptor_tmp.178
+___block_descriptor_tmp.181
+___block_descriptor_tmp.183
+___block_descriptor_tmp.186
+___block_descriptor_tmp.195
+_newFrameReadyAtTime:atIndex:.imageVertices
+_OBJC_IVAR_$_GPUImageFilter._renderTarget
+l_OBJC_PROTOCOL_$_GPUImageInput
+l_OBJC_LABEL_PROTOCOL_$_GPUImageInput
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageFilter.h
+__47-[GPUImageFilter setUniformsForProgramAtIndex:]_block_invoke
+__48-[GPUImageFilter setInteger:forUniform:program:]_block_invoke_2
+__48-[GPUImageFilter setInteger:forUniform:program:]_block_invoke
+__58-[GPUImageFilter setFloatArray:length:forUniform:program:]_block_invoke_2
+__58-[GPUImageFilter setFloatArray:length:forUniform:program:]_block_invoke
+__45-[GPUImageFilter setVec4:forUniform:program:]_block_invoke_2
+__45-[GPUImageFilter setVec4:forUniform:program:]_block_invoke
+__45-[GPUImageFilter setVec3:forUniform:program:]_block_invoke_2
+__45-[GPUImageFilter setVec3:forUniform:program:]_block_invoke
+__45-[GPUImageFilter setSize:forUniform:program:]_block_invoke_2
+__45-[GPUImageFilter setSize:forUniform:program:]_block_invoke
+__46-[GPUImageFilter setPoint:forUniform:program:]_block_invoke_2
+__46-[GPUImageFilter setPoint:forUniform:program:]_block_invoke
+__46-[GPUImageFilter setFloat:forUniform:program:]_block_invoke_2
+__46-[GPUImageFilter setFloat:forUniform:program:]_block_invoke
+__49-[GPUImageFilter setMatrix4f:forUniform:program:]_block_invoke_2
+__49-[GPUImageFilter setMatrix4f:forUniform:program:]_block_invoke
+__49-[GPUImageFilter setMatrix3f:forUniform:program:]_block_invoke_2
+__49-[GPUImageFilter setMatrix3f:forUniform:program:]_block_invoke
+__74-[GPUImageFilter initWithVertexShaderFromString:fragmentShaderFromString:]_block_invoke
+-[GPUImageTwoInputFilter initWithFragmentShaderFromString:]
+-[GPUImageTwoInputFilter initWithVertexShaderFromString:fragmentShaderFromString:]
+___82-[GPUImageTwoInputFilter initWithVertexShaderFromString:fragmentShaderFromString:]_block_invoke
+-[GPUImageTwoInputFilter initializeAttributes]
+-[GPUImageTwoInputFilter disableFirstFrameCheck]
+-[GPUImageTwoInputFilter disableSecondFrameCheck]
+-[GPUImageTwoInputFilter renderToTextureWithVertices:textureCoordinates:]
+-[GPUImageTwoInputFilter nextAvailableTextureIndex]
+-[GPUImageTwoInputFilter setInputFramebuffer:atIndex:]
+-[GPUImageTwoInputFilter setInputSize:atIndex:]
+-[GPUImageTwoInputFilter setInputRotation:atIndex:]
+-[GPUImageTwoInputFilter rotatedSize:forIndex:]
+-[GPUImageTwoInputFilter newFrameReadyAtTime:atIndex:]
+-[GPUImageTwoInputFilter .cxx_destruct]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageTwoInputFilter.m
+__82-[GPUImageTwoInputFilter initWithVertexShaderFromString:fragmentShaderFromString:]_block_invoke
+-[GPUImageThreeInputFilter initWithFragmentShaderFromString:]
+-[GPUImageThreeInputFilter initWithVertexShaderFromString:fragmentShaderFromString:]
+___84-[GPUImageThreeInputFilter initWithVertexShaderFromString:fragmentShaderFromString:]_block_invoke
+-[GPUImageThreeInputFilter initializeAttributes]
+-[GPUImageThreeInputFilter disableThirdFrameCheck]
+-[GPUImageThreeInputFilter renderToTextureWithVertices:textureCoordinates:]
+-[GPUImageThreeInputFilter nextAvailableTextureIndex]
+-[GPUImageThreeInputFilter setInputFramebuffer:atIndex:]
+-[GPUImageThreeInputFilter setInputSize:atIndex:]
+-[GPUImageThreeInputFilter setInputRotation:atIndex:]
+-[GPUImageThreeInputFilter rotatedSize:forIndex:]
+-[GPUImageThreeInputFilter newFrameReadyAtTime:atIndex:]
+-[GPUImageThreeInputFilter .cxx_destruct]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageThreeInputFilter.m
+__84-[GPUImageThreeInputFilter initWithVertexShaderFromString:fragmentShaderFromString:]_block_invoke
+-[GPUImageTwoPassFilter initWithFirstStageVertexShaderFromString:firstStageFragmentShaderFromString:secondStageVertexShaderFromString:secondStageFragmentShaderFromString:]
+___171-[GPUImageTwoPassFilter initWithFirstStageVertexShaderFromString:firstStageFragmentShaderFromString:secondStageVertexShaderFromString:secondStageFragmentShaderFromString:]_block_invoke
+-[GPUImageTwoPassFilter initWithFirstStageFragmentShaderFromString:secondStageFragmentShaderFromString:]
+-[GPUImageTwoPassFilter initializeSecondaryAttributes]
+-[GPUImageTwoPassFilter framebufferForOutput]
+-[GPUImageTwoPassFilter removeOutputFramebuffer]
+-[GPUImageTwoPassFilter renderToTextureWithVertices:textureCoordinates:]
+-[GPUImageTwoPassFilter setAndExecuteUniformStateCallbackAtIndex:forProgram:toBlock:]
+-[GPUImageTwoPassFilter setUniformsForProgramAtIndex:]
+___54-[GPUImageTwoPassFilter setUniformsForProgramAtIndex:]_block_invoke
+___54-[GPUImageTwoPassFilter setUniformsForProgramAtIndex:]_block_invoke_2
+-[GPUImageTwoPassFilter .cxx_destruct]
+___block_descriptor_tmp.90
+___block_descriptor_tmp.93
+___block_literal_global.94
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageTwoPassFilter.m
+__54-[GPUImageTwoPassFilter setUniformsForProgramAtIndex:]_block_invoke_2
+__54-[GPUImageTwoPassFilter setUniformsForProgramAtIndex:]_block_invoke
+__171-[GPUImageTwoPassFilter initWithFirstStageVertexShaderFromString:firstStageFragmentShaderFromString:secondStageVertexShaderFromString:secondStageFragmentShaderFromString:]_block_invoke
+-[GPUImageTwoPassTextureSamplingFilter initWithFirstStageVertexShaderFromString:firstStageFragmentShaderFromString:secondStageVertexShaderFromString:secondStageFragmentShaderFromString:]
+___186-[GPUImageTwoPassTextureSamplingFilter initWithFirstStageVertexShaderFromString:firstStageFragmentShaderFromString:secondStageVertexShaderFromString:secondStageFragmentShaderFromString:]_block_invoke
+-[GPUImageTwoPassTextureSamplingFilter setUniformsForProgramAtIndex:]
+-[GPUImageTwoPassTextureSamplingFilter setupFilterForSize:]
+___59-[GPUImageTwoPassTextureSamplingFilter setupFilterForSize:]_block_invoke
+___copy_helper_block_.14
+___destroy_helper_block_.15
+-[GPUImageTwoPassTextureSamplingFilter setVerticalTexelSpacing:]
+-[GPUImageTwoPassTextureSamplingFilter setHorizontalTexelSpacing:]
+-[GPUImageTwoPassTextureSamplingFilter verticalTexelSpacing]
+-[GPUImageTwoPassTextureSamplingFilter horizontalTexelSpacing]
+___block_descriptor_tmp.16
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageTwoPassTextureSamplingFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageTwoPassTextureSamplingFilter.h
+__59-[GPUImageTwoPassTextureSamplingFilter setupFilterForSize:]_block_invoke
+__186-[GPUImageTwoPassTextureSamplingFilter initWithFirstStageVertexShaderFromString:firstStageFragmentShaderFromString:secondStageVertexShaderFromString:secondStageFragmentShaderFromString:]_block_invoke
+-[GPUImageFilterGroup init]
+-[GPUImageFilterGroup addFilter:]
+-[GPUImageFilterGroup filterAtIndex:]
+-[GPUImageFilterGroup filterCount]
+-[GPUImageFilterGroup useNextFrameForImageCapture]
+-[GPUImageFilterGroup newCGImageFromCurrentlyProcessedOutput]
+-[GPUImageFilterGroup setTargetToIgnoreForUpdates:]
+-[GPUImageFilterGroup addTarget:atTextureLocation:]
+-[GPUImageFilterGroup removeTarget:]
+-[GPUImageFilterGroup removeAllTargets]
+-[GPUImageFilterGroup targets]
+-[GPUImageFilterGroup setFrameProcessingCompletionBlock:]
+-[GPUImageFilterGroup frameProcessingCompletionBlock]
+-[GPUImageFilterGroup newFrameReadyAtTime:atIndex:]
+-[GPUImageFilterGroup setInputFramebuffer:atIndex:]
+-[GPUImageFilterGroup nextAvailableTextureIndex]
+-[GPUImageFilterGroup setInputSize:atIndex:]
+-[GPUImageFilterGroup setInputRotation:atIndex:]
+-[GPUImageFilterGroup forceProcessingAtSize:]
+-[GPUImageFilterGroup forceProcessingAtSizeRespectingAspectRatio:]
+-[GPUImageFilterGroup maximumOutputSize]
+-[GPUImageFilterGroup endProcessing]
+-[GPUImageFilterGroup wantsMonochromeInput]
+-[GPUImageFilterGroup setCurrentlyReceivingMonochromeInput:]
+-[GPUImageFilterGroup terminalFilter]
+-[GPUImageFilterGroup setTerminalFilter:]
+-[GPUImageFilterGroup initialFilters]
+-[GPUImageFilterGroup setInitialFilters:]
+-[GPUImageFilterGroup inputFilterToIgnoreForUpdates]
+-[GPUImageFilterGroup setInputFilterToIgnoreForUpdates:]
+-[GPUImageFilterGroup .cxx_destruct]
+_OBJC_IVAR_$_GPUImageFilterGroup._terminalFilter
+_OBJC_IVAR_$_GPUImageFilterGroup._initialFilters
+_OBJC_IVAR_$_GPUImageFilterGroup._inputFilterToIgnoreForUpdates
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageFilterGroup.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageFilterGroup.h
+-[GPUImage3x3TextureSamplingFilter initWithVertexShaderFromString:fragmentShaderFromString:]
+-[GPUImage3x3TextureSamplingFilter initWithFragmentShaderFromString:]
+-[GPUImage3x3TextureSamplingFilter setupFilterForSize:]
+___55-[GPUImage3x3TextureSamplingFilter setupFilterForSize:]_block_invoke
+-[GPUImage3x3TextureSamplingFilter setTexelWidth:]
+-[GPUImage3x3TextureSamplingFilter setTexelHeight:]
+-[GPUImage3x3TextureSamplingFilter texelWidth]
+-[GPUImage3x3TextureSamplingFilter texelHeight]
+_OBJC_IVAR_$_GPUImage3x3TextureSamplingFilter._texelWidth
+_OBJC_IVAR_$_GPUImage3x3TextureSamplingFilter._texelHeight
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImage3x3TextureSamplingFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImage3x3TextureSamplingFilter.h
+__55-[GPUImage3x3TextureSamplingFilter setupFilterForSize:]_block_invoke
+-[GPUImageTwoInputCrossTextureSamplingFilter initWithFragmentShaderFromString:]
+-[GPUImageTwoInputCrossTextureSamplingFilter setupFilterForSize:]
+___65-[GPUImageTwoInputCrossTextureSamplingFilter setupFilterForSize:]_block_invoke
+-[GPUImageTwoInputCrossTextureSamplingFilter setTexelWidth:]
+-[GPUImageTwoInputCrossTextureSamplingFilter setTexelHeight:]
+-[GPUImageTwoInputCrossTextureSamplingFilter texelWidth]
+-[GPUImageTwoInputCrossTextureSamplingFilter texelHeight]
+_OBJC_IVAR_$_GPUImageTwoInputCrossTextureSamplingFilter._texelWidth
+_OBJC_IVAR_$_GPUImageTwoInputCrossTextureSamplingFilter._texelHeight
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageTwoInputCrossTextureSamplingFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageTwoInputCrossTextureSamplingFilter.h
+__65-[GPUImageTwoInputCrossTextureSamplingFilter setupFilterForSize:]_block_invoke
+-[GPUImageBuffer init]
+-[GPUImageBuffer dealloc]
+-[GPUImageBuffer newFrameReadyAtTime:atIndex:]
+-[GPUImageBuffer renderToTextureWithVertices:textureCoordinates:]
+-[GPUImageBuffer setBufferSize:]
+-[GPUImageBuffer bufferSize]
+-[GPUImageBuffer .cxx_destruct]
+_OBJC_IVAR_$_GPUImageBuffer._bufferSize
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageBuffer.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageBuffer.h
+-[GPUImageBrightnessFilter init]
+-[GPUImageBrightnessFilter setBrightness:]
+-[GPUImageBrightnessFilter brightness]
+_OBJC_IVAR_$_GPUImageBrightnessFilter._brightness
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageBrightnessFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageBrightnessFilter.h
+-[GPUImageLevelsFilter init]
+-[GPUImageLevelsFilter updateUniforms]
+-[GPUImageLevelsFilter setMin:gamma:max:minOut:maxOut:]
+-[GPUImageLevelsFilter setMin:gamma:max:]
+-[GPUImageLevelsFilter setRedMin:gamma:max:minOut:maxOut:]
+-[GPUImageLevelsFilter setRedMin:gamma:max:]
+-[GPUImageLevelsFilter setGreenMin:gamma:max:minOut:maxOut:]
+-[GPUImageLevelsFilter setGreenMin:gamma:max:]
+-[GPUImageLevelsFilter setBlueMin:gamma:max:minOut:maxOut:]
+-[GPUImageLevelsFilter setBlueMin:gamma:max:]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageLevelsFilter.m
+-[GPUImageExposureFilter init]
+-[GPUImageExposureFilter setExposure:]
+-[GPUImageExposureFilter exposure]
+_OBJC_IVAR_$_GPUImageExposureFilter._exposure
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageExposureFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageExposureFilter.h
+-[GPUImageContrastFilter init]
+-[GPUImageContrastFilter setContrast:]
+-[GPUImageContrastFilter contrast]
+_OBJC_IVAR_$_GPUImageContrastFilter._contrast
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageContrastFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageContrastFilter.h
+-[GPUImageSaturationFilter init]
+-[GPUImageSaturationFilter setSaturation:]
+-[GPUImageSaturationFilter saturation]
+_OBJC_IVAR_$_GPUImageSaturationFilter._saturation
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageSaturationFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageSaturationFilter.h
+-[GPUImageGammaFilter init]
+-[GPUImageGammaFilter setGamma:]
+-[GPUImageGammaFilter gamma]
+_OBJC_IVAR_$_GPUImageGammaFilter._gamma
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageGammaFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageGammaFilter.h
+-[GPUImageColorMatrixFilter init]
+-[GPUImageColorMatrixFilter setIntensity:]
+-[GPUImageColorMatrixFilter setColorMatrix:]
+-[GPUImageColorMatrixFilter intensity]
+-[GPUImageColorMatrixFilter colorMatrix]
+_OBJC_IVAR_$_GPUImageColorMatrixFilter._intensity
+_OBJC_IVAR_$_GPUImageColorMatrixFilter._colorMatrix
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageColorMatrixFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageColorMatrixFilter.h
+-[GPUImageRGBFilter init]
+-[GPUImageRGBFilter setRed:]
+-[GPUImageRGBFilter setGreen:]
+-[GPUImageRGBFilter setBlue:]
+-[GPUImageRGBFilter red]
+-[GPUImageRGBFilter blue]
+-[GPUImageRGBFilter green]
+_OBJC_IVAR_$_GPUImageRGBFilter._red
+_OBJC_IVAR_$_GPUImageRGBFilter._green
+_OBJC_IVAR_$_GPUImageRGBFilter._blue
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageRGBFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageRGBFilter.h
+-[GPUImageHSBFilter init]
+-[GPUImageHSBFilter reset]
+-[GPUImageHSBFilter rotateHue:]
+-[GPUImageHSBFilter adjustSaturation:]
+-[GPUImageHSBFilter adjustBrightness:]
+-[GPUImageHSBFilter _updateColorMatrix]
+_matrixmult
+_OBJC_IVAR_$_GPUImageHSBFilter.matrix
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageHSBFilter.m
+matrixmult
+cscalemat
+saturatemat
+huerotatemat
+xrotatemat
+yrotatemat
+zshearmat
+zrotatemat
+xformpnt
+identmat
+-[GPUImageHueFilter init]
+-[GPUImageHueFilter setHue:]
+-[GPUImageHueFilter hue]
+_OBJC_IVAR_$_GPUImageHueFilter.hue
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageHueFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageHueFilter.h
+-[GPUImageMonochromeFilter init]
+-[GPUImageMonochromeFilter setColor:]
+-[GPUImageMonochromeFilter setColorRed:green:blue:]
+-[GPUImageMonochromeFilter setIntensity:]
+-[GPUImageMonochromeFilter intensity]
+-[GPUImageMonochromeFilter color]
+_OBJC_IVAR_$_GPUImageMonochromeFilter._color
+_OBJC_IVAR_$_GPUImageMonochromeFilter._intensity
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageMonochromeFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageMonochromeFilter.h
+-[GPUImageFalseColorFilter init]
+-[GPUImageFalseColorFilter setFirstColor:]
+-[GPUImageFalseColorFilter setSecondColor:]
+-[GPUImageFalseColorFilter setFirstColorRed:green:blue:]
+-[GPUImageFalseColorFilter setSecondColorRed:green:blue:]
+-[GPUImageFalseColorFilter secondColor]
+-[GPUImageFalseColorFilter firstColor]
+_OBJC_IVAR_$_GPUImageFalseColorFilter._firstColor
+_OBJC_IVAR_$_GPUImageFalseColorFilter._secondColor
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageFalseColorFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageFalseColorFilter.h
+-[GPUImageHazeFilter init]
+-[GPUImageHazeFilter setDistance:]
+-[GPUImageHazeFilter setSlope:]
+-[GPUImageHazeFilter distance]
+-[GPUImageHazeFilter slope]
+_OBJC_IVAR_$_GPUImageHazeFilter._distance
+_OBJC_IVAR_$_GPUImageHazeFilter._slope
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageHazeFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageHazeFilter.h
+-[GPUImageSepiaFilter init]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageSepiaFilter.m
+-[GPUImageColorInvertFilter init]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageColorInvertFilter.m
+-[GPUImageGrayscaleFilter renderToTextureWithVertices:textureCoordinates:]
+-[GPUImageGrayscaleFilter wantsMonochromeInput]
+-[GPUImageGrayscaleFilter providesMonochromeOutput]
+-[GPUImageGrayscaleFilter init]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageGrayscaleFilter.m
+-[GPUImageLuminanceThresholdFilter init]
+-[GPUImageLuminanceThresholdFilter setThreshold:]
+-[GPUImageLuminanceThresholdFilter threshold]
+_OBJC_IVAR_$_GPUImageLuminanceThresholdFilter._threshold
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageLuminanceThresholdFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageLuminanceThresholdFilter.h
+-[GPUImageAdaptiveThresholdFilter init]
+-[GPUImageAdaptiveThresholdFilter setBlurRadiusInPixels:]
+-[GPUImageAdaptiveThresholdFilter blurRadiusInPixels]
+-[GPUImageAdaptiveThresholdFilter .cxx_destruct]
+_OBJC_IVAR_$_GPUImageAdaptiveThresholdFilter.boxBlurFilter
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageAdaptiveThresholdFilter.m
+-[GPUImageAverageLuminanceThresholdFilter init]
+___47-[GPUImageAverageLuminanceThresholdFilter init]_block_invoke
+-[GPUImageAverageLuminanceThresholdFilter thresholdMultiplier]
+-[GPUImageAverageLuminanceThresholdFilter setThresholdMultiplier:]
+-[GPUImageAverageLuminanceThresholdFilter .cxx_destruct]
+_OBJC_IVAR_$_GPUImageAverageLuminanceThresholdFilter.luminosityFilter
+_OBJC_IVAR_$_GPUImageAverageLuminanceThresholdFilter.luminanceThresholdFilter
+_OBJC_IVAR_$_GPUImageAverageLuminanceThresholdFilter._thresholdMultiplier
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageAverageLuminanceThresholdFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageAverageLuminanceThresholdFilter.h
+__47-[GPUImageAverageLuminanceThresholdFilter init]_block_invoke
+-[GPUImageHistogramFilter initWithHistogramType:]
+___49-[GPUImageHistogramFilter initWithHistogramType:]_block_invoke
+-[GPUImageHistogramFilter init]
+-[GPUImageHistogramFilter initializeSecondaryAttributes]
+-[GPUImageHistogramFilter dealloc]
+-[GPUImageHistogramFilter sizeOfFBO]
+-[GPUImageHistogramFilter newFrameReadyAtTime:atIndex:]
+-[GPUImageHistogramFilter outputFrameSize]
+-[GPUImageHistogramFilter setInputSize:atIndex:]
+-[GPUImageHistogramFilter setInputRotation:atIndex:]
+-[GPUImageHistogramFilter renderToTextureWithVertices:textureCoordinates:]
+-[GPUImageHistogramFilter downsamplingFactor]
+-[GPUImageHistogramFilter setDownsamplingFactor:]
+-[GPUImageHistogramFilter .cxx_destruct]
+_OBJC_IVAR_$_GPUImageHistogramFilter._downsamplingFactor
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageHistogramFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageHistogramFilter.h
+__49-[GPUImageHistogramFilter initWithHistogramType:]_block_invoke
+-[GPUImageHistogramGenerator init]
+-[GPUImageHistogramGenerator setBackgroundColorRed:green:blue:alpha:]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageHistogramGenerator.m
+-[GPUImageACVFile initWithACVFileData:]
+-[GPUImageACVFile rgbCompositeCurvePoints]
+-[GPUImageACVFile setRgbCompositeCurvePoints:]
+-[GPUImageACVFile redCurvePoints]
+-[GPUImageACVFile setRedCurvePoints:]
+-[GPUImageACVFile greenCurvePoints]
+-[GPUImageACVFile setGreenCurvePoints:]
+-[GPUImageACVFile blueCurvePoints]
+-[GPUImageACVFile setBlueCurvePoints:]
+-[GPUImageACVFile .cxx_destruct]
+-[GPUImageToneCurveFilter init]
+-[GPUImageToneCurveFilter initWithACVData:]
+-[GPUImageToneCurveFilter initWithACV:]
+-[GPUImageToneCurveFilter initWithACVURL:]
+-[GPUImageToneCurveFilter setPointsWithACV:]
+-[GPUImageToneCurveFilter setPointsWithACVURL:]
+-[GPUImageToneCurveFilter dealloc]
+___34-[GPUImageToneCurveFilter dealloc]_block_invoke
+-[GPUImageToneCurveFilter getPreparedSplineCurve:]
+___50-[GPUImageToneCurveFilter getPreparedSplineCurve:]_block_invoke
+-[GPUImageToneCurveFilter splineCurve:]
+-[GPUImageToneCurveFilter secondDerivative:]
+-[GPUImageToneCurveFilter updateToneCurveTexture]
+___49-[GPUImageToneCurveFilter updateToneCurveTexture]_block_invoke
+___copy_helper_block_.118
+___destroy_helper_block_.119
+-[GPUImageToneCurveFilter renderToTextureWithVertices:textureCoordinates:]
+-[GPUImageToneCurveFilter setRGBControlPoints:]
+-[GPUImageToneCurveFilter setRgbCompositeControlPoints:]
+-[GPUImageToneCurveFilter setRedControlPoints:]
+-[GPUImageToneCurveFilter setGreenControlPoints:]
+-[GPUImageToneCurveFilter setBlueControlPoints:]
+-[GPUImageToneCurveFilter rgbCompositeControlPoints]
+-[GPUImageToneCurveFilter redControlPoints]
+-[GPUImageToneCurveFilter greenControlPoints]
+-[GPUImageToneCurveFilter blueControlPoints]
+-[GPUImageToneCurveFilter .cxx_destruct]
+_OBJC_IVAR_$_GPUImageToneCurveFilter.toneCurveTextureUniform
+_OBJC_IVAR_$_GPUImageToneCurveFilter.toneCurveTexture
+_OBJC_IVAR_$_GPUImageToneCurveFilter.toneCurveByteArray
+___block_descriptor_tmp.96
+_OBJC_IVAR_$_GPUImageToneCurveFilter._redCurve
+_OBJC_IVAR_$_GPUImageToneCurveFilter._greenCurve
+_OBJC_IVAR_$_GPUImageToneCurveFilter._blueCurve
+_OBJC_IVAR_$_GPUImageToneCurveFilter._rgbCompositeCurve
+___block_descriptor_tmp.120
+_OBJC_IVAR_$_GPUImageToneCurveFilter._redControlPoints
+_OBJC_IVAR_$_GPUImageToneCurveFilter._greenControlPoints
+_OBJC_IVAR_$_GPUImageToneCurveFilter._blueControlPoints
+_OBJC_IVAR_$_GPUImageToneCurveFilter._rgbCompositeControlPoints
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageToneCurveFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageToneCurveFilter.h
+__49-[GPUImageToneCurveFilter updateToneCurveTexture]_block_invoke
+__50-[GPUImageToneCurveFilter getPreparedSplineCurve:]_block_invoke
+__34-[GPUImageToneCurveFilter dealloc]_block_invoke
+int16WithBytes
+CFSwapInt16BigToHost
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFByteOrder.h
+-[GPUImageHighlightShadowFilter init]
+-[GPUImageHighlightShadowFilter setShadows:]
+-[GPUImageHighlightShadowFilter setHighlights:]
+-[GPUImageHighlightShadowFilter shadows]
+-[GPUImageHighlightShadowFilter highlights]
+_OBJC_IVAR_$_GPUImageHighlightShadowFilter._shadows
+_OBJC_IVAR_$_GPUImageHighlightShadowFilter._highlights
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageHighlightShadowFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageHighlightShadowFilter.h
+-[GPUImageLookupFilter init]
+-[GPUImageLookupFilter setIntensity:]
+-[GPUImageLookupFilter intensity]
+_OBJC_IVAR_$_GPUImageLookupFilter._intensity
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageLookupFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageLookupFilter.h
+-[GPUImageAmatorkaFilter init]
+-[GPUImageAmatorkaFilter .cxx_destruct]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageAmatorkaFilter.m
+-[GPUImageMissEtikateFilter init]
+-[GPUImageMissEtikateFilter .cxx_destruct]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageMissEtikateFilter.m
+-[GPUImageSoftEleganceFilter init]
+-[GPUImageSoftEleganceFilter .cxx_destruct]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageSoftEleganceFilter.m
+-[GPUImageOpacityFilter init]
+-[GPUImageOpacityFilter setOpacity:]
+-[GPUImageOpacityFilter opacity]
+_OBJC_IVAR_$_GPUImageOpacityFilter._opacity
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageOpacityFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageOpacityFilter.h
+-[GPUImageAverageColor init]
+___28-[GPUImageAverageColor init]_block_invoke
+-[GPUImageAverageColor dealloc]
+-[GPUImageAverageColor renderToTextureWithVertices:textureCoordinates:]
+-[GPUImageAverageColor setInputRotation:atIndex:]
+-[GPUImageAverageColor extractAverageColorAtFrameTime:]
+___55-[GPUImageAverageColor extractAverageColorAtFrameTime:]_block_invoke
+-[GPUImageAverageColor colorAverageProcessingFinishedBlock]
+-[GPUImageAverageColor setColorAverageProcessingFinishedBlock:]
+-[GPUImageAverageColor .cxx_destruct]
+_OBJC_IVAR_$_GPUImageAverageColor._colorAverageProcessingFinishedBlock
+___block_descriptor_tmp.50
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageAverageColor.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageAverageColor.h
+__55-[GPUImageAverageColor extractAverageColorAtFrameTime:]_block_invoke
+__28-[GPUImageAverageColor init]_block_invoke
+-[GPUImageLuminosity init]
+___26-[GPUImageLuminosity init]_block_invoke
+___26-[GPUImageLuminosity init]_block_invoke_2
+-[GPUImageLuminosity initializeSecondaryAttributes]
+-[GPUImageLuminosity extractLuminosityAtFrameTime:]
+___51-[GPUImageLuminosity extractLuminosityAtFrameTime:]_block_invoke
+___copy_helper_block_.75
+___destroy_helper_block_.76
+-[GPUImageLuminosity luminosityProcessingFinishedBlock]
+-[GPUImageLuminosity setLuminosityProcessingFinishedBlock:]
+-[GPUImageLuminosity .cxx_destruct]
+_OBJC_IVAR_$_GPUImageLuminosity._luminosityProcessingFinishedBlock
+___block_descriptor_tmp.77
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageLuminosity.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageLuminosity.h
+__51-[GPUImageLuminosity extractLuminosityAtFrameTime:]_block_invoke
+__26-[GPUImageLuminosity init]_block_invoke_2
+__26-[GPUImageLuminosity init]_block_invoke
+-[GPUImageSolidColorGenerator init]
+-[GPUImageSolidColorGenerator renderToTextureWithVertices:textureCoordinates:]
+___78-[GPUImageSolidColorGenerator renderToTextureWithVertices:textureCoordinates:]_block_invoke
+-[GPUImageSolidColorGenerator forceProcessingAtSize:]
+-[GPUImageSolidColorGenerator addTarget:atTextureLocation:]
+-[GPUImageSolidColorGenerator setColor:]
+-[GPUImageSolidColorGenerator setColorRed:green:blue:alpha:]
+___60-[GPUImageSolidColorGenerator setColorRed:green:blue:alpha:]_block_invoke
+___copy_helper_block_.34
+___destroy_helper_block_.35
+-[GPUImageSolidColorGenerator setUseExistingAlpha:]
+-[GPUImageSolidColorGenerator color]
+-[GPUImageSolidColorGenerator useExistingAlpha]
+_OBJC_IVAR_$_GPUImageSolidColorGenerator._color
+_OBJC_IVAR_$_GPUImageSolidColorGenerator._useExistingAlpha
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageSolidColorGenerator.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageSolidColorGenerator.h
+__60-[GPUImageSolidColorGenerator setColorRed:green:blue:alpha:]_block_invoke
+__78-[GPUImageSolidColorGenerator renderToTextureWithVertices:textureCoordinates:]_block_invoke
+-[GPUImageChromaKeyFilter init]
+-[GPUImageChromaKeyFilter setColorToReplaceRed:green:blue:]
+-[GPUImageChromaKeyFilter setThresholdSensitivity:]
+-[GPUImageChromaKeyFilter setSmoothing:]
+-[GPUImageChromaKeyFilter thresholdSensitivity]
+-[GPUImageChromaKeyFilter smoothing]
+_OBJC_IVAR_$_GPUImageChromaKeyFilter._thresholdSensitivity
+_OBJC_IVAR_$_GPUImageChromaKeyFilter._smoothing
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageChromaKeyFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageChromaKeyFilter.h
+-[GPUImageWhiteBalanceFilter init]
+-[GPUImageWhiteBalanceFilter setTemperature:]
+-[GPUImageWhiteBalanceFilter setTint:]
+-[GPUImageWhiteBalanceFilter temperature]
+-[GPUImageWhiteBalanceFilter tint]
+_OBJC_IVAR_$_GPUImageWhiteBalanceFilter._temperature
+_OBJC_IVAR_$_GPUImageWhiteBalanceFilter._tint
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageWhiteBalanceFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageWhiteBalanceFilter.h
+-[GPUImageLuminanceRangeFilter init]
+-[GPUImageLuminanceRangeFilter setRangeReductionFactor:]
+-[GPUImageLuminanceRangeFilter rangeReductionFactor]
+_OBJC_IVAR_$_GPUImageLuminanceRangeFilter._rangeReductionFactor
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageLuminanceRangeFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageLuminanceRangeFilter.h
+-[GPUImageTransformFilter init]
+-[GPUImageTransformFilter loadOrthoMatrix:left:right:bottom:top:near:far:]
+-[GPUImageTransformFilter convert3DTransform:toMatrix:]
+-[GPUImageTransformFilter newFrameReadyAtTime:atIndex:]
+-[GPUImageTransformFilter setupFilterForSize:]
+-[GPUImageTransformFilter setAffineTransform:]
+-[GPUImageTransformFilter affineTransform]
+-[GPUImageTransformFilter setTransform3D:]
+-[GPUImageTransformFilter setIgnoreAspectRatio:]
+-[GPUImageTransformFilter setAnchorTopLeft:]
+-[GPUImageTransformFilter transform3D]
+-[GPUImageTransformFilter ignoreAspectRatio]
+-[GPUImageTransformFilter anchorTopLeft]
+_OBJC_IVAR_$_GPUImageTransformFilter._anchorTopLeft
+_newFrameReadyAtTime:atIndex:.squareVertices
+_newFrameReadyAtTime:atIndex:.squareVerticesAnchorTL
+_OBJC_IVAR_$_GPUImageTransformFilter._ignoreAspectRatio
+_OBJC_IVAR_$_GPUImageTransformFilter._transform3D
+_OBJC_IVAR_$_GPUImageTransformFilter.affineTransform
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageTransformFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageTransformFilter.h
+-[GPUImageCropFilter initWithCropRegion:]
+-[GPUImageCropFilter init]
+-[GPUImageCropFilter setInputSize:atIndex:]
+-[GPUImageCropFilter calculateCropTextureCoordinates]
+-[GPUImageCropFilter newFrameReadyAtTime:atIndex:]
+-[GPUImageCropFilter setCropRegion:]
+-[GPUImageCropFilter setInputRotation:atIndex:]
+-[GPUImageCropFilter cropRegion]
+_OBJC_IVAR_$_GPUImageCropFilter.originallySuppliedInputSize
+_OBJC_IVAR_$_GPUImageCropFilter._cropRegion
+_newFrameReadyAtTime:atIndex:.cropSquareVertices
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageCropFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageCropFilter.h
+-[GPUImageSharpenFilter init]
+-[GPUImageSharpenFilter setupFilterForSize:]
+___44-[GPUImageSharpenFilter setupFilterForSize:]_block_invoke
+-[GPUImageSharpenFilter setSharpness:]
+-[GPUImageSharpenFilter sharpness]
+_OBJC_IVAR_$_GPUImageSharpenFilter._sharpness
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageSharpenFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageSharpenFilter.h
+__44-[GPUImageSharpenFilter setupFilterForSize:]_block_invoke
+-[GPUImageUnsharpMaskFilter init]
+-[GPUImageUnsharpMaskFilter setBlurRadiusInPixels:]
+-[GPUImageUnsharpMaskFilter blurRadiusInPixels]
+-[GPUImageUnsharpMaskFilter setIntensity:]
+-[GPUImageUnsharpMaskFilter intensity]
+-[GPUImageUnsharpMaskFilter .cxx_destruct]
+_OBJC_IVAR_$_GPUImageUnsharpMaskFilter._intensity
+_OBJC_IVAR_$_GPUImageUnsharpMaskFilter.blurRadiusInPixels
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageUnsharpMaskFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageUnsharpMaskFilter.h
++[GPUImageBoxBlurFilter vertexShaderForOptimizedBlurOfRadius:sigma:]
++[GPUImageBoxBlurFilter fragmentShaderForOptimizedBlurOfRadius:sigma:]
+-[GPUImageBoxBlurFilter setupFilterForSize:]
+-[GPUImageBoxBlurFilter init]
+-[GPUImageBoxBlurFilter setBlurRadiusInPixels:]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageBoxBlurFilter.m
+-[GPUImageGaussianBlurFilter initWithFirstStageVertexShaderFromString:firstStageFragmentShaderFromString:secondStageVertexShaderFromString:secondStageFragmentShaderFromString:]
+-[GPUImageGaussianBlurFilter init]
++[GPUImageGaussianBlurFilter vertexShaderForStandardBlurOfRadius:sigma:]
++[GPUImageGaussianBlurFilter fragmentShaderForStandardBlurOfRadius:sigma:]
++[GPUImageGaussianBlurFilter vertexShaderForOptimizedBlurOfRadius:sigma:]
++[GPUImageGaussianBlurFilter fragmentShaderForOptimizedBlurOfRadius:sigma:]
+-[GPUImageGaussianBlurFilter setupFilterForSize:]
+-[GPUImageGaussianBlurFilter renderToTextureWithVertices:textureCoordinates:]
+-[GPUImageGaussianBlurFilter switchToVertexShader:fragmentShader:]
+___66-[GPUImageGaussianBlurFilter switchToVertexShader:fragmentShader:]_block_invoke
+-[GPUImageGaussianBlurFilter setTexelSpacingMultiplier:]
+-[GPUImageGaussianBlurFilter setBlurRadiusInPixels:]
+-[GPUImageGaussianBlurFilter setBlurRadiusAsFractionOfImageWidth:]
+-[GPUImageGaussianBlurFilter setBlurRadiusAsFractionOfImageHeight:]
+-[GPUImageGaussianBlurFilter texelSpacingMultiplier]
+-[GPUImageGaussianBlurFilter blurRadiusInPixels]
+-[GPUImageGaussianBlurFilter blurRadiusAsFractionOfImageWidth]
+-[GPUImageGaussianBlurFilter blurRadiusAsFractionOfImageHeight]
+-[GPUImageGaussianBlurFilter blurPasses]
+-[GPUImageGaussianBlurFilter setBlurPasses:]
+_OBJC_IVAR_$_GPUImageGaussianBlurFilter._blurPasses
+_OBJC_IVAR_$_GPUImageGaussianBlurFilter._texelSpacingMultiplier
+_OBJC_IVAR_$_GPUImageGaussianBlurFilter._blurRadiusAsFractionOfImageWidth
+_OBJC_IVAR_$_GPUImageGaussianBlurFilter._blurRadiusAsFractionOfImageHeight
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageGaussianBlurFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageGaussianBlurFilter.h
+__66-[GPUImageGaussianBlurFilter switchToVertexShader:fragmentShader:]_block_invoke
+-[GPUImageGaussianSelectiveBlurFilter init]
+-[GPUImageGaussianSelectiveBlurFilter setInputSize:atIndex:]
+-[GPUImageGaussianSelectiveBlurFilter setBlurRadiusInPixels:]
+-[GPUImageGaussianSelectiveBlurFilter blurRadiusInPixels]
+-[GPUImageGaussianSelectiveBlurFilter setExcludeCirclePoint:]
+-[GPUImageGaussianSelectiveBlurFilter setExcludeCircleRadius:]
+-[GPUImageGaussianSelectiveBlurFilter setExcludeBlurSize:]
+-[GPUImageGaussianSelectiveBlurFilter setAspectRatio:]
+-[GPUImageGaussianSelectiveBlurFilter excludeCirclePoint]
+-[GPUImageGaussianSelectiveBlurFilter excludeCircleRadius]
+-[GPUImageGaussianSelectiveBlurFilter excludeBlurSize]
+-[GPUImageGaussianSelectiveBlurFilter aspectRatio]
+-[GPUImageGaussianSelectiveBlurFilter .cxx_destruct]
+_OBJC_IVAR_$_GPUImageGaussianSelectiveBlurFilter._aspectRatio
+_OBJC_IVAR_$_GPUImageGaussianSelectiveBlurFilter._excludeCirclePoint
+_OBJC_IVAR_$_GPUImageGaussianSelectiveBlurFilter._excludeCircleRadius
+_OBJC_IVAR_$_GPUImageGaussianSelectiveBlurFilter._excludeBlurSize
+_OBJC_IVAR_$_GPUImageGaussianSelectiveBlurFilter._blurRadiusInPixels
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageGaussianSelectiveBlurFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageGaussianSelectiveBlurFilter.h
+-[GPUImageGaussianBlurPositionFilter initWithFirstStageVertexShaderFromString:firstStageFragmentShaderFromString:secondStageVertexShaderFromString:secondStageFragmentShaderFromString:]
+-[GPUImageGaussianBlurPositionFilter init]
+-[GPUImageGaussianBlurPositionFilter adjustAspectRatio]
+-[GPUImageGaussianBlurPositionFilter forceProcessingAtSize:]
+-[GPUImageGaussianBlurPositionFilter setInputSize:atIndex:]
+-[GPUImageGaussianBlurPositionFilter setInputRotation:atIndex:]
+-[GPUImageGaussianBlurPositionFilter setBlurSize:]
+-[GPUImageGaussianBlurPositionFilter setBlurCenter:]
+-[GPUImageGaussianBlurPositionFilter setBlurRadius:]
+-[GPUImageGaussianBlurPositionFilter setAspectRatio:]
+-[GPUImageGaussianBlurPositionFilter blurSize]
+-[GPUImageGaussianBlurPositionFilter blurCenter]
+-[GPUImageGaussianBlurPositionFilter aspectRatio]
+-[GPUImageGaussianBlurPositionFilter blurRadius]
+_OBJC_IVAR_$_GPUImageGaussianBlurPositionFilter._blurSize
+_OBJC_IVAR_$_GPUImageGaussianBlurPositionFilter._blurCenter
+_OBJC_IVAR_$_GPUImageGaussianBlurPositionFilter._blurRadius
+_OBJC_IVAR_$_GPUImageGaussianBlurPositionFilter._aspectRatio
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageGaussianBlurPositionFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageGaussianBlurPositionFilter.h
++[GPUImageSingleComponentGaussianBlurFilter vertexShaderForOptimizedBlurOfRadius:sigma:]
++[GPUImageSingleComponentGaussianBlurFilter fragmentShaderForOptimizedBlurOfRadius:sigma:]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageSingleComponentGaussianBlurFilter.m
+-[GPUImageMedianFilter init]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageMedianFilter.m
+-[GPUImageBilateralFilter init]
+-[GPUImageBilateralFilter setDistanceNormalizationFactor:]
+-[GPUImageBilateralFilter distanceNormalizationFactor]
+_OBJC_IVAR_$_GPUImageBilateralFilter._distanceNormalizationFactor
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageBilateralFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageBilateralFilter.h
+-[GPUImageTiltShiftFilter init]
+-[GPUImageTiltShiftFilter setBlurRadiusInPixels:]
+-[GPUImageTiltShiftFilter blurRadiusInPixels]
+-[GPUImageTiltShiftFilter setTopFocusLevel:]
+-[GPUImageTiltShiftFilter setBottomFocusLevel:]
+-[GPUImageTiltShiftFilter setFocusFallOffRate:]
+-[GPUImageTiltShiftFilter topFocusLevel]
+-[GPUImageTiltShiftFilter bottomFocusLevel]
+-[GPUImageTiltShiftFilter focusFallOffRate]
+-[GPUImageTiltShiftFilter .cxx_destruct]
+_OBJC_IVAR_$_GPUImageTiltShiftFilter._topFocusLevel
+_OBJC_IVAR_$_GPUImageTiltShiftFilter._bottomFocusLevel
+_OBJC_IVAR_$_GPUImageTiltShiftFilter._focusFallOffRate
+_OBJC_IVAR_$_GPUImageTiltShiftFilter.blurRadiusInPixels
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageTiltShiftFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageTiltShiftFilter.h
+-[GPUImage3x3ConvolutionFilter init]
+-[GPUImage3x3ConvolutionFilter initWithFragmentShaderFromString:]
+-[GPUImage3x3ConvolutionFilter setConvolutionKernel:]
+-[GPUImage3x3ConvolutionFilter convolutionKernel]
+_OBJC_IVAR_$_GPUImage3x3ConvolutionFilter._convolutionKernel
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImage3x3ConvolutionFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImage3x3ConvolutionFilter.h
+-[GPUImageLaplacianFilter init]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageLaplacianFilter.m
+-[GPUImageSobelEdgeDetectionFilter init]
+-[GPUImageSobelEdgeDetectionFilter initWithFragmentShaderFromString:]
+-[GPUImageSobelEdgeDetectionFilter setupFilterForSize:]
+___55-[GPUImageSobelEdgeDetectionFilter setupFilterForSize:]_block_invoke
+-[GPUImageSobelEdgeDetectionFilter setUniformsForProgramAtIndex:]
+-[GPUImageSobelEdgeDetectionFilter wantsMonochromeInput]
+-[GPUImageSobelEdgeDetectionFilter providesMonochromeOutput]
+-[GPUImageSobelEdgeDetectionFilter setTexelWidth:]
+-[GPUImageSobelEdgeDetectionFilter setTexelHeight:]
+-[GPUImageSobelEdgeDetectionFilter setEdgeStrength:]
+-[GPUImageSobelEdgeDetectionFilter texelWidth]
+-[GPUImageSobelEdgeDetectionFilter texelHeight]
+-[GPUImageSobelEdgeDetectionFilter edgeStrength]
+_OBJC_IVAR_$_GPUImageSobelEdgeDetectionFilter._texelWidth
+_OBJC_IVAR_$_GPUImageSobelEdgeDetectionFilter._texelHeight
+_OBJC_IVAR_$_GPUImageSobelEdgeDetectionFilter._edgeStrength
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageSobelEdgeDetectionFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageSobelEdgeDetectionFilter.h
+__55-[GPUImageSobelEdgeDetectionFilter setupFilterForSize:]_block_invoke
+-[GPUImageThresholdEdgeDetectionFilter initWithFragmentShaderFromString:]
+-[GPUImageThresholdEdgeDetectionFilter init]
+-[GPUImageThresholdEdgeDetectionFilter setThreshold:]
+-[GPUImageThresholdEdgeDetectionFilter threshold]
+_OBJC_IVAR_$_GPUImageThresholdEdgeDetectionFilter._threshold
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageThresholdEdgeDetectionFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageThresholdEdgeDetectionFilter.h
+-[GPUImageDirectionalSobelEdgeDetectionFilter init]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageDirectionalSobelEdgeDetectionFilter.m
+-[GPUImageDirectionalNonMaximumSuppressionFilter init]
+-[GPUImageDirectionalNonMaximumSuppressionFilter setupFilterForSize:]
+___69-[GPUImageDirectionalNonMaximumSuppressionFilter setupFilterForSize:]_block_invoke
+-[GPUImageDirectionalNonMaximumSuppressionFilter setTexelWidth:]
+-[GPUImageDirectionalNonMaximumSuppressionFilter setTexelHeight:]
+-[GPUImageDirectionalNonMaximumSuppressionFilter setLowerThreshold:]
+-[GPUImageDirectionalNonMaximumSuppressionFilter setUpperThreshold:]
+-[GPUImageDirectionalNonMaximumSuppressionFilter texelWidth]
+-[GPUImageDirectionalNonMaximumSuppressionFilter texelHeight]
+-[GPUImageDirectionalNonMaximumSuppressionFilter upperThreshold]
+-[GPUImageDirectionalNonMaximumSuppressionFilter lowerThreshold]
+_OBJC_IVAR_$_GPUImageDirectionalNonMaximumSuppressionFilter._texelWidth
+_OBJC_IVAR_$_GPUImageDirectionalNonMaximumSuppressionFilter._texelHeight
+_OBJC_IVAR_$_GPUImageDirectionalNonMaximumSuppressionFilter._lowerThreshold
+_OBJC_IVAR_$_GPUImageDirectionalNonMaximumSuppressionFilter._upperThreshold
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageDirectionalNonMaximumSuppressionFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageDirectionalNonMaximumSuppressionFilter.h
+__69-[GPUImageDirectionalNonMaximumSuppressionFilter setupFilterForSize:]_block_invoke
+-[GPUImageWeakPixelInclusionFilter init]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageWeakPixelInclusionFilter.m
+-[GPUImageCannyEdgeDetectionFilter init]
+-[GPUImageCannyEdgeDetectionFilter setBlurRadiusInPixels:]
+-[GPUImageCannyEdgeDetectionFilter blurRadiusInPixels]
+-[GPUImageCannyEdgeDetectionFilter setBlurTexelSpacingMultiplier:]
+-[GPUImageCannyEdgeDetectionFilter blurTexelSpacingMultiplier]
+-[GPUImageCannyEdgeDetectionFilter setTexelWidth:]
+-[GPUImageCannyEdgeDetectionFilter texelWidth]
+-[GPUImageCannyEdgeDetectionFilter setTexelHeight:]
+-[GPUImageCannyEdgeDetectionFilter texelHeight]
+-[GPUImageCannyEdgeDetectionFilter setUpperThreshold:]
+-[GPUImageCannyEdgeDetectionFilter upperThreshold]
+-[GPUImageCannyEdgeDetectionFilter setLowerThreshold:]
+-[GPUImageCannyEdgeDetectionFilter lowerThreshold]
+-[GPUImageCannyEdgeDetectionFilter .cxx_destruct]
+_OBJC_IVAR_$_GPUImageCannyEdgeDetectionFilter.upperThreshold
+_OBJC_IVAR_$_GPUImageCannyEdgeDetectionFilter.lowerThreshold
+_OBJC_IVAR_$_GPUImageCannyEdgeDetectionFilter.blurRadiusInPixels
+_OBJC_IVAR_$_GPUImageCannyEdgeDetectionFilter.blurTexelSpacingMultiplier
+_OBJC_IVAR_$_GPUImageCannyEdgeDetectionFilter.texelWidth
+_OBJC_IVAR_$_GPUImageCannyEdgeDetectionFilter.texelHeight
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageCannyEdgeDetectionFilter.m
+-[GPUImagePrewittEdgeDetectionFilter init]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImagePrewittEdgeDetectionFilter.m
+-[GPUImageXYDerivativeFilter init]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageXYDerivativeFilter.m
+-[GPUImageHarrisCornerDetectionFilter init]
+-[GPUImageHarrisCornerDetectionFilter initWithCornerDetectionFragmentShader:]
+___77-[GPUImageHarrisCornerDetectionFilter initWithCornerDetectionFragmentShader:]_block_invoke
+-[GPUImageHarrisCornerDetectionFilter dealloc]
+-[GPUImageHarrisCornerDetectionFilter extractCornerLocationsFromImageAtFrameTime:]
+-[GPUImageHarrisCornerDetectionFilter wantsMonochromeInput]
+-[GPUImageHarrisCornerDetectionFilter setBlurRadiusInPixels:]
+-[GPUImageHarrisCornerDetectionFilter blurRadiusInPixels]
+-[GPUImageHarrisCornerDetectionFilter setSensitivity:]
+-[GPUImageHarrisCornerDetectionFilter setThreshold:]
+-[GPUImageHarrisCornerDetectionFilter threshold]
+-[GPUImageHarrisCornerDetectionFilter cornersDetectedBlock]
+-[GPUImageHarrisCornerDetectionFilter setCornersDetectedBlock:]
+-[GPUImageHarrisCornerDetectionFilter sensitivity]
+-[GPUImageHarrisCornerDetectionFilter intermediateImages]
+-[GPUImageHarrisCornerDetectionFilter .cxx_destruct]
+_OBJC_IVAR_$_GPUImageHarrisCornerDetectionFilter.cornersDetectedBlock
+_OBJC_IVAR_$_GPUImageHarrisCornerDetectionFilter._sensitivity
+_OBJC_IVAR_$_GPUImageHarrisCornerDetectionFilter._intermediateImages
+_OBJC_IVAR_$_GPUImageHarrisCornerDetectionFilter.blurRadiusInPixels
+_OBJC_IVAR_$_GPUImageHarrisCornerDetectionFilter._threshold
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageHarrisCornerDetectionFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageHarrisCornerDetectionFilter.h
+__77-[GPUImageHarrisCornerDetectionFilter initWithCornerDetectionFragmentShader:]_block_invoke
+-[GPUImageNobleCornerDetectionFilter init]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageNobleCornerDetectionFilter.m
+-[GPUImageShiTomasiFeatureDetectionFilter init]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageShiTomasiFeatureDetectionFilter.m
+-[GPUImageFASTCornerDetectionFilter init]
+-[GPUImageFASTCornerDetectionFilter initWithFASTDetectorVariant:]
+-[GPUImageFASTCornerDetectionFilter .cxx_destruct]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageFASTCornerDetectionFilter.m
+-[GPUImageNonMaximumSuppressionFilter init]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageNonMaximumSuppressionFilter.m
+-[GPUImageThresholdedNonMaximumSuppressionFilter init]
+-[GPUImageThresholdedNonMaximumSuppressionFilter initWithPackedColorspace:]
+-[GPUImageThresholdedNonMaximumSuppressionFilter setThreshold:]
+-[GPUImageThresholdedNonMaximumSuppressionFilter threshold]
+_OBJC_IVAR_$_GPUImageThresholdedNonMaximumSuppressionFilter._threshold
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageThresholdedNonMaximumSuppressionFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageThresholdedNonMaximumSuppressionFilter.h
+-[GPUImageCrosshairGenerator init]
+___34-[GPUImageCrosshairGenerator init]_block_invoke
+-[GPUImageCrosshairGenerator renderCrosshairsFromArray:count:frameTime:]
+___72-[GPUImageCrosshairGenerator renderCrosshairsFromArray:count:frameTime:]_block_invoke
+___copy_helper_block_.30
+___destroy_helper_block_.31
+-[GPUImageCrosshairGenerator renderToTextureWithVertices:textureCoordinates:]
+-[GPUImageCrosshairGenerator setCrosshairWidth:]
+-[GPUImageCrosshairGenerator setCrosshairColorRed:green:blue:]
+-[GPUImageCrosshairGenerator crosshairWidth]
+___block_descriptor_tmp.32
+_OBJC_IVAR_$_GPUImageCrosshairGenerator._crosshairWidth
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageCrosshairGenerator.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageCrosshairGenerator.h
+__72-[GPUImageCrosshairGenerator renderCrosshairsFromArray:count:frameTime:]_block_invoke
+__34-[GPUImageCrosshairGenerator init]_block_invoke
+-[GPUImageDilationFilter initWithRadius:]
+-[GPUImageDilationFilter init]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageDilationFilter.m
+-[GPUImageRGBDilationFilter initWithRadius:]
+-[GPUImageRGBDilationFilter init]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageRGBDilationFilter.m
+-[GPUImageErosionFilter initWithRadius:]
+-[GPUImageErosionFilter init]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageErosionFilter.m
+-[GPUImageRGBErosionFilter initWithRadius:]
+-[GPUImageRGBErosionFilter init]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageRGBErosionFilter.m
+-[GPUImageOpeningFilter init]
+-[GPUImageOpeningFilter initWithRadius:]
+-[GPUImageOpeningFilter setVerticalTexelSpacing:]
+-[GPUImageOpeningFilter setHorizontalTexelSpacing:]
+-[GPUImageOpeningFilter verticalTexelSpacing]
+-[GPUImageOpeningFilter horizontalTexelSpacing]
+-[GPUImageOpeningFilter .cxx_destruct]
+_OBJC_IVAR_$_GPUImageOpeningFilter._verticalTexelSpacing
+_OBJC_IVAR_$_GPUImageOpeningFilter._horizontalTexelSpacing
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageOpeningFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageOpeningFilter.h
+-[GPUImageRGBOpeningFilter init]
+-[GPUImageRGBOpeningFilter initWithRadius:]
+-[GPUImageRGBOpeningFilter .cxx_destruct]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageRGBOpeningFilter.m
+-[GPUImageClosingFilter init]
+-[GPUImageClosingFilter initWithRadius:]
+-[GPUImageClosingFilter setVerticalTexelSpacing:]
+-[GPUImageClosingFilter setHorizontalTexelSpacing:]
+-[GPUImageClosingFilter verticalTexelSpacing]
+-[GPUImageClosingFilter horizontalTexelSpacing]
+-[GPUImageClosingFilter .cxx_destruct]
+_OBJC_IVAR_$_GPUImageClosingFilter._verticalTexelSpacing
+_OBJC_IVAR_$_GPUImageClosingFilter._horizontalTexelSpacing
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageClosingFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageClosingFilter.h
+-[GPUImageRGBClosingFilter init]
+-[GPUImageRGBClosingFilter initWithRadius:]
+-[GPUImageRGBClosingFilter .cxx_destruct]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageRGBClosingFilter.m
+-[GPUImageColorPackingFilter init]
+-[GPUImageColorPackingFilter setupFilterForSize:]
+___49-[GPUImageColorPackingFilter setupFilterForSize:]_block_invoke
+-[GPUImageColorPackingFilter sizeOfFBO]
+-[GPUImageColorPackingFilter outputFrameSize]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageColorPackingFilter.m
+__49-[GPUImageColorPackingFilter setupFilterForSize:]_block_invoke
+-[GPUImageLocalBinaryPatternFilter init]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageLocalBinaryPatternFilter.m
+-[GPUImageLanczosResamplingFilter init]
+-[GPUImageLanczosResamplingFilter setInputSize:atIndex:]
+-[GPUImageLanczosResamplingFilter setupFilterForSize:]
+___54-[GPUImageLanczosResamplingFilter setupFilterForSize:]_block_invoke
+-[GPUImageLanczosResamplingFilter renderToTextureWithVertices:textureCoordinates:]
+-[GPUImageLanczosResamplingFilter originalImageSize]
+-[GPUImageLanczosResamplingFilter setOriginalImageSize:]
+_OBJC_IVAR_$_GPUImageLanczosResamplingFilter._originalImageSize
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageLanczosResamplingFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageLanczosResamplingFilter.h
+__54-[GPUImageLanczosResamplingFilter setupFilterForSize:]_block_invoke
+-[GPUImageLowPassFilter init]
+-[GPUImageLowPassFilter setFilterStrength:]
+-[GPUImageLowPassFilter filterStrength]
+-[GPUImageLowPassFilter addTarget:atTextureLocation:]
+-[GPUImageLowPassFilter .cxx_destruct]
+_OBJC_IVAR_$_GPUImageLowPassFilter.filterStrength
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageLowPassFilter.m
+-[GPUImageHighPassFilter init]
+-[GPUImageHighPassFilter setFilterStrength:]
+-[GPUImageHighPassFilter filterStrength]
+-[GPUImageHighPassFilter .cxx_destruct]
+_OBJC_IVAR_$_GPUImageHighPassFilter.filterStrength
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageHighPassFilter.m
+-[GPUImageMotionDetector init]
+___30-[GPUImageMotionDetector init]_block_invoke
+-[GPUImageMotionDetector setLowPassFilterStrength:]
+-[GPUImageMotionDetector lowPassFilterStrength]
+-[GPUImageMotionDetector motionDetectionBlock]
+-[GPUImageMotionDetector setMotionDetectionBlock:]
+-[GPUImageMotionDetector .cxx_destruct]
+_OBJC_IVAR_$_GPUImageMotionDetector.motionDetectionBlock
+_OBJC_IVAR_$_GPUImageMotionDetector.lowPassFilterStrength
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageMotionDetector.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageMotionDetector.h
+__30-[GPUImageMotionDetector init]_block_invoke
+-[GPUImageHoughTransformLineDetector init]
+___42-[GPUImageHoughTransformLineDetector init]_block_invoke
+-[GPUImageHoughTransformLineDetector dealloc]
+-[GPUImageHoughTransformLineDetector extractLineParametersFromImageAtFrameTime:]
+-[GPUImageHoughTransformLineDetector wantsMonochromeInput]
+-[GPUImageHoughTransformLineDetector setLineDetectionThreshold:]
+-[GPUImageHoughTransformLineDetector lineDetectionThreshold]
+-[GPUImageHoughTransformLineDetector linesDetectedBlock]
+-[GPUImageHoughTransformLineDetector setLinesDetectedBlock:]
+-[GPUImageHoughTransformLineDetector edgeThreshold]
+-[GPUImageHoughTransformLineDetector setEdgeThreshold:]
+-[GPUImageHoughTransformLineDetector intermediateImages]
+-[GPUImageHoughTransformLineDetector .cxx_destruct]
+_OBJC_IVAR_$_GPUImageHoughTransformLineDetector.linesDetectedBlock
+_OBJC_IVAR_$_GPUImageHoughTransformLineDetector.edgeThreshold
+_OBJC_IVAR_$_GPUImageHoughTransformLineDetector._intermediateImages
+_OBJC_IVAR_$_GPUImageHoughTransformLineDetector.lineDetectionThreshold
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageHoughTransformLineDetector.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageHoughTransformLineDetector.h
+__42-[GPUImageHoughTransformLineDetector init]_block_invoke
+-[GPUImageParallelCoordinateLineTransformFilter init]
+-[GPUImageParallelCoordinateLineTransformFilter dealloc]
+-[GPUImageParallelCoordinateLineTransformFilter initializeAttributes]
+-[GPUImageParallelCoordinateLineTransformFilter generateLineCoordinates]
+-[GPUImageParallelCoordinateLineTransformFilter newFrameReadyAtTime:atIndex:]
+-[GPUImageParallelCoordinateLineTransformFilter renderToTextureWithVertices:textureCoordinates:]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageParallelCoordinateLineTransformFilter.m
+-[GPUImageLineGenerator init]
+___29-[GPUImageLineGenerator init]_block_invoke
+-[GPUImageLineGenerator dealloc]
+-[GPUImageLineGenerator generateLineCoordinates]
+-[GPUImageLineGenerator renderLinesFromArray:count:frameTime:]
+___62-[GPUImageLineGenerator renderLinesFromArray:count:frameTime:]_block_invoke
+-[GPUImageLineGenerator renderToTextureWithVertices:textureCoordinates:]
+-[GPUImageLineGenerator setLineWidth:]
+-[GPUImageLineGenerator setLineColorRed:green:blue:]
+-[GPUImageLineGenerator lineWidth]
+_OBJC_IVAR_$_GPUImageLineGenerator._lineWidth
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageLineGenerator.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageLineGenerator.h
+__62-[GPUImageLineGenerator renderLinesFromArray:count:frameTime:]_block_invoke
+__29-[GPUImageLineGenerator init]_block_invoke
+-[GPUImageMotionBlurFilter init]
+-[GPUImageMotionBlurFilter setInputSize:atIndex:]
+-[GPUImageMotionBlurFilter recalculateTexelOffsets]
+-[GPUImageMotionBlurFilter setInputRotation:atIndex:]
+-[GPUImageMotionBlurFilter setBlurAngle:]
+-[GPUImageMotionBlurFilter setBlurSize:]
+-[GPUImageMotionBlurFilter blurSize]
+-[GPUImageMotionBlurFilter blurAngle]
+_OBJC_IVAR_$_GPUImageMotionBlurFilter.directionalTexelStepUniform
+_OBJC_IVAR_$_GPUImageMotionBlurFilter._blurSize
+_OBJC_IVAR_$_GPUImageMotionBlurFilter._blurAngle
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageMotionBlurFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageMotionBlurFilter.h
+-[GPUImageZoomBlurFilter init]
+-[GPUImageZoomBlurFilter setInputRotation:atIndex:]
+-[GPUImageZoomBlurFilter setBlurSize:]
+-[GPUImageZoomBlurFilter setBlurCenter:]
+-[GPUImageZoomBlurFilter blurSize]
+-[GPUImageZoomBlurFilter blurCenter]
+_OBJC_IVAR_$_GPUImageZoomBlurFilter.blurSizeUniform
+_OBJC_IVAR_$_GPUImageZoomBlurFilter.blurCenterUniform
+_OBJC_IVAR_$_GPUImageZoomBlurFilter._blurSize
+_OBJC_IVAR_$_GPUImageZoomBlurFilter._blurCenter
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageZoomBlurFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageZoomBlurFilter.h
+-[GPUImageiOSBlurFilter init]
+-[GPUImageiOSBlurFilter setInputSize:atIndex:]
+-[GPUImageiOSBlurFilter setBlurRadiusInPixels:]
+-[GPUImageiOSBlurFilter blurRadiusInPixels]
+-[GPUImageiOSBlurFilter setSaturation:]
+-[GPUImageiOSBlurFilter saturation]
+-[GPUImageiOSBlurFilter setDownsampling:]
+-[GPUImageiOSBlurFilter setRangeReductionFactor:]
+-[GPUImageiOSBlurFilter rangeReductionFactor]
+-[GPUImageiOSBlurFilter downsampling]
+-[GPUImageiOSBlurFilter .cxx_destruct]
+_OBJC_IVAR_$_GPUImageiOSBlurFilter._downsampling
+_OBJC_IVAR_$_GPUImageiOSBlurFilter.blurRadiusInPixels
+_OBJC_IVAR_$_GPUImageiOSBlurFilter.saturation
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageiOSBlurFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageiOSBlurFilter.h
+-[GPUImageSourceOverBlendFilter init]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageSourceOverBlendFilter.m
+-[GPUImageColorBurnBlendFilter init]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageColorBurnBlendFilter.m
+-[GPUImageColorDodgeBlendFilter init]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageColorDodgeBlendFilter.m
+-[GPUImageDarkenBlendFilter init]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageDarkenBlendFilter.m
+-[GPUImageDifferenceBlendFilter init]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageDifferenceBlendFilter.m
+-[GPUImageDissolveBlendFilter init]
+-[GPUImageDissolveBlendFilter setMix:]
+-[GPUImageDissolveBlendFilter mix]
+_OBJC_IVAR_$_GPUImageDissolveBlendFilter._mix
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageDissolveBlendFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageDissolveBlendFilter.h
+-[GPUImageExclusionBlendFilter init]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageExclusionBlendFilter.m
+-[GPUImageHardLightBlendFilter init]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageHardLightBlendFilter.m
+-[GPUImageSoftLightBlendFilter init]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageSoftLightBlendFilter.m
+-[GPUImageLightenBlendFilter init]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageLightenBlendFilter.m
+-[GPUImageAddBlendFilter init]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageAddBlendFilter.m
+-[GPUImageSubtractBlendFilter init]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageSubtractBlendFilter.m
+-[GPUImageDivideBlendFilter init]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageDivideBlendFilter.m
+-[GPUImageMultiplyBlendFilter init]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageMultiplyBlendFilter.m
+-[GPUImageOverlayBlendFilter init]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageOverlayBlendFilter.m
+-[GPUImageScreenBlendFilter init]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageScreenBlendFilter.m
+-[GPUImageChromaKeyBlendFilter init]
+-[GPUImageChromaKeyBlendFilter setColorToReplaceRed:green:blue:]
+-[GPUImageChromaKeyBlendFilter setThresholdSensitivity:]
+-[GPUImageChromaKeyBlendFilter setSmoothing:]
+-[GPUImageChromaKeyBlendFilter thresholdSensitivity]
+-[GPUImageChromaKeyBlendFilter smoothing]
+_OBJC_IVAR_$_GPUImageChromaKeyBlendFilter._thresholdSensitivity
+_OBJC_IVAR_$_GPUImageChromaKeyBlendFilter._smoothing
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageChromaKeyBlendFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageChromaKeyBlendFilter.h
+-[GPUImageAlphaBlendFilter init]
+-[GPUImageAlphaBlendFilter setMix:]
+-[GPUImageAlphaBlendFilter mix]
+_OBJC_IVAR_$_GPUImageAlphaBlendFilter._mix
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageAlphaBlendFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageAlphaBlendFilter.h
+-[GPUImageNormalBlendFilter init]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageNormalBlendFilter.m
+-[GPUImageColorBlendFilter init]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageColorBlendFilter.m
+-[GPUImageHueBlendFilter init]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageHueBlendFilter.m
+-[GPUImageSaturationBlendFilter init]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageSaturationBlendFilter.m
+-[GPUImageLuminosityBlendFilter init]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageLuminosityBlendFilter.m
+-[GPUImageLinearBurnBlendFilter init]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageLinearBurnBlendFilter.m
+-[GPUImagePoissonBlendFilter init]
+-[GPUImagePoissonBlendFilter setMix:]
+-[GPUImagePoissonBlendFilter renderToTextureWithVertices:textureCoordinates:]
+-[GPUImagePoissonBlendFilter mix]
+-[GPUImagePoissonBlendFilter numIterations]
+-[GPUImagePoissonBlendFilter setNumIterations:]
+-[GPUImagePoissonBlendFilter .cxx_destruct]
+_OBJC_IVAR_$_GPUImagePoissonBlendFilter._mix
+_OBJC_IVAR_$_GPUImagePoissonBlendFilter._numIterations
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImagePoissonBlendFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImagePoissonBlendFilter.h
+-[GPUImageMaskFilter init]
+-[GPUImageMaskFilter renderToTextureWithVertices:textureCoordinates:]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageMaskFilter.m
+-[GPUImagePerlinNoiseFilter init]
+-[GPUImagePerlinNoiseFilter setScale:]
+-[GPUImagePerlinNoiseFilter setColorStart:]
+-[GPUImagePerlinNoiseFilter setColorFinish:]
+-[GPUImagePerlinNoiseFilter scale]
+-[GPUImagePerlinNoiseFilter colorStart]
+-[GPUImagePerlinNoiseFilter colorFinish]
+_OBJC_IVAR_$_GPUImagePerlinNoiseFilter._scale
+_OBJC_IVAR_$_GPUImagePerlinNoiseFilter._colorStart
+_OBJC_IVAR_$_GPUImagePerlinNoiseFilter._colorFinish
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImagePerlinNoiseFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImagePerlinNoiseFilter.h
+-[GPUImagePixellateFilter init]
+-[GPUImagePixellateFilter initWithFragmentShaderFromString:]
+-[GPUImagePixellateFilter adjustAspectRatio]
+-[GPUImagePixellateFilter setInputRotation:atIndex:]
+-[GPUImagePixellateFilter forceProcessingAtSize:]
+-[GPUImagePixellateFilter setInputSize:atIndex:]
+-[GPUImagePixellateFilter setFractionalWidthOfAPixel:]
+-[GPUImagePixellateFilter setAspectRatio:]
+-[GPUImagePixellateFilter fractionalWidthOfAPixel]
+-[GPUImagePixellateFilter aspectRatio]
+_OBJC_IVAR_$_GPUImagePixellateFilter._fractionalWidthOfAPixel
+_OBJC_IVAR_$_GPUImagePixellateFilter._aspectRatio
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImagePixellateFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImagePixellateFilter.h
+-[GPUImagePixellatePositionFilter init]
+-[GPUImagePixellatePositionFilter initWithFragmentShaderFromString:]
+-[GPUImagePixellatePositionFilter setInputSize:atIndex:]
+-[GPUImagePixellatePositionFilter setInputRotation:atIndex:]
+-[GPUImagePixellatePositionFilter adjustAspectRatio]
+-[GPUImagePixellatePositionFilter forceProcessingAtSize:]
+-[GPUImagePixellatePositionFilter setFractionalWidthOfAPixel:]
+-[GPUImagePixellatePositionFilter setAspectRatio:]
+-[GPUImagePixellatePositionFilter setCenter:]
+-[GPUImagePixellatePositionFilter setRadius:]
+-[GPUImagePixellatePositionFilter fractionalWidthOfAPixel]
+-[GPUImagePixellatePositionFilter aspectRatio]
+-[GPUImagePixellatePositionFilter center]
+-[GPUImagePixellatePositionFilter radius]
+_OBJC_IVAR_$_GPUImagePixellatePositionFilter._fractionalWidthOfAPixel
+_OBJC_IVAR_$_GPUImagePixellatePositionFilter._aspectRatio
+_OBJC_IVAR_$_GPUImagePixellatePositionFilter._center
+_OBJC_IVAR_$_GPUImagePixellatePositionFilter._radius
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImagePixellatePositionFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImagePixellatePositionFilter.h
+-[GPUImagePolkaDotFilter init]
+-[GPUImagePolkaDotFilter setDotScaling:]
+-[GPUImagePolkaDotFilter dotScaling]
+_OBJC_IVAR_$_GPUImagePolkaDotFilter._dotScaling
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImagePolkaDotFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImagePolkaDotFilter.h
+-[GPUImageHalftoneFilter init]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageHalftoneFilter.m
+-[GPUImagePolarPixellateFilter init]
+-[GPUImagePolarPixellateFilter setInputRotation:atIndex:]
+-[GPUImagePolarPixellateFilter setPixelSize:]
+-[GPUImagePolarPixellateFilter setCenter:]
+-[GPUImagePolarPixellateFilter center]
+-[GPUImagePolarPixellateFilter pixelSize]
+_OBJC_IVAR_$_GPUImagePolarPixellateFilter._pixelSize
+_OBJC_IVAR_$_GPUImagePolarPixellateFilter._center
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImagePolarPixellateFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImagePolarPixellateFilter.h
+-[GPUImageCrosshatchFilter init]
+-[GPUImageCrosshatchFilter setCrossHatchSpacing:]
+-[GPUImageCrosshatchFilter setLineWidth:]
+-[GPUImageCrosshatchFilter crossHatchSpacing]
+-[GPUImageCrosshatchFilter lineWidth]
+_OBJC_IVAR_$_GPUImageCrosshatchFilter._crossHatchSpacing
+_OBJC_IVAR_$_GPUImageCrosshatchFilter._lineWidth
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageCrosshatchFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageCrosshatchFilter.h
+-[GPUImageSketchFilter init]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageSketchFilter.m
+-[GPUImageThresholdSketchFilter init]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageThresholdSketchFilter.m
+-[GPUImageEmbossFilter init]
+-[GPUImageEmbossFilter setIntensity:]
+-[GPUImageEmbossFilter intensity]
+_OBJC_IVAR_$_GPUImageEmbossFilter._intensity
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageEmbossFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageEmbossFilter.h
+-[GPUImageToonFilter init]
+-[GPUImageToonFilter setThreshold:]
+-[GPUImageToonFilter setQuantizationLevels:]
+-[GPUImageToonFilter threshold]
+-[GPUImageToonFilter quantizationLevels]
+_OBJC_IVAR_$_GPUImageToonFilter._threshold
+_OBJC_IVAR_$_GPUImageToonFilter._quantizationLevels
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageToonFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageToonFilter.h
+-[GPUImageSmoothToonFilter init]
+-[GPUImageSmoothToonFilter setBlurRadiusInPixels:]
+-[GPUImageSmoothToonFilter blurRadiusInPixels]
+-[GPUImageSmoothToonFilter setTexelWidth:]
+-[GPUImageSmoothToonFilter texelWidth]
+-[GPUImageSmoothToonFilter setTexelHeight:]
+-[GPUImageSmoothToonFilter texelHeight]
+-[GPUImageSmoothToonFilter setThreshold:]
+-[GPUImageSmoothToonFilter threshold]
+-[GPUImageSmoothToonFilter setQuantizationLevels:]
+-[GPUImageSmoothToonFilter quantizationLevels]
+-[GPUImageSmoothToonFilter .cxx_destruct]
+_OBJC_IVAR_$_GPUImageSmoothToonFilter.threshold
+_OBJC_IVAR_$_GPUImageSmoothToonFilter.blurRadiusInPixels
+_OBJC_IVAR_$_GPUImageSmoothToonFilter.quantizationLevels
+_OBJC_IVAR_$_GPUImageSmoothToonFilter.texelWidth
+_OBJC_IVAR_$_GPUImageSmoothToonFilter.texelHeight
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageSmoothToonFilter.m
+-[GPUImageCGAColorspaceFilter init]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageCGAColorspaceFilter.m
+-[GPUImagePosterizeFilter init]
+-[GPUImagePosterizeFilter setColorLevels:]
+-[GPUImagePosterizeFilter colorLevels]
+_OBJC_IVAR_$_GPUImagePosterizeFilter._colorLevels
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImagePosterizeFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImagePosterizeFilter.h
+-[GPUImageSwirlFilter init]
+-[GPUImageSwirlFilter setInputRotation:atIndex:]
+-[GPUImageSwirlFilter setRadius:]
+-[GPUImageSwirlFilter setAngle:]
+-[GPUImageSwirlFilter setCenter:]
+-[GPUImageSwirlFilter center]
+-[GPUImageSwirlFilter radius]
+-[GPUImageSwirlFilter angle]
+_OBJC_IVAR_$_GPUImageSwirlFilter._radius
+_OBJC_IVAR_$_GPUImageSwirlFilter._angle
+_OBJC_IVAR_$_GPUImageSwirlFilter._center
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageSwirlFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageSwirlFilter.h
+-[GPUImageBulgeDistortionFilter init]
+-[GPUImageBulgeDistortionFilter adjustAspectRatio]
+-[GPUImageBulgeDistortionFilter forceProcessingAtSize:]
+-[GPUImageBulgeDistortionFilter setInputSize:atIndex:]
+-[GPUImageBulgeDistortionFilter setAspectRatio:]
+-[GPUImageBulgeDistortionFilter setInputRotation:atIndex:]
+-[GPUImageBulgeDistortionFilter setRadius:]
+-[GPUImageBulgeDistortionFilter setScale:]
+-[GPUImageBulgeDistortionFilter setCenter:]
+-[GPUImageBulgeDistortionFilter aspectRatio]
+-[GPUImageBulgeDistortionFilter center]
+-[GPUImageBulgeDistortionFilter radius]
+-[GPUImageBulgeDistortionFilter scale]
+_OBJC_IVAR_$_GPUImageBulgeDistortionFilter._aspectRatio
+_OBJC_IVAR_$_GPUImageBulgeDistortionFilter._radius
+_OBJC_IVAR_$_GPUImageBulgeDistortionFilter._scale
+_OBJC_IVAR_$_GPUImageBulgeDistortionFilter._center
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageBulgeDistortionFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageBulgeDistortionFilter.h
+-[GPUImagePinchDistortionFilter init]
+-[GPUImagePinchDistortionFilter adjustAspectRatio]
+-[GPUImagePinchDistortionFilter forceProcessingAtSize:]
+-[GPUImagePinchDistortionFilter setInputSize:atIndex:]
+-[GPUImagePinchDistortionFilter setInputRotation:atIndex:]
+-[GPUImagePinchDistortionFilter setAspectRatio:]
+-[GPUImagePinchDistortionFilter setRadius:]
+-[GPUImagePinchDistortionFilter setScale:]
+-[GPUImagePinchDistortionFilter setCenter:]
+-[GPUImagePinchDistortionFilter aspectRatio]
+-[GPUImagePinchDistortionFilter center]
+-[GPUImagePinchDistortionFilter radius]
+-[GPUImagePinchDistortionFilter scale]
+_OBJC_IVAR_$_GPUImagePinchDistortionFilter._aspectRatio
+_OBJC_IVAR_$_GPUImagePinchDistortionFilter._radius
+_OBJC_IVAR_$_GPUImagePinchDistortionFilter._scale
+_OBJC_IVAR_$_GPUImagePinchDistortionFilter._center
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImagePinchDistortionFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImagePinchDistortionFilter.h
+-[GPUImageStretchDistortionFilter init]
+-[GPUImageStretchDistortionFilter setInputRotation:atIndex:]
+-[GPUImageStretchDistortionFilter setCenter:]
+-[GPUImageStretchDistortionFilter center]
+_OBJC_IVAR_$_GPUImageStretchDistortionFilter._center
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageStretchDistortionFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageStretchDistortionFilter.h
+-[GPUImageSphereRefractionFilter init]
+-[GPUImageSphereRefractionFilter initWithFragmentShaderFromString:]
+-[GPUImageSphereRefractionFilter setInputSize:atIndex:]
+-[GPUImageSphereRefractionFilter adjustAspectRatio]
+-[GPUImageSphereRefractionFilter setInputRotation:atIndex:]
+-[GPUImageSphereRefractionFilter forceProcessingAtSize:]
+-[GPUImageSphereRefractionFilter setRadius:]
+-[GPUImageSphereRefractionFilter setCenter:]
+-[GPUImageSphereRefractionFilter setAspectRatio:]
+-[GPUImageSphereRefractionFilter setRefractiveIndex:]
+-[GPUImageSphereRefractionFilter center]
+-[GPUImageSphereRefractionFilter radius]
+-[GPUImageSphereRefractionFilter aspectRatio]
+-[GPUImageSphereRefractionFilter refractiveIndex]
+_OBJC_IVAR_$_GPUImageSphereRefractionFilter._radius
+_OBJC_IVAR_$_GPUImageSphereRefractionFilter._center
+_OBJC_IVAR_$_GPUImageSphereRefractionFilter._aspectRatio
+_OBJC_IVAR_$_GPUImageSphereRefractionFilter._refractiveIndex
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageSphereRefractionFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageSphereRefractionFilter.h
+-[GPUImageGlassSphereFilter init]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageGlassSphereFilter.m
+-[GPUImageKuwaharaFilter init]
+-[GPUImageKuwaharaFilter setRadius:]
+-[GPUImageKuwaharaFilter radius]
+_OBJC_IVAR_$_GPUImageKuwaharaFilter._radius
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageKuwaharaFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageKuwaharaFilter.h
+-[GPUImageKuwaharaRadius3Filter init]
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageKuwaharaRadius3Filter.m
+-[GPUImageVignetteFilter init]
+-[GPUImageVignetteFilter setVignetteCenter:]
+-[GPUImageVignetteFilter setVignetteColor:]
+-[GPUImageVignetteFilter setVignetteStart:]
+-[GPUImageVignetteFilter setVignetteEnd:]
+-[GPUImageVignetteFilter vignetteCenter]
+-[GPUImageVignetteFilter vignetteColor]
+-[GPUImageVignetteFilter vignetteStart]
+-[GPUImageVignetteFilter vignetteEnd]
+_OBJC_IVAR_$_GPUImageVignetteFilter._vignetteCenter
+_OBJC_IVAR_$_GPUImageVignetteFilter._vignetteColor
+_OBJC_IVAR_$_GPUImageVignetteFilter._vignetteStart
+_OBJC_IVAR_$_GPUImageVignetteFilter._vignetteEnd
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageVignetteFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageVignetteFilter.h
+-[GPUImageJFAVoronoiFilter init]
+-[GPUImageJFAVoronoiFilter setSizeInPixels:]
+-[GPUImageJFAVoronoiFilter nextPowerOfTwo:]
+-[GPUImageJFAVoronoiFilter renderToTextureWithVertices:textureCoordinates:]
+-[GPUImageJFAVoronoiFilter sizeInPixels]
+_OBJC_IVAR_$_GPUImageJFAVoronoiFilter._sizeInPixels
+_OBJC_IVAR_$_GPUImageJFAVoronoiFilter.currentPass
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageJFAVoronoiFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageJFAVoronoiFilter.h
+-[GPUImageMosaicFilter init]
+-[GPUImageMosaicFilter setColorOn:]
+-[GPUImageMosaicFilter setNumTiles:]
+-[GPUImageMosaicFilter setInputTileSize:]
+-[GPUImageMosaicFilter setDisplayTileSize:]
+-[GPUImageMosaicFilter setTileSet:]
+-[GPUImageMosaicFilter inputTileSize]
+-[GPUImageMosaicFilter numTiles]
+-[GPUImageMosaicFilter displayTileSize]
+-[GPUImageMosaicFilter colorOn]
+-[GPUImageMosaicFilter tileSet]
+-[GPUImageMosaicFilter .cxx_destruct]
+_OBJC_IVAR_$_GPUImageMosaicFilter._numTiles
+_OBJC_IVAR_$_GPUImageMosaicFilter._inputTileSize
+_OBJC_IVAR_$_GPUImageMosaicFilter._displayTileSize
+_OBJC_IVAR_$_GPUImageMosaicFilter._colorOn
+_OBJC_IVAR_$_GPUImageMosaicFilter._tileSet
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageMosaicFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageMosaicFilter.h
+-[GPUImageVoronoiConsumerFilter init]
+-[GPUImageVoronoiConsumerFilter setSizeInPixels:]
+-[GPUImageVoronoiConsumerFilter sizeInPixels]
+_OBJC_IVAR_$_GPUImageVoronoiConsumerFilter._sizeInPixels
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageVoronoiConsumerFilter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageVoronoiConsumerFilter.h
++[GPUImageView layerClass]
+-[GPUImageView initWithFrame:]
+-[GPUImageView initWithCoder:]
+-[GPUImageView commonInit]
+___26-[GPUImageView commonInit]_block_invoke
+-[GPUImageView layoutSubviews]
+___30-[GPUImageView layoutSubviews]_block_invoke
+-[GPUImageView dealloc]
+___23-[GPUImageView dealloc]_block_invoke
+-[GPUImageView createDisplayFramebuffer]
+-[GPUImageView destroyDisplayFramebuffer]
+-[GPUImageView setDisplayFramebuffer]
+-[GPUImageView presentFramebuffer]
+-[GPUImageView recalculateViewGeometry]
+___39-[GPUImageView recalculateViewGeometry]_block_invoke
+___copy_helper_block_.109
+___destroy_helper_block_.110
+-[GPUImageView setBackgroundColorRed:green:blue:alpha:]
++[GPUImageView textureCoordinatesForRotation:]
+-[GPUImageView newFrameReadyAtTime:atIndex:]
+___44-[GPUImageView newFrameReadyAtTime:atIndex:]_block_invoke
+___copy_helper_block_.123
+___destroy_helper_block_.124
+-[GPUImageView nextAvailableTextureIndex]
+-[GPUImageView setInputFramebuffer:atIndex:]
+-[GPUImageView setInputRotation:atIndex:]
+-[GPUImageView setInputSize:atIndex:]
+___37-[GPUImageView setInputSize:atIndex:]_block_invoke
+___copy_helper_block_.128
+___destroy_helper_block_.129
+-[GPUImageView maximumOutputSize]
+-[GPUImageView endProcessing]
+-[GPUImageView shouldIgnoreUpdatesToThisTarget]
+-[GPUImageView wantsMonochromeInput]
+-[GPUImageView setCurrentlyReceivingMonochromeInput:]
+-[GPUImageView sizeInPixels]
+-[GPUImageView setFillMode:]
+-[GPUImageView aspectRatio]
+-[GPUImageView setAspectRatio:]
+-[GPUImageView fillMode]
+-[GPUImageView enabled]
+-[GPUImageView setEnabled:]
+-[GPUImageView .cxx_destruct]
+_OBJC_IVAR_$_GPUImageView.displayProgram
+_OBJC_IVAR_$_GPUImageView.displayPositionAttribute
+_OBJC_IVAR_$_GPUImageView.displayTextureCoordinateAttribute
+_OBJC_IVAR_$_GPUImageView.displayInputTextureUniform
+_OBJC_IVAR_$_GPUImageView._fillMode
+_OBJC_IVAR_$_GPUImageView.boundsSizeAtFrameBufferEpoch
+_OBJC_IVAR_$_GPUImageView.displayFramebuffer
+_OBJC_IVAR_$_GPUImageView.displayRenderbuffer
+_OBJC_IVAR_$_GPUImageView._sizeInPixels
+_OBJC_IVAR_$_GPUImageView.inputImageSize
+_OBJC_IVAR_$_GPUImageView.imageVertices
+___block_descriptor_tmp.111
+_OBJC_IVAR_$_GPUImageView.backgroundColorRed
+_OBJC_IVAR_$_GPUImageView.backgroundColorGreen
+_OBJC_IVAR_$_GPUImageView.backgroundColorBlue
+_OBJC_IVAR_$_GPUImageView.backgroundColorAlpha
+_OBJC_IVAR_$_GPUImageView.inputFramebufferForDisplay
+___block_descriptor_tmp.125
+___block_descriptor_tmp.130
+_OBJC_IVAR_$_GPUImageView.aspectRatio
+_OBJC_IVAR_$_GPUImageView.enabled
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/iOS/GPUImageView.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/iOS/GPUImageView.h
+__37-[GPUImageView setInputSize:atIndex:]_block_invoke
+__44-[GPUImageView newFrameReadyAtTime:atIndex:]_block_invoke
+__39-[GPUImageView recalculateViewGeometry]_block_invoke
+__23-[GPUImageView dealloc]_block_invoke
+__30-[GPUImageView layoutSubviews]_block_invoke
+__26-[GPUImageView commonInit]_block_invoke
+-[GPUImageMovieWriter initWithMovieURL:size:]
+-[GPUImageMovieWriter initWithMovieURL:size:fileType:outputSettings:]
+___69-[GPUImageMovieWriter initWithMovieURL:size:fileType:outputSettings:]_block_invoke
+-[GPUImageMovieWriter dealloc]
+-[GPUImageMovieWriter initializeMovieWithOutputSettings:]
+-[GPUImageMovieWriter setEncodingLiveVideo:]
+-[GPUImageMovieWriter startRecording]
+___37-[GPUImageMovieWriter startRecording]_block_invoke
+-[GPUImageMovieWriter startRecordingInOrientation:]
+-[GPUImageMovieWriter cancelRecording]
+___38-[GPUImageMovieWriter cancelRecording]_block_invoke
+___copy_helper_block_.136
+___destroy_helper_block_.137
+-[GPUImageMovieWriter finishRecording]
+-[GPUImageMovieWriter finishRecordingWithCompletionHandler:]
+___60-[GPUImageMovieWriter finishRecordingWithCompletionHandler:]_block_invoke
+___60-[GPUImageMovieWriter finishRecordingWithCompletionHandler:]_block_invoke_2
+-[GPUImageMovieWriter processAudioBuffer:]
+___42-[GPUImageMovieWriter processAudioBuffer:]_block_invoke
+___copy_helper_block_.151
+___destroy_helper_block_.152
+___42-[GPUImageMovieWriter processAudioBuffer:]_block_invoke.160
+___copy_helper_block_.175
+___destroy_helper_block_.176
+-[GPUImageMovieWriter enableSynchronizationCallbacks]
+___53-[GPUImageMovieWriter enableSynchronizationCallbacks]_block_invoke
+___53-[GPUImageMovieWriter enableSynchronizationCallbacks]_block_invoke_2
+___copy_helper_block_.182
+___destroy_helper_block_.183
+___53-[GPUImageMovieWriter enableSynchronizationCallbacks]_block_invoke.188
+___53-[GPUImageMovieWriter enableSynchronizationCallbacks]_block_invoke_2.189
+___copy_helper_block_.190
+___destroy_helper_block_.191
+___copy_helper_block_.193
+___destroy_helper_block_.194
+-[GPUImageMovieWriter createDataFBO]
+-[GPUImageMovieWriter destroyDataFBO]
+___37-[GPUImageMovieWriter destroyDataFBO]_block_invoke
+___copy_helper_block_.202
+___destroy_helper_block_.203
+-[GPUImageMovieWriter setFilterFBO]
+-[GPUImageMovieWriter renderAtInternalSizeUsingFramebuffer:]
+-[GPUImageMovieWriter newFrameReadyAtTime:atIndex:]
+___51-[GPUImageMovieWriter newFrameReadyAtTime:atIndex:]_block_invoke
+___copy_helper_block_.216
+___destroy_helper_block_.217
+___51-[GPUImageMovieWriter newFrameReadyAtTime:atIndex:]_block_invoke.219
+___51-[GPUImageMovieWriter newFrameReadyAtTime:atIndex:]_block_invoke_2
+___copy_helper_block_.234
+___destroy_helper_block_.235
+-[GPUImageMovieWriter nextAvailableTextureIndex]
+-[GPUImageMovieWriter setInputFramebuffer:atIndex:]
+-[GPUImageMovieWriter setInputRotation:atIndex:]
+-[GPUImageMovieWriter setInputSize:atIndex:]
+-[GPUImageMovieWriter maximumOutputSize]
+-[GPUImageMovieWriter endProcessing]
+-[GPUImageMovieWriter shouldIgnoreUpdatesToThisTarget]
+-[GPUImageMovieWriter wantsMonochromeInput]
+-[GPUImageMovieWriter setCurrentlyReceivingMonochromeInput:]
+-[GPUImageMovieWriter setHasAudioTrack:]
+-[GPUImageMovieWriter setHasAudioTrack:audioSettings:]
+-[GPUImageMovieWriter metaData]
+-[GPUImageMovieWriter setMetaData:]
+-[GPUImageMovieWriter duration]
+-[GPUImageMovieWriter transform]
+-[GPUImageMovieWriter setTransform:]
+-[GPUImageMovieWriter assetWriter]
+-[GPUImageMovieWriter hasAudioTrack]
+-[GPUImageMovieWriter encodingLiveVideo]
+-[GPUImageMovieWriter shouldPassthroughAudio]
+-[GPUImageMovieWriter setShouldPassthroughAudio:]
+-[GPUImageMovieWriter completionBlock]
+-[GPUImageMovieWriter setCompletionBlock:]
+-[GPUImageMovieWriter failureBlock]
+-[GPUImageMovieWriter setFailureBlock:]
+-[GPUImageMovieWriter videoInputReadyCallback]
+-[GPUImageMovieWriter setVideoInputReadyCallback:]
+-[GPUImageMovieWriter audioInputReadyCallback]
+-[GPUImageMovieWriter setAudioInputReadyCallback:]
+-[GPUImageMovieWriter enabled]
+-[GPUImageMovieWriter setEnabled:]
+-[GPUImageMovieWriter shouldInvalidateAudioSampleWhenDone]
+-[GPUImageMovieWriter setShouldInvalidateAudioSampleWhenDone:]
+-[GPUImageMovieWriter isPaused]
+-[GPUImageMovieWriter setPaused:]
+-[GPUImageMovieWriter movieWriterContext]
+-[GPUImageMovieWriter setMovieWriterContext:]
+-[GPUImageMovieWriter delegate]
+-[GPUImageMovieWriter setDelegate:]
+-[GPUImageMovieWriter audioProcessingCallback]
+-[GPUImageMovieWriter setAudioProcessingCallback:]
+-[GPUImageMovieWriter .cxx_destruct]
+_OBJC_IVAR_$_GPUImageMovieWriter._shouldInvalidateAudioSampleWhenDone
+_OBJC_IVAR_$_GPUImageMovieWriter.videoEncodingIsFinished
+_OBJC_IVAR_$_GPUImageMovieWriter.audioEncodingIsFinished
+_OBJC_IVAR_$_GPUImageMovieWriter.startTime
+_OBJC_IVAR_$_GPUImageMovieWriter._encodingLiveVideo
+_OBJC_IVAR_$_GPUImageMovieWriter.previousFrameTime
+_OBJC_IVAR_$_GPUImageMovieWriter.previousAudioTime
+_OBJC_IVAR_$_GPUImageMovieWriter.colorSwizzlingProgram
+_OBJC_IVAR_$_GPUImageMovieWriter.colorSwizzlingPositionAttribute
+_OBJC_IVAR_$_GPUImageMovieWriter.colorSwizzlingTextureCoordinateAttribute
+_OBJC_IVAR_$_GPUImageMovieWriter.colorSwizzlingInputTextureUniform
+_OBJC_IVAR_$_GPUImageMovieWriter.isRecording
+_OBJC_IVAR_$_GPUImageMovieWriter.failureBlock
+_OBJC_IVAR_$_GPUImageMovieWriter.audioInputReadyCallback
+___block_descriptor_tmp.138
+___block_descriptor_tmp.143
+___block_descriptor_tmp.148
+_OBJC_IVAR_$_GPUImageMovieWriter._hasAudioTrack
+___block_descriptor_tmp.153
+___block_descriptor_tmp.177
+_OBJC_IVAR_$_GPUImageMovieWriter.videoInputReadyCallback
+_OBJC_IVAR_$_GPUImageMovieWriter.videoQueue
+_OBJC_IVAR_$_GPUImageMovieWriter._paused
+___block_descriptor_tmp.184
+_OBJC_IVAR_$_GPUImageMovieWriter.audioQueue
+___block_descriptor_tmp.192
+_OBJC_IVAR_$_GPUImageMovieWriter.movieFramebuffer
+_OBJC_IVAR_$_GPUImageMovieWriter.movieRenderbuffer
+___block_descriptor_tmp.204
+_renderAtInternalSizeUsingFramebuffer:.squareVertices
+_OBJC_IVAR_$_GPUImageMovieWriter.firstInputFramebuffer
+___block_descriptor_tmp.236
+_OBJC_IVAR_$_GPUImageMovieWriter.completionBlock
+_OBJC_IVAR_$_GPUImageMovieWriter._delegate
+_OBJC_IVAR_$_GPUImageMovieWriter._shouldPassthroughAudio
+_OBJC_IVAR_$_GPUImageMovieWriter.enabled
+_OBJC_IVAR_$_GPUImageMovieWriter._audioProcessingCallback
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/iOS/GPUImageMovieWriter.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/iOS/GPUImageMovieWriter.h
+__51-[GPUImageMovieWriter newFrameReadyAtTime:atIndex:]_block_invoke_2
+__51-[GPUImageMovieWriter newFrameReadyAtTime:atIndex:]_block_invoke.219
+__51-[GPUImageMovieWriter newFrameReadyAtTime:atIndex:]_block_invoke
+__37-[GPUImageMovieWriter destroyDataFBO]_block_invoke
+__53-[GPUImageMovieWriter enableSynchronizationCallbacks]_block_invoke_2.189
+__53-[GPUImageMovieWriter enableSynchronizationCallbacks]_block_invoke.188
+__53-[GPUImageMovieWriter enableSynchronizationCallbacks]_block_invoke_2
+__53-[GPUImageMovieWriter enableSynchronizationCallbacks]_block_invoke
+__42-[GPUImageMovieWriter processAudioBuffer:]_block_invoke.160
+__42-[GPUImageMovieWriter processAudioBuffer:]_block_invoke
+__60-[GPUImageMovieWriter finishRecordingWithCompletionHandler:]_block_invoke_2
+__60-[GPUImageMovieWriter finishRecordingWithCompletionHandler:]_block_invoke
+__38-[GPUImageMovieWriter cancelRecording]_block_invoke
+__37-[GPUImageMovieWriter startRecording]_block_invoke
+__69-[GPUImageMovieWriter initWithMovieURL:size:fileType:outputSettings:]_block_invoke
+-[GPUImageTextureOutput init]
+-[GPUImageTextureOutput doneWithTexture]
+-[GPUImageTextureOutput newFrameReadyAtTime:atIndex:]
+-[GPUImageTextureOutput nextAvailableTextureIndex]
+-[GPUImageTextureOutput setInputFramebuffer:atIndex:]
+-[GPUImageTextureOutput setInputRotation:atIndex:]
+-[GPUImageTextureOutput setInputSize:atIndex:]
+-[GPUImageTextureOutput maximumOutputSize]
+-[GPUImageTextureOutput endProcessing]
+-[GPUImageTextureOutput shouldIgnoreUpdatesToThisTarget]
+-[GPUImageTextureOutput wantsMonochromeInput]
+-[GPUImageTextureOutput setCurrentlyReceivingMonochromeInput:]
+-[GPUImageTextureOutput delegate]
+-[GPUImageTextureOutput setDelegate:]
+-[GPUImageTextureOutput texture]
+-[GPUImageTextureOutput enabled]
+-[GPUImageTextureOutput setEnabled:]
+-[GPUImageTextureOutput .cxx_destruct]
+_OBJC_IVAR_$_GPUImageTextureOutput._delegate
+_OBJC_IVAR_$_GPUImageTextureOutput._texture
+_OBJC_IVAR_$_GPUImageTextureOutput.enabled
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageTextureOutput.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageTextureOutput.h
+-[GPUImageRawDataOutput initWithImageSize:resultsInBGRAFormat:]
+-[GPUImageRawDataOutput dealloc]
+-[GPUImageRawDataOutput renderAtInternalSize]
+-[GPUImageRawDataOutput colorAtLocation:]
+-[GPUImageRawDataOutput newFrameReadyAtTime:atIndex:]
+-[GPUImageRawDataOutput nextAvailableTextureIndex]
+-[GPUImageRawDataOutput setInputFramebuffer:atIndex:]
+-[GPUImageRawDataOutput setInputRotation:atIndex:]
+-[GPUImageRawDataOutput setInputSize:atIndex:]
+-[GPUImageRawDataOutput maximumOutputSize]
+-[GPUImageRawDataOutput endProcessing]
+-[GPUImageRawDataOutput shouldIgnoreUpdatesToThisTarget]
+-[GPUImageRawDataOutput wantsMonochromeInput]
+-[GPUImageRawDataOutput setCurrentlyReceivingMonochromeInput:]
+-[GPUImageRawDataOutput rawBytesForImage]
+___41-[GPUImageRawDataOutput rawBytesForImage]_block_invoke
+-[GPUImageRawDataOutput bytesPerRowInOutput]
+-[GPUImageRawDataOutput setImageSize:]
+-[GPUImageRawDataOutput lockFramebufferForReading]
+-[GPUImageRawDataOutput unlockFramebufferAfterReading]
+-[GPUImageRawDataOutput newFrameAvailableBlock]
+-[GPUImageRawDataOutput setNewFrameAvailableBlock:]
+-[GPUImageRawDataOutput enabled]
+-[GPUImageRawDataOutput setEnabled:]
+-[GPUImageRawDataOutput .cxx_destruct]
+_OBJC_IVAR_$_GPUImageRawDataOutput.lockNextFramebuffer
+_OBJC_IVAR_$_GPUImageRawDataOutput.hasReadFromTheCurrentFrame
+_OBJC_IVAR_$_GPUImageRawDataOutput._rawBytesForImage
+_OBJC_IVAR_$_GPUImageRawDataOutput.dataProgram
+_OBJC_IVAR_$_GPUImageRawDataOutput.dataPositionAttribute
+_OBJC_IVAR_$_GPUImageRawDataOutput.dataTextureCoordinateAttribute
+_OBJC_IVAR_$_GPUImageRawDataOutput.dataInputTextureUniform
+_OBJC_IVAR_$_GPUImageRawDataOutput.outputFramebuffer
+_OBJC_IVAR_$_GPUImageRawDataOutput.retainedFramebuffer
+_renderAtInternalSize.squareVertices
+_renderAtInternalSize.textureCoordinates
+_OBJC_IVAR_$_GPUImageRawDataOutput.firstInputFramebuffer
+_OBJC_IVAR_$_GPUImageRawDataOutput._newFrameAvailableBlock
+_OBJC_IVAR_$_GPUImageRawDataOutput.enabled
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageRawDataOutput.m
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/framework/Source/GPUImageRawDataOutput.h
+__41-[GPUImageRawDataOutput rawBytesForImage]_block_invoke
+/Users/fotidim/Documents/Dev/fotidim-Romo/SDK/RMVision/RMVision/Carthage/Checkouts/GPUImage/build/GPUImage.build/Release-iphoneos/GPUImageFramework.build/DerivedSources/GPUImage_vers.c
+__ZL15__ARCLite__loadv
+__ZL30add_image_hook_autoreleasepoolPK11mach_headerl
+__ZL34__arclite_objc_autoreleasePoolPushv
+__ZL33__arclite_objc_autoreleasePoolPopPv
+__ZL19patch_lazy_pointersPK11mach_headerP7patch_tm
+__ZL42__arclite_NSArray_objectAtIndexedSubscriptP7NSArrayP13objc_selectorj
+__ZL53__arclite_NSMutableArray_setObject_atIndexedSubscriptP14NSMutableArrayP13objc_selectorP11objc_objectj
+__ZL46__arclite_NSDictionary_objectForKeyedSubscriptP12NSDictionaryP13objc_selectorP11objc_object
+__ZL47__arclite_NSOrderedSet_objectAtIndexedSubscriptP12NSOrderedSetP13objc_selectorj
+__ZL58__arclite_NSMutableOrderedSet_setObject_atIndexedSubscriptP19NSMutableOrderedSetP13objc_selectorP11objc_objectj
+__ZL58__arclite_NSMutableDictionary__setObject_forKeyedSubscriptP19NSMutableDictionaryP13objc_selectorP11objc_objectS4_
+__ZL18add_image_hook_ARCPK11mach_headerl
+__ZL36__arclite_object_setInstanceVariableP11objc_objectPKcPv
+__ZL24__arclite_object_setIvarP11objc_objectP9objc_ivarS0_
+__ZL21__arclite_object_copyP11objc_objectm
+__ZL21__arclite_objc_retainP11objc_object
+__ZL26__arclite_objc_retainBlockP11objc_object
+__ZL22__arclite_objc_releaseP11objc_object
+__ZL26__arclite_objc_autoreleaseP11objc_object
+__ZL32__arclite_objc_retainAutoreleaseP11objc_object
+__ZL37__arclite_objc_autoreleaseReturnValueP11objc_object
+__ZL43__arclite_objc_retainAutoreleaseReturnValueP11objc_object
+__ZL44__arclite_objc_retainAutoreleasedReturnValueP11objc_object
+__ZL26__arclite_objc_storeStrongPP11objc_objectS0_
+__ZL22add_image_hook_swiftV1PK11mach_headerl
+__ZL42__arclite_NSUndoManagerProxy_isKindOfClassP11objc_objectP13objc_selectorP10objc_class
+__ZL13replaceMethodP10objc_classP13objc_selectorPFP11objc_objectS4_S2_zEPS6_
+__ZL30__arclite_NSManagedObject_initP11objc_objectP13objc_selector
+__ZL41__arclite_NSManagedObject_allocWithEntityP11objc_objectP13objc_selectorS0_
+__ZL36__arclite_NSManagedObject_allocBatchP11objc_objectP13objc_selectorPS0_S0_j
+__ZL37__arclite_NSKKMS_fastIndexForKnownKeyP11objc_objectP13objc_selectorS0_
+__ZL28__arclite_NSKKMS_indexForKeyP11objc_objectP13objc_selectorS0_
+__ZL29__arclite_NSKKsD_objectForKeyP11objc_objectP13objc_selectorS0_
+__ZL35__arclite_NSKKsD_removeObjectForKeyP11objc_objectP13objc_selectorS0_
+__ZL33__arclite_NSKKsD_setObject_forKeyP11objc_objectP13objc_selectorS0_S0_
+__ZL41__arclite_NSKKsD_addEntriesFromDictionaryP11objc_objectP13objc_selectorP12NSDictionary
+__ZL28__arclite_objc_readClassPairP10objc_classPK15objc_image_info
+__ZL32__arclite_objc_allocateClassPairP10objc_classPKcm
+__ZL32__arclite_object_getIndexedIvarsP11objc_object
+__ZL23__arclite_objc_getClassPKc
+__ZL27__arclite_objc_getMetaClassPKc
+__ZL31__arclite_objc_getRequiredClassPKc
+__ZL26__arclite_objc_lookUpClassPKc
+__ZL26__arclite_objc_getProtocolPKc
+__ZL23__arclite_class_getNameP10objc_class
+__ZL26__arclite_protocol_getNameP8Protocol
+__ZL37__arclite_objc_copyClassNamesForImagePKcPj
+__ZL17transcribeMethodsP10objc_classP15glue_class_ro_t
+__ZL19transcribeProtocolsP10objc_classP15glue_class_ro_t
+__ZL20transcribePropertiesP10objc_classP15glue_class_ro_t
+__ZL14initialize_impP11objc_objectP13objc_selector
+__ZL18allocateMaybeSwiftP18glue_swift_class_tm
+__ZL22copySwiftV1MangledNamePKcb
+__ZL13demangledNamePKcb
+__ZL16scanMangledFieldRPKcS0_S1_Ri
+__ZL30arclite_uninitialized_functionv
+__ZL12cxxConstructP11objc_object
+__ZL20fixStringForCoreDataP11objc_object
+_OBJC_METACLASS_$___ARCLite__
+__ZL24OBJC_CLASS_$___ARCLite__
+__ZL31OBJC_METACLASS_RO_$___ARCLite__
+__non_lazy_classes
+__ZL27OBJC_CLASS_RO_$___ARCLite__
+__ZL11_class_name
+__ZL32OBJC_$_CLASS_METHODS___ARCLite__
+__ZL17_load_method_name
+__ZL17_load_method_type
+__ZL23NSAutoreleasePool_class
+__ZZL30add_image_hook_autoreleasepoolPK11mach_headerlE7patches
+__ZGVZL30add_image_hook_autoreleasepoolPK11mach_headerlE7patches
+l_OBJC_PROTOCOL_$___ARCLiteIndexedSubscripting__
+l_OBJC_LABEL_PROTOCOL_$___ARCLiteIndexedSubscripting__
+l_OBJC_PROTOCOL_REFERENCE_$___ARCLiteIndexedSubscripting__
+l_OBJC_PROTOCOL_$___ARCLiteKeyedSubscripting__
+l_OBJC_LABEL_PROTOCOL_$___ARCLiteKeyedSubscripting__
+l_OBJC_PROTOCOL_REFERENCE_$___ARCLiteKeyedSubscripting__
+__ZZL18add_image_hook_ARCPK11mach_headerlE7patches
+__ZGVZL18add_image_hook_ARCPK11mach_headerlE7patches
+__ZL30NSUndoManagerProxy_targetClass
+__ZL29original_NSManagedObject_init
+__ZL40original_NSManagedObject_allocWithEntity
+__ZL35original_NSManagedObject_allocBatch
+__ZL25NSMutableDictionary_class
+__ZL22NSConstantString_class
+__ZL14NSString_class
+__ZL36original_NSKKMS_fastIndexForKnownKey
+__ZL27original_NSKKMS_indexForKey
+__ZL28original_NSKKsD_objectForKey
+__ZL34original_NSKKsD_removeObjectForKey
+__ZL32original_NSKKsD_setObject_forKey
+__ZL40original_NSKKsD_addEntriesFromDictionary
+__ZZL22add_image_hook_swiftV1PK11mach_headerlE7patches
+__ZGVZL22add_image_hook_swiftV1PK11mach_headerlE7patches
+__ZL31original_objc_allocateClassPair
+__ZL31original_object_getIndexedIvars
+__ZL22original_objc_getClass
+__ZL26original_objc_getMetaClass
+__ZL30original_objc_getRequiredClass
+__ZL25original_objc_lookUpClass
+__ZL25original_objc_getProtocol
+__ZL22original_class_getName
+__ZL25original_protocol_getName
+__ZL36original_objc_copyClassNamesForImage
+__ZL12demangleLock
+__ZL9Demangled
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c++ -arch armv7 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c++11 -Wno-trigraphs -fno-exceptions -fno-rtti -mpascal-strings -Os -Wno-missing-field-initializers -Wmissing-prototypes -Wno-implicit-atomic-properties -Wno-arc-repeated-use-of-weak -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -Wno-c++11-extensions -D NDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.Internal.sdk -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -Winvalid-offsetof -miphoneos-version-min=4.3 -g -fno-threadsafe-statics -Wno-sign-conversion -Wno-infinite-recursion -Wno-move -fembed-bitcode=all -iquote /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/arclite_iOS-66~534/TempContent/Objects/arclite.build/arclite_iOS.build/arclite_iphoneos-generated-files.hmap -I /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/arclite_iOS-66~534/TempContent/Objects/arclite.build/arclite_iOS.build/arclite_iphoneos-own-target-headers.hmap -I /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/arclite_iOS-66~534/TempContent/Objects/arclite.build/arclite_iOS.build/arclite_iphoneos-all-target-headers.hmap -iquote /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/arclite_iOS-66~534/TempContent/Objects/arclite.build/arclite_iOS.build/arclite_iphoneos-project-headers.hmap -I /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/arclite_iOS-66~534/Symbols/BuiltProducts/include -I /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/arclite_iOS-66~534/TempContent/Objects/arclite.build/arclite_iOS.build/DerivedSources/armv7 -I /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/arclite_iOS-66~534/TempContent/Objects/arclite.build/arclite_iOS.build/DerivedSources -F/Library/Caches/com.apple.xbs/Binaries/arclite_iOS/arclite_iOS-66~534/Symbols/BuiltProducts -F/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.Internal.sdk/System/Library/PrivateFrameworks -Wall -Wextra -Wno-gcc-compat -Wno-error=incomplete-umbrella -Wno-error=incomplete-umbrella -MMD -MT dependencies -MF /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/arclite_iOS-66~534/TempContent/Objects/arclite.build/arclite_iOS.build/Objects-normal/armv7/arclite.d --serialize-diagnostics /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/arclite_iOS-66~534/TempContent/Objects/arclite.build/arclite_iOS.build/Objects-normal/armv7/arclite.dia -c /Library/Caches/com.apple.xbs/Sources/arclite_iOS/arclite-66/source/arclite.mm -o /Library/Caches/com.apple.xbs/Binaries/arclite_iOS/arclite_iOS-66~534/TempContent/Objects/arclite.build/arclite_iOS.build/Objects-normal/armv7/arclite.o -mlinker-version=278.4 -march=armv7a
+/Library/Caches/com.apple.xbs/Sources/arclite_iOS/arclite-66/source/arclite.mm
+/Library/Caches/com.apple.xbs/Sources/arclite_iOS/arclite-66
+fixStringForCoreData
+cxxConstruct
+arclite_uninitialized_function
+scanMangledField
+isdigit
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.Internal.sdk/usr/include/ctype.h
+__isctype
+demangledName
+copySwiftV1DemangledName
+copySwiftV1MangledName
+allocateMaybeSwift
+word_align
+isSwift
+initialize_imp
+transcribeProperties
+property_list_nth
+transcribeProtocols
+transcribeMethods
+data
+method_list_nth
+__arclite_objc_copyClassNamesForImage
+__arclite_protocol_getName
+__arclite_class_getName
+__arclite_objc_getProtocol
+__arclite_objc_lookUpClass
+__arclite_objc_getRequiredClass
+__arclite_objc_getMetaClass
+__arclite_objc_getClass
+__arclite_object_getIndexedIvars
+__arclite_objc_allocateClassPair
+metaclass
+__arclite_objc_readClassPair
+transcribeIvars
+ivar_list_nth
+max
+alignment
+ro
+fastFlags
+__arclite_NSKKsD_addEntriesFromDictionary
+__arclite_NSKKsD_setObject_forKey
+__arclite_NSKKsD_removeObjectForKey
+__arclite_NSKKsD_objectForKey
+__arclite_NSKKMS_indexForKey
+__arclite_NSKKMS_fastIndexForKnownKey
+__arclite_NSManagedObject_allocBatch
+__arclite_NSManagedObject_allocWithEntity
+__arclite_NSManagedObject_init
+replaceMethod
+__arclite_NSUndoManagerProxy_isKindOfClass
+add_image_hook_swiftV1
+patch_t<const char **(const char *, unsigned int *)>
+patch_t<const char *(Protocol *)>
+patch_t<const char *(Class)>
+patch_t<Protocol *(const char *)>
+patch_t<Class (const char *)>
+patch_t<void *(id)>
+patch_t<Class (Class, const char *, unsigned long)>
+patch_t<Class (Class, const objc_image_info *)>
+__arclite_objc_storeStrong
+__arclite_objc_release
+__arclite_objc_retain
+__arclite_objc_retainAutoreleasedReturnValue
+__arclite_objc_retainAutoreleaseReturnValue
+__arclite_objc_autoreleaseReturnValue
+__arclite_objc_retainAutorelease
+__arclite_objc_autorelease
+__arclite_objc_retainBlock
+__arclite_object_copy
+fixupCopiedReferences
+_class_getInstanceStart
+alignedInstanceStart
+__arclite_class_usesAutomaticRetainRelease
+classOrSuperClassesUseARR
+__arclite_object_setIvar
+isScannedOffset
+_ivar_getClass
+__arclite_object_setInstanceVariable
+add_image_hook_ARC
+patch_t<void (id *, id)>
+patch_t<id (id)>
+patch_t<void (id)>
+patch_t<id (id, unsigned long)>
+patch_t<void (id, objc_ivar *, id)>
+patch_t<objc_ivar *(id, const char *, void *)>
+__arclite_NSMutableDictionary__setObject_forKeyedSubscript
+__arclite_NSMutableOrderedSet_setObject_atIndexedSubscript
+__arclite_NSOrderedSet_objectAtIndexedSubscript
+__arclite_NSDictionary_objectForKeyedSubscript
+__arclite_NSMutableArray_setObject_atIndexedSubscript
+__arclite_NSArray_objectAtIndexedSubscript
+patch_lazy_pointers
+__arclite_objc_autoreleasePoolPop
+__arclite_objc_autoreleasePoolPush
+add_image_hook_autoreleasepool
+patch_t<void (void *)>
+patch_t<void *()>
+__ARCLite__load
+install_swiftV1
+install_ARC
+install_dict_nil_value
+addOrReplaceMethod
+keyedGetter
+install_subscripting
+addMethod
+indexedGetter
+install_autoreleasepool

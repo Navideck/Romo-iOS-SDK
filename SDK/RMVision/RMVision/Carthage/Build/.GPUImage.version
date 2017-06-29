@@ -1,0 +1,9 @@
+{
+  "commitish" : "0.1.7",
+  "iOS" : [
+    {
+      "hash" : "259fb3194988dc6d5f56873be4dbcfea77bd5e01e2341384dd9cb455f8d03017",
+      "name" : "GPUImage"
+    }
+  ]
+}

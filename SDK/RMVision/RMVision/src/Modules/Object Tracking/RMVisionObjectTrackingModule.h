@@ -7,7 +7,7 @@
 //
 
 #import "RMVisionModule.h"
-#import "GPUImage.h"
+#import <GPUImage/GPUImageFilterGroup.h>
 
 @protocol RMVisionObjectTrackingModuleDelegate;
 

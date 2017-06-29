@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Romotive, Inc. All rights reserved.
 //
 
-#import "GPUImageFilter.h"
+#import <GPUImage/GPUImageFilter.h>
 
 @interface GPUImageBrightHueSegmentation : GPUImageFilter
 

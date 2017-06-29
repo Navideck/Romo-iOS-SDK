@@ -8,6 +8,9 @@
 
 #import "RMGPUImageExampleModule.h"
 #import "RMVisionDebugBroker.h"
+#import <GPUImage/GPUImageSepiaFilter.h>
+#import <GPUImage/GPUImageGrayscaleFilter.h>
+#import <GPUImage/GPUImageRawDataOutput.h>
 
 @interface RMGPUImageExampleModule ()
 

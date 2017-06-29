@@ -76,7 +76,7 @@ static UIImage *pic;
                           [NSString stringWithFormat:@"%@.bmp", filename]];
     const char* cPath = [filePath cStringUsingEncoding:NSMacOSRomanStringEncoding];
     
-    const cv::string newPaths = (const cv::string)cPath;
+    const cv::String newPaths = (const cv::String)cPath;
     
     //
     return cv::imwrite(newPaths, image);

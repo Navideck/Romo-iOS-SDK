@@ -11,7 +11,7 @@
 
 #include <iostream>
 
-class RMNormalBayes : public CvNormalBayesClassifier
+class RMNormalBayes : public cv::NormalBayesClassifier
 {
 public:
     int getVarCount()           { return var_count; }

@@ -7,8 +7,9 @@
 //
 
 #import "GPUImageCustomLookupFilter.h"
-#import "GPUImagePicture.h"
-#import "GPUImageLookupFilter.h"
+#import <GPUImage/GPUImagePicture.h>
+#import <GPUImage/GPUImageLookupFilter.h>
+#import <GPUImage/GPUImageOutput.h>
 
 @implementation GPUImageCustomLookupFilter
 
@@ -52,10 +53,11 @@
     return self;
 }
 
--(void)prepareForImageCapture {
-    [lookupImageSource processImage];
-    [super prepareForImageCapture];
-}
+// 23/6/17 This is probably not needed anymore since the method has been removed from GPUImage and there is no equivalent
+//-(void)prepareForImageCapture {
+//    [lookupImageSource processImage];
+//    [super prepareForImageCapture];
+//}
 
 #pragma mark -
 #pragma mark Accessors

@@ -4,7 +4,7 @@
 //
 
 #import "RMVisionModuleProtocol.h"
-#import "GPUImage.h"
+#import <GPUImage/GPUImageFilterGroup.h>
 
 @protocol RMMotionDetectionModuleDelegate;
 

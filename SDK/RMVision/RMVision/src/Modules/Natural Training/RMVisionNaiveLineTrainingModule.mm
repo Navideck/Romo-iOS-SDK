@@ -9,7 +9,7 @@
 #import "RMVisionNaiveLineTrainingModule.h"
 #import "UIImage+OpenCV.h"
 #import "RMOpenCVUtils.h"
-#import <RMShared.h>
+#import <RMShared/RMShared.h>
 
 static const float kDefaultFloodFillTolerance = 1.0/UCHAR_MAX;
 static const float kMinFloodFillFraction = 0.02;
