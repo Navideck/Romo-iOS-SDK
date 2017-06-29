@@ -21,8 +21,7 @@
 #import "RMVisionDebugBroker.h"
 #import "RMVisionObjects.h"
 #import <RMShared/RMShared.h>
-#import <RMShared/DDLog.h>
-
+#import <CocoaLumberjack/CocoaLumberjack.h>
 
 #ifdef DEBUG_LINE_DETECT
 #define LOG(...) DDLogWarn(__VA_ARGS__)

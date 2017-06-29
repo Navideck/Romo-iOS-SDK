@@ -18,6 +18,8 @@ The Romo SDK is a dynamic framework. You need to add **RMShared** and **RMCore**
 * [NMSSH](https://github.com/NMSSH/NMSSH)
 * [SocketRocket](https://github.com/facebook/SocketRocket)
 
+For RMVision you need to download separately the **OpenCV 2** iOS framework and place it under **SDK/RMVision/RMVision/lib**
+
 You can use ```carthage update --platform iOS``` if you need to fetch or update the dependencies using [Carthage](https://github.com/Carthage/Carthage). Don't forget to add all frameworks to the **Embedded Binaries** section under the **General** tab of your app's target.
 
 Have a look in the **HelloRMCore** project as an example. Every framework is already checked out in the repo and you should be able to compile out of the box.
@@ -49,14 +51,17 @@ There seems to be plenty of stock in online stores.
 - [x] Refactor RMShared
 - [x] Refactor RMCore
 - [x] Refactor HelloRMCore
-- [] Refactor RMVision
-- [] Refactor RMCharacter
-- [] Refactor HelloRomo
-- [] Refactor HelloRomo
-- [] Refactor Romo.xcworkspace
-- [] Clean up duplicate projects and folder structure
-- [] Add Swift example
+- [ ] Refactor RMVision (Partially done. Need to recompile libjpeg fat binary for all architectures. Now it cannot run on simulators)
+- [ ] Refactor HelloRMVision
+- [ ] Refactor RMCharacter
+- [ ] Refactor HelloRMCharacter
+- [ ] Fix warnings
+- [ ] Refactor HelloRomo
+- [ ] Refactor Romo.xcworkspace
+- [ ] Clean up duplicate projects and folder structure
+- [ ] Add Swift example
 
 Is somebody has access to Romo's firmware or schematics I would love to add them to the repo.
-Pull requests and issues opening are welcome!
+Pull requests and issue opening are welcome!
+
 

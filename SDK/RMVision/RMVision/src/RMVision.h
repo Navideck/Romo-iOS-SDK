@@ -104,7 +104,7 @@ extern NSString *const RMVisionModule_GPUImageExample;
 @property (nonatomic, readonly) AVCaptureSession            *session;
 @property (nonatomic, readonly) AVCaptureDevice             *device;
 @property (nonatomic, readonly) AVCaptureVideoDataOutput    *videoOutput;
-@property (nonatomic, readonly) AVPlayerLayer  *videoPreviewLayer;
+@property (nonatomic, readonly) AVCaptureVideoPreviewLayer  *videoPreviewLayer;
 
 // Initialization
 //------------------------------------------------------------------------------

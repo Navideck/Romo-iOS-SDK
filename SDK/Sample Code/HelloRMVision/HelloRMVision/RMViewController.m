@@ -42,7 +42,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [UIApplication sharedApplication].statusBarHidden = YES;
     
     // Set up vision
 #ifdef FAKE_VISION

@@ -5,7 +5,7 @@
 
 #import "RMVisionModule.h"
 #import "RMVisionModuleProtocol.h"
-#import "GPUImage.h"
+#import <GPUImage/GPUImageFilterGroup.h>
 
 @class GPUImageBoxBlurFilter;
 

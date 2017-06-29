@@ -9,8 +9,12 @@
 #import "RMVisionObjectTrackingModule.h"
 #import "UIImage+OpenCV.h"
 #import "RMVision.h"
-#import <RMShared.h>
+#import <RMShared/RMShared.h>
 #import "GPUImageNormalBayesFilter.h"
+#import <GPUImage/GPUImageRawDataOutput.h>
+#import <GPUImage/GPUImageBrightnessFilter.h>
+#import <GPUImage/GPUImageBrightnessFilter.h>
+#import <GPUImage/GPUImageAverageColor.h>
 #import "RMNormalBayes.h"
 #import "RMOpenCVUtils.h"
 
@@ -119,11 +123,11 @@ using namespace cv;
         [self addFilter:_positionAverageColor];
         
         _nbFilter = [[GPUImageNormalBayesFilter alloc] init];
-        [_nbFilter forceProcessingAtSize:_processingResolution];
+        [_nbFilter forceProcessingAtSizeRespectingAspectRatio:_processingResolution];
         [self addFilter:_nbFilter];
         
         _nopFilter = [[GPUImageBrightnessFilter alloc] init];
-        [_nopFilter forceProcessingAtSize:_processingResolution];
+        [_nopFilter forceProcessingAtSizeRespectingAspectRatio:_processingResolution];
         [self addFilter:_nopFilter];
         
         _rawDataOutput = [[GPUImageRawDataOutput alloc] initWithImageSize:_processingResolution resultsInBGRAFormat:YES]; // Will be in RGBA format if resultsInBGRAFormat == NO
@@ -228,14 +232,14 @@ using namespace cv;
  blob. The input image is modified by this function!
  @param image The binary mask image for the detected line
  */
-- (vector<vector<cv::Point> >)cleanLineImage:(cv::Mat&)image
+- (std::vector<std::vector<cv::Point> >)cleanLineImage:(cv::Mat&)image
 {
-    vector<vector<cv::Point> > contours;
-    vector<Vec4i> hierarchy;
+    std::vector<std::vector<cv::Point> > contours;
+    std::vector<Vec4i> hierarchy;
     findContours( image, contours, hierarchy, CV_RETR_EXTERNAL, CV_CHAIN_APPROX_SIMPLE, cv::Point(0, 0) );
     
-    vector<double> contourSize;
-    vector<float> contourDistance;
+    std::vector<double> contourSize;
+    std::vector<float> contourDistance;
     
     // We will judge the contours based on size and distance from contour in the previous frame
     int bestContourIndex = -1;
@@ -400,7 +404,7 @@ using namespace cv;
             debugOrientation = UIImageOrientationUpMirrored;
         }
         
-        UIImage *resultUIImage = [self.nbFilter imageFromCurrentlyProcessedOutputWithOrientation:debugOrientation];
+        UIImage *resultUIImage = [[UIImage alloc]initWithCGImage: [self.nbFilter newCGImageFromCurrentlyProcessedOutput]];
         dispatch_async(dispatch_get_main_queue(), ^{
             if ([self.vision.delegate respondsToSelector:@selector(showDebugImage:)]) {
                 [self.vision.delegate showDebugImage:resultUIImage];
@@ -881,7 +885,7 @@ using namespace cv;
         
         // Pull out the raw image for processing
         // Orientation should not be mirrored since our outputMat is not mirrored either
-        UIImage *rawImage = [self.nopFilter imageFromCurrentlyProcessedOutputWithOrientation:UIImageOrientationUp];
+        UIImage *rawImage = [[UIImage alloc]initWithCGImage:[self.nopFilter newCGImageFromCurrentlyProcessedOutput]];
         cv::Mat rawMat = [UIImage cvMatWithImage:rawImage];
         cv::cvtColor(rawMat, rawMat, CV_BGRA2BGR);
 

@@ -10,7 +10,8 @@
 #import <RMShared/RMMath.h>
 #import "RMVision_Internal.h"
 #import "GPUImageBrightHueSegmentation.h"
-#import "GPUImage.h"
+#import <GPUImage/GPUImageFilter.h>
+#import <GPUImage/GPUImageAverageColor.h>
 
 static const float triggerTimeoutDuration = 4.0; // seconds
 
@@ -57,7 +58,7 @@ static const float triggerTimeoutDuration = 4.0; // seconds
         
         // Set up filters
         _hueSegmentation = [[GPUImageBrightHueSegmentation alloc] init];
-        [_hueSegmentation forceProcessingAtSize:processingSize];
+        [_hueSegmentation forceProcessingAtSizeRespectingAspectRatio:processingSize];
         [self addFilter:_hueSegmentation];
         
         _averageColor = [[GPUImageAverageColor alloc] init];

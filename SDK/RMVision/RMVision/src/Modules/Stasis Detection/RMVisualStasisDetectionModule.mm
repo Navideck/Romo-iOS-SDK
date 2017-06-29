@@ -7,8 +7,12 @@
 //
 
 #import "RMVisualStasisDetectionModule.h"
-#import "GPUImage.h"
-#import "RMMath.h"
+#import <GPUImage/GPUImageGaussianBlurFilter.h>
+#import <GPUImage/GPUImageBuffer.h>
+#import <GPUImage/GPUImageAverageColor.h>
+#import <GPUImage/GPUImageTwoInputFilter.h>
+#import <GPUImage/GPUImageRawDataInput.h>
+#import <RMShared/RMMath.h>
 
 #ifdef VISUAL_STASIS_DEBUG
 #import "DDLog.h"
@@ -27,7 +31,7 @@ static int ddLogLevel __unused = LOG_LEVEL_INFO;
 @property (nonatomic) int frameHeight;
 
 // required GPU filters
-@property (nonatomic, strong) GPUImageFastBlurFilter *blurFilter;
+@property (nonatomic, strong) GPUImageGaussianBlurFilter *blurFilter;
 @property (nonatomic, strong) GPUImageBuffer *imageBuffer;
 @property (nonatomic, strong) GPUImageAverageColor *frameAverager;
 @property (nonatomic, strong) GPUImageTwoInputFilter *crossComparisonFilter;
@@ -85,9 +89,9 @@ static int ddLogLevel __unused = LOG_LEVEL_INFO;
     
     // blur makes pixel-by-pixel comparsion between frames (as performed by
     // cross-comparision filter) not care so much at the pixel level
-    self.blurFilter = [[GPUImageFastBlurFilter alloc] init];
+    self.blurFilter = [[GPUImageGaussianBlurFilter alloc] init];
     [self.blurFilter forceProcessingAtSizeRespectingAspectRatio:CGSizeMake(FRAME_WIDTH, _frameHeight)];
-    self.blurFilter.blurSize = 0.5;
+        self.blurFilter.blurRadiusInPixels = 0.5;
     
     // this is used to compare the current frame to one from the past
     self.imageBuffer = [[GPUImageBuffer alloc] init];

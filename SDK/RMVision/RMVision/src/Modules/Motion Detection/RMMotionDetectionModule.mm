@@ -7,6 +7,7 @@
 #import "RMVision_Internal.h"
 #import "RMMotionTriggeredColorTrainingModule.h"
 #import <RMShared/RMMath.h>
+#import <GPUImage/GPUImageMotionDetector.h>
 
 using namespace cv;
 
@@ -60,7 +61,7 @@ static const int consecutiveTriggerCountForConfirmedMotion = 5; // # of frames
         
         GPUImageMotionDetector *motionDetector = [[GPUImageMotionDetector alloc] init];
         [self addFilter:motionDetector];
-        [motionDetector forceProcessingAtSize:processingSize];
+        [motionDetector forceProcessingAtSizeRespectingAspectRatio:processingSize];
         
         __weak RMMotionDetectionModule *weakSelf = self;
         motionDetector.motionDetectionBlock = ^(CGPoint motionCentroid, CGFloat motionIntensity, CMTime frameTime){

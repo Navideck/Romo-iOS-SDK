@@ -90,7 +90,6 @@
 		942AC64E16E7F6820062CA8A /* HelloRMCore-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HelloRMCore-Info.plist"; sourceTree = "<group>"; };
 		942AC65016E7F6820062CA8A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		942AC65216E7F6820062CA8A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		942AC65416E7F6820062CA8A /* HelloRMCore-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HelloRMCore-Prefix.pch"; sourceTree = "<group>"; };
 		942AC65516E7F6820062CA8A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		942AC65616E7F6820062CA8A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		942AC65816E7F6820062CA8A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -184,7 +183,6 @@
 				942AC64E16E7F6820062CA8A /* HelloRMCore-Info.plist */,
 				942AC64F16E7F6820062CA8A /* InfoPlist.strings */,
 				942AC65216E7F6820062CA8A /* main.m */,
-				942AC65416E7F6820062CA8A /* HelloRMCore-Prefix.pch */,
 				942AC65816E7F6820062CA8A /* Default.png */,
 				942AC65A16E7F6820062CA8A /* Default@2x.png */,
 				942AC65C16E7F6820062CA8A /* Default-568h@2x.png */,
@@ -441,7 +439,6 @@
 					"$(SRCROOT)/HelloRMCore/Carthage/Build/iOS",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "HelloRMCore/HelloRMCore-Prefix.pch";
 				INFOPLIST_FILE = "HelloRMCore/HelloRMCore-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -460,7 +457,6 @@
 					"$(SRCROOT)/HelloRMCore/Carthage/Build/iOS",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "HelloRMCore/HelloRMCore-Prefix.pch";
 				INFOPLIST_FILE = "HelloRMCore/HelloRMCore-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

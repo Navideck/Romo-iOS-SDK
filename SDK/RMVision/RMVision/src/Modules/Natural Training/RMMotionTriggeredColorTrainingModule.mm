@@ -10,6 +10,8 @@
 #import "RMVisionDebugBroker.h"
 #import "GPUImageMotionSegmentation.h"
 #import "GPUImageBrightColorNotchFilter.h"
+#import <GPUImage/GPUImageRawDataInput.h>
+#import <GPUImage/GPUImageRawDataOutput.h>
 #import "UIImage+OpenCV.h"
 
 using namespace cv;
@@ -116,8 +118,8 @@ void runSynchronouslyOnGPUImageQueue(void (^block)(void))
             [weakSelf processRawDataOutputMat:outputMat];
         }];
         
-        [_notchFilter forceProcessingAtSize:processingSize];
-        [_motionSegmentation forceProcessingAtSize:processingSize];
+        [_notchFilter forceProcessingAtSizeRespectingAspectRatio:processingSize];
+        [_motionSegmentation forceProcessingAtSizeRespectingAspectRatio:processingSize];
         
         // Assemble the filter pipeline
         [_motionSegmentation addTarget:_notchFilter];

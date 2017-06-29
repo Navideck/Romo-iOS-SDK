@@ -5,11 +5,17 @@
 
 #import "RMThroughRomosEyesModule.h"
 #import "RMVisionDebugBroker.h"
-#import "GPUImageBrightColorNotchFilter.h"
-#import "GPUImage.h"
-#import "GPUImageFilter+RMAdditions.h"
-
 #import "GPUImageMaskToPixelPositionFilter.h"
+#import "GPUImageBrightColorNotchFilter.h"
+#import "GPUImageFilter+RMAdditions.h"
+#import <GPUImage/GPUImageRawDataInput.h>
+#import <GPUImage/GPUImageGrayscaleFilter.h>
+#import <GPUImage/GPUImageAlphaBlendFilter.h>
+#import <GPUImage/GPUImageBoxBlurFilter.h>
+#import <GPUImage/GPUImageSaturationFilter.h>
+#import <GPUImage/GPUImageAverageColor.h>
+#import <GPUImage/GPUImageView.h>
+
 
 @interface RMThroughRomosEyesModule ()
 
@@ -89,11 +95,11 @@
         // Set processing size
         CGSize processingSize = CGSizeMake(self.vision.width*_scaleFactor, self.vision.height*_scaleFactor);
 
-        [_notchFilter forceProcessingAtSize:CGSizeMake(processingSize.width, processingSize.height)];
-        [_grayscaleFilter forceProcessingAtSize:CGSizeMake(processingSize.width, processingSize.height)];
-        [_alphaBlend forceProcessingAtSize:CGSizeMake(processingSize.width, processingSize.height)];
-        [_saturationFilter forceProcessingAtSize:CGSizeMake(processingSize.width, processingSize.height)];
-        [_boxBlurFilter forceProcessingAtSize:CGSizeMake(processingSize.width, processingSize.height)];
+        [_notchFilter forceProcessingAtSizeRespectingAspectRatio:CGSizeMake(processingSize.width, processingSize.height)];
+        [_grayscaleFilter forceProcessingAtSizeRespectingAspectRatio:CGSizeMake(processingSize.width, processingSize.height)];
+        [_alphaBlend forceProcessingAtSizeRespectingAspectRatio:CGSizeMake(processingSize.width, processingSize.height)];
+        [_saturationFilter forceProcessingAtSizeRespectingAspectRatio:CGSizeMake(processingSize.width, processingSize.height)];
+        [_boxBlurFilter forceProcessingAtSizeRespectingAspectRatio:CGSizeMake(processingSize.width, processingSize.height)];
         
         // Input filters
         // Multiple filters can act as input filters
@@ -183,7 +189,7 @@
 -(void)setBlurSize:(float)blurSize
 {
     _blurSize = blurSize;
-    self.boxBlurFilter.blurSize = blurSize * self.scaleFactor;
+    self.boxBlurFilter.blurRadiusInPixels = blurSize * self.scaleFactor;
 }
 
 @end

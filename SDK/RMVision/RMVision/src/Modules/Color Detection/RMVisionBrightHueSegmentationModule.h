@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Romotive, Inc. All rights reserved.
 //
 
-#import "GPUImageFilterGroup.h"
+#import <GPUImage/GPUImageFilterGroup.h>
 #import "RMVisionModuleProtocol.h"
 
 @protocol RMVisionBrightHueSegmentationModuleDelegate;

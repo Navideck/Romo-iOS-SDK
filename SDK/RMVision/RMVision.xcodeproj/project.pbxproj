@@ -7,47 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		172D4AA9180E080F00DB64B8 /* GPUImageCustomLookupFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 172D4AA5180E080F00DB64B8 /* GPUImageCustomLookupFilter.m */; };
-		172D4AAB180E080F00DB64B8 /* GPUImageMaskToPixelPositionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 172D4AA7180E080F00DB64B8 /* GPUImageMaskToPixelPositionFilter.m */; };
-		173C797A17FCD142007A95B6 /* RMMotionTriggeredColorTrainingModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = 173C797817FCD142007A95B6 /* RMMotionTriggeredColorTrainingModule.mm */; };
-		173C798217FCD4C4007A95B6 /* GPUImageBrightColorNotchFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 173C798017FCD4C4007A95B6 /* GPUImageBrightColorNotchFilter.m */; };
 		173E7768181993C700577523 /* RMVisionObjectsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 173E7767181993C700577523 /* RMVisionObjectsTests.m */; };
-		174114051821E2670003FB1B /* libGPUImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17C41A2817F0CFB800D10D00 /* libGPUImage.a */; };
-		17444D3C1845B3DF00B86DB5 /* GPUImageBrightHueSegmentation.m in Sources */ = {isa = PBXBuildFile; fileRef = 17444D3B1845B3DF00B86DB5 /* GPUImageBrightHueSegmentation.m */; };
-		17444D3D1845B3DF00B86DB5 /* GPUImageBrightHueSegmentation.m in Sources */ = {isa = PBXBuildFile; fileRef = 17444D3B1845B3DF00B86DB5 /* GPUImageBrightHueSegmentation.m */; };
-		1749A81B17F0E92100A85504 /* RMThroughRomosEyesModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1749A81917F0E92100A85504 /* RMThroughRomosEyesModule.mm */; };
-		1749A83017F0F9C100A85504 /* GPUImageFilter+RMAddtions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1749A82F17F0F9C100A85504 /* GPUImageFilter+RMAddtions.m */; };
-		1762682A18207434000D8C91 /* GPUImageRawDataInput+RMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1762682918207434000D8C91 /* GPUImageRawDataInput+RMAdditions.m */; };
-		1765E9AF181063F100BC953B /* libRMShared.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94B78F5217F0B61C00371395 /* libRMShared.a */; };
 		176E29E418402858007C4421 /* UIImageOpenCVCategoryTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 176E29E318402858007C4421 /* UIImageOpenCVCategoryTests.mm */; };
 		1774395D1822529800B25F98 /* GPUImageRawDataInput+RMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1762682918207434000D8C91 /* GPUImageRawDataInput+RMAdditions.m */; };
-		1783832C18198EC60072EC2A /* RMOpenCVUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 17F7CFD21816F4580081AB7B /* RMOpenCVUtils.mm */; };
-		178874F91819F10A0095AD12 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 71FAB9181815C7D500718ECB /* libicucore.dylib */; };
 		178874FA1819F10A0095AD12 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71FAB9121815C68700718ECB /* AssetsLibrary.framework */; };
 		178874FB1819F10A0095AD12 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94E0AEA6180286E100BAD339 /* ImageIO.framework */; };
-		178B12E81821B0BB001B60FD /* GPUImageRawDataInput+RMAdditions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 17626826182073A9000D8C91 /* GPUImageRawDataInput+RMAdditions.h */; };
 		178B12E91821B0C1001B60FD /* GPUImageRawDataInput+RMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1762682918207434000D8C91 /* GPUImageRawDataInput+RMAdditions.m */; };
-		1793DF87184F9D53002566F5 /* RMVisionNaiveLineTrainingModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9472CCE7184CFD0D00A5679A /* RMVisionNaiveLineTrainingModule.mm */; };
 		1793DF88184F9DA5002566F5 /* LineTrainingBenchmarks.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1793DF82184F988D002566F5 /* LineTrainingBenchmarks.mm */; };
-		1794B4651832D1CD005F98A8 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1794B4641832D1CD005F98A8 /* opencv2.framework */; };
-		1794B4661832D2B1005F98A8 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1794B4641832D1CD005F98A8 /* opencv2.framework */; };
-		1794B4671832D998005F98A8 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1794B4641832D1CD005F98A8 /* opencv2.framework */; };
-		1794B4681832DA0F005F98A8 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1794B4641832D1CD005F98A8 /* opencv2.framework */; };
-		17A533D01839BAFB00FC39E0 /* NMSSH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17A533CF1839BAFB00FC39E0 /* NMSSH.framework */; };
-		17A799D717FDD11400E0DE67 /* GPUImageMotionSegmentation.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A799D517FDD11400E0DE67 /* GPUImageMotionSegmentation.m */; };
-		17BB5E1718393065006A6420 /* RMVisionObjectTrackingModuleDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = 17BB5E1618393065006A6420 /* RMVisionObjectTrackingModuleDebug.m */; };
-		17BB5E1A18394863006A6420 /* RMVisionObjectTrackingModuleDebug.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 17BB5E1518393065006A6420 /* RMVisionObjectTrackingModuleDebug.h */; };
-		17C41A2D17F0CFD200D10D00 /* libGPUImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17C41A2817F0CFB800D10D00 /* libGPUImage.a */; };
-		17D51E351846554E00CA1FC5 /* RMVisionBrightHueSegmentationModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = 17D51E341846554E00CA1FC5 /* RMVisionBrightHueSegmentationModule.mm */; };
-		17D51E3C18465DFC00CA1FC5 /* RMVisionBrightHueSegmentationModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = 17D51E341846554E00CA1FC5 /* RMVisionBrightHueSegmentationModule.mm */; };
-		17D51E3F18465E0200CA1FC5 /* RMVisionBrightHueSegmentationModule.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 17D51E331846554E00CA1FC5 /* RMVisionBrightHueSegmentationModule.h */; };
-		17F7CFD31816F4580081AB7B /* RMOpenCVUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 17F7CFD21816F4580081AB7B /* RMOpenCVUtils.mm */; };
-		17F839E517F0B91C006DC8A0 /* RMGPUImageExampleModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = 17F839E317F0B91C006DC8A0 /* RMGPUImageExampleModule.mm */; };
 		4324F616181B10B500820505 /* RMVisionObjectTrackTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4324F614181B10B500820505 /* RMVisionObjectTrackTests.mm */; };
-		432A33D41819C22100390E8B /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 432A33D31819C22100390E8B /* SenTestingKit.framework */; };
 		432A34D5181ADD8300390E8B /* RMVisionBenchmarks.mm in Sources */ = {isa = PBXBuildFile; fileRef = 432A34A7181AD99F00390E8B /* RMVisionBenchmarks.mm */; };
 		432A34D6181ADD8300390E8B /* UIDevice+Hardware.m in Sources */ = {isa = PBXBuildFile; fileRef = 432A34B9181ADB4F00390E8B /* UIDevice+Hardware.m */; };
-		432A34DA181ADD8300390E8B /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 432A33D31819C22100390E8B /* SenTestingKit.framework */; };
 		432A34DB181ADD8300390E8B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC2A6970176E96E20057A289 /* UIKit.framework */; };
 		432A34DC181ADD8300390E8B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC2A6932176E92790057A289 /* Foundation.framework */; };
 		432A34DE181ADD8300390E8B /* green_ball_isFast_ColorTracking.plist in Resources */ = {isa = PBXBuildFile; fileRef = 432A34AE181AD99F00390E8B /* green_ball_isFast_ColorTracking.plist */; };
@@ -60,8 +29,6 @@
 		432A34EE181AE1CD00390E8B /* face.mov in Resources */ = {isa = PBXBuildFile; fileRef = 432A34EC181AE1CD00390E8B /* face.mov */; };
 		432A34EF181AE1CD00390E8B /* green_ball.mov in Resources */ = {isa = PBXBuildFile; fileRef = 432A34ED181AE1CD00390E8B /* green_ball.mov */; };
 		432A34F0181AED8400390E8B /* RMVision.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AC4BA0B517821FC200AB2597 /* RMVision.bundle */; };
-		4375590017C1B167002F3DB4 /* RMFakeVision.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 439F28DE17C19B8600A268EB /* RMFakeVision.h */; };
-		439F28E117C19B8600A268EB /* RMFakeVision.mm in Sources */ = {isa = PBXBuildFile; fileRef = 439F28DF17C19B8600A268EB /* RMFakeVision.mm */; };
 		43B1E5BE181B112400533336 /* green_ball_cropped.png in Resources */ = {isa = PBXBuildFile; fileRef = 432A34AD181AD99F00390E8B /* green_ball_cropped.png */; };
 		71FAB8AF1815B5DE00718ECB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC2A6932176E92790057A289 /* Foundation.framework */; };
 		71FAB8B01815B5DE00718ECB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC2A6969176E947B0057A289 /* CoreGraphics.framework */; };
@@ -74,96 +41,17 @@
 		71FAB8C81815B5DF00718ECB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC2A6970176E96E20057A289 /* UIKit.framework */; };
 		71FAB8D01815B5DF00718ECB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 71FAB8CE1815B5DF00718ECB /* InfoPlist.strings */; };
 		71FAB8DC1815BFF900718ECB /* RMVisionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FAB8D11815B5DF00718ECB /* RMVisionTests.m */; };
-		71FAB8DE1815C1F500718ECB /* GPUImageCustomLookupFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 172D4AA5180E080F00DB64B8 /* GPUImageCustomLookupFilter.m */; };
-		71FAB8DF1815C1F500718ECB /* GPUImageMaskToPixelPositionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 172D4AA7180E080F00DB64B8 /* GPUImageMaskToPixelPositionFilter.m */; };
-		71FAB8E01815C1F500718ECB /* GPUImageBrightColorNotchFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 173C798017FCD4C4007A95B6 /* GPUImageBrightColorNotchFilter.m */; };
-		71FAB8E11815C1F500718ECB /* GPUImageMotionSegmentation.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A799D517FDD11400E0DE67 /* GPUImageMotionSegmentation.m */; };
-		71FAB8E21815C1F500718ECB /* RMVisionDebugBroker.m in Sources */ = {isa = PBXBuildFile; fileRef = AC0C80F317704D7C001F6D53 /* RMVisionDebugBroker.m */; };
-		71FAB8E31815C1F500718ECB /* RMBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC0C80F617704D7C001F6D53 /* RMBorderView.m */; };
-		71FAB8E41815C1F500718ECB /* RMMotionTriggeredColorTrainingModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = 173C797817FCD142007A95B6 /* RMMotionTriggeredColorTrainingModule.mm */; };
-		71FAB8E61815C1F500718ECB /* RMThroughRomosEyesModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1749A81917F0E92100A85504 /* RMThroughRomosEyesModule.mm */; };
-		71FAB8E71815C1F500718ECB /* RMGPUImageExampleModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = 17F839E317F0B91C006DC8A0 /* RMGPUImageExampleModule.mm */; };
-		71FAB8E81815C1F500718ECB /* RMVideoModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = ACD51BE31778F71F00C1298C /* RMVideoModule.mm */; };
-		71FAB8E91815C1F500718ECB /* RMPictureModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = ACD51BE11778F70B00C1298C /* RMPictureModule.mm */; };
-		71FAB8EB1815C1F500718ECB /* RMFaceDetectionModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = AC0C810117704D7C001F6D53 /* RMFaceDetectionModule.mm */; };
-		71FAB8EC1815C1F500718ECB /* RMEyeDetectionModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = AC6CBB6B178BA13200EB8117 /* RMEyeDetectionModule.mm */; };
-		71FAB8ED1815C1F500718ECB /* RMMotionDetectionModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = AC0C810417704D7C001F6D53 /* RMMotionDetectionModule.mm */; };
-		71FAB8EE1815C1F500718ECB /* RMBrightnessMeteringModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = 94AA8FD31806377A006DD3D4 /* RMBrightnessMeteringModule.mm */; };
-		71FAB8EF1815C1F500718ECB /* RMVisualStasisDetectionModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = 94CD6866180EF0E500E044CB /* RMVisualStasisDetectionModule.mm */; };
-		71FAB8F01815C1F500718ECB /* RMVisionModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = AC0C810617704D7C001F6D53 /* RMVisionModule.mm */; };
-		71FAB8F11815C1F500718ECB /* RMVision.mm in Sources */ = {isa = PBXBuildFile; fileRef = AC0C810B17704D7C001F6D53 /* RMVision.mm */; };
-		71FAB8F21815C1F500718ECB /* RMImageUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = AC0C810F17704D7C001F6D53 /* RMImageUtils.mm */; };
-		71FAB8F31815C1F500718ECB /* UIImage+OpenCV.mm in Sources */ = {isa = PBXBuildFile; fileRef = AC0C811117704D7C001F6D53 /* UIImage+OpenCV.mm */; };
 		71FAB8F41815C1F500718ECB /* UIView+VisionAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1085D61772475D00B87D63 /* UIView+VisionAdditions.m */; };
 		71FAB8F51815C1F500718ECB /* UIDevice+VisionHardware.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1085EA1772482900B87D63 /* UIDevice+VisionHardware.m */; };
 		71FAB8F61815C1F500718ECB /* GPUImageFilter+RMAddtions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1749A82F17F0F9C100A85504 /* GPUImageFilter+RMAddtions.m */; };
-		71FAB8F71815C1F500718ECB /* RMFakeVision.mm in Sources */ = {isa = PBXBuildFile; fileRef = 439F28DF17C19B8600A268EB /* RMFakeVision.mm */; };
 		71FAB8FD1815C4B300718ECB /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94E0AEA6180286E100BAD339 /* ImageIO.framework */; };
 		71FAB90E1815C4F400718ECB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC2A696C176E95200057A289 /* AVFoundation.framework */; };
 		71FAB90F1815C4F400718ECB /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC4BA0B617821FC200AB2597 /* CoreFoundation.framework */; };
-		71FAB9101815C52000718ECB /* libGPUImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17C41A2817F0CFB800D10D00 /* libGPUImage.a */; };
-		71FAB9111815C66A00718ECB /* RMVisionObjects.mm in Sources */ = {isa = PBXBuildFile; fileRef = AC0C810917704D7C001F6D53 /* RMVisionObjects.mm */; };
 		71FAB9131815C68700718ECB /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71FAB9121815C68700718ECB /* AssetsLibrary.framework */; };
-		71FAB9171815C78F00718ECB /* libRMShared.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94B78F5217F0B61C00371395 /* libRMShared.a */; };
-		71FAB9191815C7D500718ECB /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 71FAB9181815C7D500718ECB /* libicucore.dylib */; };
-		94306B77180EF50000AA0335 /* GPUImageCustomLookupFilter.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 172D4AA4180E080F00DB64B8 /* GPUImageCustomLookupFilter.h */; };
-		94306B78180EF50000AA0335 /* GPUImageMaskToPixelPositionFilter.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 172D4AA6180E080F00DB64B8 /* GPUImageMaskToPixelPositionFilter.h */; };
-		94306B79180EF50000AA0335 /* GPUImageBrightColorNotchFilter.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 173C797F17FCD4C4007A95B6 /* GPUImageBrightColorNotchFilter.h */; };
-		94306B7A180EF50000AA0335 /* GPUImageMotionSegmentation.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 17A799D417FDD11400E0DE67 /* GPUImageMotionSegmentation.h */; };
-		94306B7B180EF50000AA0335 /* RMMotionTriggeredColorTrainingModule.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 173C797717FCD142007A95B6 /* RMMotionTriggeredColorTrainingModule.h */; };
-		94306B7C180EF50000AA0335 /* RMBrightnessMeteringModule.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 94AA8FD21806377A006DD3D4 /* RMBrightnessMeteringModule.h */; };
-		94306B7D180EF50000AA0335 /* RMVisualStasisDetectionModule.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 94CD6865180EF0E500E044CB /* RMVisualStasisDetectionModule.h */; };
-		94306B7E180EF50000AA0335 /* RMVision_Internal.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 43A312A617CE90C8004A8FDD /* RMVision_Internal.h */; };
-		94306B7F180EF50000AA0335 /* UIView+VisionAdditions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = AC1085D51772475D00B87D63 /* UIView+VisionAdditions.h */; };
-		94306B80180EF50000AA0335 /* UIDevice+VisionHardware.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = AC1085E91772482900B87D63 /* UIDevice+VisionHardware.h */; };
-		94306B81180EF50000AA0335 /* GPUImageFilter+RMAdditions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1749A82D17F0F9AB00A85504 /* GPUImageFilter+RMAdditions.h */; };
-		9472CCE8184CFD0D00A5679A /* RMVisionNaiveLineTrainingModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9472CCE7184CFD0D00A5679A /* RMVisionNaiveLineTrainingModule.mm */; };
-		94AA8FD51806377A006DD3D4 /* RMBrightnessMeteringModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = 94AA8FD31806377A006DD3D4 /* RMBrightnessMeteringModule.mm */; };
-		94ACA463182814B600543C08 /* RMVisionObjectTrackingModule.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 94B3269B1827FA0300979B71 /* RMVisionObjectTrackingModule.h */; };
-		94B3269D1827FA0300979B71 /* GPUImageNormalBayesFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 94B326981827FA0300979B71 /* GPUImageNormalBayesFilter.m */; };
-		94B3269E1827FA0300979B71 /* RMNormalBayes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 94B326991827FA0300979B71 /* RMNormalBayes.cpp */; };
-		94B3269F1827FA0300979B71 /* RMVisionObjectTrackingModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = 94B3269C1827FA0300979B71 /* RMVisionObjectTrackingModule.mm */; };
-		94B326CA1828031300979B71 /* RMVisionObjectTrackingModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = 94B3269C1827FA0300979B71 /* RMVisionObjectTrackingModule.mm */; };
-		94B326CB1828031300979B71 /* GPUImageNormalBayesFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 94B326981827FA0300979B71 /* GPUImageNormalBayesFilter.m */; };
-		94CD6868180EF0E500E044CB /* RMVisualStasisDetectionModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = 94CD6866180EF0E500E044CB /* RMVisualStasisDetectionModule.mm */; };
-		94DA2E1D1828276E007EF7B5 /* libGPUImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17C41A2817F0CFB800D10D00 /* libGPUImage.a */; };
 		94DA2E1E18282799007EF7B5 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94E0AEA6180286E100BAD339 /* ImageIO.framework */; };
 		94DA2E1F182827A0007EF7B5 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71FAB9121815C68700718ECB /* AssetsLibrary.framework */; };
-		94DA2E20182827A5007EF7B5 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 71FAB9181815C7D500718ECB /* libicucore.dylib */; };
 		94DA2E21182828E4007EF7B5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC2A696C176E95200057A289 /* AVFoundation.framework */; };
 		94DA2E23182828F1007EF7B5 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94DA2E22182828F1007EF7B5 /* CoreMedia.framework */; };
-		94E0AEA7180286E100BAD339 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94E0AEA6180286E100BAD339 /* ImageIO.framework */; };
-		94ED917B184D712500AD03A4 /* RMVisionNaiveLineTrainingModule.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9472CCE6184CFD0D00A5679A /* RMVisionNaiveLineTrainingModule.h */; };
-		AC043E2917723936001C265B /* RMVisionModule.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = AC0C810517704D7C001F6D53 /* RMVisionModule.h */; };
-		AC043E2A17723936001C265B /* RMVisionObjects.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = AC0C810817704D7C001F6D53 /* RMVisionObjects.h */; };
-		AC043E2B17723936001C265B /* RMVision.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = AC0C810A17704D7C001F6D53 /* RMVision.h */; };
-		AC043E2C17723936001C265B /* RMVisionModuleProtocol.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = AC0C810C17704D7C001F6D53 /* RMVisionModuleProtocol.h */; };
-		AC043E2D17723936001C265B /* RMImageUtils.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = AC0C810E17704D7C001F6D53 /* RMImageUtils.h */; };
-		AC043E2E17723936001C265B /* UIImage+OpenCV.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = AC0C811017704D7C001F6D53 /* UIImage+OpenCV.h */; };
-		AC0C811217704D7C001F6D53 /* RMVisionDebugBroker.m in Sources */ = {isa = PBXBuildFile; fileRef = AC0C80F317704D7C001F6D53 /* RMVisionDebugBroker.m */; };
-		AC0C811317704D7C001F6D53 /* RMBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC0C80F617704D7C001F6D53 /* RMBorderView.m */; };
-		AC0C811717704D7C001F6D53 /* RMFaceDetectionModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = AC0C810117704D7C001F6D53 /* RMFaceDetectionModule.mm */; };
-		AC0C811817704D7C001F6D53 /* RMMotionDetectionModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = AC0C810417704D7C001F6D53 /* RMMotionDetectionModule.mm */; };
-		AC0C811917704D7C001F6D53 /* RMVisionModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = AC0C810617704D7C001F6D53 /* RMVisionModule.mm */; };
-		AC0C811A17704D7C001F6D53 /* RMVisionObjects.mm in Sources */ = {isa = PBXBuildFile; fileRef = AC0C810917704D7C001F6D53 /* RMVisionObjects.mm */; };
-		AC0C811B17704D7C001F6D53 /* RMVision.mm in Sources */ = {isa = PBXBuildFile; fileRef = AC0C810B17704D7C001F6D53 /* RMVision.mm */; };
-		AC0C811C17704D7C001F6D53 /* RMImageUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = AC0C810F17704D7C001F6D53 /* RMImageUtils.mm */; };
-		AC0C811D17704D7C001F6D53 /* UIImage+OpenCV.mm in Sources */ = {isa = PBXBuildFile; fileRef = AC0C811117704D7C001F6D53 /* UIImage+OpenCV.mm */; };
-		AC1085E8177247EC00B87D63 /* UIView+VisionAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1085D61772475D00B87D63 /* UIView+VisionAdditions.m */; };
-		AC1085ED1772492000B87D63 /* UIDevice+VisionHardware.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1085EA1772482900B87D63 /* UIDevice+VisionHardware.m */; };
-		AC11433417705B9D00D112FE /* RMVisionDebugBroker.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = AC0C80F217704D7C001F6D53 /* RMVisionDebugBroker.h */; };
-		AC11433617705B9D00D112FE /* RMFaceDetectionModule.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = AC0C810017704D7C001F6D53 /* RMFaceDetectionModule.h */; };
-		AC11433717705B9D00D112FE /* RMMotionDetectionModule.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = AC0C810317704D7C001F6D53 /* RMMotionDetectionModule.h */; };
-		AC11435017705C3D00D112FE /* RMBorderView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = AC0C80F517704D7C001F6D53 /* RMBorderView.h */; };
-		AC2A6933176E92790057A289 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC2A6932176E92790057A289 /* Foundation.framework */; };
-		AC2A696A176E947B0057A289 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC2A6969176E947B0057A289 /* CoreGraphics.framework */; };
-		AC2A696D176E95200057A289 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC2A696C176E95200057A289 /* AVFoundation.framework */; };
-		AC2A6971176E96E20057A289 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC2A6970176E96E20057A289 /* UIKit.framework */; };
-		AC48781D1807323000FE8B65 /* RMThroughRomosEyesModule.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1749A81817F0E92100A85504 /* RMThroughRomosEyesModule.h */; };
-		AC48781E1807323000FE8B65 /* RMGPUImageExampleModule.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 17F839E217F0B91C006DC8A0 /* RMGPUImageExampleModule.h */; };
-		AC4878201807323000FE8B65 /* RMVideoModule.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ACD51BE21778F71F00C1298C /* RMVideoModule.h */; };
-		AC4878211807323000FE8B65 /* RMPictureModule.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = ACD51BE01778F70B00C1298C /* RMPictureModule.h */; };
-		AC4878221807323000FE8B65 /* RMEyeDetectionModule.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = AC6CBB6A178BA13200EB8117 /* RMEyeDetectionModule.h */; };
 		AC4BA0B717821FC200AB2597 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC4BA0B617821FC200AB2597 /* CoreFoundation.framework */; };
 		AC4BA0BD17821FC200AB2597 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AC4BA0BB17821FC200AB2597 /* InfoPlist.strings */; };
 		AC4BA0D31782207600AB2597 /* haarcascade_eye.xml in Resources */ = {isa = PBXBuildFile; fileRef = AC4BA09617821CDA00AB2597 /* haarcascade_eye.xml */; };
@@ -173,50 +61,106 @@
 		AC4BA0D71782207600AB2597 /* haarcascade_mcs_righteye.xml in Resources */ = {isa = PBXBuildFile; fileRef = AC4BA09A17821CDA00AB2597 /* haarcascade_mcs_righteye.xml */; };
 		AC4BA0D81782207600AB2597 /* haarcascade_profileface.xml in Resources */ = {isa = PBXBuildFile; fileRef = AC4BA09B17821CDA00AB2597 /* haarcascade_profileface.xml */; };
 		AC4BA0D91782207600AB2597 /* haarcascade_righteye_2splits.xml in Resources */ = {isa = PBXBuildFile; fileRef = AC4BA09C17821CDA00AB2597 /* haarcascade_righteye_2splits.xml */; };
-		AC6CBB7D178BA29100EB8117 /* RMEyeDetectionModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = AC6CBB6B178BA13200EB8117 /* RMEyeDetectionModule.mm */; };
-		ACBC504E178259B3007B49A7 /* RMVision.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AC4BA0B517821FC200AB2597 /* RMVision.bundle */; };
-		ACD51BE41778F75B00C1298C /* RMPictureModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = ACD51BE11778F70B00C1298C /* RMPictureModule.mm */; };
-		ACD51BE51778F75D00C1298C /* RMVideoModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = ACD51BE31778F71F00C1298C /* RMVideoModule.mm */; };
-		B7164E321831A7A1000FDB4A /* RMLineDetectionModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7164E311831A7A1000FDB4A /* RMLineDetectionModule.mm */; };
-		B7164E391831C645000FDB4A /* RMLineDetectionModule.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B7164E301831A7A1000FDB4A /* RMLineDetectionModule.h */; };
+		AF20077C1EFD3CB9007CF02C /* RMVision.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF2007751EFD3CB9007CF02C /* RMVision.framework */; };
+		AF20077D1EFD3CB9007CF02C /* RMVision.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AF2007751EFD3CB9007CF02C /* RMVision.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AF21CFB51EFD3ED70044F0D3 /* RMVision.mm in Sources */ = {isa = PBXBuildFile; fileRef = AC0C810B17704D7C001F6D53 /* RMVision.mm */; };
+		AF21CFB61EFD3ED70044F0D3 /* RMFakeVision.mm in Sources */ = {isa = PBXBuildFile; fileRef = 439F28DF17C19B8600A268EB /* RMFakeVision.mm */; };
+		AF21CFB71EFD3ED70044F0D3 /* GPUImageCustomLookupFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 172D4AA5180E080F00DB64B8 /* GPUImageCustomLookupFilter.m */; };
+		AF21CFB81EFD3ED70044F0D3 /* GPUImageMaskToPixelPositionFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 172D4AA7180E080F00DB64B8 /* GPUImageMaskToPixelPositionFilter.m */; };
+		AF21CFB91EFD3ED70044F0D3 /* GPUImageBrightColorNotchFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 173C798017FCD4C4007A95B6 /* GPUImageBrightColorNotchFilter.m */; };
+		AF21CFBA1EFD3ED70044F0D3 /* GPUImageMotionSegmentation.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A799D517FDD11400E0DE67 /* GPUImageMotionSegmentation.m */; };
+		AF21CFBB1EFD3ED70044F0D3 /* GPUImageBrightHueSegmentation.m in Sources */ = {isa = PBXBuildFile; fileRef = 17444D3B1845B3DF00B86DB5 /* GPUImageBrightHueSegmentation.m */; };
+		AF21CFBC1EFD3ED70044F0D3 /* RMVisionDebugBroker.m in Sources */ = {isa = PBXBuildFile; fileRef = AC0C80F317704D7C001F6D53 /* RMVisionDebugBroker.m */; };
+		AF21CFBD1EFD3ED70044F0D3 /* RMBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC0C80F617704D7C001F6D53 /* RMBorderView.m */; };
+		AF21CFBE1EFD3ED70044F0D3 /* RMVisionBrightHueSegmentationModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = 17D51E341846554E00CA1FC5 /* RMVisionBrightHueSegmentationModule.mm */; };
+		AF21CFBF1EFD3ED70044F0D3 /* RMLineDetectionModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7164E311831A7A1000FDB4A /* RMLineDetectionModule.mm */; };
+		AF21CFC01EFD3ED70044F0D3 /* RMMotionTriggeredColorTrainingModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = 173C797817FCD142007A95B6 /* RMMotionTriggeredColorTrainingModule.mm */; };
+		AF21CFC11EFD3ED70044F0D3 /* RMVisionNaiveLineTrainingModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9472CCE7184CFD0D00A5679A /* RMVisionNaiveLineTrainingModule.mm */; };
+		AF21CFC21EFD3ED70044F0D3 /* RMThroughRomosEyesModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1749A81917F0E92100A85504 /* RMThroughRomosEyesModule.mm */; };
+		AF21CFC31EFD3ED70044F0D3 /* RMGPUImageExampleModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = 17F839E317F0B91C006DC8A0 /* RMGPUImageExampleModule.mm */; };
+		AF21CFC41EFD3ED70044F0D3 /* RMVideoModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = ACD51BE31778F71F00C1298C /* RMVideoModule.mm */; };
+		AF21CFC51EFD3ED70044F0D3 /* RMPictureModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = ACD51BE11778F70B00C1298C /* RMPictureModule.mm */; };
+		AF21CFC61EFD3ED70044F0D3 /* RMVisionObjectTrackingModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = 94B3269C1827FA0300979B71 /* RMVisionObjectTrackingModule.mm */; };
+		AF21CFC71EFD3ED70044F0D3 /* GPUImageNormalBayesFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 94B326981827FA0300979B71 /* GPUImageNormalBayesFilter.m */; };
+		AF21CFC81EFD3ED70044F0D3 /* RMVisionObjectTrackingModuleDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = 17BB5E1618393065006A6420 /* RMVisionObjectTrackingModuleDebug.m */; };
+		AF21CFC91EFD3ED70044F0D3 /* RMFaceDetectionModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = AC0C810117704D7C001F6D53 /* RMFaceDetectionModule.mm */; };
+		AF21CFCA1EFD3ED70044F0D3 /* RMEyeDetectionModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = AC6CBB6B178BA13200EB8117 /* RMEyeDetectionModule.mm */; };
+		AF21CFCB1EFD3ED70044F0D3 /* RMMotionDetectionModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = AC0C810417704D7C001F6D53 /* RMMotionDetectionModule.mm */; };
+		AF21CFCC1EFD3ED70044F0D3 /* RMBrightnessMeteringModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = 94AA8FD31806377A006DD3D4 /* RMBrightnessMeteringModule.mm */; };
+		AF21CFCD1EFD3ED70044F0D3 /* RMVisualStasisDetectionModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = 94CD6866180EF0E500E044CB /* RMVisualStasisDetectionModule.mm */; };
+		AF21CFCE1EFD3ED70044F0D3 /* RMVisionModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = AC0C810617704D7C001F6D53 /* RMVisionModule.mm */; };
+		AF21CFCF1EFD3ED70044F0D3 /* RMVisionObjects.mm in Sources */ = {isa = PBXBuildFile; fileRef = AC0C810917704D7C001F6D53 /* RMVisionObjects.mm */; };
+		AF21CFD01EFD3ED70044F0D3 /* RMImageUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = AC0C810F17704D7C001F6D53 /* RMImageUtils.mm */; };
+		AF21CFD11EFD3ED70044F0D3 /* UIImage+OpenCV.mm in Sources */ = {isa = PBXBuildFile; fileRef = AC0C811117704D7C001F6D53 /* UIImage+OpenCV.mm */; };
+		AF21CFD21EFD3ED70044F0D3 /* UIView+VisionAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1085D61772475D00B87D63 /* UIView+VisionAdditions.m */; };
+		AF21CFD31EFD3ED70044F0D3 /* UIDevice+VisionHardware.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1085EA1772482900B87D63 /* UIDevice+VisionHardware.m */; };
+		AF21CFD41EFD3ED70044F0D3 /* GPUImageFilter+RMAddtions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1749A82F17F0F9C100A85504 /* GPUImageFilter+RMAddtions.m */; };
+		AF21CFD51EFD3ED70044F0D3 /* GPUImageRawDataInput+RMAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1762682918207434000D8C91 /* GPUImageRawDataInput+RMAdditions.m */; };
+		AF21CFD61EFD3ED70044F0D3 /* RMOpenCVUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 17F7CFD21816F4580081AB7B /* RMOpenCVUtils.mm */; };
+		AF21CFD81EFD3FC00044F0D3 /* RMVision.h in Headers */ = {isa = PBXBuildFile; fileRef = AC0C810A17704D7C001F6D53 /* RMVision.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF21CFD91EFD3FC00044F0D3 /* RMVision_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 43A312A617CE90C8004A8FDD /* RMVision_Internal.h */; };
+		AF21CFDA1EFD3FC00044F0D3 /* RMVisionModuleProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = AC0C810C17704D7C001F6D53 /* RMVisionModuleProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF21CFDB1EFD3FC00044F0D3 /* RMFakeVision.h in Headers */ = {isa = PBXBuildFile; fileRef = 439F28DE17C19B8600A268EB /* RMFakeVision.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF21CFDC1EFD3FC00044F0D3 /* GPUImageCustomLookupFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 172D4AA4180E080F00DB64B8 /* GPUImageCustomLookupFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF21CFDD1EFD3FC00044F0D3 /* GPUImageMaskToPixelPositionFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 172D4AA6180E080F00DB64B8 /* GPUImageMaskToPixelPositionFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF21CFDE1EFD3FC00044F0D3 /* GPUImageBrightColorNotchFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 173C797F17FCD4C4007A95B6 /* GPUImageBrightColorNotchFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF21CFDF1EFD3FC00044F0D3 /* GPUImageMotionSegmentation.h in Headers */ = {isa = PBXBuildFile; fileRef = 17A799D417FDD11400E0DE67 /* GPUImageMotionSegmentation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF21CFE01EFD3FC00044F0D3 /* GPUImageBrightHueSegmentation.h in Headers */ = {isa = PBXBuildFile; fileRef = 17444D3A1845B3DF00B86DB5 /* GPUImageBrightHueSegmentation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF21CFE11EFD3FC00044F0D3 /* RMVisionDebugBroker.h in Headers */ = {isa = PBXBuildFile; fileRef = AC0C80F217704D7C001F6D53 /* RMVisionDebugBroker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF21CFE21EFD3FC00044F0D3 /* RMBorderView.h in Headers */ = {isa = PBXBuildFile; fileRef = AC0C80F517704D7C001F6D53 /* RMBorderView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF21CFE31EFD3FC00044F0D3 /* RMVisionBrightHueSegmentationModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 17D51E331846554E00CA1FC5 /* RMVisionBrightHueSegmentationModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF21CFE41EFD3FC00044F0D3 /* RMLineDetectionModule.h in Headers */ = {isa = PBXBuildFile; fileRef = B7164E301831A7A1000FDB4A /* RMLineDetectionModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF21CFE51EFD3FC00044F0D3 /* RMMotionTriggeredColorTrainingModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 173C797717FCD142007A95B6 /* RMMotionTriggeredColorTrainingModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF21CFE61EFD3FC00044F0D3 /* RMVisionNaiveLineTrainingModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 9472CCE6184CFD0D00A5679A /* RMVisionNaiveLineTrainingModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF21CFE71EFD3FC00044F0D3 /* RMThroughRomosEyesModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 1749A81817F0E92100A85504 /* RMThroughRomosEyesModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF21CFE81EFD3FC00044F0D3 /* RMGPUImageExampleModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 17F839E217F0B91C006DC8A0 /* RMGPUImageExampleModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF21CFE91EFD3FC00044F0D3 /* RMVideoModule.h in Headers */ = {isa = PBXBuildFile; fileRef = ACD51BE21778F71F00C1298C /* RMVideoModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF21CFEA1EFD3FC00044F0D3 /* RMPictureModule.h in Headers */ = {isa = PBXBuildFile; fileRef = ACD51BE01778F70B00C1298C /* RMPictureModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF21CFEB1EFD3FC00044F0D3 /* RMVisionObjectTrackingModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 94B3269B1827FA0300979B71 /* RMVisionObjectTrackingModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF21CFEC1EFD3FC00044F0D3 /* GPUImageNormalBayesFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = 94B326971827FA0300979B71 /* GPUImageNormalBayesFilter.h */; };
+		AF21CFEE1EFD3FC00044F0D3 /* RMVisionObjectTrackingModuleDebug.h in Headers */ = {isa = PBXBuildFile; fileRef = 17BB5E1518393065006A6420 /* RMVisionObjectTrackingModuleDebug.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF21CFEF1EFD3FC00044F0D3 /* RMFaceDetectionModule.h in Headers */ = {isa = PBXBuildFile; fileRef = AC0C810017704D7C001F6D53 /* RMFaceDetectionModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF21CFF01EFD3FC00044F0D3 /* RMEyeDetectionModule.h in Headers */ = {isa = PBXBuildFile; fileRef = AC6CBB6A178BA13200EB8117 /* RMEyeDetectionModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF21CFF11EFD3FC00044F0D3 /* RMMotionDetectionModule.h in Headers */ = {isa = PBXBuildFile; fileRef = AC0C810317704D7C001F6D53 /* RMMotionDetectionModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF21CFF21EFD3FC00044F0D3 /* RMBrightnessMeteringModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 94AA8FD21806377A006DD3D4 /* RMBrightnessMeteringModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF21CFF31EFD3FC00044F0D3 /* RMVisualStasisDetectionModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 94CD6865180EF0E500E044CB /* RMVisualStasisDetectionModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF21CFF41EFD3FC00044F0D3 /* RMVisionModule.h in Headers */ = {isa = PBXBuildFile; fileRef = AC0C810517704D7C001F6D53 /* RMVisionModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF21CFF51EFD3FC00044F0D3 /* RMVisionObjects.h in Headers */ = {isa = PBXBuildFile; fileRef = AC0C810817704D7C001F6D53 /* RMVisionObjects.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF21CFF61EFD3FC00044F0D3 /* RMImageUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = AC0C810E17704D7C001F6D53 /* RMImageUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF21CFF71EFD3FC00044F0D3 /* UIImage+OpenCV.h in Headers */ = {isa = PBXBuildFile; fileRef = AC0C811017704D7C001F6D53 /* UIImage+OpenCV.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF21CFF81EFD3FC00044F0D3 /* UIView+VisionAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = AC1085D51772475D00B87D63 /* UIView+VisionAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF21CFF91EFD3FC00044F0D3 /* UIDevice+VisionHardware.h in Headers */ = {isa = PBXBuildFile; fileRef = AC1085E91772482900B87D63 /* UIDevice+VisionHardware.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF21CFFA1EFD3FC00044F0D3 /* GPUImageFilter+RMAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1749A82D17F0F9AB00A85504 /* GPUImageFilter+RMAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF21CFFB1EFD3FC00044F0D3 /* GPUImageRawDataInput+RMAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 17626826182073A9000D8C91 /* GPUImageRawDataInput+RMAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF21CFFC1EFD3FC00044F0D3 /* RMOpenCVUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 17F7CFD11816F4580081AB7B /* RMOpenCVUtils.h */; };
+		AF21CFFD1EFD419B0044F0D3 /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFCD520A1EFD1A580003C14B /* GPUImage.framework */; };
+		AF21D0011EFD42A30044F0D3 /* NMSSH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFCD521F1EFD30760003C14B /* NMSSH.framework */; };
+		AF21D0021EFD42AE0044F0D3 /* RMShared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF2007871EFD3CD7007CF02C /* RMShared.framework */; };
+		AF21D0041EFD42C70044F0D3 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94E0AEA6180286E100BAD339 /* ImageIO.framework */; };
+		AF21D0051EFD42D60044F0D3 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC2A696C176E95200057A289 /* AVFoundation.framework */; };
+		AF21D0061EFD42DA0044F0D3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC2A6969176E947B0057A289 /* CoreGraphics.framework */; };
+		AF21D0071EFD42DF0044F0D3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC2A6932176E92790057A289 /* Foundation.framework */; };
+		AF21D0081EFD42E40044F0D3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC2A6970176E96E20057A289 /* UIKit.framework */; };
+		AF2F762B1F03E09A00B87EA1 /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFCD520A1EFD1A580003C14B /* GPUImage.framework */; };
+		AF2F762E1F03E0C100B87EA1 /* GPUImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AFCD520A1EFD1A580003C14B /* GPUImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AF2F76341F03E12500B87EA1 /* SocketRocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF2F76331F03E12500B87EA1 /* SocketRocket.framework */; };
+		AF2F76431F03E25900B87EA1 /* SocketRocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF2F76331F03E12500B87EA1 /* SocketRocket.framework */; };
+		AF2F76441F03E25900B87EA1 /* SocketRocket.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AF2F76331F03E12500B87EA1 /* SocketRocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AF2F76451F03E25E00B87EA1 /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFCD521B1EFD22960003C14B /* CocoaLumberjack.framework */; };
+		AF2F76461F03E25E00B87EA1 /* CocoaLumberjack.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AFCD521B1EFD22960003C14B /* CocoaLumberjack.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AF2F76471F03E26400B87EA1 /* NMSSH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFCD521F1EFD30760003C14B /* NMSSH.framework */; };
+		AF2F76481F03E26400B87EA1 /* NMSSH.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AFCD521F1EFD30760003C14B /* NMSSH.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AF70CFF21F03BD380092AD6D /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71FAB9121815C68700718ECB /* AssetsLibrary.framework */; };
+		AFC002051EFD4F9000FB4D65 /* RMNormalBayes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 94B326991827FA0300979B71 /* RMNormalBayes.cpp */; };
+		AFC002061EFD4F9000FB4D65 /* RMNormalBayes.h in Headers */ = {isa = PBXBuildFile; fileRef = 94B3269A1827FA0300979B71 /* RMNormalBayes.h */; };
+		AFD55F751F03F65C0048B5E5 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD55F741F03F65C0048B5E5 /* opencv2.framework */; };
+		AFD55F771F03FC960048B5E5 /* libjpeg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD55F761F03FC960048B5E5 /* libjpeg.framework */; };
+		AFD55F781F03FC960048B5E5 /* libjpeg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD55F761F03FC960048B5E5 /* libjpeg.framework */; };
+		AFD55F791F03FE070048B5E5 /* RMShared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF2007871EFD3CD7007CF02C /* RMShared.framework */; };
+		AFD55F7A1F03FE070048B5E5 /* RMShared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AF2007871EFD3CD7007CF02C /* RMShared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		174114011821E25A0003FB1B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17C41A2117F0CFB800D10D00 /* GPUImage.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = BCF1A33314DDB1EC00852800;
-			remoteInfo = GPUImage;
-		};
-		1765E9AA181063E000BC953B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 94B78F3D17F0B61C00371395 /* RMShared.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 945B81C91746AF07003C6903;
-			remoteInfo = RMShared;
-		};
-		17C41A2717F0CFB800D10D00 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17C41A2117F0CFB800D10D00 /* GPUImage.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = BCF1A33414DDB1EC00852800;
-			remoteInfo = GPUImage;
-		};
-		17C41A2917F0CFB800D10D00 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17C41A2117F0CFB800D10D00 /* GPUImage.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = BCF1A34414DDB1EC00852800;
-			remoteInfo = GPUImageTests;
-		};
-		17C41A2B17F0CFC900D10D00 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17C41A2117F0CFB800D10D00 /* GPUImage.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = BCF1A33314DDB1EC00852800;
-			remoteInfo = GPUImage;
-		};
 		432A34D3181ADD8300390E8B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AC2A6927176E92790057A289 /* Project object */;
@@ -231,13 +175,6 @@
 			remoteGlobalIDString = 71FAB8AD1815B5DE00718ECB;
 			remoteInfo = RMVisionSample;
 		};
-		71FAB8F91815C2F300718ECB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 17C41A2117F0CFB800D10D00 /* GPUImage.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = BCF1A33314DDB1EC00852800;
-			remoteInfo = GPUImage;
-		};
 		71FAB8FB1815C2F900718ECB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AC2A6927176E92790057A289 /* Project object */;
@@ -245,77 +182,58 @@
 			remoteGlobalIDString = AC4BA0B417821FC200AB2597;
 			remoteInfo = "RMVision Resources";
 		};
-		71FAB9151815C6C700718ECB /* PBXContainerItemProxy */ = {
+		AF20077A1EFD3CB9007CF02C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 94B78F3D17F0B61C00371395 /* RMShared.xcodeproj */;
+			containerPortal = AC2A6927176E92790057A289 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 945B81C91746AF07003C6903;
-			remoteInfo = RMShared;
+			remoteGlobalIDString = AF2007741EFD3CB9007CF02C;
+			remoteInfo = RMVision;
 		};
-		94B78F5117F0B61C00371395 /* PBXContainerItemProxy */ = {
+		AF2007861EFD3CD7007CF02C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 94B78F3D17F0B61C00371395 /* RMShared.xcodeproj */;
+			containerPortal = AF2007821EFD3CD6007CF02C /* RMShared.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 945B81CA1746AF07003C6903;
+			remoteGlobalIDString = AF07A0551EFA9E8200CB9EB4;
 			remoteInfo = RMShared;
 		};
-		94DA2E1B1828275F007EF7B5 /* PBXContainerItemProxy */ = {
+		AF21D0091EFD42FF0044F0D3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 17C41A2117F0CFB800D10D00 /* GPUImage.xcodeproj */;
+			containerPortal = AF2007821EFD3CD6007CF02C /* RMShared.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = BCF1A33314DDB1EC00852800;
-			remoteInfo = GPUImage;
+			remoteGlobalIDString = AF07A0541EFA9E8200CB9EB4;
+			remoteInfo = RMShared;
 		};
-		AC4BA0DA1782209800AB2597 /* PBXContainerItemProxy */ = {
+		AF2A22671EFD59ED008F24F2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AC2A6927176E92790057A289 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = AC4BA0B417821FC200AB2597;
 			remoteInfo = "RMVision Resources";
 		};
+		AFD55F7B1F03FE070048B5E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF2007821EFD3CD6007CF02C /* RMShared.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = AF07A0541EFA9E8200CB9EB4;
+			remoteInfo = RMShared;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		AC2A692D176E92790057A289 /* CopyFiles */ = {
+		AF2007811EFD3CB9007CF02C /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = "include/${PRODUCT_NAME}";
-			dstSubfolderSpec = 16;
+			dstPath = "";
+			dstSubfolderSpec = 10;
 			files = (
-				94ED917B184D712500AD03A4 /* RMVisionNaiveLineTrainingModule.h in CopyFiles */,
-				17D51E3F18465E0200CA1FC5 /* RMVisionBrightHueSegmentationModule.h in CopyFiles */,
-				B7164E391831C645000FDB4A /* RMLineDetectionModule.h in CopyFiles */,
-				17BB5E1A18394863006A6420 /* RMVisionObjectTrackingModuleDebug.h in CopyFiles */,
-				94ACA463182814B600543C08 /* RMVisionObjectTrackingModule.h in CopyFiles */,
-				94306B77180EF50000AA0335 /* GPUImageCustomLookupFilter.h in CopyFiles */,
-				94306B78180EF50000AA0335 /* GPUImageMaskToPixelPositionFilter.h in CopyFiles */,
-				94306B79180EF50000AA0335 /* GPUImageBrightColorNotchFilter.h in CopyFiles */,
-				94306B7A180EF50000AA0335 /* GPUImageMotionSegmentation.h in CopyFiles */,
-				94306B7B180EF50000AA0335 /* RMMotionTriggeredColorTrainingModule.h in CopyFiles */,
-				94306B7C180EF50000AA0335 /* RMBrightnessMeteringModule.h in CopyFiles */,
-				94306B7D180EF50000AA0335 /* RMVisualStasisDetectionModule.h in CopyFiles */,
-				94306B7E180EF50000AA0335 /* RMVision_Internal.h in CopyFiles */,
-				94306B7F180EF50000AA0335 /* UIView+VisionAdditions.h in CopyFiles */,
-				94306B80180EF50000AA0335 /* UIDevice+VisionHardware.h in CopyFiles */,
-				94306B81180EF50000AA0335 /* GPUImageFilter+RMAdditions.h in CopyFiles */,
-				178B12E81821B0BB001B60FD /* GPUImageRawDataInput+RMAdditions.h in CopyFiles */,
-				4375590017C1B167002F3DB4 /* RMFakeVision.h in CopyFiles */,
-				AC48781D1807323000FE8B65 /* RMThroughRomosEyesModule.h in CopyFiles */,
-				AC48781E1807323000FE8B65 /* RMGPUImageExampleModule.h in CopyFiles */,
-				AC4878201807323000FE8B65 /* RMVideoModule.h in CopyFiles */,
-				AC4878211807323000FE8B65 /* RMPictureModule.h in CopyFiles */,
-				AC4878221807323000FE8B65 /* RMEyeDetectionModule.h in CopyFiles */,
-				AC043E2917723936001C265B /* RMVisionModule.h in CopyFiles */,
-				AC043E2A17723936001C265B /* RMVisionObjects.h in CopyFiles */,
-				AC043E2B17723936001C265B /* RMVision.h in CopyFiles */,
-				AC043E2C17723936001C265B /* RMVisionModuleProtocol.h in CopyFiles */,
-				AC043E2D17723936001C265B /* RMImageUtils.h in CopyFiles */,
-				AC043E2E17723936001C265B /* UIImage+OpenCV.h in CopyFiles */,
-				AC11435017705C3D00D112FE /* RMBorderView.h in CopyFiles */,
-				AC11433417705B9D00D112FE /* RMVisionDebugBroker.h in CopyFiles */,
-				AC11433617705B9D00D112FE /* RMFaceDetectionModule.h in CopyFiles */,
-				AC11433717705B9D00D112FE /* RMMotionDetectionModule.h in CopyFiles */,
+				AFD55F7A1F03FE070048B5E5 /* RMShared.framework in Embed Frameworks */,
+				AF20077D1EFD3CB9007CF02C /* RMVision.framework in Embed Frameworks */,
+				AF2F76441F03E25900B87EA1 /* SocketRocket.framework in Embed Frameworks */,
+				AF2F76461F03E25E00B87EA1 /* CocoaLumberjack.framework in Embed Frameworks */,
+				AF2F762E1F03E0C100B87EA1 /* GPUImage.framework in Embed Frameworks */,
+				AF2F76481F03E26400B87EA1 /* NMSSH.framework in Embed Frameworks */,
 			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -340,14 +258,10 @@
 		1762682918207434000D8C91 /* GPUImageRawDataInput+RMAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GPUImageRawDataInput+RMAdditions.m"; sourceTree = "<group>"; };
 		176E29E318402858007C4421 /* UIImageOpenCVCategoryTests.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = UIImageOpenCVCategoryTests.mm; sourceTree = "<group>"; };
 		1793DF82184F988D002566F5 /* LineTrainingBenchmarks.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LineTrainingBenchmarks.mm; sourceTree = "<group>"; };
-		1794B4641832D1CD005F98A8 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = RMVision/lib/opencv2.framework; sourceTree = "<group>"; };
-		17A533CF1839BAFB00FC39E0 /* NMSSH.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NMSSH.framework; path = ../../RMShared/RMShared/lib/NMSSH.framework; sourceTree = "<group>"; };
-		17A533D31839BB1700FC39E0 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		17A799D417FDD11400E0DE67 /* GPUImageMotionSegmentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GPUImageMotionSegmentation.h; path = Filters/GPUImageMotionSegmentation.h; sourceTree = "<group>"; };
 		17A799D517FDD11400E0DE67 /* GPUImageMotionSegmentation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GPUImageMotionSegmentation.m; path = Filters/GPUImageMotionSegmentation.m; sourceTree = "<group>"; };
 		17BB5E1518393065006A6420 /* RMVisionObjectTrackingModuleDebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMVisionObjectTrackingModuleDebug.h; sourceTree = "<group>"; };
 		17BB5E1618393065006A6420 /* RMVisionObjectTrackingModuleDebug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMVisionObjectTrackingModuleDebug.m; sourceTree = "<group>"; };
-		17C41A2117F0CFB800D10D00 /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPUImage.xcodeproj; path = RMVision/lib/GPUImage/framework/GPUImage.xcodeproj; sourceTree = "<group>"; };
 		17D51E331846554E00CA1FC5 /* RMVisionBrightHueSegmentationModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMVisionBrightHueSegmentationModule.h; path = "Color Detection/RMVisionBrightHueSegmentationModule.h"; sourceTree = "<group>"; };
 		17D51E341846554E00CA1FC5 /* RMVisionBrightHueSegmentationModule.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = RMVisionBrightHueSegmentationModule.mm; path = "Color Detection/RMVisionBrightHueSegmentationModule.mm"; sourceTree = "<group>"; };
 		17F7CFD11816F4580081AB7B /* RMOpenCVUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMOpenCVUtils.h; sourceTree = "<group>"; };
@@ -356,7 +270,6 @@
 		17F839E317F0B91C006DC8A0 /* RMGPUImageExampleModule.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = RMGPUImageExampleModule.mm; path = GPUImage/RMGPUImageExampleModule.mm; sourceTree = "<group>"; };
 		4324F614181B10B500820505 /* RMVisionObjectTrackTests.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RMVisionObjectTrackTests.mm; sourceTree = "<group>"; };
 		4324F615181B10B500820505 /* RMVisionTestHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMVisionTestHelpers.h; sourceTree = "<group>"; };
-		432A33D31819C22100390E8B /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		432A34A7181AD99F00390E8B /* RMVisionBenchmarks.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RMVisionBenchmarks.mm; sourceTree = "<group>"; };
 		432A34AA181AD99F00390E8B /* downloadSupportFiles.bash */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = downloadSupportFiles.bash; sourceTree = "<group>"; };
 		432A34AB181AD99F00390E8B /* face_isFast_FaceDetection.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = face_isFast_FaceDetection.plist; sourceTree = "<group>"; };
@@ -381,12 +294,10 @@
 		71FAB8BC1815B5DE00718ECB /* RMVisionAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RMVisionAppDelegate.m; sourceTree = "<group>"; };
 		71FAB8BE1815B5DE00718ECB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		71FAB8C41815B5DE00718ECB /* RMVisionSampleTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RMVisionSampleTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		71FAB8C51815B5DE00718ECB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		71FAB8CD1815B5DF00718ECB /* RMVisionSampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RMVisionSampleTests-Info.plist"; sourceTree = "<group>"; };
 		71FAB8CF1815B5DF00718ECB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		71FAB8D11815B5DF00718ECB /* RMVisionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RMVisionTests.m; sourceTree = "<group>"; };
 		71FAB9121815C68700718ECB /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
-		71FAB9181815C7D500718ECB /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		9472CCE6184CFD0D00A5679A /* RMVisionNaiveLineTrainingModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMVisionNaiveLineTrainingModule.h; path = "Natural Training/RMVisionNaiveLineTrainingModule.h"; sourceTree = "<group>"; };
 		9472CCE7184CFD0D00A5679A /* RMVisionNaiveLineTrainingModule.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = RMVisionNaiveLineTrainingModule.mm; path = "Natural Training/RMVisionNaiveLineTrainingModule.mm"; sourceTree = "<group>"; };
 		94AA8FD21806377A006DD3D4 /* RMBrightnessMeteringModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMBrightnessMeteringModule.h; sourceTree = "<group>"; };
@@ -397,7 +308,6 @@
 		94B3269A1827FA0300979B71 /* RMNormalBayes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMNormalBayes.h; sourceTree = "<group>"; };
 		94B3269B1827FA0300979B71 /* RMVisionObjectTrackingModule.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = RMVisionObjectTrackingModule.h; sourceTree = "<group>"; };
 		94B3269C1827FA0300979B71 /* RMVisionObjectTrackingModule.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RMVisionObjectTrackingModule.mm; sourceTree = "<group>"; };
-		94B78F3D17F0B61C00371395 /* RMShared.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RMShared.xcodeproj; path = ../../RMShared/RMShared.xcodeproj; sourceTree = "<group>"; };
 		94CD6865180EF0E500E044CB /* RMVisualStasisDetectionModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMVisualStasisDetectionModule.h; sourceTree = "<group>"; };
 		94CD6866180EF0E500E044CB /* RMVisualStasisDetectionModule.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RMVisualStasisDetectionModule.mm; sourceTree = "<group>"; };
 		94DA2E22182828F1007EF7B5 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
@@ -425,7 +335,6 @@
 		AC1085D61772475D00B87D63 /* UIView+VisionAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+VisionAdditions.m"; sourceTree = "<group>"; };
 		AC1085E91772482900B87D63 /* UIDevice+VisionHardware.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIDevice+VisionHardware.h"; sourceTree = "<group>"; };
 		AC1085EA1772482900B87D63 /* UIDevice+VisionHardware.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+VisionHardware.m"; sourceTree = "<group>"; };
-		AC2A692F176E92790057A289 /* libRMVision.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRMVision.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC2A6932176E92790057A289 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AC2A6936176E92790057A289 /* RMVision-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RMVision-Prefix.pch"; sourceTree = "<group>"; };
 		AC2A6969176E947B0057A289 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -449,6 +358,15 @@
 		ACD51BE11778F70B00C1298C /* RMPictureModule.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = RMPictureModule.mm; sourceTree = "<group>"; };
 		ACD51BE21778F71F00C1298C /* RMVideoModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMVideoModule.h; sourceTree = "<group>"; };
 		ACD51BE31778F71F00C1298C /* RMVideoModule.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = RMVideoModule.mm; sourceTree = "<group>"; };
+		AF2007751EFD3CB9007CF02C /* RMVision.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RMVision.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF2007781EFD3CB9007CF02C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF2007821EFD3CD6007CF02C /* RMShared.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RMShared.xcodeproj; path = ../RMShared/RMShared.xcodeproj; sourceTree = "<group>"; };
+		AF2F76331F03E12500B87EA1 /* SocketRocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SocketRocket.framework; path = RMVision/Carthage/Build/iOS/SocketRocket.framework; sourceTree = "<group>"; };
+		AFCD520A1EFD1A580003C14B /* GPUImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GPUImage.framework; path = RMVision/Carthage/Build/iOS/GPUImage.framework; sourceTree = "<group>"; };
+		AFCD521B1EFD22960003C14B /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjack.framework; path = RMVision/Carthage/Build/iOS/CocoaLumberjack.framework; sourceTree = "<group>"; };
+		AFCD521F1EFD30760003C14B /* NMSSH.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NMSSH.framework; path = RMVision/Carthage/Build/iOS/NMSSH.framework; sourceTree = "<group>"; };
+		AFD55F741F03F65C0048B5E5 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = RMVision/lib/OpenCV/opencv2.framework; sourceTree = "<group>"; };
+		AFD55F761F03FC960048B5E5 /* libjpeg.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libjpeg.framework; path = "RMVision/lib/libjpeg-turbo/ios/framework/libjpeg.framework"; sourceTree = "<group>"; };
 		B7164E301831A7A1000FDB4A /* RMLineDetectionModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMLineDetectionModule.h; path = "Line Detection/RMLineDetectionModule.h"; sourceTree = "<group>"; };
 		B7164E311831A7A1000FDB4A /* RMLineDetectionModule.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = RMLineDetectionModule.mm; path = "Line Detection/RMLineDetectionModule.mm"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -460,14 +378,10 @@
 			files = (
 				94DA2E23182828F1007EF7B5 /* CoreMedia.framework in Frameworks */,
 				94DA2E21182828E4007EF7B5 /* AVFoundation.framework in Frameworks */,
-				94DA2E20182827A5007EF7B5 /* libicucore.dylib in Frameworks */,
 				94DA2E1F182827A0007EF7B5 /* AssetsLibrary.framework in Frameworks */,
 				94DA2E1E18282799007EF7B5 /* ImageIO.framework in Frameworks */,
-				94DA2E1D1828276E007EF7B5 /* libGPUImage.a in Frameworks */,
-				432A34DA181ADD8300390E8B /* SenTestingKit.framework in Frameworks */,
 				432A34DB181ADD8300390E8B /* UIKit.framework in Frameworks */,
 				432A34DC181ADD8300390E8B /* Foundation.framework in Frameworks */,
-				1794B4681832DA0F005F98A8 /* opencv2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,17 +389,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1794B4661832D2B1005F98A8 /* opencv2.framework in Frameworks */,
-				71FAB9191815C7D500718ECB /* libicucore.dylib in Frameworks */,
-				71FAB9171815C78F00718ECB /* libRMShared.a in Frameworks */,
 				71FAB9131815C68700718ECB /* AssetsLibrary.framework in Frameworks */,
 				71FAB90E1815C4F400718ECB /* AVFoundation.framework in Frameworks */,
+				AFD55F791F03FE070048B5E5 /* RMShared.framework in Frameworks */,
+				AFD55F781F03FC960048B5E5 /* libjpeg.framework in Frameworks */,
 				71FAB90F1815C4F400718ECB /* CoreFoundation.framework in Frameworks */,
 				71FAB8B01815B5DE00718ECB /* CoreGraphics.framework in Frameworks */,
+				AF2F76431F03E25900B87EA1 /* SocketRocket.framework in Frameworks */,
 				71FAB8B11815B5DE00718ECB /* UIKit.framework in Frameworks */,
+				AF2F762B1F03E09A00B87EA1 /* GPUImage.framework in Frameworks */,
+				AF2F76471F03E26400B87EA1 /* NMSSH.framework in Frameworks */,
+				AF20077C1EFD3CB9007CF02C /* RMVision.framework in Frameworks */,
 				71FAB8AF1815B5DE00718ECB /* Foundation.framework in Frameworks */,
+				AF2F76451F03E25E00B87EA1 /* CocoaLumberjack.framework in Frameworks */,
 				71FAB8FD1815C4B300718ECB /* ImageIO.framework in Frameworks */,
-				71FAB9101815C52000718ECB /* libGPUImage.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,30 +410,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				174114051821E2670003FB1B /* libGPUImage.a in Frameworks */,
-				432A33D41819C22100390E8B /* SenTestingKit.framework in Frameworks */,
-				178874F91819F10A0095AD12 /* libicucore.dylib in Frameworks */,
 				178874FA1819F10A0095AD12 /* AssetsLibrary.framework in Frameworks */,
 				178874FB1819F10A0095AD12 /* ImageIO.framework in Frameworks */,
 				71FAB8C81815B5DF00718ECB /* UIKit.framework in Frameworks */,
 				71FAB8C71815B5DF00718ECB /* Foundation.framework in Frameworks */,
-				1794B4671832D998005F98A8 /* opencv2.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AC2A692C176E92790057A289 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				17A533D01839BAFB00FC39E0 /* NMSSH.framework in Frameworks */,
-				1794B4651832D1CD005F98A8 /* opencv2.framework in Frameworks */,
-				1765E9AF181063F100BC953B /* libRMShared.a in Frameworks */,
-				94E0AEA7180286E100BAD339 /* ImageIO.framework in Frameworks */,
-				17C41A2D17F0CFD200D10D00 /* libGPUImage.a in Frameworks */,
-				AC2A696D176E95200057A289 /* AVFoundation.framework in Frameworks */,
-				AC2A696A176E947B0057A289 /* CoreGraphics.framework in Frameworks */,
-				AC2A6933176E92790057A289 /* Foundation.framework in Frameworks */,
-				AC2A6971176E96E20057A289 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,6 +422,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC4BA0B717821FC200AB2597 /* CoreFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF2007711EFD3CB9007CF02C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF70CFF21F03BD380092AD6D /* AssetsLibrary.framework in Frameworks */,
+				AF21D0081EFD42E40044F0D3 /* UIKit.framework in Frameworks */,
+				AF21D0071EFD42DF0044F0D3 /* Foundation.framework in Frameworks */,
+				AF2F76341F03E12500B87EA1 /* SocketRocket.framework in Frameworks */,
+				AF21D0061EFD42DA0044F0D3 /* CoreGraphics.framework in Frameworks */,
+				AF21D0051EFD42D60044F0D3 /* AVFoundation.framework in Frameworks */,
+				AFD55F751F03F65C0048B5E5 /* opencv2.framework in Frameworks */,
+				AF21D0041EFD42C70044F0D3 /* ImageIO.framework in Frameworks */,
+				AF21CFFD1EFD419B0044F0D3 /* GPUImage.framework in Frameworks */,
+				AF21D0011EFD42A30044F0D3 /* NMSSH.framework in Frameworks */,
+				AFD55F771F03FC960048B5E5 /* libjpeg.framework in Frameworks */,
+				AF21D0021EFD42AE0044F0D3 /* RMShared.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -576,15 +492,6 @@
 				1793DF82184F988D002566F5 /* LineTrainingBenchmarks.mm */,
 			);
 			name = Benchmarks;
-			sourceTree = "<group>";
-		};
-		17C41A2217F0CFB800D10D00 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				17C41A2817F0CFB800D10D00 /* libGPUImage.a */,
-				17C41A2A17F0CFB800D10D00 /* GPUImageTests.octest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		17D51E381846555700CA1FC5 /* Color Segmentation */ = {
@@ -690,14 +597,6 @@
 				17BB5E1618393065006A6420 /* RMVisionObjectTrackingModuleDebug.m */,
 			);
 			path = "Object Tracking";
-			sourceTree = "<group>";
-		};
-		94B78F3E17F0B61C00371395 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				94B78F5217F0B61C00371395 /* libRMShared.a */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		94CD6864180EF0E500E044CB /* Stasis Detection */ = {
@@ -820,7 +719,6 @@
 		AC2A6926176E92790057A289 = {
 			isa = PBXGroup;
 			children = (
-				94B78F3D17F0B61C00371395 /* RMShared.xcodeproj */,
 				AC2A6934176E92790057A289 /* RMVision */,
 				AC4BA0B817821FC200AB2597 /* RMVision Resources */,
 				71FAB8B21815B5DE00718ECB /* RMVisionSample */,
@@ -833,11 +731,11 @@
 		AC2A6930176E92790057A289 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AC2A692F176E92790057A289 /* libRMVision.a */,
 				AC4BA0B517821FC200AB2597 /* RMVision.bundle */,
 				71FAB8AE1815B5DE00718ECB /* RMVisionSample.app */,
 				71FAB8C41815B5DE00718ECB /* RMVisionSampleTests.octest */,
 				432A34E9181ADD8300390E8B /* RMVisionBenchmarks.octest */,
+				AF2007751EFD3CB9007CF02C /* RMVision.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -845,21 +743,21 @@
 		AC2A6931176E92790057A289 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				17A533D31839BB1700FC39E0 /* libz.dylib */,
-				17A533CF1839BAFB00FC39E0 /* NMSSH.framework */,
-				1794B4641832D1CD005F98A8 /* opencv2.framework */,
+				AFD55F761F03FC960048B5E5 /* libjpeg.framework */,
+				AFD55F741F03F65C0048B5E5 /* opencv2.framework */,
+				AF2F76331F03E12500B87EA1 /* SocketRocket.framework */,
+				AF2007821EFD3CD6007CF02C /* RMShared.xcodeproj */,
+				AFCD520A1EFD1A580003C14B /* GPUImage.framework */,
 				94DA2E22182828F1007EF7B5 /* CoreMedia.framework */,
-				432A33D31819C22100390E8B /* SenTestingKit.framework */,
-				71FAB9181815C7D500718ECB /* libicucore.dylib */,
+				AFCD521F1EFD30760003C14B /* NMSSH.framework */,
+				AFCD521B1EFD22960003C14B /* CocoaLumberjack.framework */,
 				71FAB9121815C68700718ECB /* AssetsLibrary.framework */,
 				94E0AEA6180286E100BAD339 /* ImageIO.framework */,
-				17C41A2117F0CFB800D10D00 /* GPUImage.xcodeproj */,
 				AC2A696C176E95200057A289 /* AVFoundation.framework */,
 				AC2A6969176E947B0057A289 /* CoreGraphics.framework */,
 				AC2A6932176E92790057A289 /* Foundation.framework */,
 				AC2A6970176E96E20057A289 /* UIKit.framework */,
 				AC4BA0B617821FC200AB2597 /* CoreFoundation.framework */,
-				71FAB8C51815B5DE00718ECB /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -877,6 +775,7 @@
 		AC2A6935176E92790057A289 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AF2007781EFD3CB9007CF02C /* Info.plist */,
 				AC2A6936176E92790057A289 /* RMVision-Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -940,6 +839,14 @@
 			path = Video;
 			sourceTree = "<group>";
 		};
+		AF2007831EFD3CD6007CF02C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AF2007871EFD3CD7007CF02C /* RMShared.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		B7164E2D1831A725000FDB4A /* Line Detection */ = {
 			isa = PBXGroup;
 			children = (
@@ -950,6 +857,53 @@
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		AF2007721EFD3CB9007CF02C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF21CFD81EFD3FC00044F0D3 /* RMVision.h in Headers */,
+				AF21CFDA1EFD3FC00044F0D3 /* RMVisionModuleProtocol.h in Headers */,
+				AF21CFDB1EFD3FC00044F0D3 /* RMFakeVision.h in Headers */,
+				AF21CFDC1EFD3FC00044F0D3 /* GPUImageCustomLookupFilter.h in Headers */,
+				AF21CFDD1EFD3FC00044F0D3 /* GPUImageMaskToPixelPositionFilter.h in Headers */,
+				AF21CFDE1EFD3FC00044F0D3 /* GPUImageBrightColorNotchFilter.h in Headers */,
+				AF21CFDF1EFD3FC00044F0D3 /* GPUImageMotionSegmentation.h in Headers */,
+				AF21CFE01EFD3FC00044F0D3 /* GPUImageBrightHueSegmentation.h in Headers */,
+				AF21CFE11EFD3FC00044F0D3 /* RMVisionDebugBroker.h in Headers */,
+				AF21CFE21EFD3FC00044F0D3 /* RMBorderView.h in Headers */,
+				AF21CFE31EFD3FC00044F0D3 /* RMVisionBrightHueSegmentationModule.h in Headers */,
+				AF21CFE41EFD3FC00044F0D3 /* RMLineDetectionModule.h in Headers */,
+				AF21CFE51EFD3FC00044F0D3 /* RMMotionTriggeredColorTrainingModule.h in Headers */,
+				AF21CFE61EFD3FC00044F0D3 /* RMVisionNaiveLineTrainingModule.h in Headers */,
+				AF21CFE71EFD3FC00044F0D3 /* RMThroughRomosEyesModule.h in Headers */,
+				AFC002061EFD4F9000FB4D65 /* RMNormalBayes.h in Headers */,
+				AF21CFE81EFD3FC00044F0D3 /* RMGPUImageExampleModule.h in Headers */,
+				AF21CFE91EFD3FC00044F0D3 /* RMVideoModule.h in Headers */,
+				AF21CFEA1EFD3FC00044F0D3 /* RMPictureModule.h in Headers */,
+				AF21CFEB1EFD3FC00044F0D3 /* RMVisionObjectTrackingModule.h in Headers */,
+				AF21CFEE1EFD3FC00044F0D3 /* RMVisionObjectTrackingModuleDebug.h in Headers */,
+				AF21CFEF1EFD3FC00044F0D3 /* RMFaceDetectionModule.h in Headers */,
+				AF21CFF01EFD3FC00044F0D3 /* RMEyeDetectionModule.h in Headers */,
+				AF21CFF11EFD3FC00044F0D3 /* RMMotionDetectionModule.h in Headers */,
+				AF21CFF21EFD3FC00044F0D3 /* RMBrightnessMeteringModule.h in Headers */,
+				AF21CFF31EFD3FC00044F0D3 /* RMVisualStasisDetectionModule.h in Headers */,
+				AF21CFF41EFD3FC00044F0D3 /* RMVisionModule.h in Headers */,
+				AF21CFF51EFD3FC00044F0D3 /* RMVisionObjects.h in Headers */,
+				AF21CFF61EFD3FC00044F0D3 /* RMImageUtils.h in Headers */,
+				AF21CFF71EFD3FC00044F0D3 /* UIImage+OpenCV.h in Headers */,
+				AF21CFF81EFD3FC00044F0D3 /* UIView+VisionAdditions.h in Headers */,
+				AF21CFF91EFD3FC00044F0D3 /* UIDevice+VisionHardware.h in Headers */,
+				AF21CFFA1EFD3FC00044F0D3 /* GPUImageFilter+RMAdditions.h in Headers */,
+				AF21CFFB1EFD3FC00044F0D3 /* GPUImageRawDataInput+RMAdditions.h in Headers */,
+				AF21CFFC1EFD3FC00044F0D3 /* RMOpenCVUtils.h in Headers */,
+				AF21CFEC1EFD3FC00044F0D3 /* GPUImageNormalBayesFilter.h in Headers */,
+				AF21CFD91EFD3FC00044F0D3 /* RMVision_Internal.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		432A34D1181ADD8300390E8B /* RMVisionBenchmarks */ = {
@@ -964,7 +918,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				94DA2E1C1828275F007EF7B5 /* PBXTargetDependency */,
 				432A34D2181ADD8300390E8B /* PBXTargetDependency */,
 			);
 			name = RMVisionBenchmarks;
@@ -979,13 +932,14 @@
 				71FAB8AA1815B5DE00718ECB /* Sources */,
 				71FAB8AB1815B5DE00718ECB /* Frameworks */,
 				71FAB8AC1815B5DE00718ECB /* Resources */,
+				AF2007811EFD3CB9007CF02C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				71FAB9161815C6C700718ECB /* PBXTargetDependency */,
-				71FAB8FA1815C2F300718ECB /* PBXTargetDependency */,
 				71FAB8FC1815C2F900718ECB /* PBXTargetDependency */,
+				AF20077B1EFD3CB9007CF02C /* PBXTargetDependency */,
+				AFD55F7C1F03FE070048B5E5 /* PBXTargetDependency */,
 			);
 			name = RMVisionSample;
 			productName = RMVisionSample;
@@ -1003,34 +957,12 @@
 			buildRules = (
 			);
 			dependencies = (
-				174114021821E25A0003FB1B /* PBXTargetDependency */,
 				71FAB8CA1815B5DF00718ECB /* PBXTargetDependency */,
 			);
 			name = RMVisionSampleTests;
 			productName = RMVisionSampleTests;
 			productReference = 71FAB8C41815B5DE00718ECB /* RMVisionSampleTests.octest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		AC2A692E176E92790057A289 /* RMVision */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AC2A693D176E92790057A289 /* Build configuration list for PBXNativeTarget "RMVision" */;
-			buildPhases = (
-				AC2A692B176E92790057A289 /* Sources */,
-				AC2A692C176E92790057A289 /* Frameworks */,
-				AC2A692D176E92790057A289 /* CopyFiles */,
-				ACBC504D178259AD007B49A7 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1765E9AB181063E000BC953B /* PBXTargetDependency */,
-				17C41A2C17F0CFC900D10D00 /* PBXTargetDependency */,
-				AC4BA0DB1782209800AB2597 /* PBXTargetDependency */,
-			);
-			name = RMVision;
-			productName = RMVision;
-			productReference = AC2A692F176E92790057A289 /* libRMVision.a */;
-			productType = "com.apple.product-type.library.static";
 		};
 		AC4BA0B417821FC200AB2597 /* RMVision Resources */ = {
 			isa = PBXNativeTarget;
@@ -1049,6 +981,26 @@
 			productReference = AC4BA0B517821FC200AB2597 /* RMVision.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
+		AF2007741EFD3CB9007CF02C /* RMVision */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF20077E1EFD3CB9007CF02C /* Build configuration list for PBXNativeTarget "RMVision" */;
+			buildPhases = (
+				AF2007701EFD3CB9007CF02C /* Sources */,
+				AF2007711EFD3CB9007CF02C /* Frameworks */,
+				AF2007721EFD3CB9007CF02C /* Headers */,
+				AF2007731EFD3CB9007CF02C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF2A22681EFD59ED008F24F2 /* PBXTargetDependency */,
+				AF21D00A1EFD42FF0044F0D3 /* PBXTargetDependency */,
+			);
+			name = RMVision;
+			productName = RMVision;
+			productReference = AF2007751EFD3CB9007CF02C /* RMVision.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1056,11 +1008,18 @@
 			isa = PBXProject;
 			attributes = {
 				LastTestingUpgradeCheck = 0510;
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Romotive, Inc.";
 				TargetAttributes = {
+					71FAB8AD1815B5DE00718ECB = {
+						DevelopmentTeam = 7S2JF47WZN;
+					};
 					71FAB8C31815B5DE00718ECB = {
 						TestTargetID = 71FAB8AD1815B5DE00718ECB;
+					};
+					AF2007741EFD3CB9007CF02C = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -1076,17 +1035,13 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 17C41A2217F0CFB800D10D00 /* Products */;
-					ProjectRef = 17C41A2117F0CFB800D10D00 /* GPUImage.xcodeproj */;
-				},
-				{
-					ProductGroup = 94B78F3E17F0B61C00371395 /* Products */;
-					ProjectRef = 94B78F3D17F0B61C00371395 /* RMShared.xcodeproj */;
+					ProductGroup = AF2007831EFD3CD6007CF02C /* Products */;
+					ProjectRef = AF2007821EFD3CD6007CF02C /* RMShared.xcodeproj */;
 				},
 			);
 			projectRoot = "";
 			targets = (
-				AC2A692E176E92790057A289 /* RMVision */,
+				AF2007741EFD3CB9007CF02C /* RMVision */,
 				AC4BA0B417821FC200AB2597 /* RMVision Resources */,
 				71FAB8AD1815B5DE00718ECB /* RMVisionSample */,
 				71FAB8C31815B5DE00718ECB /* RMVisionSampleTests */,
@@ -1096,25 +1051,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		17C41A2817F0CFB800D10D00 /* libGPUImage.a */ = {
+		AF2007871EFD3CD7007CF02C /* RMShared.framework */ = {
 			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libGPUImage.a;
-			remoteRef = 17C41A2717F0CFB800D10D00 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		17C41A2A17F0CFB800D10D00 /* GPUImageTests.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = GPUImageTests.octest;
-			remoteRef = 17C41A2917F0CFB800D10D00 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		94B78F5217F0B61C00371395 /* libRMShared.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libRMShared.a;
-			remoteRef = 94B78F5117F0B61C00371395 /* PBXContainerItemProxy */;
+			fileType = wrapper.framework;
+			path = RMShared.framework;
+			remoteRef = AF2007861EFD3CD7007CF02C /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -1170,11 +1111,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ACBC504D178259AD007B49A7 /* Resources */ = {
+		AF2007731EFD3CB9007CF02C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACBC504E178259B3007B49A7 /* RMVision.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1212,38 +1152,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94B326CA1828031300979B71 /* RMVisionObjectTrackingModule.mm in Sources */,
-				94B326CB1828031300979B71 /* GPUImageNormalBayesFilter.m in Sources */,
-				71FAB9111815C66A00718ECB /* RMVisionObjects.mm in Sources */,
-				71FAB8DE1815C1F500718ECB /* GPUImageCustomLookupFilter.m in Sources */,
-				71FAB8DF1815C1F500718ECB /* GPUImageMaskToPixelPositionFilter.m in Sources */,
-				71FAB8E01815C1F500718ECB /* GPUImageBrightColorNotchFilter.m in Sources */,
-				71FAB8E11815C1F500718ECB /* GPUImageMotionSegmentation.m in Sources */,
-				71FAB8E21815C1F500718ECB /* RMVisionDebugBroker.m in Sources */,
-				71FAB8E31815C1F500718ECB /* RMBorderView.m in Sources */,
-				1783832C18198EC60072EC2A /* RMOpenCVUtils.mm in Sources */,
-				71FAB8E41815C1F500718ECB /* RMMotionTriggeredColorTrainingModule.mm in Sources */,
-				71FAB8E61815C1F500718ECB /* RMThroughRomosEyesModule.mm in Sources */,
-				71FAB8E71815C1F500718ECB /* RMGPUImageExampleModule.mm in Sources */,
-				71FAB8E81815C1F500718ECB /* RMVideoModule.mm in Sources */,
-				1793DF87184F9D53002566F5 /* RMVisionNaiveLineTrainingModule.mm in Sources */,
-				17D51E3C18465DFC00CA1FC5 /* RMVisionBrightHueSegmentationModule.mm in Sources */,
-				71FAB8E91815C1F500718ECB /* RMPictureModule.mm in Sources */,
-				71FAB8EB1815C1F500718ECB /* RMFaceDetectionModule.mm in Sources */,
 				178B12E91821B0C1001B60FD /* GPUImageRawDataInput+RMAdditions.m in Sources */,
-				71FAB8EC1815C1F500718ECB /* RMEyeDetectionModule.mm in Sources */,
-				71FAB8ED1815C1F500718ECB /* RMMotionDetectionModule.mm in Sources */,
-				71FAB8EE1815C1F500718ECB /* RMBrightnessMeteringModule.mm in Sources */,
-				71FAB8EF1815C1F500718ECB /* RMVisualStasisDetectionModule.mm in Sources */,
-				71FAB8F01815C1F500718ECB /* RMVisionModule.mm in Sources */,
-				71FAB8F11815C1F500718ECB /* RMVision.mm in Sources */,
-				71FAB8F21815C1F500718ECB /* RMImageUtils.mm in Sources */,
-				71FAB8F31815C1F500718ECB /* UIImage+OpenCV.mm in Sources */,
-				17444D3D1845B3DF00B86DB5 /* GPUImageBrightHueSegmentation.m in Sources */,
 				71FAB8F41815C1F500718ECB /* UIView+VisionAdditions.m in Sources */,
 				71FAB8F51815C1F500718ECB /* UIDevice+VisionHardware.m in Sources */,
 				71FAB8F61815C1F500718ECB /* GPUImageFilter+RMAddtions.m in Sources */,
-				71FAB8F71815C1F500718ECB /* RMFakeVision.mm in Sources */,
 				71FAB8B91815B5DE00718ECB /* main.m in Sources */,
 				71FAB8BD1815B5DE00718ECB /* RMVisionAppDelegate.m in Sources */,
 			);
@@ -1261,48 +1173,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AC2A692B176E92790057A289 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				17A799D717FDD11400E0DE67 /* GPUImageMotionSegmentation.m in Sources */,
-				172D4AA9180E080F00DB64B8 /* GPUImageCustomLookupFilter.m in Sources */,
-				94CD6868180EF0E500E044CB /* RMVisualStasisDetectionModule.mm in Sources */,
-				173C797A17FCD142007A95B6 /* RMMotionTriggeredColorTrainingModule.mm in Sources */,
-				AC6CBB7D178BA29100EB8117 /* RMEyeDetectionModule.mm in Sources */,
-				17F7CFD31816F4580081AB7B /* RMOpenCVUtils.mm in Sources */,
-				94AA8FD51806377A006DD3D4 /* RMBrightnessMeteringModule.mm in Sources */,
-				AC1085ED1772492000B87D63 /* UIDevice+VisionHardware.m in Sources */,
-				172D4AAB180E080F00DB64B8 /* GPUImageMaskToPixelPositionFilter.m in Sources */,
-				439F28E117C19B8600A268EB /* RMFakeVision.mm in Sources */,
-				AC0C811C17704D7C001F6D53 /* RMImageUtils.mm in Sources */,
-				ACD51BE41778F75B00C1298C /* RMPictureModule.mm in Sources */,
-				ACD51BE51778F75D00C1298C /* RMVideoModule.mm in Sources */,
-				AC0C811D17704D7C001F6D53 /* UIImage+OpenCV.mm in Sources */,
-				9472CCE8184CFD0D00A5679A /* RMVisionNaiveLineTrainingModule.mm in Sources */,
-				17D51E351846554E00CA1FC5 /* RMVisionBrightHueSegmentationModule.mm in Sources */,
-				B7164E321831A7A1000FDB4A /* RMLineDetectionModule.mm in Sources */,
-				1749A81B17F0E92100A85504 /* RMThroughRomosEyesModule.mm in Sources */,
-				AC0C811717704D7C001F6D53 /* RMFaceDetectionModule.mm in Sources */,
-				AC0C811217704D7C001F6D53 /* RMVisionDebugBroker.m in Sources */,
-				94B3269E1827FA0300979B71 /* RMNormalBayes.cpp in Sources */,
-				94B3269F1827FA0300979B71 /* RMVisionObjectTrackingModule.mm in Sources */,
-				173C798217FCD4C4007A95B6 /* GPUImageBrightColorNotchFilter.m in Sources */,
-				AC0C811A17704D7C001F6D53 /* RMVisionObjects.mm in Sources */,
-				AC0C811817704D7C001F6D53 /* RMMotionDetectionModule.mm in Sources */,
-				AC0C811917704D7C001F6D53 /* RMVisionModule.mm in Sources */,
-				17BB5E1718393065006A6420 /* RMVisionObjectTrackingModuleDebug.m in Sources */,
-				94B3269D1827FA0300979B71 /* GPUImageNormalBayesFilter.m in Sources */,
-				17444D3C1845B3DF00B86DB5 /* GPUImageBrightHueSegmentation.m in Sources */,
-				AC0C811B17704D7C001F6D53 /* RMVision.mm in Sources */,
-				AC0C811317704D7C001F6D53 /* RMBorderView.m in Sources */,
-				17F839E517F0B91C006DC8A0 /* RMGPUImageExampleModule.mm in Sources */,
-				1749A83017F0F9C100A85504 /* GPUImageFilter+RMAddtions.m in Sources */,
-				1762682A18207434000D8C91 /* GPUImageRawDataInput+RMAdditions.m in Sources */,
-				AC1085E8177247EC00B87D63 /* UIView+VisionAdditions.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		AC4BA0B117821FC200AB2597 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1310,24 +1180,51 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AF2007701EFD3CB9007CF02C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF21CFB51EFD3ED70044F0D3 /* RMVision.mm in Sources */,
+				AF21CFB61EFD3ED70044F0D3 /* RMFakeVision.mm in Sources */,
+				AF21CFB71EFD3ED70044F0D3 /* GPUImageCustomLookupFilter.m in Sources */,
+				AF21CFB81EFD3ED70044F0D3 /* GPUImageMaskToPixelPositionFilter.m in Sources */,
+				AF21CFB91EFD3ED70044F0D3 /* GPUImageBrightColorNotchFilter.m in Sources */,
+				AF21CFBA1EFD3ED70044F0D3 /* GPUImageMotionSegmentation.m in Sources */,
+				AF21CFBB1EFD3ED70044F0D3 /* GPUImageBrightHueSegmentation.m in Sources */,
+				AF21CFBC1EFD3ED70044F0D3 /* RMVisionDebugBroker.m in Sources */,
+				AF21CFBD1EFD3ED70044F0D3 /* RMBorderView.m in Sources */,
+				AF21CFBE1EFD3ED70044F0D3 /* RMVisionBrightHueSegmentationModule.mm in Sources */,
+				AF21CFBF1EFD3ED70044F0D3 /* RMLineDetectionModule.mm in Sources */,
+				AF21CFC01EFD3ED70044F0D3 /* RMMotionTriggeredColorTrainingModule.mm in Sources */,
+				AF21CFC11EFD3ED70044F0D3 /* RMVisionNaiveLineTrainingModule.mm in Sources */,
+				AF21CFC21EFD3ED70044F0D3 /* RMThroughRomosEyesModule.mm in Sources */,
+				AF21CFC31EFD3ED70044F0D3 /* RMGPUImageExampleModule.mm in Sources */,
+				AF21CFC41EFD3ED70044F0D3 /* RMVideoModule.mm in Sources */,
+				AF21CFC51EFD3ED70044F0D3 /* RMPictureModule.mm in Sources */,
+				AF21CFC61EFD3ED70044F0D3 /* RMVisionObjectTrackingModule.mm in Sources */,
+				AF21CFC71EFD3ED70044F0D3 /* GPUImageNormalBayesFilter.m in Sources */,
+				AF21CFC81EFD3ED70044F0D3 /* RMVisionObjectTrackingModuleDebug.m in Sources */,
+				AF21CFC91EFD3ED70044F0D3 /* RMFaceDetectionModule.mm in Sources */,
+				AF21CFCA1EFD3ED70044F0D3 /* RMEyeDetectionModule.mm in Sources */,
+				AF21CFCB1EFD3ED70044F0D3 /* RMMotionDetectionModule.mm in Sources */,
+				AFC002051EFD4F9000FB4D65 /* RMNormalBayes.cpp in Sources */,
+				AF21CFCC1EFD3ED70044F0D3 /* RMBrightnessMeteringModule.mm in Sources */,
+				AF21CFCD1EFD3ED70044F0D3 /* RMVisualStasisDetectionModule.mm in Sources */,
+				AF21CFCE1EFD3ED70044F0D3 /* RMVisionModule.mm in Sources */,
+				AF21CFCF1EFD3ED70044F0D3 /* RMVisionObjects.mm in Sources */,
+				AF21CFD01EFD3ED70044F0D3 /* RMImageUtils.mm in Sources */,
+				AF21CFD11EFD3ED70044F0D3 /* UIImage+OpenCV.mm in Sources */,
+				AF21CFD21EFD3ED70044F0D3 /* UIView+VisionAdditions.m in Sources */,
+				AF21CFD31EFD3ED70044F0D3 /* UIDevice+VisionHardware.m in Sources */,
+				AF21CFD41EFD3ED70044F0D3 /* GPUImageFilter+RMAddtions.m in Sources */,
+				AF21CFD51EFD3ED70044F0D3 /* GPUImageRawDataInput+RMAdditions.m in Sources */,
+				AF21CFD61EFD3ED70044F0D3 /* RMOpenCVUtils.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		174114021821E25A0003FB1B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = GPUImage;
-			targetProxy = 174114011821E25A0003FB1B /* PBXContainerItemProxy */;
-		};
-		1765E9AB181063E000BC953B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = RMShared;
-			targetProxy = 1765E9AA181063E000BC953B /* PBXContainerItemProxy */;
-		};
-		17C41A2C17F0CFC900D10D00 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = GPUImage;
-			targetProxy = 17C41A2B17F0CFC900D10D00 /* PBXContainerItemProxy */;
-		};
 		432A34D2181ADD8300390E8B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 71FAB8AD1815B5DE00718ECB /* RMVisionSample */;
@@ -1338,30 +1235,30 @@
 			target = 71FAB8AD1815B5DE00718ECB /* RMVisionSample */;
 			targetProxy = 71FAB8C91815B5DF00718ECB /* PBXContainerItemProxy */;
 		};
-		71FAB8FA1815C2F300718ECB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = GPUImage;
-			targetProxy = 71FAB8F91815C2F300718ECB /* PBXContainerItemProxy */;
-		};
 		71FAB8FC1815C2F900718ECB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = AC4BA0B417821FC200AB2597 /* RMVision Resources */;
 			targetProxy = 71FAB8FB1815C2F900718ECB /* PBXContainerItemProxy */;
 		};
-		71FAB9161815C6C700718ECB /* PBXTargetDependency */ = {
+		AF20077B1EFD3CB9007CF02C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF2007741EFD3CB9007CF02C /* RMVision */;
+			targetProxy = AF20077A1EFD3CB9007CF02C /* PBXContainerItemProxy */;
+		};
+		AF21D00A1EFD42FF0044F0D3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = RMShared;
-			targetProxy = 71FAB9151815C6C700718ECB /* PBXContainerItemProxy */;
+			targetProxy = AF21D0091EFD42FF0044F0D3 /* PBXContainerItemProxy */;
 		};
-		94DA2E1C1828275F007EF7B5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = GPUImage;
-			targetProxy = 94DA2E1B1828275F007EF7B5 /* PBXContainerItemProxy */;
-		};
-		AC4BA0DB1782209800AB2597 /* PBXTargetDependency */ = {
+		AF2A22681EFD59ED008F24F2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = AC4BA0B417821FC200AB2597 /* RMVision Resources */;
-			targetProxy = AC4BA0DA1782209800AB2597 /* PBXContainerItemProxy */;
+			targetProxy = AF2A22671EFD59ED008F24F2 /* PBXContainerItemProxy */;
+		};
+		AFD55F7C1F03FE070048B5E5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RMShared;
+			targetProxy = AFD55F7B1F03FE070048B5E5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1396,7 +1293,6 @@
 		432A34E7181ADD8300390E8B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RMVisionSample.app/RMVisionSample";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -1425,8 +1321,9 @@
 					"$(SRCROOT)/RMVision/lib/GPUImage/framework/**",
 				);
 				INFOPLIST_FILE = "RMVisionSampleTests/RMVisionBenchmarks-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.romotive.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = RMVisionBenchmarks;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				VALID_ARCHS = "armv7 armv7s";
@@ -1437,7 +1334,6 @@
 		432A34E8181ADD8300390E8B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RMVisionSample.app/RMVisionSample";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -1463,8 +1359,9 @@
 					"$(SRCROOT)/RMVision/lib/GPUImage/framework/**",
 				);
 				INFOPLIST_FILE = "RMVisionSampleTests/RMVisionBenchmarks-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.romotive.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = RMVisionBenchmarks;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				VALID_ARCHS = "armv7 armv7s";
@@ -1475,7 +1372,6 @@
 		71FAB8D31815B5DF00718ECB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -1485,9 +1381,14 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 7S2JF47WZN;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/RMVision/lib",
+					"$(PROJECT_DIR)/RMVision/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/RMVision/lib",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/RMVision/lib/libjpeg-turbo/ios/framework",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RMVisionSample/RMVisionSample-Prefix.pch";
@@ -1503,13 +1404,19 @@
 					"$(inherited)",
 					"$(SRCROOT)/../../RMShared/**",
 					"$(SRCROOT)/RMVision/lib/GPUImage/framework/**",
+					"$(SRCROOT)/RMVision/lib/libjpeg-turbo/include",
 				);
 				INFOPLIST_FILE = "RMVisionSample/RMVisionSample-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RMVision/lib",
+					"$(PROJECT_DIR)/RMVision/lib/libjpeg-turbo/lib",
+				);
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fotidim.RMVisionSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1517,7 +1424,6 @@
 		71FAB8D41815B5DF00718ECB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -1527,10 +1433,15 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 7S2JF47WZN;
 				ENABLE_NS_ASSERTIONS = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/RMVision/lib",
+					"$(PROJECT_DIR)/RMVision/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/RMVision/lib",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/RMVision/lib/libjpeg-turbo/ios/framework",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RMVisionSample/RMVisionSample-Prefix.pch";
@@ -1542,13 +1453,19 @@
 					"$(inherited)",
 					"$(SRCROOT)/../../RMShared/**",
 					"$(SRCROOT)/RMVision/lib/GPUImage/framework/**",
+					"$(SRCROOT)/RMVision/lib/libjpeg-turbo/include",
 				);
 				INFOPLIST_FILE = "RMVisionSample/RMVisionSample-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RMVision/lib",
+					"$(PROJECT_DIR)/RMVision/lib/libjpeg-turbo/lib",
+				);
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fotidim.RMVisionSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -1556,7 +1473,6 @@
 		71FAB8D51815B5DF00718ECB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RMVisionSample.app/RMVisionSample";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -1585,8 +1501,9 @@
 					"$(SRCROOT)/RMVision/lib/GPUImage/framework/**",
 				);
 				INFOPLIST_FILE = "RMVisionSampleTests/RMVisionSampleTests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.romotive.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				VALID_ARCHS = "armv7 armv7s";
@@ -1597,7 +1514,6 @@
 		71FAB8D61815B5DF00718ECB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RMVisionSample.app/RMVisionSample";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -1623,8 +1539,9 @@
 					"$(SRCROOT)/RMVision/lib/GPUImage/framework/**",
 				);
 				INFOPLIST_FILE = "RMVisionSampleTests/RMVisionSampleTests-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.romotive.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				VALID_ARCHS = "armv7 armv7s";
@@ -1636,35 +1553,54 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = "RMVision/RMVision-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/RMVision/lib/OpenCV/opencv2.framework/Versions/A/Headers/**",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-lstdc++",
 					"-ObjC",
 				);
 				SDKROOT = iphoneos;
-				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -1672,80 +1608,46 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "RMVision/RMVision-Prefix.pch";
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "$(inherited)";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/RMVision/lib/OpenCV/opencv2.framework/Versions/A/Headers/**",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = (
 					"-lstdc++",
 					"-ObjC",
 				);
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
-				VALID_ARCHS = "armv7 armv7s";
-			};
-			name = Release;
-		};
-		AC2A693E176E92790057A289 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LIBRARY = "libc++";
-				DSTROOT = /tmp/RMVision.dst;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/RMVision/lib",
-					$SRCROOT/../../RMShared/RMShared/lib,
-				);
-				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_PREFIX_HEADER = "RMVision/RMVision-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/RMVision/lib/GPUImage/framework/**",
-					"$(SRCROOT)/../../RMShared/**",
-				);
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				VALID_ARCHS = "armv7 armv7s";
-			};
-			name = Debug;
-		};
-		AC2A693F176E92790057A289 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LIBRARY = "libc++";
-				DSTROOT = /tmp/RMVision.dst;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/RMVision/lib",
-					$SRCROOT/../../RMShared/RMShared/lib,
-				);
-				GCC_C_LANGUAGE_STANDARD = c99;
-				GCC_PREFIX_HEADER = "RMVision/RMVision-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/RMVision/lib/GPUImage/framework/**",
-					"$(SRCROOT)/../../RMShared/**",
-				);
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Release;
 		};
@@ -1771,6 +1673,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../../RMShared/**";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.romotive.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = RMVision;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1802,10 +1705,119 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../../RMShared/**";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.romotive.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = RMVision;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		AF20077F1EFD3CB9007CF02C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RMVision/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/RMVision/lib",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/RMVision/lib/OpenCV",
+					"$(PROJECT_DIR)/RMVision/lib/libjpeg-turbo/ios/framework",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/RMVision/lib/libjpeg-turbo/include",
+				);
+				INFOPLIST_FILE = RMVision/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/opt/libjpeg-turbo/lib",
+					"$(PROJECT_DIR)/RMVision/lib",
+					"$(PROJECT_DIR)/RMVision/lib/libjpeg-turbo/lib",
+				);
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fotidim.RMVision;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AF2007801EFD3CB9007CF02C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RMVision/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/RMVision/lib",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/RMVision/lib/OpenCV",
+					"$(PROJECT_DIR)/RMVision/lib/libjpeg-turbo/ios/framework",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/RMVision/lib/libjpeg-turbo/include",
+				);
+				INFOPLIST_FILE = RMVision/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/opt/libjpeg-turbo/lib",
+					"$(PROJECT_DIR)/RMVision/lib",
+					"$(PROJECT_DIR)/RMVision/lib/libjpeg-turbo/lib",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fotidim.RMVision;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -1848,20 +1860,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AC2A693D176E92790057A289 /* Build configuration list for PBXNativeTarget "RMVision" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AC2A693E176E92790057A289 /* Debug */,
-				AC2A693F176E92790057A289 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		AC4BA0D117821FC200AB2597 /* Build configuration list for PBXNativeTarget "RMVision Resources" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AC4BA0BF17821FC200AB2597 /* Debug */,
 				AC4BA0C017821FC200AB2597 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF20077E1EFD3CB9007CF02C /* Build configuration list for PBXNativeTarget "RMVision" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF20077F1EFD3CB9007CF02C /* Debug */,
+				AF2007801EFD3CB9007CF02C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
