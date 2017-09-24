@@ -18,7 +18,7 @@ typedef enum {
 @interface RMCharacterAnimation : UIImageView
 
 @property (nonatomic, weak)     id<RMCharacterAnimationDelegate> delegate;
-@property (nonatomic, readonly) BOOL animating;
+@property (nonatomic, readonly) BOOL animating2;
 @property (nonatomic)           int breakpointFrame;
 
 - (void)animateWithAction:(RMAnimatedAction)action forEmotion:(RMCharacterEmotion)emotion completion:(void (^)(BOOL finished))completion;

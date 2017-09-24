@@ -46,7 +46,8 @@
     if (self) {
         _characterType = characterType;
         
-        NSString* frameworkBundlePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"RMCharacter.bundle"];
+        NSString* mainBundlePath = [[NSBundle mainBundle] resourcePath];
+        NSString* frameworkBundlePath = [mainBundlePath stringByAppendingPathComponent:@"Frameworks/RMCharacter.framework"];
         _characterBundle = [NSBundle bundleWithPath:frameworkBundlePath];
         
         self.initialized = YES;

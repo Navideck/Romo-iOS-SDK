@@ -7,7 +7,7 @@
 #import "RMCharacterFace.h"
 #import "RMCharacterVoice.h"
 #import "RMCharacterPNS.h"
-#import "RMMath.h"
+#import <RMShared/RMMath.h>
 
 #define NUM_EMOTIONS    10
 #define NUM_EXPRESSIONS 32
@@ -27,8 +27,6 @@ NSString *const RMCharacterDidFinishAudioNotification = @"RMCharacterDidFinishAu
 @property (nonatomic, strong) RMCharacterPNS* pns;
 
 @property (nonatomic, readwrite) RMPoint3D gaze;
-
-- (void)checkForResourcesBundle;
 
 @end
 
@@ -54,9 +52,7 @@ NSString *const RMCharacterDidFinishAudioNotification = @"RMCharacterDidFinishAu
 
         self.pns = [[RMCharacterPNS alloc] init];
         self.pns.delegate = self;
-        
-        [self checkForResourcesBundle];
-        
+                
         _leftEyeOpen = _rightEyeOpen = YES;
         
         self.emotion = RMCharacterEmotionHappy;
@@ -72,18 +68,6 @@ NSString *const RMCharacterDidFinishAudioNotification = @"RMCharacterDidFinishAu
         // If we're deallocating while expressing, make sure to match the didBeginExpressing call
         [self.delegate characterDidFinishExpressing:nil];
         [[NSNotificationCenter defaultCenter] postNotificationName:RMCharacterDidFinishExpressingNotification object:nil];
-    }
-}
-
-- (void)checkForResourcesBundle
-{
-    NSString* mainBundlePath = [[NSBundle mainBundle] resourcePath];
-    NSString* frameworkBundlePath = [mainBundlePath stringByAppendingPathComponent:@"RMCharacter.bundle"];
-    NSBundle* characterBundle = [NSBundle bundleWithPath:frameworkBundlePath];
-
-    if (!characterBundle) {
-        NSLog(@"RMCharacter Error: RMCharacter.bundle not found. Make sure you've added RMCharacter.bundle to the Xcode project. To do this, select your project, then \"Build Phases\", then add RMCharacter.bundle to the \"Copy Bundle Resources\" phase.");
-        exit(EXIT_FAILURE);
     }
 }
 

@@ -8,7 +8,7 @@
 #import "RMCharacterAnimation.h"
 #import "RMCharacterProtectedView.h"
 #import "RMCharacterFaceEmotion.h"
-#import "RMMath.h"
+#import <RMShared/RMMath.h>
 #import "RMCharacterColorFill.h"
 
 #define romoBackgroundBlue ([UIColor colorWithHue:0.5361 saturation:1.0 brightness:0.93 alpha:1.0])

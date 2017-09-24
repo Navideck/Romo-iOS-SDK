@@ -4,7 +4,7 @@
 
 #import "RMCharacterAnimation.h"
 #import "RMCharacter.h"
-#import "RMMath.h"
+#import <RMShared/RMMath.h>
 
 typedef void (^BoolBlock)(BOOL);
 
@@ -53,7 +53,7 @@ typedef void (^BoolBlock)(BOOL);
     _startTime = currentTime();
     _endTime = _startTime + (1.0/24.0)*_frameCount;
     
-    _animating = YES;
+    _animating2 = YES;
     [self.delegate animationDidStart];
     super.image = nil;
     
@@ -71,7 +71,7 @@ typedef void (^BoolBlock)(BOOL);
 {
     [_timer invalidate];
     _timer = nil;
-    _animating = NO;
+    _animating2 = NO;
     
     self.frame = (CGRect){CGPointZero, self.frame.size};
     self.contentMode = UIViewContentModeCenter;
@@ -207,7 +207,7 @@ typedef void (^BoolBlock)(BOOL);
                 NSString* cropFile = [NSString stringWithFormat:@"%@_%d",prefix,index];
                 
                 NSString* mainBundlePath = [[NSBundle mainBundle] resourcePath];
-                NSString* frameworkBundlePath = [mainBundlePath stringByAppendingPathComponent:@"RMCharacter.bundle"];
+                NSString* frameworkBundlePath = [mainBundlePath stringByAppendingPathComponent:@"Frameworks/RMCharacter.framework"];
                 NSBundle* characterBundle = [NSBundle bundleWithPath:frameworkBundlePath];
                 NSData* cropData = [NSData dataWithContentsOfFile:[characterBundle pathForResource:cropFile ofType:@"json"]];
                 NSArray* crop = [NSJSONSerialization JSONObjectWithData:cropData options:0 error:nil][@"frames"];
@@ -352,7 +352,7 @@ typedef void (^BoolBlock)(BOOL);
 
 - (void)setImage:(RMCharacterImage *)image
 {
-    if (_animating) {
+    if (_animating2) {
         self.staticImage = image;
     } else {
         super.image = image;
