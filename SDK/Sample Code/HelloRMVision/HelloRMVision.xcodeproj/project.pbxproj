@@ -12,6 +12,9 @@
 		17081071180F2DE600C43DF9 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17081070180F2DE600C43DF9 /* CoreFoundation.framework */; };
 		173D6D0F1811BDAE003D785A /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 173D6D0E1811BDAE003D785A /* ImageIO.framework */; };
 		17BEF4E217F0C5BA007ECF01 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17BEF4E117F0C5BA007ECF01 /* OpenGLES.framework */; };
+		8CAFC1831F77E31800E8BC11 /* NMSSH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFC5F1291F0508D9005E9772 /* NMSSH.framework */; };
+		8CAFC1841F77E32500E8BC11 /* NMSSH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFC5F1291F0508D9005E9772 /* NMSSH.framework */; };
+		8CAFC1851F77E32500E8BC11 /* NMSSH.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AFC5F1291F0508D9005E9772 /* NMSSH.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AC1329C1176EA8F100140188 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC1329C0176EA8F100140188 /* UIKit.framework */; };
 		AC1329C3176EA8F100140188 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC1329C2176EA8F100140188 /* Foundation.framework */; };
 		AC1329C5176EA8F100140188 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC1329C4176EA8F100140188 /* CoreGraphics.framework */; };
@@ -35,8 +38,6 @@
 		AFC5F12D1F0508F0005E9772 /* CocoaLumberjack.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AFC5F12B1F0508DA005E9772 /* CocoaLumberjack.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AFC5F12E1F0508F4005E9772 /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFC5F12A1F0508DA005E9772 /* GPUImage.framework */; };
 		AFC5F12F1F0508F4005E9772 /* GPUImage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AFC5F12A1F0508DA005E9772 /* GPUImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		AFC5F1301F0508FB005E9772 /* NMSSH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFC5F1291F0508D9005E9772 /* NMSSH.framework */; };
-		AFC5F1311F0508FB005E9772 /* NMSSH.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AFC5F1291F0508D9005E9772 /* NMSSH.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AFC5F1321F050926005E9772 /* RMShared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFC5F0F01F04EB55005E9772 /* RMShared.framework */; };
 		AFC5F1331F050926005E9772 /* RMShared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AFC5F0F01F04EB55005E9772 /* RMShared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -114,12 +115,12 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				8CAFC1851F77E32500E8BC11 /* NMSSH.framework in Embed Frameworks */,
 				AFC5F1331F050926005E9772 /* RMShared.framework in Embed Frameworks */,
 				AFC5F1071F04EEF3005E9772 /* RMVision.framework in Embed Frameworks */,
 				AFC5F12F1F0508F4005E9772 /* GPUImage.framework in Embed Frameworks */,
 				AFC5F12D1F0508F0005E9772 /* CocoaLumberjack.framework in Embed Frameworks */,
 				AFC5F1281F0508B8005E9772 /* SocketRocket.framework in Embed Frameworks */,
-				AFC5F1311F0508FB005E9772 /* NMSSH.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -173,12 +174,13 @@
 				17081071180F2DE600C43DF9 /* CoreFoundation.framework in Frameworks */,
 				1708106F180F2DA600C43DF9 /* CFNetwork.framework in Frameworks */,
 				1708106D180F2D9F00C43DF9 /* Security.framework in Frameworks */,
+				8CAFC1841F77E32500E8BC11 /* NMSSH.framework in Frameworks */,
 				AFC5F1271F0508B8005E9772 /* SocketRocket.framework in Frameworks */,
 				ACDCEA4317725A120013099E /* AssetsLibrary.framework in Frameworks */,
-				AFC5F1301F0508FB005E9772 /* NMSSH.framework in Frameworks */,
 				AC1A8E24176EAC4E0048B48B /* AVFoundation.framework in Frameworks */,
 				AC1329C5176EA8F100140188 /* CoreGraphics.framework in Frameworks */,
 				AC31948C1770D83A009F0763 /* CoreMedia.framework in Frameworks */,
+				8CAFC1831F77E31800E8BC11 /* NMSSH.framework in Frameworks */,
 				AC31948A1770D7C1009F0763 /* CoreVideo.framework in Frameworks */,
 				AFC5F12C1F0508F0005E9772 /* CocoaLumberjack.framework in Frameworks */,
 				AC1329C3176EA8F100140188 /* Foundation.framework in Frameworks */,

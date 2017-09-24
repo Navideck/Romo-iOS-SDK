@@ -1,0 +1,4 @@
+github "facebook/SocketRocket" "master"
+github "CocoaLumberjack/CocoaLumberjack"
+
+# Build using "carthage update --platform iOS"

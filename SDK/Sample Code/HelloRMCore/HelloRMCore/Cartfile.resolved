@@ -1,3 +1,2 @@
-github "CocoaLumberjack/CocoaLumberjack" "3.2.0"
-github "NMSSH/NMSSH" "2.2.7"
-github "facebook/SocketRocket" "877ac7438be3ad0b45ef5ca3969574e4b97112bf"
+github "CocoaLumberjack/CocoaLumberjack" "3.2.1"
+github "facebook/SocketRocket" "28035e1a98a427853e4038ff1b70479fa8374cfa"

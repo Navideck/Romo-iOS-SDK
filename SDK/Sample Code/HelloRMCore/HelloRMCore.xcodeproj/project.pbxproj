@@ -239,7 +239,7 @@
 				ORGANIZATIONNAME = Romotive;
 				TargetAttributes = {
 					942AC64216E7F6820062CA8A = {
-						DevelopmentTeam = 52RU2XXUH6;
+						DevelopmentTeam = 7S2JF47WZN;
 					};
 				};
 			};
@@ -433,7 +433,7 @@
 		942AC66716E7F6820062CA8A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = 52RU2XXUH6;
+				DEVELOPMENT_TEAM = 7S2JF47WZN;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/HelloRMCore/Carthage/Build/iOS",
@@ -451,7 +451,7 @@
 		942AC66816E7F6820062CA8A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = 52RU2XXUH6;
+				DEVELOPMENT_TEAM = 7S2JF47WZN;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/HelloRMCore/Carthage/Build/iOS",

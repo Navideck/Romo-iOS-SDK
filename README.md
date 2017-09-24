@@ -52,9 +52,9 @@ There seems to be plenty of stock in online stores.
 - [x] Refactor RMCore
 - [x] Refactor HelloRMCore
 - [ ] Refactor RMVision (Partially done. Need to recompile libjpeg fat binary for all architectures. Now it cannot run on simulators)
-- [ ] Refactor HelloRMVision
-- [ ] Refactor RMCharacter
-- [ ] Refactor HelloRMCharacter
+- [x] Refactor HelloRMVision
+- [x] Refactor RMCharacter
+- [x] Refactor HelloRMCharacter
 - [ ] Fix warnings
 - [ ] Refactor HelloRomo
 - [ ] Refactor Romo.xcworkspace
