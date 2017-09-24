@@ -26,7 +26,7 @@
     [self.Romo addToSuperview:self.view];
 }
 
-- (void)didConnectToRobot:(RMCoreRobot *)robot
+- (void)robotDidConnect:(RMCoreRobot *)robot;
 {
     if ([robot isKindOfClass:[RMCoreRobotRomo3 class]]) {
         self.Romo3 = (RMCoreRobotRomo3 *)robot;
@@ -36,7 +36,7 @@
     }
 }
 
-- (void)didDisconnectFromRobot:(RMCoreRobot *)robot
+- (void)robotDidDisconnect:(RMCoreRobot *)robot;
 {
     if (robot == self.Romo3) {
         self.Romo3 = nil;

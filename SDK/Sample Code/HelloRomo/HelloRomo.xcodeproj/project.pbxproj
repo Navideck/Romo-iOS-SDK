@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8CAFC1D41F77FF2F00E8BC11 /* RMShared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAFC1CC1F77FF1D00E8BC11 /* RMShared.framework */; };
+		8CAFC1D51F77FF2F00E8BC11 /* RMShared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAFC1CC1F77FF1D00E8BC11 /* RMShared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8CAFC1D91F77FF3400E8BC11 /* RMCharacter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAFC1D31F77FF2400E8BC11 /* RMCharacter.framework */; };
+		8CAFC1DA1F77FF3400E8BC11 /* RMCharacter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAFC1D31F77FF2400E8BC11 /* RMCharacter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8CAFC1DD1F77FF7200E8BC11 /* RMCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAFC1C61F77FF1700E8BC11 /* RMCore.framework */; };
+		8CAFC1DE1F77FF7200E8BC11 /* RMCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAFC1C61F77FF1700E8BC11 /* RMCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8CAFC1E41F77FFEE00E8BC11 /* SocketRocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAFC1E21F77FFE700E8BC11 /* SocketRocket.framework */; };
+		8CAFC1E51F77FFF700E8BC11 /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAFC1E11F77FFE700E8BC11 /* CocoaLumberjack.framework */; };
+		8CAFC1E61F77FFF700E8BC11 /* CocoaLumberjack.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAFC1E11F77FFE700E8BC11 /* CocoaLumberjack.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8CAFC1E81F77FFFB00E8BC11 /* SocketRocket.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAFC1E21F77FFE700E8BC11 /* SocketRocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		942AC68416E81A520062CA8A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942AC68316E81A520062CA8A /* UIKit.framework */; };
 		942AC68616E81A520062CA8A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942AC68516E81A520062CA8A /* Foundation.framework */; };
 		942AC68816E81A520062CA8A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942AC68716E81A520062CA8A /* CoreGraphics.framework */; };
@@ -17,16 +27,81 @@
 		942AC69816E81A520062CA8A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 942AC69716E81A520062CA8A /* Default@2x.png */; };
 		942AC69A16E81A520062CA8A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 942AC69916E81A520062CA8A /* Default-568h@2x.png */; };
 		942AC69D16E81A520062CA8A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 942AC69C16E81A520062CA8A /* ViewController.m */; };
-		942AC6AA16E81AC20062CA8A /* RMCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942AC6A616E81AC20062CA8A /* RMCore.framework */; };
 		942AC6AB16E81AC20062CA8A /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942AC6A716E81AC20062CA8A /* CoreMotion.framework */; };
 		942AC6AC16E81AC20062CA8A /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942AC6A816E81AC20062CA8A /* ExternalAccessory.framework */; };
 		942AC6AD16E81AC20062CA8A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942AC6A916E81AC20062CA8A /* QuartzCore.framework */; };
-		942AC6B016E81AF10062CA8A /* RMCharacter.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 942AC6AE16E81AF10062CA8A /* RMCharacter.bundle */; };
-		942AC6B116E81AF10062CA8A /* RMCharacter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942AC6AF16E81AF10062CA8A /* RMCharacter.framework */; };
 		942AC6B416E81C410062CA8A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942AC6B316E81C410062CA8A /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		8CAFC1C51F77FF1700E8BC11 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8CAFC1C01F77FF1700E8BC11 /* RMCore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AF07AE291EFAB17400CB9EB4;
+			remoteInfo = RMCore;
+		};
+		8CAFC1CB1F77FF1D00E8BC11 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8CAFC1C71F77FF1D00E8BC11 /* RMShared.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AF07A0551EFA9E8200CB9EB4;
+			remoteInfo = RMShared;
+		};
+		8CAFC1D21F77FF2400E8BC11 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8CAFC1CD1F77FF2400E8BC11 /* RMCharacter.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8CAFBFCC1F756DA200E8BC11;
+			remoteInfo = RMCharacter;
+		};
+		8CAFC1D61F77FF2F00E8BC11 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8CAFC1C71F77FF1D00E8BC11 /* RMShared.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = AF07A0541EFA9E8200CB9EB4;
+			remoteInfo = RMShared;
+		};
+		8CAFC1DB1F77FF3400E8BC11 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8CAFC1CD1F77FF2400E8BC11 /* RMCharacter.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8CAFBFCB1F756DA200E8BC11;
+			remoteInfo = RMCharacter;
+		};
+		8CAFC1DF1F77FF7200E8BC11 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8CAFC1C01F77FF1700E8BC11 /* RMCore.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = AF07AE281EFAB17400CB9EB4;
+			remoteInfo = RMCore;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8CAFC1D81F77FF2F00E8BC11 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8CAFC1D51F77FF2F00E8BC11 /* RMShared.framework in Embed Frameworks */,
+				8CAFC1DE1F77FF7200E8BC11 /* RMCore.framework in Embed Frameworks */,
+				8CAFC1E61F77FFF700E8BC11 /* CocoaLumberjack.framework in Embed Frameworks */,
+				8CAFC1DA1F77FF3400E8BC11 /* RMCharacter.framework in Embed Frameworks */,
+				8CAFC1E81F77FFFB00E8BC11 /* SocketRocket.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		8CAFC1C01F77FF1700E8BC11 /* RMCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RMCore.xcodeproj; path = ../../RMCore/RMCore.xcodeproj; sourceTree = "<group>"; };
+		8CAFC1C71F77FF1D00E8BC11 /* RMShared.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RMShared.xcodeproj; path = ../../RMShared/RMShared.xcodeproj; sourceTree = "<group>"; };
+		8CAFC1CD1F77FF2400E8BC11 /* RMCharacter.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RMCharacter.xcodeproj; path = ../../RMCharacter/RMCharacter.xcodeproj; sourceTree = "<group>"; };
+		8CAFC1E11F77FFE700E8BC11 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjack.framework; path = HelloRomo/Carthage/Build/iOS/CocoaLumberjack.framework; sourceTree = "<group>"; };
+		8CAFC1E21F77FFE700E8BC11 /* SocketRocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SocketRocket.framework; path = HelloRomo/Carthage/Build/iOS/SocketRocket.framework; sourceTree = "<group>"; };
 		942AC68016E81A520062CA8A /* HelloRomo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloRomo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		942AC68316E81A520062CA8A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		942AC68516E81A520062CA8A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -42,12 +117,9 @@
 		942AC69916E81A520062CA8A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		942AC69B16E81A520062CA8A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		942AC69C16E81A520062CA8A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		942AC6A616E81AC20062CA8A /* RMCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RMCore.framework; path = "../../RMCore/Products/Release-iphoneos/RMCore.framework"; sourceTree = "<group>"; };
 		942AC6A716E81AC20062CA8A /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		942AC6A816E81AC20062CA8A /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
 		942AC6A916E81AC20062CA8A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		942AC6AE16E81AF10062CA8A /* RMCharacter.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = RMCharacter.bundle; path = "../../RMCharacter/Products/Release-iphoneos/RMCharacter.bundle"; sourceTree = "<group>"; };
-		942AC6AF16E81AF10062CA8A /* RMCharacter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RMCharacter.framework; path = "../../RMCharacter/Products/Release-iphoneos/RMCharacter.framework"; sourceTree = "<group>"; };
 		942AC6B316E81C410062CA8A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -57,20 +129,47 @@
 			buildActionMask = 2147483647;
 			files = (
 				942AC6B416E81C410062CA8A /* AVFoundation.framework in Frameworks */,
+				8CAFC1E51F77FFF700E8BC11 /* CocoaLumberjack.framework in Frameworks */,
 				942AC68416E81A520062CA8A /* UIKit.framework in Frameworks */,
 				942AC68616E81A520062CA8A /* Foundation.framework in Frameworks */,
 				942AC68816E81A520062CA8A /* CoreGraphics.framework in Frameworks */,
-				942AC6AA16E81AC20062CA8A /* RMCore.framework in Frameworks */,
+				8CAFC1D41F77FF2F00E8BC11 /* RMShared.framework in Frameworks */,
 				942AC6AB16E81AC20062CA8A /* CoreMotion.framework in Frameworks */,
+				8CAFC1E41F77FFEE00E8BC11 /* SocketRocket.framework in Frameworks */,
+				8CAFC1DD1F77FF7200E8BC11 /* RMCore.framework in Frameworks */,
 				942AC6AC16E81AC20062CA8A /* ExternalAccessory.framework in Frameworks */,
 				942AC6AD16E81AC20062CA8A /* QuartzCore.framework in Frameworks */,
-				942AC6B116E81AF10062CA8A /* RMCharacter.framework in Frameworks */,
+				8CAFC1D91F77FF3400E8BC11 /* RMCharacter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8CAFC1C11F77FF1700E8BC11 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8CAFC1C61F77FF1700E8BC11 /* RMCore.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8CAFC1C81F77FF1D00E8BC11 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8CAFC1CC1F77FF1D00E8BC11 /* RMShared.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8CAFC1CE1F77FF2400E8BC11 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8CAFC1D31F77FF2400E8BC11 /* RMCharacter.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		942AC67716E81A520062CA8A = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +190,8 @@
 		942AC68216E81A520062CA8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8CAFC1E11F77FFE700E8BC11 /* CocoaLumberjack.framework */,
+				8CAFC1E21F77FFE700E8BC11 /* SocketRocket.framework */,
 				942AC6B216E81AF70062CA8A /* Romo */,
 				942AC6A716E81AC20062CA8A /* CoreMotion.framework */,
 				942AC6B316E81C410062CA8A /* AVFoundation.framework */,
@@ -132,9 +233,9 @@
 		942AC6B216E81AF70062CA8A /* Romo */ = {
 			isa = PBXGroup;
 			children = (
-				942AC6A616E81AC20062CA8A /* RMCore.framework */,
-				942AC6AE16E81AF10062CA8A /* RMCharacter.bundle */,
-				942AC6AF16E81AF10062CA8A /* RMCharacter.framework */,
+				8CAFC1CD1F77FF2400E8BC11 /* RMCharacter.xcodeproj */,
+				8CAFC1C71F77FF1D00E8BC11 /* RMShared.xcodeproj */,
+				8CAFC1C01F77FF1700E8BC11 /* RMCore.xcodeproj */,
 			);
 			name = Romo;
 			sourceTree = "<group>";
@@ -149,10 +250,14 @@
 				942AC67C16E81A520062CA8A /* Sources */,
 				942AC67D16E81A520062CA8A /* Frameworks */,
 				942AC67E16E81A520062CA8A /* Resources */,
+				8CAFC1D81F77FF2F00E8BC11 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8CAFC1D71F77FF2F00E8BC11 /* PBXTargetDependency */,
+				8CAFC1DC1F77FF3400E8BC11 /* PBXTargetDependency */,
+				8CAFC1E01F77FF7200E8BC11 /* PBXTargetDependency */,
 			);
 			name = HelloRomo;
 			productName = HelloRomo;
@@ -165,8 +270,13 @@
 		942AC67816E81A520062CA8A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = Romotive;
+				TargetAttributes = {
+					942AC67F16E81A520062CA8A = {
+						DevelopmentTeam = 7S2JF47WZN;
+					};
+				};
 			};
 			buildConfigurationList = 942AC67B16E81A520062CA8A /* Build configuration list for PBXProject "HelloRomo" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -178,12 +288,50 @@
 			mainGroup = 942AC67716E81A520062CA8A;
 			productRefGroup = 942AC68116E81A520062CA8A /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 8CAFC1CE1F77FF2400E8BC11 /* Products */;
+					ProjectRef = 8CAFC1CD1F77FF2400E8BC11 /* RMCharacter.xcodeproj */;
+				},
+				{
+					ProductGroup = 8CAFC1C11F77FF1700E8BC11 /* Products */;
+					ProjectRef = 8CAFC1C01F77FF1700E8BC11 /* RMCore.xcodeproj */;
+				},
+				{
+					ProductGroup = 8CAFC1C81F77FF1D00E8BC11 /* Products */;
+					ProjectRef = 8CAFC1C71F77FF1D00E8BC11 /* RMShared.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				942AC67F16E81A520062CA8A /* HelloRomo */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		8CAFC1C61F77FF1700E8BC11 /* RMCore.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RMCore.framework;
+			remoteRef = 8CAFC1C51F77FF1700E8BC11 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8CAFC1CC1F77FF1D00E8BC11 /* RMShared.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RMShared.framework;
+			remoteRef = 8CAFC1CB1F77FF1D00E8BC11 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8CAFC1D31F77FF2400E8BC11 /* RMCharacter.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RMCharacter.framework;
+			remoteRef = 8CAFC1D21F77FF2400E8BC11 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		942AC67E16E81A520062CA8A /* Resources */ = {
@@ -194,7 +342,6 @@
 				942AC69616E81A520062CA8A /* Default.png in Resources */,
 				942AC69816E81A520062CA8A /* Default@2x.png in Resources */,
 				942AC69A16E81A520062CA8A /* Default-568h@2x.png in Resources */,
-				942AC6B016E81AF10062CA8A /* RMCharacter.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,6 +359,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8CAFC1D71F77FF2F00E8BC11 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RMShared;
+			targetProxy = 8CAFC1D61F77FF2F00E8BC11 /* PBXContainerItemProxy */;
+		};
+		8CAFC1DC1F77FF3400E8BC11 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RMCharacter;
+			targetProxy = 8CAFC1DB1F77FF3400E8BC11 /* PBXContainerItemProxy */;
+		};
+		8CAFC1E01F77FF7200E8BC11 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RMCore;
+			targetProxy = 8CAFC1DF1F77FF7200E8BC11 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		942AC68C16E81A520062CA8A /* InfoPlist.strings */ = {
@@ -286,15 +451,19 @@
 		942AC6A416E81A520062CA8A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 7S2JF47WZN;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../RMCore/Products/Release-iphoneos\"",
 					"\"$(SRCROOT)/../../RMCharacter/Products/Release-iphoneos\"",
+					"$(PROJECT_DIR)/HelloRomo/Carthage/Build/iOS",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HelloRomo/HelloRomo-Prefix.pch";
 				INFOPLIST_FILE = "HelloRomo/HelloRomo-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fotidim.HelloRomo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -303,15 +472,19 @@
 		942AC6A516E81A520062CA8A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 7S2JF47WZN;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../RMCore/Products/Release-iphoneos\"",
 					"\"$(SRCROOT)/../../RMCharacter/Products/Release-iphoneos\"",
+					"$(PROJECT_DIR)/HelloRomo/Carthage/Build/iOS",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HelloRomo/HelloRomo-Prefix.pch";
 				INFOPLIST_FILE = "HelloRomo/HelloRomo-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fotidim.HelloRomo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
