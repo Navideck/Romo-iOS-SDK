@@ -1,5 +1,5 @@
 # Romo iOS SDK
-<a href="https://www.patreon.com/bePatron?u=5127277"><img alt="become a patron" src="https://c5.patreon.com/external/logo/become_a_patron_button.png" height="35px"></a>
+<a href="https://www.patreon.com/bePatron?u=5127277" target="_BLANK"><img alt="become a patron" src="https://c5.patreon.com/external/logo/become_a_patron_button.png" height="35px"></a>
 
 <p align="center">
 <img src="https://github.com/fotiDim/Romo/raw/master/Romo/Assets.xcassets/Missions/Editor/Actions/Turn/romoTurn28%401x.imageset/romoTurn28%401x.png"/>
