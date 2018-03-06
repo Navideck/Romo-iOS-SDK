@@ -18,7 +18,7 @@ The Romo SDK is a dynamic framework. You need to add **RMShared** and **RMCore**
 * [NMSSH](https://github.com/NMSSH/NMSSH)
 * [SocketRocket](https://github.com/facebook/SocketRocket)
 
-For RMVision you need to download separately the **OpenCV 2** iOS framework and place it under **SDK/RMVision/RMVision/lib**
+For RMVision you need to download separately the **OpenCV 2** iOS framework and place it under **SDK/RMVision/RMVision/lib/OpenCV**
 
 You can use ```carthage update --platform iOS``` if you need to fetch or update the dependencies using [Carthage](https://github.com/Carthage/Carthage). Don't forget to add all frameworks to the **Embedded Binaries** section under the **General** tab of your app's target.
 
