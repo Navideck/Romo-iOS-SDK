@@ -7,7 +7,7 @@
 <img src="https://img.shields.io/badge/platform-iOS%208,%209,%2010,%2011%2B-blue.svg" alt="Platform: iOS 8, 9, 10, 11+" />
 </p>
 
-This project is a continuation of the *Romo SDK* in an attempt to breathe life into the lovely but sadly discontinued, iPhone robot, **Romo**. Romotive, the company behind Romo, after shutting down were kind enough to open source their code stating:
+This project is a continuation of the *Romo SDK* in an attempt to breathe life into the lovable but sadly discontinued, iPhone robot, **Romo**. Romotive, the company behind Romo, after shutting down were kind enough to open source their code stating:
 *"We've decided to completely open-source every last bit of Romo's smarts. All of our projects live in this repo and you're free to use them however you like."*
 
 ## How to use the SDK in your own app
