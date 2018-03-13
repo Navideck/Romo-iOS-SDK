@@ -43,27 +43,27 @@ You can insert any iPhone or iPod Touch that fits Romo. Romo was designed with i
 ### Where can I buy a Romo robot?
 There seems to be plenty of stock in online stores.
 
-## Changelog
-* Updated dependencies and used Carthage for dependency management.
+## Major Changes
+* Updated dependency versions. Using Carthage for dependency management.
 * Enabled bitcode
 * **RMShared** and **RMCore** are now dynamic frameworks
-* Minimum iOS is 8.0
+* Minimum iOS version support is 8.0
 
 ## Current Progress
 - [x] Refactor RMShared
 - [x] Refactor RMCore
 - [x] Refactor HelloRMCore
-- [ ] Refactor RMVision (Partially done. Need to recompile libjpeg fat binary for all architectures. Now it cannot run on simulators)
+- [x] Refactor RMVision
 - [x] Refactor HelloRMVision
 - [x] Refactor RMCharacter
 - [x] Refactor HelloRMCharacter
-- [ ] Fix warnings
 - [ ] Refactor HelloRomo
 - [ ] Refactor Romo.xcworkspace
 - [ ] Clean up duplicate projects and folder structure
+- [ ] Fix warnings
 - [ ] Add Swift example
 
-Is somebody has access to Romo's firmware or schematics I would love to add them to the repo.
-Pull requests and issue opening are welcome!
+If somebody has access to Romo's firmware or schematics I would love to add them to the repo.
+Issues and pull requests are always welcome!
 
 
