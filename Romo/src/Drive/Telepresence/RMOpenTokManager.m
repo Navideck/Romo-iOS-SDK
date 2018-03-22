@@ -9,11 +9,12 @@
 #import "RMOpenTokManager.h"
 #import "RMTelepresence.h"
 #import <Opentok/Opentok.h>
+#import <CocoaLumberjack/CocoaLumberjack.h>
 
 NSString * const kTelepresenceErrorDomain = @"com.romotive.telepresence";
 static NSString * const kOpenTokApiKey = @"13527102";
 
-@interface RMOpenTokManager () <OTSessionDelegate, OTPublisherDelegate, OTSubscriberDelegate>
+@interface RMOpenTokManager () //<OTSessionDelegate, OTPublisherDelegate, OTSubscriberDelegate>
 
 // Private properties
 @property (nonatomic, strong) NSString *sessionID;
@@ -38,7 +39,7 @@ static NSString * const kOpenTokApiKey = @"13527102";
         _sessionID = sessionID;
         _token = token;
         
-        _otSession = [[OTSession alloc] initWithSessionId:self.sessionID delegate:self];
+//        _otSession = [[OTSession alloc] initWithSessionId:self.sessionID delegate:self];
         
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(applicationWillResignActiveNotification:)
@@ -86,7 +87,7 @@ static NSString * const kOpenTokApiKey = @"13527102";
 
 - (void)connect
 {
-    [self.otSession connectWithApiKey:kOpenTokApiKey token:self.token];
+//    [self.otSession connectWithApiKey:kOpenTokApiKey token:self.token];
 }
 
 - (void)disconnect
@@ -106,25 +107,25 @@ static NSString * const kOpenTokApiKey = @"13527102";
     if (self.otSession.sessionConnectionStatus)
         
         if (self.otPublisher) {
-            [self.otSession unpublish:self.otPublisher];
+//            [self.otSession unpublish:self.otPublisher];
         }
     
     self.otSubscriber.subscribeToVideo = NO;
-    [self.otSession disconnect];
+//    [self.otSession disconnect];
 }
 
 - (void)addTarget:(id)target action:(SEL)action forSignal:(NSString *)eventName
 {
-    __weak id wtarget = target;
+//    __weak id wtarget = target;
     
-    [self.otSession receiveSignalType:eventName withHandler:^(NSString *type, id data, OTConnection *fromConnection) {
-        // The compiler would normally warn about how performSelector may leak. Since the selector we are invoking will
-        // not return anything, we don't have to worry about anything leaking.
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
-        [wtarget performSelector:action withObject:data];
-#pragma clang diagnostic pop
-    }];
+//    [self.otSession receiveSignalType:eventName withHandler:^(NSString *type, id data, OTConnection *fromConnection) {
+//        // The compiler would normally warn about how performSelector may leak. Since the selector we are invoking will
+//        // not return anything, we don't have to worry about anything leaking.
+//#pragma clang diagnostic push
+//#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+//        [wtarget performSelector:action withObject:data];
+//#pragma clang diagnostic pop
+//    }];
 }
 
 #pragma mark - OTSessionDelegate
@@ -139,11 +140,11 @@ static NSString * const kOpenTokApiKey = @"13527102";
         return;
     }
     
-    self.otPublisher = [[OTPublisher alloc] initWithDelegate:self];
+//    self.otPublisher = [[OTPublisher alloc] initWithDelegate:self];
     self.otPublisher.publishAudio = YES;
     self.otPublisher.publishVideo = YES;
     
-    [session publish:self.otPublisher];
+//    [session publish:self.otPublisher];
     
     if ([self.delegate respondsToSelector:@selector(otSessionManagerDidConnect:)]) {
         [self.delegate otSessionManagerDidConnect:self];
@@ -181,7 +182,7 @@ static NSString * const kOpenTokApiKey = @"13527102";
     switch ((OTSessionErrorCode)error.code) {
         case OTConnectionFailed:
         case OTSessionConnectionTimeout:
-        case OTUnknownServerError:
+//        case OTUnknownServerError:
         case OTSessionStateFailed:
         case OTConnectionRefused:
             err = [NSError errorWithDomain:kTelepresenceErrorDomain
@@ -195,11 +196,11 @@ static NSString * const kOpenTokApiKey = @"13527102";
                                   userInfo:nil];
             break;
             
-        case OTSDKUpdateRequired:
-            err = [NSError errorWithDomain:kTelepresenceErrorDomain
-                                      code:RMTelepresenceErrorCodeConnectionUpdateRequired
-                                  userInfo:nil];
-            break;
+//        case OTSDKUpdateRequired:
+//            err = [NSError errorWithDomain:kTelepresenceErrorDomain
+//                                      code:RMTelepresenceErrorCodeConnectionUpdateRequired
+//                                  userInfo:nil];
+//            break;
             
         default:
             break;
@@ -216,7 +217,7 @@ static NSString * const kOpenTokApiKey = @"13527102";
         // Own stream
     } else {
         if (!self.otSubscriber) {
-            self.otSubscriber = [[OTSubscriber alloc] initWithStream:stream delegate:self];
+//            self.otSubscriber = [[OTSubscriber alloc] initWithStream:stream delegate:self];
             self.otSubscriber.subscribeToAudio = YES;
             self.otSubscriber.subscribeToVideo = YES;
         }
@@ -266,7 +267,7 @@ static NSString * const kOpenTokApiKey = @"13527102";
     double delayInSeconds = 4.0;
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-        [session disconnect];
+//        [session disconnect];
     });
 }
 
@@ -276,16 +277,16 @@ static NSString * const kOpenTokApiKey = @"13527102";
 {
     DDLogError(@"[%@] OpenTok Publisher Error\n  - Error code: %i\n  - Description: %@", self.uuid, error.code, error.localizedDescription);
     
-    switch ((OTPublisherErrorCode)error.code) {
-        case OTSessionDisconnected:
-            break;
-            
-        case OTUserDeniedCameraAccess:
-            break;
-            
-        case OTNoMediaPublished:
-            break;
-    }
+//    switch ((OTPublisherErrorCode)error.code) {
+//        case OTSessionDisconnected:
+//            break;
+//            
+//        case OTUserDeniedCameraAccess:
+//            break;
+//            
+//        case OTNoMediaPublished:
+//            break;
+//    }
 }
 
 -(void)publisherDidStartStreaming:(OTPublisher *)publisher
@@ -320,17 +321,17 @@ static NSString * const kOpenTokApiKey = @"13527102";
                                      code:RMTelepresenceErrorCodeConnectionSubscriberFailed
                                  userInfo:nil];
     
-    switch ((OTSubscriberErrorCode)error.code) {
-        case OTFailedToConnect:
-        case OTConnectionTimedOut:
-        case OTInitializationFailure:
-            break;
-            
-        default:
-            break;
-    }
-    
-    [self.otSession disconnect];
+//    switch ((OTSubscriberErrorCode)error.code) {
+//        case OTFailedToConnect:
+//        case OTConnectionTimedOut:
+//        case OTInitializationFailure:
+//            break;
+//            
+//        default:
+//            break;
+//    }
+//    
+//    [self.otSession disconnect];
 }
 
 - (void)subscriberVideoDataReceived:(OTSubscriber *)subscriber

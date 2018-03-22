@@ -208,7 +208,7 @@
     self.turning = YES;
     [self.Romo.robot turnByAngle:angle withRadius:RM_DRIVE_RADIUS_TURN_IN_PLACE completion:^(BOOL success, float heading) {
         self.turning = NO;
-        [self.otManager.otSession signalWithType:@"didTurnByAngle" data:@(success) completionHandler:^(NSError *error) {}];
+//        [self.otManager.otSession signalWithType:@"didTurnByAngle" data:@(success) completionHandler:^(NSError *error) {}];
     }];
 }
 
@@ -218,7 +218,7 @@
     DDLogVerbose(@"[%@] Got tiltToAngle command: %f", self.uuid, angle);
 
     [self.Romo.robot tiltToAngle:angle completion:^(BOOL success) {
-        [self.otManager.otSession signalWithType:@"didTiltToAngle" data:@(success) completionHandler:^(NSError *error) {}];
+//        [self.otManager.otSession signalWithType:@"didTiltToAngle" data:@(success) completionHandler:^(NSError *error) {}];
     }];
 }
 
@@ -349,7 +349,7 @@
     manager.otPublisher.view.frame = self.view.bounds;
     
     // Remove the toolbar
-    [manager.otPublisher.view.toolbarView removeFromSuperview];
+//    [manager.otPublisher.view.toolbarView removeFromSuperview];
     
     // Enable the end call button
     self.endCallButton.enabled = YES;
@@ -365,7 +365,7 @@
     manager.otPublisher.view.layer.cornerRadius = 3.0;
 
     subscriber.view.frame = self.view.bounds;
-    [subscriber.view.toolbarView removeFromSuperview];
+//    [subscriber.view.toolbarView removeFromSuperview];
 
     [self.view addSubview:subscriber.view];
     [self.view sendSubviewToBack:subscriber.view];
@@ -387,7 +387,7 @@
     
     NSString *romoName = self.Romo.name.length ? self.Romo.name : @"Romo";
     
-    [self.otManager.otSession signalWithType:@"whoami" data:@{@"romoName": romoName} completionHandler:^(NSError *error) {}];
+//    [self.otManager.otSession signalWithType:@"whoami" data:@{@"romoName": romoName} completionHandler:^(NSError *error) {}];
     
     [[NSNotificationCenter defaultCenter] postNotificationName:@"RMTelepresenceRobotControllerSessionDidStart"
                                                         object:self
@@ -404,7 +404,7 @@
 - (void)characterDidFinishExpressing:(RMCharacter *)character
 {
     self.expressing = NO;
-    [self.otManager.otSession signalWithType:@"didFinishExpression" data:nil completionHandler:^(NSError *error) {}];
+//    [self.otManager.otSession signalWithType:@"didFinishExpression" data:nil completionHandler:^(NSError *error) {}];
 }
 
 @end
