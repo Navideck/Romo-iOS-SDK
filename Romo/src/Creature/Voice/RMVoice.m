@@ -380,7 +380,7 @@ NSString *const RMVoiceUserDidSelectionOptionNotification = @"RMVoiceUserDidSele
     label.layer.shouldRasterize = YES;
     label.layer.rasterizationScale = 2.0;
     
-    float actualFontSize;
+    CGFloat actualFontSize;
     CGSize labelSize = [label.text sizeWithFont:label.font minFontSize:label.minimumScaleFactor * size
                                  actualFontSize:&actualFontSize forWidth:self.width - 36 lineBreakMode:label.lineBreakMode];
     label.height = [label.text sizeWithFont:[UIFont voiceForRomoWithSize:actualFontSize] constrainedToSize:CGSizeMake(self.width - 36, 2*size)].height;
