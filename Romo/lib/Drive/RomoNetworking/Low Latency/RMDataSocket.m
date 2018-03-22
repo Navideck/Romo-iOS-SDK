@@ -212,7 +212,7 @@
     
     [dataPacket serializeToBytes:bytes];
     
-    int charsSent = 0;
+    ssize_t charsSent = 0;
     charsSent = sendto(_nativeSocket, bytes, packetSize, 0, addr, addr->sa_len);
     
     if (charsSent == -1) {
@@ -228,7 +228,7 @@
     
     [dataPacket serializeToBytes:bytes];
     
-    int charsSent = 0;
+    ssize_t charsSent = 0;
     charsSent = send(_nativeSocket, bytes, dataPacket.dataSize, 0);
     
     if (charsSent == -1) {
@@ -303,8 +303,8 @@
 
 - (void)readDatagramPacket
 {
-    int charsReceived = 0;
-    NSInteger headerSize = [RMDataPacket headerSize];
+    ssize_t charsReceived = 0;
+    uint32_t headerSize = [RMDataPacket headerSize];
     
     char headerBuffer[headerSize];
     

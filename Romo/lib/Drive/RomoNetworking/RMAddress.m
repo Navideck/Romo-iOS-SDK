@@ -132,7 +132,7 @@
         hints.ai_flags = AI_PASSIVE;
         hints.ai_socktype = type;
         hints.ai_protocol = type == SOCK_STREAM ? IPPROTO_TCP : IPPROTO_UDP;
-        hints.ai_family   = PF_UNSPEC;
+        hints.ai_family   = AF_INET;
         
         int gai_error;
         
