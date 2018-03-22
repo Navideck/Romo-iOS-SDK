@@ -208,6 +208,11 @@ typedef enum {
     if (gestureRecognizer.state == UIGestureRecognizerStateEnded) {
         CGPoint swipePoint = [gestureRecognizer locationInView:self.collectionView];
         NSIndexPath *swipeIndexPath = [self.collectionView indexPathForItemAtPoint:swipePoint];
+        
+        if (self.romosResultsController.peerList.count == 0) {
+            return;
+        }
+        
         id data = self.romosResultsController.peerList[swipeIndexPath.row];
         if ([data isKindOfClass:[RMContact class]]) {
             RMTelepresencePeerRomoCell *cell = (RMTelepresencePeerRomoCell *)[self.collectionView cellForItemAtIndexPath:swipeIndexPath];
