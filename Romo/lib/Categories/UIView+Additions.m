@@ -115,8 +115,7 @@
 }
 
 - (void)removeAllGestureRecognizers {
-    while (self.gestureRecognizers.count) {
-        UIGestureRecognizer* gesture = self.gestureRecognizers.lastObject;
+    for (UIGestureRecognizer* gesture in self.gestureRecognizers) {
         [self removeGestureRecognizer:gesture];
     }
 }
