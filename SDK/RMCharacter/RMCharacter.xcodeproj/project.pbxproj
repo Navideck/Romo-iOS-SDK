@@ -348,8 +348,6 @@
 		8CAFC1631F77D69400E8BC11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = RMCharacter/Info.plist; sourceTree = "<group>"; };
 		8CAFC19F1F77F50500E8BC11 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjack.framework; path = RMCharacter/Carthage/Build/iOS/CocoaLumberjack.framework; sourceTree = "<group>"; };
 		8CAFC1A01F77F50500E8BC11 /* SocketRocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SocketRocket.framework; path = RMCharacter/Carthage/Build/iOS/SocketRocket.framework; sourceTree = "<group>"; };
-		8CAFC1B71F77F8DE00E8BC11 /* dfgdfg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = dfgdfg.h; sourceTree = "<group>"; };
-		8CAFC1B81F77F8DE00E8BC11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9401253F17FF690C00F9A7B0 /* Romo_Expression_24_1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Romo_Expression_24_1.json; sourceTree = "<group>"; };
 		9401254017FF690C00F9A7B0 /* Romo_Expression_24_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Romo_Expression_24_1@2x.png"; sourceTree = "<group>"; };
 		9401254117FF690C00F9A7B0 /* Romo_Expression_24_2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Romo_Expression_24_2.json; sourceTree = "<group>"; };
@@ -692,15 +690,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8CAFC1B61F77F8DE00E8BC11 /* dfgdfg */ = {
-			isa = PBXGroup;
-			children = (
-				8CAFC1B71F77F8DE00E8BC11 /* dfgdfg.h */,
-				8CAFC1B81F77F8DE00E8BC11 /* Info.plist */,
-			);
-			path = dfgdfg;
-			sourceTree = "<group>";
-		};
 		9401253E17FF690C00F9A7B0 /* Want */ = {
 			isa = PBXGroup;
 			children = (
@@ -815,7 +804,6 @@
 				9448A74217415AAB00A82032 /* RMCharacter */,
 				9448A75517415B2000A82032 /* RMCharacterResources */,
 				9448A98B1741656D00A82032 /* RMCharacter Framework */,
-				8CAFC1B61F77F8DE00E8BC11 /* dfgdfg */,
 				9448A73F17415AAB00A82032 /* Frameworks */,
 				9448A73E17415AAB00A82032 /* Products */,
 			);
