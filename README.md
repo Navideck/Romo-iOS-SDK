@@ -57,7 +57,7 @@ There seems to be plenty of stock in online stores.
 - [x] Refactor HelloRMVision
 - [x] Refactor RMCharacter
 - [x] Refactor HelloRMCharacter
-- [ ] Refactor HelloRomo
+- [x] Refactor HelloRomo
 - [ ] Refactor Romo.xcworkspace
 - [ ] Clean up duplicate projects and folder structure
 - [ ] Fix warnings
