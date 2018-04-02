@@ -20,7 +20,7 @@
 #import "Reachability.h"
 #import "RMNetworkUtilities.h"
 #import "RMSoundEffect.h"
-#import "RMTelepresencePresence.h"
+//#import "RMTelepresencePresence.h"
 
 static NSString *telepresenceNumberKey = @"telepresenceNumberKey";
 static NSString *softwareLicenseURL = @"http://romotive.com/software/legal";
@@ -219,19 +219,19 @@ typedef enum RMInfoRobotControllerRow {
 
 - (void)fetchTelepresenceNumber
 {
-    if ([[UIDevice currentDevice] isDockableTelepresenceDevice]) {
-        [[RMTelepresencePresence sharedInstance] fetchNumber:^(NSError *error) {
-            if (error) {
-                
-            } else {
-                self.telepresenceNumber = [RMTelepresencePresence sharedInstance].number;
-                
-                NSIndexPath *indexPath = [NSIndexPath indexPathForRow:RMInfoRobotControllerRowRomoNumber inSection:0];
-                [self.view.tableView reloadRowsAtIndexPaths:@[indexPath]
-                                           withRowAnimation:UITableViewRowAnimationNone];
-            }
-        }];
-    }
+//    if ([[UIDevice currentDevice] isDockableTelepresenceDevice]) {
+//        [[RMTelepresencePresence sharedInstance] fetchNumber:^(NSError *error) {
+//            if (error) {
+//                
+//            } else {
+//                self.telepresenceNumber = [RMTelepresencePresence sharedInstance].number;
+//                
+//                NSIndexPath *indexPath = [NSIndexPath indexPathForRow:RMInfoRobotControllerRowRomoNumber inSection:0];
+//                [self.view.tableView reloadRowsAtIndexPaths:@[indexPath]
+//                                           withRowAnimation:UITableViewRowAnimationNone];
+//            }
+//        }];
+//    }
 }
 
 

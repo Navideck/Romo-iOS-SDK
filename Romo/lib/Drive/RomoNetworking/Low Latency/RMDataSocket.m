@@ -10,7 +10,7 @@
 
 #pragma mark - Constants --
 
-#define SEND_BUFFER_SIZE 32000
+#define SEND_BUFFER_SIZE 65535
 
 #pragma mark -
 #pragma mark - DataSocket (Private) --

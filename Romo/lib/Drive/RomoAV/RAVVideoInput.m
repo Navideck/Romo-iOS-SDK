@@ -6,10 +6,6 @@
 #import <CoreMedia/CoreMedia.h>
 #import "RAVVideoInput.h"
 
-#ifndef SIMULATOR
-#import "AVCEncoder.h"
-#endif
-
 #define PROFILE     AVVideoProfileLevelH264Main41
 
 #define FPS_LOW         10
@@ -32,7 +28,7 @@
     AVCaptureStillImageOutput   *_captureImageOutput;
     
 #ifndef SIMULATOR
-    AVCEncoder                  *_encoder;
+    H264HwEncoderImpl           *_encoder;
 #endif
 }
 
@@ -46,7 +42,7 @@
 // Camera Settings:
 - (NSUInteger)cameraCount;
 - (AVCaptureDevice *)cameraWithPosition:(AVCaptureDevicePosition)position;
-- (void)setCameraFPS:(NSInteger)fps;
+- (void)setCameraFPS:(int32_t)fps;
 
 @end
 
@@ -99,7 +95,7 @@
     self.starting = YES;
     _captureSession = [[AVCaptureSession alloc] init];
     [_captureSession beginConfiguration];
-    [_captureSession setSessionPreset:AVCaptureSessionPresetMedium];
+    [_captureSession setSessionPreset:AVCaptureSessionPreset640x480];
     
     
     AVCaptureDevice *videoDevice = nil;
@@ -154,32 +150,12 @@
 {
     
 #ifndef SIMULATOR
-    _encoder = [[AVCEncoder alloc] init];
+    _encoder = [H264HwEncoderImpl alloc];
+    [_encoder initWithConfiguration];
     
-    __weak VideoInputBlock inputBlock = self.inputBlock;
-    AVCEncoderCallback callback = ^(const void *frame, uint32_t length, CMTime pts) {
-        @autoreleasepool {
-            if (inputBlock) {
-                inputBlock(frame, length, pts);
-            }
-        }
-    };
-    
-    [_encoder setCallback:[callback copy]];
-    
-    AVCParameters *parameters = [[AVCParameters alloc] init];
-    [parameters setVideoProfileLevel:PROFILE];
-    [parameters setBps:BPS_LOW];
-    
-    [_encoder setParameters:parameters];
-    BOOL prepareSucceeded = [_encoder prepareEncoder];
-    
-    if (prepareSucceeded) {
-        return [_encoder start];
-    } else {
-        DDLogError(@"prepareEncoder failed: %@", _encoder.error);
-        return NO;
-    }
+    [_encoder initEncodeWidth:480 height:640];
+    [_encoder setDelegate:self];
+    return YES;
 #endif
     
     return NO;
@@ -194,10 +170,6 @@
 
 - (void)_start
 {
-    __weak id<RMVideoInputDelegate> delegate = _inputDelegate;
-    self.inputBlock = ^(const void *frame, uint32_t length, CMTime pts) {
-        [delegate capturedFrame:frame length:length pts:pts];
-    };
     
     if (![self initEncoder]) {
 #ifndef SIMULATOR
@@ -286,6 +258,7 @@
 didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
 	   fromConnection:(AVCaptureConnection *)connection
 {
+    [connection setVideoOrientation:AVCaptureVideoOrientationPortrait];
 #ifndef SIMULATOR
     [_encoder encode:sampleBuffer];
 #endif
@@ -298,38 +271,25 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
 #ifndef SIMULATOR
     switch (videoQuality) {
         case RMVideoQualityLow:
-            [_encoder setAveragebps:BPS_LOW];
+//            [_encoder setAveragebps:BPS_LOW];
             [self setCameraFPS:FPS_LOW];
             break;
             
         case RMVideoQualityDefault:
-            [_encoder setAveragebps:BPS_DEFAULT];
+//            [_encoder setAveragebps:BPS_DEFAULT];
             [self setCameraFPS:FPS_DEFAULT];
             break;
             
         case RMVideoQualityHigh:
-            [_encoder setAveragebps:BPS_HIGH];
+//            [_encoder setAveragebps:BPS_HIGH];
             [self setCameraFPS:FPS_HIGH];
             break;
     }
 #endif
 }
 
-- (void)setCameraFPS:(NSInteger)fps
+- (void)setCameraFPS:(int32_t)fps
 {
-    CMTime duration = CMTimeMake(1, fps);
-    
-    // iOS 6.0 supports video min/max frame duration for capture connections
-    if (SYSTEM_VERSION_LESS_THAN(@"7.0")) {
-        for (AVCaptureConnection *connection in _captureOutput.connections) {
-            if (connection.supportsVideoMinFrameDuration) {
-                connection.videoMinFrameDuration = duration;
-            }
-            if (connection.supportsVideoMaxFrameDuration) {
-                connection.videoMaxFrameDuration = duration;
-            }
-        }
-    }
     
     // iOS 7.0 uses activeVideoMin/MaxFrameDuration on the capture device
     if ([_captureDevice respondsToSelector:@selector(setActiveVideoMinFrameDuration:)] && [_captureDevice respondsToSelector:@selector(setActiveVideoMaxFrameDuration:)]) {
@@ -338,6 +298,36 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
         _captureDevice.activeVideoMaxFrameDuration = CMTimeMake(1, fps);
         [_captureDevice unlockForConfiguration];
     }
+}
+
+#pragma mark - H264HwEncoderImpl Delegate Methods --
+
+- (void)gotSpsPps:(NSData*)sps pps:(NSData*)pps {
+//    NSLog(@"gotSpsPps %d %d", (int)[sps length], (int)[pps length]);
+    
+    const char bytes[] = "\x00\x00\x00\x01";
+    NSMutableData* spsWithHeader = [[NSData dataWithBytes:bytes length:(sizeof bytes) - 1] mutableCopy];
+    [spsWithHeader appendData:sps];
+    [_inputDelegate capturedFrame:spsWithHeader.bytes length: (int)spsWithHeader.length];
+//    NSLog(@"spsWithHeader %@", [spsWithHeader subdataWithRange:NSMakeRange(0, 5)].description);
+    
+    NSMutableData* ppsWithHeader = [[NSData dataWithBytes:bytes length:(sizeof bytes) - 1] mutableCopy];
+    [ppsWithHeader appendData:pps];
+    [_inputDelegate capturedFrame:ppsWithHeader.bytes length: (int)ppsWithHeader.length];
+//    NSLog(@"ppsWithHeader %@", [ppsWithHeader subdataWithRange:NSMakeRange(0, 5)].description);
+}
+
+- (void)gotEncodedData:(NSData*)data isKeyFrame:(BOOL)isKeyFrame {
+    if (isKeyFrame) {
+        NSLog(@"KeyFrame %d", (int)[data length]);
+    }
+//    NSLog(@"gotEncodedData %d %d", (int)[data length], (int)isKeyFrame);
+    
+    const char bytes[] = "\x00\x00\x00\x01";
+    NSMutableData* framesWithHeader = [[NSData dataWithBytes:bytes length:(sizeof bytes) - 1] mutableCopy];
+    [framesWithHeader appendData:data];
+    [_inputDelegate capturedFrame:framesWithHeader.bytes length: (int)framesWithHeader.length];
+//    NSLog(@"framesWithHeader %@", [framesWithHeader subdataWithRange:NSMakeRange(0, 5)].description);
 }
 
 @end

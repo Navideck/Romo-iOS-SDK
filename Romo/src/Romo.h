@@ -1,4 +1,4 @@
-#import <RMShared/DDLog.h>
+#import <CocoaLumberjack/DDLog.h>
 #import "UIImage+Retina.h"
 
 #ifdef DEBUG

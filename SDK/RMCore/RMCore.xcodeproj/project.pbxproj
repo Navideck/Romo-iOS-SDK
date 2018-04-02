@@ -16,15 +16,15 @@
 		AF07B1381EFAB23E00CB9EB4 /* RMCoreMotor.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07AE3B1EFAB23D00CB9EB4 /* RMCoreMotor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AF07B1391EFAB23E00CB9EB4 /* RMCoreMotor.m in Sources */ = {isa = PBXBuildFile; fileRef = AF07AE3C1EFAB23D00CB9EB4 /* RMCoreMotor.m */; };
 		AF07B13A1EFAB23E00CB9EB4 /* RMCoreMotor_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07AE3D1EFAB23D00CB9EB4 /* RMCoreMotor_Internal.h */; };
-		AF07B13B1EFAB23E00CB9EB4 /* ChargingStates.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07AE401EFAB23D00CB9EB4 /* ChargingStates.h */; };
-		AF07B13C1EFAB23E00CB9EB4 /* DeviceModes.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07AE411EFAB23D00CB9EB4 /* DeviceModes.h */; };
+		AF07B13B1EFAB23E00CB9EB4 /* ChargingStates.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07AE401EFAB23D00CB9EB4 /* ChargingStates.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF07B13C1EFAB23E00CB9EB4 /* DeviceModes.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07AE411EFAB23D00CB9EB4 /* DeviceModes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AF07B13D1EFAB23E00CB9EB4 /* EEPROMDefs.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07AE421EFAB23D00CB9EB4 /* EEPROMDefs.h */; };
-		AF07B13E1EFAB23E00CB9EB4 /* InfoTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07AE431EFAB23D00CB9EB4 /* InfoTypes.h */; };
-		AF07B13F1EFAB23E00CB9EB4 /* LEDModes.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07AE441EFAB23D00CB9EB4 /* LEDModes.h */; };
-		AF07B1401EFAB23E00CB9EB4 /* MotorCommandTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07AE451EFAB23D00CB9EB4 /* MotorCommandTypes.h */; };
-		AF07B1411EFAB23E00CB9EB4 /* ParameterTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07AE461EFAB23D00CB9EB4 /* ParameterTypes.h */; };
+		AF07B13E1EFAB23E00CB9EB4 /* InfoTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07AE431EFAB23D00CB9EB4 /* InfoTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF07B13F1EFAB23E00CB9EB4 /* LEDModes.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07AE441EFAB23D00CB9EB4 /* LEDModes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF07B1401EFAB23E00CB9EB4 /* MotorCommandTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07AE451EFAB23D00CB9EB4 /* MotorCommandTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AF07B1411EFAB23E00CB9EB4 /* ParameterTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07AE461EFAB23D00CB9EB4 /* ParameterTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AF07B1421EFAB23E00CB9EB4 /* Romo3Defs.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07AE471EFAB23D00CB9EB4 /* Romo3Defs.h */; };
-		AF07B1431EFAB23E00CB9EB4 /* SerialProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07AE481EFAB23D00CB9EB4 /* SerialProtocol.h */; };
+		AF07B1431EFAB23E00CB9EB4 /* SerialProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07AE481EFAB23D00CB9EB4 /* SerialProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AF07B1441EFAB23E00CB9EB4 /* IntelHexImage.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07AE4A1EFAB23D00CB9EB4 /* IntelHexImage.h */; };
 		AF07B1451EFAB23E00CB9EB4 /* IntelHexImage.m in Sources */ = {isa = PBXBuildFile; fileRef = AF07AE4B1EFAB23D00CB9EB4 /* IntelHexImage.m */; };
 		AF07B1461EFAB23E00CB9EB4 /* IntelHexLine.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07AE4C1EFAB23D00CB9EB4 /* IntelHexLine.h */; };
@@ -35,9 +35,9 @@
 		AF07B14B1EFAB23E00CB9EB4 /* RMCoreRobotCommunication.m in Sources */ = {isa = PBXBuildFile; fileRef = AF07AE511EFAB23D00CB9EB4 /* RMCoreRobotCommunication.m */; };
 		AF07B14C1EFAB23E00CB9EB4 /* RMCoreRobotCommunicationOld.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07AE521EFAB23D00CB9EB4 /* RMCoreRobotCommunicationOld.h */; };
 		AF07B14D1EFAB23E00CB9EB4 /* RMCoreRobotCommunicationOld.m in Sources */ = {isa = PBXBuildFile; fileRef = AF07AE531EFAB23D00CB9EB4 /* RMCoreRobotCommunicationOld.m */; };
-		AF07B14E1EFAB23E00CB9EB4 /* RMCoreRobotDataTransport.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07AE541EFAB23D00CB9EB4 /* RMCoreRobotDataTransport.h */; };
+		AF07B14E1EFAB23E00CB9EB4 /* RMCoreRobotDataTransport.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07AE541EFAB23D00CB9EB4 /* RMCoreRobotDataTransport.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AF07B14F1EFAB23E00CB9EB4 /* RMCoreRobotDataTransport.m in Sources */ = {isa = PBXBuildFile; fileRef = AF07AE551EFAB23D00CB9EB4 /* RMCoreRobotDataTransport.m */; };
-		AF07B1501EFAB23E00CB9EB4 /* RMProgrammingProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07AE561EFAB23D00CB9EB4 /* RMProgrammingProtocol.h */; };
+		AF07B1501EFAB23E00CB9EB4 /* RMProgrammingProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07AE561EFAB23D00CB9EB4 /* RMProgrammingProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AF07B1511EFAB23E00CB9EB4 /* RMCoreLEDs.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07AE581EFAB23D00CB9EB4 /* RMCoreLEDs.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AF07B1521EFAB23E00CB9EB4 /* RMCoreLEDs.m in Sources */ = {isa = PBXBuildFile; fileRef = AF07AE591EFAB23D00CB9EB4 /* RMCoreLEDs.m */; };
 		AF07B1531EFAB23E00CB9EB4 /* RMCoreLEDs_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07AE5A1EFAB23D00CB9EB4 /* RMCoreLEDs_Internal.h */; };
@@ -46,11 +46,11 @@
 		AF07B3281EFAB23E00CB9EB4 /* HeadTiltProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07B1061EFAB23E00CB9EB4 /* HeadTiltProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AF07B3291EFAB23E00CB9EB4 /* HolonomicDriveProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07B1071EFAB23E00CB9EB4 /* HolonomicDriveProtocol.h */; };
 		AF07B32A1EFAB23E00CB9EB4 /* LEDProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07B1081EFAB23E00CB9EB4 /* LEDProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AF07B32B1EFAB23E00CB9EB4 /* RobotCommunicationProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07B1091EFAB23E00CB9EB4 /* RobotCommunicationProtocol.h */; };
+		AF07B32B1EFAB23E00CB9EB4 /* RobotCommunicationProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07B1091EFAB23E00CB9EB4 /* RobotCommunicationProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AF07B32C1EFAB23E00CB9EB4 /* RobotMotionProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07B10A1EFAB23E00CB9EB4 /* RobotMotionProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AF07B32D1EFAB23E00CB9EB4 /* RMCoreRobot.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07B10B1EFAB23E00CB9EB4 /* RMCoreRobot.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AF07B32E1EFAB23E00CB9EB4 /* RMCoreRobot.m in Sources */ = {isa = PBXBuildFile; fileRef = AF07B10C1EFAB23E00CB9EB4 /* RMCoreRobot.m */; };
-		AF07B32F1EFAB23E00CB9EB4 /* RMCoreRobot_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07B10D1EFAB23E00CB9EB4 /* RMCoreRobot_Internal.h */; };
+		AF07B32F1EFAB23E00CB9EB4 /* RMCoreRobot_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07B10D1EFAB23E00CB9EB4 /* RMCoreRobot_Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AF07B3301EFAB23E00CB9EB4 /* RMCoreRobotIdentification.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07B10E1EFAB23E00CB9EB4 /* RMCoreRobotIdentification.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AF07B3311EFAB23E00CB9EB4 /* RMCoreRobotIdentification.m in Sources */ = {isa = PBXBuildFile; fileRef = AF07B10F1EFAB23E00CB9EB4 /* RMCoreRobotIdentification.m */; };
 		AF07B3321EFAB23E00CB9EB4 /* RMCoreRobotIdentification_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07B1101EFAB23E00CB9EB4 /* RMCoreRobotIdentification_Internal.h */; };
@@ -75,7 +75,7 @@
 		AF07B3451EFAB23E00CB9EB4 /* RMCoreControllerPID.m in Sources */ = {isa = PBXBuildFile; fileRef = AF07B1291EFAB23E00CB9EB4 /* RMCoreControllerPID.m */; };
 		AF07B3461EFAB23E00CB9EB4 /* RMCoreLeakyIntegrator.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07B12B1EFAB23E00CB9EB4 /* RMCoreLeakyIntegrator.h */; };
 		AF07B3471EFAB23E00CB9EB4 /* RMCoreLeakyIntegrator.m in Sources */ = {isa = PBXBuildFile; fileRef = AF07B12C1EFAB23E00CB9EB4 /* RMCoreLeakyIntegrator.m */; };
-		AF07B3481EFAB23E00CB9EB4 /* RMCoreMovingAverage.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07B12D1EFAB23E00CB9EB4 /* RMCoreMovingAverage.h */; };
+		AF07B3481EFAB23E00CB9EB4 /* RMCoreMovingAverage.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07B12D1EFAB23E00CB9EB4 /* RMCoreMovingAverage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AF07B3491EFAB23F00CB9EB4 /* RMCoreMovingAverage.m in Sources */ = {isa = PBXBuildFile; fileRef = AF07B12E1EFAB23E00CB9EB4 /* RMCoreMovingAverage.m */; };
 		AF07B34A1EFAB23F00CB9EB4 /* RMCoreMotionInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07B1301EFAB23E00CB9EB4 /* RMCoreMotionInterface.h */; };
 		AF07B34B1EFAB23F00CB9EB4 /* RMCoreMotionInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = AF07B1311EFAB23E00CB9EB4 /* RMCoreMotionInterface.m */; };
@@ -89,6 +89,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		11917C4A205C446700D69613 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AFAFB10F1EFBB60400DB92B5 /* RMShared.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = AF07A0541EFA9E8200CB9EB4;
+			remoteInfo = RMShared;
+		};
 		AFAFB1131EFBB60400DB92B5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AFAFB10F1EFBB60400DB92B5 /* RMShared.xcodeproj */;
@@ -489,26 +496,28 @@
 				AF07B3301EFAB23E00CB9EB4 /* RMCoreRobotIdentification.h in Headers */,
 				AF07B3351EFAB23E00CB9EB4 /* RMCoreRobotVitals.h in Headers */,
 				AF07B32C1EFAB23E00CB9EB4 /* RobotMotionProtocol.h in Headers */,
+				AF07B3481EFAB23E00CB9EB4 /* RMCoreMovingAverage.h in Headers */,
+				AF07B1501EFAB23E00CB9EB4 /* RMProgrammingProtocol.h in Headers */,
+				AF07B14E1EFAB23E00CB9EB4 /* RMCoreRobotDataTransport.h in Headers */,
+				AF07B1431EFAB23E00CB9EB4 /* SerialProtocol.h in Headers */,
+				AF07B32F1EFAB23E00CB9EB4 /* RMCoreRobot_Internal.h in Headers */,
+				AF07B32B1EFAB23E00CB9EB4 /* RobotCommunicationProtocol.h in Headers */,
+				AF07B13F1EFAB23E00CB9EB4 /* LEDModes.h in Headers */,
+				AF07B13C1EFAB23E00CB9EB4 /* DeviceModes.h in Headers */,
+				AF07B13B1EFAB23E00CB9EB4 /* ChargingStates.h in Headers */,
+				AF07B1401EFAB23E00CB9EB4 /* MotorCommandTypes.h in Headers */,
 				AF07B1411EFAB23E00CB9EB4 /* ParameterTypes.h in Headers */,
+				AF07B13E1EFAB23E00CB9EB4 /* InfoTypes.h in Headers */,
 				AF07B3371EFAB23E00CB9EB4 /* RMCoreRobotVitals_Internal.h in Headers */,
 				AF07B3401EFAB23E00CB9EB4 /* RMCoreInertialStasis.h in Headers */,
-				AF07B14E1EFAB23E00CB9EB4 /* RMCoreRobotDataTransport.h in Headers */,
-				AF07B13C1EFAB23E00CB9EB4 /* DeviceModes.h in Headers */,
-				AF07B13E1EFAB23E00CB9EB4 /* InfoTypes.h in Headers */,
 				AF07B3381EFAB23E00CB9EB4 /* RMCoreBumpDetector.h in Headers */,
-				AF07B32F1EFAB23E00CB9EB4 /* RMCoreRobot_Internal.h in Headers */,
 				AF07B3291EFAB23E00CB9EB4 /* HolonomicDriveProtocol.h in Headers */,
 				AF07B33C1EFAB23E00CB9EB4 /* RMCorePlatformMotion.h in Headers */,
 				AF07B1481EFAB23E00CB9EB4 /* STK500Programmer.h in Headers */,
 				AF07B3321EFAB23E00CB9EB4 /* RMCoreRobotIdentification_Internal.h in Headers */,
 				AF07B13A1EFAB23E00CB9EB4 /* RMCoreMotor_Internal.h in Headers */,
 				AF07B1361EFAB23E00CB9EB4 /* RMCoreHeadTilt.h in Headers */,
-				AF07B13F1EFAB23E00CB9EB4 /* LEDModes.h in Headers */,
-				AF07B3481EFAB23E00CB9EB4 /* RMCoreMovingAverage.h in Headers */,
-				AF07B1401EFAB23E00CB9EB4 /* MotorCommandTypes.h in Headers */,
 				AF07B1441EFAB23E00CB9EB4 /* IntelHexImage.h in Headers */,
-				AF07B1431EFAB23E00CB9EB4 /* SerialProtocol.h in Headers */,
-				AF07B32B1EFAB23E00CB9EB4 /* RobotCommunicationProtocol.h in Headers */,
 				AF07B13D1EFAB23E00CB9EB4 /* EEPROMDefs.h in Headers */,
 				AF07B1531EFAB23E00CB9EB4 /* RMCoreLEDs_Internal.h in Headers */,
 				AF07B33A1EFAB23E00CB9EB4 /* RMCoreDeviceMotion.h in Headers */,
@@ -522,9 +531,7 @@
 				AF07B3461EFAB23E00CB9EB4 /* RMCoreLeakyIntegrator.h in Headers */,
 				AF07B14C1EFAB23E00CB9EB4 /* RMCoreRobotCommunicationOld.h in Headers */,
 				AF07B3CC1EFAB2E700CB9EB4 /* RMCore-Prefix.pch in Headers */,
-				AF07B1501EFAB23E00CB9EB4 /* RMProgrammingProtocol.h in Headers */,
 				AF07B33E1EFAB23E00CB9EB4 /* RMCoreRobotMotion.h in Headers */,
-				AF07B13B1EFAB23E00CB9EB4 /* ChargingStates.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,6 +550,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				11917C4B205C446700D69613 /* PBXTargetDependency */,
 			);
 			name = RMCore;
 			productName = RMCore;
@@ -555,7 +563,7 @@
 		94638780174150040023FC7D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Romotive, Inc";
 				TargetAttributes = {
 					AF07AE281EFAB17400CB9EB4 = {
@@ -647,6 +655,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		11917C4B205C446700D69613 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RMShared;
+			targetProxy = 11917C4A205C446700D69613 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		9448A8C61741601300A82032 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
@@ -671,11 +687,13 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
@@ -720,11 +738,13 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
@@ -788,6 +808,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fotidim.RMCore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
