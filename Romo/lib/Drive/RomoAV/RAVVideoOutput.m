@@ -55,16 +55,16 @@
         
         self.peerView = [self prepareOutputViewWithFrame:frame];
         
-        [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(applicationWillResignActive:)
-                                                     name:UIApplicationWillResignActiveNotification
-                                                   object:nil];
+//        [[NSNotificationCenter defaultCenter] addObserver:self
+//                                                 selector:@selector(applicationWillResignActive:)
+//                                                     name:UIApplicationWillResignActiveNotification
+//                                                   object:nil];
 
         
-        [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(applicationDidBecomeActive:)
-                                                     name:UIApplicationDidBecomeActiveNotification
-                                                   object:nil];
+//        [[NSNotificationCenter defaultCenter] addObserver:self
+//                                                 selector:@selector(applicationDidBecomeActive:)
+//                                                     name:UIApplicationDidBecomeActiveNotification
+//                                                   object:nil];
 
     }
     return self;
