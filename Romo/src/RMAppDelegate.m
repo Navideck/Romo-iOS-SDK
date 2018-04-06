@@ -9,9 +9,9 @@
 #import <HockeySDK/HockeySDK.h>
 #import "UIView+Additions.h"
 #import "RMRobotController.h"
-#import <RMShared/DDASLLogger.h>
-#import <RMShared/DDTTYLogger.h>
-#import <RMShared/DDFileLogger.h>
+#import <CocoaLumberjack/DDASLLogger.h>
+#import <CocoaLumberjack/DDTTYLogger.h>
+#import <CocoaLumberjack/DDFileLogger.h>
 #import <RMShared/RMWebSocketLogger.h>
 #import <RMShared/RMLogFormatter.h>
 #import <RMShared/UIApplication+Environment.h>
