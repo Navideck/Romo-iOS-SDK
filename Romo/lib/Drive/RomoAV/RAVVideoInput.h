@@ -6,6 +6,10 @@
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
 
+#ifndef SIMULATOR
+#import "H264HwEncoderImpl.h"
+#endif
+
 typedef enum {
     RMVideoQualityLow,
     RMVideoQualityDefault,
@@ -17,7 +21,7 @@ typedef void (^VideoInputBlock)(const void *frame, uint32_t length, CMTime pts);
 @protocol RMVideoInputDelegate;
 @protocol RMVideoImageCapturingDelegate;
 
-@interface RAVVideoInput : NSObject <AVCaptureVideoDataOutputSampleBufferDelegate>
+@interface RAVVideoInput : NSObject <AVCaptureVideoDataOutputSampleBufferDelegate, H264HwEncoderImplDelegate>
 
 @property (nonatomic, weak) id <RMVideoInputDelegate> inputDelegate;
 @property (nonatomic, weak) id <RMVideoImageCapturingDelegate> imageCapturingDelegate;
@@ -48,7 +52,8 @@ typedef void (^VideoInputBlock)(const void *frame, uint32_t length, CMTime pts);
 // Input of video frames
 @protocol RMVideoInputDelegate <NSObject>
 
-- (void)capturedFrame:(const void *)frame length:(uint32_t)length pts:(CMTime)pts;
+//- (void)capturedFrame:(const void *)frame length:(uint32_t)length pts:(CMTime)pts;
+- (void)capturedFrame:(const void *)frame length:(uint32_t)length;
 
 @end
 
