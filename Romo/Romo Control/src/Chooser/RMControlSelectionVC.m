@@ -8,7 +8,7 @@
 
 #import "RMControlSelectionVC.h"
 #import "RMDrivableRomosResultsController.h"
-#import "RMTelepresenceClientViewController.h"
+//#import "RMTelepresenceClientViewController.h"
 #import "RMWiFiDriveRemoteVC.h"
 #import "RMWifiPeerRomoCell.h"
 #import "RMTelepresencePeerRomoCell.h"
@@ -151,16 +151,16 @@ typedef enum {
 
 - (void)handleCallWithNumber:(NSString *)number
 {
-    RMTelepresenceClientViewController *controller =
-    [[RMTelepresenceClientViewController alloc] initWithNumber:number completion:^(NSError *error) {
-        if (error) {
-            DDLogError(@"Error: %@", [error localizedDescription]);
-        }
-        
-        [self dismissViewControllerAnimated:YES completion:nil];
-    }];
-    
-    [self presentViewController:controller animated:YES completion:nil];
+//    RMTelepresenceClientViewController *controller =
+//    [[RMTelepresenceClientViewController alloc] initWithNumber:number completion:^(NSError *error) {
+//        if (error) {
+//            DDLogError(@"Error: %@", [error localizedDescription]);
+//        }
+//        
+//        [self dismissViewControllerAnimated:YES completion:nil];
+//    }];
+//    
+//    [self presentViewController:controller animated:YES completion:nil];
 }
 
 - (void)handleLocalConnectionWithPeer:(RMPeer *)peer

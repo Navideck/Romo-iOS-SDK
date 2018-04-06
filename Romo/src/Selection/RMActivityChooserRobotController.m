@@ -14,7 +14,7 @@
 #import "RMChaseRobotController.h"
 #import "RMLineFollowRobotController.h"
 #import "RMAlertView.h"
-#import "RMTelepresencePresence.h"
+//#import "RMTelepresencePresence.h"
 
 @interface RMActivityChooserRobotController () <RMActivityRobotControllerDelegate>
 
@@ -124,19 +124,21 @@
         messageTemplate = NSLocalizedString(@"RomoControl-Message-NonCompatible-Device", @"Visit http://romo.tv on another local iDevice to control me.");
     }
     
-    NSString *romoNumber = [[RMTelepresencePresence sharedInstance] number];
+    NSString *romoNumber = @"123-456-7890";
     
-    if ([UIDevice currentDevice].isDockableTelepresenceDevice && !romoNumber.length) {
-        [[RMTelepresencePresence sharedInstance] fetchNumber:^(NSError *error) {
-            if (error) {
-                [[[RMAlertView alloc] initWithTitle:NSLocalizedString(@"Error", @"Error")
-                                            message:NSLocalizedString(@"RomoControl-Message-Number-Error", @"There was an issue fetching my Romo number. Make sure you are connected to the internet.")
-                                           delegate:nil] show];
-            } else {
-                [self showRomoControlAlert];
-            }
-        }];
-    }
+//    NSString *romoNumber = [[RMTelepresencePresence sharedInstance] number];
+
+//    if ([UIDevice currentDevice].isDockableTelepresenceDevice && !romoNumber.length) {
+//        [[RMTelepresencePresence sharedInstance] fetchNumber:^(NSError *error) {
+//            if (error) {
+//                [[[RMAlertView alloc] initWithTitle:NSLocalizedString(@"Error", @"Error")
+//                                            message:NSLocalizedString(@"RomoControl-Message-Number-Error", @"There was an issue fetching my Romo number. Make sure you are connected to the internet.")
+//                                           delegate:nil] show];
+//            } else {
+//                [self showRomoControlAlert];
+//            }
+//        }];
+//    }
     
     RMAlertView *alert = [[RMAlertView alloc] initWithTitle:NSLocalizedString(@"RomoControl-Alert-Title", @"Romo Control")
                                                     message:[NSString stringWithFormat:messageTemplate, romoNumber]
