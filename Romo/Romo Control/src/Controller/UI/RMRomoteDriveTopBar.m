@@ -1,6 +1,6 @@
 
 #import "RMRomoteDriveTopBar.h"
-#import "UIDevice+Hardware.h"
+#import <RMShared/UIDevice+Hardware.h>
 #import "UIButton+RMButtons.h"
 #import "UIView+Additions.h"
 

@@ -21,7 +21,7 @@
 #import "RMSandboxMission.h"
 #import "RMUnlockable.h"
 #import "RMSoundEffect.h"
-#import <RMShared/DDLog.h>
+#import <CocoaLumberjack/DDLog.h>
 #import "RMMissionRuntime.h"
 #import "RMRomoMemory.h"
 #import "RMRealtimeAudio.h"

@@ -7,7 +7,7 @@
 #import "UIView+Additions.h"
 #import "UIColor+RMColor.h"
 #import "UIFont+RMFont.h"
-#import "RMMath.h"
+#import <RMShared/RMMath.h>
 
 @interface RMTankSlider ()
 

@@ -7,7 +7,7 @@
 
 #import "RAVSubscriber.h"
 #import "RAVVideoInput.h"
-#import <RMShared/DDLog.h>
+#import <CocoaLumberjack/DDLog.h>
 #import "RMDataPacket.h"
 #import <RMShared/UIDevice+Hardware.h>
 #define SUBSCRIBER_NAME        @"AVSubscriber"
