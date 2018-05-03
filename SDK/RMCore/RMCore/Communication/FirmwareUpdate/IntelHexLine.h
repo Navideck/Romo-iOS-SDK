@@ -39,7 +39,7 @@ typedef union {
 /**
  Return an IntelHexLine object from the contents of the given string
  @return Initialized IntelHexLine object
- @param string which is one line of an intel hex image file
+ @param number which is one line of an intel hex image file
  @param line number corresponding to given string and resulting object
  */
 - (id)initWithString:(NSString *)line number:(NSUInteger)number;
