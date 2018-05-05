@@ -5,39 +5,41 @@
 
 #import "RAVVideoOutput.h"
 
-#ifndef SIMULATOR
-#import <libavcodec/avcodec.h>
-#import <libswscale/swscale.h>
-#endif
+#import <VideoToolbox/VideoToolbox.h>
 
 #import "RGLBufferVC.h"
-#import <libkern/OSAtomic.h>
 
 #define MAX_BACKLOGGED_FRAMES 10
+
+@implementation VideoPacket
+- (instancetype)initWithSize:(NSInteger)size
+{
+    self = [super init];
+    self.buffer = malloc(size);
+    self.size = size;
+    
+    return self;
+}
+
+-(void)dealloc
+{
+    free(self.buffer);
+}
+@end
 
 @interface RAVVideoOutput ()
 {
     RGLBufferVC  *_videoOutputViewController;
     
-#ifndef SIMULATOR
-    AVFrame                 *_sourceFrame;
-    AVFrame                 *_destinationFrame;
+    VideoPacket *_vp;
     
-    AVCodec                 *_codec;
-    AVCodecContext          *_codecCtx;
+    uint8_t *_sps;
+    NSInteger _spsSize;
+    uint8_t *_pps;
+    NSInteger _ppsSize;
     
-    struct SwsContext       *_convertCtx;
-#endif
-    
-    dispatch_queue_t        _frameDecodeQueue;
-    dispatch_queue_t        _frameRenderQueue;
-    
-    BOOL                    _isInitialized;
-    
-    uint8_t                 *_outputBuffer;
-    
-    BOOL                    _isVideoFrameQueueActive;
-    volatile int32_t        _approximateQueueLength;
+//    VTDecompressionSessionRef _decoderSession;
+    CMVideoFormatDescriptionRef _decoderFormatDescription;
 }
 
 @end
@@ -48,56 +50,21 @@
 {
     self = [super init];
     if (self) {
-
-#ifndef SIMULATOR
-        av_log_set_level(AV_LOG_QUIET);
-        
-        _sourceFrame      = avcodec_alloc_frame();
-        _destinationFrame = avcodec_alloc_frame();
-        _outputBuffer = NULL;
-        
-        _frameDecodeQueue = dispatch_queue_create("Frame Decode Queue", DISPATCH_QUEUE_SERIAL);
-        _frameRenderQueue = dispatch_queue_create("Frame Render Queue", DISPATCH_QUEUE_SERIAL);
-        
-        _isInitialized = NO;
-        
-        avcodec_register_all();
-        _codec = avcodec_find_decoder(CODEC_ID_H264);
-        
-        _codecCtx = avcodec_alloc_context3(_codec);
-        
-        // Codec settings:
-        _codecCtx->width = 0;
-        _codecCtx->height = 0;
-        _codecCtx->flags2 |= CODEC_FLAG2_FAST;
-        _codecCtx->pix_fmt = PIX_FMT_YUV420P;
-        
-        avcodec_open2(_codecCtx, _codec, NULL);
         
         CGRect frame = [UIScreen mainScreen].bounds;
         
-        CGFloat videoAspectRatio = 480.0 / 640.0;
-        CGFloat frameAspectRatio = frame.size.width / frame.size.height;
-        
-        CGFloat k = videoAspectRatio / frameAspectRatio;
-        frame.size.width *= k;
-        
         self.peerView = [self prepareOutputViewWithFrame:frame];
-        self.peerView.transform = CGAffineTransformMakeScale(-1, 1);
         
-        _isVideoFrameQueueActive = YES;
-#endif
-        
-        [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(applicationWillResignActive:)
-                                                     name:UIApplicationWillResignActiveNotification
-                                                   object:nil];
+//        [[NSNotificationCenter defaultCenter] addObserver:self
+//                                                 selector:@selector(applicationWillResignActive:)
+//                                                     name:UIApplicationWillResignActiveNotification
+//                                                   object:nil];
 
         
-        [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(applicationDidBecomeActive:)
-                                                     name:UIApplicationDidBecomeActiveNotification
-                                                   object:nil];
+//        [[NSNotificationCenter defaultCenter] addObserver:self
+//                                                 selector:@selector(applicationDidBecomeActive:)
+//                                                     name:UIApplicationDidBecomeActiveNotification
+//                                                   object:nil];
 
     }
     return self;
@@ -108,67 +75,9 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-- (void)applicationWillResignActive:(id)notification
-{
-    _isVideoFrameQueueActive = NO;
-    dispatch_sync(_frameRenderQueue, ^{
-        dispatch_suspend(_frameRenderQueue);
-    });
-}
-
-- (void)applicationDidBecomeActive:(id)notification
-{
-    _isVideoFrameQueueActive = YES;
-    if (_frameRenderQueue) {
-        dispatch_resume(_frameRenderQueue);
-    }
-}
-
 - (void)stop
 {
-    // The queue needs to be running to call dispatch_sync and dispatch_release.
-    // So if the render queue is suspended, let's resume it before continuing.
-    if (!_isVideoFrameQueueActive) {
-        dispatch_resume(_frameRenderQueue);
-    }
-    
-    _isVideoFrameQueueActive = NO;
-    
-    // Note: This is ghetto as fuck...
-    // Bascially, we need to make sure the queues are empty before releasing them
-    // These nested sync calls ensure that the currently executing blocks will
-    // finish before we try to release the queues
-    dispatch_sync(_frameRenderQueue, ^{
-        dispatch_sync(_frameDecodeQueue, ^{
-
-        });
-    });
-    
     _videoOutputViewController = nil;
-
-#ifndef SIMULATOR
-    _codec = nil;
-
-    if (_codecCtx) {
-        av_free(_codecCtx);
-    }
-    
-    if (_sourceFrame) {
-        av_free(_sourceFrame);
-    }
-    
-    if (_destinationFrame) {
-        av_free(_destinationFrame);
-    }
-    
-    if (_outputBuffer) {
-        free(_outputBuffer);
-    }
-    
-    if (_convertCtx) {
-        sws_freeContext(_convertCtx);
-    }
-#endif
 }
 
 - (UIView *)prepareOutputViewWithFrame:(CGRect)frame
@@ -180,79 +89,167 @@
     return _videoOutputViewController.view;
 }
 
-- (void)playVideoFrame:(void *)frame length:(uint32_t)length
+const uint8_t KStartCode[4] = {0, 0, 0, 1};
+
+- (VideoPacket*) getPacket:(uint8_t *)buffer length:(uint32_t)length
 {
-#ifndef SIMULATOR
-    void (^block)() = ^{
-        if (_approximateQueueLength < MAX_BACKLOGGED_FRAMES && _isVideoFrameQueueActive) {
-            AVPacket avPacket;
-            
-            av_init_packet(&avPacket);
-            memset(&avPacket, 0, sizeof(AVPacket));
-            
-            avPacket.data = frame;
-            avPacket.size = length;
-            
-            if (avPacket.data) {
-                int packetDecoded = 0;
-                avcodec_decode_video2(_codecCtx, _sourceFrame, &packetDecoded, &avPacket);
-                
-                if (!_isInitialized) {
-                    if (_codecCtx->width > 0 && _codecCtx->height > 0) {
-                        int outputBufferLength = avpicture_get_size(PIX_FMT_NV12,
-                                                                 _codecCtx->width,
-                                                                 _codecCtx->height);
-                        
-                        _outputBuffer = av_malloc(outputBufferLength);
-                        
-                        avpicture_fill((AVPicture *) _destinationFrame, _outputBuffer, PIX_FMT_NV12, _codecCtx->width, _codecCtx->height);
-                        
-                        _convertCtx = sws_getContext(_codecCtx->width,
-                                                     _codecCtx->height,
-                                                     _codecCtx->pix_fmt,
-                                                     _codecCtx->width,
-                                                     _codecCtx->height,
-                                                     PIX_FMT_NV12,
-                                                     SWS_FAST_BILINEAR,
-                                                     NULL, NULL, NULL);
-                        
-                        _isInitialized = YES;
-                    }
-                }
-                
-                if (packetDecoded && _isVideoFrameQueueActive) {
+    if(memcmp(buffer, KStartCode, 4) != 0) {
+        return nil;
+    }
+    
+    if(length >= 5) {
+        uint8_t *bufferBegin = buffer + 3;
+        uint8_t *bufferEnd = buffer + length;
+        while(bufferBegin != bufferEnd) {
+            if(*bufferBegin == 0x01) {
+                if(memcmp(bufferBegin - 3, KStartCode, 4) == 0) {
+                    VideoPacket *vp = [[VideoPacket alloc] initWithSize:length];
+                    memcpy(vp.buffer, buffer, length);
                     
-                    dispatch_async(_frameRenderQueue, ^() {
-                        if (_isVideoFrameQueueActive) {
-                            
-                            sws_scale(_convertCtx, (const uint8_t **)_sourceFrame->data, _sourceFrame->linesize, 0,
-                                      _codecCtx->height, _destinationFrame->data, _destinationFrame->linesize);
-                            
-                            void *planes[2] = {
-                                _destinationFrame->data[0],
-                                _destinationFrame->data[1]
-                            };
-                            
-                            [_videoOutputViewController drawPlanes:planes width:_codecCtx->width height:_codecCtx->height];
-                        }
-                    });
+                    return vp;
                 }
             }
+            ++bufferBegin;
         }
-        OSAtomicDecrement32(&_approximateQueueLength);
-
-        // note: frame was malloc'd in RNTDataPacket (initWithType: data: destination:)
-        if (frame) {
-            free(frame);
-        }
-    };
-
-    if (_isVideoFrameQueueActive){
-        OSAtomicIncrement32(&_approximateQueueLength);
-        dispatch_async(_frameDecodeQueue, block);
     }
-#endif
     
+    return nil;
+}
+
+//static void didDecompress( void *decompressionOutputRefCon, void *sourceFrameRefCon, OSStatus status, VTDecodeInfoFlags infoFlags, CVImageBufferRef pixelBuffer, CMTime presentationTimeStamp, CMTime presentationDuration ){
+//    
+//    CVPixelBufferRef *outputPixelBuffer = (CVPixelBufferRef *)sourceFrameRefCon;
+//    *outputPixelBuffer = CVPixelBufferRetain(pixelBuffer);
+//}
+
+-(BOOL)initH264Decoder {
+    const uint8_t* const parameterSetPointers[2] = { _sps, _pps };
+    const size_t parameterSetSizes[2] = { _spsSize, _ppsSize };
+    OSStatus status = CMVideoFormatDescriptionCreateFromH264ParameterSets(kCFAllocatorDefault,
+                                                                          2, //param count
+                                                                          parameterSetPointers,
+                                                                          parameterSetSizes,
+                                                                          4, //nal start code size
+                                                                          &_decoderFormatDescription);
+    
+//    if(status == noErr) {
+//        CFDictionaryRef attrs = NULL;
+//        const void *keys[] = { kCVPixelBufferPixelFormatTypeKey };
+//        //      kCVPixelFormatType_420YpCbCr8Planar is YUV420
+//        //      kCVPixelFormatType_420YpCbCr8BiPlanarFullRange is NV12
+//        uint32_t v = kCVPixelFormatType_420YpCbCr8BiPlanarFullRange;
+//        const void *values[] = { CFNumberCreate(NULL, kCFNumberSInt32Type, &v) };
+//        attrs = CFDictionaryCreate(NULL, keys, values, 1, NULL, NULL);
+//
+//        VTDecompressionOutputCallbackRecord callBackRecord;
+//        callBackRecord.decompressionOutputCallback = didDecompress;
+//        callBackRecord.decompressionOutputRefCon = NULL;
+//
+//        status = VTDecompressionSessionCreate(kCFAllocatorDefault,
+//                                              _decoderFormatDescription,
+//                                              NULL, attrs,
+//                                              &callBackRecord,
+//                                              &_decoderSession);
+//        CFRelease(attrs);
+//    } else {
+//        NSLog(@"IOS8VT: reset decoder session failed status=%d", (int)status);
+//    }
+    
+    return YES;
+}
+
+- (CVPixelBufferRef) decode:(VideoPacket*) vp {
+    CVPixelBufferRef outputPixelBuffer = NULL;
+    
+    CMBlockBufferRef blockBuffer = NULL;
+    OSStatus status  = CMBlockBufferCreateWithMemoryBlock(kCFAllocatorDefault,
+                                                          (void*)vp.buffer, vp.size,
+                                                          kCFAllocatorNull,
+                                                          NULL, 0, vp.size,
+                                                          0, &blockBuffer);
+    
+    if(status == kCMBlockBufferNoErr) {
+        CMSampleBufferRef sampleBuffer = NULL;
+        const size_t sampleSizeArray[] = {vp.size};
+        status = CMSampleBufferCreateReady(kCFAllocatorDefault,
+                                           blockBuffer,
+                                           _decoderFormatDescription,
+                                           1, 0, NULL, 1, sampleSizeArray,
+                                           &sampleBuffer);
+        
+        if (status == kCMBlockBufferNoErr && sampleBuffer) {
+            
+            [_videoOutputViewController playSampleBuffer:sampleBuffer];
+            
+//            VTDecodeFrameFlags flags = 0;
+//            VTDecodeInfoFlags flagOut = 0;
+//            OSStatus decodeStatus = VTDecompressionSessionDecodeFrame(_decoderSession,
+//                                                                      sampleBuffer,
+//                                                                      flags,
+//                                                                      &outputPixelBuffer,
+//                                                                      &flagOut);
+//            
+//            if(decodeStatus == kVTInvalidSessionErr) {
+//                NSLog(@"IOS8VT: Invalid session, reset decoder session");
+//            } else if(decodeStatus == kVTVideoDecoderBadDataErr) {
+//                NSLog(@"IOS8VT: decode failed status=%d(Bad data)", (int)decodeStatus);
+//            } else if(decodeStatus != noErr) {
+//                NSLog(@"IOS8VT: decode failed status=%d", (int)decodeStatus);
+//            }
+            
+            CFRelease(sampleBuffer);
+        }
+        CFRelease(blockBuffer);
+    }
+    
+    return outputPixelBuffer;
+}
+
+- (void) playVideoFrame:(void *)frame length:(uint32_t)length
+{
+    VideoPacket *vp = [self getPacket:frame length:length];
+    if(vp == nil) {
+        return;
+    }
+    
+    uint32_t nalSize = (uint32_t)(vp.size - 4);
+    uint8_t *pNalSize = (uint8_t*)(&nalSize);
+    vp.buffer[0] = *(pNalSize + 3);
+    vp.buffer[1] = *(pNalSize + 2);
+    vp.buffer[2] = *(pNalSize + 1);
+    vp.buffer[3] = *(pNalSize);
+    
+    CVPixelBufferRef pixelBuffer = NULL;
+    int nalType = vp.buffer[4] & 0x1F;
+    switch (nalType) {
+        case 0x05:
+//            NSLog(@"Nal type is IDR frame");
+            if([self initH264Decoder]) {
+                pixelBuffer = [self decode:vp];
+            }
+            break;
+        case 0x07:
+//            NSLog(@"Nal type is SPS");
+            _spsSize = vp.size - 4;
+            _sps = malloc(_spsSize);
+            memcpy(_sps, vp.buffer + 4, _spsSize);
+            break;
+        case 0x08:
+//            NSLog(@"Nal type is PPS");
+            _ppsSize = vp.size - 4;
+            _pps = malloc(_ppsSize);
+            memcpy(_pps, vp.buffer + 4, _ppsSize);
+            break;
+            
+        default:
+//            NSLog(@"Nal type is B/P frame");
+            pixelBuffer = [self decode:vp];
+            break;
+    }
+    
+    if(pixelBuffer) {
+        CVPixelBufferRelease(pixelBuffer);
+    }
 }
 
 @end

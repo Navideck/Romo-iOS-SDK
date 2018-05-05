@@ -36,7 +36,8 @@
         [startColor getRed:&r1 green:&g1 blue:&b1 alpha:&a1];
         [endColor getRed:&r2 green:&g2 blue:&b2 alpha:&a2];
 
-        CGSize textSize = [label.text sizeWithFont:label.font];
+        CGSize textSize = [label.text sizeWithAttributes:
+                           @{NSFontAttributeName:label.font}];
         UIGraphicsBeginImageContext(textSize);
 
         CGContextRef context = UIGraphicsGetCurrentContext();

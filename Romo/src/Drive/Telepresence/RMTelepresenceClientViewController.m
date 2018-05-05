@@ -162,7 +162,7 @@ static CGFloat kCallTimeout = 45.0;
                 break;
         }
         
-        [self.otManager.otSession signalWithType:@"tiltToAngle" data:@(angle) completionHandler:^(NSError *error) {}];
+//        [self.otManager.otSession signalWithType:@"tiltToAngle" data:@(angle) completionHandler:^(NSError *error) {}];
     }
 }
 
@@ -278,28 +278,28 @@ static CGFloat kCallTimeout = 45.0;
 {
     [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(stopDriving) object:nil];
     [self performSelector:@selector(handleForwardPress:) withObject:sender afterDelay:1];
-    [self.otManager.otSession signalWithType:@"drive" data:@(RMTelepresenceDriveCommandForward) completionHandler:^(NSError *error) {}];
+//    [self.otManager.otSession signalWithType:@"drive" data:@(RMTelepresenceDriveCommandForward) completionHandler:^(NSError *error) {}];
 }
 
 - (void)handleBackwardPress:(id)sender
 {
     [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(stopDriving) object:nil];
     [self performSelector:@selector(handleBackwardPress:) withObject:sender afterDelay:1];
-    [self.otManager.otSession signalWithType:@"drive" data:@(RMTelepresenceDriveCommandBackward) completionHandler:^(NSError *error) {}];
+//    [self.otManager.otSession signalWithType:@"drive" data:@(RMTelepresenceDriveCommandBackward) completionHandler:^(NSError *error) {}];
 }
 
 - (void)handleLeftPress:(id)sender
 {
     [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(stopDriving) object:nil];
     [self performSelector:@selector(handleLeftPress:) withObject:sender afterDelay:1];
-    [self.otManager.otSession signalWithType:@"drive" data:@(RMTelepresenceDriveCommandLeft) completionHandler:^(NSError *error) {}];
+//    [self.otManager.otSession signalWithType:@"drive" data:@(RMTelepresenceDriveCommandLeft) completionHandler:^(NSError *error) {}];
 }
 
 - (void)handleRightPress:(id)sender
 {
     [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(stopDriving) object:nil];
     [self performSelector:@selector(handleRightPress:) withObject:sender afterDelay:1];
-    [self.otManager.otSession signalWithType:@"drive" data:@(RMTelepresenceDriveCommandRight) completionHandler:^(NSError *error) {}];
+//    [self.otManager.otSession signalWithType:@"drive" data:@(RMTelepresenceDriveCommandRight) completionHandler:^(NSError *error) {}];
 }
 
 - (void)handleDrivePressEnd:(id)sender
@@ -317,12 +317,12 @@ static CGFloat kCallTimeout = 45.0;
 
 - (void)stopDriving
 {
-    [self.otManager.otSession signalWithType:@"drive" data:@(RMTelepresenceDriveCommandStop) completionHandler:^(NSError *error) {}];
+//    [self.otManager.otSession signalWithType:@"drive" data:@(RMTelepresenceDriveCommandStop) completionHandler:^(NSError *error) {}];
 }
 
 - (void)handleTiltPress:(id)sender
 {
-    [self.otManager.otSession signalWithType:@"tiltToAngle" data:@([sender tag]) completionHandler:^(NSError *error) {}];
+//    [self.otManager.otSession signalWithType:@"tiltToAngle" data:@([sender tag]) completionHandler:^(NSError *error) {}];
 }
 
 #pragma mark - Switching between Romo and video on the remote robot
@@ -353,7 +353,7 @@ static CGFloat kCallTimeout = 45.0;
             break;
     }
     
-    [self.otManager.otSession signalWithType:@"mode" data:@(self.currentMode) completionHandler:^(NSError *error) {}];
+//    [self.otManager.otSession signalWithType:@"mode" data:@(self.currentMode) completionHandler:^(NSError *error) {}];
 }
 
 #pragma mark - Muting mic and speaker
@@ -412,7 +412,7 @@ static CGFloat kCallTimeout = 45.0;
     manager.otPublisher.view.frame = self.view.bounds;
     
     // Remove the toolbar
-    [manager.otPublisher.view.toolbarView removeFromSuperview];
+//    [manager.otPublisher.view.toolbarView removeFromSuperview];
 }
 
 - (void)otSessionManager:(RMOpenTokManager *)manager subscriberDidConnect:(OTSubscriber *)subscriber
@@ -429,7 +429,7 @@ static CGFloat kCallTimeout = 45.0;
     manager.otPublisher.view.layer.cornerRadius = 3.0;
 
     subscriber.view.frame = self.view.bounds;
-    [subscriber.view.toolbarView removeFromSuperview];
+//    [subscriber.view.toolbarView removeFromSuperview];
 
     [self.view addSubview:subscriber.view];
     [self.view sendSubviewToBack:subscriber.view];
@@ -501,7 +501,7 @@ static CGFloat kCallTimeout = 45.0;
 
 - (void)didTouchExpressionsPopoverFace:(RMRomoteDriveExpressionButton *)button
 {
-    [self.otManager.otSession signalWithType:@"expression" data:@(button.expression) completionHandler:^(NSError *error) {}];
+//    [self.otManager.otSession signalWithType:@"expression" data:@(button.expression) completionHandler:^(NSError *error) {}];
     self.expressionPanel.enabled = NO;
     
     double delayInSeconds = 5.0;

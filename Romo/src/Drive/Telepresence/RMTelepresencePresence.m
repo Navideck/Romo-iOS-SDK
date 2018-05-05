@@ -13,7 +13,7 @@
 #import "RMAnalytics.h"
 #import <RMShared/UIDevice+UDID.h>
 #import <RMShared/UIDevice+Hardware.h>
-#import <RMShared/SRWebSocket.h>
+#import <SocketRocket/SRWebSocket.h>
 #import <RMShared/UIApplication+Environment.h>
 
 static const int kAutoAnswerCallBackWithin = 120;
@@ -99,11 +99,11 @@ static const int kAutoAnswerCallBackWithin = 120;
     }
     
     if (!self.number) {
-        [self fetchNumber:^(NSError *error) {
-            if (!error) {
-                [self connect];
-            }
-        }];
+//        [self fetchNumber:^(NSError *error) {
+//            if (!error) {
+//                [self connect];
+//            }
+//        }];
         return;
     }
     
