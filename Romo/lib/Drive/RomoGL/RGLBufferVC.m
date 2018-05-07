@@ -29,14 +29,17 @@
     CFMutableDictionaryRef dict = (CFMutableDictionaryRef)CFArrayGetValueAtIndex(attachments, 0);
     CFDictionarySetValue(dict, kCMSampleAttachmentKey_DisplayImmediately, kCFBooleanTrue);
     
-    if([_displayLayer isReadyForMoreMediaData])
-    {
-        [_displayLayer enqueueSampleBuffer:sampleBuffer];
-    }
-    else
-    {
-        NSLog(@"Not Ready...");
-    }
+    dispatch_async(dispatch_get_main_queue(),^{
+        if ([_displayLayer isReadyForMoreMediaData])
+        {
+            [_displayLayer enqueueSampleBuffer:sampleBuffer];
+//            [_displayLayer setNeedsDisplay];
+        }
+        else
+        {
+            NSLog(@"Not Ready...");
+        }
+    });
     
     CFRelease(sampleBuffer);
 }

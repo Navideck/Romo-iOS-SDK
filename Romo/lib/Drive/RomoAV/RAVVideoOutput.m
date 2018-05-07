@@ -14,6 +14,7 @@
 @interface RAVVideoOutput ()
 {
     RGLBufferVC  *_videoOutputViewController;
+    BOOL _searchForSPSAndPPS;
     
     NSData *_videoPacket;
     
@@ -21,6 +22,9 @@
     NSInteger _spsSize;
     uint8_t *_pps;
     NSInteger _ppsSize;
+    
+    NSData *_spsData;
+    NSData *_ppsData;
     
 //    VTDecompressionSessionRef _decoderSession;
     CMVideoFormatDescriptionRef _decoderFormatDescription;
@@ -38,6 +42,8 @@
         CGRect frame = [UIScreen mainScreen].bounds;
         
         self.peerView = [self prepareOutputViewWithFrame:frame];
+        
+        _searchForSPSAndPPS = YES;
         
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(applicationWillResignActive:)
@@ -170,77 +176,133 @@ const uint8_t KStartCode[4] = {0, 0, 0, 1};
     return YES;
 }
 
-- (CVPixelBufferRef) decode:(NSData*) videoPacket {
-    CVPixelBufferRef outputPixelBuffer = NULL;
-    
-    CMBlockBufferRef blockBuffer = NULL;
-    OSStatus status  = CMBlockBufferCreateWithMemoryBlock(kCFAllocatorDefault,
-                                                          (void*)videoPacket.bytes, videoPacket.length,
-                                                          kCFAllocatorNull,
-                                                          NULL, 0, videoPacket.length,
-                                                          0, &blockBuffer);
-    
-    if(status == kCMBlockBufferNoErr) {
+static const NSString * naluTypesStrings[] = {
+    @"Unspecified (non-VCL)",
+    @"Coded slice of a non-IDR picture (VCL)",
+    @"Coded slice data partition A (VCL)",
+    @"Coded slice data partition B (VCL)",
+    @"Coded slice data partition C (VCL)",
+    @"Coded slice of an IDR picture (VCL)",
+    @"Supplemental enhancement information (SEI) (non-VCL)",
+    @"Sequence parameter set (non-VCL)",
+    @"Picture parameter set (non-VCL)",
+    @"Access unit delimiter (non-VCL)",
+    @"End of sequence (non-VCL)",
+    @"End of stream (non-VCL)",
+    @"Filler data (non-VCL)",
+    @"Sequence parameter set extension (non-VCL)",
+    @"Prefix NAL unit (non-VCL)",
+    @"Subset sequence parameter set (non-VCL)",
+    @"Reserved (non-VCL)",
+    @"Reserved (non-VCL)",
+    @"Reserved (non-VCL)",
+    @"Coded slice of an auxiliary coded picture without partitioning (non-VCL)",
+    @"Coded slice extension (non-VCL)",
+    @"Coded slice extension for depth view components (non-VCL)",
+    @"Reserved (non-VCL)",
+    @"Reserved (non-VCL)",
+    @"Unspecified (non-VCL)",
+    @"Unspecified (non-VCL)",
+    @"Unspecified (non-VCL)",
+    @"Unspecified (non-VCL)",
+    @"Unspecified (non-VCL)",
+    @"Unspecified (non-VCL)",
+    @"Unspecified (non-VCL)",
+    @"Unspecified (non-VCL)",
+};
+
+- (void) playVideoFrame:(uint8_t *)frame length:(uint32_t)frameSize {
+    //
+    // Credit for a lot of this code goes to Zappel on Stack Overflow:
+    //  (http://stackoverflow.com/questions/25980070/how-to-use-avsamplebufferdisplaylayer-in-ios-8-for-rtp-h264-streams-with-gstream)
+    //
+
+    int startCodeIndex = 0;
+    for (int i = 0; i < 4; i++)
+    {
+        startCodeIndex = i + 1;
+        if (frame[i] == 0x01)
+        {
+            break;
+        }
+    }
+    int nalu_type = ((uint8_t)frame[startCodeIndex] & 0x1F);
+    NSLog(@"NALU with Type \"%@\" received.", naluTypesStrings[nalu_type]);
+
+    while (nalu_type == 7 || nalu_type == 8)
+    {
+        int endCodeIndex;
+        int numConsecutiveZeros = 0;
+        for (endCodeIndex = startCodeIndex; endCodeIndex < frameSize; endCodeIndex++)
+        {
+            if (frame[endCodeIndex] == 0x01 && numConsecutiveZeros == 3)
+            {
+                endCodeIndex -= 3;
+                break;
+            }
+
+            if (frame[endCodeIndex] == 0x00)
+            {
+                numConsecutiveZeros++;
+            }
+            else
+            {
+                numConsecutiveZeros = 0;
+            }
+        }
+
+        if(_searchForSPSAndPPS)
+        {
+            if (nalu_type == 7)
+            {
+                _spsData = [NSData dataWithBytes:&(frame[startCodeIndex]) length: endCodeIndex - startCodeIndex];
+            }
+            else // if (nalu_type == 8)
+            {
+                _ppsData = [NSData dataWithBytes:&(frame[startCodeIndex]) length: endCodeIndex - startCodeIndex];
+            }
+
+            if (_spsData != nil && _ppsData != nil)
+            {
+                const uint8_t* const parameterSetPointers[2] = { (const uint8_t*)[_spsData bytes], (const uint8_t*)[_ppsData bytes] };
+                const size_t parameterSetSizes[2] = { [_spsData length], [_ppsData length] };
+
+                OSStatus status = CMVideoFormatDescriptionCreateFromH264ParameterSets(kCFAllocatorDefault, 2, parameterSetPointers, parameterSetSizes, 4, &_decoderFormatDescription);
+                _searchForSPSAndPPS = false;
+                NSLog(@"Found all data for CMVideoFormatDescription. Creation: %@.", (status == noErr) ? @"successfully." : @"failed.");
+            }
+        }
+
+        startCodeIndex = endCodeIndex + 4;
+        nalu_type = ((uint8_t)frame[startCodeIndex] & 0x1F);
+        NSLog(@"NALU with Type \"%@\" received.", naluTypesStrings[nalu_type]);
+    }
+
+    frame = &frame[startCodeIndex];
+    frameSize -= startCodeIndex;
+
+    if (nalu_type == 1 || nalu_type == 5)
+    {
+        CMBlockBufferRef videoBlock = NULL;
+        OSStatus status = CMBlockBufferCreateWithMemoryBlock(NULL, &frame[-4], frameSize+4, kCFAllocatorNull, NULL, 0, frameSize+4, 0, &videoBlock);
+        NSLog(@"BlockBufferCreation: %@", (status == kCMBlockBufferNoErr) ? @"successfully." : @"failed.");
+
+        const uint8_t sourceBytes[] = {(uint8_t)(frameSize >> 24), (uint8_t)(frameSize >> 16), (uint8_t)(frameSize >> 8), (uint8_t)frameSize};
+        status = CMBlockBufferReplaceDataBytes(sourceBytes, videoBlock, 0, 4);
+        NSLog(@"BlockBufferReplace: %@", (status == kCMBlockBufferNoErr) ? @"successfully." : @"failed.");
+
         CMSampleBufferRef sampleBuffer = NULL;
-        const size_t sampleSizeArray[] = {videoPacket.length};
+        const size_t sampleSizeArray[] = {frameSize};
+
         status = CMSampleBufferCreateReady(kCFAllocatorDefault,
-                                           blockBuffer,
+                                           videoBlock,
                                            _decoderFormatDescription,
                                            1, 0, NULL, 1, sampleSizeArray,
                                            &sampleBuffer);
-        
-        if (status == kCMBlockBufferNoErr && sampleBuffer) {
-            
-            [_videoOutputViewController playSampleBuffer:sampleBuffer];
-            
-            CFRelease(sampleBuffer);
-        }
-        CFRelease(blockBuffer);
-    }
-    
-    return outputPixelBuffer;
-}
+        NSLog(@"SampleBufferCreate: %@", (status == noErr) ? @"successfully." : @"failed.");
 
-- (void) playVideoFrame:(void *)frame length:(uint32_t)length
-{
-    NSData *videoPacket = [self getPacket:frame length:length];
-    if(videoPacket == nil) {
-        return;
-    }
-    
-    uint32_t nalSize = (uint32_t)(videoPacket.length - 4);
-    uint8_t *pNalSize = (uint8_t*)(&nalSize);
-    ((uint8_t*)videoPacket.bytes)[0] = *(pNalSize + 3);
-    ((uint8_t*)videoPacket.bytes)[1] = *(pNalSize + 2);
-    ((uint8_t*)videoPacket.bytes)[2] = *(pNalSize + 1);
-    ((uint8_t*)videoPacket.bytes)[3] = *(pNalSize);
-    
-    CVPixelBufferRef pixelBuffer = NULL;
-    int nalType = ((uint8_t*)videoPacket.bytes)[4] & 0x1F;
-    switch (nalType) {
-        case 0x05:
-            if([self initH264Decoder]) {
-                pixelBuffer = [self decode:videoPacket];
-            }
-            break;
-        case 0x07:
-            _spsSize = videoPacket.length - 4;
-            _sps = malloc(_spsSize);
-            memcpy(_sps, videoPacket.bytes + 4, _spsSize);
-            break;
-        case 0x08:
-            _ppsSize = videoPacket.length - 4;
-            _pps = malloc(_ppsSize);
-            memcpy(_pps, videoPacket.bytes + 4, _ppsSize);
-            break;
-            
-        default:
-            pixelBuffer = [self decode:videoPacket];
-            break;
-    }
-    
-    if(pixelBuffer) {
-        CVPixelBufferRelease(pixelBuffer);
+        [_videoOutputViewController playSampleBuffer:sampleBuffer];
+
     }
 }
 
