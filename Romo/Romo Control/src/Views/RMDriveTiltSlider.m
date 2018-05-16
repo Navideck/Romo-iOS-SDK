@@ -8,7 +8,7 @@
 
 #import "RMDriveTiltSlider.h"
 #import "UIView+Additions.h"
-#import "RMMath.h"
+#import <RMShared/RMMath.h>
 
 @interface RMDriveTiltSlider ()
 

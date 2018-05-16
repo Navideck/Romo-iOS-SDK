@@ -232,7 +232,7 @@
     
     SockAddress *addr = [[packet destination] sockAddress];
     
-    int charsSent = 0;
+    ssize_t charsSent = 0;
     charsSent = sendto(_nativeSocket, bytes, dataSize, 0, addr, addr->sa_len);
     free(bytes);
     
@@ -344,8 +344,8 @@
 
 - (void)readDatagramPacket
 {
-    int charsReceived = 0;
-    NSUInteger headerSize = [RMNetworkUtilities headerSize];
+    ssize_t charsReceived = 0;
+    uint32_t headerSize = [RMNetworkUtilities headerSize];
     
     char headerBuffer[headerSize];
     

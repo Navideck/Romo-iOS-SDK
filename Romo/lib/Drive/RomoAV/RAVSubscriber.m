@@ -7,7 +7,7 @@
 
 #import "RAVSubscriber.h"
 #import "RAVVideoInput.h"
-#import <RMShared/DDLog.h>
+#import <CocoaLumberjack/DDLog.h>
 #import "RMDataPacket.h"
 #import <RMShared/UIDevice+Hardware.h>
 #define SUBSCRIBER_NAME        @"AVSubscriber"
@@ -100,7 +100,8 @@
     }
 }
 
-- (void)capturedFrame:(const void *)frame length:(uint32_t)length pts:(CMTime)pts
+//- (void)capturedFrame:(const void *)frame length:(uint32_t)length pts:(CMTime)pts
+- (void)capturedFrame:(const void *)frame length:(uint32_t)length
 {
     @autoreleasepool {
         if (self.peerAddress) {
