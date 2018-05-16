@@ -9,7 +9,7 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.romotive.romo</string>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -34,6 +34,10 @@
 	<string>7312</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>Allow Romo to see the world</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>For two-way communication</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Brandon-Bold.otf</string>

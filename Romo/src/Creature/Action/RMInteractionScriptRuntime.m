@@ -26,7 +26,7 @@
 #import "RMRealtimeAudio.h"
 
 
-#import <RMShared/DDLog.h>
+#import <CocoaLumberjack/DDLog.h>
 #import <RMShared/RMMath.h>
 
 #define kAutoProgressTimeout 20.0

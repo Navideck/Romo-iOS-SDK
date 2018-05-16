@@ -148,9 +148,7 @@
 		AF33A200205804E800601DBD /* RMShared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF2007871EFD3CD7007CF02C /* RMShared.framework */; };
 		AF33A201205804E800601DBD /* RMShared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AF2007871EFD3CD7007CF02C /* RMShared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AF33A2052058055F00601DBD /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF33A2042058055F00601DBD /* CocoaLumberjack.framework */; };
-		AF33A2062058056A00601DBD /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF33A2042058055F00601DBD /* CocoaLumberjack.framework */; };
 		AF33A2072058056A00601DBD /* CocoaLumberjack.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AF33A2042058055F00601DBD /* CocoaLumberjack.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		AF33A2092058057C00601DBD /* SocketRocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF33A2082058057C00601DBD /* SocketRocket.framework */; };
 		AF33A20A2058058400601DBD /* SocketRocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF33A2082058057C00601DBD /* SocketRocket.framework */; };
 		AF33A20B2058058400601DBD /* SocketRocket.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AF33A2082058057C00601DBD /* SocketRocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AF70CFF21F03BD380092AD6D /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71FAB9121815C68700718ECB /* AssetsLibrary.framework */; };
@@ -395,7 +393,6 @@
 				71FAB9131815C68700718ECB /* AssetsLibrary.framework in Frameworks */,
 				AF33A20A2058058400601DBD /* SocketRocket.framework in Frameworks */,
 				71FAB90E1815C4F400718ECB /* AVFoundation.framework in Frameworks */,
-				AF33A2092058057C00601DBD /* SocketRocket.framework in Frameworks */,
 				AFD55F781F03FC960048B5E5 /* libjpeg.framework in Frameworks */,
 				71FAB90F1815C4F400718ECB /* CoreFoundation.framework in Frameworks */,
 				71FAB8B01815B5DE00718ECB /* CoreGraphics.framework in Frameworks */,
@@ -404,7 +401,6 @@
 				AF2F76471F03E26400B87EA1 /* NMSSH.framework in Frameworks */,
 				AF20077C1EFD3CB9007CF02C /* RMVision.framework in Frameworks */,
 				71FAB8AF1815B5DE00718ECB /* Foundation.framework in Frameworks */,
-				AF33A2062058056A00601DBD /* CocoaLumberjack.framework in Frameworks */,
 				71FAB8FD1815C4B300718ECB /* ImageIO.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1010,7 +1006,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastTestingUpgradeCheck = 0510;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Romotive, Inc.";
 				TargetAttributes = {
 					71FAB8AD1815B5DE00718ECB = {
@@ -1566,11 +1562,13 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
@@ -1621,11 +1619,13 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
@@ -1764,6 +1764,7 @@
 					"$(PROJECT_DIR)/RMVision/lib/libjpeg-turbo/lib",
 				);
 				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fotidim.RMVision;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

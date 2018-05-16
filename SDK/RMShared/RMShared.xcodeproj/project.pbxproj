@@ -12,15 +12,15 @@
 		AF07A4631EFA9EF700CB9EB4 /* RMRingBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = AF07A05F1EFA9EF500CB9EB4 /* RMRingBuffer.m */; };
 		AF07A4641EFA9EF700CB9EB4 /* NSString+createSHA512.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07A0621EFA9EF500CB9EB4 /* NSString+createSHA512.h */; };
 		AF07A4651EFA9EF700CB9EB4 /* NSString+createSHA512.m in Sources */ = {isa = PBXBuildFile; fileRef = AF07A0631EFA9EF500CB9EB4 /* NSString+createSHA512.m */; };
-		AF07A4661EFA9EF700CB9EB4 /* UIApplication+Environment.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07A0641EFA9EF500CB9EB4 /* UIApplication+Environment.h */; };
+		AF07A4661EFA9EF700CB9EB4 /* UIApplication+Environment.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07A0641EFA9EF500CB9EB4 /* UIApplication+Environment.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AF07A4671EFA9EF700CB9EB4 /* UIApplication+Environment.m in Sources */ = {isa = PBXBuildFile; fileRef = AF07A0651EFA9EF500CB9EB4 /* UIApplication+Environment.m */; };
-		AF07A4681EFA9EF700CB9EB4 /* UIDevice+Hardware.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07A0661EFA9EF500CB9EB4 /* UIDevice+Hardware.h */; };
+		AF07A4681EFA9EF700CB9EB4 /* UIDevice+Hardware.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07A0661EFA9EF500CB9EB4 /* UIDevice+Hardware.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AF07A4691EFA9EF700CB9EB4 /* UIDevice+Hardware.m in Sources */ = {isa = PBXBuildFile; fileRef = AF07A0671EFA9EF500CB9EB4 /* UIDevice+Hardware.m */; };
-		AF07A46A1EFA9EF700CB9EB4 /* UIDevice+UDID.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07A0681EFA9EF500CB9EB4 /* UIDevice+UDID.h */; };
+		AF07A46A1EFA9EF700CB9EB4 /* UIDevice+UDID.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07A0681EFA9EF500CB9EB4 /* UIDevice+UDID.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AF07A46B1EFA9EF700CB9EB4 /* UIDevice+UDID.m in Sources */ = {isa = PBXBuildFile; fileRef = AF07A0691EFA9EF500CB9EB4 /* UIDevice+UDID.m */; };
-		AF07A7301EFA9EF700CB9EB4 /* RMLogFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07A44F1EFA9EF700CB9EB4 /* RMLogFormatter.h */; };
+		AF07A7301EFA9EF700CB9EB4 /* RMLogFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07A44F1EFA9EF700CB9EB4 /* RMLogFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AF07A7311EFA9EF700CB9EB4 /* RMLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = AF07A4501EFA9EF700CB9EB4 /* RMLogFormatter.m */; };
-		AF07A7321EFA9EF700CB9EB4 /* RMWebSocketLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07A4511EFA9EF700CB9EB4 /* RMWebSocketLogger.h */; };
+		AF07A7321EFA9EF700CB9EB4 /* RMWebSocketLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07A4511EFA9EF700CB9EB4 /* RMWebSocketLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AF07A7331EFA9EF700CB9EB4 /* RMWebSocketLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = AF07A4521EFA9EF700CB9EB4 /* RMWebSocketLogger.m */; };
 		AF07A7351EFA9EF700CB9EB4 /* RMWebSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07A4551EFA9EF700CB9EB4 /* RMWebSocket.h */; };
 		AF07A7361EFA9EF700CB9EB4 /* RMWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = AF07A4561EFA9EF700CB9EB4 /* RMWebSocket.m */; };
@@ -211,19 +211,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF07A0591EFA9E8200CB9EB4 /* RMShared.h in Headers */,
-				AF07A4681EFA9EF700CB9EB4 /* UIDevice+Hardware.h in Headers */,
 				AF07A7371EFA9EF700CB9EB4 /* RMCircleMath.h in Headers */,
 				AF07A73B1EFA9EF800CB9EB4 /* RMQuaternion.h in Headers */,
 				AF07A7391EFA9EF700CB9EB4 /* RMMath.h in Headers */,
 				AF07A73D1EFA9EF800CB9EB4 /* RMDispatchTimer.h in Headers */,
-				AF07A7401EFA9EF800CB9EB4 /* RMSharedDefines.h in Headers */,
-				AF07A4641EFA9EF700CB9EB4 /* NSString+createSHA512.h in Headers */,
-				AF07A7301EFA9EF700CB9EB4 /* RMLogFormatter.h in Headers */,
-				AF07A7321EFA9EF700CB9EB4 /* RMWebSocketLogger.h in Headers */,
-				AF07A4621EFA9EF700CB9EB4 /* RMRingBuffer.h in Headers */,
-				AF07A7351EFA9EF700CB9EB4 /* RMWebSocket.h in Headers */,
+				AF07A4681EFA9EF700CB9EB4 /* UIDevice+Hardware.h in Headers */,
 				AF07A46A1EFA9EF700CB9EB4 /* UIDevice+UDID.h in Headers */,
 				AF07A4661EFA9EF700CB9EB4 /* UIApplication+Environment.h in Headers */,
+				AF07A7401EFA9EF800CB9EB4 /* RMSharedDefines.h in Headers */,
+				AF07A7321EFA9EF700CB9EB4 /* RMWebSocketLogger.h in Headers */,
+				AF07A7301EFA9EF700CB9EB4 /* RMLogFormatter.h in Headers */,
+				AF07A4641EFA9EF700CB9EB4 /* NSString+createSHA512.h in Headers */,
+				AF07A4621EFA9EF700CB9EB4 /* RMRingBuffer.h in Headers */,
+				AF07A7351EFA9EF700CB9EB4 /* RMWebSocket.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,7 +253,7 @@
 		945B81C21746AF07003C6903 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Romotive, Inc";
 				TargetAttributes = {
 					AF07A0541EFA9E8200CB9EB4 = {
@@ -316,11 +316,13 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
@@ -366,11 +368,13 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
@@ -436,6 +440,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fotidim.RMShared;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

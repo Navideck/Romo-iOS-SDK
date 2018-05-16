@@ -8,7 +8,7 @@
 
 #import "RMControlSelectionVC.h"
 #import "RMDrivableRomosResultsController.h"
-#import "RMTelepresenceClientViewController.h"
+//#import "RMTelepresenceClientViewController.h"
 #import "RMWiFiDriveRemoteVC.h"
 #import "RMWifiPeerRomoCell.h"
 #import "RMTelepresencePeerRomoCell.h"
@@ -151,16 +151,16 @@ typedef enum {
 
 - (void)handleCallWithNumber:(NSString *)number
 {
-    RMTelepresenceClientViewController *controller =
-    [[RMTelepresenceClientViewController alloc] initWithNumber:number completion:^(NSError *error) {
-        if (error) {
-            DDLogError(@"Error: %@", [error localizedDescription]);
-        }
-        
-        [self dismissViewControllerAnimated:YES completion:nil];
-    }];
-    
-    [self presentViewController:controller animated:YES completion:nil];
+//    RMTelepresenceClientViewController *controller =
+//    [[RMTelepresenceClientViewController alloc] initWithNumber:number completion:^(NSError *error) {
+//        if (error) {
+//            DDLogError(@"Error: %@", [error localizedDescription]);
+//        }
+//        
+//        [self dismissViewControllerAnimated:YES completion:nil];
+//    }];
+//    
+//    [self presentViewController:controller animated:YES completion:nil];
 }
 
 - (void)handleLocalConnectionWithPeer:(RMPeer *)peer
@@ -208,6 +208,11 @@ typedef enum {
     if (gestureRecognizer.state == UIGestureRecognizerStateEnded) {
         CGPoint swipePoint = [gestureRecognizer locationInView:self.collectionView];
         NSIndexPath *swipeIndexPath = [self.collectionView indexPathForItemAtPoint:swipePoint];
+        
+        if (self.romosResultsController.peerList.count == 0) {
+            return;
+        }
+        
         id data = self.romosResultsController.peerList[swipeIndexPath.row];
         if ([data isKindOfClass:[RMContact class]]) {
             RMTelepresencePeerRomoCell *cell = (RMTelepresencePeerRomoCell *)[self.collectionView cellForItemAtIndexPath:swipeIndexPath];

@@ -308,7 +308,7 @@
 		8CAFC1141F7571E500E8BC11 /* RMCharacterFaceEmotion.m in Sources */ = {isa = PBXBuildFile; fileRef = 9448A88817415BBC00A82032 /* RMCharacterFaceEmotion.m */; };
 		8CAFC1151F7571E500E8BC11 /* RMCharacterPupil.h in Headers */ = {isa = PBXBuildFile; fileRef = 9448A88917415BBC00A82032 /* RMCharacterPupil.h */; };
 		8CAFC1161F7571E500E8BC11 /* RMCharacterPupil.m in Sources */ = {isa = PBXBuildFile; fileRef = 9448A88A17415BBC00A82032 /* RMCharacterPupil.m */; };
-		8CAFC1171F7571E500E8BC11 /* RMCharacterColorFill.h in Headers */ = {isa = PBXBuildFile; fileRef = 94057771182C20130009762B /* RMCharacterColorFill.h */; };
+		8CAFC1171F7571E500E8BC11 /* RMCharacterColorFill.h in Headers */ = {isa = PBXBuildFile; fileRef = 94057771182C20130009762B /* RMCharacterColorFill.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8CAFC1181F7571E500E8BC11 /* RMCharacterColorFill.m in Sources */ = {isa = PBXBuildFile; fileRef = 94057772182C20130009762B /* RMCharacterColorFill.m */; };
 		8CAFC1191F7571E500E8BC11 /* RMCharacterPNS.h in Headers */ = {isa = PBXBuildFile; fileRef = 9448A88C17415BBC00A82032 /* RMCharacterPNS.h */; };
 		8CAFC11A1F7571E500E8BC11 /* RMCharacterPNS.m in Sources */ = {isa = PBXBuildFile; fileRef = 9448A88D17415BBC00A82032 /* RMCharacterPNS.m */; };
@@ -1579,6 +1579,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CAFC1381F76C62100E8BC11 /* RMCharacter.h in Headers */,
+				8CAFC1171F7571E500E8BC11 /* RMCharacterColorFill.h in Headers */,
 				8CAFC1131F7571E500E8BC11 /* RMCharacterFaceEmotion.h in Headers */,
 				8CAFC11B1F7571E500E8BC11 /* RMCharacterVoice.h in Headers */,
 				8CAFC1211F7571E500E8BC11 /* RMCharacter-Prefix.pch in Headers */,
@@ -1586,7 +1587,6 @@
 				8CAFC11F1F7571E500E8BC11 /* RMCharacterProtectedView.h in Headers */,
 				8CAFC1151F7571E500E8BC11 /* RMCharacterPupil.h in Headers */,
 				8CAFC1191F7571E500E8BC11 /* RMCharacterPNS.h in Headers */,
-				8CAFC1171F7571E500E8BC11 /* RMCharacterColorFill.h in Headers */,
 				8CAFC10F1F7571E500E8BC11 /* RMCharacterEye.h in Headers */,
 				8CAFC1111F7571E500E8BC11 /* RMCharacterFace.h in Headers */,
 				8CAFC11D1F7571E500E8BC11 /* RMCharacterImage.h in Headers */,
@@ -1621,7 +1621,7 @@
 		9448A73517415AAB00A82032 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Romotive, Inc";
 				TargetAttributes = {
 					8CAFBFCB1F756DA200E8BC11 = {
@@ -2051,6 +2051,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fotidim.RMCharacter;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -2133,12 +2134,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
 				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
@@ -2182,12 +2185,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
 				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;

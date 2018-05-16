@@ -16,7 +16,7 @@
 #import "RMFirmwareUpdatingRobotController.h"
 #import "RMWiFiDriveRobotController.h"
 #import "RMSoundEffect.h"
-#import "RMTelepresencePresence.h"
+//#import "RMTelepresencePresence.h"
 
 NSString *const RMRomoDidChangeNameNotification = @"RMRomoDidChangeNameNotification";
 
@@ -94,7 +94,7 @@ NSString *const RMRomoDidChangeNameNotification = @"RMRomoDidChangeNameNotificat
 
 - (void)handleApplicationDidEnterBackgroundNotification:(NSNotification *)notification
 {
-    [[RMTelepresencePresence sharedInstance] disconnect];
+//    [[RMTelepresencePresence sharedInstance] disconnect];
 }
 
 #pragma mark - Public Properties --
@@ -583,7 +583,7 @@ NSString *const RMRomoDidChangeNameNotification = @"RMRomoDidChangeNameNotificat
         
 #ifndef SIMULATOR
         if (broadcasting) {
-            [[RMTelepresencePresence sharedInstance] connect];
+//            [[RMTelepresencePresence sharedInstance] connect];
             
             if (!self.WiFiDriveController) {
                 self.WiFiDriveController = [[RMWiFiDriveRobotController alloc] init];
@@ -593,7 +593,7 @@ NSString *const RMRomoDidChangeNameNotification = @"RMRomoDidChangeNameNotificat
         } else {
             self.WiFiDriveController.broadcasting = NO;
             
-            [[RMTelepresencePresence sharedInstance] disconnect];
+//            [[RMTelepresencePresence sharedInstance] disconnect];
         }
 #endif
     }
