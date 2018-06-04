@@ -24,6 +24,8 @@ For RMVision you need to download separately the **OpenCV 2** iOS framework and 
 
 You can use ```carthage update --platform iOS``` if you need to fetch or update the dependencies using [Carthage](https://github.com/Carthage/Carthage). Don't forget to add all frameworks to the **Embedded Binaries** section under the **General** tab of your app's target.
 
+Your app's info.plist should include the **Supported external accessory protocols** key with a value of **com.romotive.romo** to be able to connect to Romo.
+
 Have a look in the **HelloRMCore** project as an example. Every framework is already checked out in the repo and you should be able to compile out of the box.
 
 ## FAQ
