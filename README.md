@@ -70,7 +70,7 @@ Issues and pull requests are always welcome!
 ## Patrons
 * Matt Duston
 * Suschman
-
+* Bruce Ownbey
 <a href="https://www.patreon.com/bePatron?u=5127277" target="_blank"><img alt="become a patron" src="https://c5.patreon.com/external/logo/become_a_patron_button.png" height="35px"></a>
 
 
