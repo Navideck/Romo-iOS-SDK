@@ -1,4 +1,4 @@
-﻿/* Character-Script-Intro After a second, become curious and investigate with a sniff */
+/* Character-Script-Intro After a second, become curious and investigate with a sniff */
 "Who are%nyou?" = "キミはだれ？";
 
 /* Character-Script-Intro Realize it's a human & Earth */
@@ -41,7 +41,7 @@
 "Back to%nbusiness!" = "ところでお願いがあるんだ！";
 
 /* Character-Script-Intro Romo asks you to train for the RSR */
-"I’m here to train for the%nRobot Space Race." = "ロボット宇宙レースの%nトレーニングのためにや%nって来たんだけど…";
+"I'm here to train for the%nRobot Space Race." = "ロボット宇宙レースの%nトレーニングのためにや%nって来たんだけど…";
 
 /* Character-Script-Intro Romo asks you to train for the RSR */
 "Wanna help me?" = "手伝ってくれないかな？";
@@ -251,7 +251,7 @@
 "Oh, right!" = "あ、そうだ！";
 
 /* Character-Script-1000-0 Push The Lab. */
-"Well, everything you taught me%nis unlocked in The Lab!" = "{userName}が教えてくれたことは全て%nじっけん室で使って遊べるよ！";
+"Well, everything you taught me%nis unlocked in The Lab!" = "${userName}が教えてくれたことは全て%nじっけん室で使って遊べるよ！";
 
 /* Character-Script-1000-0 Explain Romo Control. */
 "Really?" = "ほんとう？";
@@ -335,7 +335,7 @@
 "Let's play%nPeek-a-Boo!" = "いないいないばあを%nして遊ぼう！";
 
 /* Character-Script-2-4 Ask to see their face */
-"Lemme see%nyour face." = "{userName}の顔を見せて";
+"Lemme see%nyour face." = "${userName}の顔を見せて";
 
 /* Character-Script-2-4 play */
 "Now cover%nyour face." = "つぎは顔をかくして";
@@ -347,7 +347,7 @@
 "I missed ya,%n${userName}!" = "キミがいないとさみしいよ、%n${userName}！";
 
 /* Character-Script-2-4  */
-"Now I know%nhow to follow your face." = "{userName}の顔を追いかける%nやりかたがわかったよ";
+"Now I know%nhow to follow your face." = "${userName}の顔を追いかける%nやりかたがわかったよ";
 
 /* Character-Script-2-5 Ask to be removed from base */
 "Getting un-docked%n feels...%n" = "ドックからはずされてると%nなんだか…%n";
@@ -380,7 +380,7 @@
 "Hey%n${userName}!" = "やぁ%n${userName}！";
 
 /* Character-Script-2-7 Prompt for pickup */
-"Pick me up%nand bring me to%nyour favorite place." = "ボクをもち上げて%n{userName}の好きな場所へ%nつれてって";
+"Pick me up%nand bring me to%nyour favorite place." = "ボクをもち上げて%n${userName}の好きな場所へ%nつれてって";
 
 /* Character-Script-2-7 get picked up */
 "Tell me when%nwe're there!" = "そこについたら%n教えてね！";
@@ -395,7 +395,7 @@
 "Let me%ntake a look!" = "ちょっと%n見せて！";
 
 /* Character-Script-2-7 Explain that you like it here */
-"I see why you%nlike it here!" = "{userName}がここを好きな%nりゆうが分かるよ！";
+"I see why you%nlike it here!" = "${userName}がここを好きな%nりゆうが分かるよ！";
 
 /* Character-Script-2-7 Ask for photo */
 "%nWant me to snap a photo?" = "%nボクにしゃしんをとってほしい？";
@@ -428,7 +428,7 @@
 "Let's practice %nour starts" = "スタートの練習をしよう";
 
 /* Character-Script-3-1  */
-"You clap, %nand I'll dart forward" = "{userName}が手をたたくと、%nボクは前にすすむよ";
+"You clap, %nand I'll dart forward" = "${userName}が手をたたくと、%nボクは前にすすむよ";
 
 /* Character-Script-3-1  */
 "First put me somewhere%nwith plenty of room" = "まずは広い場所に%nボクをおいてね";
@@ -473,7 +473,7 @@
 "I'm gonna%nchill out%nfor a sec." = "ちょっとおちつかないと";
 
 /* Character-Script-3-2 Explain wtf is about to happen */
-"Ooh!%nShow me your best%nFreeze Dance." = "そうだ！{userName}の%nさいこうのフリーズダンス%nを見せてよ";
+"Ooh!%nShow me your best%nFreeze Dance." = "そうだ！${userName}の%nさいこうのフリーズダンス%nを見せてよ";
 
 /* Character-Script-3-2 Explain wtf is about to happen */
 "Do you guys do%nFreeze Dance%non Earth?" = "地球では%nフリーズダンス%nをしないの？";
@@ -491,13 +491,13 @@
 "But if you freeze...%nthen it's just the breeze." = "でも止まると…%n風の音しか聞こえなくなるよ";
 
 /* Character-Script-3-2 Explain wtf is about to happen */
-"OK, talk is cheap.%nLet's see your best..." = "さあ、口で言うのは%nかんたんだ見せてよ%n{userName}のベストを…";
+"OK, talk is cheap.%nLet's see your best..." = "さあ、口で言うのは%nかんたんだ見せてよ%n${userName}のベストを…";
 
 /* Character-Script-3-2 Do the freeze dance */
 "That dance was..." = "そのダンスは…";
 
 /* Character-Script-3-2 Do the freeze dance */
-"Incredible!%nYour arms%nare so wobbly!" = "すばらしい！%n{userName}のうでは%nすごくくねくねだね！";
+"Incredible!%nYour arms%nare so wobbly!" = "すばらしい！%n${userName}のうでは%nすごくくねくねだね！";
 
 /* Character-Script-3-3 Looks up and chuckles */
 "That's...%npretty neat." = "それってすごくいいね";
@@ -518,7 +518,7 @@
 "Look at the photos%nI snapped!" = "しゃしんを見て%nボクがとったんだ！";
 
 /* Character-Script-3-5 Show off them photos */
-"I'll save these in%nyour Camera app." = "{userName}のカメラアプリに%nほぞんするよ";
+"I'll save these in%nyour Camera app." = "${userName}のカメラアプリに%nほぞんするよ";
 
 /* Character-Script-3-6  */
 "Now that I can%ndrive on a path" = "みちを走れる%nようになったよ";
@@ -539,7 +539,7 @@
 "Robots race after%na colorful ball." = "カラフルなボールを%n追いかけるよ";
 
 /* Chase-Introduction-First-Run Explains Chase */
-"Let's use everying%nyou taught me..." = "{userName}が教えてくれたことを%n全て使おう！";
+"Let's use everying%nyou taught me..." = "${userName}が教えてくれたことを%n全て使おう！";
 
 /* Chase-Introduction-First-Run Explains Chase */
 "...and%nstart chasing!" = "そして追いかけはじめよう！";
@@ -584,7 +584,7 @@
 "On Earth, there's%nso much to explore!" = "地球にはたんけんする%n場所がたくさんあるね！";
 
 /* Favorite-Color-Introduction-First-Run Lead in to interactive help */
-"Let me%nshow you something" = "{userName}に見せたいものが%nあるんだ";
+"Let me%nshow you something" = "${userName}に見せたいものが%nあるんだ";
 
 /* Favorite-Color-Introduction Explain the game */
 "I have a%nfavorite color" = "好きな色%nがあるんだ";
@@ -596,7 +596,7 @@
 "Try to find%nmy favorite color" = "ボクの好きな色%nを見つけてみよう";
 
 /* Favorite-Color-Introduction Explain the game */
-"I'll give you%na hint..." = "{userName}にヒント%nをあげるよ…";
+"I'll give you%na hint..." = "${userName}にヒント%nをあげるよ…";
 
 /* Favorite-Color-Introduction Explain the game */
 "I'll help%nyou out..." = "手つだって%nあげる…";
@@ -647,7 +647,7 @@
 "And let me get%na good look!" = "そして、よく%n見せて！";
 
 /* Favorite-Color-Introduction Explain the game */
-"And I'll tell you%nif I like it!" = "もし好きな色だったら%n{userName}に教えるね！";
+"And I'll tell you%nif I like it!" = "もし好きな色だったら%n${userName}に教えるね！";
 
 /* Favorite-Color-Introduction Explain the game */
 "And if I don't like it,%nkeep guessing!" = "好きじゃなかったら、%n考えつづけてね！";
