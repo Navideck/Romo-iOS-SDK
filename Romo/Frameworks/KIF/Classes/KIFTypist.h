@@ -10,6 +10,14 @@
 
 @interface KIFTypist : NSObject
 
++ (void)registerForNotifications;
++ (BOOL)keyboardHidden;
 + (BOOL)enterCharacter:(NSString *)characterString;
+
++ (NSTimeInterval)keystrokeDelay;
++ (void)setKeystrokeDelay:(NSTimeInterval)delay;
+
++ (BOOL)hasHardwareKeyboard;
++ (BOOL)hasKeyInputResponder;
 
 @end

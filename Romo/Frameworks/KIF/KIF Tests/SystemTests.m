@@ -8,7 +8,13 @@
 
 #import <KIF/KIF.h>
 
-@interface SystemTests : SenTestCase
+#define KIFAssertEqual XCTAssertEqual
+#define KIFAssertEqualObjects XCTAssertEqualObjects
+#define KIFAssertTrue XCTAssertTrue
+#define KIFAssertFalse XCTAssertFalse
+
+@interface SystemTests : XCTestCase
+
 @end
 
 @implementation SystemTests
@@ -18,8 +24,8 @@
     NSTimeInterval startTime = [NSDate timeIntervalSinceReferenceDate];
     [tester waitForTimeInterval:1.2];
     NSTimeInterval elapsed = [NSDate timeIntervalSinceReferenceDate] - startTime;
-    STAssertTrue(elapsed > 1.2, @"Waiting should take the alotted time.");
-    STAssertTrue(elapsed < 1.3, @"Waiting should not take too long.");
+    KIFAssertTrue(elapsed > 1.2, @"Waiting should take the allotted time.");
+    KIFAssertTrue(elapsed < 1.3, @"Waiting should not take too long.");
 }
 
 - (void)testWaitingForNotification
@@ -34,7 +40,7 @@
     });
     
     NSNotification *notification = [system waitForNotificationName:Name object:obj];
-    STAssertEqualObjects(@"B", [notification.userInfo objectForKey:@"A"], @"Expected notification to match user data.");
+    KIFAssertEqualObjects(@"B", [notification.userInfo objectForKey:@"A"], @"Expected notification to match user data.");
 }
 
 - (void)testWaitingForNotificationWhileDoingOtherThings
@@ -46,7 +52,7 @@
         [[NSNotificationCenter defaultCenter] postNotificationName:Name object:obj userInfo:@{@"A": @"B"}];
     }];
     
-    STAssertEqualObjects(@"B", [notification.userInfo objectForKey:@"A"], @"Expected notification to match user data.");
+    KIFAssertEqualObjects(@"B", [notification.userInfo objectForKey:@"A"], @"Expected notification to match user data.");
 }
 
 - (void)testMemoryWarningSimulator
@@ -58,22 +64,80 @@
 
 - (void)testMockingOpenURL
 {
-    __block BOOL returnValue;
+    __block BOOL openURLReturnValue;
+    __block BOOL canOpenURLReturnValue;
     [system waitForApplicationToOpenURL:@"test123://" whileExecutingBlock:^{
-        returnValue = [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"test123://"]];
+        NSURL *uninstalledAppURL = [NSURL URLWithString:@"test123://"];
+        canOpenURLReturnValue = [[UIApplication sharedApplication] canOpenURL:uninstalledAppURL];
+        openURLReturnValue = [[UIApplication sharedApplication] openURL:uninstalledAppURL];
     } returning:NO];
-    STAssertEquals(NO, returnValue, @"openURL: should have returned NO");
+    KIFAssertEqual(NO, openURLReturnValue, @"openURL: should have returned NO");
+    KIFAssertEqual(NO, canOpenURLReturnValue, @"canOpenURL: should have returned NO");
     
     [system waitForApplicationToOpenURL:@"test123://" whileExecutingBlock:^{
-        returnValue = [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"test123://"]];
+        NSURL *installedAppURL = [NSURL URLWithString:@"test123://"];
+        canOpenURLReturnValue = [[UIApplication sharedApplication] canOpenURL:installedAppURL];
+        openURLReturnValue = [[UIApplication sharedApplication] openURL:installedAppURL];
     } returning:YES];
-    STAssertEquals(YES, returnValue, @"openURL: should have returned YES");
-    
+    KIFAssertEqual(YES, openURLReturnValue, @"openURL: should have returned YES");
+    KIFAssertEqual(YES, canOpenURLReturnValue, @"canOpenURL: should have returned YES");
+
+    [system waitForApplicationToOpenURLWithScheme:@"test123" whileExecutingBlock:^{
+        NSURL *installedAppURL = [NSURL URLWithString:@"test123://some/path?query"];
+        canOpenURLReturnValue = [[UIApplication sharedApplication] canOpenURL:installedAppURL];
+        openURLReturnValue = [[UIApplication sharedApplication] openURL:installedAppURL];
+    } returning:YES];
+    KIFAssertEqual(YES, openURLReturnValue, @"openURL: should have returned YES");
+    KIFAssertEqual(YES, canOpenURLReturnValue, @"canOpenURL: should have returned YES");
+
     [system waitForApplicationToOpenAnyURLWhileExecutingBlock:^{
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"423543523454://"]];
+        NSURL *someURL = [NSURL URLWithString:@"423543523454://"];
+        canOpenURLReturnValue = [[UIApplication sharedApplication] canOpenURL:someURL];
+        openURLReturnValue = [[UIApplication sharedApplication] openURL:someURL];
     } returning:YES];
-    
-    STAssertFalse([[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"this-is-a-fake-url://"]], @"Should no longer be mocking, reject bad URL.");
+    KIFAssertEqual(YES, openURLReturnValue, @"openURL: should have returned YES");
+    KIFAssertEqual(YES, canOpenURLReturnValue, @"canOpenURL: should have returned YES");
+
+    NSURL *fakeURL = [NSURL URLWithString:@"this-is-a-fake-url://"];
+    KIFAssertFalse([[UIApplication sharedApplication] canOpenURL:fakeURL], @"Should no longer be mocking, reject bad URL.");
+    KIFAssertFalse([[UIApplication sharedApplication] openURL:fakeURL], @"Should no longer be mocking, reject bad URL.");
 }
+
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 100000
+- (void)testMockingOpenURLiOS10xAndUp
+{
+    __block BOOL canOpenURLReturnValue;
+    [system waitForApplicationToOpenURL:@"test123://" whileExecutingBlock:^{
+        NSURL *uninstalledAppURL = [NSURL URLWithString:@"test123://"];
+        canOpenURLReturnValue = [[UIApplication sharedApplication] canOpenURL:uninstalledAppURL];
+        [[UIApplication sharedApplication] openURL:uninstalledAppURL options:[NSDictionary dictionary] completionHandler:nil];
+    } returning:NO];
+    KIFAssertEqual(NO, canOpenURLReturnValue, @"canOpenURL: should have returned NO");
+
+    [system waitForApplicationToOpenURL:@"test123://" whileExecutingBlock:^{
+        NSURL *installedAppURL = [NSURL URLWithString:@"test123://"];
+        canOpenURLReturnValue = [[UIApplication sharedApplication] canOpenURL:installedAppURL];
+        [[UIApplication sharedApplication] openURL:installedAppURL options:[NSDictionary dictionary] completionHandler:nil];
+    } returning:YES];
+    KIFAssertEqual(YES, canOpenURLReturnValue, @"canOpenURL: should have returned YES");
+
+    [system waitForApplicationToOpenURLWithScheme:@"test123" whileExecutingBlock:^{
+        NSURL *installedAppURL = [NSURL URLWithString:@"test123://some/path?query"];
+        canOpenURLReturnValue = [[UIApplication sharedApplication] canOpenURL:installedAppURL];
+        [[UIApplication sharedApplication] openURL:installedAppURL options:[NSDictionary dictionary] completionHandler:nil];
+    } returning:YES];
+    KIFAssertEqual(YES, canOpenURLReturnValue, @"canOpenURL: should have returned YES");
+
+    [system waitForApplicationToOpenAnyURLWhileExecutingBlock:^{
+        NSURL *someURL = [NSURL URLWithString:@"423543523454://"];
+        canOpenURLReturnValue = [[UIApplication sharedApplication] canOpenURL:someURL];
+        [[UIApplication sharedApplication] openURL:someURL options:[NSDictionary dictionary] completionHandler:nil];
+    } returning:YES];
+    KIFAssertEqual(YES, canOpenURLReturnValue, @"canOpenURL: should have returned YES");
+
+    NSURL *fakeURL = [NSURL URLWithString:@"this-is-a-fake-url://"];
+    KIFAssertFalse([[UIApplication sharedApplication] canOpenURL:fakeURL], @"Should no longer be mocking, reject bad URL.");
+}
+#endif
 
 @end

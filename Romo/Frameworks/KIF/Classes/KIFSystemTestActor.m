@@ -11,6 +11,8 @@
 #import <UIKit/UIKit.h>
 #import "UIApplication-KIFAdditions.h"
 #import "NSError-KIFAdditions.h"
+#import "UIAutomationHelper.h"
+
 
 @implementation KIFSystemTestActor
 
@@ -19,17 +21,16 @@
     return [self waitForNotificationName:name object:object whileExecutingBlock:nil];
 }
 
-- (NSNotification *)waitForNotificationName:(NSString *)name object:(id)object whileExecutingBlock:(void(^)())block
+- (NSNotification *)waitForNotificationName:(NSString *)name object:(id)object whileExecutingBlock:(void(^)(void))block
 {
     return [self waitForNotificationName:name object:object whileExecutingBlock:block complete:nil];
 }
 
-- (NSNotification *)waitForNotificationName:(NSString *)name object:(id)object whileExecutingBlock:(void(^)())block complete:(void(^)())complete
+- (NSNotification *)waitForNotificationName:(NSString *)name object:(id)object whileExecutingBlock:(void(^)(void))block complete:(void(^)(void))complete
 {
     __block NSNotification *detectedNotification = nil;
     id observer = [[NSNotificationCenter defaultCenter] addObserverForName:name object:object queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *note) {
-        [detectedNotification release];
-        detectedNotification = [note retain];
+        detectedNotification = note;
     }];
     
     if (block) {
@@ -47,7 +48,7 @@
         }
     }];
     
-    return [detectedNotification autorelease];
+    return detectedNotification;
 }
 
 - (void)simulateMemoryWarning
@@ -55,22 +56,66 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:UIApplicationDidReceiveMemoryWarningNotification object:[UIApplication sharedApplication]];
 }
 
-- (void)waitForApplicationToOpenAnyURLWhileExecutingBlock:(void (^)())block returning:(BOOL)returnValue
+- (void)simulateDeviceRotationToOrientation:(UIDeviceOrientation)orientation
+{
+    [[UIDevice currentDevice] setValue:[NSNumber numberWithInt:orientation] forKey:@"orientation"];
+}
+
+
+- (void)waitForApplicationToOpenAnyURLWhileExecutingBlock:(void (^)(void))block returning:(BOOL)returnValue
 {
     [self waitForApplicationToOpenURL:nil whileExecutingBlock:block returning:returnValue];
 }
 
-- (void)waitForApplicationToOpenURL:(NSString *)URLString whileExecutingBlock:(void (^)())block returning:(BOOL)returnValue
+- (void)waitForApplicationToOpenURLWithScheme:(NSString *)URLScheme whileExecutingBlock:(void (^)(void))block returning:(BOOL)returnValue {
+    [self waitForApplicationToOpenURLMatchingBlock:^(NSURL *actualURL){
+        if (URLScheme && ![URLScheme isEqualToString:actualURL.scheme]) {
+            [self failWithError:[NSError KIFErrorWithFormat:@"Expected %@ to start with %@", actualURL.absoluteString, URLScheme] stopTest:YES];
+        }
+    } whileExecutingBlock:block returning:returnValue];
+}
+
+- (void)waitForApplicationToOpenURL:(NSString *)URLString whileExecutingBlock:(void (^)(void))block returning:(BOOL)returnValue {
+    [self waitForApplicationToOpenURLMatchingBlock:^(NSURL *actualURL){
+
+        if (URLString && ![[actualURL absoluteString] isEqualToString:URLString]) {
+            [self failWithError:[NSError KIFErrorWithFormat:@"Expected %@, got %@", URLString, actualURL.absoluteString] stopTest:YES];
+        }
+    } whileExecutingBlock:block returning:returnValue];
+}
+
+- (void)waitForApplicationToOpenURLMatchingBlock:(void (^)(NSURL *actualURL))URLMatcherBlock whileExecutingBlock:(void (^)(void))block returning:(BOOL)returnValue
 {
     [UIApplication startMockingOpenURLWithReturnValue:returnValue];
+
+    id canOpenURLObserver = [[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationDidMockCanOpenURLNotification object:[UIApplication sharedApplication] queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *notification) {
+        if (URLMatcherBlock) {
+            NSURL *actualURL = [notification.userInfo objectForKey:UIApplicationOpenedURLKey];
+            URLMatcherBlock(actualURL);
+        }
+    }];
+
     NSNotification *notification = [self waitForNotificationName:UIApplicationDidMockOpenURLNotification object:[UIApplication sharedApplication] whileExecutingBlock:block complete:^{
         [UIApplication stopMockingOpenURL];
+        [[NSNotificationCenter defaultCenter] removeObserver:canOpenURLObserver];
     }];
-    
-    NSString *actualURLString = [[notification.userInfo objectForKey:UIApplicationOpenedURLKey] absoluteString];
-    if (URLString && ![URLString isEqualToString:actualURLString]) {
-        [self failWithError:[NSError KIFErrorWithFormat:@"Expected %@, got %@", URLString, actualURLString] stopTest:YES];
+
+    if (URLMatcherBlock) {
+        NSURL *actualURL = [notification.userInfo objectForKey:UIApplicationOpenedURLKey];
+        URLMatcherBlock(actualURL);
     }
+}
+
+- (void)captureScreenshotWithDescription:(NSString *)description
+{
+    NSError *error;
+    if (![[UIApplication sharedApplication] writeScreenshotForLine:(NSUInteger)self.line inFile:self.file description:description error:&error]) {
+        [self failWithError:error stopTest:NO];
+    }
+}
+
+- (void)deactivateAppForDuration:(NSTimeInterval)duration {
+    [UIAutomationHelper deactivateAppForDuration:@(duration)];
 }
 
 @end

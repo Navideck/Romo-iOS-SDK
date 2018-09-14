@@ -9,17 +9,28 @@
 
 #import <UIKit/UIKit.h>
 
+
 #define UIApplicationCurrentRunMode ([[UIApplication sharedApplication] currentRunLoopMode])
 
 /*!
- @abstract When mocking @c -openURL:, this notification is posted.
+ @abstract When mocking @c -openURL: or -openURL:options:completionHandler:, this notification is posted.
  */
 UIKIT_EXTERN NSString *const UIApplicationDidMockOpenURLNotification;
+
+/*!
+ @abstract When mocking @c -canOpenURL:, this notification is posted.
+ */
+UIKIT_EXTERN NSString *const UIApplicationDidMockCanOpenURLNotification;
 
 /*!
  @abstract The key for the opened URL in the @c UIApplicationDidMockOpenURLNotification notification.
  */
 UIKIT_EXTERN NSString *const UIApplicationOpenedURLKey;
+
+/*!
+ @abstract A wrapper for CFRunLoopRunInMode that scales the seconds parameter relative to the animation speed.
+ */
+CF_EXPORT SInt32 KIFRunLoopRunInModeRelativeToAnimationSpeed(CFStringRef mode, CFTimeInterval seconds, Boolean returnAfterSourceHandled);
 
 @interface UIApplication (KIFAdditions)
 
@@ -35,7 +46,7 @@ UIKIT_EXTERN NSString *const UIApplicationOpenedURLKey;
 /*!
  @abstract Finds an accessibility element where @c matchBlock returns @c YES, across all windows in the application starting at the fronmost window.
  @discussion This method should be used if @c accessibilityElementWithLabel:accessibilityValue:traits: does not meet your requirements.  For example, if you are searching for an element that begins with a pattern or if of a certain view type.
- @param matchBlock.  A block to be performed on each element to see if it passes.
+ @param matchBlock  A block to be performed on each element to see if it passes.
  */
 - (UIAccessibilityElement *)accessibilityElementMatchingBlock:(BOOL(^)(UIAccessibilityElement *))matchBlock;
 
@@ -43,6 +54,11 @@ UIKIT_EXTERN NSString *const UIApplicationOpenedURLKey;
  @returns The window containing the keyboard or @c nil if the keyboard is not visible.
  */
 - (UIWindow *)keyboardWindow;
+
+/*!
+ @returns The topmost window containing a @c UIDatePicker.
+ */
+- (UIWindow *)datePickerWindow;
 
 /*!
  @returns The topmost window containing a @c UIPickerView.
@@ -58,6 +74,22 @@ UIKIT_EXTERN NSString *const UIApplicationOpenedURLKey;
  @returns All windows in the application, including the key window even if it does not appear in @c -windows.
  */
 - (NSArray *)windowsWithKeyWindow;
+
+/*!
+ The current Core Animation speed of the keyWindow's CALayer.
+ */
+@property (nonatomic, assign) float animationSpeed;
+
+/*!
+ @abstract Writes a screenshot to disk.
+ @discussion This method only works if the @c KIF_SCREENSHOTS environment variable is set.
+ @param lineNumber The line number in the code at which the screenshot was taken.
+ @param filename The name of the file in which the screenshot was taken.
+ @param description An optional description of the scene being captured.
+ @param error If the method returns @c YES, this optional parameter provides additional information as to why it failed.
+ @returns @c YES if the screenshot was written to disk, otherwise @c NO.
+ */
+- (BOOL)writeScreenshotForLine:(NSUInteger)lineNumber inFile:(NSString *)filename description:(NSString *)description error:(NSError **)error;
 
 /*!
  @returns The current run loop mode.
@@ -82,3 +114,9 @@ UIKIT_EXTERN NSString *const UIApplicationOpenedURLKey;
 + (void)stopMockingOpenURL;
 
 @end
+
+@interface UIApplication (Private)
+- (UIWindow *)statusBarWindow;
+@property(getter=isStatusBarHidden) BOOL statusBarHidden;
+@end
+

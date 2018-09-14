@@ -6,7 +6,6 @@
 #import "RMAppDelegate.h"
 #import <AudioToolbox/AudioToolbox.h>
 #import <MediaPlayer/MediaPlayer.h>
-#import <HockeySDK/HockeySDK.h>
 #import "UIView+Additions.h"
 #import "RMRobotController.h"
 #import <CocoaLumberjack/DDASLLogger.h>
@@ -20,7 +19,7 @@
 #import "RMRomo.h"
 #import "RMInfoRobotController.h"
 #import "RMAnalytics.h"
-#import "RMPushNotificationsManager.h"
+//#import "RMPushNotificationsManager.h"
 #import "RMRomoMemory.h"
 #import "RMiPadVC.h"
 #import "RMSoundEffect.h"
@@ -309,14 +308,7 @@ DDLOG_ENABLE_DYNAMIC_LEVELS
 }
 
 - (void)loadAnalyticsAndReporting
-{
-#ifndef DEBUG
-    // Only track bugs in Hockey if it's a release build
-    [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"96c0d2dfe5bfc59b0769a9a0518b1327"];
-    [[BITHockeyManager sharedHockeyManager] startManager];
-    [[BITHockeyManager sharedHockeyManager].authenticator authenticateInstallation];
-#endif
-    
+{    
     self.analytics = [RMAnalytics sharedInstance];
     
 }
@@ -366,17 +358,17 @@ DDLOG_ENABLE_DYNAMIC_LEVELS
     return NO;
 }
 
-#pragma mark - Application Push Notifications
-
-- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
-{
-    [[RMPushNotificationsManager sharedInstance] setDeviceToken:deviceToken];
-}
-
-- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
-{
-    [[RMPushNotificationsManager sharedInstance] handlePush:userInfo];
-}
+//#pragma mark - Application Push Notifications
+//
+//- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+//{
+//    [[RMPushNotificationsManager sharedInstance] setDeviceToken:deviceToken];
+//}
+//
+//- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
+//{
+//    [[RMPushNotificationsManager sharedInstance] handlePush:userInfo];
+//}
 
 
 @end

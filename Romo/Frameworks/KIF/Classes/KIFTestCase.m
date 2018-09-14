@@ -8,11 +8,29 @@
 //  which Square, Inc. licenses this file to you.
 
 #import "KIFTestCase.h"
+#import <UIKit/UIKit.h>
+#import "UIApplication-KIFAdditions.h"
 #import "KIFTestActor.h"
+#import "KIFAccessibilityEnabler.h"
 
 #define SIG(class, selector) [class instanceMethodSignatureForSelector:selector]
 
 @implementation KIFTestCase
+{
+    NSException *_stoppingException;
+}
+
+NSComparisonResult selectorSort(NSInvocation *invocOne, NSInvocation *invocTwo, void *reverse);
+
++ (id)defaultTestSuite
+{
+    if (self == [KIFTestCase class]) {
+        // Don't run KIFTestCase "tests"
+        return nil;
+    }
+    
+    return [super defaultTestSuite];
+}
 
 - (id)initWithInvocation:(NSInvocation *)anInvocation;
 {
@@ -21,7 +39,7 @@
         return nil;
     }
 
-    [self raiseAfterFailure];
+    self.continueAfterFailure = NO;
     return self;
 }
 
@@ -29,6 +47,46 @@
 - (void)afterEach  { }
 - (void)beforeAll  { }
 - (void)afterAll   { }
+
+NSComparisonResult selectorSort(NSInvocation *invocOne, NSInvocation *invocTwo, void *reverse) {
+    
+    NSString *selectorOne =  NSStringFromSelector([invocOne selector]);
+    NSString *selectorTwo =  NSStringFromSelector([invocTwo selector]);
+    return [selectorOne compare:selectorTwo options:NSCaseInsensitiveSearch];
+}
+
++ (NSArray *)testInvocations
+{
+    NSArray *disorderedInvoc = [super testInvocations];
+    NSArray *newArray = [disorderedInvoc sortedArrayUsingFunction:selectorSort context:NULL];
+    return newArray;
+}
+
++ (void)setUp
+{
+    KIFEnableAccessibility();
+    [self performSetupTearDownWithSelector:@selector(beforeAll)];
+}
+
++ (void)tearDown
+{
+    [self performSetupTearDownWithSelector:@selector(afterAll)];
+}
+
++ (void)performSetupTearDownWithSelector:(SEL)selector
+{
+    KIFTestCase *testCase = [self testCaseWithSelector:selector];
+    if ([testCase respondsToSelector:selector]) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+        [testCase performSelector:selector];
+#pragma clang diagnostic pop
+    }
+
+    if (testCase->_stoppingException) {
+        [testCase->_stoppingException raise];
+    }
+}
 
 - (void)setUp;
 {
@@ -48,29 +106,6 @@
     [super tearDown];
 }
 
-+ (NSArray *)testInvocations;
-{
-    if (self == [KIFTestCase class]) {
-        return nil;
-    }
-    
-    NSMutableArray *testInvocations = [NSMutableArray arrayWithArray:[super testInvocations]];
-    
-    if ([self instancesRespondToSelector:@selector(beforeAll)]) {
-        NSInvocation *beforeAll = [NSInvocation invocationWithMethodSignature:SIG(self, @selector(beforeAll))];
-        beforeAll.selector = @selector(beforeAll);
-        [testInvocations insertObject:beforeAll atIndex:0];
-    }
-    
-    if ([self instancesRespondToSelector:@selector(afterAll)]) {
-        NSInvocation *afterAll = [NSInvocation invocationWithMethodSignature:SIG(self, @selector(afterAll))];
-        afterAll.selector = @selector(afterAll);
-        [testInvocations addObject:afterAll];
-    }
-    
-    return testInvocations;
-}
-
 - (BOOL)isNotBeforeOrAfter;
 {
     SEL selector = self.invocation.selector;
@@ -79,11 +114,15 @@
 
 - (void)failWithException:(NSException *)exception stopTest:(BOOL)stop
 {
+    if (stop) {
+        _stoppingException = exception;
+    }
+    
     if (stop && self.stopTestsOnFirstBigFailure) {
         NSLog(@"Fatal failure encountered: %@", exception.description);
         NSLog(@"Stopping tests since stopTestsOnFirstBigFailure = YES");
         
-        KIFTestActor *waiter = [[[KIFTestActor alloc] init] autorelease];
+        KIFTestActor *waiter = KIFActorWithClass(KIFTestActor);
         [waiter waitForTimeInterval:[[NSDate distantFuture] timeIntervalSinceNow]];
         
         return;

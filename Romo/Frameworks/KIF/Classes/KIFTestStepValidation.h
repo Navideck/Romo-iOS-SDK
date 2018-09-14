@@ -9,6 +9,10 @@
 #import <Foundation/Foundation.h>
 #import "KIFTestCase.h"
 
+#define __KIFFail XCTFail
+#define __KIFAssertEqual XCTAssertEqual
+#define __KIFAssertEqualObjects XCTAssertEqualObjects
+
 #define KIFExpectFailure(stmt) \
 {\
     _MockKIFTestActorDelegate *mockDelegate = [_MockKIFTestActorDelegate mockDelegate];\
@@ -18,7 +22,7 @@
         @catch (NSException *exception) { }\
     }\
     if (!mockDelegate.failed) {\
-        STFail(@"%s should have failed.", #stmt);\
+        __KIFFail(@"%s should have failed.", #stmt);\
     }\
 }
 
@@ -31,15 +35,15 @@
             @catch (NSException *exception) { }\
     }\
     if (!mockDelegate.failed) {\
-        STFail(@"%s should have failed.", #stmt);\
+        __KIFFail(@"%s should have failed.", #stmt);\
     }\
-    STAssertEquals((NSUInteger)cnt, mockDelegate.exceptions.count, @"Expected a different number of exceptions.");\
+    __KIFAssertEqual((NSUInteger)cnt, mockDelegate.exceptions.count, @"Expected a different number of exceptions.");\
 }
 
 
 @interface _MockKIFTestActorDelegate : NSObject<KIFTestActorDelegate>
 @property (nonatomic, assign) BOOL failed;
-@property (nonatomic, retain) NSArray *exceptions;
+@property (nonatomic, strong) NSArray *exceptions;
 @property (nonatomic, assign) BOOL stopped;
 
 + (instancetype)mockDelegate;

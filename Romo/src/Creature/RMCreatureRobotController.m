@@ -126,9 +126,9 @@ static const float rapidEyePokeCountDecrementDelay = 3.25;
     }
     
     // Register app to receive push notifications
-    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge |
-                                                                           UIRemoteNotificationTypeAlert |
-                                                                           UIRemoteNotificationTypeSound)];
+//    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge |
+//                                                                           UIRemoteNotificationTypeAlert |
+//                                                                           UIRemoteNotificationTypeSound)];
     // Ensure we have a fresh robot object
     if ([self.Romo.robot isKindOfClass:[RMCoreRobotRomo3 class]]) {
         self.robot = (RMCoreRobotRomo3 *)self.Romo.robot;

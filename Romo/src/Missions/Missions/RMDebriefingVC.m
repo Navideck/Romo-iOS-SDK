@@ -29,7 +29,7 @@
 #define failureSound @"Missions-Debriefing-Failure"
 #define nthStarSound @"Missions-Debriefing-Star-%d"
 
-NSString *const RMRomoAppStoreURL = @"https://itunes.apple.com/us/app/romo/id506577422";
+NSString *const RMRomoAppStoreURL = @"https://itunes.apple.com/us/app/romo-x/id1436292886";
 
 @interface RMDebriefingVC () <UIAlertViewDelegate>
 

@@ -321,8 +321,8 @@
 		8CAFC1211F7571E500E8BC11 /* RMCharacter-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 9448A74417415AAB00A82032 /* RMCharacter-Prefix.pch */; };
 		8CAFC1291F757A4D00E8BC11 /* RMShared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAFBFC61F754DB400E8BC11 /* RMShared.framework */; };
 		8CAFC1381F76C62100E8BC11 /* RMCharacter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9448A74517415AAB00A82032 /* RMCharacter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8CAFC1A11F77F51C00E8BC11 /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAFC19F1F77F50500E8BC11 /* CocoaLumberjack.framework */; };
 		8CAFC1A21F77F52100E8BC11 /* SocketRocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAFC1A01F77F50500E8BC11 /* SocketRocket.framework */; };
+		AF326F23214C47D70010990A /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAFC19F1F77F50500E8BC11 /* CocoaLumberjack.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -673,8 +673,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CAFC1A11F77F51C00E8BC11 /* CocoaLumberjack.framework in Frameworks */,
 				8CAFC1A21F77F52100E8BC11 /* SocketRocket.framework in Frameworks */,
+				AF326F23214C47D70010990A /* CocoaLumberjack.framework in Frameworks */,
 				8CAFC1291F757A4D00E8BC11 /* RMShared.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2051,7 +2051,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fotidim.RMCharacter;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -2211,7 +2210,6 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				VALIDATE_PRODUCT = YES;

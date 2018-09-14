@@ -8,9 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TapViewController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate, UIPickerViewAccessibilityDelegate>
+@interface TapViewController : UIViewController<UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UISlider *slider;
+@property (weak, nonatomic) IBOutlet UILabel *lineBreakLabel;
 @property (weak, nonatomic) IBOutlet UILabel *memoryWarningLabel;
+@property (weak, nonatomic) IBOutlet UILabel *selectedPhotoClass;
+@property (weak, nonatomic) IBOutlet UITextField *otherTextField;
+@property (weak, nonatomic) IBOutlet UITextField *greetingTextField;
+@property (weak, nonatomic) IBOutlet UIStepper *stepper;
+@property (weak, nonatomic) IBOutlet UILabel *stepperValueLabel;
 @end
 
 @implementation TapViewController
@@ -19,6 +25,9 @@
 {
     [super viewDidLoad];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(memoryWarningNotification:) name:UIApplicationDidReceiveMemoryWarningNotification object:[UIApplication sharedApplication]];
+    self.lineBreakLabel.accessibilityLabel = @"A\nB\nC\n\n";
+	self.stepper.isAccessibilityElement = YES;
+	self.stepper.accessibilityLabel = @"theStepper";
 }
 
 - (void)memoryWarningNotification:(NSNotification *)notification
@@ -51,7 +60,13 @@
 {
     UIImagePickerController *controller = [[UIImagePickerController alloc] init];
     controller.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    controller.delegate = self;
     [self presentViewController:controller animated:YES completion:nil];
+}
+
+- (IBAction)stepperValueChanged:(UIStepper *)sender forEvent:(UIEvent *)event
+{
+	self.stepperValueLabel.text = [NSString stringWithFormat:@"%ld", (long)sender.value];
 }
 
 - (void)dealloc
@@ -59,24 +74,30 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-    return 1;
+    [textField resignFirstResponder];
+    
+    if (textField == self.otherTextField) {
+        [self.greetingTextField becomeFirstResponder];
+    }
+    return NO;
 }
 
-- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
-    return 3;
+    if (textField == self.otherTextField && range.length != 0) {
+        self.greetingTextField.text = @"Deleted something.";
+    }
+    
+    return YES;
 }
 
-- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
-{
-    return [@[@"Alpha", @"Bravo", @"Charlie"] objectAtIndex:row];
-}
+#pragma mark - <UIImagePickerControllerDelegate>
 
-- (NSString *)pickerView:(UIPickerView *)pickerView accessibilityLabelForComponent:(NSInteger)component
-{
-    return @"Call Sign";
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    self.selectedPhotoClass.text = NSStringFromClass([info[UIImagePickerControllerOriginalImage] class]);
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

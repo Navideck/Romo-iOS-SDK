@@ -84,7 +84,7 @@
 		AF07B3CC1EFAB2E700CB9EB4 /* RMCore-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AF07B3CB1EFAB2E700CB9EB4 /* RMCore-Prefix.pch */; };
 		AF07B3D31EFAB68C00CB9EB4 /* RMCore.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07B1001EFAB23E00CB9EB4 /* RMCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AF07B3D41EFAB68F00CB9EB4 /* RMCore.m in Sources */ = {isa = PBXBuildFile; fileRef = AF07B1011EFAB23E00CB9EB4 /* RMCore.m */; };
-		AF6E66B01EFBAC9200FA1708 /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF6E66AF1EFBAC9200FA1708 /* CocoaLumberjack.framework */; };
+		AF326F24214C47DB0010990A /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF6E66AF1EFBAC9200FA1708 /* CocoaLumberjack.framework */; };
 		AFAFB1191EFBB7FF00DB92B5 /* RMShared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFAFB1141EFBB60400DB92B5 /* RMShared.framework */; };
 /* End PBXBuildFile section */
 
@@ -195,7 +195,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF6E66B01EFBAC9200FA1708 /* CocoaLumberjack.framework in Frameworks */,
+				AF326F24214C47DB0010990A /* CocoaLumberjack.framework in Frameworks */,
 				AFAFB1191EFBB7FF00DB92B5 /* RMShared.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -796,6 +796,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/RMCore/Carthage/Build/iOS",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/RMCore/Carthage/Build/iOS",
 				);
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -808,7 +809,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fotidim.RMCore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -846,6 +846,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/RMCore/Carthage/Build/iOS",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/RMCore/Carthage/Build/iOS",
 				);
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
