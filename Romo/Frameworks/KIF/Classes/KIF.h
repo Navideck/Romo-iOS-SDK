@@ -11,5 +11,9 @@
 #import "KIFTestCase.h"
 #import "KIFSystemTestActor.h"
 #import "KIFUITestActor.h"
+#import "KIFUITestActor-ConditionalTests.h"
 
-#import "SenTestCase-KIFAdditions.h"
+#import "KIFUIViewTestActor.h"
+#import "KIFUIObject.h"
+
+#import "XCTestCase-KIFAdditions.h"

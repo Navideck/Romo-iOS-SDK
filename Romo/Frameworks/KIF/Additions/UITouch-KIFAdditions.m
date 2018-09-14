@@ -9,40 +9,34 @@
 
 #import "UITouch-KIFAdditions.h"
 #import "LoadableCategory.h"
-
+#import <objc/runtime.h>
+#import "IOHIDEvent+KIF.h"
 
 MAKE_CATEGORIES_LOADABLE(UITouch_KIFAdditions)
 
+typedef struct {
+    unsigned int _firstTouchForView:1;
+    unsigned int _isTap:1;
+    unsigned int _isDelayed:1;
+    unsigned int _sentTouchesEnded:1;
+    unsigned int _abandonForwardingRecord:1;
+} UITouchFlags;
 
-@interface UITouch () {
-#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 60000
-    // ivars declarations removed in 6.0
-    NSTimeInterval  _timestamp;
-    UITouchPhase    _phase;
-    UITouchPhase    _savedPhase;
-    NSUInteger      _tapCount;
-    
-    UIWindow        *_window;
-    UIView          *_view;
-    UIView          *_warpedIntoView;
-    NSMutableArray  *_gestureRecognizers;
-    NSMutableArray  *_forwardingRecord;
-    
-    CGPoint         _locationInWindow;
-    CGPoint         _previousLocationInWindow;
-    UInt8           _pathIndex;
-    UInt8           _pathIdentity;
-    float           _pathMajorRadius;
-    struct {
-        unsigned int _firstTouchForView:1;
-        unsigned int _isTap:1;
-        unsigned int _isDelayed:1;
-        unsigned int _sentTouchesEnded:1;
-        unsigned int _abandonForwardingRecord:1;
-    } _touchFlags;
-#endif
-}
+@interface UITouch ()
+
+
+- (void)setWindow:(UIWindow *)window;
+- (void)setView:(UIView *)view;
+- (void)setTapCount:(NSUInteger)tapCount;
+- (void)setIsTap:(BOOL)isTap;
+- (void)setTimestamp:(NSTimeInterval)timestamp;
+- (void)setPhase:(UITouchPhase)touchPhase;
 - (void)setGestureView:(UIView *)view;
+- (void)_setLocationInWindow:(CGPoint)location resetPrevious:(BOOL)resetPrevious;
+- (void)_setIsFirstTouchForView:(BOOL)firstTouchForView;
+
+- (void)_setHidEvent:(IOHIDEventRef)event;
+
 @end
 
 @implementation UITouch (KIFAdditions)
@@ -62,34 +56,35 @@ MAKE_CATEGORIES_LOADABLE(UITouch_KIFAdditions)
     }
     
     // Create a fake tap touch
-    _tapCount = 1;
-    _locationInWindow =	point;
-	_previousLocationInWindow = _locationInWindow;
+    [self setWindow:window]; // Wipes out some values.  Needs to be first.
     
-	UIView *hitTestView = [window hitTest:_locationInWindow withEvent:nil];
+    [self setTapCount:1];
+    [self _setLocationInWindow:point resetPrevious:YES];
     
-    _window = [window retain];
-    _view = [hitTestView retain];
+	UIView *hitTestView = [window hitTest:point withEvent:nil];
+    
+    [self setView:hitTestView];
+    [self setPhase:UITouchPhaseBegan];
+    [self _setIsFirstTouchForView:YES];
+    [self setIsTap:YES];
+    [self setTimestamp:[[NSProcessInfo processInfo] systemUptime]];
+    
     if ([self respondsToSelector:@selector(setGestureView:)]) {
         [self setGestureView:hitTestView];
     }
-    _phase = UITouchPhaseBegan;
-    _touchFlags._firstTouchForView = 1;
-    _touchFlags._isTap = 1;
-    _timestamp = [[NSProcessInfo processInfo] systemUptime];
-
+    
+    // Starting with iOS 9, internal IOHIDEvent must be set for UITouch object
+    NSOperatingSystemVersion iOS9 = {9, 0, 0};
+    if ([NSProcessInfo instancesRespondToSelector:@selector(isOperatingSystemAtLeastVersion:)] && [[NSProcessInfo new] isOperatingSystemAtLeastVersion:iOS9]) {
+        [self kif_setHidEvent];
+    }
+    
 	return self;
 }
 
 - (id)initAtPoint:(CGPoint)point inView:(UIView *)view;
 {
     return [self initAtPoint:[view.window convertPoint:point fromView:view] inWindow:view.window];
-}
-    
-- (void)setPhase:(UITouchPhase)phase;
-{
-	_phase = phase;
-	_timestamp = [[NSProcessInfo processInfo] systemUptime];
 }
 
 //
@@ -99,9 +94,20 @@ MAKE_CATEGORIES_LOADABLE(UITouch_KIFAdditions)
 //
 - (void)setLocationInWindow:(CGPoint)location
 {
-	_previousLocationInWindow = _locationInWindow;
-	_locationInWindow = location;
-	_timestamp = [[NSProcessInfo processInfo] systemUptime];
+    [self setTimestamp:[[NSProcessInfo processInfo] systemUptime]];
+    [self _setLocationInWindow:location resetPrevious:NO];
+}
+
+- (void)setPhaseAndUpdateTimestamp:(UITouchPhase)phase
+{
+    [self setTimestamp:[[NSProcessInfo processInfo] systemUptime]];
+    [self setPhase:phase];
+}
+
+- (void)kif_setHidEvent {
+    IOHIDEventRef event = kif_IOHIDEventWithTouches(@[self]);
+    [self _setHidEvent:event];
+    CFRelease(event);
 }
 
 @end

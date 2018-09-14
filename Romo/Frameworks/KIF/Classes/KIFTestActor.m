@@ -1,5 +1,5 @@
 //
-//  KIFTester.m
+//  KIFTestActor.m
 //  KIF
 //
 //  Created by Brian Nickel on 12/13/12.
@@ -7,69 +7,53 @@
 //  See the LICENSE file distributed with this work for the terms under
 //  which Square, Inc. licenses this file to you.
 
-#import "KIFTestActor.h"
-#import "NSError-KIFAdditions.h"
-#import <SenTestingKit/SenTestingKit.h>
 #import <dlfcn.h>
 #import <objc/runtime.h>
+#import <XCTest/XCTest.h>
+
+#import "KIFTestActor_Private.h"
+
+#import "KIFAccessibilityEnabler.h"
+#import "KIFTextInputTraitsOverrides.h"
+#import "NSError-KIFAdditions.h"
+#import "NSException-KIFAdditions.h"
 #import "UIApplication-KIFAdditions.h"
+#import "UIView-KIFAdditions.h"
 
 @implementation KIFTestActor
 
 + (void)load
 {
     @autoreleasepool {
-        NSLog(@"KIFTester loaded");
-        [KIFTestActor _enableAccessibility];
-        
-        if ([[[NSProcessInfo processInfo] environment] objectForKey:@"StartKIFManually"]) {
-            [[NSUserDefaults standardUserDefaults] setBool:YES forKey:SenTestToolKey];
-            SenSelfTestMain();
-        }
-        
-        [UIApplication swizzleRunLoop];
-    }
-}
-
-+ (void)_enableAccessibility;
-{
-    NSString *appSupportLocation = @"/System/Library/PrivateFrameworks/AppSupport.framework/AppSupport";
-    
-    NSDictionary *environment = [[NSProcessInfo processInfo] environment];
-    NSString *simulatorRoot = [environment objectForKey:@"IPHONE_SIMULATOR_ROOT"];
-    if (simulatorRoot) {
-        appSupportLocation = [simulatorRoot stringByAppendingString:appSupportLocation];
-    }
-    
-    void *appSupportLibrary = dlopen([appSupportLocation fileSystemRepresentation], RTLD_LAZY);
-    
-    CFStringRef (*copySharedResourcesPreferencesDomainForDomain)(CFStringRef domain) = dlsym(appSupportLibrary, "CPCopySharedResourcesPreferencesDomainForDomain");
-    
-    if (copySharedResourcesPreferencesDomainForDomain) {
-        CFStringRef accessibilityDomain = copySharedResourcesPreferencesDomainForDomain(CFSTR("com.apple.Accessibility"));
-        
-        if (accessibilityDomain) {
-            CFPreferencesSetValue(CFSTR("ApplicationAccessibilityEnabled"), kCFBooleanTrue, accessibilityDomain, kCFPreferencesAnyUser, kCFPreferencesAnyHost);
-            CFRelease(accessibilityDomain);
+        if (NSClassFromString(@"UIApplication")) {
+            [UIApplication swizzleRunLoop];
+            NSLog(@"KIFTester loaded");
+        } else {
+            NSLog(@"KIFTester skipping runloop swizzling, no UIApplication class found.");
         }
     }
 }
 
 - (instancetype)initWithFile:(NSString *)file line:(NSInteger)line delegate:(id<KIFTestActorDelegate>)delegate
 {
+    NSAssert(KIFAccessibilityEnabled(), @"The method `KIFEnableAccessibility()` hasn't been called yet. Either call it explicitly before any of your tests run, or subclass KIFTestCase to get this behavior automatically.");
+
     self = [super init];
     if (self) {
-        _file = [file retain];
+        _file = file;
         _line = line;
         _delegate = delegate;
         _executionBlockTimeout = [[self class] defaultTimeout];
+        _animationWaitingTimeout = [[self class] defaultAnimationWaitingTimeout];
+        _animationStabilizationTimeout = [[self class] defaultAnimationStabilizationTimeout];
+        _mainThreadDispatchStabilizationTimeout = [[self class] defaultMainThreadDispatchStabilizationTimeout];
     }
     return self;
 }
 
 + (instancetype)actorInFile:(NSString *)file atLine:(NSInteger)line delegate:(id<KIFTestActorDelegate>)delegate
 {
-    return [[[self alloc] initWithFile:file line:line delegate:delegate] autorelease];
+    return [[self alloc] initWithFile:file line:line delegate:delegate];
 }
 
 - (instancetype)usingTimeout:(NSTimeInterval)executionBlockTimeout
@@ -78,32 +62,48 @@
     return self;
 }
 
-- (void)runBlock:(KIFTestExecutionBlock)executionBlock complete:(KIFTestCompletionBlock)completionBlock timeout:(NSTimeInterval)timeout
+- (instancetype)usingAnimationWaitingTimeout:(NSTimeInterval)animationWaitingTimeout;
+{
+    self.animationWaitingTimeout = animationWaitingTimeout;
+    return self;
+}
+
+- (instancetype)usingAnimationStabilizationTimeout:(NSTimeInterval)animationStabilizationTimeout;
+{
+    self.animationStabilizationTimeout = animationStabilizationTimeout;
+    return self;
+}
+
+- (BOOL)tryRunningBlock:(KIFTestExecutionBlock)executionBlock complete:(KIFTestCompletionBlock)completionBlock timeout:(NSTimeInterval)timeout error:(out NSError **)error
 {
     NSDate *startDate = [NSDate date];
     KIFTestStepResult result;
-    NSError *error = nil;
+    NSError *internalError;
     
-    // ROMOTIVE DEVS!!! NOTE!!!
-    // If you are running tests and have a breakpoint set on all exceptions,
-    // the tests will crap out here. To fix this, either remove your
-    // generic exception breakpoint or have it continue after breaking.
-    // We're not 100% sure, but we think Apple is throwing and catching
-    // exceptions internally...
-    while ((result = executionBlock(&error)) == KIFTestStepResultWait && -[startDate timeIntervalSinceNow] < timeout) {
-        CFRunLoopRunInMode([[UIApplication sharedApplication] currentRunLoopMode] ?: kCFRunLoopDefaultMode, 0.1, false);
+    while ((result = executionBlock(&internalError)) == KIFTestStepResultWait && -[startDate timeIntervalSinceNow] < timeout) {
+        CFRunLoopRunInMode([[UIApplication sharedApplication] currentRunLoopMode] ?: kCFRunLoopDefaultMode, KIFTestStepDelay, false);
     }
-    
+
     if (result == KIFTestStepResultWait) {
-        error = [NSError KIFErrorWithUnderlyingError:error format:@"The step timed out after %.2f seconds: %@", timeout, error.localizedDescription];
+        internalError = [NSError KIFErrorWithUnderlyingError:internalError format:@"The step timed out after %.2f seconds: %@", timeout, internalError.localizedDescription];
         result = KIFTestStepResultFailure;
     }
-    
+
     if (completionBlock) {
-        completionBlock(result, error);
+        completionBlock(result, internalError);
+    }
+
+    if (error) {
+        *error = internalError;
     }
     
-    if (result == KIFTestStepResultFailure) {
+    return result != KIFTestStepResultFailure;
+}
+
+- (void)runBlock:(KIFTestExecutionBlock)executionBlock complete:(KIFTestCompletionBlock)completionBlock timeout:(NSTimeInterval)timeout
+{
+    NSError *error = nil;
+    if (![self tryRunningBlock:executionBlock complete:completionBlock timeout:timeout error:&error]) {
         [self failWithError:error stopTest:YES];
     }
 }
@@ -123,15 +123,45 @@
     [self runBlock:executionBlock complete:nil];
 }
 
-- (void)dealloc
-{
-    [_file release];
-    [super dealloc];
-}
 
 #pragma mark Class Methods
 
+static NSTimeInterval KIFTestStepDefaultAnimationWaitingTimeout = 0.5;
+static NSTimeInterval KIFTestStepDefaultAnimationStabilizationTimeout = 0.5;
+static NSTimeInterval KIFTestStepDefaultMainThreadDispatchStabilizationTimeout = 0.5;
 static NSTimeInterval KIFTestStepDefaultTimeout = 10.0;
+static NSTimeInterval KIFTestStepDelay = 0.1;
+
++ (NSTimeInterval)defaultAnimationWaitingTimeout
+{
+    return KIFTestStepDefaultAnimationWaitingTimeout;
+}
+
++ (void)setDefaultAnimationWaitingTimeout:(NSTimeInterval)newDefaultAnimationWaitingTimeout;
+{
+    KIFTestStepDefaultAnimationWaitingTimeout = newDefaultAnimationWaitingTimeout;
+}
+
++ (NSTimeInterval)defaultAnimationStabilizationTimeout
+{
+    return KIFTestStepDefaultAnimationStabilizationTimeout;
+}
+
++ (void)setDefaultAnimationStabilizationTimeout:(NSTimeInterval)newDefaultAnimationStabilizationTimeout;
+{
+    KIFTestStepDefaultAnimationStabilizationTimeout = newDefaultAnimationStabilizationTimeout;
+}
+
++ (NSTimeInterval)defaultMainThreadDispatchStabilizationTimeout
+{
+    return KIFTestStepDefaultMainThreadDispatchStabilizationTimeout;
+}
+
++ (void)setDefaultMainThreadDispatchStabilizationTimeout:(NSTimeInterval)newDefaultMainThreadDispatchStabilizationTimeout;
+{
+    KIFTestStepDefaultMainThreadDispatchStabilizationTimeout = newDefaultMainThreadDispatchStabilizationTimeout;
+}
+
 
 + (NSTimeInterval)defaultTimeout;
 {
@@ -143,6 +173,16 @@ static NSTimeInterval KIFTestStepDefaultTimeout = 10.0;
     KIFTestStepDefaultTimeout = newDefaultTimeout;
 }
 
++ (NSTimeInterval)stepDelay;
+{
+    return KIFTestStepDelay;
+}
+
++ (void)setStepDelay:(NSTimeInterval)newStepDelay;
+{
+    KIFTestStepDelay = newStepDelay;
+}
+
 #pragma mark Generic tests
 
 - (void)fail
@@ -152,13 +192,32 @@ static NSTimeInterval KIFTestStepDefaultTimeout = 10.0;
     }];
 }
 
+- (void)failWithMessage:(NSString *)message, ...;
+{
+    va_list args;
+    va_start(args, message);
+    NSString *formattedMessage = [[NSString alloc] initWithFormat:message arguments:args];
+    NSError *error = [NSError errorWithDomain:@"KIFTest" code:KIFTestStepResultFailure userInfo:[NSDictionary dictionaryWithObjectsAndKeys:formattedMessage, NSLocalizedDescriptionKey, nil]];
+    [self failWithError:error stopTest:YES];
+    va_end(args);
+}
+
 - (void)failWithError:(NSError *)error stopTest:(BOOL)stopTest
 {
-    [self.delegate failWithException:[NSException failureInFile:self.file atLine:self.line withDescription:error.localizedDescription] stopTest:stopTest];
+    [self.delegate failWithException:[NSException failureInFile:self.file atLine:(int)self.line withDescription:error.localizedDescription] stopTest:stopTest];
 }
 
 - (void)waitForTimeInterval:(NSTimeInterval)timeInterval
 {
+    [self waitForTimeInterval:timeInterval relativeToAnimationSpeed:NO];
+}
+
+- (void)waitForTimeInterval:(NSTimeInterval)timeInterval relativeToAnimationSpeed:(BOOL)scaleTime
+{
+    if (scaleTime) {
+        timeInterval /= [UIApplication sharedApplication].animationSpeed;
+    }
+    
     NSTimeInterval startTime = [NSDate timeIntervalSinceReferenceDate];
     
     [self runBlock:^KIFTestStepResult(NSError **error) {
@@ -179,8 +238,8 @@ static NSTimeInterval KIFTestStepDefaultTimeout = 10.0;
 - (void)failWithExceptions:(NSArray *)exceptions stopTest:(BOOL)stop
 {
     NSException *firstException = [exceptions objectAtIndex:0];
-    NSException *newException = [NSException failureInFile:self.file atLine:self.line withDescription:@"Failure in child step: %@", firstException.description];
-    
+    NSException *newException = [NSException failureInFile:self.file atLine:(int)self.line withDescription:@"Failure in child step: %@", firstException.description];
+
     [self.delegate failWithExceptions:[exceptions arrayByAddingObject:newException] stopTest:stop];
 }
 

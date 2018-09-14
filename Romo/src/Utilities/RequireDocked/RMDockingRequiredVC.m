@@ -14,7 +14,7 @@
 #import "UIButton+RMButtons.h"
 #import "RMSoundEffect.h"
 
-NSString *const RMRomoControlAppStoreURL = @"http://romotive.com/appstore/romocontrol";
+NSString *const RMRomoControlAppStoreURL = @"https://itunes.apple.com/us/app/romo-x-control/id1436338304";
 
 @interface RMDockingRequiredVC () <UIAlertViewDelegate>
 
@@ -224,7 +224,7 @@ NSString *const RMRomoControlAppStoreURL = @"http://romotive.com/appstore/romoco
 {
     if (!_buyRomoView) {
         _buyRomoView = [[RMPopupWebview alloc] initWithFrame:[UIScreen mainScreen].bounds];
-        NSURLRequest *requestStore = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"http://romotive.com/store"]];
+        NSURLRequest *requestStore = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"https://www.amazon.com/s?field-keywords=romotive"]];
         [_buyRomoView.webView loadRequest:requestStore];
         [_buyRomoView.dismissButton addTarget:self action:@selector(handleDismissBuyRomoViewButtonTouch:) forControlEvents:UIControlEventTouchUpInside];
     }

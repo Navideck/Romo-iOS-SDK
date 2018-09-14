@@ -6,12 +6,14 @@
 </p>
 
 <p align="center" >
-<img src="https://img.shields.io/badge/platform-iOS%208,%209,%2010,%2011%2B-blue.svg" alt="Platform: iOS 8, 9, 10, 11+" /> <img src="https://img.shields.io/gitter/room/nwjs/nw.js.svg" alt="chat on gitter" /></p>
+<img src="https://img.shields.io/badge/platform-iOS%208,%209,%2010,%2011%2B-blue.svg" alt="Platform: iOS 8, 9, 10, 11, 12" /> <img src="https://img.shields.io/gitter/room/nwjs/nw.js.svg" alt="chat on gitter" /></p>
 
-This project is a continuation of the *Romo SDK*, an attempt to breathe life into the lovable but sadly discontinued, iPhone robot, **Romo**. Romotive, the company behind Romo, after shutting down were kind enough to open source their code stating:
-*"We've decided to completely open-source every last bit of Romo's smarts. All of our projects live in this repo and you're free to use them however you like."*
+This project is a continuation of the *Romo* app and *Romo SDK*, an attempt to breathe life into the lovable but sadly discontinued, iPhone robot, **Romo**.
 
-## How to use the SDK in your own app
+## Where do I find the app?
+Find the *Romo X* app on the [App Store](https://itunes.apple.com/us/app/romo-x/id1436292886)
+
+## How do I use the SDK in my own app?
 The Romo SDK is a dynamic framework. You need to add **RMShared** and **RMCore** in project. In addition you need to add their respective dependencies. So the list comes down to:
 * RMShared
 * RMCore
@@ -29,17 +31,18 @@ Have a look in the **HelloRMCore** project as an example. Every framework is alr
 
 ## FAQ
 
-### How can I test it?
-Check the *Current Progress* section below and only test the projects marked as done so far.
+### How did this came to be?
+Romotive, the company behind Romo, after shutting down were kind enough to open source their code stating:
+*"We've decided to completely open-source every last bit of Romo's smarts. All of our projects live in this repo and you're free to use them however you like."*
 
-### Which Romo works with this SDK?
-It was tested with Romo3L (lightning port). If somebody can report results with the 30pin version of Romo it would be nice.
+### Which Romo works with the app and SDK?
+Any Romo with either 30pin or lightning port.
 
-### What iOS versions are compatible with the Romo SDK?
-The updated SDK works from **iOS 8.0** up to the now-in-beta **iOS 11**! Yes, iOS 11!
+### Which iPhones work with Romo?
+iPhones 4s and above. iPhone 6 needs some squeezing but works fine. iPhone SE is the last *Romo sized* iPhone that fits like a glove.
 
-### What devices are compatible with the Romo SDK?
-You can insert any iPhone or iPod Touch that fits Romo. Romo was designed with iPhone 4 and 5 in mind. Although a bit tight an iPhone 7 fits Romo fine. I would love to see some hardware hackers design a replacement mount for the larger iPhone 7 Plus!
+### Which iOS versions are compatible with Romo?
+The updated app and SDK work from **iOS 9.0** up to **iOS 12**! Yes, iOS 12!
 
 ### Where can I buy a Romo robot?
 There seems to be plenty of stock in online stores.
@@ -48,7 +51,7 @@ There seems to be plenty of stock in online stores.
 * Updated dependency versions. Using Carthage for dependency management.
 * Enabled bitcode
 * **RMShared** and **RMCore** are now dynamic frameworks
-* Minimum iOS version support is 8.0
+* Minimum iOS version support is 9.0
 
 ## Current Progress
 - [x] Refactor RMShared
@@ -59,7 +62,7 @@ There seems to be plenty of stock in online stores.
 - [x] Refactor RMCharacter
 - [x] Refactor HelloRMCharacter
 - [x] Refactor HelloRomo
-- [ ] Refactor Romo.xcworkspace
+- [x] Refactor Romo.xcworkspace
 - [ ] Clean up duplicate projects and folder structure
 - [ ] Fix warnings
 - [ ] Add Swift example

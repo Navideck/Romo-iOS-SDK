@@ -23,7 +23,6 @@
 //#import "RMTelepresencePresence.h"
 
 static NSString *telepresenceNumberKey = @"telepresenceNumberKey";
-static NSString *softwareLicenseURL = @"http://romotive.com/software/legal";
 
 typedef enum RMInfoRobotControllerRow {
     RMInfoRobotControllerRowName = 0,
@@ -354,7 +353,7 @@ typedef enum RMInfoRobotControllerRow {
         RMTextButtonCell *cell = [RMTextButtonCell dequeueOrCreateCellForTableView:tableView];
         
         cell.mainLabel.text = NSLocalizedString(@"Info-Label-License", @"License");
-        [cell.rightButton setTitle:@"romotive.com/software/legal" forState:UIControlStateNormal];
+        [cell.rightButton setTitle:@"navideck.com/romo-x/legal" forState:UIControlStateNormal];
         [cell.rightButton addTarget:self action:@selector(handleLicenseLinkTap:) forControlEvents:UIControlEventTouchUpInside];
         
         return cell;

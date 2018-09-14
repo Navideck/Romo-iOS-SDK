@@ -23,13 +23,6 @@
     [tester tapViewWithAccessibilityLabel:@"Test Suite" traits:UIAccessibilityTraitButton];
 }
 
-
-- (void)testSelectingAPickerRow
-{
-    [tester selectPickerViewRowWithTitle:@"Charlie"];
-    [tester waitForViewWithAccessibilityLabel:@"Call Sign" value:@"Charlie. 3 of 3" traits:UIAccessibilityTraitNone];
-}
-
 - (void)testTogglingASwitch
 {
     [tester waitForViewWithAccessibilityLabel:@"Happy" value:@"1" traits:UIAccessibilityTraitNone];
@@ -44,11 +37,33 @@
     [tester waitForTimeInterval:1];
     [tester setValue:3 forSliderWithAccessibilityLabel:@"Slider"];
     [tester waitForViewWithAccessibilityLabel:@"Slider" value:@"3" traits:UIAccessibilityTraitNone];
+    [tester setValue:0 forSliderWithAccessibilityLabel:@"Slider"];
+    [tester waitForViewWithAccessibilityLabel:@"Slider" value:@"0" traits:UIAccessibilityTraitNone];
+    [tester setValue:5 forSliderWithAccessibilityLabel:@"Slider"];
+    [tester waitForViewWithAccessibilityLabel:@"Slider" value:@"5" traits:UIAccessibilityTraitNone];
 }
 
-/*
- TODO: Should we implement this test?  It is really domain specific. It depends on a UI element named "Choose Photo" which is wired to create an image picker, an album with a matching name, and photos to be on the device.
- + (NSArray *)stepsToChoosePhotoInAlbum:(NSString *)albumName atRow:(NSInteger)row column:(NSInteger)column;
- */
+- (void)testPickingAPhoto
+{
+    NSOperatingSystemVersion iOS11 = {11, 0, 0};
+    if ([NSProcessInfo instancesRespondToSelector:@selector(isOperatingSystemAtLeastVersion:)]
+        && [[NSProcessInfo new] isOperatingSystemAtLeastVersion:iOS11]) {
+        NSLog(@"This test can't be run on iOS 11, as the activity sheet is hosted in an `AXRemoteElement`");
+        return;
+    }
+    
+    // 'acknowledgeSystemAlert' can't be used on iOS7
+    // The console shows a message "AX Lookup problem! 22 com.apple.iphone.axserver:-1"
+    if ([UIDevice.currentDevice.systemVersion compare:@"8.0" options:NSNumericSearch] < 0) {
+        return;
+    }
+
+    [tester tapViewWithAccessibilityLabel:@"Photos"];
+    [tester acknowledgeSystemAlert];
+    [tester waitForTimeInterval:0.5f]; // Wait for view to stabilize
+
+    [tester choosePhotoInAlbum:@"Camera Roll" atRow:1 column:2];
+    [tester waitForViewWithAccessibilityLabel:@"UIImage"];
+}
 
 @end
