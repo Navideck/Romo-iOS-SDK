@@ -91,11 +91,13 @@ int _audioBreakpoints[33] = {
 - (void)loadView
 {
     CGRect frame = [UIScreen mainScreen].bounds;
-    frame.size.width = MIN(320, frame.size.width);
+    frame.origin.x = (frame.size.width - 320) / 4;
+    frame.size.width = 320;
+
     _hiddenView = [[UIView alloc] initWithFrame:frame];
     _faceView = [[UIView alloc] initWithFrame:frame];
     
-    self.view = (UIView *)[[RMCharacterProtectedView alloc] initWithFrame:frame backgroundColor:romoBackgroundBlue subview:_hiddenView];
+    self.view = (UIView *)[[RMCharacterProtectedView alloc] initWithFrame:[UIScreen mainScreen].bounds backgroundColor:romoBackgroundBlue subview:_hiddenView];
 }
 
 - (void)viewDidLoad
