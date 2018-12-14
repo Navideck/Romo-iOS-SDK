@@ -42,7 +42,8 @@ static const CGFloat universeScale = 3.0;
     if (self) {
         self.userInteractionEnabled = YES;
         self.clipsToBounds = YES;
-        
+        self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+
         self.frame = frame;
         [self addSubview:self.backgroundImageView];
 
