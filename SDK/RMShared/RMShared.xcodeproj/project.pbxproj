@@ -35,6 +35,7 @@
 		AF07A7401EFA9EF800CB9EB4 /* RMSharedDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = AF07A4611EFA9EF700CB9EB4 /* RMSharedDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AF6E66B61EFBAD0200FA1708 /* SocketRocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF6E66B31EFBAD0200FA1708 /* SocketRocket.framework */; };
 		AF7B2252214CEF2A0028965B /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF7B2235214CEF110028965B /* CocoaLumberjack.framework */; };
+		AFCEC1A621C539E5000D3660 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFCEC19621C539E5000D3660 /* CoreFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -192,6 +193,7 @@
 		AF07A4611EFA9EF700CB9EB4 /* RMSharedDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMSharedDefines.h; sourceTree = "<group>"; };
 		AF6E66B31EFBAD0200FA1708 /* SocketRocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SocketRocket.framework; path = RMShared/Carthage/Build/iOS/SocketRocket.framework; sourceTree = "<group>"; };
 		AF7B221F214CEF110028965B /* Lumberjack.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Lumberjack.xcodeproj; path = ../RMVision/RMVision/Carthage/Checkouts/CocoaLumberjack/Lumberjack.xcodeproj; sourceTree = "<group>"; };
+		AFCEC19621C539E5000D3660 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFCEC1A621C539E5000D3660 /* CoreFoundation.framework in Frameworks */,
 				AF7B2252214CEF2A0028965B /* CocoaLumberjack.framework in Frameworks */,
 				AF6E66B61EFBAD0200FA1708 /* SocketRocket.framework in Frameworks */,
 			);
@@ -228,6 +231,7 @@
 		945B81CC1746AF07003C6903 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AFCEC19621C539E5000D3660 /* CoreFoundation.framework */,
 				AF7B221F214CEF110028965B /* Lumberjack.xcodeproj */,
 				AF6E66B31EFBAD0200FA1708 /* SocketRocket.framework */,
 				945B81CD1746AF07003C6903 /* Foundation.framework */,
