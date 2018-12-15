@@ -442,7 +442,7 @@
 		A309E3F01610DB3900E8730A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A309E3EF1610DB3900E8730A /* OpenGLES.framework */; };
 		A309E3F21610DB4100E8730A /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A309E3F11610DB4100E8730A /* OpenAL.framework */; };
 		A309E3F41610DB4800E8730A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A309E3F31610DB4800E8730A /* AVFoundation.framework */; };
-		A3C452231611351800884D6B /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C452221611351800884D6B /* CoreFoundation.framework */; };
+		A3C452231611351800884D6B /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C452221611351800884D6B /* CoreFoundation.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		A3C452251611351F00884D6B /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C452241611351F00884D6B /* CoreVideo.framework */; };
 		A3C452271611352800884D6B /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C452261611352800884D6B /* CoreMedia.framework */; };
 		A3C452291611352F00884D6B /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C452281611352E00884D6B /* CoreImage.framework */; };
