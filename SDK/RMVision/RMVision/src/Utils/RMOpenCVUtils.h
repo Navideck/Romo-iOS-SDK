@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "RMVision-Prefix.pch"
 
 @interface RMOpenCVUtils : NSObject
 

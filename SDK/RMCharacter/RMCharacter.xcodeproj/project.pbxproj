@@ -319,35 +319,12 @@
 		8CAFC11F1F7571E500E8BC11 /* RMCharacterProtectedView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9448A89117415BBC00A82032 /* RMCharacterProtectedView.h */; };
 		8CAFC1201F7571E500E8BC11 /* RMCharacterProtectedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9448A89217415BBC00A82032 /* RMCharacterProtectedView.m */; };
 		8CAFC1211F7571E500E8BC11 /* RMCharacter-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 9448A74417415AAB00A82032 /* RMCharacter-Prefix.pch */; };
-		8CAFC1291F757A4D00E8BC11 /* RMShared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAFBFC61F754DB400E8BC11 /* RMShared.framework */; };
 		8CAFC1381F76C62100E8BC11 /* RMCharacter.h in Headers */ = {isa = PBXBuildFile; fileRef = 9448A74517415AAB00A82032 /* RMCharacter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8CAFC1A21F77F52100E8BC11 /* SocketRocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAFC1A01F77F50500E8BC11 /* SocketRocket.framework */; };
-		AF326F23214C47D70010990A /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAFC19F1F77F50500E8BC11 /* CocoaLumberjack.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		8CAFBFC51F754DB400E8BC11 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8CAFBFC11F754DB400E8BC11 /* RMShared.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = AF07A0551EFA9E8200CB9EB4;
-			remoteInfo = RMShared;
-		};
-		8CAFC1221F75728800E8BC11 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8CAFBFC11F754DB400E8BC11 /* RMShared.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = AF07A0541EFA9E8200CB9EB4;
-			remoteInfo = RMShared;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		8CAFBFC11F754DB400E8BC11 /* RMShared.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RMShared.xcodeproj; path = ../../RMShared/RMShared.xcodeproj; sourceTree = "<group>"; };
 		8CAFBFCC1F756DA200E8BC11 /* RMCharacter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RMCharacter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CAFC1631F77D69400E8BC11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = RMCharacter/Info.plist; sourceTree = "<group>"; };
-		8CAFC19F1F77F50500E8BC11 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjack.framework; path = RMCharacter/Carthage/Build/iOS/CocoaLumberjack.framework; sourceTree = "<group>"; };
-		8CAFC1A01F77F50500E8BC11 /* SocketRocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SocketRocket.framework; path = RMCharacter/Carthage/Build/iOS/SocketRocket.framework; sourceTree = "<group>"; };
 		9401253F17FF690C00F9A7B0 /* Romo_Expression_24_1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Romo_Expression_24_1.json; sourceTree = "<group>"; };
 		9401254017FF690C00F9A7B0 /* Romo_Expression_24_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Romo_Expression_24_1@2x.png"; sourceTree = "<group>"; };
 		9401254117FF690C00F9A7B0 /* Romo_Expression_24_2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Romo_Expression_24_2.json; sourceTree = "<group>"; };
@@ -390,7 +367,7 @@
 		9448A74017415AAB00A82032 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9448A74417415AAB00A82032 /* RMCharacter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RMCharacter-Prefix.pch"; sourceTree = "<group>"; };
 		9448A74517415AAB00A82032 /* RMCharacter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = RMCharacter.h; sourceTree = "<group>"; };
-		9448A74717415AAB00A82032 /* RMCharacter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = RMCharacter.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		9448A74717415AAB00A82032 /* RMCharacter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = RMCharacter.m; sourceTree = "<group>"; };
 		9448A75317415B2000A82032 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		9448A76617415B4200A82032 /* Romo_Emotion_Transition_1_1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Romo_Emotion_Transition_1_1.json; sourceTree = "<group>"; };
 		9448A76717415B4200A82032 /* Romo_Emotion_Transition_1_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Romo_Emotion_Transition_1_1@2x.png"; sourceTree = "<group>"; };
@@ -506,19 +483,19 @@
 		9448A80117415B4200A82032 /* 8.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 8.caf; sourceTree = "<group>"; };
 		9448A80217415B4200A82032 /* 9.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = 9.caf; sourceTree = "<group>"; };
 		9448A88117415BBC00A82032 /* RMCharacterAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = RMCharacterAnimation.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		9448A88217415BBC00A82032 /* RMCharacterAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = RMCharacterAnimation.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		9448A88217415BBC00A82032 /* RMCharacterAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = RMCharacterAnimation.m; sourceTree = "<group>"; };
 		9448A88317415BBC00A82032 /* RMCharacterEye.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = RMCharacterEye.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		9448A88417415BBC00A82032 /* RMCharacterEye.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = RMCharacterEye.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		9448A88517415BBC00A82032 /* RMCharacterFace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = RMCharacterFace.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		9448A88617415BBC00A82032 /* RMCharacterFace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = RMCharacterFace.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		9448A88617415BBC00A82032 /* RMCharacterFace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = RMCharacterFace.m; sourceTree = "<group>"; };
 		9448A88717415BBC00A82032 /* RMCharacterFaceEmotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = RMCharacterFaceEmotion.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		9448A88817415BBC00A82032 /* RMCharacterFaceEmotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = RMCharacterFaceEmotion.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		9448A88917415BBC00A82032 /* RMCharacterPupil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = RMCharacterPupil.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		9448A88A17415BBC00A82032 /* RMCharacterPupil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = RMCharacterPupil.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		9448A88C17415BBC00A82032 /* RMCharacterPNS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = RMCharacterPNS.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		9448A88D17415BBC00A82032 /* RMCharacterPNS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = RMCharacterPNS.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		9448A88F17415BBC00A82032 /* RMCharacterImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = RMCharacterImage.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		9448A89017415BBC00A82032 /* RMCharacterImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = RMCharacterImage.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		9448A88F17415BBC00A82032 /* RMCharacterImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = RMCharacterImage.h; sourceTree = "<group>"; };
+		9448A89017415BBC00A82032 /* RMCharacterImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = RMCharacterImage.m; sourceTree = "<group>"; };
 		9448A89117415BBC00A82032 /* RMCharacterProtectedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = RMCharacterProtectedView.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		9448A89217415BBC00A82032 /* RMCharacterProtectedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = RMCharacterProtectedView.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		9448A89417415BBC00A82032 /* RMCharacterVoice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = RMCharacterVoice.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -673,23 +650,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CAFC1A21F77F52100E8BC11 /* SocketRocket.framework in Frameworks */,
-				AF326F23214C47D70010990A /* CocoaLumberjack.framework in Frameworks */,
-				8CAFC1291F757A4D00E8BC11 /* RMShared.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8CAFBFC21F754DB400E8BC11 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				8CAFBFC61F754DB400E8BC11 /* RMShared.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		9401253E17FF690C00F9A7B0 /* Want */ = {
 			isa = PBXGroup;
 			children = (
@@ -820,8 +786,6 @@
 		9448A73F17415AAB00A82032 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8CAFC19F1F77F50500E8BC11 /* CocoaLumberjack.framework */,
-				8CAFC1A01F77F50500E8BC11 /* SocketRocket.framework */,
 				9448A74017415AAB00A82032 /* Foundation.framework */,
 				9448A75317415B2000A82032 /* CoreFoundation.framework */,
 			);
@@ -1408,7 +1372,6 @@
 		9448A98B1741656D00A82032 /* RMCharacter Framework */ = {
 			isa = PBXGroup;
 			children = (
-				8CAFBFC11F754DB400E8BC11 /* RMShared.xcodeproj */,
 				9448A98C1741656D00A82032 /* Supporting Files */,
 			);
 			path = "RMCharacter Framework";
@@ -1608,7 +1571,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				8CAFC1231F75728800E8BC11 /* PBXTargetDependency */,
 			);
 			name = RMCharacter;
 			productName = RMCharacter;
@@ -1640,28 +1602,12 @@
 			mainGroup = 9448A73417415AAB00A82032;
 			productRefGroup = 9448A73E17415AAB00A82032 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 8CAFBFC21F754DB400E8BC11 /* Products */;
-					ProjectRef = 8CAFBFC11F754DB400E8BC11 /* RMShared.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				8CAFBFCB1F756DA200E8BC11 /* RMCharacter */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		8CAFBFC61F754DB400E8BC11 /* RMShared.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = RMShared.framework;
-			remoteRef = 8CAFBFC51F754DB400E8BC11 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		8CAFBFCA1F756DA200E8BC11 /* Resources */ = {
@@ -1984,14 +1930,6 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		8CAFC1231F75728800E8BC11 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = RMShared;
-			targetProxy = 8CAFC1221F75728800E8BC11 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
 		9448A98E1741656D00A82032 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
@@ -2048,10 +1986,11 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				INFOPLIST_FILE = RMCharacter/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.fotidim.RMCharacter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.navideck.RMCharacter;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -2108,10 +2047,11 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				INFOPLIST_FILE = RMCharacter/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.fotidim.RMCharacter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.navideck.RMCharacter;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

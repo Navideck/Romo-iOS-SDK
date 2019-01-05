@@ -2,8 +2,8 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "iphoneFull@1x.png"
+      "filename" : "iphoneFull@1x.png",
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",

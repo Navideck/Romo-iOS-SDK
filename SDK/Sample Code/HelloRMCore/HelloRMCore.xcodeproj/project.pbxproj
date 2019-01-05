@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E4B9401E3DD19736B18862D /* libPods-HelloRMCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8D2F8BEEFF40992C491DC85 /* libPods-HelloRMCore.a */; };
 		942AC64716E7F6820062CA8A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942AC64616E7F6820062CA8A /* UIKit.framework */; };
 		942AC64916E7F6820062CA8A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942AC64816E7F6820062CA8A /* Foundation.framework */; };
 		942AC64B16E7F6820062CA8A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942AC64A16E7F6820062CA8A /* CoreGraphics.framework */; };
@@ -20,49 +21,7 @@
 		942AC66C16E7F9700062CA8A /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942AC66B16E7F9700062CA8A /* ExternalAccessory.framework */; };
 		942AC66E16E7F9800062CA8A /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942AC66D16E7F9800062CA8A /* CoreMotion.framework */; };
 		942AC67216E7F9AD0062CA8A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942AC67116E7F9AD0062CA8A /* QuartzCore.framework */; };
-		AF5F81951EFAC03B004BCAF5 /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF5F81941EFAC032004BCAF5 /* CocoaLumberjack.framework */; };
-		AF5F81961EFAC03B004BCAF5 /* NMSSH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF5F81921EFAC032004BCAF5 /* NMSSH.framework */; };
-		AF5F81971EFAC03B004BCAF5 /* SocketRocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF5F81931EFAC032004BCAF5 /* SocketRocket.framework */; };
-		AF5F81981EFAC042004BCAF5 /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF5F81941EFAC032004BCAF5 /* CocoaLumberjack.framework */; };
-		AF5F81991EFAC042004BCAF5 /* CocoaLumberjack.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AF5F81941EFAC032004BCAF5 /* CocoaLumberjack.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		AF5F819B1EFAC042004BCAF5 /* NMSSH.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AF5F81921EFAC032004BCAF5 /* NMSSH.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		AF5F819C1EFAC042004BCAF5 /* SocketRocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF5F81931EFAC032004BCAF5 /* SocketRocket.framework */; };
-		AF5F819D1EFAC042004BCAF5 /* SocketRocket.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AF5F81931EFAC032004BCAF5 /* SocketRocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		AF6E66C21EFBB17900FA1708 /* RMCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF07B3DD1EFAB9D700CB9EB4 /* RMCore.framework */; };
-		AF6E66C31EFBB17900FA1708 /* RMCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AF07B3DD1EFAB9D700CB9EB4 /* RMCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		AFAFB14A1EFBC22200DB92B5 /* RMShared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AFAFB1491EFBC21700DB92B5 /* RMShared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		AF07B3DC1EFAB9D700CB9EB4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AF07B3D71EFAB9D700CB9EB4 /* RMCore.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = AF07AE291EFAB17400CB9EB4;
-			remoteInfo = RMCore;
-		};
-		AF6E66C41EFBB17900FA1708 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AF07B3D71EFAB9D700CB9EB4 /* RMCore.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = AF07AE281EFAB17400CB9EB4;
-			remoteInfo = RMCore;
-		};
-		AF91546E1EFAC0A2002C23C3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AF07B3D71EFAB9D700CB9EB4 /* RMCore.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = AF07AE281EFAB17400CB9EB4;
-			remoteInfo = RMCore;
-		};
-		AFAFB1481EFBC21700DB92B5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AFAFB1441EFBC21700DB92B5 /* RMShared.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = AF07A0551EFA9E8200CB9EB4;
-			remoteInfo = RMShared;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		AF5F819E1EFAC042004BCAF5 /* Embed Frameworks */ = {
@@ -71,11 +30,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				AFAFB14A1EFBC22200DB92B5 /* RMShared.framework in Embed Frameworks */,
-				AF6E66C31EFBB17900FA1708 /* RMCore.framework in Embed Frameworks */,
-				AF5F819B1EFAC042004BCAF5 /* NMSSH.framework in Embed Frameworks */,
-				AF5F819D1EFAC042004BCAF5 /* SocketRocket.framework in Embed Frameworks */,
-				AF5F81991EFAC042004BCAF5 /* CocoaLumberjack.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -83,6 +37,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		194683151CD05FB215624B47 /* Pods-HelloRMCore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloRMCore.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HelloRMCore/Pods-HelloRMCore.debug.xcconfig"; sourceTree = "<group>"; };
 		942AC64316E7F6820062CA8A /* HelloRMCore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloRMCore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		942AC64616E7F6820062CA8A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		942AC64816E7F6820062CA8A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -100,11 +55,8 @@
 		942AC66B16E7F9700062CA8A /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
 		942AC66D16E7F9800062CA8A /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		942AC67116E7F9AD0062CA8A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		AF07B3D71EFAB9D700CB9EB4 /* RMCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RMCore.xcodeproj; path = ../../RMCore/RMCore.xcodeproj; sourceTree = "<group>"; };
-		AF5F81921EFAC032004BCAF5 /* NMSSH.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NMSSH.framework; path = HelloRMCore/Carthage/Build/iOS/NMSSH.framework; sourceTree = "<group>"; };
-		AF5F81931EFAC032004BCAF5 /* SocketRocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SocketRocket.framework; path = HelloRMCore/Carthage/Build/iOS/SocketRocket.framework; sourceTree = "<group>"; };
-		AF5F81941EFAC032004BCAF5 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjack.framework; path = HelloRMCore/Carthage/Build/iOS/CocoaLumberjack.framework; sourceTree = "<group>"; };
-		AFAFB1441EFBC21700DB92B5 /* RMShared.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RMShared.xcodeproj; path = ../../RMShared/RMShared.xcodeproj; sourceTree = "<group>"; };
+		B8D2F8BEEFF40992C491DC85 /* libPods-HelloRMCore.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HelloRMCore.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1245F094507D374FE492A28 /* Pods-HelloRMCore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloRMCore.release.xcconfig"; path = "Pods/Target Support Files/Pods-HelloRMCore/Pods-HelloRMCore.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,29 +65,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				942AC64716E7F6820062CA8A /* UIKit.framework in Frameworks */,
-				AF5F81951EFAC03B004BCAF5 /* CocoaLumberjack.framework in Frameworks */,
-				AF5F819C1EFAC042004BCAF5 /* SocketRocket.framework in Frameworks */,
 				942AC64916E7F6820062CA8A /* Foundation.framework in Frameworks */,
-				AF6E66C21EFBB17900FA1708 /* RMCore.framework in Frameworks */,
 				942AC64B16E7F6820062CA8A /* CoreGraphics.framework in Frameworks */,
-				AF5F81981EFAC042004BCAF5 /* CocoaLumberjack.framework in Frameworks */,
 				942AC66C16E7F9700062CA8A /* ExternalAccessory.framework in Frameworks */,
-				AF5F81961EFAC03B004BCAF5 /* NMSSH.framework in Frameworks */,
 				942AC66E16E7F9800062CA8A /* CoreMotion.framework in Frameworks */,
 				942AC67216E7F9AD0062CA8A /* QuartzCore.framework in Frameworks */,
-				AF5F81971EFAC03B004BCAF5 /* SocketRocket.framework in Frameworks */,
+				5E4B9401E3DD19736B18862D /* libPods-HelloRMCore.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		65525C238B2E465925D19400 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				194683151CD05FB215624B47 /* Pods-HelloRMCore.debug.xcconfig */,
+				D1245F094507D374FE492A28 /* Pods-HelloRMCore.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		942AC63A16E7F6820062CA8A = {
 			isa = PBXGroup;
 			children = (
 				942AC64C16E7F6820062CA8A /* HelloRMCore */,
 				942AC64516E7F6820062CA8A /* Frameworks */,
 				942AC64416E7F6820062CA8A /* Products */,
+				65525C238B2E465925D19400 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -150,17 +107,13 @@
 		942AC64516E7F6820062CA8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AF5F81941EFAC032004BCAF5 /* CocoaLumberjack.framework */,
-				AF5F81921EFAC032004BCAF5 /* NMSSH.framework */,
-				AF5F81931EFAC032004BCAF5 /* SocketRocket.framework */,
-				AFAFB1441EFBC21700DB92B5 /* RMShared.xcodeproj */,
-				AF07B3D71EFAB9D700CB9EB4 /* RMCore.xcodeproj */,
 				942AC66D16E7F9800062CA8A /* CoreMotion.framework */,
 				942AC66B16E7F9700062CA8A /* ExternalAccessory.framework */,
 				942AC67116E7F9AD0062CA8A /* QuartzCore.framework */,
 				942AC64616E7F6820062CA8A /* UIKit.framework */,
 				942AC64816E7F6820062CA8A /* Foundation.framework */,
 				942AC64A16E7F6820062CA8A /* CoreGraphics.framework */,
+				B8D2F8BEEFF40992C491DC85 /* libPods-HelloRMCore.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -190,22 +143,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		AF07B3D81EFAB9D700CB9EB4 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				AF07B3DD1EFAB9D700CB9EB4 /* RMCore.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		AFAFB1451EFBC21700DB92B5 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				AFAFB1491EFBC21700DB92B5 /* RMShared.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -213,6 +150,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 942AC66616E7F6820062CA8A /* Build configuration list for PBXNativeTarget "HelloRMCore" */;
 			buildPhases = (
+				2F84ABDE7D7E24D63865168A /* [CP] Check Pods Manifest.lock */,
 				942AC63F16E7F6820062CA8A /* Sources */,
 				942AC64016E7F6820062CA8A /* Frameworks */,
 				942AC64116E7F6820062CA8A /* Resources */,
@@ -221,8 +159,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				AF91546F1EFAC0A2002C23C3 /* PBXTargetDependency */,
-				AF6E66C51EFBB17900FA1708 /* PBXTargetDependency */,
 			);
 			name = HelloRMCore;
 			productName = HelloRMCore;
@@ -239,7 +175,7 @@
 				ORGANIZATIONNAME = Romotive;
 				TargetAttributes = {
 					942AC64216E7F6820062CA8A = {
-						DevelopmentTeam = RXW38BC5U8;
+						DevelopmentTeam = 52RU2XXUH6;
 					};
 				};
 			};
@@ -253,39 +189,12 @@
 			mainGroup = 942AC63A16E7F6820062CA8A;
 			productRefGroup = 942AC64416E7F6820062CA8A /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = AF07B3D81EFAB9D700CB9EB4 /* Products */;
-					ProjectRef = AF07B3D71EFAB9D700CB9EB4 /* RMCore.xcodeproj */;
-				},
-				{
-					ProductGroup = AFAFB1451EFBC21700DB92B5 /* Products */;
-					ProjectRef = AFAFB1441EFBC21700DB92B5 /* RMShared.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				942AC64216E7F6820062CA8A /* HelloRMCore */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		AF07B3DD1EFAB9D700CB9EB4 /* RMCore.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = RMCore.framework;
-			remoteRef = AF07B3DC1EFAB9D700CB9EB4 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		AFAFB1491EFBC21700DB92B5 /* RMShared.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = RMShared.framework;
-			remoteRef = AFAFB1481EFBC21700DB92B5 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		942AC64116E7F6820062CA8A /* Resources */ = {
@@ -301,6 +210,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2F84ABDE7D7E24D63865168A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HelloRMCore-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		942AC63F16E7F6820062CA8A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -313,19 +243,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		AF6E66C51EFBB17900FA1708 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = RMCore;
-			targetProxy = AF6E66C41EFBB17900FA1708 /* PBXContainerItemProxy */;
-		};
-		AF91546F1EFAC0A2002C23C3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = RMCore;
-			targetProxy = AF91546E1EFAC0A2002C23C3 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		942AC64F16E7F6820062CA8A /* InfoPlist.strings */ = {
@@ -432,17 +349,18 @@
 		};
 		942AC66716E7F6820062CA8A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 194683151CD05FB215624B47 /* Pods-HelloRMCore.debug.xcconfig */;
 			buildSettings = {
-				DEVELOPMENT_TEAM = RXW38BC5U8;
+				DEVELOPMENT_TEAM = 52RU2XXUH6;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/HelloRMCore/Carthage/Build/iOS",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INFOPLIST_FILE = "HelloRMCore/HelloRMCore-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.fotidim.HelloRMCore;
+				PRODUCT_BUNDLE_IDENTIFIER = com.navideck.HelloRMCore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -450,17 +368,18 @@
 		};
 		942AC66816E7F6820062CA8A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1245F094507D374FE492A28 /* Pods-HelloRMCore.release.xcconfig */;
 			buildSettings = {
-				DEVELOPMENT_TEAM = RXW38BC5U8;
+				DEVELOPMENT_TEAM = 52RU2XXUH6;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/HelloRMCore/Carthage/Build/iOS",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INFOPLIST_FILE = "HelloRMCore/HelloRMCore-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.fotidim.HelloRMCore;
+				PRODUCT_BUNDLE_IDENTIFIER = com.navideck.HelloRMCore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

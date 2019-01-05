@@ -51,13 +51,13 @@ static const int _maxCapacity = 3500000;
     }
     
     NSString* mainBundlePath = [[NSBundle mainBundle] resourcePath];
-    NSString* frameworkBundlePath = [mainBundlePath stringByAppendingPathComponent:@"Frameworks/RMCharacter.framework"];
+//    NSString* frameworkBundlePath = [mainBundlePath stringByAppendingPathComponent:@"Frameworks/RMCharacter.framework"];
 
     NSString *filePath = nil;
     if (![comps[0] hasSuffix:@"@1x"]) {
-        filePath = [[NSBundle bundleWithPath:frameworkBundlePath] pathForResource:[NSString stringWithFormat:@"%@@2x", comps[0]] ofType:extension];
+        filePath = [[NSBundle bundleWithPath:mainBundlePath] pathForResource:[NSString stringWithFormat:@"%@@2x", comps[0]] ofType:extension];
     } else {
-        filePath = [[NSBundle bundleWithPath:frameworkBundlePath] pathForResource:comps[0] ofType:extension];
+        filePath = [[NSBundle bundleWithPath:mainBundlePath] pathForResource:comps[0] ofType:extension];
     }
 
     RMCharacterImage *image = (RMCharacterImage *)[RMCharacterImage imageWithContentsOfFile:filePath];

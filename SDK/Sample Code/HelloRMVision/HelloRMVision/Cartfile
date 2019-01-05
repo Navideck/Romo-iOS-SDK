@@ -1,5 +1,0 @@
-github "NMSSH/NMSSH"
-github "CocoaLumberjack/CocoaLumberjack"
-
-github "BradLarson/GPUImage"
-# Build using "carthage update --platform iOS"

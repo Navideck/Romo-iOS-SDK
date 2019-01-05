@@ -8,7 +8,7 @@
 
 #import "RMAnalytics.h"
 #import <RMCore/RMCore.h>
-#import <Analytics/Analytics.h>
+//#import <Analytics/Analytics.h>
 #import <RMShared/UIDevice+UDID.h>
 #import "RMAppDelegate.h"
 #import "RMProgressManager.h"
@@ -65,14 +65,14 @@
 #define APP_STORE_RELEASE
 #ifdef APP_STORE_RELEASE
 
-#ifdef ROMO_CONTROL_APP
-    // The Romo Control App
-    [Analytics initializeWithSecret:@"ednxl8q121"];
-#else
-    // The ROMO App
-    [Analytics initializeWithSecret:@"pbokuwcgig"]; // 3.0+ key
-#endif
-    
+//#ifdef ROMO_CONTROL_APP
+//    // The Romo Control App
+//    [Analytics initializeWithSecret:@"ednxl8q121"];
+//#else
+//    // The ROMO App
+//    [Analytics initializeWithSecret:@"pbokuwcgig"]; // 3.0+ key
+//#endif
+
 #else
     
 #ifdef ANALYTICS_DEVELOPMENT
@@ -107,8 +107,8 @@
         // Associate this play session to a unique id to identify this user
         // Update the user info with date first started,
         // everytime the app starts so that we don't lose this info for older users who have updated
-        [[Analytics sharedAnalytics] identify:self.uniqueDeviceId
-                                       traits:@{@"First Start Date": [[NSUserDefaults standardUserDefaults] objectForKey:@"romo-3 date installed"] }];
+//        [[Analytics sharedAnalytics] identify:self.uniqueDeviceId
+//                                       traits:@{@"First Start Date": [[NSUserDefaults standardUserDefaults] objectForKey:@"romo-3 date installed"] }];
     }
 }
 
@@ -212,18 +212,18 @@
         NSNumber *totalTelepresenceSessions = [[NSUserDefaults standardUserDefaults] objectForKey:@"romo-3 total-telepresence-count"];
         NSNumber *totalTelepresenceTime = [[NSUserDefaults standardUserDefaults] objectForKey:@"romo-3 total-telepresence-playtime"];
         
-        RMAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-        
-        [[Analytics sharedAnalytics] identify:self.uniqueDeviceId
-                                       traits:@{@"Odometer": @(appDelegate.robotController.Romo.vitals.odometer),
-                                                @"RomoName": romoName ? romoName : @"nil",
-                                                @"name": userName ? userName : @"nil",
-                                                @"Docked Time": totalDockedPlaytime ? totalDockedPlaytime : @(0),
-                                                @"Docked Count": dockedCount ? dockedCount : @(0),
-                                                @"Wi-Fi Drive Playtime": totalWiFiDriveTime ? totalWiFiDriveTime : @(0),
-                                                @"Wi-Fi Drive Sessions": totalWiFiDriveSessions ? totalWiFiDriveSessions : @(0),
-                                                @"Telepresence Playtime": totalTelepresenceTime ? totalTelepresenceTime : @(0),
-                                                @"Telepresence Sessions": totalTelepresenceSessions ? totalTelepresenceSessions : @(0) }];
+//        RMAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+
+//        [[Analytics sharedAnalytics] identify:self.uniqueDeviceId
+//                                       traits:@{@"Odometer": @(appDelegate.robotController.Romo.vitals.odometer),
+//                                                @"RomoName": romoName ? romoName : @"nil",
+//                                                @"name": userName ? userName : @"nil",
+//                                                @"Docked Time": totalDockedPlaytime ? totalDockedPlaytime : @(0),
+//                                                @"Docked Count": dockedCount ? dockedCount : @(0),
+//                                                @"Wi-Fi Drive Playtime": totalWiFiDriveTime ? totalWiFiDriveTime : @(0),
+//                                                @"Wi-Fi Drive Sessions": totalWiFiDriveSessions ? totalWiFiDriveSessions : @(0),
+//                                                @"Telepresence Playtime": totalTelepresenceTime ? totalTelepresenceTime : @(0),
+//                                                @"Telepresence Sessions": totalTelepresenceSessions ? totalTelepresenceSessions : @(0) }];
 #endif
     }
 }
@@ -381,9 +381,9 @@
         [chaptersProgress setObject:@(totalStarCount) forKey:[NSString stringWithFormat:@"Chapter %i Star Count",chapter]];
     }
     
-    // Update the user's traits
-    [[Analytics sharedAnalytics] identify:self.uniqueDeviceId traits:chaptersProgress];
-    
+//    // Update the user's traits
+//    [[Analytics sharedAnalytics] identify:self.uniqueDeviceId traits:chaptersProgress];
+
     // Add identifiers to event for tying the play times back the user
     [chaptersProgress setObject:self.uniqueDeviceId forKey:@"userId"];
     
@@ -399,7 +399,7 @@
 - (void)handleAlertviewResponseNotification:(NSNotification *)notification
 {
     if ([notification.name isEqualToString:@"RMRateAppResponseNotification"]) {
-        [[Analytics sharedAnalytics] track:@"Rate App Response" properties:notification.userInfo];
+//        [[Analytics sharedAnalytics] track:@"Rate App Response" properties:notification.userInfo];
     }
 }
 
@@ -438,12 +438,12 @@
 //------------------------------------------------------------------------------
 - (void)track:(NSString *)event
 {
-    [[Analytics sharedAnalytics] track:event];
+//    [[Analytics sharedAnalytics] track:event];
 }
 
 - (void)track:(NSString *)event properties:(NSDictionary *)properties
 {
-    [[Analytics sharedAnalytics] track:event properties:properties];
+//    [[Analytics sharedAnalytics] track:event properties:properties];
 }
 
 - (void)dealloc
