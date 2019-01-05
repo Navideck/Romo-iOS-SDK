@@ -14,44 +14,42 @@ This project is a continuation of the *Romo* app and *Romo SDK*, an attempt to b
 Find the *Romo X* app on the [App Store](https://itunes.apple.com/us/app/romo-x/id1436292886)
 
 ## How do I use the SDK in my own app?
-The Romo SDK is a dynamic framework. You need to add **RMShared** and **RMCore** in project. In addition you need to add their respective dependencies. So the list comes down to:
+The Romo SDK is a set of frameworks that you can selectively use according to what you want to do. Those are:
 * RMShared
 * RMCore
-* [CocoaLumberjack](https://github.com/CocoaLumberjack/CocoaLumberjack)
-* [NMSSH](https://github.com/NMSSH/NMSSH)
-* [SocketRocket](https://github.com/facebook/SocketRocket)
+* RMCharacter
+* RMVision
 
-For RMVision you need to download separately the **OpenCV 2** iOS framework and place it under **SDK/RMVision/RMVision/lib/OpenCV**
+You need at least **RMShared** and **RMCore** to be able to control Romo. Dependencies can be easily added to your project as local *Development Pods*. See the **Podfile** in the *Romo* folder or in the sample apps in *SDK/Sample Code* as guides for your own Podfile. Then use ```pod install``` to fetch the dependencies using [CocoaPods](https://cocoapods.org/).
 
-You can use ```carthage update --platform iOS``` if you need to fetch or update the dependencies using [Carthage](https://github.com/Carthage/Carthage). Don't forget to add all frameworks to the **Embedded Binaries** section under the **General** tab of your app's target.
-
-Your app's info.plist should include the **Supported external accessory protocols** key with a value of **com.romotive.romo** to be able to connect to Romo.
-
-Have a look in the **HelloRMCore** project as an example. Every framework is already checked out in the repo and you should be able to compile out of the box.
+Your app's *info.plist* should include the **Supported external accessory protocols** key with a value of **com.romotive.romo** to be able to connect to Romo.
 
 ## FAQ
 
-### How did this came to be?
-Romotive, the company behind Romo, after shutting down were kind enough to open source their code stating:
-*"We've decided to completely open-source every last bit of Romo's smarts. All of our projects live in this repo and you're free to use them however you like."*
-
-### Which Romo works with the app and SDK?
-Any Romo with either 30pin or lightning port.
-
-### Which iPhones work with Romo?
-iPhones 4s and above. iPhone 6 needs some squeezing but works fine. iPhone SE is the last *Romo sized* iPhone that fits like a glove.
-
-### Which iOS versions are compatible with Romo?
-The updated app and SDK work from **iOS 9.0** up to **iOS 12**! Yes, iOS 12!
+### Where do I find the app?
+Find the *Romo X* app on the [App Store](https://itunes.apple.com/us/app/romo-x/id1436292886)
 
 ### Where can I buy a Romo robot?
 There seems to be plenty of stock in online stores.
 
+### Which Romo works with the app and SDK?
+Any Romo with either 30pin or lightning port. This includes Romo models 3A, 3B, 3L.
+
+### Which iPhone work with Romo?
+iPhone 3GS and above. iPhone 6 needs some squeezing but works just fine. iPhone SE is the last *Romo sized* iPhone that fits like a glove.
+
+### Which iOS versions are compatible with Romo?
+The *Romo X* app and SDK work from **iOS 6.0** up to **iOS 12**! Yes, iOS 12!
+
+### How did this come to be?
+Romotive, the company behind Romo, after shutting down were kind enough to open source their code stating:
+*"We've decided to completely open-source every last bit of Romo's smarts. All of our projects live in this repo and you're free to use them however you like."*
+
 ## Major Changes
-* Updated dependency versions. Using Carthage for dependency management.
+* Updated dependency versions. Using CocoaPods for dependency management.
 * Enabled bitcode
-* **RMShared** and **RMCore** are now dynamic frameworks
-* Minimum iOS version support is 9.0
+* **RMShared** and **RMCore** are now bundled as frameworks
+* Minimum iOS version support is 6.0
 
 ## Current Progress
 - [x] Refactor RMShared
@@ -67,7 +65,6 @@ There seems to be plenty of stock in online stores.
 - [ ] Fix warnings
 - [ ] Add Swift example
 
-If somebody has access to Romo's firmware or schematics I would love to add them to the repo.
 Issues and pull requests are always welcome!
 
 ## Patrons
@@ -75,6 +72,9 @@ Issues and pull requests are always welcome!
 * Suschman
 * Bruce Ownbey
 * Shreyas Gite
+
+
+Support us by becoming a patron!
 
 <a href="https://www.patreon.com/bePatron?u=5127277" target="_blank"><img alt="become a patron" src="https://c5.patreon.com/external/logo/become_a_patron_button.png" height="35px"></a>
 

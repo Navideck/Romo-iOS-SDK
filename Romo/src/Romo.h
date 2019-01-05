@@ -1,10 +1,10 @@
-#import <CocoaLumberjack/DDLog.h>
 #import "UIImage+Retina.h"
+#import <CocoaLumberjack/CocoaLumberjack.h>
 
 #ifdef DEBUG
-static int ddLogLevel __unused = LOG_LEVEL_VERBOSE;
+static int ddLogLevel __unused = DDLogLevelVerbose;
 #else
-static int ddLogLevel __unused = LOG_LEVEL_INFO;
+static int ddLogLevel __unused = DDLogLevelInfo;
 #endif
 
 #ifdef DEBUG

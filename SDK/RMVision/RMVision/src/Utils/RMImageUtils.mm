@@ -17,6 +17,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #import "RMImageUtils.h"
+#import "RMVision-Prefix.pch"
 
 #define CLAMP(min, val, max) (MAX(min, MIN(val, max)))
 

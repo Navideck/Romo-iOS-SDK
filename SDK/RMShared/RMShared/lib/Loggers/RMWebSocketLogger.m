@@ -7,6 +7,7 @@
 #import "RMWebSocket.h"
 #import "UIApplication+Environment.h"
 #import "UIDevice+UDID.h"
+#import "RMShared-Prefix.pch"
 
 @interface RMWebSocketLogger () <RMWebSocketDelegate>
 

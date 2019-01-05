@@ -45,11 +45,11 @@
     self = [super init];
     if (self) {
         _characterType = characterType;
-        
+
         NSString* mainBundlePath = [[NSBundle mainBundle] resourcePath];
-        NSString* frameworkBundlePath = [mainBundlePath stringByAppendingPathComponent:@"Frameworks/RMCharacter.framework"];
-        _characterBundle = [NSBundle bundleWithPath:frameworkBundlePath];
-        
+//        NSString* frameworkBundlePath = [mainBundlePath stringByAppendingPathComponent:@"Frameworks/RMCharacter.framework"];
+        _characterBundle = [NSBundle bundleWithPath:mainBundlePath];
+
         self.initialized = YES;
     }
     return self;

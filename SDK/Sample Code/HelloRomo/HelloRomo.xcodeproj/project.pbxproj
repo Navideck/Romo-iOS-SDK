@@ -7,16 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8CAFC1D41F77FF2F00E8BC11 /* RMShared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAFC1CC1F77FF1D00E8BC11 /* RMShared.framework */; };
-		8CAFC1D51F77FF2F00E8BC11 /* RMShared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAFC1CC1F77FF1D00E8BC11 /* RMShared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8CAFC1D91F77FF3400E8BC11 /* RMCharacter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAFC1D31F77FF2400E8BC11 /* RMCharacter.framework */; };
-		8CAFC1DA1F77FF3400E8BC11 /* RMCharacter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAFC1D31F77FF2400E8BC11 /* RMCharacter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8CAFC1DD1F77FF7200E8BC11 /* RMCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAFC1C61F77FF1700E8BC11 /* RMCore.framework */; };
-		8CAFC1DE1F77FF7200E8BC11 /* RMCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAFC1C61F77FF1700E8BC11 /* RMCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8CAFC1E41F77FFEE00E8BC11 /* SocketRocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAFC1E21F77FFE700E8BC11 /* SocketRocket.framework */; };
-		8CAFC1E51F77FFF700E8BC11 /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAFC1E11F77FFE700E8BC11 /* CocoaLumberjack.framework */; };
-		8CAFC1E61F77FFF700E8BC11 /* CocoaLumberjack.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAFC1E11F77FFE700E8BC11 /* CocoaLumberjack.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8CAFC1E81F77FFFB00E8BC11 /* SocketRocket.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAFC1E21F77FFE700E8BC11 /* SocketRocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2871FB6050DCFD62019A3685 /* libPods-HelloRomo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7498B0B69724E6B50CD1E35 /* libPods-HelloRomo.a */; };
 		942AC68416E81A520062CA8A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942AC68316E81A520062CA8A /* UIKit.framework */; };
 		942AC68616E81A520062CA8A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942AC68516E81A520062CA8A /* Foundation.framework */; };
 		942AC68816E81A520062CA8A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942AC68716E81A520062CA8A /* CoreGraphics.framework */; };
@@ -33,51 +24,6 @@
 		942AC6B416E81C410062CA8A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942AC6B316E81C410062CA8A /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		8CAFC1C51F77FF1700E8BC11 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8CAFC1C01F77FF1700E8BC11 /* RMCore.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = AF07AE291EFAB17400CB9EB4;
-			remoteInfo = RMCore;
-		};
-		8CAFC1CB1F77FF1D00E8BC11 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8CAFC1C71F77FF1D00E8BC11 /* RMShared.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = AF07A0551EFA9E8200CB9EB4;
-			remoteInfo = RMShared;
-		};
-		8CAFC1D21F77FF2400E8BC11 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8CAFC1CD1F77FF2400E8BC11 /* RMCharacter.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 8CAFBFCC1F756DA200E8BC11;
-			remoteInfo = RMCharacter;
-		};
-		8CAFC1D61F77FF2F00E8BC11 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8CAFC1C71F77FF1D00E8BC11 /* RMShared.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = AF07A0541EFA9E8200CB9EB4;
-			remoteInfo = RMShared;
-		};
-		8CAFC1DB1F77FF3400E8BC11 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8CAFC1CD1F77FF2400E8BC11 /* RMCharacter.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 8CAFBFCB1F756DA200E8BC11;
-			remoteInfo = RMCharacter;
-		};
-		8CAFC1DF1F77FF7200E8BC11 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8CAFC1C01F77FF1700E8BC11 /* RMCore.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = AF07AE281EFAB17400CB9EB4;
-			remoteInfo = RMCore;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		8CAFC1D81F77FF2F00E8BC11 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -85,11 +31,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				8CAFC1D51F77FF2F00E8BC11 /* RMShared.framework in Embed Frameworks */,
-				8CAFC1DE1F77FF7200E8BC11 /* RMCore.framework in Embed Frameworks */,
-				8CAFC1E61F77FFF700E8BC11 /* CocoaLumberjack.framework in Embed Frameworks */,
-				8CAFC1DA1F77FF3400E8BC11 /* RMCharacter.framework in Embed Frameworks */,
-				8CAFC1E81F77FFFB00E8BC11 /* SocketRocket.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -97,11 +38,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		8CAFC1C01F77FF1700E8BC11 /* RMCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RMCore.xcodeproj; path = ../../RMCore/RMCore.xcodeproj; sourceTree = "<group>"; };
-		8CAFC1C71F77FF1D00E8BC11 /* RMShared.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RMShared.xcodeproj; path = ../../RMShared/RMShared.xcodeproj; sourceTree = "<group>"; };
-		8CAFC1CD1F77FF2400E8BC11 /* RMCharacter.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RMCharacter.xcodeproj; path = ../../RMCharacter/RMCharacter.xcodeproj; sourceTree = "<group>"; };
-		8CAFC1E11F77FFE700E8BC11 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjack.framework; path = HelloRomo/Carthage/Build/iOS/CocoaLumberjack.framework; sourceTree = "<group>"; };
-		8CAFC1E21F77FFE700E8BC11 /* SocketRocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SocketRocket.framework; path = HelloRomo/Carthage/Build/iOS/SocketRocket.framework; sourceTree = "<group>"; };
+		010D9079C25D132012B843A2 /* Pods-HelloRomo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloRomo.release.xcconfig"; path = "Pods/Target Support Files/Pods-HelloRomo/Pods-HelloRomo.release.xcconfig"; sourceTree = "<group>"; };
+		3D6C653A5D95FC837A11F6A7 /* Pods-HelloRomo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloRomo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HelloRomo/Pods-HelloRomo.debug.xcconfig"; sourceTree = "<group>"; };
 		942AC68016E81A520062CA8A /* HelloRomo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloRomo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		942AC68316E81A520062CA8A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		942AC68516E81A520062CA8A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -121,6 +59,7 @@
 		942AC6A816E81AC20062CA8A /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
 		942AC6A916E81AC20062CA8A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		942AC6B316E81C410062CA8A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		D7498B0B69724E6B50CD1E35 /* libPods-HelloRomo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HelloRomo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,45 +68,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				942AC6B416E81C410062CA8A /* AVFoundation.framework in Frameworks */,
-				8CAFC1E51F77FFF700E8BC11 /* CocoaLumberjack.framework in Frameworks */,
 				942AC68416E81A520062CA8A /* UIKit.framework in Frameworks */,
 				942AC68616E81A520062CA8A /* Foundation.framework in Frameworks */,
 				942AC68816E81A520062CA8A /* CoreGraphics.framework in Frameworks */,
-				8CAFC1D41F77FF2F00E8BC11 /* RMShared.framework in Frameworks */,
 				942AC6AB16E81AC20062CA8A /* CoreMotion.framework in Frameworks */,
-				8CAFC1E41F77FFEE00E8BC11 /* SocketRocket.framework in Frameworks */,
-				8CAFC1DD1F77FF7200E8BC11 /* RMCore.framework in Frameworks */,
 				942AC6AC16E81AC20062CA8A /* ExternalAccessory.framework in Frameworks */,
 				942AC6AD16E81AC20062CA8A /* QuartzCore.framework in Frameworks */,
-				8CAFC1D91F77FF3400E8BC11 /* RMCharacter.framework in Frameworks */,
+				2871FB6050DCFD62019A3685 /* libPods-HelloRomo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8CAFC1C11F77FF1700E8BC11 /* Products */ = {
+		1546E4C5F1FCD7429CAC393E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8CAFC1C61F77FF1700E8BC11 /* RMCore.framework */,
+				3D6C653A5D95FC837A11F6A7 /* Pods-HelloRomo.debug.xcconfig */,
+				010D9079C25D132012B843A2 /* Pods-HelloRomo.release.xcconfig */,
 			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		8CAFC1C81F77FF1D00E8BC11 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				8CAFC1CC1F77FF1D00E8BC11 /* RMShared.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		8CAFC1CE1F77FF2400E8BC11 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				8CAFC1D31F77FF2400E8BC11 /* RMCharacter.framework */,
-			);
-			name = Products;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		942AC67716E81A520062CA8A = {
@@ -176,6 +96,7 @@
 				942AC68916E81A520062CA8A /* HelloRomo */,
 				942AC68216E81A520062CA8A /* Frameworks */,
 				942AC68116E81A520062CA8A /* Products */,
+				1546E4C5F1FCD7429CAC393E /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -190,9 +111,6 @@
 		942AC68216E81A520062CA8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8CAFC1E11F77FFE700E8BC11 /* CocoaLumberjack.framework */,
-				8CAFC1E21F77FFE700E8BC11 /* SocketRocket.framework */,
-				942AC6B216E81AF70062CA8A /* Romo */,
 				942AC6A716E81AC20062CA8A /* CoreMotion.framework */,
 				942AC6B316E81C410062CA8A /* AVFoundation.framework */,
 				942AC6A816E81AC20062CA8A /* ExternalAccessory.framework */,
@@ -200,6 +118,7 @@
 				942AC68316E81A520062CA8A /* UIKit.framework */,
 				942AC68516E81A520062CA8A /* Foundation.framework */,
 				942AC68716E81A520062CA8A /* CoreGraphics.framework */,
+				D7498B0B69724E6B50CD1E35 /* libPods-HelloRomo.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -230,16 +149,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		942AC6B216E81AF70062CA8A /* Romo */ = {
-			isa = PBXGroup;
-			children = (
-				8CAFC1CD1F77FF2400E8BC11 /* RMCharacter.xcodeproj */,
-				8CAFC1C71F77FF1D00E8BC11 /* RMShared.xcodeproj */,
-				8CAFC1C01F77FF1700E8BC11 /* RMCore.xcodeproj */,
-			);
-			name = Romo;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -247,17 +156,16 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 942AC6A316E81A520062CA8A /* Build configuration list for PBXNativeTarget "HelloRomo" */;
 			buildPhases = (
+				8BE1480318D9F839D9142C44 /* [CP] Check Pods Manifest.lock */,
 				942AC67C16E81A520062CA8A /* Sources */,
 				942AC67D16E81A520062CA8A /* Frameworks */,
 				942AC67E16E81A520062CA8A /* Resources */,
 				8CAFC1D81F77FF2F00E8BC11 /* Embed Frameworks */,
+				2297BA14750EEB5F06DC204B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				8CAFC1D71F77FF2F00E8BC11 /* PBXTargetDependency */,
-				8CAFC1DC1F77FF3400E8BC11 /* PBXTargetDependency */,
-				8CAFC1E01F77FF7200E8BC11 /* PBXTargetDependency */,
 			);
 			name = HelloRomo;
 			productName = HelloRomo;
@@ -274,7 +182,7 @@
 				ORGANIZATIONNAME = Romotive;
 				TargetAttributes = {
 					942AC67F16E81A520062CA8A = {
-						DevelopmentTeam = RXW38BC5U8;
+						DevelopmentTeam = 52RU2XXUH6;
 					};
 				};
 			};
@@ -288,50 +196,12 @@
 			mainGroup = 942AC67716E81A520062CA8A;
 			productRefGroup = 942AC68116E81A520062CA8A /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 8CAFC1CE1F77FF2400E8BC11 /* Products */;
-					ProjectRef = 8CAFC1CD1F77FF2400E8BC11 /* RMCharacter.xcodeproj */;
-				},
-				{
-					ProductGroup = 8CAFC1C11F77FF1700E8BC11 /* Products */;
-					ProjectRef = 8CAFC1C01F77FF1700E8BC11 /* RMCore.xcodeproj */;
-				},
-				{
-					ProductGroup = 8CAFC1C81F77FF1D00E8BC11 /* Products */;
-					ProjectRef = 8CAFC1C71F77FF1D00E8BC11 /* RMShared.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				942AC67F16E81A520062CA8A /* HelloRomo */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		8CAFC1C61F77FF1700E8BC11 /* RMCore.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = RMCore.framework;
-			remoteRef = 8CAFC1C51F77FF1700E8BC11 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		8CAFC1CC1F77FF1D00E8BC11 /* RMShared.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = RMShared.framework;
-			remoteRef = 8CAFC1CB1F77FF1D00E8BC11 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		8CAFC1D31F77FF2400E8BC11 /* RMCharacter.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = RMCharacter.framework;
-			remoteRef = 8CAFC1D21F77FF2400E8BC11 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		942AC67E16E81A520062CA8A /* Resources */ = {
@@ -347,6 +217,734 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2297BA14750EEB5F06DC204B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HelloRomo/Pods-HelloRomo-resources.sh",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Emotions/Bewildered/Romo_Emotion_Transition_9_1.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Emotions/Bewildered/Romo_Emotion_Transition_9_1@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Emotions/Curious/Romo_Emotion_Transition_1_1.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Emotions/Curious/Romo_Emotion_Transition_1_1@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Emotions/Delighted/Romo_Emotion_Transition_10_1.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Emotions/Delighted/Romo_Emotion_Transition_10_1@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Emotions/Excited/Romo_Emotion_Transition_2_1.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Emotions/Excited/Romo_Emotion_Transition_2_1@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Emotions/Happy/Romo_Emotion_Transition_3_1.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Emotions/Happy/Romo_Emotion_Transition_3_1@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Emotions/Indifferent/Romo_Emotion_Transition_8_1.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Emotions/Indifferent/Romo_Emotion_Transition_8_1@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Emotions/Sad/Romo_Emotion_Transition_4_1.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Emotions/Sad/Romo_Emotion_Transition_4_1@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Emotions/Scared/Romo_Emotion_Transition_5_1.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Emotions/Scared/Romo_Emotion_Transition_5_1@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Emotions/Sleepy/Romo_Emotion_Transition_6_1.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Emotions/Sleepy/Romo_Emotion_Transition_6_1@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Angry/Romo_Expression_1_1.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Angry/Romo_Expression_1_1@1x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Angry/Romo_Expression_1_1@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Bewildered/Romo_Expression_27_1.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Bewildered/Romo_Expression_27_1@1x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Bewildered/Romo_Expression_27_1@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Bored/Romo_Expression_2_1.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Bored/Romo_Expression_2_1@1x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Bored/Romo_Expression_2_1@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Bored/Romo_Expression_2_2.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Bored/Romo_Expression_2_2@1x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Bored/Romo_Expression_2_2@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Bored/Romo_Expression_2_3.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Bored/Romo_Expression_2_3@1x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Bored/Romo_Expression_2_3@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Chuckle/Romo_Expression_21_1.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Chuckle/Romo_Expression_21_1@1x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Chuckle/Romo_Expression_21_1@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Curious/Romo_Expression_3_1.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Curious/Romo_Expression_3_1@1x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Curious/Romo_Expression_3_1@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Dizzy/Romo_Expression_4_1.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Dizzy/Romo_Expression_4_1@1x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Dizzy/Romo_Expression_4_1@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Dizzy/Romo_Expression_4_2.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Dizzy/Romo_Expression_4_2@1x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Dizzy/Romo_Expression_4_2@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Embarrassed/Romo_Expression_5_1.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Embarrassed/Romo_Expression_5_1@1x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Embarrassed/Romo_Expression_5_1@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Excited/Romo_Expression_6_1.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Excited/Romo_Expression_6_1@1x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Excited/Romo_Expression_6_1@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Excited/Romo_Expression_6_2.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Excited/Romo_Expression_6_2@1x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Excited/Romo_Expression_6_2@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Exhausted/Romo_Expression_7_1.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Exhausted/Romo_Expression_7_1@1x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Exhausted/Romo_Expression_7_1@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Exhausted/Romo_Expression_7_2.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Exhausted/Romo_Expression_7_2@1x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Exhausted/Romo_Expression_7_2@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Exhausted/Romo_Expression_7_3.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Exhausted/Romo_Expression_7_3@1x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Exhausted/Romo_Expression_7_3@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Fart/Romo_Expression_26_1.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Fart/Romo_Expression_26_1@1x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Fart/Romo_Expression_26_1@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Happy/Romo_Expression_8_1.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Happy/Romo_Expression_8_1@1x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Happy/Romo_Expression_8_1@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Happy/Romo_Expression_8_2.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Happy/Romo_Expression_8_2@1x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Happy/Romo_Expression_8_2@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Hiccup/Romo_Expression_25_1.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Hiccup/Romo_Expression_25_1@1x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Hiccup/Romo_Expression_25_1@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/HoldingBreath/Romo_Expression_9_1.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/HoldingBreath/Romo_Expression_9_1@1x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/HoldingBreath/Romo_Expression_9_1@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Laugh/Romo_Expression_10_1.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Laugh/Romo_Expression_10_1@1x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Laugh/Romo_Expression_10_1@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/LetDown/Romo_Expression_23_1.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/LetDown/Romo_Expression_23_1@1x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/LetDown/Romo_Expression_23_1@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/LookingAround/Romo_Expression_11_1.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/LookingAround/Romo_Expression_11_1@1x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/LookingAround/Romo_Expression_11_1@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Love/Romo_Expression_12_1.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Love/Romo_Expression_12_1@1x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Love/Romo_Expression_12_1@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Ponder/Romo_Expression_13_1.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Ponder/Romo_Expression_13_1@1x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Ponder/Romo_Expression_13_1@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Proud/Romo_Expression_22_1.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Proud/Romo_Expression_22_1@1x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Proud/Romo_Expression_22_1@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Sad/Romo_Expression_14_1.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Sad/Romo_Expression_14_1@1x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Sad/Romo_Expression_14_1@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Scared/Romo_Expression_15_1.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Scared/Romo_Expression_15_1@1x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Scared/Romo_Expression_15_1@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Sleepy/Romo_Expression_16_1.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Sleepy/Romo_Expression_16_1@1x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Sleepy/Romo_Expression_16_1@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Sleepy/Romo_Expression_16_2.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Sleepy/Romo_Expression_16_2@1x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Sleepy/Romo_Expression_16_2@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Sleepy/Romo_Expression_16_3.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Sleepy/Romo_Expression_16_3@1x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Sleepy/Romo_Expression_16_3@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Smack/Romo_Expression_30_1.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Smack/Romo_Expression_30_1@1x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Smack/Romo_Expression_30_1@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Smack/Romo_Expression_30_2.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Smack/Romo_Expression_30_2@1x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Smack/Romo_Expression_30_2@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Sneeze/Romo_Expression_17_1.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Sneeze/Romo_Expression_17_1@1x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Sneeze/Romo_Expression_17_1@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Sniff/Romo_Expression_29_1.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Sniff/Romo_Expression_29_1@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Startled/Romo_Expression_20_1.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Startled/Romo_Expression_20_1@1x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Startled/Romo_Expression_20_1@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Struggling/Romo_Expression_32_1.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Struggling/Romo_Expression_32_1@1x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Struggling/Romo_Expression_32_1@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Struggling/Romo_Expression_32_2.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Struggling/Romo_Expression_32_2@1x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Struggling/Romo_Expression_32_2@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Talking/Romo_Expression_18_1.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Talking/Romo_Expression_18_1@1x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Talking/Romo_Expression_18_1@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Talking/Romo_Expression_18_2.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Talking/Romo_Expression_18_2@1x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Talking/Romo_Expression_18_2@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Want/Romo_Expression_24_1.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Want/Romo_Expression_24_1@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Want/Romo_Expression_24_2.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Want/Romo_Expression_24_2@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Wee/Romo_Expression_31_1.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Wee/Romo_Expression_31_1@1x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Wee/Romo_Expression_31_1@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Yawn/Romo_Expression_19_1.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Yawn/Romo_Expression_19_1@1x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Yawn/Romo_Expression_19_1@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Yawn/Romo_Expression_19_2.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Yawn/Romo_Expression_19_2@1x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Yawn/Romo_Expression_19_2@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Yippee/Romo_Expression_28_1.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Yippee/Romo_Expression_28_1@1x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Yippee/Romo_Expression_28_1@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Mumbles/Romo_Expression_101_1.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Mumbles/Romo_Expression_101_1@1x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Mumbles/Romo_Expression_101_1@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Mumbles/Romo_Expression_102_1.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Mumbles/Romo_Expression_102_1@1x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Mumbles/Romo_Expression_102_1@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Mumbles/Romo_Expression_103_1.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Mumbles/Romo_Expression_103_1@1x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Mumbles/Romo_Expression_103_1@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Mumbles/Romo_Expression_104_1.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Mumbles/Romo_Expression_104_1@1x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Mumbles/Romo_Expression_104_1@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Mumbles/Romo_Expression_105_1.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Mumbles/Romo_Expression_105_1@1x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Mumbles/Romo_Expression_105_1@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Mumbles/Romo_Expression_106_1.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Mumbles/Romo_Expression_106_1@1x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Mumbles/Romo_Expression_106_1@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Mumbles/Romo_Expression_107_1.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Mumbles/Romo_Expression_107_1@1x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Mumbles/Romo_Expression_107_1@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Mumbles/Romo_Expression_108_1.json",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Mumbles/Romo_Expression_108_1@1x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Mumbles/Romo_Expression_108_1@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Static Emotions/Bewildered/Romo_Emotion_Leye_9@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Static Emotions/Bewildered/Romo_Emotion_Mouth_9@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Static Emotions/Bewildered/Romo_Emotion_Reye_9@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Static Emotions/Curious/Romo_Emotion_Leye_1@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Static Emotions/Curious/Romo_Emotion_Mouth_1@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Static Emotions/Curious/Romo_Emotion_Reye_1@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Static Emotions/Excited/Romo_Emotion_Leye_2@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Static Emotions/Excited/Romo_Emotion_Mouth_2@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Static Emotions/Excited/Romo_Emotion_Reye_2@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Static Emotions/Happy/Romo_Emotion_Leye_3@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Static Emotions/Happy/Romo_Emotion_Mouth_3@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Static Emotions/Happy/Romo_Emotion_Reye_3@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Static Emotions/Indifferent/Romo_Emotion_Leye_8@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Static Emotions/Indifferent/Romo_Emotion_Mouth_8@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Static Emotions/Indifferent/Romo_Emotion_Reye_8@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Static Emotions/Romo_Emotion_Leye_Closed@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Static Emotions/Romo_Emotion_Reye_Closed@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Static Emotions/Sad/Romo_Emotion_Leye_4@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Static Emotions/Sad/Romo_Emotion_Mouth_4@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Static Emotions/Sad/Romo_Emotion_Reye_4@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Static Emotions/Scared/Romo_Emotion_Leye_5@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Static Emotions/Scared/Romo_Emotion_Mouth_5@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Static Emotions/Scared/Romo_Emotion_Reye_5@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Static Emotions/Sleeping/Romo_Emotion_Leye_7@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Static Emotions/Sleeping/Romo_Emotion_Mouth_7@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Static Emotions/Sleeping/Romo_Emotion_Reye_7@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Static Emotions/Sleepy/Romo_Emotion_Leye_6@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Static Emotions/Sleepy/Romo_Emotion_Reye_6@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/vignette@2x.png",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/1.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/10.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/101.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/102.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/103.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/104.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/105.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/106.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/107.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/108.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/11.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/12.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/13.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/14.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/15.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/16.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/17.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/18.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/19.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/2.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/20.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/21.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/22.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/23.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/24.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/25.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/26-00.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/26-01.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/26-02.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/26-03.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/26-04.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/26-05.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/26-06.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/26-07.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/26-08.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/26-09.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/26-10.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/26-11.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/26-12.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/26-13.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/26-14.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/26-15.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/26-16.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/26-17.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/26-18.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/26.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/27.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/28.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/29.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/3.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/30.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/31.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/32.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/4.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/5.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/6.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/7.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/8.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/9.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/blinks/Creature-Blink-1.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/blinks/Creature-Blink-2.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/blinks/Creature-Blink-3.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/blinks/Creature-Blink-4.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/blinks/Creature-Blink-5.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/mumbles/mumble1.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/mumbles/mumble10.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/mumbles/mumble11.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/mumbles/mumble12.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/mumbles/mumble13.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/mumbles/mumble14.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/mumbles/mumble15.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/mumbles/mumble16.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/mumbles/mumble17.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/mumbles/mumble18.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/mumbles/mumble19.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/mumbles/mumble2.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/mumbles/mumble20.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/mumbles/mumble21.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/mumbles/mumble3.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/mumbles/mumble4.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/mumbles/mumble5.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/mumbles/mumble6.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/mumbles/mumble7.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/mumbles/mumble8.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/mumbles/mumble9.caf",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Emotions",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Emotions/Bewildered",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Emotions/Curious",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Emotions/Delighted",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Emotions/Excited",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Emotions/Happy",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Emotions/Indifferent",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Emotions/Sad",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Emotions/Scared",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Emotions/Sleepy",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Angry",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Bewildered",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Bored",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Chuckle",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Curious",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Dizzy",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Embarrassed",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Excited",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Exhausted",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Fart",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Happy",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Hiccup",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/HoldingBreath",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Laugh",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/LetDown",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/LookingAround",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Love",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Ponder",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Proud",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Sad",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Scared",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Sleepy",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Smack",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Sneeze",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Sniff",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Startled",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Struggling",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Talking",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Want",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Wee",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Yawn",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Expressions/Yippee",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Mumbles",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Static Emotions",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Static Emotions/Bewildered",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Static Emotions/Curious",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Static Emotions/Excited",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Static Emotions/Happy",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Static Emotions/Indifferent",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Static Emotions/Sad",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Static Emotions/Scared",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Static Emotions/Sleeping",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Animations/Static Emotions/Sleepy",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/blinks",
+				"${PODS_ROOT}/../../../RMCharacter/RMCharacterResources/Audio/mumbles",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Emotion_Transition_9_1.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Emotion_Transition_9_1@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Emotion_Transition_1_1.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Emotion_Transition_1_1@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Emotion_Transition_10_1.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Emotion_Transition_10_1@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Emotion_Transition_2_1.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Emotion_Transition_2_1@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Emotion_Transition_3_1.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Emotion_Transition_3_1@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Emotion_Transition_8_1.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Emotion_Transition_8_1@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Emotion_Transition_4_1.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Emotion_Transition_4_1@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Emotion_Transition_5_1.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Emotion_Transition_5_1@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Emotion_Transition_6_1.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Emotion_Transition_6_1@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_1_1.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_1_1@1x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_1_1@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_27_1.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_27_1@1x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_27_1@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_2_1.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_2_1@1x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_2_1@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_2_2.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_2_2@1x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_2_2@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_2_3.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_2_3@1x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_2_3@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_21_1.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_21_1@1x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_21_1@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_3_1.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_3_1@1x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_3_1@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_4_1.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_4_1@1x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_4_1@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_4_2.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_4_2@1x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_4_2@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_5_1.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_5_1@1x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_5_1@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_6_1.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_6_1@1x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_6_1@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_6_2.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_6_2@1x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_6_2@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_7_1.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_7_1@1x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_7_1@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_7_2.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_7_2@1x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_7_2@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_7_3.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_7_3@1x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_7_3@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_26_1.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_26_1@1x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_26_1@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_8_1.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_8_1@1x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_8_1@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_8_2.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_8_2@1x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_8_2@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_25_1.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_25_1@1x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_25_1@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_9_1.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_9_1@1x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_9_1@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_10_1.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_10_1@1x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_10_1@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_23_1.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_23_1@1x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_23_1@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_11_1.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_11_1@1x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_11_1@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_12_1.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_12_1@1x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_12_1@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_13_1.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_13_1@1x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_13_1@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_22_1.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_22_1@1x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_22_1@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_14_1.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_14_1@1x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_14_1@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_15_1.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_15_1@1x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_15_1@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_16_1.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_16_1@1x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_16_1@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_16_2.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_16_2@1x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_16_2@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_16_3.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_16_3@1x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_16_3@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_30_1.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_30_1@1x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_30_1@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_30_2.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_30_2@1x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_30_2@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_17_1.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_17_1@1x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_17_1@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_29_1.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_29_1@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_20_1.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_20_1@1x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_20_1@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_32_1.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_32_1@1x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_32_1@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_32_2.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_32_2@1x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_32_2@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_18_1.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_18_1@1x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_18_1@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_18_2.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_18_2@1x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_18_2@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_24_1.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_24_1@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_24_2.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_24_2@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_31_1.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_31_1@1x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_31_1@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_19_1.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_19_1@1x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_19_1@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_19_2.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_19_2@1x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_19_2@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_28_1.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_28_1@1x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_28_1@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_101_1.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_101_1@1x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_101_1@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_102_1.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_102_1@1x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_102_1@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_103_1.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_103_1@1x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_103_1@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_104_1.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_104_1@1x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_104_1@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_105_1.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_105_1@1x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_105_1@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_106_1.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_106_1@1x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_106_1@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_107_1.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_107_1@1x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_107_1@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_108_1.json",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_108_1@1x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Expression_108_1@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Emotion_Leye_9@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Emotion_Mouth_9@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Emotion_Reye_9@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Emotion_Leye_1@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Emotion_Mouth_1@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Emotion_Reye_1@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Emotion_Leye_2@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Emotion_Mouth_2@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Emotion_Reye_2@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Emotion_Leye_3@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Emotion_Mouth_3@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Emotion_Reye_3@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Emotion_Leye_8@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Emotion_Mouth_8@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Emotion_Reye_8@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Emotion_Leye_Closed@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Emotion_Reye_Closed@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Emotion_Leye_4@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Emotion_Mouth_4@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Emotion_Reye_4@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Emotion_Leye_5@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Emotion_Mouth_5@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Emotion_Reye_5@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Emotion_Leye_7@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Emotion_Mouth_7@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Emotion_Reye_7@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Emotion_Leye_6@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Romo_Emotion_Reye_6@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/vignette@2x.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/1.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/10.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/101.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/102.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/103.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/104.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/105.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/106.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/107.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/108.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/11.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/12.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/13.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/14.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/15.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/16.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/17.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/18.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/19.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/2.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/20.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/21.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/22.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/23.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/24.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/25.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/26-00.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/26-01.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/26-02.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/26-03.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/26-04.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/26-05.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/26-06.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/26-07.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/26-08.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/26-09.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/26-10.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/26-11.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/26-12.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/26-13.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/26-14.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/26-15.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/26-16.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/26-17.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/26-18.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/26.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/27.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/28.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/29.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/3.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/30.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/31.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/32.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/4.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/5.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/6.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/7.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/8.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/9.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Creature-Blink-1.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Creature-Blink-2.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Creature-Blink-3.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Creature-Blink-4.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Creature-Blink-5.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/mumble1.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/mumble10.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/mumble11.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/mumble12.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/mumble13.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/mumble14.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/mumble15.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/mumble16.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/mumble17.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/mumble18.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/mumble19.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/mumble2.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/mumble20.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/mumble21.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/mumble3.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/mumble4.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/mumble5.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/mumble6.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/mumble7.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/mumble8.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/mumble9.caf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Animations",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Emotions",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Bewildered",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Curious",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Delighted",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Excited",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Happy",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Indifferent",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Sad",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Scared",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Sleepy",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Expressions",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Angry",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Bored",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Chuckle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Dizzy",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Embarrassed",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Exhausted",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Fart",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Hiccup",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/HoldingBreath",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Laugh",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/LetDown",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/LookingAround",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Love",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Ponder",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Proud",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Smack",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Sneeze",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Sniff",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Startled",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Struggling",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Talking",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Want",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Wee",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Yawn",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Yippee",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Mumbles",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Static Emotions",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Sleeping",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Audio",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/blinks",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/mumbles",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HelloRomo/Pods-HelloRomo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8BE1480318D9F839D9142C44 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HelloRomo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		942AC67C16E81A520062CA8A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -359,24 +957,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		8CAFC1D71F77FF2F00E8BC11 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = RMShared;
-			targetProxy = 8CAFC1D61F77FF2F00E8BC11 /* PBXContainerItemProxy */;
-		};
-		8CAFC1DC1F77FF3400E8BC11 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = RMCharacter;
-			targetProxy = 8CAFC1DB1F77FF3400E8BC11 /* PBXContainerItemProxy */;
-		};
-		8CAFC1E01F77FF7200E8BC11 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = RMCore;
-			targetProxy = 8CAFC1DF1F77FF7200E8BC11 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		942AC68C16E81A520062CA8A /* InfoPlist.strings */ = {
@@ -481,8 +1061,9 @@
 		};
 		942AC6A416E81A520062CA8A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D6C653A5D95FC837A11F6A7 /* Pods-HelloRomo.debug.xcconfig */;
 			buildSettings = {
-				DEVELOPMENT_TEAM = RXW38BC5U8;
+				DEVELOPMENT_TEAM = 52RU2XXUH6;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../RMCore/Products/Release-iphoneos\"",
@@ -494,7 +1075,7 @@
 				INFOPLIST_FILE = "HelloRomo/HelloRomo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.fotidim.HelloRomo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.navideck.HelloRomo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -502,8 +1083,9 @@
 		};
 		942AC6A516E81A520062CA8A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 010D9079C25D132012B843A2 /* Pods-HelloRomo.release.xcconfig */;
 			buildSettings = {
-				DEVELOPMENT_TEAM = RXW38BC5U8;
+				DEVELOPMENT_TEAM = 52RU2XXUH6;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../RMCore/Products/Release-iphoneos\"",
@@ -515,7 +1097,7 @@
 				INFOPLIST_FILE = "HelloRomo/HelloRomo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.fotidim.HelloRomo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.navideck.HelloRomo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

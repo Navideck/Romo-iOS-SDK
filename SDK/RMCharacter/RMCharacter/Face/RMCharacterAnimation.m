@@ -207,8 +207,8 @@ typedef void (^BoolBlock)(BOOL);
                 NSString* cropFile = [NSString stringWithFormat:@"%@_%d",prefix,index];
                 
                 NSString* mainBundlePath = [[NSBundle mainBundle] resourcePath];
-                NSString* frameworkBundlePath = [mainBundlePath stringByAppendingPathComponent:@"Frameworks/RMCharacter.framework"];
-                NSBundle* characterBundle = [NSBundle bundleWithPath:frameworkBundlePath];
+//                NSString* frameworkBundlePath = [mainBundlePath stringByAppendingPathComponent:@"Frameworks/RMCharacter.framework"];
+                NSBundle* characterBundle = [NSBundle bundleWithPath:mainBundlePath];
                 NSData* cropData = [NSData dataWithContentsOfFile:[characterBundle pathForResource:cropFile ofType:@"json"]];
                 NSArray* crop = [NSJSONSerialization JSONObjectWithData:cropData options:0 error:nil][@"frames"];
                 _frameCount += crop.count;

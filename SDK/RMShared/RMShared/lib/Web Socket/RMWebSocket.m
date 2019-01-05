@@ -8,6 +8,7 @@
 
 #import "RMWebSocket.h"
 #import <SocketRocket/SRWebSocket.h>
+#import "RMShared-Prefix.pch"
 
 /**
  * The values of the following enum are important. They match up directly with

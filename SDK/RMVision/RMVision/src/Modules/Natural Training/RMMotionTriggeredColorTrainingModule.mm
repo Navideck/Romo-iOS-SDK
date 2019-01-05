@@ -13,6 +13,7 @@
 #import <GPUImage/GPUImageRawDataInput.h>
 #import <GPUImage/GPUImageRawDataOutput.h>
 #import "UIImage+OpenCV.h"
+#import "RMVision-Prefix.pch"
 
 using namespace cv;
 
