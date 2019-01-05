@@ -4,7 +4,6 @@
 
 #ifdef __OBJC__
     #import <Foundation/Foundation.h>
-    #import <RMShared/RMSharedDefines.h>
     #import <CocoaLumberjack/CocoaLumberjack.h>
 
 #ifdef DEBUG

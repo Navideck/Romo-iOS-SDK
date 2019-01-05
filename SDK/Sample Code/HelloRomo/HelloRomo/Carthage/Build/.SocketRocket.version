@@ -1,9 +1,0 @@
-{
-  "commitish" : "28035e1a98a427853e4038ff1b70479fa8374cfa",
-  "iOS" : [
-    {
-      "hash" : "7e15b8af434da61feb5ba96ca9f34b1d4415b4979bbda7297890e0189c56dbad",
-      "name" : "SocketRocket"
-    }
-  ]
-}

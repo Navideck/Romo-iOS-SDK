@@ -2,8 +2,8 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "visionVignette.png.png"
+      "filename" : "visionVignette.png.png",
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",

@@ -21,6 +21,9 @@
 
 #import <CoreGraphics/CoreGraphics.h>
 #import <UIKit/UIKit.h>
+#ifdef __cplusplus
+    #import <opencv2/opencv.hpp>
+#endif
 
 // RMObject
 //      Base type for objects

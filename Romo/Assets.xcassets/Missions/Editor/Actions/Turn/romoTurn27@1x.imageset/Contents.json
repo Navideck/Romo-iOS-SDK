@@ -2,8 +2,8 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "romoTurn27@1x.png"
+      "filename" : "romoTurn27@1x.png",
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",

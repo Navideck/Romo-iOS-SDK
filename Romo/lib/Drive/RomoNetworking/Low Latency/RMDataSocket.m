@@ -7,7 +7,7 @@
 #import "RMAddress.h"
 #import "RMDataPacket.h"
 #include <string.h>
-
+#import "CocoaLumberjack.h"
 #pragma mark - Constants --
 
 #define SEND_BUFFER_SIZE 65535

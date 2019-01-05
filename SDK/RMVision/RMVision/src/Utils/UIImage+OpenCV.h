@@ -19,8 +19,8 @@
 #import <CoreVideo/CoreVideo.h>
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-
 #import <opencv2/core/types_c.h>
+#import "RMVision-Prefix.pch"
 
 @interface UIImage (UIImage_OpenCV)
 

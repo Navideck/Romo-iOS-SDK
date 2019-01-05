@@ -11,6 +11,7 @@
 #import "RMVisionModule.h"
 #import "RMVisionDebugBroker.h"
 #import <AVFoundation/AVFoundation.h>
+#import "RMVision-Prefix.pch"
 
 @interface RMFakeVision ()
 

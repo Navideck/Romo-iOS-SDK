@@ -1,5 +1,0 @@
-github "NMSSH/NMSSH"
-github "CocoaLumberjack/CocoaLumberjack"
-github "facebook/SocketRocket","954c947"
-github "BradLarson/GPUImage"
-# Build using "carthage update --no-build --platform iOS"

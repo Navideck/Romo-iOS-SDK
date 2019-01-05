@@ -6,6 +6,7 @@
 #import "UIImage+Save.h"
 #import "RMAlertView.h"
 #import <AssetsLibrary/AssetsLibrary.h>
+#import <CocoaLumberjack/CocoaLumberjack.h>
 
 static RMAlertView *photosNotAllowed;
 

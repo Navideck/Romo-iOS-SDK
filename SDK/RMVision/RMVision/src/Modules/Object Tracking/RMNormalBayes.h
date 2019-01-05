@@ -10,6 +10,7 @@
 #define __RMVision__RMNormalBayes__
 
 #include <iostream>
+#import "RMVision-Prefix.pch"
 
 class RMNormalBayes : public cv::NormalBayesClassifier
 {
