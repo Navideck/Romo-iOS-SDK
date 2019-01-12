@@ -28,7 +28,7 @@ static RMCore *instance;
 @property (nonatomic, strong) NSMutableArray *connectedRobots;
 @property (nonatomic, strong) RMCoreRobotDataTransport *transport;
 
-void handleSigPipe();
+void handleSigPipe(void);
 
 @end
 
@@ -40,7 +40,7 @@ void handleSigPipe();
 {
     self = [super init];
     if (self) {
-        signal(SIGPIPE, handleSigPipe);
+        signal(SIGPIPE, nil);
         
         _delegate = delegate;
         _transport = [[RMCoreRobotDataTransport alloc] initWithDelegate:self];
@@ -129,13 +129,6 @@ void handleSigPipe();
         [[NSNotificationCenter defaultCenter] postNotificationName:RMCoreRobotDidDisconnectNotification
                                                             object:disconnectedRobot];
     }
-}
-
-#pragma mark - Private Methods
-
-void handleSigPipe()
-{
-    // do nothing
 }
 
 @end

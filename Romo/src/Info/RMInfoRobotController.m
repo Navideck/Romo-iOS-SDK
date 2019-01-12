@@ -53,6 +53,8 @@ typedef enum RMInfoRobotControllerRow {
 
 @implementation RMInfoRobotController
 
+@dynamic view;
+
 - (RMRomoFunctionalities)initiallyActiveFunctionalities
 {
     // Only allow broadcasting
@@ -298,7 +300,7 @@ typedef enum RMInfoRobotControllerRow {
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    int row = indexPath.row;
+    NSInteger row = indexPath.row;
     if (row >= RMInfoRobotControllerRowRomoNumber && ![[UIDevice currentDevice] isDockableTelepresenceDevice]) {
         row++;
     }
@@ -307,7 +309,7 @@ typedef enum RMInfoRobotControllerRow {
         RMTextInputCell *cell = [RMTextInputCell dequeueOrCreateCellForTableView:tableView];
         
         cell.mainLabel.text = NSLocalizedString(@"Info-Label-Name", @"Name");
-        cell.inputField.text = [self.Romo.name isEqualToString:@""] ? @"Romo" : self.Romo.name;
+        cell.inputField.text = [self.Romo.name isEqualToString:@""] ? NSLocalizedString(@"Romo",@"Romo") : self.Romo.name;
         cell.inputField.delegate = self;
         cell.inputField.accessibilityLabel = @"Input Name";
         cell.inputField.isAccessibilityElement = YES;
@@ -351,9 +353,8 @@ typedef enum RMInfoRobotControllerRow {
         return cell;
     } else if (row == RMInfoRobotControllerRowLicense) {
         RMTextButtonCell *cell = [RMTextButtonCell dequeueOrCreateCellForTableView:tableView];
-        
         cell.mainLabel.text = NSLocalizedString(@"Info-Label-License", @"License");
-        [cell.rightButton setTitle:@"navideck.com/romo-x/legal" forState:UIControlStateNormal];
+        [cell.rightButton setTitle:NSLocalizedString(@"navideck.com/romo-x/legal", @"navideck.com/romo-x/legal") forState:UIControlStateNormal];
         [cell.rightButton addTarget:self action:@selector(handleLicenseLinkTap:) forControlEvents:UIControlEventTouchUpInside];
         
         return cell;
@@ -379,7 +380,7 @@ typedef enum RMInfoRobotControllerRow {
         return cell;
     }
 
-    return nil;
+    return [[UITableViewCell alloc]init];
 }
 
 - (void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath

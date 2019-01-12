@@ -90,10 +90,10 @@ static const float invalidLocation = -2.0;
     return self;
 }
 
-- (void)captureNegativeTrainingDataWithCompletion:(void (^)())completion
+- (void)captureNegativeTrainingDataWithCompletion:(void (^)(void))completion
 {
     RMObjectTrackingVirtualSensor *weakSelf = self;
-    void (^setupCompletion)() = ^{
+    void (^setupCompletion)(void) = ^{
         [weakSelf.motionTriggeredTrainingModule captureNegativeTrainingData];
         if (completion) {
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -297,7 +297,7 @@ static const float invalidLocation = -2.0;
 
 #pragma mark - Private Methods
 
-- (void)setUpMotionTriggeredColorTrainingWithCompletion:(void (^)())completion
+- (void)setUpMotionTriggeredColorTrainingWithCompletion:(void (^)(void))completion
 {
     if (!_motionTriggeredTrainingModule) {
         self.Romo.activeFunctionalities = enableFunctionality(RMRomoFunctionalityVision, self.Romo.activeFunctionalities);

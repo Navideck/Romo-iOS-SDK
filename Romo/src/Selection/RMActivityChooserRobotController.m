@@ -24,6 +24,8 @@
 
 @implementation RMActivityChooserRobotController
 
+@dynamic view;
+
 - (void)loadView
 {
     self.view = [[RMActivityChooserView alloc] initWithFrame:[UIScreen mainScreen].bounds];
@@ -52,7 +54,7 @@
                                    action:@selector(handleRomoControlButtonTouch:)
                          forControlEvents:UIControlEventTouchUpInside];
     
-    self.title = @"Romo";
+    self.title = NSLocalizedString(@"Romo",@"Romo");
 }
 
 - (RMRomoFunctionalities)initiallyActiveFunctionalities
@@ -173,8 +175,8 @@
 
 - (void)setTitle:(NSString *)title
 {
-    [super setTitle:title];
-    self.view.titleLabel.text = title;
+    [super setTitle:NSLocalizedString(title, @"title")];
+    self.view.titleLabel.text = NSLocalizedString(title, @"title");
 }
 
 

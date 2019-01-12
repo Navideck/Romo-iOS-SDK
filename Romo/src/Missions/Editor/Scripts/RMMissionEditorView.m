@@ -249,7 +249,7 @@ static const CGFloat addArrowOffset = 23.0;
     return [self insertAction:action atIndex:self.actionViews.count];
 }
 
-- (RMActionView *)insertAction:(RMAction *)action atIndex:(int)index
+- (RMActionView *)insertAction:(RMAction *)action atIndex:(NSInteger)index
 {
     if (action) {
         RMActionView *actionView = [[RMActionView alloc] initWithTitle:action.title];

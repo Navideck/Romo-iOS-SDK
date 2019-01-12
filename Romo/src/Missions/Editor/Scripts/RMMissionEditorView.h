@@ -60,7 +60,7 @@
 - (RMActionView *)addAction:(RMAction *)action;
 
 /** Inserts an action at the provided index into the current script */
-- (RMActionView *)insertAction:(RMAction *)action atIndex:(int)index;
+- (RMActionView *)insertAction:(RMAction *)action atIndex:(NSInteger)index;
 
 - (void)actionView:(RMActionView *)actionView didDragByOffset:(CGPoint)offset fromOrigin:(CGPoint)origin;
 - (int)actionView:(RMActionView *)actionView didEndDragging:(CGPoint)offset fromOrigin:(CGPoint)origin;

@@ -219,7 +219,7 @@ static const float kHeartbeatRateMax = 1.0f;      // Max time between heartbeat 
 - (void)setDeviceMode:(RMDeviceMode)deviceMode
 {
     dispatch_async(self.commandQueue, ^{
-        _deviceMode = deviceMode;
+        self->_deviceMode = deviceMode;
         [self.otherCommands addObject:[NSNumber numberWithUnsignedChar:RMCommandToRobotSetMode]];
     });
 }

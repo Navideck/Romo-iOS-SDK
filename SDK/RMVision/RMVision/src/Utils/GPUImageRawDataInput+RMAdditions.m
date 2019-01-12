@@ -35,7 +35,7 @@
 - (id)initWithSize:(CGSize)imageSize pixelFormat:(GPUPixelFormat)pixelFormat type:(GPUPixelType)pixelType
 {
 
-    unsigned int channels;
+    unsigned int channels = 0;
     
     switch (pixelFormat) {
         case GPUPixelFormatRGB:

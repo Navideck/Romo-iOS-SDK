@@ -151,7 +151,7 @@ static NSString *animationKey = @"spriteAnimation";
 - (CAAnimationGroup *)spriteAnimationGroup
 {
     if (!_spriteAnimationGroup) {
-        __block int frameCount = [self.spriteMetaData[@"1"] count] * self.spriteMetaData.count;
+        __block NSInteger frameCount = [self.spriteMetaData[@"1"] count] * self.spriteMetaData.count;
         
         // For each peice of meta data, we create an animation frame for the bounds, position and contentsRect
         // changes. These will be used by the CAKeyframeAnimations.

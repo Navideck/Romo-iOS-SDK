@@ -53,14 +53,19 @@
         [rrect fill];
         
         [self.strokeColor setFill];
-        [self.label drawInRect:CGRectInset(self.location, 4, 0) withFont:[UIFont boldSystemFontOfSize:18.0]];
+        if (@available(iOS 7.0, *)) {
+            NSDictionary *attributes = @{NSFontAttributeName: [UIFont boldSystemFontOfSize:18.0]};
+            [self.label drawInRect: CGRectInset(self.location, 4, 0) withAttributes:attributes];
+        } else {
+            // Fallback on earlier versions
+            [self.label drawInRect:CGRectInset(self.location, 4, 0) withFont:[UIFont boldSystemFontOfSize:18.0]];
+        }
 
+//         [self.label drawInRect: withFont:[UIFont boldSystemFontOfSize:18.0]];
 //        self.center = CGPointMake(CGRectGetMidX(self.location), CGRectGetMidY(self.location));
 //        CGAffineTransform rot = CGAffineTransformMakeRotation(DEG2RAD(self.rotation));
 //        self.transform = rot;
     }
 }
-
-
 
 @end

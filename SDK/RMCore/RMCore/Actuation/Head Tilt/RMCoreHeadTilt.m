@@ -92,7 +92,7 @@ typedef void (^BoolBlock)(BOOL);
         // Set up a closed-loop controller to get us quickly & accurately to our desired angle
         __weak RMCoreHeadTilt *weakSelf = self;
         
-        float (^inputSource)() = ^float{
+        float (^inputSource)(void) = ^float{
             return weakSelf.headAngle;
         };
         
@@ -108,11 +108,11 @@ typedef void (^BoolBlock)(BOOL);
 
             // Check that we haven't been trying for too long & that we aren't close enough
             if (ABS(headAngle - desiredAngle) > RM_TILT_TO_ANGLE_MAX_DISCREPANCY && runTime < maxTiltRunTime) {
-                _tiltMotor.powerLevel = CLAMP(-1.0, PIDControllerOutput, 1.0);
+                self->_tiltMotor.powerLevel = CLAMP(-1.0, PIDControllerOutput, 1.0);
             } else {
                 // Ensure that we don't run this controller again after we've completed
                 isCompleted = YES;
-                _completion = nil;
+                self->_completion = nil;
 
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [weakSelf stopTilting];

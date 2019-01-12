@@ -67,7 +67,7 @@ NSString *missionPlaytimeKey = @"chapter-%d-%d-playtime-sec";
 {
     self = [super init];
     if (self) {
-        int initializedVersion = [[NSUserDefaults standardUserDefaults] integerForKey:initializedVersionKey];
+        NSInteger initializedVersion = [[NSUserDefaults standardUserDefaults] integerForKey:initializedVersionKey];
         if (initializedVersion < currentVersion) {
             [self reinitializeFromVersionToCurrentVersion:initializedVersion];
         }
@@ -128,8 +128,8 @@ NSString *missionPlaytimeKey = @"chapter-%d-%d-playtime-sec";
         // ...Then add in the locked chapters, ordered
         [_cachedOrderedChapters addObjectsFromArray:_cachedUnlockedChapters];
         [orderedChapters enumerateObjectsUsingBlock:^(id chapter, NSUInteger idx, BOOL *stop) {
-            if (![_cachedOrderedChapters containsObject:chapter]) {
-                [_cachedOrderedChapters addObject:chapter];
+            if (![self->_cachedOrderedChapters containsObject:chapter]) {
+                [self->_cachedOrderedChapters addObject:chapter];
             }
         }];
     }
@@ -359,7 +359,7 @@ NSString *missionPlaytimeKey = @"chapter-%d-%d-playtime-sec";
 
 - (RMChapterStatus)statusForChapter:(RMChapter)chapter
 {
-    return [[NSUserDefaults standardUserDefaults] integerForKey:[NSString stringWithFormat:chapterStatusKey, chapter]];
+    return (int)[[NSUserDefaults standardUserDefaults] integerForKey:[NSString stringWithFormat:chapterStatusKey, chapter]];
 }
 
 - (BOOL)setStatus:(RMChapterStatus)status forChapter:(RMChapter)chapter
@@ -396,12 +396,12 @@ NSString *missionPlaytimeKey = @"chapter-%d-%d-playtime-sec";
     return NO;
 }
 
-- (RMMissionStatus)statusForMissionInChapter:(RMChapter)chapter index:(int)index
+- (RMMissionStatus)statusForMissionInChapter:(RMChapter)chapter index:(NSInteger)index
 {
-    return [[NSUserDefaults standardUserDefaults] integerForKey:[NSString stringWithFormat:missionStatusKey, chapter, index]];
+    return (int )[[NSUserDefaults standardUserDefaults] integerForKey:[NSString stringWithFormat:missionStatusKey, chapter, index]];
 }
 
-- (BOOL)setStatus:(RMMissionStatus)status forMissionInChapter:(RMChapter)chapter index:(int)index
+- (BOOL)setStatus:(RMMissionStatus)status forMissionInChapter:(RMChapter)chapter index:(NSInteger)index
 {
     RMMissionStatus currentStatus = [self statusForMissionInChapter:chapter index:index];
     
@@ -446,7 +446,7 @@ NSString *missionPlaytimeKey = @"chapter-%d-%d-playtime-sec";
         case RMUnlockableMission: {
             NSString *unlockedMission = unlockable.value;
             
-            int splitIndex = [unlockedMission rangeOfString:@"-"].location;
+            NSInteger splitIndex = [unlockedMission rangeOfString:@"-"].location;
             
             int unlockedChapter = [[unlockedMission substringToIndex:splitIndex] intValue];
             int unlockedIndex = [[unlockedMission substringFromIndex:splitIndex + 1] intValue];
@@ -531,7 +531,7 @@ NSString *missionPlaytimeKey = @"chapter-%d-%d-playtime-sec";
     return newlyUnlocked;
 }
 
-- (void)incrementPlayTime:(double)playTime forMissionInChapter:(RMChapter)chapter index:(int)index
+- (void)incrementPlayTime:(double)playTime forMissionInChapter:(RMChapter)chapter index:(NSInteger)index
 {
     NSString *key = [NSString stringWithFormat:missionPlaytimeKey, chapter, index];
     double totalPlayTimeForMission = playTime + [[NSUserDefaults standardUserDefaults] doubleForKey:key];
@@ -540,7 +540,7 @@ NSString *missionPlaytimeKey = @"chapter-%d-%d-playtime-sec";
 
 #pragma mark - Private Methods
 
-- (void)reinitializeFromVersionToCurrentVersion:(int)version
+- (void)reinitializeFromVersionToCurrentVersion:(NSInteger)version
 {
     // First initialization (introduced in 2.5)
     if (version < 1) {
@@ -700,7 +700,7 @@ NSString *missionPlaytimeKey = @"chapter-%d-%d-playtime-sec";
     [self reinitializeFromVersionToCurrentVersion:0];
 }
 
-- (void)fastForwardThroughChapter:(RMChapter)chapter index:(int)index
+- (void)fastForwardThroughChapter:(RMChapter)chapter index:(NSInteger)index
 {
     // start fresh
     [self resetProgress];

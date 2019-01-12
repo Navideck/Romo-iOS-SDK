@@ -58,6 +58,9 @@
     driveControlParams.controlType = DRIVE_CONTROL_DPAD;
     driveControlParams.leftSlider = 0;
     driveControlParams.rightSlider = 0;
+    driveControlParams.distance = 0;
+    driveControlParams.angle = 0;
+    driveControlParams.sector = 0;
     [self setDriveParameters:driveControlParams];
 }
 

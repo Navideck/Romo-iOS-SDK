@@ -168,8 +168,8 @@ typedef NSString RMStoryElement;
  - 1 star -> 2 stars
  - 2 stars -> 3 stars
  */
-- (BOOL)setStatus:(RMMissionStatus)status forMissionInChapter:(RMChapter)chapter index:(int)index;
-- (RMMissionStatus)statusForMissionInChapter:(RMChapter)chapter index:(int)index;
+- (BOOL)setStatus:(RMMissionStatus)status forMissionInChapter:(RMChapter)chapter index:(NSInteger)index;
+- (RMMissionStatus)statusForMissionInChapter:(RMChapter)chapter index:(NSInteger)index;
 
 /**
  When a Mission is beaten and unlockables are achieved, save their status and unlock new items 
@@ -180,14 +180,14 @@ typedef NSString RMStoryElement;
 /**
  Stores the total playtime (sec) for a specific mission
  */
-- (void)incrementPlayTime:(double)playTime forMissionInChapter:(RMChapter)chapter index:(int)index;
+- (void)incrementPlayTime:(double)playTime forMissionInChapter:(RMChapter)chapter index:(NSInteger)index;
 
 #ifdef DEBUG
 - (void)resetProgress;
 /** 
  Unlocks everything through and including the provided chapter & index, e.g. 2-3 
  */
-- (void)fastForwardThroughChapter:(RMChapter)chapter index:(int)index;
+- (void)fastForwardThroughChapter:(RMChapter)chapter index:(NSInteger)index;
 #endif
 
 /**

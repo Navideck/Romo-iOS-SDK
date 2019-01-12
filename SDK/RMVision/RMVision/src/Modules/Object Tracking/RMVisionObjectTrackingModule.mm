@@ -56,8 +56,8 @@ using namespace cv;
 @property (nonatomic, readwrite) NSString *name;
 
 // Training data properties
-@property (nonatomic) int negativeResponseLabel;
-@property (nonatomic) int positiveResponseLabel;
+@property (nonatomic) NSInteger negativeResponseLabel;
+@property (nonatomic) NSInteger positiveResponseLabel;
 
 @property (nonatomic) RMVisionTrainingData *trainingDataObject;
 
@@ -399,12 +399,10 @@ using namespace cv;
     // Visualization
     if (self.generateVisualization && [self.vision.delegate respondsToSelector:@selector(showDebugImage:)])
     {
-        UIImageOrientation debugOrientation = UIImageOrientationUp;
-        if (self.vision.camera == RMCamera_Front) {
-            debugOrientation = UIImageOrientationUpMirrored;
-        }
-        
-        UIImage *resultUIImage = [[UIImage alloc]initWithCGImage: [self.nbFilter newCGImageFromCurrentlyProcessedOutput]];
+        CGImage *cgImage = [self.nbFilter newCGImageFromCurrentlyProcessedOutput];
+        UIImage *resultUIImage = [[UIImage alloc]initWithCGImage:cgImage];
+        CGImageRelease(cgImage);
+
         dispatch_async(dispatch_get_main_queue(), ^{
             if ([self.vision.delegate respondsToSelector:@selector(showDebugImage:)]) {
                 [self.vision.delegate showDebugImage:resultUIImage];
@@ -750,7 +748,7 @@ using namespace cv;
 /**
  Prepares the data for training the classifier by converting it into the correct formats
  @param image 2D raw BGRA image
- @param label 2D label image
+ @param labelImage 2D label image
  @param imageVector Nx4 matrix with each row as a training example
  @param labelVector Nx1 matrix with each row as a label for the corresponding training example in imageVector
  */
@@ -763,8 +761,8 @@ using namespace cv;
     
     size_t validLabelCount = countNonZero(labelImage);
     
-    imageVector.create(validLabelCount, 1, CV_8UC(NUM_FEATURES));
-    labelVector.create(validLabelCount, 1, CV_32FC1);
+    imageVector.create((int)validLabelCount, 1, CV_8UC(NUM_FEATURES));
+    labelVector.create((int)validLabelCount, 1, CV_32FC1);
     
     assert(image.type() == CV_8UC(NUM_FEATURES));
     assert(labelImage.type() == CV_32FC1);
@@ -800,7 +798,7 @@ using namespace cv;
     if (imageVector.isContinuous())
     {
         // Convert imageVector from 4 channel to 1 channel with BGRA values on each column
-        imageVector = imageVector.reshape(1,validLabelCount);
+        imageVector = imageVector.reshape(1, (int)validLabelCount);
         
         // Convert from uchar to float since the classification training needs float values
         imageVector.convertTo(imageVector, CV_32FC1);
@@ -838,7 +836,7 @@ using namespace cv;
         dispatch_async(lowPriorityQueue, ^{
             
             // Semaphore is used. Return immediately
-            if (dispatch_semaphore_wait(trainingDataSemaphore, DISPATCH_TIME_NOW)) {
+            if (dispatch_semaphore_wait(self->trainingDataSemaphore, DISPATCH_TIME_NOW)) {
                 return;
             }
             
@@ -861,7 +859,7 @@ using namespace cv;
             [weakSelf.nbFilter setModel:weakSelf.nbModel];
             
             // Done using the semaphore. Let GCD know that it can be used again.
-            dispatch_semaphore_signal(trainingDataSemaphore);
+            dispatch_semaphore_signal(self->trainingDataSemaphore);
             
         });
     }
@@ -885,7 +883,9 @@ using namespace cv;
         
         // Pull out the raw image for processing
         // Orientation should not be mirrored since our outputMat is not mirrored either
-        UIImage *rawImage = [[UIImage alloc]initWithCGImage:[self.nopFilter newCGImageFromCurrentlyProcessedOutput]];
+        CGImage *cgImage = [self.nopFilter newCGImageFromCurrentlyProcessedOutput];
+        UIImage *rawImage = [[UIImage alloc]initWithCGImage:cgImage];
+        CGImageRelease(cgImage);
         cv::Mat rawMat = [UIImage cvMatWithImage:rawImage];
         cv::cvtColor(rawMat, rawMat, CV_BGRA2BGR);
 
@@ -932,7 +932,7 @@ using namespace cv;
             dispatch_async(lowPriorityQueue, ^{
                 
                 // Semaphore is used. Return immediately
-                if (dispatch_semaphore_wait(trainingDataSemaphore, DISPATCH_TIME_NOW)) {
+                if (dispatch_semaphore_wait(self->trainingDataSemaphore, DISPATCH_TIME_NOW)) {
                     return;
                 }
                 
@@ -993,11 +993,10 @@ using namespace cv;
                 [weakSelf.nbFilter setModel:weakSelf.nbModel];
                 
                 // Done using the semaphore. Let GCD know that it can be used again.
-                dispatch_semaphore_signal(trainingDataSemaphore);
+                dispatch_semaphore_signal(self->trainingDataSemaphore);
                 
             });
         }
-        
     }
 }
 

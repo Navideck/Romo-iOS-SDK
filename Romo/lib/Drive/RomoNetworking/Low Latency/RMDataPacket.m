@@ -23,12 +23,12 @@
     return [[RMDataPacket alloc] initWithType:type];
 }
 
-+ (RMDataPacket *)dataPacketWithType:(DataPacketType)type data:(const void *)data dataSize:(uint32_t)dataSize
++ (RMDataPacket *)dataPacketWithType:(DataPacketType)type data:(const void *)data dataSize:(NSUInteger)dataSize
 {
     return [[RMDataPacket alloc] initWithType:type data:data dataSize:dataSize];
 }
 
-+ (RMDataPacket *)dataPacketWithType:(DataPacketType)type data:(const void *)data dataSize:(uint32_t)dataSize destination:(RMAddress *)destination
++ (RMDataPacket *)dataPacketWithType:(DataPacketType)type data:(const void *)data dataSize:(NSUInteger)dataSize destination:(RMAddress *)destination
 {
     return [[RMDataPacket alloc] initWithType:type data:data dataSize:dataSize destination:destination];
 }
@@ -51,12 +51,12 @@
     return [self initWithType:type data:NULL dataSize:0];
 }
 
-- (id)initWithType:(DataPacketType)type data:(const void *)data dataSize:(uint32_t)dataSize
+- (id)initWithType:(DataPacketType)type data:(const void *)data dataSize:(NSUInteger)dataSize
 {
     return [self initWithType:type data:data dataSize:dataSize destination:nil];
 }
 
-- (id)initWithType:(DataPacketType)type data:(const void *)data dataSize:(uint32_t)dataSize destination:(RMAddress *)destination
+- (id)initWithType:(DataPacketType)type data:(const void *)data dataSize:(NSUInteger)dataSize destination:(RMAddress *)destination
 {
     if (self = [super init]) {
         _type = type;
@@ -84,14 +84,14 @@
 
 #pragma mark - Methods --
 
-+ (uint32_t)headerSize
++ (NSUInteger)headerSize
 {
     return HEADER_SIZE;
 }
 
 - (void)serializeToBytes:(char [])bytes
 {
-    int32_t *intPtr = (int32_t *) bytes;
+    NSInteger *intPtr = (NSInteger *) bytes;
     
     intPtr[0] = _type;
     intPtr[1] = _dataSize;
@@ -99,7 +99,7 @@
     memcpy(bytes + [RMDataPacket headerSize], _data, _dataSize);
 }
 
-- (uint32_t)packetSize
+- (NSUInteger)packetSize
 {
     return [RMDataPacket headerSize] + _dataSize;
 }

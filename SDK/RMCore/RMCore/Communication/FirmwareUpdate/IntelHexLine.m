@@ -32,13 +32,13 @@
     
     range.location = BYTE_COUNT_START_INDEX;
     range.length = BYTE_COUNT_LENGTH;
-    [[NSScanner scannerWithString:[line substringWithRange:range]] scanHexInt:&_byteCount];
+    [[NSScanner scannerWithString:[line substringWithRange:range]] scanHexInt:(unsigned int *)&_byteCount];
     _cksum += _byteCount;
-    
-    
+
+
     range.location = ADDRESS_START_INDEX;
     range.length = ADDRESS_LENGTH;
-    [[NSScanner scannerWithString:[line substringWithRange:range]] scanHexInt:(NSUInteger *)&_address];
+    [[NSScanner scannerWithString:[line substringWithRange:range]] scanHexInt:(unsigned int *)&_address];
     _cksum += _address.lowByte;
     _cksum += _address.highByte;
     
@@ -86,7 +86,7 @@
     _cksum += 0x01;
     
     if (_cksum != _checksum) {
-        NSLog(@"ERROR: checksum mismatch on line %d (read: %.2X expected: %.2X)", _lineNumber, _checksum, _cksum);
+        NSLog(@"ERROR: checksum mismatch on line %lu (read: %.2lX expected: %.2X)", (unsigned long)_lineNumber, (unsigned long)_checksum, _cksum);
         return nil;
     }
     
