@@ -95,7 +95,7 @@ void runSynchronouslyOnGPUImageQueue(void (^block)(void))
         
         // Initialize the raw data output
         runSynchronouslyOnGPUImageQueue(^{
-            _rawDataOutput = [[GPUImageRawDataOutput alloc] initWithImageSize:processingSize resultsInBGRAFormat:YES];
+            self->_rawDataOutput = [[GPUImageRawDataOutput alloc] initWithImageSize:processingSize resultsInBGRAFormat:YES];
         });
         
         _notchFilter = [[GPUImageBrightColorNotchFilter alloc] init];
@@ -378,17 +378,17 @@ void runSynchronouslyOnGPUImageQueue(void (^block)(void))
     }
 
     size_t totalPixels = image.rows * image.cols;
-    cv::Mat tmp = image.reshape(1, totalPixels);
+    cv::Mat tmp = image.reshape(1, (int)totalPixels);
     cv::Mat maskVector = mask.reshape(1, mask.rows*mask.cols);
 
     size_t nonZeroCount = cv::countNonZero(maskVector);
 
-    imageVector.create(nonZeroCount, tmp.cols, tmp.type());
+    imageVector.create((int)nonZeroCount, tmp.cols, tmp.type());
 
     size_t imageVectorRow = 0;
     for (size_t i = 0; i < tmp.rows; i++) {
-        if (maskVector.at<uchar>(i)) {
-            tmp.row(i).copyTo(imageVector.row(imageVectorRow));
+        if (maskVector.at<uchar>((int)i)) {
+            tmp.row((int)i).copyTo(imageVector.row((int)imageVectorRow));
             imageVectorRow++;
         }
     }
@@ -401,8 +401,8 @@ void runSynchronouslyOnGPUImageQueue(void (^block)(void))
     
     size_t outputRow = 0;
     for (size_t i = 0; i < mat.rows; i++) {
-        if (mask.at<uchar>(i)) {
-            mat.row(i).copyTo(output.row(outputRow));
+        if (mask.at<uchar>((int)i)) {
+            mat.row((int)i).copyTo(output.row((int)outputRow));
             outputRow++;
         }
     }

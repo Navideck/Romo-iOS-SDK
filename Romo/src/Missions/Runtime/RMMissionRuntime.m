@@ -228,13 +228,13 @@ static RMMissionRuntime *instance;
         BOOL shouldChangeEmotion = NO;
         RMCharacterEmotion emotion = RMCharacterEmotionHappy;
         float emotionTransitionTime = 0.0;
-        float moveDuration, waitDuration;
+        float moveDuration;
         
         switch (step) {
             case 0: {
                 moveDuration = 1.75;
-                waitDuration = 1.0;
-                
+//                waitDuration = 1.0;
+
                 shouldChangeEmotion = YES;
                 emotionTransitionTime = moveDuration - 0.3;
                 emotion = RMCharacterEmotionScared;
@@ -268,8 +268,8 @@ static RMMissionRuntime *instance;
             }
             case 1: {
                 moveDuration = 1.75;
-                waitDuration = 1.0;
-                
+//                waitDuration = 1.0;
+
                 shouldChangeEmotion = YES;
                 emotionTransitionTime = moveDuration - 0.2;
                 emotion = RMCharacterEmotionIndifferent;
@@ -300,8 +300,8 @@ static RMMissionRuntime *instance;
             }
             case 2: {
                 moveDuration = 1.75;
-                waitDuration = 1.0;
-                
+//                waitDuration = 1.0;
+
                 shouldChangeEmotion = YES;
                 emotionTransitionTime = moveDuration - 0.2;
                 emotion = RMCharacterEmotionCurious;
@@ -333,8 +333,8 @@ static RMMissionRuntime *instance;
             }
             case 3: {
                 moveDuration = 1.9;
-                waitDuration = 0.85;
-                
+//                waitDuration = 0.85;
+
                 shouldChangeEmotion = YES;
                 emotionTransitionTime = moveDuration - .475;
                 emotion = RMCharacterEmotionBewildered;
@@ -369,8 +369,8 @@ static RMMissionRuntime *instance;
             }
             case 4: {
                 moveDuration = 1.05;
-                waitDuration = 1.7;
-                
+//                waitDuration = 1.7;
+
                 shouldChangeEmotion = YES;
                 emotionTransitionTime = moveDuration + 0.35;
                 emotion = RMCharacterEmotionCurious;
@@ -399,8 +399,8 @@ static RMMissionRuntime *instance;
             }
             case 5: {
                 moveDuration = 1.05;
-                waitDuration = 1.7;
-                
+//                waitDuration = 1.7;
+
                 shouldChangeEmotion = YES;
                 emotionTransitionTime = moveDuration + 0.45;
                 emotion = RMCharacterEmotionExcited;
@@ -429,8 +429,8 @@ static RMMissionRuntime *instance;
             }
             case 6: {
                 moveDuration = 1.05;
-                waitDuration = 1.7;
-                
+//                waitDuration = 1.7;
+
                 shouldChangeEmotion = YES;
                 emotionTransitionTime = moveDuration + 0.5;
                 emotion = RMCharacterEmotionHappy;
@@ -459,8 +459,8 @@ static RMMissionRuntime *instance;
                 break;
             }
             case 7: {
-                moveDuration = 1.85;
-                waitDuration = 0.9;
+//                moveDuration = 1.85;
+//                waitDuration = 0.9;
                 
                 dance = @[
                           [RMRomotionAction actionWithLeftMotorPower:0.45 rightMotorPower:0.15 tiltMotorPower:-0.6 forDuration:0.15 robot:Romo.robot],

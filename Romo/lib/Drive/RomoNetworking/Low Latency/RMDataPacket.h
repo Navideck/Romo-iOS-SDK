@@ -32,8 +32,8 @@ typedef enum
 @property (nonatomic) void *data;
 
 /// The data to send with the packet:
-@property (nonatomic) uint32_t dataSize;
-@property (nonatomic, readonly) uint32_t packetSize;
+@property (nonatomic) NSUInteger dataSize;
+@property (nonatomic, readonly) NSUInteger packetSize;
 
 @property (nonatomic, strong) RMAddress *source;
 /// The destination Address of the DataPacket. Must be set before sending over UDP.
@@ -51,7 +51,7 @@ typedef enum
  * @return An autoreleased DataPacket instance.
  * @param data The data to deserialize a Message from.
  */
-+ (RMDataPacket *)dataPacketWithType:(DataPacketType)type data:(const void *)data dataSize:(uint32_t)dataSize;
++ (RMDataPacket *)dataPacketWithType:(DataPacketType)type data:(const void *)data dataSize:(NSUInteger)dataSize;
 
 /**
  * Creates an autoreleased DataPacket with a Message deserialized from the provided data and source Address.
@@ -60,7 +60,7 @@ typedef enum
  * @param data The data to deserialize a Message from.
  * @param source The Address the DataDataPacket was received from.
  */
-+ (RMDataPacket *)dataPacketWithType:(DataPacketType)type data:(const void *)data dataSize:(uint32_t)dataSize destination:(RMAddress *)destination;
++ (RMDataPacket *)dataPacketWithType:(DataPacketType)type data:(const void *)data dataSize:(NSUInteger)dataSize destination:(RMAddress *)destination;
 
 #pragma mark - Initialization --
 
@@ -74,7 +74,7 @@ typedef enum
  * @return An initialized DataPacket instance.
  * @param data The data to deserialize a Message from.
  */
-- (id)initWithType:(DataPacketType)type data:(const void *)data dataSize:(uint32_t)dataSize;
+- (id)initWithType:(DataPacketType)type data:(const void *)data dataSize:(NSUInteger)dataSize;
 
 /**
  * Initializes a DataPacket with a Message deserialized from the provided data and source Address.
@@ -83,11 +83,11 @@ typedef enum
  * @param data The data to deserialize a Message from.
  * @param source The Address the DataPacket was received from.
  */
-- (id)initWithType:(DataPacketType)type data:(const void *)data dataSize:(uint32_t)dataSize destination:(RMAddress *)destination;
+- (id)initWithType:(DataPacketType)type data:(const void *)data dataSize:(NSUInteger)dataSize destination:(RMAddress *)destination;
 
-+ (uint32_t)headerSize;
++ (NSUInteger)headerSize;
 
-- (uint32_t)packetSize;
+- (NSUInteger)packetSize;
 - (void)serializeToBytes:(char[])bytes;
 
 - (void *)extractData;

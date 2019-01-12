@@ -292,20 +292,16 @@ didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer
 {
     CMTime duration = CMTimeMake(1, fps);
     
-    // iOS 6.0 supports video min/max frame duration for capture connections
-    if (SYSTEM_VERSION_LESS_THAN(@"7.0")) {
-        for (AVCaptureConnection *connection in _captureOutput.connections) {
-            if (connection.supportsVideoMinFrameDuration) {
-                connection.videoMinFrameDuration = duration;
-            }
-            if (connection.supportsVideoMaxFrameDuration) {
-                connection.videoMaxFrameDuration = duration;
-            }
+    for (AVCaptureConnection *connection in _captureOutput.connections) {
+        if (connection.supportsVideoMinFrameDuration) {
+            connection.videoMinFrameDuration = duration;
+        }
+        if (connection.supportsVideoMaxFrameDuration) {
+            connection.videoMaxFrameDuration = duration;
         }
     }
-    
-    // iOS 7.0 uses activeVideoMin/MaxFrameDuration on the capture device
-    if ([_captureDevice respondsToSelector:@selector(setActiveVideoMinFrameDuration:)] && [_captureDevice respondsToSelector:@selector(setActiveVideoMaxFrameDuration:)]) {
+
+    if (@available(iOS 7.0, *)) {
         [_captureDevice lockForConfiguration:nil];
         _captureDevice.activeVideoMinFrameDuration = CMTimeMake(1, fps);
         _captureDevice.activeVideoMaxFrameDuration = CMTimeMake(1, fps);

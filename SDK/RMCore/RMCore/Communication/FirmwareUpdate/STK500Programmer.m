@@ -36,7 +36,7 @@
     
     if (self) {
         _transport = transport;
-        _fw = [[IntelHexImage alloc] initWithContentsOfURL:[NSURL URLWithString:fileURL]];
+        _fw = [[IntelHexImage alloc] initWithContentsOfURL:fileURL];
         
         _fw.blockSize = ATMEGA_PAGE_SIZE;
         _programmerState = RMProgrammerStateInit;

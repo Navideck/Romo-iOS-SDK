@@ -138,7 +138,7 @@ NSString *const RMVoiceUserDidSelectionOptionNotification = @"RMVoiceUserDidSele
                                                       self.presenting = NO;
                                                       
                                                       if (self.presentingCompletion) {
-                                                          void (^presentingCompletion)() = self.presentingCompletion;
+                                                          void (^presentingCompletion)(void) = self.presentingCompletion;
                                                           self.presentingCompletion = nil;
                                                           presentingCompletion();
                                                       }
@@ -154,7 +154,7 @@ NSString *const RMVoiceUserDidSelectionOptionNotification = @"RMVoiceUserDidSele
         self.centerY = self.superview.height - MAX(self.height / 2.0, 80);
         
         if (autoDismiss) {
-            int numberOfWords = [speech componentsSeparatedByString:@" "].count;
+            NSInteger numberOfWords = [speech componentsSeparatedByString:@" "].count;
             float timeInterval = 2.0 + numberOfWords / (WORDS_PER_MINUTE / 60.0);
             
             self.duration = timeInterval;
@@ -181,7 +181,7 @@ NSString *const RMVoiceUserDidSelectionOptionNotification = @"RMVoiceUserDidSele
         self.divider.top = self.height;
         [self addSubview:self.divider];
         
-        int i = 0;
+        NSInteger i = 0;
         for (NSString *answer in answers) {
             NSString *localizedAnswerOption = [[NSBundle mainBundle] localizedStringForKey:answer value:answer table:@"CharacterScripts"];
             UIButton *answerButton = [self buttonWithText:localizedAnswerOption emphasized:(i == 1)];
@@ -260,7 +260,7 @@ NSString *const RMVoiceUserDidSelectionOptionNotification = @"RMVoiceUserDidSele
         self.userInteractionEnabled = NO;
         
         // Pop out all labels
-        int last = self.labels.count - 1;
+        NSInteger last = self.labels.count - 1;
         [self.labels enumerateObjectsUsingBlock:^(UILabel *label, NSUInteger index, BOOL *stop) {
             [UIView animateWithDuration:0.2 delay:0.2*index options:0
                              animations:^{
@@ -326,7 +326,7 @@ NSString *const RMVoiceUserDidSelectionOptionNotification = @"RMVoiceUserDidSele
                                                                  @"SelectedOptionName": [answer titleForState:UIControlStateDisabled] ? [answer titleForState:UIControlStateDisabled] : @"-"}];
     
     if ([self.delegate respondsToSelector:@selector(userDidSelectOptionAtIndex:forVoice:)]) {
-        [self.delegate userDidSelectOptionAtIndex:answer.tag forVoice:self];
+        [self.delegate userDidSelectOptionAtIndex:(int)answer.tag forVoice:self];
     }
 }
 

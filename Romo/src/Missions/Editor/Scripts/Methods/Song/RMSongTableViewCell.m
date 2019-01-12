@@ -60,10 +60,10 @@
 
     if (song) {
         NSString *songTitle = [song valueForProperty:MPMediaItemPropertyTitle];
-        self.songTitleLabel.text = songTitle.length ? songTitle : @"(Unknown Title)";
+        self.songTitleLabel.text = songTitle.length ? songTitle : NSLocalizedString(@"(Unknown Title)",@"(Unknown Title)");
 
         NSString *artistTitle = [song valueForProperty:MPMediaItemPropertyArtist];
-        self.artistTitleLabel.text = artistTitle.length ? artistTitle : @"(Unknown Artist)";
+        self.artistTitleLabel.text = artistTitle.length ? artistTitle : NSLocalizedString(@"(Unknown Artist)",@"(Unknown Artist)");
 
         UIImage *albumArtworkImage = [[song valueForProperty:MPMediaItemPropertyArtwork] imageWithSize:CGSizeMake(self.height, self.height)];
         self.albumArtwork.image = albumArtworkImage ? albumArtworkImage : [UIImage imageNamed:@"noArtwork.png"];

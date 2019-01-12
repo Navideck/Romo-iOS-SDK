@@ -10,6 +10,6 @@
 
 @interface RMSandboxMission : RMMission
 
-- (instancetype)initWithChapter:(RMChapter)chapter index:(int)index;
+- (instancetype)initWithChapter:(RMChapter)chapter index:(NSInteger)index;
 
 @end

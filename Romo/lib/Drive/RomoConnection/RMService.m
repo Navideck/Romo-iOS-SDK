@@ -73,7 +73,7 @@
     {
         [self setName:[coder decodeObjectForKey:KEY_NAME]];
         [self setPort:[coder decodeObjectForKey:KEY_PORT]];
-        [self setProtocol:[coder decodeIntegerForKey:KEY_PROTOCOL]];
+        [self setProtocol:(ServiceProtocol)[coder decodeIntegerForKey:KEY_PROTOCOL]];
     }
     
     return self;

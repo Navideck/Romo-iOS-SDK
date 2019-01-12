@@ -36,10 +36,14 @@
         [startColor getRed:&r1 green:&g1 blue:&b1 alpha:&a1];
         [endColor getRed:&r2 green:&g2 blue:&b2 alpha:&a2];
 
-        CGSize textSize = [label.text sizeWithAttributes:
-                           @{NSFontAttributeName:label.font}];
+        CGSize textSize;
+        if (@available(iOS 7.0, *)) {
+            textSize = [label.text sizeWithAttributes:@{NSFontAttributeName:label.font}];
+        } else {
+            // Fallback on earlier versions
+            textSize = [label.text sizeWithFont:label.font];
+        }
         UIGraphicsBeginImageContext(textSize);
-
         CGContextRef context = UIGraphicsGetCurrentContext();
         UIGraphicsPushContext(context);
         CGColorSpaceRef rgbColorspace = CGColorSpaceCreateDeviceRGB();
@@ -48,6 +52,7 @@
         CGGradientRef gradient = CGGradientCreateWithColorComponents(rgbColorspace, colors, locations, 2);
         CGPoint topCenter = CGPointMake(0, 0);
         CGPoint bottomCenter = CGPointMake(0, textSize.height);
+
         CGContextDrawLinearGradient(context, gradient, topCenter, bottomCenter, 0);
 
         CGGradientRelease(gradient);

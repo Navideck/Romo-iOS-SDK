@@ -104,7 +104,7 @@ static const CGFloat otherEventIconScale = 0.6667;
 
 - (void)removeEventIcon:(RMEventIcon *)eventIcon
 {
-    int indexOfEventIcon = [self.eventIcons indexOfObject:eventIcon];
+    NSInteger indexOfEventIcon = [self.eventIcons indexOfObject:eventIcon];
     // Do not delete if the event icon is not in there
     // Do not delete if there is only one event
     // Do not delete if not allowed to add more events as defined by mission

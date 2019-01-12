@@ -13,6 +13,6 @@
 -(id)initWithModule:(RMVisionObjectTrackingModule *)module;
 
 -(BOOL)startDebugCapture;
--(BOOL)stopDebugCaptureWithCompletion:(void(^)(NSData *compressedData))callback;
+//-(BOOL)stopDebugCaptureWithCompletion:(void(^)(NSData *compressedData))callback;
 
 @end

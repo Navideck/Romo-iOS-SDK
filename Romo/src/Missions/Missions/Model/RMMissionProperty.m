@@ -79,7 +79,7 @@
 
 #pragma mark - Private Methods
 
-- (BOOL)matchingCountIsInRange:(int)matchingCount
+- (BOOL)matchingCountIsInRange:(NSInteger)matchingCount
 {    
     BOOL matchesLowerBound = (self.minimumCount == -1) || (self.minimumCount <= matchingCount);
     BOOL matchesUpperBound = (self.maximumCount == -1) || (matchingCount <= self.maximumCount);

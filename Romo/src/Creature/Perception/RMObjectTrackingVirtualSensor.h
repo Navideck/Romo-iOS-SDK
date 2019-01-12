@@ -32,7 +32,7 @@
 @property (nonatomic) BOOL allowAdaptiveBackgroundUpdates;
 @property (nonatomic) BOOL allowAdaptiveForegroundUpdates;
 
--(void)captureNegativeTrainingDataWithCompletion:(void (^)())completion;
+-(void)captureNegativeTrainingDataWithCompletion:(void (^)(void))completion;
 
 - (void)startMotionTriggeredColorTraining;
 - (void)stopMotionTriggeredColorTraining;

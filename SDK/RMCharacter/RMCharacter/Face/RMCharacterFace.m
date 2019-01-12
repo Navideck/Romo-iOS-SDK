@@ -137,9 +137,9 @@ int _audioBreakpoints[33] = {
                                forEmotion:_emotion
                                completion:^(BOOL finished) {
                                    // If the desired emotion changed, we can just go to that one
-                                   if (_queuedEmotion) {
-                                       finalEmotion = _queuedEmotion;
-                                       _queuedEmotion = 0;
+                                   if (self->_queuedEmotion) {
+                                       finalEmotion = self->_queuedEmotion;
+                                       self->_queuedEmotion = 0;
                                    }
                                    // Animated into into new emotion
                                    [weakSelf.delegate expressionFaceAnimationDidStart];
@@ -170,7 +170,7 @@ int _audioBreakpoints[33] = {
         _colorFill = [[RMCharacterColorFill alloc] initWithFrame:_hiddenView.bounds];
         
         // Ensure we add the color fill above any complexion views
-        __block int highestIndex = -1;
+        __block NSInteger highestIndex = -1;
         [_hiddenView.subviews enumerateObjectsUsingBlock:^(UIView* subview, NSUInteger index, BOOL *stop) {
             if (subview.tag == 111) {
                 highestIndex = index;
@@ -209,9 +209,9 @@ int _audioBreakpoints[33] = {
             [weakSelf.animation animateWithAction:RMAnimatedActionExpression
                                     forExpression:expression
                                        completion:^(BOOL finished) {
-                                           if (_queuedEmotion) {
-                                               finalEmotion = _queuedEmotion;
-                                               _queuedEmotion = 0;
+                                           if (self->_queuedEmotion) {
+                                               finalEmotion = self->_queuedEmotion;
+                                               self->_queuedEmotion = 0;
                                            }
                                            weakSelf.animation.breakpointFrame = -1;
                                            weakSelf.complexion = RMCharacterExpressionNone;
@@ -240,7 +240,7 @@ int _audioBreakpoints[33] = {
             [self.animation animateWithAction:RMAnimatedActionOutro
                                    forEmotion:startEmotion
                                    completion:^(BOOL finished) {
-                                       _emotion = finalEmotion;
+                                       self->_emotion = finalEmotion;
                                        [weakSelf.delegate expressionFaceAnimationDidStart];
                                        [weakSelf.animation animateWithAction:RMAnimatedActionIntro
                                                                forExpression:expression
@@ -354,7 +354,7 @@ int _audioBreakpoints[33] = {
     [self.animation animateWithAction:RMAnimatedActionIntro
                            forEmotion:_emotion
                            completion:^(BOOL finished) {
-                               [weakSelf immediateTransitionToEmotion:_emotion];
+                               [weakSelf immediateTransitionToEmotion:self->_emotion];
                            }];
 }
 
@@ -502,7 +502,7 @@ int _audioBreakpoints[33] = {
     if (shouldAnimate) {
         [UIView animateWithDuration:0.25
                          animations:^(void) {
-                             _faceView.transform = transform;
+                             self->_faceView.transform = transform;
                          }];
     } else {
         _faceView.transform = transform;
@@ -543,6 +543,7 @@ int _audioBreakpoints[33] = {
 
 - (void)didReceiveMemoryWarning
 {
+    [super didReceiveMemoryWarning];
     [self.animation didReceiveMemoryWarning];
     [self.delegate didReceiveMemoryWarning];
 }

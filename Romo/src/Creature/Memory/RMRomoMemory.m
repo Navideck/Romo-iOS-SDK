@@ -51,7 +51,7 @@ NSString *const RMMemoryKey_RomoName = @"romoName";
         _filePath = [libPath stringByAppendingPathComponent:kRMRomoMemoryStoreFileName];
         
         // Try to load from disk
-        _memory = [NSDictionary dictionaryWithContentsOfFile:_filePath];
+        _memory = (NSMutableDictionary*)[NSDictionary dictionaryWithContentsOfFile:_filePath];
         
 #ifndef ROMO_CONTROL_APP
         // Add ourselves as an observer for name changes

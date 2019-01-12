@@ -9,7 +9,7 @@
 @interface RAVVideoOutput : NSObject
 
 - (UIView *)prepareOutputViewWithFrame:(CGRect)frame;
-- (void)playVideoFrame:(void *)frame length:(uint32_t)length;
+- (void)playVideoFrame:(void *)frame length:(NSUInteger)length;
 
 /// The remote streaming view.
 @property (nonatomic) UIView *peerView;

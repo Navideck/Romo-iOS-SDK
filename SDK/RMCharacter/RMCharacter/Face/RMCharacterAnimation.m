@@ -113,7 +113,7 @@ typedef void (^BoolBlock)(BOOL);
             _breakpointFrame = -1;
         }
         
-        int frameIndex = _reversed ? (_crop.count - currentFrame - 1) : currentFrame;
+        unsigned long frameIndex = _reversed ? (_crop.count - currentFrame - 1) : currentFrame;
         NSDictionary* crop = _crop[frameIndex];
         NSDictionary* frame = crop[@"frame"];
         NSDictionary* sourceFrame = crop[@"spriteSourceSize"];

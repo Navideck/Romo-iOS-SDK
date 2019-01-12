@@ -423,8 +423,8 @@
                                  self.background.transform = self.contentView.transform;
                                  self.background.left = backgroundLeft;
                                  
-                                 _glow.transform = self.contentView.transform;
-                                 _glow.left = glowLeft + 4.0;
+                                 self->_glow.transform = self.contentView.transform;
+                                 self->_glow.left = glowLeft + 4.0;
                                  
                                  self.deleteButton.left = self.contentView.width + 8;
                                  self.deleteButton.alpha = 1.0;
@@ -441,8 +441,8 @@
                                  self.background.transform = self.contentView.transform;
                                  self.background.left = backgroundLeft;
                                  
-                                 _glow.transform = self.contentView.transform;
-                                 _glow.left = glowLeft - 4.0;
+                                 self->_glow.transform = self.contentView.transform;
+                                 self->_glow.left = glowLeft - 4.0;
                                  
                                  self.deleteButton.left = self.width;
                                  self.deleteButton.alpha = 0.0;

@@ -44,7 +44,7 @@ NSString *const RMWiFiDriveRobotControllerSessionDidEnd = @"RMWiFiDriveRobotCont
 @property (nonatomic) int timeoutCount;
 
 /** Runs once this robot controller becomes active */
-@property (nonatomic, copy) void (^activeCompletion)();
+@property (nonatomic, copy) void (^activeCompletion)(void);
 
 - (void)processSlidersLeft:(float)left right:(float)right;
 - (void)processDPadSector:(RMDpadSector)sector;
@@ -213,7 +213,7 @@ NSString *const RMWiFiDriveRobotControllerSessionDidEnd = @"RMWiFiDriveRobotCont
 - (void)session:(RMSession *)session receivedService:(RMService *)service
 {
     if ([service isKindOfClass:[RAVService class]]) {
-        void (^activeCompletion)() = ^{
+        void (^activeCompletion)(void) = ^{
             self.avSubscriber = (RAVSubscriber *)[service subscribe];
             [self.avSubscriber start];
             self.avSubscriber.videoInput.imageCapturingDelegate = self;
