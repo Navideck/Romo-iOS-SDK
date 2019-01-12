@@ -30,7 +30,7 @@ static const CGFloat universeScale = 3.0;
 @property (nonatomic) float animationProgress;
 @property (nonatomic) double lastTime;
 @property (nonatomic) dispatch_source_t animationTimerSource;
-@property (nonatomic, copy) void (^completion)();
+@property (nonatomic, copy) void (^completion)(void);
 
 @end
 
@@ -42,7 +42,8 @@ static const CGFloat universeScale = 3.0;
     if (self) {
         self.userInteractionEnabled = YES;
         self.clipsToBounds = YES;
-        
+        self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+
         self.frame = frame;
         [self addSubview:self.backgroundImageView];
 
@@ -137,7 +138,7 @@ static const CGFloat universeScale = 3.0;
     }
 }
 
-- (void)setCameraLocation:(RMPoint3D)cameraLocation animatedWithDuration:(float)duration completion:(void (^)())completion
+- (void)setCameraLocation:(RMPoint3D)cameraLocation animatedWithDuration:(float)duration completion:(void (^)(void))completion
 {
     if (!self.animating) {
         if (duration > 0) {

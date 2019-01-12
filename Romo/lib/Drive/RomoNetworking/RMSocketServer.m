@@ -71,7 +71,7 @@
     });
     
     dispatch_source_set_cancel_handler(_readSource, ^{ @autoreleasepool {
-        close(_nativeSocket);
+        close(self->_nativeSocket);
     }});
     
     dispatch_resume(_readSource);

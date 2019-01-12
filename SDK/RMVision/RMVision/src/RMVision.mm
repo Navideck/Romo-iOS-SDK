@@ -309,13 +309,6 @@ NSString *const RMVisionModule_GPUImageExample  = @"GPUImageExample";
         return;
     }
     
-    int nativeCameraIndex = -1;
-    if (camera == RMCamera_Back) {
-        nativeCameraIndex = 0;
-    } else if (camera == RMCamera_Front) {
-        nativeCameraIndex = 1;
-    }
-    
     if (camera >= 0 && camera < [devices count]) {
         self.device = [devices objectAtIndex:camera];
     } else {
@@ -589,24 +582,21 @@ NSString *const RMVisionModule_GPUImageExample  = @"GPUImageExample";
     NSError *error;
     
     if ( [self.device lockForConfiguration:&error] ) {
-        // setActiveVideoMinFrameDuration is only available in iOS 7.0 and above
-        if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0")) {
+        if (@available(iOS 7.0, *)) {
             [self.device setActiveVideoMinFrameDuration:CMTimeMake(1, frameRate)];
             [self.device setActiveVideoMaxFrameDuration:CMTimeMake(1, frameRate)];
-        }
-        else {
-            // videoMinFrameDuration is depreciated in iOS 7
+        } else {
+            // Fallback on earlier versions
             for (AVCaptureConnection *connection in self.videoOutput.connections) {
                 if (connection.supportsVideoMinFrameDuration) {
                     connection.videoMinFrameDuration = CMTimeMake(1, frameRate);
                 }
-                
+
                 if (connection.supportsVideoMaxFrameDuration) {
                     connection.videoMaxFrameDuration = CMTimeMake(1, frameRate);
                 }
             }
         }
-        
         [self.device unlockForConfiguration];
     } else {
         NSLog(@"Error: %@", error);
@@ -801,7 +791,9 @@ NSString *const RMVisionModule_GPUImageExample  = @"GPUImageExample";
     }
     
     // Add to list of active modules
-    self.activeModules = [self.activeModules setByAddingObject:activatedModule];
+    if (activatedModule != nil) {
+        self.activeModules = [self.activeModules setByAddingObject:activatedModule];
+    }
     return YES;
 }
 

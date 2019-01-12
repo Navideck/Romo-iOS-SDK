@@ -8,6 +8,7 @@
 
 #import "RMWebSocket.h"
 #import <SocketRocket/SRWebSocket.h>
+#import "RMShared-Prefix.pch"
 
 /**
  * The values of the following enum are important. They match up directly with
@@ -106,7 +107,7 @@ DDLOG_ENABLE_DYNAMIC_LEVELS
 
         // If the host is already targeting some port, leave it be.
         // Else, have it target the alternate port.
-        NSString *host = (numberOfMatches == 1) ? self.host : [NSString stringWithFormat:@"%@:%d", self.host, alternatePort];
+        NSString *host = (numberOfMatches == 1) ? self.host : [NSString stringWithFormat:@"%@:%ld", self.host, alternatePort];
         _serverURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/socket.io/1", host]];
     }
 
@@ -118,22 +119,39 @@ DDLOG_ENABLE_DYNAMIC_LEVELS
     NSTimeInterval time = [[NSDate date] timeIntervalSince1970] * 1000;
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@?t=%.0f", [self serverURL], time]];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    
-    [NSURLConnection
-     sendAsynchronousRequest:request
-     queue:[NSOperationQueue mainQueue]
-     completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-         if (connectionError) {
-             if ([self.delegate respondsToSelector:@selector(webSocket:didReceiveError:)]) {
-                 [self.delegate webSocket:self didReceiveError:connectionError];
+
+    if (@available(iOS 7.0, *)) {
+        NSURLSession *session = [[NSURLSession alloc] init];
+        [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+            if (error) {
+                if ([self.delegate respondsToSelector:@selector(webSocket:didReceiveError:)]) {
+                    [self.delegate webSocket:self didReceiveError:error];
+                }
+
+                self.state = RMWebSocketStateDisconnected;
+            } else {
+                NSString *token = [self webSocketHandshakeTokenFromData:data];
+                [self openWebSocketConnectionWithToken:token];
+            }
+        }];
+    } else {
+        // Fallback on earlier versions
+        [NSURLConnection
+         sendAsynchronousRequest:request
+         queue:[NSOperationQueue mainQueue]
+         completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+             if (connectionError) {
+                 if ([self.delegate respondsToSelector:@selector(webSocket:didReceiveError:)]) {
+                     [self.delegate webSocket:self didReceiveError:connectionError];
+                 }
+
+                 self.state = RMWebSocketStateDisconnected;
+             } else {
+                 NSString *token = [self webSocketHandshakeTokenFromData:data];
+                 [self openWebSocketConnectionWithToken:token];
              }
-             
-             self.state = RMWebSocketStateDisconnected;
-         } else {
-             NSString *token = [self webSocketHandshakeTokenFromData:data];
-             [self openWebSocketConnectionWithToken:token];
-         }
-     }];
+         }];
+    }
 }
 
 - (void)openWebSocketConnectionWithToken:(NSString *)token
@@ -275,7 +293,7 @@ DDLOG_ENABLE_DYNAMIC_LEVELS
     NSMutableString *message = [NSMutableString stringWithFormat:@"%i:", command];
     
     if (ack > 0) {
-        [message appendFormat:@"%i%@", ack, userHandledAck ? @"+" : @""];
+        [message appendFormat:@"%li%@", (long)ack, userHandledAck ? @"+" : @""];
     }
     
     [message appendString:@":"];
@@ -418,7 +436,7 @@ DDLOG_ENABLE_DYNAMIC_LEVELS
         _ackNumber = -1;
         
         if (matches[0] != [NSNull null]) {
-            self.command = [matches[0] integerValue];
+            self.command = (RMWebSocketSocketIOCommand)[matches[0] integerValue];
         }
         
         if (matches[1] != [NSNull null]) {
@@ -485,8 +503,8 @@ DDLOG_ENABLE_DYNAMIC_LEVELS
 
 - (NSString *)description
 {
-    return [NSString stringWithFormat:@"<RMWebSocketMessage command: %i, sequence: %i, userAck: %i, namespace: %@, ackNumber: %i, data: %@",
-            self.command, self.sequence, self.userAck, self.namespace, self.ackNumber, self.data];
+    return [NSString stringWithFormat:@"<RMWebSocketMessage command: %i, sequence: %li, userAck: %i, namespace: %@, ackNumber: %li, data: %@",
+            self.command, (long)self.sequence, self.userAck, self.namespace, (long)self.ackNumber, self.data];
 }
 
 @end

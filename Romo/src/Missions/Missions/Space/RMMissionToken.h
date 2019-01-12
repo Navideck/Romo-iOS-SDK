@@ -8,10 +8,10 @@
 
 @interface RMMissionToken : UIView
 
-@property (nonatomic, readonly) int index;
+@property (nonatomic, readonly) NSInteger index;
 @property (nonatomic, readonly) RMMissionStatus status;
 
-- (id)initWithChapter:(RMChapter)chapter index:(int)index status:(RMMissionStatus)status;
+- (id)initWithChapter:(RMChapter)chapter index:(NSInteger)index status:(RMMissionStatus)status;
 
 - (void)startAnimating;
 - (void)stopAnimating;

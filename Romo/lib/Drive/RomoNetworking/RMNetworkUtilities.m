@@ -55,7 +55,7 @@
 
 - (char *)bytesWithHeader
 {
-    const uint32_t size = [self length];
+    const uint32_t size = (uint32_t)[self length];
     const void *data = [self bytes];
     
     char *dataWithHeader = malloc(size + HEADER_SIZE);
@@ -68,7 +68,7 @@
 
 - (uint32_t)sizeWithHeader
 {
-    return [self length] + HEADER_SIZE;
+    return (uint32_t)[self length] + HEADER_SIZE;
 }
 
 @end

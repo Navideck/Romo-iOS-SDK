@@ -15,7 +15,7 @@
 #import "RMProgressManager.h"
 #import "RMMission_Protected.h"
 
-NSString *const savedSolutionKey = @"Mission-%d-%d-Solution";
+NSString *const savedSolutionKey = @"Mission-%d-%ld-Solution";
 
 @interface RMMission () <RMActionRuntimeDelegate>
 
@@ -26,7 +26,7 @@ NSString *const savedSolutionKey = @"Mission-%d-%d-Solution";
 
 @implementation RMMission
 
-- (id)initWithChapter:(RMChapter)chapter index:(int)index
+- (id)initWithChapter:(RMChapter)chapter index:(NSInteger)index
 {
     self = [super init];
     if (self) {
@@ -37,55 +37,55 @@ NSString *const savedSolutionKey = @"Mission-%d-%d-Solution";
 
         _chapter = chapter;
         _index = index;
-        
+
         _progressManager = [RMProgressManager sharedInstance];
         _status = [self.progressManager statusForMissionInChapter:chapter index:index];
-        
-        NSString *missionPath = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"Mission-%d-%d", chapter, index] ofType:@"plist"];
-        
+
+        NSString *missionPath = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"Mission-%d-%ld", chapter, (long)index] ofType:@"plist"];
+
         NSDictionary *mission = [NSDictionary dictionaryWithContentsOfFile:missionPath];
-        
-        NSString *localKeyPrefix = [NSString stringWithFormat:@"Mission-%i-%i", chapter, index];
-        
+
+        NSString *localKeyPrefix = [NSString stringWithFormat:@"Mission-%i-%li", chapter, (long)index];
+
         self.title = [[NSBundle mainBundle] localizedStringForKey:[NSString stringWithFormat:@"%@-title", localKeyPrefix]
                                                             value:mission[@"title"]
                                                             table:@"Missions"];
         self.briefing = [[NSBundle mainBundle] localizedStringForKey:[NSString stringWithFormat:@"%@-briefing", localKeyPrefix]
-                                                                                    value:mission[@"briefing"]
-                                                                                    table:@"Missions"];
+                                                               value:mission[@"briefing"]
+                                                               table:@"Missions"];
         self.failureDebriefing = [[NSBundle mainBundle] localizedStringForKey:[NSString stringWithFormat:@"%@-failure debriefing", localKeyPrefix]
                                                                         value:mission[@"failure debriefing"]
                                                                         table:@"Missions"];
         self.successDebriefing = [[NSBundle mainBundle] localizedStringForKey:[NSString stringWithFormat:@"%@-success debriefing", localKeyPrefix]
-                                                                                                       value:mission[@"success debriefing"]
-                                                                                                       table:@"Missions"];
+                                                                        value:mission[@"success debriefing"]
+                                                                        table:@"Missions"];
         self.congratsDebriefing = [[NSBundle mainBundle] localizedStringForKey:[NSString stringWithFormat:@"%@-congrats debriefing", localKeyPrefix]
-                                                                                                         value:mission[@"congrats debriefing"]
-                                                                                                         table:@"Missions"];
+                                                                         value:mission[@"congrats debriefing"]
+                                                                         table:@"Missions"];
         self.promptToPlay = [[NSBundle mainBundle] localizedStringForKey:[[NSString stringWithFormat:@"%@-prompt", localKeyPrefix] stringByReplacingOccurrencesOfString:@"\\n" withString:@"\n"]
                                                                    value:[mission[@"prompt"] stringByReplacingOccurrencesOfString:@"\\n" withString:@"\n"]
                                                                    table:@"Missions"];
-        
+
         self.glowActionViews = [mission[@"glow action views"] boolValue];
         self.skipCollapseScripts = [mission[@"skip collapse scripts"] boolValue];
         self.disableFlipDetection = [mission[@"disable flip detection"] boolValue];
         self.allowsRepeat = [mission[@"allows repeat"] boolValue];
         self.allowsEditingRepeat = mission[@"editing repeat"] ? [mission[@"editing repeat"] boolValue] : YES;
         self.lightInitiallyOff = [mission[@"light initially off"] boolValue];
-        
+
         self.duration = mission[@"duration"] ? [mission[@"duration"] intValue] : -1;
-        
+
         self.visionModules = [NSMutableSet setWithCapacity:1];
 
         self.skipBriefing = NO;
         self.skipDebriefing = NO;
-        
+
         NSNumber *maxActionCountNumber = mission[@"max action count"];
         self.maximumActionCount = (maxActionCountNumber == nil) ? -1 : maxActionCountNumber.integerValue;
 
         NSNumber *allowsAddingEventsValue = mission[@"adding events"];
         self.allowsAddingEvents = allowsAddingEventsValue.boolValue;
-        
+
         NSNumber *allowsEditingParametersValue = mission[@"editing parameters"];
         self.allowsEditingParameters = allowsEditingParametersValue.boolValue;
 
@@ -98,7 +98,7 @@ NSString *const savedSolutionKey = @"Mission-%d-%d-Solution";
         NSArray *initialSolution = mission[@"initial solution"];
         _events = [NSMutableArray arrayWithCapacity:initialSolution.count];
         _inputScripts = [NSMutableArray arrayWithCapacity:initialSolution.count];
-        
+
         for (NSDictionary *eventDictionary in initialSolution) {
             NSString *eventName = eventDictionary[@"event"];
             RMEvent *event = [[RMEvent alloc] initWithName:eventName];
@@ -151,7 +151,7 @@ NSString *const savedSolutionKey = @"Mission-%d-%d-Solution";
             [unlockables addObject:[[RMUnlockable alloc] initWithDictionary:unlockableDictionary]];
         }
         self.unlockables = [NSArray arrayWithArray:unlockables];
-        
+
         self.threeStarSolution = [self solutionFromArray:mission[@"three star solution"]];
         self.twoStarSolution = [self solutionFromArray:mission[@"two star solution"]];
         self.oneStarSolution = [self solutionFromArray:mission[@"one star solution"]];
@@ -180,7 +180,7 @@ NSString *const savedSolutionKey = @"Mission-%d-%d-Solution";
             event.parameter.value = eventDictionary[@"eventParameter"];
             event.repeats = [eventDictionary[@"repeats"] boolValue];
             [self.events addObject:event];
-            
+
             NSArray *serializedActions = eventDictionary[@"script"];
             NSMutableArray *script = [NSMutableArray arrayWithCapacity:serializedActions.count];
             for (NSDictionary *serializedAction in serializedActions) {
@@ -195,11 +195,11 @@ NSString *const savedSolutionKey = @"Mission-%d-%d-Solution";
 - (NSSet *)visionModules
 {
     NSMutableSet *set = [NSMutableSet set];
-    
+
     [self.events enumerateObjectsUsingBlock:^(RMEvent *event, NSUInteger idx, BOOL *stop) {
         [set unionSet:event.requiredVisionModules];
     }];
-    
+
     return [set copy];
 }
 
@@ -207,27 +207,27 @@ NSString *const savedSolutionKey = @"Mission-%d-%d-Solution";
 - (void)saveSolutionToDisk:(NSString *)name
 {
     NSMutableArray *serialization = [NSMutableArray arrayWithCapacity:self.events.count];
-    
+
     for (int i = 0; i < self.events.count; i++) {
         NSMutableDictionary *eventDictionary = [NSMutableDictionary dictionary];
-        
+
         RMEvent *event = self.events[i];
         eventDictionary[@"event"] = [RMEvent nameForEventType:event.type];
         if (event.parameter.value) {
             eventDictionary[@"eventParameter"] = event.parameter.value;
             eventDictionary[@"repeats"] = @(event.repeats);
         }
-        
+
         NSArray *script = self.inputScripts[i];
         NSMutableArray *scriptArray = [NSMutableArray arrayWithCapacity:script.count];
         for (RMAction *action in script) {
             [scriptArray addObject:[action dictionarySerialization]];
         }
-        
+
         eventDictionary[@"script"] = scriptArray;
         serialization[i] = eventDictionary;
     }
-    
+
     NSString *documentsDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     NSString *fileName = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.plist",name]];
     [serialization writeToFile:fileName atomically:YES];
@@ -252,7 +252,7 @@ NSString *const savedSolutionKey = @"Mission-%d-%d-Solution";
         _running = running;
         if (running) {
             self.completedScripts = [NSMutableDictionary dictionaryWithCapacity:self.events.count];
-            
+
             for (int i = 0; i < self.events.count; i++) {
                 self.completedScripts[@(i)] = @NO;
             }
@@ -265,7 +265,7 @@ NSString *const savedSolutionKey = @"Mission-%d-%d-Solution";
             self.currentMethodIndex = -1;
             self.indexOfCurrentScript = -1;
             self.completedMethodCount = 0;
-            
+
             [[NSNotificationCenter defaultCenter] removeObserver:self name:RMEventDidOccurNotification object:nil];
         }
     }
@@ -284,17 +284,17 @@ NSString *const savedSolutionKey = @"Mission-%d-%d-Solution";
         [self.outputScripts replaceObjectAtIndex:self.indexOfCurrentScript withObject:self.currentScript];
         self.currentMethodIndex = 0;
         self.completedMethodCount = 0;
-        
+
         int triggerCount = [self.eventTriggerCounts[self.indexOfCurrentScript] intValue];
         triggerCount++;
         self.eventTriggerCounts[self.indexOfCurrentScript] = @(triggerCount);
-        
+
         if (event.type == RMEventMissionStart) {
             // Since the "Mission start" event can never trigger again, make sure we flag that it's done once we start it
             // Otherwise, we risk being stuck in the mission runtime forever
             self.completedScripts[@(self.indexOfCurrentScript)] = @YES;
         }
-        
+
         [self runNextMethod];
 
         // If the script is empty, it's already finished
@@ -304,19 +304,19 @@ NSString *const savedSolutionKey = @"Mission-%d-%d-Solution";
     }
 }
 
-- (void)scriptAtIndexWillFinishRunning:(int)index
+- (void)scriptAtIndexWillFinishRunning:(NSInteger)index
 {
     self.completedScripts[@(index)] = @YES;
 }
 
-- (void)scriptAtIndexDidFinishRunning:(int)index
+- (void)scriptAtIndexDidFinishRunning:(NSInteger)index
 {
     if (self.currentEvent.repeats) {
         [self runScriptForEvent:self.currentEvent];
     } else {
         [self.delegate mission:self scriptForEventDidFinish:self.currentEvent];
     }
-    
+
     __block BOOL finishedAllScripts = YES;
     [self.completedScripts enumerateKeysAndObjectsUsingBlock:^(NSNumber *index, NSNumber *completionValue, BOOL *stop) {
         if (completionValue.boolValue == NO) {
@@ -367,7 +367,7 @@ NSString *const savedSolutionKey = @"Mission-%d-%d-Solution";
             }
         }
     }
-    
+
     return mergedScript;
 }
 
@@ -381,7 +381,7 @@ NSString *const savedSolutionKey = @"Mission-%d-%d-Solution";
     if (self.reasonForFailing) {
         return 0;
     }
-    
+
     RMMissionFailureReason threeStarFailureReason = [self validityForSolution:self.threeStarSolution];
     if (threeStarFailureReason == RMMissionFailureReasonNone) {
         self.reasonForFailing = RMMissionFailureReasonNone;
@@ -421,7 +421,7 @@ NSString *const savedSolutionKey = @"Mission-%d-%d-Solution";
     BOOL didSetStatus = [self.progressManager setStatus:status forMissionInChapter:self.chapter index:self.index];
     if (didSetStatus) {
         _status = status;
-        [self saveSolutionToDisk:[NSString stringWithFormat:savedSolutionKey, self.chapter, self.index]];
+        [self saveSolutionToDisk:[NSString stringWithFormat:savedSolutionKey, self.chapter, (long)self.index]];
     }
 }
 
@@ -616,7 +616,7 @@ NSString *const savedSolutionKey = @"Mission-%d-%d-Solution";
             if (![self.events containsObject:event]) {
                 return RMMissionFailureReasonWrongInput;
             } else {
-                int scriptIndex = [self.events indexOfObject:event];
+                NSInteger scriptIndex = [self.events indexOfObject:event];
                 
                 int triggerCount = [self.eventTriggerCounts[scriptIndex] intValue];
                 int minimumTriggerCount = [triggerCounts[solutionIndex] intValue];

@@ -4,7 +4,7 @@
 //
 
 #import "RMMissionRobotController.h"
-#import <Analytics/Analytics.h>
+//#import <Analytics/Analytics.h>
 #import "UIView+Additions.h"
 #import "UIColor+RMColor.h"
 #import "UIFont+RMFont.h"
@@ -98,7 +98,7 @@ typedef enum {
 @property (nonatomic, strong) RMProgressManager *progressManager;
 @property (nonatomic, strong) RMMission *mission;
 @property (nonatomic) RMChapter chapter;
-@property (nonatomic) int index;
+@property (nonatomic) NSInteger index;
 @property (nonatomic) RMMissionState state;
 /** The state we're transitioning from */
 @property (nonatomic) RMMissionState previousState;
@@ -165,6 +165,7 @@ typedef enum {
 
 - (void)didReceiveMemoryWarning
 {
+    [super didReceiveMemoryWarning];
     if (self.state == RMMissionStateChapters && _chapterPlanets) {
         // Collect all off-screen elements
         NSMutableArray *trash = [NSMutableArray arrayWithCapacity:self.chapterPlanets.count - 1];
@@ -258,7 +259,7 @@ typedef enum {
 
         self.spaceScene.origin = scrollView.contentOffset;
 
-        int chapterCount = self.progressManager.chapters.count;
+        NSInteger chapterCount = self.progressManager.chapters.count;
         if ([self.progressManager.chapters containsObject:@(RMChapterTheEnd)]) {
             chapterCount--;
         }
@@ -523,7 +524,7 @@ typedef enum {
                                  self.missionsPageControl.center = CGPointMake(self.view.width / 2, self.view.height - missionsPageControlBottomOffset);
                                  self.missionsPageControl.alpha = 1.0;
                                  
-                                 for (NSValue *key in _chapterDescriptions) {
+                                 for (NSValue *key in self->_chapterDescriptions) {
                                      UIView *description = self.chapterDescriptions[key];
                                      description.top = y(descriptionTopTall, descriptionTopShort);
                                  }
@@ -536,7 +537,7 @@ typedef enum {
                                      [self scrollViewDidScroll:self.chaptersScrollView];
                                  }
                                  
-                                 if (_missions.count) {
+                                 if (self->_missions.count) {
                                      [self expandMissionsByRatio:0.0];
                                  }
                              } completion:^(BOOL finished) {
@@ -575,12 +576,12 @@ typedef enum {
             [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
             [UIView animateWithDuration:0.35
                              animations:^{
-                                 if (_missionsPageControl.superview) {
+                                 if (self->_missionsPageControl.superview) {
                                      self.missionsPageControl.top = self.view.height;
                                      self.missionsPageControl.alpha = 0.0;
                                  }
                                  
-                                 for (NSValue *key in _chapterDescriptions) {
+                                 for (NSValue *key in self->_chapterDescriptions) {
                                      UIView *description = self.chapterDescriptions[key];
                                      description.top = y(descriptionTopTall, descriptionTopShort) + 16.0;
                                      description.alpha = 0.0;
@@ -626,12 +627,12 @@ typedef enum {
             [UIView animateWithDuration:0.35
                              animations:^{
                                  if (self.previousState == RMMissionStateChapters || self.previousState == RMMissionStateMissions) {
-                                     if (_missionsPageControl.superview) {
+                                     if (self->_missionsPageControl.superview) {
                                          self.missionsPageControl.top = self.view.height;
                                          self.missionsPageControl.alpha = 0.0;
                                      }
                                      
-                                     if (_chaptersScrollView.superview) {
+                                     if (self->_chaptersScrollView.superview) {
                                          self.chaptersScrollView.transform = CGAffineTransformMakeScale(0.5, 0.5);
                                          self.chaptersScrollView.alpha = 0.0;
                                      }
@@ -745,7 +746,7 @@ typedef enum {
     self.title = mission.title;
 }
 
-- (void)setIndex:(int)index
+- (void)setIndex:(NSInteger)index
 {
     _index = index;
     
@@ -831,7 +832,7 @@ typedef enum {
             [chapters removeObject:@(RMChapterTheEnd)];
         }
         
-        int numberOfChapters = chapters.count;
+        NSInteger numberOfChapters = chapters.count;
 
         _chaptersScrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
         _chaptersScrollView.delegate = self;
@@ -845,7 +846,7 @@ typedef enum {
         _chaptersScrollView.pagingEnabled = YES;
         
         if (self.chapter) {
-            int index = [chapters indexOfObject:@(self.chapter)];
+            NSInteger index = [chapters indexOfObject:@(self.chapter)];
             _chaptersScrollView.contentOffset = CGPointMake(index * _chaptersScrollView.width, 0);
         }
     }
@@ -986,7 +987,7 @@ typedef enum {
     }
 }
 
-- (RMChapterPlanet *)planetForChapterAtIndex:(int)index
+- (RMChapterPlanet *)planetForChapterAtIndex:(NSInteger)index
 {
     RMChapterPlanet *planet = self.chapterPlanets[@(index)];
     if (!planet) {
@@ -1143,8 +1144,8 @@ typedef enum {
             [descriptionView removeFromSuperview];
         }];
         
-        int indexOfNewestChapter = [self.progressManager.unlockedChapters indexOfObject:@(newestChapter)];
-        int indexOfPreviousChapter = indexOfNewestChapter - 1;
+        NSInteger indexOfNewestChapter = [self.progressManager.unlockedChapters indexOfObject:@(newestChapter)];
+        NSInteger indexOfPreviousChapter = indexOfNewestChapter - 1;
         
         self.chaptersScrollView.contentOffset = CGPointMake(self.chaptersScrollView.width * indexOfPreviousChapter, 0);
         
@@ -1437,7 +1438,7 @@ typedef enum {
 - (void)handleMissionTap:(UITapGestureRecognizer *)tap
 {
     if (!self.spaceScene.isAnimating) {
-        int missionIndex = [self.missions indexOfObject:tap.view] + 1;
+        NSInteger missionIndex = [self.missions indexOfObject:tap.view] + 1;
         if ([self.progressManager statusForMissionInChapter:self.chapter index:missionIndex] != RMMissionStatusLocked) {
             self.index = missionIndex;
             self.state = RMMissionStateEditor;

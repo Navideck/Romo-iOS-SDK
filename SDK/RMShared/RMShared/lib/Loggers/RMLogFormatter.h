@@ -4,6 +4,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CocoaLumberjack/CocoaLumberjack.h>
 
 @interface RMLogFormatter : NSObject <DDLogFormatter>
 

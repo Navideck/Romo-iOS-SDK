@@ -83,7 +83,7 @@
     //                             is upright (normal use case) !!!
     _acceleration.y = (float)(((SIGN(IMU->gravity.z) *
                                 (1 + IMU->gravity.y) * IMU->deviceAcceleration.y)) +
-                              ((1 - fabsf(IMU->gravity.z) * IMU->deviceAcceleration.z) ) );
+                              ((1 - fabs(IMU->gravity.z) * IMU->deviceAcceleration.z) ) );
     
     // aligned with axis orthogonal to the bottom of robot (positive up)
     _acceleration.z = (float)((IMU->gravity.x * IMU->deviceAcceleration.x) +

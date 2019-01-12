@@ -256,7 +256,7 @@ static NSString *introductionFileName = @"Chase-Introduction";
         [prioritizedBehaviorsCopy removeObject:@(RMActivityBehaviorRequireDocking)];
         self.behaviorArbiter.prioritizedBehaviors = prioritizedBehaviorsCopy;
         
-        RMAppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+        RMAppDelegate *appDelegate = (RMAppDelegate*)[UIApplication sharedApplication].delegate;
         RMChaseFillTrainingRobotController *chaseTrainerRC = [[RMChaseFillTrainingRobotController alloc] initWithCovarianceScaling:1.0 completion:^(RMVisionTrainingData *trainingData) {
            
             if (trainingData) {

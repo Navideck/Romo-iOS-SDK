@@ -70,9 +70,9 @@
         if (!_title || !_shortTitle) {
             NSArray *allActions = [RMActionRuntime allActions];
             [allActions enumerateObjectsUsingBlock:^(RMAction *otherAction, NSUInteger idx, BOOL *stop) {
-                if ([otherAction.fullSelector isEqualToString:_fullSelector]) {
-                    _title = otherAction.title;
-                    _shortTitle = otherAction.shortTitle;
+                if ([otherAction.fullSelector isEqualToString:self->_fullSelector]) {
+                    self->_title = otherAction.title;
+                    self->      _shortTitle = otherAction.shortTitle;
                 }
             }];
         }

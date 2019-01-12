@@ -82,6 +82,7 @@ typedef enum {
 {
     [super viewDidLoad];
     
+
     // Setup the results controller. This handles fetching all the peers (both local and remote contacts)
     self.romosResultsController = [[RMDrivableRomosResultsController alloc] init];
     self.romosResultsController.delegate = self;
@@ -89,11 +90,13 @@ typedef enum {
     
     // Add the space scene
     self.scene = [[RMPlanetSpaceSceneView alloc] initWithFrame:self.view.bounds];
+    self.scene.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     [self.view addSubview:self.scene];
     [self.view sendSubviewToBack:self.scene];
     
     // Add the toolbar
     self.toolbar = [[RMWifiToolbar alloc] initWithFrame:CGRectMake(0, 0, self.view.width, [RMWifiToolbar preferredHeight])];
+    self.toolbar.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     [self.view addSubview:self.toolbar];
     
     // Set display and interaction properties of the UICollectionView

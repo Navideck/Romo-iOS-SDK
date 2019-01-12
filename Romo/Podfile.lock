@@ -1,0 +1,83 @@
+PODS:
+  - AFNetworking (2.5.4):
+    - AFNetworking/NSURLConnection (= 2.5.4)
+    - AFNetworking/NSURLSession (= 2.5.4)
+    - AFNetworking/Reachability (= 2.5.4)
+    - AFNetworking/Security (= 2.5.4)
+    - AFNetworking/Serialization (= 2.5.4)
+    - AFNetworking/UIKit (= 2.5.4)
+  - AFNetworking/NSURLConnection (2.5.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.5.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.5.4)
+  - AFNetworking/Security (2.5.4)
+  - AFNetworking/Serialization (2.5.4)
+  - AFNetworking/UIKit (2.5.4):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - CocoaLumberjack (3.4.2):
+    - CocoaLumberjack/Default (= 3.4.2)
+    - CocoaLumberjack/Extensions (= 3.4.2)
+  - CocoaLumberjack/Default (3.4.2)
+  - CocoaLumberjack/Extensions (3.4.2):
+    - CocoaLumberjack/Default
+  - GPUImage (0.1.7)
+  - OpenCV (2.4.13.6)
+  - RMCharacter (0.1.0)
+  - RMCore (0.1.0):
+    - RMShared
+  - RMShared (0.1.0):
+    - CocoaLumberjack
+    - SocketRocket
+  - RMVision (0.1.0):
+    - CocoaLumberjack
+    - GPUImage
+    - OpenCV (~> 2.0)
+    - RMShared
+  - SocketRocket (0.5.1)
+
+DEPENDENCIES:
+  - AFNetworking
+  - CocoaLumberjack
+  - RMCharacter (from `../SDK/RMCharacter`)
+  - RMCore (from `../SDK/RMCore`)
+  - RMShared (from `../SDK/RMShared`)
+  - RMVision (from `../SDK/RMVision`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - CocoaLumberjack
+    - GPUImage
+    - OpenCV
+    - SocketRocket
+
+EXTERNAL SOURCES:
+  RMCharacter:
+    :path: "../SDK/RMCharacter"
+  RMCore:
+    :path: "../SDK/RMCore"
+  RMShared:
+    :path: "../SDK/RMShared"
+  RMVision:
+    :path: "../SDK/RMVision"
+
+SPEC CHECKSUMS:
+  AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
+  CocoaLumberjack: db7cc9e464771f12054c22ff6947c5a58d43a0fd
+  GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
+  OpenCV: cd36a3467c21572d658c2640488fe0d5a93ca192
+  RMCharacter: 6a46f0151522b7407ced997858a2acb634031f9e
+  RMCore: 2a97ff6b37933215efc59cb0c0fed5297d7d3fa2
+  RMShared: 5aded4bf8711cdf4e644a856143c1cc850612faf
+  RMVision: f3308ec695f2bd1c32561ee123f519d5f69ced40
+  SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
+
+PODFILE CHECKSUM: bd495be9593c56e08850a5fbd697914a71afc7c4
+
+COCOAPODS: 1.5.3

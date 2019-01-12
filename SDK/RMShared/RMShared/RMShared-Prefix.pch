@@ -27,5 +27,3 @@ ddLogLevel = logLevel; \
 #endif
 
 #endif
-
-#include "RMSharedDefines.h"

@@ -24,7 +24,7 @@
 @property (nonatomic, getter=isAnimating, readonly) BOOL animating;
 
 /** Animates the position change with the specified duration then calls completion */
-- (void)setCameraLocation:(RMPoint3D)cameraLocation animatedWithDuration:(float)duration completion:(void (^)())completion;
+- (void)setCameraLocation:(RMPoint3D)cameraLocation animatedWithDuration:(float)duration completion:(void (^)(void))completion;
 
 /** Populating the Universe */
 - (void)addSpaceObject:(RMSpaceObject *)spaceObject;

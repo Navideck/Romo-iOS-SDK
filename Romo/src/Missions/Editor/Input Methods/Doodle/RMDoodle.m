@@ -74,7 +74,7 @@ static NSString *const pointsEncodingKey = @"points";
 - (NSString *)serialization
 {
     // We estimate the serialization to be 12 characters for each (x,y) point
-    int estimatedSerializationCapacity = self.points.count * 12;
+    NSInteger estimatedSerializationCapacity = self.points.count * 12;
     NSMutableString *serialization = [NSMutableString stringWithCapacity:estimatedSerializationCapacity];
     [self.points enumerateObjectsUsingBlock:^(NSValue *pointValue, NSUInteger idx, BOOL *stop) {
         // Convert each point to a serialized string
@@ -126,7 +126,7 @@ static NSString *const pointsEncodingKey = @"points";
     }
     
     // Throw in the straight-away to the last point since we know we're already facing this direction
-    int count = self.points.count;
+    NSInteger count = self.points.count;
     float d = distance(p(count - 2), p(count - 1)) / pixelsPerMeter;
     [actions addObject:[self actionForDrivingForwardWithDistance:d]];
     

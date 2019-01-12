@@ -8,7 +8,7 @@
 
 #import "RMVisionObjectTrackingModuleDebug.h"
 #import "RMVideoModule.h"
-#include <NMSSH/NMSSH.h>
+//#include <NMSSH/NMSSH.h>
 
 #define kDataFolder       @"RMVisionObjectTrackingDebugData"
 #define kTrainingData     @"RMVisionTrainingData.data"
@@ -55,59 +55,59 @@
     return successFlag;
 }
 
--(BOOL)stopDebugCaptureWithCompletion:(void(^)(NSData *compressedData))callback
-{
-    
-    
-    [self.module.vision deactivateModule:self.videoModule];
-
-    [self.videoModule shutdownWithCompletion:^{
-        
-        NSError *error = nil;
-
-        NMSSHSession *sshSession = [self connectToSSH];
-
-        NSString *remoteFilePath = [ @[kDataFolder, [self getDateString]] componentsJoinedByString:@"/"];
-        
-        // Make the remove directory
-        NSString *command = [@"mkdir -p " stringByAppendingString:remoteFilePath];
-        NSString *response = [sshSession.channel execute:command error:&error];
-        NSLog(@"Response: %@", response);
-        
-        // List files in the local directory
-        NSArray *files = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:self.saveToFolder error:&error];
-        if (files == nil) {
-            NSLog(@"Error reading contents of documents directory: %@", [error localizedDescription]);
-        }
-        
-        // Upload all the files in the local directory
-        BOOL success = YES;
-        for (NSString *file in files) {
-            
-            NSString *localFile = [@[self.saveToFolder, file] componentsJoinedByString:@"/"];
-            NSString *remoteFile = [@[remoteFilePath, file] componentsJoinedByString:@"/"];
-
-            NSLog(@"%@ -> %@", localFile, remoteFile);
-
-            success &= [sshSession.channel uploadFile:localFile
-                                                   to:remoteFile];
-        }
-        
-        if (!success) {
-            NSLog(@"Upload failed");
-            // If upload failed, save the file locally
-        }
-        else {
-            NSLog(@"Upload successful!");
-            [self deleteDataFolder];
-        }
-        
-        [sshSession disconnect];
-    
-    }];
-    
-    return YES;
-}
+//-(BOOL)stopDebugCaptureWithCompletion:(void(^)(NSData *compressedData))callback
+//{
+//
+//
+//    [self.module.vision deactivateModule:self.videoModule];
+//
+//    [self.videoModule shutdownWithCompletion:^{
+//
+//        NSError *error = nil;
+//
+//        NMSSHSession *sshSession = [self connectToSSH];
+//
+//        NSString *remoteFilePath = [ @[kDataFolder, [self getDateString]] componentsJoinedByString:@"/"];
+//
+//        // Make the remove directory
+//        NSString *command = [@"mkdir -p " stringByAppendingString:remoteFilePath];
+//        NSString *response = [sshSession.channel execute:command error:&error];
+//        NSLog(@"Response: %@", response);
+//
+//        // List files in the local directory
+//        NSArray *files = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:self.saveToFolder error:&error];
+//        if (files == nil) {
+//            NSLog(@"Error reading contents of documents directory: %@", [error localizedDescription]);
+//        }
+//
+//        // Upload all the files in the local directory
+//        BOOL success = YES;
+//        for (NSString *file in files) {
+//
+//            NSString *localFile = [@[self.saveToFolder, file] componentsJoinedByString:@"/"];
+//            NSString *remoteFile = [@[remoteFilePath, file] componentsJoinedByString:@"/"];
+//
+//            NSLog(@"%@ -> %@", localFile, remoteFile);
+//
+//            success &= [sshSession.channel uploadFile:localFile
+//                                                   to:remoteFile];
+//        }
+//
+//        if (!success) {
+//            NSLog(@"Upload failed");
+//            // If upload failed, save the file locally
+//        }
+//        else {
+//            NSLog(@"Upload successful!");
+//            [self deleteDataFolder];
+//        }
+//
+//        [sshSession disconnect];
+//
+//    }];
+//
+//    return YES;
+//}
 
 #pragma mark - File system helpers
 - (BOOL)createDataFolder
@@ -180,22 +180,22 @@
     return dateString;
 }
 
-- (NMSSHSession *)connectToSSH
-{
-    NMSSHSession *session = [NMSSHSession connectToHost:@"url"
-                                           withUsername:@"romo"];
-    
-    if (session.isConnected) {
-        [session authenticateByPassword:@"test"];
-                
-        if (session.isAuthorized) {
-            NSLog(@"Authentication succeeded");
-            
-            return session;
-        }
-    }
-    
-    return nil;
-}
+//- (NMSSHSession *)connectToSSH
+//{
+//    NMSSHSession *session = [NMSSHSession connectToHost:@"url"
+//                                           withUsername:@"romo"];
+//    
+//    if (session.isConnected) {
+//        [session authenticateByPassword:@"test"];
+//                
+//        if (session.isAuthorized) {
+//            NSLog(@"Authentication succeeded");
+//            
+//            return session;
+//        }
+//    }
+//    
+//    return nil;
+//}
 
 @end

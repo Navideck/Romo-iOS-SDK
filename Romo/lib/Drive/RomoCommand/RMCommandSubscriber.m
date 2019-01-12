@@ -136,7 +136,7 @@ static const float kSendRate = 0.05;              // 20Hz send rate for motor co
 {
     // Store value for next loop of _commandTimer
     dispatch_async(_commandQueue, ^{
-        _tiltMotorPower = tiltMotorPower;
+        self->_tiltMotorPower = tiltMotorPower;
     });
 }
 
@@ -144,7 +144,7 @@ static const float kSendRate = 0.05;              // 20Hz send rate for motor co
 {
     // Store value for next loop of _commandTimer
     dispatch_async(_commandQueue, ^{
-        _driveCommandParams = parameters;
+        self->_driveCommandParams = parameters;
     });
 }
 

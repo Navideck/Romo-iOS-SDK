@@ -96,9 +96,12 @@ static const float cycleSpeedDivisor = 2000.0;
         CGPathAddLineToPoint(fillPath, NULL, 0, viewHeight);
         CGPathCloseSubpath(fillPath);
         
-        self.fillShape.path = CGPathCreateCopy(fillPath);
+        self.fillShape.path = fillPath;
+        CGPathRelease(fillPath);
     } else {
-        self.fillShape.path = CGPathCreateWithRect(self.bounds, NULL);
+        CGPathRef fillPath = CGPathCreateWithRect(self.bounds, NULL);
+        self.fillShape.path = fillPath;
+        CGPathRelease(fillPath);
     }
 }
 

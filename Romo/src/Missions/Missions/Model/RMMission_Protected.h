@@ -10,11 +10,11 @@
 @property (nonatomic, strong) RMProgressManager *progressManager;
 
 @property (nonatomic, readwrite) RMChapter chapter;
-@property (nonatomic, readwrite) int index;
+@property (nonatomic, readwrite) NSInteger index;
 
 @property (nonatomic, strong) RMEvent *currentEvent;
 @property (nonatomic, strong) NSArray *currentScript;
-@property (nonatomic) int indexOfCurrentScript;
+@property (nonatomic) NSInteger indexOfCurrentScript;
 
 @property (nonatomic) int currentMethodIndex;
 @property (nonatomic) int completedMethodCount;
@@ -46,7 +46,7 @@
 @property (nonatomic, strong, readwrite) NSString *successDebriefing;
 @property (nonatomic, strong, readwrite) NSString *congratsDebriefing;
 @property (nonatomic, strong, readwrite) NSString *promptToPlay;
-@property (nonatomic, readwrite) int maximumActionCount;
+@property (nonatomic, readwrite) NSInteger maximumActionCount;
 @property (nonatomic, readwrite) BOOL allowsAddingEvents;
 @property (nonatomic, readwrite) BOOL allowsEditingParameters;
 @property (nonatomic, readwrite) BOOL allowsAddingActions;

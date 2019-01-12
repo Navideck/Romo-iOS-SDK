@@ -2,8 +2,8 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "romoExpression13@1x.png"
+      "filename" : "romoExpression13@1x.png",
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",

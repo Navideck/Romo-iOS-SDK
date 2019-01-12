@@ -14,7 +14,7 @@
         const char *s = [source cStringUsingEncoding:NSASCIIStringEncoding];
         NSData *keyData = [NSData dataWithBytes:s length:strlen(s)];
         uint8_t digest[CC_SHA512_DIGEST_LENGTH] = {0};
-        CC_SHA512(keyData.bytes, keyData.length, digest);
+        CC_SHA512(keyData.bytes, (CC_LONG)keyData.length, digest);
         NSData *out = [NSData dataWithBytes:digest length:CC_SHA512_DIGEST_LENGTH];
 
         return [out description];
@@ -29,7 +29,7 @@
 
     uint8_t digest[CC_SHA1_DIGEST_LENGTH];
 
-    CC_SHA1(data.bytes, data.length, digest);
+    CC_SHA1(data.bytes, (CC_LONG)data.length, digest);
 
     NSMutableString* output = [NSMutableString stringWithCapacity:CC_SHA1_DIGEST_LENGTH * 2];
 

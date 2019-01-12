@@ -21,17 +21,20 @@
 
 #import <CoreGraphics/CoreGraphics.h>
 #import <UIKit/UIKit.h>
+#ifdef __cplusplus
+    #import <opencv2/opencv.hpp>
+#endif
 
 // RMObject
 //      Base type for objects
 //==============================================================================
 @interface RMObject : NSObject <NSCoding>
 
-@property (nonatomic)   int     identifier;
+@property (nonatomic)   NSInteger     identifier;
 @property (nonatomic)   CGFloat timeTracked;
 @property (nonatomic)   CGRect  boundingBox;
 @property (nonatomic)   BOOL    justFound;
-@property (nonatomic) uint32_t frameNumber;
+@property (nonatomic) NSUInteger frameNumber;
 
 //@property (nonatomic)   RMPoint3D loc3D;
 //@property (nonatomic)   NSString *name;
@@ -137,8 +140,8 @@
 @property (nonatomic) cv::Mat labels;
 #endif
 
-@property (nonatomic) int positiveResponseLabel;
-@property (nonatomic) int negativeResponseLabel;
+@property (nonatomic) NSInteger positiveResponseLabel;
+@property (nonatomic) NSInteger negativeResponseLabel;
 
 @property (nonatomic) float covarianceScaling;
 

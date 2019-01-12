@@ -28,7 +28,7 @@
 - (void)readStream;
 - (void)readDatagram;
 
-- (void)readStreamPacketWithBytesAvailable:(int32_t)bytesAvailable;
+- (void)readStreamPacketWithBytesAvailable:(NSInteger)bytesAvailable;
 - (void)readDatagramPacket;
 
 - (uint32_t)unpackInteger:(uint8_t *)packedBytes offset:(uint32_t)offset;
@@ -130,7 +130,7 @@
 {
     dispatch_async(_writeQueue, ^{ @autoreleasepool {
         
-        switch (_socketType)
+        switch (self->_socketType)
         {
             case SOCK_STREAM:
                 [self sendStreamPacket:packet];
@@ -156,8 +156,8 @@
     if (result == 0)
     {
         dispatch_async(_readQueue, ^{ @autoreleasepool {
-            _isConnected = YES;
-            [self setPeerAddress:_localAddress];
+            self->_isConnected = YES;
+            [self setPeerAddress:self->_localAddress];
             [self connectionSucceeded];
         }});
     }
@@ -194,13 +194,13 @@
     __weak RMSocket *weakSelf = self;
 	dispatch_source_set_event_handler(_readSource, ^{
         @autoreleasepool {
-            _socketType == SOCK_STREAM ? [weakSelf readStream] : [weakSelf readDatagram];
+            self->_socketType == SOCK_STREAM ? [weakSelf readStream] : [weakSelf readDatagram];
         }
     });
     
     dispatch_source_set_cancel_handler(_readSource, ^{
         @autoreleasepool {
-            close(_nativeSocket);
+            close(self->_nativeSocket);
         }
     });
     
@@ -256,7 +256,7 @@
     char *bytes         = [data bytesWithHeader];
     uint32_t dataSize   = [data sizeWithHeader];
     
-    int charsSent = 0;
+    NSInteger charsSent = 0;
     charsSent = send(_nativeSocket, bytes, dataSize, 0);
     free(bytes);
     
@@ -278,7 +278,7 @@
 - (void)readStream
 {
     if (_readSource) {
-        uint32_t bytesAvailable = dispatch_source_get_data(_readSource);
+        NSUInteger bytesAvailable = dispatch_source_get_data(_readSource);
         
         if (bytesAvailable > 0) {
             [self readStreamPacketWithBytesAvailable:bytesAvailable];
@@ -291,7 +291,7 @@
 - (void)readDatagram
 {
     if (_readSource) {
-        uint32_t bytesAvailable = dispatch_source_get_data(_readSource);
+        NSUInteger bytesAvailable = dispatch_source_get_data(_readSource);
         
         if (bytesAvailable > 0) {
             [self readDatagramPacket];
@@ -301,9 +301,9 @@
     }
 }
 
-- (void)readStreamPacketWithBytesAvailable:(int32_t)bytesAvailable
+- (void)readStreamPacketWithBytesAvailable:(NSInteger)bytesAvailable
 {
-    int charsReceived = 0;
+    NSInteger charsReceived = 0;
     NSInteger headerSize = [RMNetworkUtilities headerSize];
     
     if (headerSize > bytesAvailable) {
@@ -323,8 +323,8 @@
         return;
     }
     
-    charsReceived = recv(_nativeSocket, headerBuffer, headerSize, 0);
-    
+//    charsReceived = recv(_nativeSocket, headerBuffer, headerSize, 0);
+
     char dataBuffer[dataSize];
     charsReceived = recv(_nativeSocket, dataBuffer, dataSize, 0);
     

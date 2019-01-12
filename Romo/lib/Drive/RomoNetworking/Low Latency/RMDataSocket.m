@@ -7,7 +7,7 @@
 #import "RMAddress.h"
 #import "RMDataPacket.h"
 #include <string.h>
-
+#import "CocoaLumberjack.h"
 #pragma mark - Constants --
 
 #define SEND_BUFFER_SIZE 65535
@@ -28,7 +28,7 @@
 - (void)readStream;
 - (void)readDatagram;
 
-- (void)readStreamPacketWithBytesAvailable:(int32_t)bytesAvailable;
+- (void)readStreamPacketWithBytesAvailable:(NSInteger)bytesAvailable;
 - (void)readDatagramPacket;
 
 @end
@@ -114,7 +114,7 @@
 - (void)sendDataPacket:(RMDataPacket *)dataPacket
 {
     dispatch_async(_writeQueue, ^{ @autoreleasepool {
-        switch (_socketType) {
+        switch (self->_socketType) {
             case SOCK_STREAM:
                 [self sendStreamDataPacket:dataPacket];
                 break;
@@ -137,8 +137,8 @@
     
     if (result == 0) {
         dispatch_async(_readQueue, ^{ @autoreleasepool {
-            _isConnected = YES;
-            [self setPeerAddress:_address];
+            self->_isConnected = YES;
+            [self setPeerAddress:self->_address];
             [self connectionSucceeded];
         }});
     } else {
@@ -179,7 +179,7 @@
     }
     
     dispatch_source_set_cancel_handler(_readSource, ^{
-        close(_nativeSocket);
+        close(self->_nativeSocket);
     });
     
     dispatch_resume(_readSource);
@@ -207,7 +207,7 @@
     
     SockAddress *addr = dataPacket.destination.sockAddress;
     
-    uint32_t packetSize = dataPacket.packetSize;
+    NSUInteger packetSize = dataPacket.packetSize;
     char bytes[packetSize];
     
     [dataPacket serializeToBytes:bytes];
@@ -240,7 +240,7 @@
 
 - (void)readStream
 {
-    uint32_t bytesAvailable = dispatch_source_get_data(_readSource);
+    NSUInteger bytesAvailable = dispatch_source_get_data(_readSource);
     
     if (bytesAvailable > 0) {
         [self readStreamPacketWithBytesAvailable:bytesAvailable];
@@ -251,7 +251,7 @@
 
 - (void)readDatagram
 {
-    uint32_t bytesAvailable = dispatch_source_get_data(_readSource);
+    NSUInteger bytesAvailable = dispatch_source_get_data(_readSource);
     
     if (bytesAvailable > 0) {
         [self readDatagramPacket];
@@ -260,10 +260,10 @@
     }
 }
 
-- (void)readStreamPacketWithBytesAvailable:(int32_t)bytesAvailable
+- (void)readStreamPacketWithBytesAvailable:(NSInteger)bytesAvailable
 {
-    int charsReceived = 0;
-    uint32_t headerSize = [RMDataPacket headerSize];
+    NSInteger charsReceived = 0;
+    NSUInteger headerSize = [RMDataPacket headerSize];
     
     if (headerSize > bytesAvailable) {
         NSLog(@"headerSize greater than bytes available");
@@ -304,7 +304,7 @@
 - (void)readDatagramPacket
 {
     ssize_t charsReceived = 0;
-    uint32_t headerSize = [RMDataPacket headerSize];
+    NSUInteger headerSize = [RMDataPacket headerSize];
     
     char headerBuffer[headerSize];
     
@@ -318,8 +318,8 @@
         return;
     }
     
-    uint32_t dataSize = ((uint32_t *)headerBuffer)[1];
-    uint32_t packetSize = dataSize + headerSize;
+    NSUInteger dataSize = ((NSUInteger *)headerBuffer)[1];
+    NSUInteger packetSize = dataSize + headerSize;
     
     char dataBuffer[dataSize + headerSize];
     charsReceived = recvfrom(_nativeSocket, dataBuffer, packetSize, 0, (struct sockaddr *)&from, (socklen_t *)&fromLength);

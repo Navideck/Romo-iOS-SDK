@@ -212,7 +212,7 @@ static const CGFloat animationCenterY = 132.0;
         int imageNumber = 1 + (int)(_animationAngle / (2 * M_PI) * 42);
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            self.robot.center = CGPointMake(x - xRadius * sinf(_animationAngle), y + yRadius * cosf(_animationAngle));
+            self.robot.center = CGPointMake(x - xRadius * sinf(self->_animationAngle), y + yRadius * cosf(self->_animationAngle));
             self.robot.image = [UIImage smartImageNamed:[NSString stringWithFormat:@"romoTurn%d.png",imageNumber]];
         });
     }
@@ -347,6 +347,7 @@ static const CGFloat animationCenterY = 132.0;
         CGPathAddLineToPoint(path, nil, startX, startY);
     }
     self.arc.path = path;
+    CGPathRelease(path);
 }
 
 #pragma mark - UI Properties

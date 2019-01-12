@@ -23,7 +23,7 @@
  e.g. "Favorite Color"
  Subclasses must override the getter
  */
-@property (nonatomic, readonly) NSString *title;
+@property (nonatomic, copy) NSString *title;
 
 /**
  Direct user-interaction events grab Romo's undivided attention, like pokes and pick-ups

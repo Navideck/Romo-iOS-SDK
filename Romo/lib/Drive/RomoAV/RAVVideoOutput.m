@@ -133,7 +133,7 @@
 
 const uint8_t KStartCode[4] = {0, 0, 0, 1};
 
-- (NSData*) getPacket:(uint8_t *)buffer length:(uint32_t)length
+- (NSData*) getPacket:(uint8_t *)buffer length:(NSUInteger)length
 {
     if(memcmp(buffer, KStartCode, 4) != 0) {
         return nil;
@@ -157,18 +157,18 @@ const uint8_t KStartCode[4] = {0, 0, 0, 1};
     return nil;
 }
 
--(BOOL)initH264Decoder {
-    const uint8_t* const parameterSetPointers[2] = { _sps, _pps };
-    const size_t parameterSetSizes[2] = { _spsSize, _ppsSize };
-    OSStatus status = CMVideoFormatDescriptionCreateFromH264ParameterSets(kCFAllocatorDefault,
-                                                                          2, //param count
-                                                                          parameterSetPointers,
-                                                                          parameterSetSizes,
-                                                                          4, //nal start code size
-                                                                          &_decoderFormatDescription);
-    
-    return YES;
-}
+//-(BOOL)initH264Decoder {
+//    const uint8_t* const parameterSetPointers[2] = { _sps, _pps };
+//    const size_t parameterSetSizes[2] = { _spsSize, _ppsSize };
+//    OSStatus status = CMVideoFormatDescriptionCreateFromH264ParameterSets(kCFAllocatorDefault,
+//                                                                          2, //param count
+//                                                                          parameterSetPointers,
+//                                                                          parameterSetSizes,
+//                                                                          4, //nal start code size
+//                                                                          &_decoderFormatDescription);
+//
+//    return YES;
+//}
 
 - (CVPixelBufferRef) decode:(NSData*) videoPacket {
     CVPixelBufferRef outputPixelBuffer = NULL;
@@ -201,7 +201,7 @@ const uint8_t KStartCode[4] = {0, 0, 0, 1};
     return outputPixelBuffer;
 }
 
-- (void) playVideoFrame:(void *)frame length:(uint32_t)length
+- (void) playVideoFrame:(void *)frame length:(NSUInteger)length
 {
     NSData *videoPacket = [self getPacket:frame length:length];
     if(videoPacket == nil) {
@@ -219,9 +219,9 @@ const uint8_t KStartCode[4] = {0, 0, 0, 1};
     int nalType = ((uint8_t*)videoPacket.bytes)[4] & 0x1F;
     switch (nalType) {
         case 0x05:
-            if([self initH264Decoder]) {
+//            if([self initH264Decoder]) {
                 pixelBuffer = [self decode:videoPacket];
-            }
+//            }
             break;
         case 0x07:
             _spsSize = videoPacket.length - 4;

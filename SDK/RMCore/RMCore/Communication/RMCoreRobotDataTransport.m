@@ -62,7 +62,7 @@ static const float kVerifySendRate = 0.1; // 10Hz loop rate for verifying connec
 @property (nonatomic) BOOL waitingForProgrammer;
 
 @property (nonatomic, copy) void (^robotVerificationCompletion)(BOOL verified);
-@property (nonatomic, copy) void (^transmitBytesCompletion)();
+@property (nonatomic, copy) void (^transmitBytesCompletion)(void);
 @property (nonatomic, copy) void (^closeSessionCompletion)(BOOL closed);
 
 @property (nonatomic, getter=isShuttingDown) BOOL shuttingDown;
@@ -422,7 +422,7 @@ static const float kVerifySendRate = 0.1; // 10Hz loop rate for verifying connec
 - (void)closeSession
 {
     CONNECT_LOG(@"");
-    __block void (^closeSession)() = ^{
+    __block void (^closeSession)(void) = ^{
         CONNECT_LOG(@"");
         
         [self.session.inputStream close];
@@ -464,11 +464,11 @@ static const float kVerifySendRate = 0.1; // 10Hz loop rate for verifying connec
 {
     switch (streamEvent) {
         case NSStreamEventHasBytesAvailable: {
-            int bytesRead = 0;
+            NSInteger bytesRead = 0;
             uint8_t buffer[20];
             
             // Get bytes from the stream and put them into buf for processing
-            while((bytesRead = [(NSInputStream *)stream read:buffer maxLength:sizeof(buffer)])) {
+            while((bytesRead = [(NSInputStream *)stream read:buffer maxLength: sizeof(buffer)])) {
                 [self.rxData appendBytes:buffer length:bytesRead];
             }
             
@@ -536,7 +536,7 @@ static const float kVerifySendRate = 0.1; // 10Hz loop rate for verifying connec
     }
 
     if (self.txData.length) {
-        int bytesSent = [self.session.outputStream write:self.txData.bytes maxLength:self.txData.length];
+        NSInteger bytesSent = [self.session.outputStream write:self.txData.bytes maxLength:self.txData.length];
         
         if (bytesSent < self.txData.length && bytesSent >= 0) {
             NSRange unsentRange = NSMakeRange(bytesSent, self.txData.length - bytesSent);
@@ -608,7 +608,7 @@ static const float kVerifySendRate = 0.1; // 10Hz loop rate for verifying connec
         self.programmer = nil;
         self.isUpdatingFirmware = NO;
         
-        __block void (^softReset)() = ^{
+        __block void (^softReset)(void) = ^{
             if (self.session) {
                 [self exitBootloader];
                 

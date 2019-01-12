@@ -183,9 +183,9 @@
                                  dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
                                  dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
                                      if (self.leftEye.close > 0.89 || self.rightEye.close > 0.89) {
-                                         if (_doubleBlink) {
+                                         if (self->_doubleBlink) {
                                              [self openEyesWithCompletion:^(BOOL finished) {
-                                                 _doubleBlink = NO;
+                                                 self->_doubleBlink = NO;
                                                  [self blink];
                                              }];
                                          } else {
@@ -305,7 +305,7 @@
                                  self.rightEye.pupil.frame = (CGRect){self.rightEye.pupil.frame.origin.x, self.rightEye.pupil.frame.origin.y - 8, self.rightEye.pupil.frame.size};
                              }
 
-                             if (!_doubleBlink) {
+                             if (!self->_doubleBlink) {
                                  self.frame = (CGRect){self.frame.origin.x, 0, self.frame.size};
                              }
                          } completion:completion];

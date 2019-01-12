@@ -47,7 +47,7 @@
                                   angle:0.0
                             controlDpad:RMDpadSectorNone
                              expression:RMCharacterExpressionNone
-                                   type:content];
+                                   type:(CommandType)content];
 }
 
 - (id)initWithTiltMotorPower:(float)tiltMotorPower
@@ -122,13 +122,13 @@
 {
     if (self = [super initWithCoder:coder]) {
         _tiltMotorPower  = [coder decodeFloatForKey:KEY_TILT];
-        _controlType     = [coder decodeIntegerForKey:KEY_DRIVE_CONTROL];
+        _controlType     = (DriveControlType)[coder decodeIntegerForKey:KEY_DRIVE_CONTROL];
         _leftSlider      = [coder decodeFloatForKey:KEY_DRIVE_LEFT];
         _rightSlider     = [coder decodeFloatForKey:KEY_DRIVE_RIGHT];
         _distance        = [coder decodeFloatForKey:KEY_DRIVE_DISTANCE];
         _angle           = [coder decodeFloatForKey:KEY_DRIVE_ANGLE];
         _sector          = [coder decodeIntForKey:KEY_DRIVE_SECTOR];
-        _expression      = [coder decodeIntegerForKey:KEY_EXPRESSION];
+        _expression      = (RMCharacterExpression)[coder decodeIntegerForKey:KEY_EXPRESSION];
     }
     
     return self;

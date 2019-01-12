@@ -282,28 +282,28 @@ static const int kPositiveResponseLabel = 2;
         self.negativeResponseLabel = [(NSNumber *)[aDecoder decodeObjectForKey:@"negativeResponseLabel"] integerValue];
 
         NSData *trainingDataObject = (NSData *)[aDecoder decodeObjectForKey:@"trainingData"];
-        int trainingDataRows = [(NSNumber *)[aDecoder decodeObjectForKey:@"trainingDataRows"] integerValue];
-        int trainingDataCols = [(NSNumber *)[aDecoder decodeObjectForKey:@"trainingDataCols"] integerValue];
-        int trainingDataDepth = [(NSNumber *)[aDecoder decodeObjectForKey:@"trainingDataDepth"] integerValue];
-        int trainingDataChannels = [(NSNumber *)[aDecoder decodeObjectForKey:@"trainingDataChannels"] integerValue];
+        NSInteger trainingDataRows = [(NSNumber *)[aDecoder decodeObjectForKey:@"trainingDataRows"] integerValue];
+        NSInteger trainingDataCols = [(NSNumber *)[aDecoder decodeObjectForKey:@"trainingDataCols"] integerValue];
+        NSInteger trainingDataDepth = [(NSNumber *)[aDecoder decodeObjectForKey:@"trainingDataDepth"] integerValue];
+        NSInteger trainingDataChannels = [(NSNumber *)[aDecoder decodeObjectForKey:@"trainingDataChannels"] integerValue];
 
-        self.trainingData = cv::Mat(trainingDataRows, trainingDataCols, CV_MAKETYPE(trainingDataDepth, trainingDataChannels));
+        self.trainingData = cv::Mat((int)trainingDataRows, (int)trainingDataCols, CV_MAKETYPE((int)trainingDataDepth, (int)trainingDataChannels));
         [trainingDataObject getBytes:self.trainingData.data length:self.trainingData.elemSize() * self.trainingData.total()];
         
         
         NSData *labelsObject = (NSData *)[aDecoder decodeObjectForKey:@"labels"];
-        int labelsRows = [(NSNumber *)[aDecoder decodeObjectForKey:@"labelsRows"] integerValue];
-        int labelsCols = [(NSNumber *)[aDecoder decodeObjectForKey:@"labelsCols"] integerValue];
-        int labelsDepth = [(NSNumber *)[aDecoder decodeObjectForKey:@"labelsDepth"] integerValue];
-        int labelsChannels = [(NSNumber *)[aDecoder decodeObjectForKey:@"labelsChannels"] integerValue];
+        NSInteger labelsRows = [(NSNumber *)[aDecoder decodeObjectForKey:@"labelsRows"] integerValue];
+        NSInteger labelsCols = [(NSNumber *)[aDecoder decodeObjectForKey:@"labelsCols"] integerValue];
+        NSInteger labelsDepth = [(NSNumber *)[aDecoder decodeObjectForKey:@"labelsDepth"] integerValue];
+        NSInteger labelsChannels = [(NSNumber *)[aDecoder decodeObjectForKey:@"labelsChannels"] integerValue];
 
-        self.labels = cv::Mat(labelsRows, labelsCols, CV_MAKETYPE(labelsDepth, labelsChannels));
+        self.labels = cv::Mat((int)labelsRows, (int)labelsCols, CV_MAKETYPE((int)labelsDepth, (int)labelsChannels));
         [labelsObject getBytes:self.labels.data length:self.labels.elemSize() * self.labels.total()];
         
         
         _covarianceScaling = 1.0;
         NSNumber *storedCovarianceScaling = (NSNumber *)[aDecoder decodeObjectForKey:@"covarianceScaling"];
-        if (storedCovarianceScaling) {
+        if (storedCovarianceScaling != nil) {
             _covarianceScaling = [storedCovarianceScaling floatValue];
         }
 
@@ -322,8 +322,8 @@ static const int kPositiveResponseLabel = 2;
         NSUInteger cols = arc4random_uniform(1000) + 1;
         NSUInteger depth = arc4random_uniform(CV_USRTYPE1);
         
-        _trainingData = cv::Mat(rows, cols, CV_MAKETYPE(depth, 1));
-        _labels = cv::Mat(rows, 1, CV_32FC1);
+        _trainingData = cv::Mat((int)rows, (int)cols, CV_MAKETYPE(depth, 1));
+        _labels = cv::Mat((int)rows, 1, CV_32FC1);
         
         cv::randu(_trainingData, cv::Scalar(0), cv::Scalar(256));
         cv::randu(_labels, cv::Scalar(0), cv::Scalar(256));

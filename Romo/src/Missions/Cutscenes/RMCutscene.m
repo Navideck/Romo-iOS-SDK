@@ -129,15 +129,15 @@
 {
     MPMoviePlayerController *player = notification.object;
     
-    NSString *s = nil;
-    switch ([notification.object playbackState]) {
-        case MPMoviePlaybackStateStopped: s = @"stopped"; break;
-        case MPMoviePlaybackStatePlaying: s = @"playing"; break;
-        case MPMoviePlaybackStatePaused: s = @"paused"; break;
-        case MPMoviePlaybackStateInterrupted: s = @"interrupted"; break;
-        default: s = @"seeking"; break;
-    }
-    
+//    NSString *s = nil;
+//    switch ([notification.object playbackState]) {
+//        case MPMoviePlaybackStateStopped: s = @"stopped"; break;
+//        case MPMoviePlaybackStatePlaying: s = @"playing"; break;
+//        case MPMoviePlaybackStatePaused: s = @"paused"; break;
+//        case MPMoviePlaybackStateInterrupted: s = @"interrupted"; break;
+//        default: s = @"seeking"; break;
+//    }
+//    
     if ((player.playbackState == MPMoviePlaybackStateInterrupted ||
          player.playbackState == MPMoviePlaybackStatePaused ||
          player.playbackState == MPMoviePlaybackStateStopped) &&
