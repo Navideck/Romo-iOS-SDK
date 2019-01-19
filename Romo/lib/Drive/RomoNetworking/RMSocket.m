@@ -130,7 +130,7 @@
 {
     dispatch_async(_writeQueue, ^{ @autoreleasepool {
         
-        switch (_socketType)
+        switch (self->_socketType)
         {
             case SOCK_STREAM:
                 [self sendStreamPacket:packet];
@@ -156,8 +156,8 @@
     if (result == 0)
     {
         dispatch_async(_readQueue, ^{ @autoreleasepool {
-            _isConnected = YES;
-            [self setPeerAddress:_localAddress];
+            self->_isConnected = YES;
+            [self setPeerAddress:self->_localAddress];
             [self connectionSucceeded];
         }});
     }
@@ -194,13 +194,13 @@
     __weak RMSocket *weakSelf = self;
 	dispatch_source_set_event_handler(_readSource, ^{
         @autoreleasepool {
-            _socketType == SOCK_STREAM ? [weakSelf readStream] : [weakSelf readDatagram];
+            self->_socketType == SOCK_STREAM ? [weakSelf readStream] : [weakSelf readDatagram];
         }
     });
     
     dispatch_source_set_cancel_handler(_readSource, ^{
         @autoreleasepool {
-            close(_nativeSocket);
+            close(self->_nativeSocket);
         }
     });
     

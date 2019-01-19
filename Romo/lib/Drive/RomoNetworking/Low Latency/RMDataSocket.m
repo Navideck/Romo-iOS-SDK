@@ -114,7 +114,7 @@
 - (void)sendDataPacket:(RMDataPacket *)dataPacket
 {
     dispatch_async(_writeQueue, ^{ @autoreleasepool {
-        switch (_socketType) {
+        switch (self->_socketType) {
             case SOCK_STREAM:
                 [self sendStreamDataPacket:dataPacket];
                 break;
@@ -137,8 +137,8 @@
     
     if (result == 0) {
         dispatch_async(_readQueue, ^{ @autoreleasepool {
-            _isConnected = YES;
-            [self setPeerAddress:_address];
+            self->_isConnected = YES;
+            [self setPeerAddress:self->_address];
             [self connectionSucceeded];
         }});
     } else {
@@ -179,7 +179,7 @@
     }
     
     dispatch_source_set_cancel_handler(_readSource, ^{
-        close(_nativeSocket);
+        close(self->_nativeSocket);
     });
     
     dispatch_resume(_readSource);
