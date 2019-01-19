@@ -57,7 +57,6 @@
 - (void)setContentHuggingPriority:(UILayoutPriority)priority forAxis:(UILayoutConstraintAxis)axis {}
 - (void)setClearsContextBeforeDrawing:(BOOL)clearsContextBeforeDrawing {}
 - (void)setClipsToBounds:(BOOL)clipsToBounds {}
-- (NSArray *)subviews { return nil; }
 - (CGRect)frame { return CGRectZero; }
 - (Class)class { return [UIView class]; }
 - (CGPoint)center { return CGPointZero; }

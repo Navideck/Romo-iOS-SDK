@@ -81,7 +81,9 @@ static const int minimumPathLength = 128;
     
     CGPathMoveToPoint(self.doodlePath, NULL, mid1.x, mid1.y);
     CGPathAddQuadCurveToPoint(self.doodlePath, NULL, self.previousPoint.x, self.previousPoint.y, mid2.x, mid2.y);
-    self.doodleLayer.path = CGPathCreateCopy(self.doodlePath);
+    CGPathRef path = CGPathCreateCopy(self.doodlePath);
+    self.doodleLayer.path = path;
+    CGPathRelease(path);
 }
 
 - (void)redrawCanvas

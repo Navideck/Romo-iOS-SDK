@@ -67,7 +67,7 @@
             
             GLubyte *outputBytes = [weakSelf.rawDataOutput rawBytesForImage];
             NSInteger bytesPerRow = [weakSelf.rawDataOutput bytesPerRowInOutput];
-            NSLog(@"Bytes per row: %d", bytesPerRow);
+            NSLog(@"Bytes per row: %ld", (long)bytesPerRow);
             
             // Copy the data into a cv::Mat
             cv::Mat exampleMat(core.height, core.width, CV_8UC4, outputBytes);

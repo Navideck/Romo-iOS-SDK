@@ -349,7 +349,7 @@
 
 - (BOOL)activateModuleWithName:(NSString *)moduleName
 {
-    int prevCount = self.activeModules.count;
+    NSInteger prevCount = self.activeModules.count;
     BOOL retVal = [super activateModuleWithName:moduleName];
     if (_captureStarted && prevCount == 0 && self.activeModules.count > 0) {
         // we'd better start things up

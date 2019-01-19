@@ -148,16 +148,16 @@ DDLOG_ENABLE_DYNAMIC_LEVELS
             [self.Romo.voice dismissImmediately];
         }
         
-        __block void (^beforeAnimation)() = nil;
+        __block void (^beforeAnimation)(void) = nil;
         UIViewAnimationOptions animationOptions = 0;
-        __block void (^animation)() = nil;
+        __block void (^animation)(void) = nil;
         __block void (^completion)(BOOL finished) = ^(BOOL finished){
-            [_robotController.view removeFromSuperview];
-            [_robotController removeFromParentViewController];
-            _robotController.view.top = 0.0;
+            [self->_robotController.view removeFromSuperview];
+            [self->_robotController removeFromParentViewController];
+            self->_robotController.view.top = 0.0;
             
-            RMRobotController *oldRobotController = _robotController;
-            _robotController = robotController;
+            RMRobotController *oldRobotController = self->_robotController;
+            self->_robotController = robotController;
             
             self.Romo.delegate = robotController;
             self.Romo.activeFunctionalities = robotController.initiallyActiveFunctionalities;
@@ -194,11 +194,11 @@ DDLOG_ENABLE_DYNAMIC_LEVELS
             if (currentControllerShowsRomo && !newControllerShowsRomo) {
                 // dismiss Romo
                 beforeAnimation = ^{
-                    [self.window.rootViewController.view insertSubview:robotController.view belowSubview:_robotController.view];
+                    [self.window.rootViewController.view insertSubview:robotController.view belowSubview:self->_robotController.view];
                 };
                 animationOptions = UIViewAnimationOptionCurveEaseIn;
                 animation = ^{
-                    _robotController.view.top = self.window.rootViewController.view.height;
+                    self->_robotController.view.top = self.window.rootViewController.view.height;
                 };
             } else if (!currentControllerShowsRomo && newControllerShowsRomo) {
                 // present Romo
@@ -206,7 +206,7 @@ DDLOG_ENABLE_DYNAMIC_LEVELS
                     self.Romo.delegate = robotController;
                     self.Romo.activeFunctionalities = robotController.initiallyActiveFunctionalities;
                     robotController.view.top = self.window.rootViewController.view.height;
-                    [self.window.rootViewController.view insertSubview:robotController.view aboveSubview:_robotController.view];
+                    [self.window.rootViewController.view insertSubview:robotController.view aboveSubview:self->_robotController.view];
                 };
                 animationOptions = UIViewAnimationOptionCurveEaseOut;
                 animation = ^{
@@ -347,7 +347,13 @@ DDLOG_ENABLE_DYNAMIC_LEVELS
 
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
 {
-    return [self application:application openURL:url sourceApplication:nil annotation:nil];
+
+    if (@available(iOS 9.0, *)) {
+        return [self application:application openURL:url options:@{}];
+    } else {
+        // Fallback on earlier versions
+        return [self application:application openURL:url sourceApplication:nil annotation:@{}];
+    }
 }
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation

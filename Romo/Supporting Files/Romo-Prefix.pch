@@ -16,6 +16,5 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
     #import <QuartzCore/QuartzCore.h>
-    #import <RMShared/RMSharedDefines.h>
     #import "Romo.h"
 #endif // __OBJC__

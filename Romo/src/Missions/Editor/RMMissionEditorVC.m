@@ -61,6 +61,8 @@ typedef enum {
 
 @implementation RMMissionEditorVC
 
+@dynamic view;
+
 - (void)loadView
 {
     self.view = [[RMMissionEditorView alloc] initWithFrame:[UIScreen mainScreen].bounds];
@@ -82,6 +84,7 @@ typedef enum {
 
 - (void)didReceiveMemoryWarning
 {
+    [super didReceiveMemoryWarning];
     // Try to prevent a low-memory crash by disposing of resources
     [self dismissActionBrowserPreanimation];
     [self dismissActionBrowserAnimation];
@@ -247,7 +250,7 @@ typedef enum {
     self.view.scrollEnabled = !expanding;
     actionView.glowing = NO;
 
-    int index = [self.view.actionViews indexOfObject:actionView];
+    NSInteger index = [self.view.actionViews indexOfObject:actionView];
     CGFloat offset = self.view.height / 2;
     [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
     if (expanding) {
@@ -358,7 +361,7 @@ typedef enum {
  */
 - (void)pulseActionView:(RMActionView *)actionView
 {
-    int index = [self.view.actionViews indexOfObject:actionView];
+    NSInteger index = [self.view.actionViews indexOfObject:actionView];
     [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
     [UIView animateWithDuration:0.25
                      animations:^{
@@ -417,7 +420,7 @@ typedef enum {
 - (void)actionViewDidDelete:(RMActionView *)actionView
 {
     [RMSoundEffect playForegroundEffectWithName:deleteButtonSound repeats:NO gain:1.0];
-    int index = [self.view.actionViews indexOfObject:actionView];
+    NSInteger index = [self.view.actionViews indexOfObject:actionView];
     RMAction *deletedAction = self.currentScript[index];
     [self.currentScript removeObjectAtIndex:index];
     [self.view.actionViews removeObject:actionView];
@@ -462,7 +465,7 @@ typedef enum {
 
 - (void)actionView:(RMActionView *)actionView didEndDragging:(CGPoint)offset fromOrigin:(CGPoint)origin
 {
-    int oldIndex = [self.view.actionViews indexOfObject:actionView];
+    NSInteger oldIndex = [self.view.actionViews indexOfObject:actionView];
     RMAction *correspondingAction = self.currentScript[oldIndex];
 
     int index = [self.view actionView:actionView didEndDragging:offset fromOrigin:origin];
@@ -527,7 +530,7 @@ typedef enum {
 
 - (void)eventsView:(RMEventsView *)eventsView willRemoveEventIcon:(RMEventIcon *)eventIcon
 {
-    int indexOfEvent = [self.mission.events indexOfObject:eventIcon.event];
+    NSInteger indexOfEvent = [self.mission.events indexOfObject:eventIcon.event];
     // ONLY allow deletion message to appear if:
     // the event is in the pool
     // there is more than one event
@@ -551,7 +554,7 @@ typedef enum {
 
 - (void)eventsView:(RMEventsView *)eventsView didRemoveEvent:(RMEvent *)event
 {
-    int indexOfEvent = [self.mission.events indexOfObject:event];
+    NSInteger indexOfEvent = [self.mission.events indexOfObject:event];
     if (indexOfEvent != NSNotFound) {
         // Remove event from mission
         [self.mission.events removeObjectAtIndex:indexOfEvent];
@@ -617,7 +620,7 @@ typedef enum {
 {
     _currentEvent = currentEvent;
 
-    int index = [self.mission.events indexOfObject:currentEvent];
+    NSInteger index = [self.mission.events indexOfObject:currentEvent];
     self.currentScript = self.mission.inputScripts[index];
     self.view.script = self.currentScript;
     

@@ -342,8 +342,8 @@ static const float kLineLeakMax = 5.0;
             
             if (self.highestPriorityBehavior != RMActivityBehaviorNone) {
                 // Check to see if the new behavior is higher priority than our current
-                int priorityOfCurrentBehavior = self.prioritizedBehaviors.count - [self.prioritizedBehaviors indexOfObject:@(self.highestPriorityBehavior)];
-                int priorityOfNewBehavior = self.prioritizedBehaviors.count - [self.prioritizedBehaviors indexOfObject:@(behavior)];
+                NSInteger priorityOfCurrentBehavior = self.prioritizedBehaviors.count - [self.prioritizedBehaviors indexOfObject:@(self.highestPriorityBehavior)];
+                NSInteger priorityOfNewBehavior = self.prioritizedBehaviors.count - [self.prioritizedBehaviors indexOfObject:@(behavior)];
                 
                 if (priorityOfNewBehavior > priorityOfCurrentBehavior) {
                     previousBehavior = self.highestPriorityBehavior;
@@ -578,7 +578,7 @@ static const float kLineLeakMax = 5.0;
 {
     int step = self.behaviorStep;
     
-    void (^finishLookingForNegativeData)() = ^{
+    void (^finishLookingForNegativeData)(void) = ^{
         if (self.negativeDataCompletion) {
             void (^completion)(BOOL) = self.negativeDataCompletion;
             self.negativeDataCompletion = nil;

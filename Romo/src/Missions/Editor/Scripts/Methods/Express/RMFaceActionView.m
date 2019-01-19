@@ -218,7 +218,7 @@ static const CGFloat unselectedFaceOptionTop = 8.0;
 {
     dispatch_async(dispatch_get_main_queue(), ^{
         BOOL isUnlocked = SIGN(tap.view.tag) == faceOptionTagUnlocked;
-        int faceNumber = ABS(tap.view.tag);
+        int faceNumber = (int)ABS(tap.view.tag);
 
         if (isUnlocked) {
             if (self.showingEmotion) {
@@ -286,7 +286,7 @@ static const CGFloat unselectedFaceOptionTop = 8.0;
             }
         }
 
-        int count = unlocked.count + locked.count;
+        NSInteger count = unlocked.count + locked.count;
         _options = [NSMutableArray arrayWithCapacity:count];
 
         for (int i = 0; i < count; i++) {

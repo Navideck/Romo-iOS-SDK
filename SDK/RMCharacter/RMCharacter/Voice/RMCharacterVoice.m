@@ -148,7 +148,12 @@
     } else {
         path = [self.characterBundle pathForResource:[NSString stringWithFormat:@"%d",_expression] ofType:@"caf"];
     }
-    path = [path stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    if (@available(iOS 7.0, *)) {
+        path = [path stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLHostAllowedCharacterSet]];
+    } else {
+        // Fallback on earlier versions
+        path = [path stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    }
     
     [self audioDidFinish];
     self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL URLWithString:path] error:nil];
@@ -181,7 +186,12 @@
     }
     
     NSString *path = [self.characterBundle pathForResource:filename ofType:@"caf"];
-    path = [path stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    if (@available(iOS 7.0, *)) {
+        path = [path stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLHostAllowedCharacterSet]];
+    } else {
+        // Fallback on earlier versions
+        path = [path stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    }
     
     self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL URLWithString:path] error:nil];
     

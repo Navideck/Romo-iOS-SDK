@@ -10,7 +10,7 @@
 
 @interface RMMissionToken ()
 
-@property (nonatomic, readwrite) int index;
+@property (nonatomic, readwrite) NSInteger index;
 @property (nonatomic, readwrite) RMMissionStatus status;
 @property (nonatomic, strong) UIView *contentView;
 @property (nonatomic, strong) UIImageView *pulse;
@@ -24,7 +24,7 @@
 
 @implementation RMMissionToken
 
-- (id)initWithChapter:(RMChapter)chapter index:(int)index status:(RMMissionStatus)status
+- (id)initWithChapter:(RMChapter)chapter index:(NSInteger)index status:(RMMissionStatus)status
 {
     self = [super initWithFrame:CGRectMake(0, 0, 77, 77)];
     if (self) {
@@ -182,7 +182,7 @@
         _indexLabel = [[UILabel alloc] initWithFrame:CGRectZero];
         _indexLabel.backgroundColor = [UIColor clearColor];
         _indexLabel.textColor = [UIColor whiteColor];
-        _indexLabel.text = [NSString stringWithFormat:@"%d",self.index];
+        _indexLabel.text = [NSString stringWithFormat:@"%ld",(long)self.index];
         _indexLabel.font = [UIFont fontWithSize:36];
         _indexLabel.size = [_indexLabel.text sizeWithFont:_indexLabel.font];
         _indexLabel.layer.shadowColor = [UIColor blackColor].CGColor;

@@ -56,11 +56,11 @@ static const int kPortaitKeyboardHeight = 216;
 @property (nonatomic, strong) NSArray *actions;
 
 // Counters for total blocks/actions and current block/action indeces
-@property (nonatomic) int numberOfBlocks;
-@property (nonatomic) int blockNumber;
+@property (nonatomic) NSInteger numberOfBlocks;
+@property (nonatomic) NSInteger blockNumber;
 
-@property (nonatomic) int numberOfActionsInBlock;
-@property (nonatomic) int actionNumber;
+@property (nonatomic) NSInteger numberOfActionsInBlock;
+@property (nonatomic) NSInteger actionNumber;
 
 // Storage for if we're executing an action or if the block's condition has been met
 @property (nonatomic) BOOL executingAction;
@@ -114,7 +114,7 @@ static const int kPortaitKeyboardHeight = 216;
 
 - (void)addAndAnimateView:(UIView *)view afterRomoSaysMessage:(NSString *)message;
 - (void)removeAndAnimateView:(UIView *)view afterRomoSaysMessage:(NSString *)message completion:(void (^)(BOOL finished))completion;
-- (unsigned)numberOfLinesInString:(NSString *)string;
+- (NSUInteger)numberOfLinesInString:(NSString *)string;
 
 @end
 
@@ -715,7 +715,7 @@ static const int kPortaitKeyboardHeight = 216;
     else if ([actionType isEqualToString:@"mumbleWithRandomTextFromList"]) {
         assert(args.count >= 1);
         
-        int randomIndex = arc4random_uniform(args.count);
+        NSInteger randomIndex = arc4random_uniform((uint32_t)args.count);
         NSString *randomString = args[randomIndex];
         assert(randomString != nil);
         
@@ -786,10 +786,10 @@ static const int kPortaitKeyboardHeight = 216;
     }
     // Say something from a list of possible phrases
     else if ([actionType isEqualToString:@"sayRandomFromList"]) {
-        int numPossibilities = args.count;
+        NSInteger numPossibilities = args.count;
         assert(numPossibilities >= 1);
         
-        int randomIndex = arc4random_uniform(numPossibilities);
+        int randomIndex = arc4random_uniform((uint32_t)numPossibilities);
         NSString *randomString = args[randomIndex];
         
         assert(randomString != nil);
@@ -816,7 +816,7 @@ static const int kPortaitKeyboardHeight = 216;
         
         if (args.count > 2) {
             // Multiple choice
-            int numChoices = args.count - 1;
+            NSInteger numChoices = args.count - 1;
             [self.lastChoices removeAllObjects];
             for (int i = 1; i <= numChoices; i++) {
                 [self.lastChoices addObject:args[i]];
@@ -1045,13 +1045,13 @@ static const int kPortaitKeyboardHeight = 216;
     }
 }
 
-- (void)showSlideshowWithCompletion:(void (^)())completion
+- (void)showSlideshowWithCompletion:(void (^)(void))completion
 {
     [self.Romo.character lookAtPoint:RMPoint3DMake(0, 1.0, 0.0) animated:YES];
     [self showSlideshowFromIndex:0 completion:completion];
 }
 
-- (void)showSlideshowFromIndex:(int)index completion:(void (^)())completion
+- (void)showSlideshowFromIndex:(int)index completion:(void (^)(void))completion
 {
     static NSMutableArray *photoViews;
     
@@ -1305,7 +1305,7 @@ static const int kPortaitKeyboardHeight = 216;
 //------------------------------------------------------------------------------
 - (void)addAndAnimateView:(UIView *)view afterRomoSaysMessage:(NSString *)message;
 {
-    unsigned numberOfLines = [self numberOfLinesInString:message];
+    NSUInteger numberOfLines = [self numberOfLinesInString:message];
     
     view.top = self.view.height;
     [self.view addSubview:view];
@@ -1318,7 +1318,7 @@ static const int kPortaitKeyboardHeight = 216;
 //------------------------------------------------------------------------------
 - (void)removeAndAnimateView:(UIView *)view afterRomoSaysMessage:(NSString *)message completion:(void (^)(BOOL))completion
 {
-    unsigned numberOfLines = [self numberOfLinesInString:message];
+    NSUInteger numberOfLines = [self numberOfLinesInString:message];
     
     if (view.superview) {
         [UIView animateWithDuration:0.2 delay:0.2 * numberOfLines options:0
@@ -1334,9 +1334,9 @@ static const int kPortaitKeyboardHeight = 216;
 }
 
 //------------------------------------------------------------------------------
-- (unsigned)numberOfLinesInString:(NSString *)string
+- (NSUInteger)numberOfLinesInString:(NSString *)string
 {
-    unsigned numberOfLines, index, stringLength = [string length];
+    NSUInteger numberOfLines, index, stringLength = [string length];
     
     for (index = 0, numberOfLines = 0; index < stringLength; numberOfLines++) {
         index = NSMaxRange([string lineRangeForRange:NSMakeRange(index, 0)]);

@@ -27,6 +27,10 @@ static const CGFloat maximumDragDistance = 22.0;
 
 @implementation RMActivityRobotController
 
+@dynamic view;
+
+@dynamic title;
+
 - (void)loadView
 {
     self.view = [[RMActivityRobotControllerView alloc] initWithFrame:[UIScreen mainScreen].bounds];

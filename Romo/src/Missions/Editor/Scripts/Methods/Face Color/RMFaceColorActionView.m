@@ -55,7 +55,7 @@
             self.faceColor = parameter.value;
             
             // Get the float value of the hue to figure out where the knob should be
-            float hue = 0;
+            CGFloat hue = 0;
             [self.faceColor getHue:&hue saturation:0 brightness:0 alpha:0];
             [self updateColorForLocation:hue * self.faceColorBar.width];
         }

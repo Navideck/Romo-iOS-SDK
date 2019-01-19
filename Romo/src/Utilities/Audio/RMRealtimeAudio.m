@@ -304,9 +304,9 @@
     
     // Set the bus count - we need two channels going into the mixer
     //  ...one for the sampler unit, and one for our callback function
-    UInt32 busCount = 2;
-    result = AudioUnitSetProperty(_mixerUnit, kAudioUnitProperty_ElementCount, kAudioUnitScope_Input, 0, &busCount, sizeof(busCount));
-    
+//    UInt32 busCount = 2;
+//    result = AudioUnitSetProperty(_mixerUnit, kAudioUnitProperty_ElementCount, kAudioUnitScope_Input, 0, &busCount, sizeof(busCount));
+
     // Define the format going into the mixer for each channel
     _audioFormat.mSampleRate = self.sampleRate;
     _audioFormat.mFormatID = kAudioFormatLinearPCM;

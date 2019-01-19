@@ -10,7 +10,7 @@
 
 @interface RMScrollingInput () <UIScrollViewDelegate>
 
-@property (nonatomic, copy) NSMutableArray *valueLabels;
+@property (nonatomic, strong) NSMutableArray *valueLabels;
 
 /** If there are enough inputs, they should wrap around and infinitely scroll */
 @property (nonatomic) BOOL wraps;

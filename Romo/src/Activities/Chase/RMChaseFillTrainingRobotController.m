@@ -176,6 +176,7 @@ const int COUNTDOWN_TIMER_START = 11; // 10 second count down
     
     CGImageRef imageRef = CGImageCreateWithImageInRect([image CGImage], CGRectMake(topLeft.x, topLeft.y, side, side));
     UIImage *cropped = [[UIImage imageWithCGImage:imageRef] roundedCornerImage:side/2.0 borderSize:0];
+    CGImageRelease(imageRef);
     
     self.trainingDataImage = cropped;
     

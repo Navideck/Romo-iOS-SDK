@@ -59,7 +59,7 @@ NSString *const RMRomoAppStoreURL = @"https://itunes.apple.com/us/app/romo-x/id1
  e.g. "Rate the app"
  */
 @property (nonatomic, strong) NSMutableArray *delayedUnlockables;
-@property (nonatomic, copy) void (^completion)();
+@property (nonatomic, copy) void (^completion)(void);
 @property (nonatomic) BOOL continueOnCompletion;
 
 /** If valid, randomly shoots stars from mission orb */
@@ -418,7 +418,7 @@ NSString *const RMRomoAppStoreURL = @"https://itunes.apple.com/us/app/romo-x/id1
                          
                          for (int i = 0; i < self.successStars.count; i++) {
                              UIImageView *noStar = self.successStars[i];
-                             noStar.center = CGPointMake(_window.width / 2.0 - 64 + 64*i, 132);
+                             noStar.center = CGPointMake(self->_window.width / 2.0 - 64 + 64*i, 132);
                              noStar.alpha = 1.0;
                          }
                      } completion:^(BOOL finished) {
@@ -669,7 +669,7 @@ NSString *const RMRomoAppStoreURL = @"https://itunes.apple.com/us/app/romo-x/id1
     // For now, the only unlockables we show to users are actions
     NSMutableArray *unlockedItems = [NSMutableArray arrayWithCapacity:self.achievedUnlockables.count];
     for (RMUnlockable *unlockable in self.achievedUnlockables) {
-        UIView *unlockedItem = nil;
+        UIView *unlockedItem;
         switch (unlockable.type) {
             case RMUnlockableChapter: {
                 int chapter = [unlockable.value intValue];
@@ -689,7 +689,7 @@ NSString *const RMRomoAppStoreURL = @"https://itunes.apple.com/us/app/romo-x/id1
                 break;
             }
                 
-            default: break;
+            default: return; break;
         }
         
         unlockedItem.transform = CGAffineTransformMakeScale(2.5, 2.5);
@@ -760,7 +760,7 @@ NSString *const RMRomoAppStoreURL = @"https://itunes.apple.com/us/app/romo-x/id1
 
 #pragma mark - Unlockables
 
-- (void)presentDelayedUnlockable:(RMUnlockable *)unlockable completion:(void (^)())completion
+- (void)presentDelayedUnlockable:(RMUnlockable *)unlockable completion:(void (^)(void))completion
 {
     self.completion = completion;
     

@@ -30,7 +30,7 @@ typedef enum {
 @property (nonatomic, readonly) RMChapter chapter;
 
 /** The index into the chapter that this mission is */
-@property (nonatomic, readonly) int index;
+@property (nonatomic, readonly) NSInteger index;
 
 /** A delegate to receive runtime messages */
 @property (nonatomic, weak) id<RMMissionDelegate> delegate;
@@ -109,7 +109,7 @@ typedef enum {
 @property (nonatomic, readonly) NSString *successDebriefing;
 @property (nonatomic, readonly) NSString *congratsDebriefing;
 @property (nonatomic, readonly) NSString *promptToPlay;
-@property (nonatomic, readonly) int maximumActionCount;
+@property (nonatomic, readonly) NSInteger maximumActionCount;
 @property (nonatomic, readonly) BOOL allowsAddingEvents;
 @property (nonatomic, readonly) BOOL allowsEditingParameters;
 @property (nonatomic, readonly) BOOL allowsAddingActions;
@@ -182,7 +182,7 @@ typedef enum {
  "duration" -> an int duration that the mission will be forced to run for, without this, the mission expires after all events occur
  
  */
-- (id)initWithChapter:(RMChapter)chapter index:(int)index;
+- (id)initWithChapter:(RMChapter)chapter index:(NSInteger)index;
 
 - (void)incrementAvailableCountForAction:(RMAction *)action;
 - (void)decrementAvailableCountForAction:(RMAction *)action;

@@ -20,6 +20,8 @@
 
 @implementation RMEventBrowserVC
 
+@dynamic view;
+
 - (void)loadView
 {
     self.view = [[RMEventBrowserView alloc] initWithFrame:[UIScreen mainScreen].bounds];

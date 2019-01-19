@@ -22,7 +22,7 @@ static NSString *theLabsavedSolutionName = @"TheLab";
 
 @implementation RMSandboxMission
 
-- (instancetype)initWithChapter:(RMChapter)chapter index:(int)index
+- (instancetype)initWithChapter:(RMChapter)chapter index:(NSInteger)index
 {
     self = [super init];
     if (self) {

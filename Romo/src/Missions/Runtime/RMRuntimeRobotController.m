@@ -74,6 +74,8 @@ static const CGFloat UNTRIGGERED_EVENT_PROMPT_REPEAT_DELAY = 4.0;
 
 @implementation RMRuntimeRobotController
 
+@dynamic delegate;
+
 #pragma mark - View Lifecycle
 
 - (void)controllerDidBecomeActive

@@ -89,7 +89,7 @@ static const float tiltingGazeAmount = 1.0;
     self.doodleActionIncrement++;
     
     if (self.currentlyPlayingItem) {
-        [[MPMusicPlayerController iPodMusicPlayer] stop];
+        [[MPMusicPlayerController systemMusicPlayer] stop];
     }
 }
 
@@ -197,7 +197,7 @@ static const float tiltingGazeAmount = 1.0;
         BOOL driveForward = [action[@"forward"] boolValue];
         BOOL turn = [action[@"turn"] boolValue];
         
-        void (^actionCompletion)() = ^{
+        void (^actionCompletion)(void) = ^{
             [self executeActionAtIndex:index + 1 doodle:doodle incrementKey:incrementKey completion:completion];
         };
         
@@ -233,7 +233,7 @@ static const float tiltingGazeAmount = 1.0;
     }
 }
 
-- (void)driveWithSpeed:(float)speed distance:(float)distance forward:(BOOL)forward completion:(void (^)())completion
+- (void)driveWithSpeed:(float)speed distance:(float)distance forward:(BOOL)forward completion:(void (^)(void))completion
 {
     RMCoreRobot<DriveProtocol> *robot = self.Romo.robot;
 
@@ -486,7 +486,7 @@ static const float tiltingGazeAmount = 1.0;
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(nowPlayingItemDidChange:)
                                                      name:MPMusicPlayerControllerNowPlayingItemDidChangeNotification object:nil];
         
-        MPMusicPlayerController *player = [MPMusicPlayerController iPodMusicPlayer];
+        MPMusicPlayerController *player = [MPMusicPlayerController systemMusicPlayer];
         [player beginGeneratingPlaybackNotifications];
         [player setQueueWithItemCollection:[[MPMediaItemCollection alloc] initWithItems:@[song]]];
         [player setNowPlayingItem:song];
@@ -509,7 +509,7 @@ static const float tiltingGazeAmount = 1.0;
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(nowPlayingItemDidChange:)
                                                      name:MPMusicPlayerControllerNowPlayingItemDidChangeNotification object:nil];
         
-        MPMusicPlayerController *player = [MPMusicPlayerController iPodMusicPlayer];
+        MPMusicPlayerController *player = [MPMusicPlayerController systemMusicPlayer];
         [player beginGeneratingPlaybackNotifications];
         [player setQueueWithItemCollection:[[MPMediaItemCollection alloc] initWithItems:@[self.currentlyPlayingItem]]];
         player.nowPlayingItem = self.currentlyPlayingItem;

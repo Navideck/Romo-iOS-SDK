@@ -67,9 +67,9 @@
             messageColorEscape = XCODE_COLORS_ESCAPE @"fg255,102,0;";
         }
         
-        return [NSString stringWithFormat:XCODE_COLORS_ESCAPE @"fg110,110,110;%@ %@ [%@ %@]:%i" XCODE_COLORS_RESET @" %@%@" XCODE_COLORS_RESET, dateString, appName, className, logMessage->_function, logMessage->_line, messageColorEscape, logMessage->_message];
+        return [NSString stringWithFormat:XCODE_COLORS_ESCAPE @"fg110,110,110;%@ %@ [%@ %@]:%lu" XCODE_COLORS_RESET @" %@%@" XCODE_COLORS_RESET, dateString, appName, className, logMessage->_function, (unsigned long)logMessage->_line, messageColorEscape, logMessage->_message];
     } else {
-        return [NSString stringWithFormat:@"%@ %@ [%@ %@]:%i %@", dateString, appName, className, logMessage->_function, logMessage->_line, logMessage->_message];
+        return [NSString stringWithFormat:@"%@ %@ [%@ %@]:%lu %@", dateString, appName, className, logMessage->_function, (unsigned long)logMessage->_line, logMessage->_message];
     }
 }
 

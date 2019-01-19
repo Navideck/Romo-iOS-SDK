@@ -77,7 +77,7 @@ typedef union {
 /**
  The checksum of the current object as read from the file
  */
-@property (nonatomic,readonly) NSUInteger checksum;
+@property (nonatomic,readonly) unsigned int checksum;
 
 
 @end

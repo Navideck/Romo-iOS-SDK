@@ -5,7 +5,7 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void(^RMAlertViewCompletion)();
+typedef void(^RMAlertViewCompletion)(void);
 
 @class RMAlertView;
 

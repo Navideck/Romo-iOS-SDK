@@ -41,7 +41,7 @@
     
     UIButton *cancelButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     cancelButton.frame = CGRectMake(5, 5, 80, 40);
-    [cancelButton setTitle:@"Cancel" forState:UIControlStateNormal];
+    [cancelButton setTitle:NSLocalizedString(@"Cancel", @"Cancel") forState:UIControlStateNormal];
     [cancelButton addTarget:self action:@selector(handleCancel:) forControlEvents:UIControlEventTouchUpInside];
     
     [self.tableView.tableHeaderView addSubview:cancelButton];
@@ -50,20 +50,44 @@
     
     // Fetch scripts
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://%@/scripts", server]]];
-    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-        if (((NSHTTPURLResponse *)response).statusCode != 200 || connectionError) {
-            NSLog(@"Error fetching data: %@, %@", response, connectionError);
-            
-            [[[UIAlertView alloc] initWithTitle:@"Server Down?"
-                                        message:@"You probably need to either configure the env variable to point to your machine, or start the node server. For more details see: RMInteractionScriptSelectorViewController.h"
-                                       delegate:nil
-                              cancelButtonTitle:@"Dismiss"
-                              otherButtonTitles:nil] show];
-        } else {
-            self.scriptNames = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-            [self.tableView reloadData];
-        }
-    }];
+
+    if (@available(iOS 8.0, *)) {
+        NSURLSession *session = [[NSURLSession alloc]init];
+        [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+            if (((NSHTTPURLResponse *)response).statusCode != 200 || error) {
+                NSLog(@"Error fetching data: %@, %@", response, error);
+
+                UIAlertController* alert = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"Server Down?", @"Server Down?")
+                                                                               message:NSLocalizedString(@"You probably need to either configure the env variable to point to your machine, or start the node server. For more details see: RMInteractionScriptSelectorViewController.h",@"You probably need to either configure the env variable to point to your machine, or start the node server. For more details see: RMInteractionScriptSelectorViewController.h")
+                                                                        preferredStyle:UIAlertControllerStyleAlert];
+
+                UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"Dismiss",@"Dismiss") style:UIAlertActionStyleDefault
+                                                                      handler:^(UIAlertAction * action) {}];
+
+                [alert addAction:defaultAction];
+                [self presentViewController:alert animated:YES completion:nil];
+            } else {
+                self.scriptNames = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+                [self.tableView reloadData];
+            }
+        }];
+    } else {
+        // Fallback on earlier versions
+        [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+            if (((NSHTTPURLResponse *)response).statusCode != 200 || connectionError) {
+                NSLog(@"Error fetching data: %@, %@", response, connectionError);
+
+                [[[UIAlertView alloc] initWithTitle:@"Server Down?"
+                                            message:@"You probably need to either configure the env variable to point to your machine, or start the node server. For more details see: RMInteractionScriptSelectorViewController.h"
+                                           delegate:nil
+                                  cancelButtonTitle:@"Dismiss"
+                                  otherButtonTitles:nil] show];
+            } else {
+                self.scriptNames = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+                [self.tableView reloadData];
+            }
+        }];
+    }
 }
 
 #pragma mark - UI events

@@ -194,24 +194,23 @@
 #ifndef ROMO_CONTROL_APP
         
         [self logMissionsProgress];
-        
-        
-        // Log the odometer, user name, and Romo name, and total docked time
-        NSString *romoName = [[RMRomoMemory sharedInstance] knowledgeForKey:@"romoName"];
-        NSString *userName = [[RMRomoMemory sharedInstance] knowledgeForKey:@"userName"];
-        
-        // Retrieve the total docked time
-        NSNumber *totalDockedPlaytime = [[NSUserDefaults standardUserDefaults] objectForKey:@"romo-3 total-docked-playtime"];
-        NSNumber *dockedCount = [[NSUserDefaults standardUserDefaults] objectForKey:@"romo-3 total-docked-count"];
-        
-        // Retrieve the total wifi drive time
-        NSNumber *totalWiFiDriveSessions = [[NSUserDefaults standardUserDefaults] objectForKey:@"romo-3 total-wifi-drive-count"];
-        NSNumber *totalWiFiDriveTime = [[NSUserDefaults standardUserDefaults] objectForKey:@"romo-3 total-wifi-drive-playtime"];
-        
-        // Retrieve the total telepresence time
-        NSNumber *totalTelepresenceSessions = [[NSUserDefaults standardUserDefaults] objectForKey:@"romo-3 total-telepresence-count"];
-        NSNumber *totalTelepresenceTime = [[NSUserDefaults standardUserDefaults] objectForKey:@"romo-3 total-telepresence-playtime"];
-        
+
+//        // Log the odometer, user name, and Romo name, and total docked time
+//        NSString *romoName = [[RMRomoMemory sharedInstance] knowledgeForKey:@"romoName"];
+//        NSString *userName = [[RMRomoMemory sharedInstance] knowledgeForKey:@"userName"];
+//
+//        // Retrieve the total docked time
+//        NSNumber *totalDockedPlaytime = [[NSUserDefaults standardUserDefaults] objectForKey:@"romo-3 total-docked-playtime"];
+//        NSNumber *dockedCount = [[NSUserDefaults standardUserDefaults] objectForKey:@"romo-3 total-docked-count"];
+//
+//        // Retrieve the total wifi drive time
+//        NSNumber *totalWiFiDriveSessions = [[NSUserDefaults standardUserDefaults] objectForKey:@"romo-3 total-wifi-drive-count"];
+//        NSNumber *totalWiFiDriveTime = [[NSUserDefaults standardUserDefaults] objectForKey:@"romo-3 total-wifi-drive-playtime"];
+//
+//        // Retrieve the total telepresence time
+//        NSNumber *totalTelepresenceSessions = [[NSUserDefaults standardUserDefaults] objectForKey:@"romo-3 total-telepresence-count"];
+//        NSNumber *totalTelepresenceTime = [[NSUserDefaults standardUserDefaults] objectForKey:@"romo-3 total-telepresence-playtime"];
+//
 //        RMAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
 
 //        [[Analytics sharedAnalytics] identify:self.uniqueDeviceId
