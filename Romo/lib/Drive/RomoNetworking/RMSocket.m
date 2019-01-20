@@ -257,7 +257,7 @@
     NSUInteger dataSize   = [data sizeWithHeader];
     
     NSInteger charsSent = 0;
-    charsSent = (NSInteger)send(_nativeSocket, bytes, dataSize, 0);
+    charsSent = send(_nativeSocket, bytes, dataSize, 0);
     free(bytes);
     
     if (charsSent == -1)

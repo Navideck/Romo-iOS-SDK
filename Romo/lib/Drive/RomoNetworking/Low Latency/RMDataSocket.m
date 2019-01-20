@@ -28,7 +28,7 @@
 - (void)readStream;
 - (void)readDatagram;
 
-- (void)readStreamPacketWithBytesAvailable:(NSUInteger)bytesAvailable;
+- (void)readStreamPacketWithBytesAvailable:(NSInteger)bytesAvailable;
 - (void)readDatagramPacket;
 
 @end
@@ -207,7 +207,7 @@
     
     SockAddress *addr = dataPacket.destination.sockAddress;
     
-    uint32_t packetSize = dataPacket.packetSize;
+    NSUInteger packetSize = dataPacket.packetSize;
     char bytes[packetSize];
     
     [dataPacket serializeToBytes:bytes];
@@ -260,10 +260,10 @@
     }
 }
 
-- (void)readStreamPacketWithBytesAvailable:(NSUInteger)bytesAvailable
+- (void)readStreamPacketWithBytesAvailable:(NSInteger)bytesAvailable
 {
     NSInteger charsReceived = 0;
-    uint32_t headerSize = [RMDataPacket headerSize];
+    NSUInteger headerSize = [RMDataPacket headerSize];
     
     if (headerSize > bytesAvailable) {
         NSLog(@"headerSize greater than bytes available");
@@ -304,7 +304,7 @@
 - (void)readDatagramPacket
 {
     ssize_t charsReceived = 0;
-    uint32_t headerSize = [RMDataPacket headerSize];
+    NSUInteger headerSize = [RMDataPacket headerSize];
     
     char headerBuffer[headerSize];
     
@@ -319,7 +319,7 @@
     }
     
     uint32_t dataSize = ((uint32_t *)headerBuffer)[1];
-    uint32_t packetSize = dataSize + headerSize;
+    NSUInteger packetSize = dataSize + headerSize;
     
     char dataBuffer[dataSize + headerSize];
     charsReceived = recvfrom(_nativeSocket, dataBuffer, packetSize, 0, (struct sockaddr *)&from, (socklen_t *)&fromLength);

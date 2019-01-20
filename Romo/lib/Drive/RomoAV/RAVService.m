@@ -128,7 +128,7 @@
     
     char deviceCString[deviceInfo.length + 1];
     [deviceInfo getCString:deviceCString maxLength:deviceInfo.length + 1 encoding:NSUTF8StringEncoding];
-    RMDataPacket *deviceInfoPacket = [[RMDataPacket alloc] initWithType:DATA_TYPE_OTHER data:deviceCString dataSize:(uint32_t)deviceInfo.length + 1 destination:_peerAddress];
+    RMDataPacket *deviceInfoPacket = [[RMDataPacket alloc] initWithType:DATA_TYPE_OTHER data:deviceCString dataSize:deviceInfo.length + 1 destination:_peerAddress];
     [_socket sendDataPacket:deviceInfoPacket];
 }
 @end
