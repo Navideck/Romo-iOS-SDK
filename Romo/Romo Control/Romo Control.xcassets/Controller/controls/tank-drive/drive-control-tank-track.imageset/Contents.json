@@ -5,17 +5,6 @@
       "scale" : "1x"
     },
     {
-      "resizing" : {
-        "mode" : "3-part-vertical",
-        "center" : {
-          "mode" : "tile",
-          "height" : 1
-        },
-        "cap-insets" : {
-          "top" : 22,
-          "bottom" : 24
-        }
-      },
       "idiom" : "universal",
       "filename" : "drive-control-tank-track@2x.png",
       "scale" : "2x"

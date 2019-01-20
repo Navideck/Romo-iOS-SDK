@@ -52,7 +52,7 @@
         if (_peerAddress) {
             float compressionQuality = 0.65f;
             NSData *jpegData = UIImageJPEGRepresentation(picture, compressionQuality);
-            uint32_t packetSize = [jpegData sizeWithHeader];
+            NSUInteger packetSize = [jpegData sizeWithHeader];
             
             while (packetSize >= 31000 && compressionQuality > 0) {
                 compressionQuality -= 0.05f;

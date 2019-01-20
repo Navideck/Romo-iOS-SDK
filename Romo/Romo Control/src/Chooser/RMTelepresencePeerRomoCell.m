@@ -18,6 +18,8 @@
 
 @implementation RMTelepresencePeerRomoCell
 
+@dynamic data;
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];

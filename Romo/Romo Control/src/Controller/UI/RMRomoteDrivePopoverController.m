@@ -77,7 +77,7 @@
                          [self.popover removeFromSuperview];
                          self.popover = self.popover.previousPopover;
                          if (!self.popover.previousPopover) {
-                             [_backButton removeFromSuperview];
+                             [self->_backButton removeFromSuperview];
                          }
                      }];
 }

@@ -17,6 +17,8 @@
 
 @implementation RMRomotePhotoVC
 
+@dynamic view;
+
 - (void)loadView
 {
     self.view = [[UIScrollView alloc] initWithFrame:[UIScreen mainScreen].bounds];

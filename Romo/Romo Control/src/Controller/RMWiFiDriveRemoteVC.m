@@ -195,7 +195,7 @@ RMRemoteControlServiceDelegate, RMTankSliderDelegate> {
 {
     if ([service isKindOfClass:[RAVService class]]) {
         dispatch_async(dispatch_get_main_queue(), ^() {
-            self.videoView = _avService.peerView;
+            self.videoView = self->_avService.peerView;
             if ([[UIScreen mainScreen] bounds].size.height == 568) {
                 self.videoView.center = CGPointMake(self.view.width/2, self.view.height/2);
             }
@@ -417,8 +417,8 @@ RMRemoteControlServiceDelegate, RMTankSliderDelegate> {
                                      subview.alpha = 0.0;
                                  }
                              }
-                             for (UIView *driveView in _activeDriveViews) {
-                                 [driveView touchesCancelled:nil withEvent:nil];
+                             for (UIView *driveView in self->_activeDriveViews) {
+                                 [driveView touchesCancelled:[[NSSet alloc] init] withEvent:nil];
                              }
                          } completion:^(BOOL finished) {
                              [UIView animateWithDuration:0.25 delay:3.0 options:0

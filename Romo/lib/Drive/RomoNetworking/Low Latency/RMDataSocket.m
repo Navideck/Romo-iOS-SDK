@@ -318,7 +318,7 @@
         return;
     }
     
-    NSUInteger dataSize = ((NSUInteger *)headerBuffer)[1];
+    uint32_t dataSize = ((uint32_t *)headerBuffer)[1];
     NSUInteger packetSize = dataSize + headerSize;
     
     char dataBuffer[dataSize + headerSize];

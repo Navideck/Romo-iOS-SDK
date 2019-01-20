@@ -19,6 +19,8 @@
 
 @implementation RMWifiPeerRomoCell
 
+@dynamic data;
+
 - (NSString *)labelText
 {
     return self.data.name;

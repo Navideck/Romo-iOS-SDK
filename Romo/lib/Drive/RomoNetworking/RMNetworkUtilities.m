@@ -22,7 +22,7 @@
     return HEADER_SIZE;
 }
 
-+ (void)packInteger:(uint32_t)integer intoBuffer:(uint8_t *)buffer offset:(uint32_t)offset
++ (void)packInteger:(NSUInteger)integer intoBuffer:(uint8_t *)buffer offset:(uint32_t)offset
 {    
     buffer[offset++] = (integer >> 24) & 0xFF;
     buffer[offset++] = (integer >> 16) & 0xFF;
@@ -55,7 +55,7 @@
 
 - (char *)bytesWithHeader
 {
-    const uint32_t size = (uint32_t)[self length];
+    const NSUInteger size = [self length];
     const void *data = [self bytes];
     
     char *dataWithHeader = malloc(size + HEADER_SIZE);
@@ -66,9 +66,9 @@
     return dataWithHeader;
 }
 
-- (uint32_t)sizeWithHeader
+- (NSUInteger)sizeWithHeader
 {
-    return (uint32_t)[self length] + HEADER_SIZE;
+    return [self length] + HEADER_SIZE;
 }
 
 @end

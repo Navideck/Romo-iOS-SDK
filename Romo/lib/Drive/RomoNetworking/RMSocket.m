@@ -228,7 +228,7 @@
     NSData *data = [packet serialize];
     
     char *bytes         = [data bytesWithHeader];
-    uint32_t dataSize   = [data sizeWithHeader];
+    NSUInteger dataSize   = [data sizeWithHeader];
     
     SockAddress *addr = [[packet destination] sockAddress];
     
@@ -254,7 +254,7 @@
     NSData *data = [packet serialize];
     
     char *bytes         = [data bytesWithHeader];
-    uint32_t dataSize   = [data sizeWithHeader];
+    NSUInteger dataSize   = [data sizeWithHeader];
     
     NSInteger charsSent = 0;
     charsSent = send(_nativeSocket, bytes, dataSize, 0);
@@ -292,7 +292,7 @@
 {
     if (_readSource) {
         NSUInteger bytesAvailable = dispatch_source_get_data(_readSource);
-        
+
         if (bytesAvailable > 0) {
             [self readDatagramPacket];
         } else {
@@ -312,7 +312,7 @@
     
     char headerBuffer[headerSize];
     charsReceived = recv(_nativeSocket, headerBuffer, headerSize, MSG_PEEK);
-    
+
     if (charsReceived == -1) {
         return;
     }
@@ -323,11 +323,11 @@
         return;
     }
     
-//    charsReceived = recv(_nativeSocket, headerBuffer, headerSize, 0);
-
+    charsReceived = recv(_nativeSocket, headerBuffer, headerSize, 0);
+    
     char dataBuffer[dataSize];
     charsReceived = recv(_nativeSocket, dataBuffer, dataSize, 0);
-    
+
     if (charsReceived == -1) {
         return;
     }

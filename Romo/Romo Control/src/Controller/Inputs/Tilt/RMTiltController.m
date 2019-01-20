@@ -104,25 +104,25 @@
         
         [UIView animateWithDuration:0.25
                          animations:^{
-                             _hintLabel.alpha = 1.0;
-                             _hintLabel.transform = CGAffineTransformMakeScale(1.1, 1.1);
+                             self->_hintLabel.alpha = 1.0;
+                             self->_hintLabel.transform = CGAffineTransformMakeScale(1.1, 1.1);
                          } completion:^(BOOL finished) {
                              [UIView animateWithDuration:0.25
                                               animations:^{
-                                                  _hintLabel.transform = CGAffineTransformIdentity;
+                                                  self->_hintLabel.transform = CGAffineTransformIdentity;
                                               }];
                          }];
         
     } else {
         [UIView animateWithDuration:0.25
                          animations:^{
-                             _hintLabel.transform = CGAffineTransformMakeScale(1.1, 1.1);
+                             self->_hintLabel.transform = CGAffineTransformMakeScale(1.1, 1.1);
                          } completion:^(BOOL finished) {
                              [UIView animateWithDuration:0.25
                                               animations:^{
-                                                  _hintLabel.alpha = 0.0;
-                                                  _hintLabel.transform = CGAffineTransformMakeScale(0.1, 0.1);
-                                                  [_hintLabel removeFromSuperview];
+                                                  self->_hintLabel.alpha = 0.0;
+                                                  self->_hintLabel.transform = CGAffineTransformMakeScale(0.1, 0.1);
+                                                  [self->_hintLabel removeFromSuperview];
                                               }];
                          }];
     }

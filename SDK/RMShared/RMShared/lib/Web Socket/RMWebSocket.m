@@ -107,7 +107,7 @@ DDLOG_ENABLE_DYNAMIC_LEVELS
 
         // If the host is already targeting some port, leave it be.
         // Else, have it target the alternate port.
-        NSString *host = (numberOfMatches == 1) ? self.host : [NSString stringWithFormat:@"%@:%ld", self.host, alternatePort];
+        NSString *host = (numberOfMatches == 1) ? self.host : [NSString stringWithFormat:@"%@:%ld", self.host, (long)alternatePort];
         _serverURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/socket.io/1", host]];
     }
 

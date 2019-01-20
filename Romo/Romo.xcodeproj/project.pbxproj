@@ -3782,8 +3782,6 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Romo X/Pods-Romo X-resources.sh",
 				"${PODS_ROOT}/GPUImage/framework/Resources/lookup.png",
@@ -4142,8 +4140,6 @@
 				"${PODS_ROOT}/../../SDK/RMCharacter/RMCharacterResources/Audio/mumbles",
 			);
 			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_amatorka.png",
@@ -4495,15 +4491,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Romo X Control-checkManifestLockResult.txt",
 			);
@@ -4517,15 +4509,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Romo X-checkManifestLockResult.txt",
 			);
@@ -5227,8 +5215,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/Frameworks/**",
-					"$SRCROOT/../SDK/RMVision/RMVision/lib",
-					"$SRCROOT/../SDK/RMShared/RMShared/lib",
+					$SRCROOT/../SDK/RMVision/RMVision/lib,
+					$SRCROOT/../SDK/RMShared/RMShared/lib,
 				);
 				GCC_PREFIX_HEADER = "Romo Control/Supporting Files/RMControl-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
@@ -5248,8 +5236,8 @@
 					"$(SRCROOT)/lib/ext/libav",
 					"$SRCROOT/../SDK/RMCore/**",
 					"$SRCROOT/../SDK/RMCharacter/**",
-					"$SRCROOT/../SDK/RMVision",
-					"$SRCROOT/../SDK/RMShared",
+					$SRCROOT/../SDK/RMVision,
+					$SRCROOT/../SDK/RMShared,
 					"$(PROJECT_DIR)/lib/ext/libav",
 				);
 				OTHER_LDFLAGS = "$(inherited)";
@@ -5282,8 +5270,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/Frameworks/**",
-					"$SRCROOT/../SDK/RMVision/RMVision/lib",
-					"$SRCROOT/../SDK/RMShared/RMShared/lib",
+					$SRCROOT/../SDK/RMVision/RMVision/lib,
+					$SRCROOT/../SDK/RMShared/RMShared/lib,
 				);
 				GCC_PREFIX_HEADER = "Romo Control/Supporting Files/RMControl-Prefix.pch";
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
@@ -5302,8 +5290,8 @@
 					"$(SRCROOT)/lib/ext/libav",
 					"$SRCROOT/../SDK/RMCore/**",
 					"$SRCROOT/../SDK/RMCharacter/**",
-					"$SRCROOT/../SDK/RMVision",
-					"$SRCROOT/../SDK/RMShared",
+					$SRCROOT/../SDK/RMVision,
+					$SRCROOT/../SDK/RMShared,
 				);
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.navideck.RomoXControl;
