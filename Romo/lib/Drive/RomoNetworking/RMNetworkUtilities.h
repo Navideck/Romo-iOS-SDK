@@ -42,7 +42,7 @@ typedef int AddressFamily;
  * @param buffer The buffer to pack the integer into.
  * @param offset The offset at which to pack the integer.
  */
-+ (void)packInteger:(uint32_t)integer intoBuffer:(uint8_t *)buffer offset:(uint32_t)offset;
++ (void)packInteger:(NSUInteger)integer intoBuffer:(uint8_t *)buffer offset:(uint32_t)offset;
 
 + (NSString *)WiFiName;
 
@@ -68,6 +68,6 @@ typedef int AddressFamily;
  * Finds the size of the NSData object, taking into account the addition of the data header.
  * @return The size of the bytes plus the data header.
  */
-- (uint32_t)sizeWithHeader;
+- (NSUInteger)sizeWithHeader;
 
 @end

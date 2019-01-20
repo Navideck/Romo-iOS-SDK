@@ -28,7 +28,7 @@
 - (void)readStream;
 - (void)readDatagram;
 
-- (void)readStreamPacketWithBytesAvailable:(int32_t)bytesAvailable;
+- (void)readStreamPacketWithBytesAvailable:(NSUInteger)bytesAvailable;
 - (void)readDatagramPacket;
 
 @end
@@ -240,7 +240,7 @@
 
 - (void)readStream
 {
-    uint32_t bytesAvailable = dispatch_source_get_data(_readSource);
+    NSUInteger bytesAvailable = dispatch_source_get_data(_readSource);
     
     if (bytesAvailable > 0) {
         [self readStreamPacketWithBytesAvailable:bytesAvailable];
@@ -251,7 +251,7 @@
 
 - (void)readDatagram
 {
-    uint32_t bytesAvailable = dispatch_source_get_data(_readSource);
+    NSUInteger bytesAvailable = dispatch_source_get_data(_readSource);
     
     if (bytesAvailable > 0) {
         [self readDatagramPacket];
@@ -260,9 +260,9 @@
     }
 }
 
-- (void)readStreamPacketWithBytesAvailable:(int32_t)bytesAvailable
+- (void)readStreamPacketWithBytesAvailable:(NSUInteger)bytesAvailable
 {
-    int charsReceived = 0;
+    NSInteger charsReceived = 0;
     uint32_t headerSize = [RMDataPacket headerSize];
     
     if (headerSize > bytesAvailable) {

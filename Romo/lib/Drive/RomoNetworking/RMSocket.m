@@ -28,7 +28,7 @@
 - (void)readStream;
 - (void)readDatagram;
 
-- (void)readStreamPacketWithBytesAvailable:(int32_t)bytesAvailable;
+- (void)readStreamPacketWithBytesAvailable:(NSInteger)bytesAvailable;
 - (void)readDatagramPacket;
 
 - (uint32_t)unpackInteger:(uint8_t *)packedBytes offset:(uint32_t)offset;
@@ -228,7 +228,7 @@
     NSData *data = [packet serialize];
     
     char *bytes         = [data bytesWithHeader];
-    uint32_t dataSize   = [data sizeWithHeader];
+    NSUInteger dataSize   = [data sizeWithHeader];
     
     SockAddress *addr = [[packet destination] sockAddress];
     
@@ -254,10 +254,10 @@
     NSData *data = [packet serialize];
     
     char *bytes         = [data bytesWithHeader];
-    uint32_t dataSize   = [data sizeWithHeader];
+    NSUInteger dataSize   = [data sizeWithHeader];
     
-    int charsSent = 0;
-    charsSent = send(_nativeSocket, bytes, dataSize, 0);
+    NSInteger charsSent = 0;
+    charsSent = (NSInteger)send(_nativeSocket, bytes, dataSize, 0);
     free(bytes);
     
     if (charsSent == -1)
@@ -278,7 +278,7 @@
 - (void)readStream
 {
     if (_readSource) {
-        uint32_t bytesAvailable = dispatch_source_get_data(_readSource);
+        NSUInteger bytesAvailable = dispatch_source_get_data(_readSource);
         
         if (bytesAvailable > 0) {
             [self readStreamPacketWithBytesAvailable:bytesAvailable];
@@ -291,8 +291,8 @@
 - (void)readDatagram
 {
     if (_readSource) {
-        uint32_t bytesAvailable = dispatch_source_get_data(_readSource);
-        
+        NSUInteger bytesAvailable = dispatch_source_get_data(_readSource);
+
         if (bytesAvailable > 0) {
             [self readDatagramPacket];
         } else {
@@ -301,9 +301,9 @@
     }
 }
 
-- (void)readStreamPacketWithBytesAvailable:(int32_t)bytesAvailable
+- (void)readStreamPacketWithBytesAvailable:(NSInteger)bytesAvailable
 {
-    int charsReceived = 0;
+    NSInteger charsReceived = 0;
     NSInteger headerSize = [RMNetworkUtilities headerSize];
     
     if (headerSize > bytesAvailable) {
@@ -312,7 +312,7 @@
     
     char headerBuffer[headerSize];
     charsReceived = recv(_nativeSocket, headerBuffer, headerSize, MSG_PEEK);
-    
+
     if (charsReceived == -1) {
         return;
     }
@@ -327,7 +327,7 @@
     
     char dataBuffer[dataSize];
     charsReceived = recv(_nativeSocket, dataBuffer, dataSize, 0);
-    
+
     if (charsReceived == -1) {
         return;
     }
