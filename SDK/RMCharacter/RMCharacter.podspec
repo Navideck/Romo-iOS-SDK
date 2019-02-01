@@ -8,10 +8,9 @@ Pod::Spec.new do |spec|
   spec.source_files = '**/*.{h,m,mm,pch}'
   spec.ios.deployment_target = '6.0'
   spec.requires_arc = true
-  spec.resources = 'RMCharacterResources/**/*'
-  # spec.resource_bundle = {
-  #     'RMCharacter' => [
-  #       'RMCharacterResources/**/*',
-  #     ]
-  #   }  
+  spec.resource_bundle = {
+      'RMCharacter' => [
+        'RMCharacterResources/**/*.*',
+      ]
+    }  
 end

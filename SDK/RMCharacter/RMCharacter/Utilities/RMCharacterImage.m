@@ -50,8 +50,8 @@ static const int _maxCapacity = 3500000;
         extension = comps[1];
     }
     
-    NSString* mainBundlePath = [[NSBundle mainBundle] resourcePath];
-//    NSString* frameworkBundlePath = [mainBundlePath stringByAppendingPathComponent:@"Frameworks/RMCharacter.framework"];
+    NSBundle* bundle = [NSBundle bundleForClass:self.classForCoder];
+    NSString *mainBundlePath = [[[bundle resourceURL] URLByAppendingPathComponent:@"RMCharacter.bundle"] path];
 
     NSString *filePath = nil;
     if (![comps[0] hasSuffix:@"@1x"]) {

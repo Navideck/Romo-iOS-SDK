@@ -206,8 +206,9 @@ typedef void (^BoolBlock)(BOOL);
             if (sprite) {
                 NSString* cropFile = [NSString stringWithFormat:@"%@_%d",prefix,index];
                 
-                NSString* mainBundlePath = [[NSBundle mainBundle] resourcePath];
-//                NSString* frameworkBundlePath = [mainBundlePath stringByAppendingPathComponent:@"Frameworks/RMCharacter.framework"];
+                NSBundle* bundle = [NSBundle bundleForClass:self.classForCoder];
+                NSString *mainBundlePath = [[[bundle resourceURL] URLByAppendingPathComponent:@"RMCharacter.bundle"] path];
+                
                 NSBundle* characterBundle = [NSBundle bundleWithPath:mainBundlePath];
                 NSData* cropData = [NSData dataWithContentsOfFile:[characterBundle pathForResource:cropFile ofType:@"json"]];
                 NSArray* crop = [NSJSONSerialization JSONObjectWithData:cropData options:0 error:nil][@"frames"];
