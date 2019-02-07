@@ -61,8 +61,8 @@ Romotive, the company behind Romo, after shutting down were kind enough to open 
 - [x] Refactor HelloRMCharacter
 - [x] Refactor HelloRomo
 - [x] Refactor Romo.xcworkspace
-- [ ] Clean up duplicate projects and folder structure
-- [ ] Fix warnings
+- [x] Clean up duplicate projects and folder structure
+- [x] Fix warnings
 - [ ] Add Swift example
 
 Issues and pull requests are always welcome!
