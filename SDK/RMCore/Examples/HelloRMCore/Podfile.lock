@@ -1,0 +1,39 @@
+PODS:
+  - CocoaLumberjack (3.4.2):
+    - CocoaLumberjack/Default (= 3.4.2)
+    - CocoaLumberjack/Extensions (= 3.4.2)
+  - CocoaLumberjack/Default (3.4.2)
+  - CocoaLumberjack/Extensions (3.4.2):
+    - CocoaLumberjack/Default
+  - RMCore (0.1.0):
+    - RMShared
+  - RMShared (0.1.0):
+    - CocoaLumberjack
+    - SocketRocket
+  - SocketRocket (0.5.1)
+
+DEPENDENCIES:
+  - CocoaLumberjack
+  - RMCore (from `../..`)
+  - RMShared (from `../../../RMShared`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - CocoaLumberjack
+    - SocketRocket
+
+EXTERNAL SOURCES:
+  RMCore:
+    :path: "../.."
+  RMShared:
+    :path: "../../../RMShared"
+
+SPEC CHECKSUMS:
+  CocoaLumberjack: db7cc9e464771f12054c22ff6947c5a58d43a0fd
+  RMCore: 68ba559c5c064350480ec637481b422a270a7de6
+  RMShared: 7f820a63e76082d477a0883959dc6679689bf694
+  SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
+
+PODFILE CHECKSUM: 227992d56e7a2bb3e719c1821bf96be98e5ef550
+
+COCOAPODS: 1.5.3

@@ -1,7 +1,0 @@
-//
-// Prefix header for all source files of the 'RMCharacter Framework' target in the 'RMCharacter Framework' project
-//
-
-#ifdef __OBJC__
-    #import <Foundation/Foundation.h>
-#endif
