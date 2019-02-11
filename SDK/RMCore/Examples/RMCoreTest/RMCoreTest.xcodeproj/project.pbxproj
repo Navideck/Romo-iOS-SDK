@@ -26,15 +26,16 @@
 		9460743416DD2EAF00789A26 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9460743116DD2EAF00789A26 /* CoreMotion.framework */; };
 		9460743716DD311D00789A26 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9460743616DD311D00789A26 /* Default-568h@2x.png */; };
 		9480B302174AF2FF005F4340 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9480B301174AF2FF005F4340 /* ExternalAccessory.framework */; };
-		E3EE355C248E6E9B89E2694F /* libPods-RMCoreTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C9637A0CB6C187507BA6674 /* libPods-RMCoreTest.a */; };
+		BF550EE42BE6FE8AE5EDF316 /* libPods-RMCoreTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DFFFFDD799CC1864579F264 /* libPods-RMCoreTest.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0C9637A0CB6C187507BA6674 /* libPods-RMCoreTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RMCoreTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2CB784943577230F8B1499D1 /* Pods-RMCoreTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RMCoreTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-RMCoreTest/Pods-RMCoreTest.release.xcconfig"; sourceTree = "<group>"; };
 		4D4CA93616E46B4300874AE8 /* DriveTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DriveTestViewController.h; sourceTree = "<group>"; };
 		4D4CA93716E46B4300874AE8 /* DriveTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DriveTestViewController.m; sourceTree = "<group>"; };
 		4D4CA93816E46B4300874AE8 /* DriveTestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DriveTestViewController.xib; sourceTree = "<group>"; };
+		5B6DADE973A332BA5C5D3F67 /* Pods-RMCoreTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RMCoreTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RMCoreTest/Pods-RMCoreTest.debug.xcconfig"; sourceTree = "<group>"; };
+		5CF4564993C22B30A877AF23 /* Pods-RMCoreTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RMCoreTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-RMCoreTest/Pods-RMCoreTest.release.xcconfig"; sourceTree = "<group>"; };
+		5DFFFFDD799CC1864579F264 /* libPods-RMCoreTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RMCoreTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84C72580159AD73F003CC51A /* MotorTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MotorTestViewController.h; sourceTree = "<group>"; };
 		84C72581159AD73F003CC51A /* MotorTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MotorTestViewController.m; sourceTree = "<group>"; };
 		84C72582159AD73F003CC51A /* MotorTestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MotorTestViewController.xib; sourceTree = "<group>"; };
@@ -62,7 +63,6 @@
 		9480B301174AF2FF005F4340 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
 		ACDA52F6169A86B60043C8EE /* RomoTestIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RomoTestIcon.png; sourceTree = SOURCE_ROOT; };
 		ACDA52F9169A86C20043C8EE /* RomoTestIcon_Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RomoTestIcon_Small.png; sourceTree = SOURCE_ROOT; };
-		C15B4580FCA3215C2143A0B8 /* Pods-RMCoreTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RMCoreTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RMCoreTest/Pods-RMCoreTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,18 +76,18 @@
 				84DD238F159A2BE000A22C15 /* CoreGraphics.framework in Frameworks */,
 				9460743416DD2EAF00789A26 /* CoreMotion.framework in Frameworks */,
 				9480B302174AF2FF005F4340 /* ExternalAccessory.framework in Frameworks */,
-				E3EE355C248E6E9B89E2694F /* libPods-RMCoreTest.a in Frameworks */,
+				BF550EE42BE6FE8AE5EDF316 /* libPods-RMCoreTest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7BFC5809BEB0F6DEE06821F9 /* Pods */ = {
+		7D6B4CEB566F8555FAEAD1B6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C15B4580FCA3215C2143A0B8 /* Pods-RMCoreTest.debug.xcconfig */,
-				2CB784943577230F8B1499D1 /* Pods-RMCoreTest.release.xcconfig */,
+				5B6DADE973A332BA5C5D3F67 /* Pods-RMCoreTest.debug.xcconfig */,
+				5CF4564993C22B30A877AF23 /* Pods-RMCoreTest.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -98,7 +98,7 @@
 				84DD2390159A2BE000A22C15 /* RMCoreTest */,
 				84DD2389159A2BE000A22C15 /* Frameworks */,
 				84DD2387159A2BE000A22C15 /* Products */,
-				7BFC5809BEB0F6DEE06821F9 /* Pods */,
+				7D6B4CEB566F8555FAEAD1B6 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -120,7 +120,7 @@
 				84DD238C159A2BE000A22C15 /* Foundation.framework */,
 				84DD238E159A2BE000A22C15 /* CoreGraphics.framework */,
 				84D3E4BB16DFE89E00A75305 /* QuartzCore.framework */,
-				0C9637A0CB6C187507BA6674 /* libPods-RMCoreTest.a */,
+				5DFFFFDD799CC1864579F264 /* libPods-RMCoreTest.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -169,7 +169,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84DD23AA159A2BE000A22C15 /* Build configuration list for PBXNativeTarget "RMCoreTest" */;
 			buildPhases = (
-				67711C902E2725E26CAFCEAE /* [CP] Check Pods Manifest.lock */,
+				E774255926F0CF7A895CB2AD /* [CP] Check Pods Manifest.lock */,
 				84DD2382159A2BE000A22C15 /* Sources */,
 				84DD2383159A2BE000A22C15 /* Frameworks */,
 				84DD2384159A2BE000A22C15 /* Resources */,
@@ -233,7 +233,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		67711C902E2725E26CAFCEAE /* [CP] Check Pods Manifest.lock */ = {
+		E774255926F0CF7A895CB2AD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -394,7 +394,7 @@
 		};
 		84DD23AB159A2BE000A22C15 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C15B4580FCA3215C2143A0B8 /* Pods-RMCoreTest.debug.xcconfig */;
+			baseConfigurationReference = 5B6DADE973A332BA5C5D3F67 /* Pods-RMCoreTest.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 52RU2XXUH6;
@@ -411,7 +411,7 @@
 		};
 		84DD23AC159A2BE000A22C15 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2CB784943577230F8B1499D1 /* Pods-RMCoreTest.release.xcconfig */;
+			baseConfigurationReference = 5CF4564993C22B30A877AF23 /* Pods-RMCoreTest.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 52RU2XXUH6;

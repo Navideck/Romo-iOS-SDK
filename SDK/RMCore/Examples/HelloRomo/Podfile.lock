@@ -5,13 +5,15 @@ PODS:
   - CocoaLumberjack/Default (3.4.2)
   - CocoaLumberjack/Extensions (3.4.2):
     - CocoaLumberjack/Default
-  - RMCharacter (0.1.0)
-  - RMCore (0.1.0):
+  - RMCharacter (0.3.0)
+  - RMCore (0.3.0):
     - RMShared
-  - RMShared (0.1.0):
+  - RMShared (0.3.0):
     - CocoaLumberjack
     - SocketRocket
+    - UIDevice-Hardware
   - SocketRocket (0.5.1)
+  - UIDevice-Hardware (0.1.13)
 
 DEPENDENCIES:
   - RMCharacter (from `../../../RMCharacter`)
@@ -22,6 +24,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - CocoaLumberjack
     - SocketRocket
+    - UIDevice-Hardware
 
 EXTERNAL SOURCES:
   RMCharacter:
@@ -33,10 +36,11 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   CocoaLumberjack: db7cc9e464771f12054c22ff6947c5a58d43a0fd
-  RMCharacter: a087edafb179fa52fe364e6ecd19b10c507eb295
-  RMCore: 68ba559c5c064350480ec637481b422a270a7de6
-  RMShared: 7f820a63e76082d477a0883959dc6679689bf694
+  RMCharacter: 567eb397fd3b71695d2e3b79a2da0a148c45f059
+  RMCore: 3b89e1bc76c86707a31db8546b7c9a62b54c0743
+  RMShared: 5f560647371a1e14f3dfd081267062af9dd02a55
   SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
+  UIDevice-Hardware: c10ce5703fa8de762079b84236c548cf31223531
 
 PODFILE CHECKSUM: 79cbb2c451d3ce6ce66ef95863df7372add89ed8
 

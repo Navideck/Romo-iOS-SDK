@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		833EAC7C00D67FA007B18324 /* libPods-HelloRomo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 23C44ACDB93294A51DE8799E /* libPods-HelloRomo.a */; };
 		942AC68416E81A520062CA8A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942AC68316E81A520062CA8A /* UIKit.framework */; };
 		942AC68616E81A520062CA8A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942AC68516E81A520062CA8A /* Foundation.framework */; };
 		942AC68816E81A520062CA8A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942AC68716E81A520062CA8A /* CoreGraphics.framework */; };
@@ -22,11 +21,11 @@
 		942AC6AC16E81AC20062CA8A /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942AC6A816E81AC20062CA8A /* ExternalAccessory.framework */; };
 		942AC6AD16E81AC20062CA8A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942AC6A916E81AC20062CA8A /* QuartzCore.framework */; };
 		942AC6B416E81C410062CA8A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942AC6B316E81C410062CA8A /* AVFoundation.framework */; };
+		F936124E9AB0FEF396415F79 /* libPods-HelloRomo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2387923296EBC4B6CA0474F5 /* libPods-HelloRomo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		23C44ACDB93294A51DE8799E /* libPods-HelloRomo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HelloRomo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		42147DB6C0880CC9B9B7ACBC /* Pods-HelloRomo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloRomo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HelloRomo/Pods-HelloRomo.debug.xcconfig"; sourceTree = "<group>"; };
+		2387923296EBC4B6CA0474F5 /* libPods-HelloRomo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HelloRomo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		942AC68016E81A520062CA8A /* HelloRomo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloRomo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		942AC68316E81A520062CA8A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		942AC68516E81A520062CA8A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -46,7 +45,8 @@
 		942AC6A816E81AC20062CA8A /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
 		942AC6A916E81AC20062CA8A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		942AC6B316E81C410062CA8A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		B4B4988296E633D59417AE39 /* Pods-HelloRomo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloRomo.release.xcconfig"; path = "Pods/Target Support Files/Pods-HelloRomo/Pods-HelloRomo.release.xcconfig"; sourceTree = "<group>"; };
+		F45016F007B92BB1D76EE0E2 /* Pods-HelloRomo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloRomo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HelloRomo/Pods-HelloRomo.debug.xcconfig"; sourceTree = "<group>"; };
+		F4AC6670567655AA729EAD72 /* Pods-HelloRomo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloRomo.release.xcconfig"; path = "Pods/Target Support Files/Pods-HelloRomo/Pods-HelloRomo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,29 +61,20 @@
 				942AC6AB16E81AC20062CA8A /* CoreMotion.framework in Frameworks */,
 				942AC6AC16E81AC20062CA8A /* ExternalAccessory.framework in Frameworks */,
 				942AC6AD16E81AC20062CA8A /* QuartzCore.framework in Frameworks */,
-				833EAC7C00D67FA007B18324 /* libPods-HelloRomo.a in Frameworks */,
+				F936124E9AB0FEF396415F79 /* libPods-HelloRomo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		07FEC9D68ADFF18F2E77BDCC /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				42147DB6C0880CC9B9B7ACBC /* Pods-HelloRomo.debug.xcconfig */,
-				B4B4988296E633D59417AE39 /* Pods-HelloRomo.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		942AC67716E81A520062CA8A = {
 			isa = PBXGroup;
 			children = (
 				942AC68916E81A520062CA8A /* HelloRomo */,
 				942AC68216E81A520062CA8A /* Frameworks */,
 				942AC68116E81A520062CA8A /* Products */,
-				07FEC9D68ADFF18F2E77BDCC /* Pods */,
+				D699F1EAB4A7371297247A60 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,7 +96,7 @@
 				942AC68316E81A520062CA8A /* UIKit.framework */,
 				942AC68516E81A520062CA8A /* Foundation.framework */,
 				942AC68716E81A520062CA8A /* CoreGraphics.framework */,
-				23C44ACDB93294A51DE8799E /* libPods-HelloRomo.a */,
+				2387923296EBC4B6CA0474F5 /* libPods-HelloRomo.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -136,6 +127,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D699F1EAB4A7371297247A60 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F45016F007B92BB1D76EE0E2 /* Pods-HelloRomo.debug.xcconfig */,
+				F4AC6670567655AA729EAD72 /* Pods-HelloRomo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,11 +143,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 942AC6A316E81A520062CA8A /* Build configuration list for PBXNativeTarget "HelloRomo" */;
 			buildPhases = (
-				22845F5C30C44C0B7EC238A0 /* [CP] Check Pods Manifest.lock */,
+				1A273E0E8E9ED6366D9E2BCF /* [CP] Check Pods Manifest.lock */,
 				942AC67C16E81A520062CA8A /* Sources */,
 				942AC67D16E81A520062CA8A /* Frameworks */,
 				942AC67E16E81A520062CA8A /* Resources */,
-				1FF3BD44E587001FAA582808 /* [CP] Copy Pods Resources */,
+				D2E28BD38B2CA5AB09BCCB9D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -204,29 +204,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1FF3BD44E587001FAA582808 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-HelloRomo/Pods-HelloRomo-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/RMCharacter/RMCharacter.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RMCharacter.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HelloRomo/Pods-HelloRomo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		22845F5C30C44C0B7EC238A0 /* [CP] Check Pods Manifest.lock */ = {
+		1A273E0E8E9ED6366D9E2BCF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -246,6 +224,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2E28BD38B2CA5AB09BCCB9D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HelloRomo/Pods-HelloRomo-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/RMCharacter/RMCharacter.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RMCharacter.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HelloRomo/Pods-HelloRomo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -333,7 +333,7 @@
 		};
 		942AC6A416E81A520062CA8A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 42147DB6C0880CC9B9B7ACBC /* Pods-HelloRomo.debug.xcconfig */;
+			baseConfigurationReference = F45016F007B92BB1D76EE0E2 /* Pods-HelloRomo.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 52RU2XXUH6;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -351,7 +351,7 @@
 		};
 		942AC6A516E81A520062CA8A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B4B4988296E633D59417AE39 /* Pods-HelloRomo.release.xcconfig */;
+			baseConfigurationReference = F4AC6670567655AA729EAD72 /* Pods-HelloRomo.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 52RU2XXUH6;
 				FRAMEWORK_SEARCH_PATHS = (

@@ -12,7 +12,7 @@
 		17081071180F2DE600C43DF9 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17081070180F2DE600C43DF9 /* CoreFoundation.framework */; };
 		173D6D0F1811BDAE003D785A /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 173D6D0E1811BDAE003D785A /* ImageIO.framework */; };
 		17BEF4E217F0C5BA007ECF01 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17BEF4E117F0C5BA007ECF01 /* OpenGLES.framework */; };
-		6D297D0B7E8AB83C8E4BEDD5 /* libPods-HelloRMVision.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BECAA71302E537EAF43501C /* libPods-HelloRMVision.a */; };
+		253EC2F693A812DC592F32E6 /* libPods-HelloRMVision.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C8BD0DD7A33F2E7EFE832702 /* libPods-HelloRMVision.a */; };
 		AC1329C1176EA8F100140188 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC1329C0176EA8F100140188 /* UIKit.framework */; };
 		AC1329C3176EA8F100140188 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC1329C2176EA8F100140188 /* Foundation.framework */; };
 		AC1329C5176EA8F100140188 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC1329C4176EA8F100140188 /* CoreGraphics.framework */; };
@@ -49,8 +49,7 @@
 		173D6D0E1811BDAE003D785A /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		1776E1ED180CBA0D001FF56F /* face.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = face.mov; sourceTree = "<group>"; };
 		17BEF4E117F0C5BA007ECF01 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
-		5BECAA71302E537EAF43501C /* libPods-HelloRMVision.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HelloRMVision.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7794161E332A402BA53BFCB5 /* Pods-HelloRMVision.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloRMVision.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HelloRMVision/Pods-HelloRMVision.debug.xcconfig"; sourceTree = "<group>"; };
+		20A3D45D46C5A7722285237D /* Pods-HelloRMVision.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloRMVision.release.xcconfig"; path = "Pods/Target Support Files/Pods-HelloRMVision/Pods-HelloRMVision.release.xcconfig"; sourceTree = "<group>"; };
 		AC1329BD176EA8F100140188 /* HelloRMVision.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloRMVision.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC1329C0176EA8F100140188 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AC1329C2176EA8F100140188 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -74,7 +73,8 @@
 		AFC5F0F51F04EBCA005E9772 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		AFC5F0F61F04EBD8005E9772 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		AFC5F1251F050816005E9772 /* libjpeg.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libjpeg.framework; path = "HelloRMVision/lib/libjpeg-turbo/ios/framework/libjpeg.framework"; sourceTree = "<group>"; };
-		BD642239868095A117931F0E /* Pods-HelloRMVision.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloRMVision.release.xcconfig"; path = "Pods/Target Support Files/Pods-HelloRMVision/Pods-HelloRMVision.release.xcconfig"; sourceTree = "<group>"; };
+		C8BD0DD7A33F2E7EFE832702 /* libPods-HelloRMVision.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HelloRMVision.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D663BF2205DF6196943381E7 /* Pods-HelloRMVision.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloRMVision.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HelloRMVision/Pods-HelloRMVision.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +95,7 @@
 				17BEF4E217F0C5BA007ECF01 /* OpenGLES.framework in Frameworks */,
 				AC1329FF176EAA0A00140188 /* QuartzCore.framework in Frameworks */,
 				AC1329C1176EA8F100140188 /* UIKit.framework in Frameworks */,
-				6D297D0B7E8AB83C8E4BEDD5 /* libPods-HelloRMVision.a in Frameworks */,
+				253EC2F693A812DC592F32E6 /* libPods-HelloRMVision.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,13 +110,22 @@
 			path = "Test Videos";
 			sourceTree = "<group>";
 		};
+		9C11B7D48E2018F3B0AAB57F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D663BF2205DF6196943381E7 /* Pods-HelloRMVision.debug.xcconfig */,
+				20A3D45D46C5A7722285237D /* Pods-HelloRMVision.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		AC1329B4176EA8F100140188 = {
 			isa = PBXGroup;
 			children = (
 				AC1329C6176EA8F100140188 /* HelloRMVision */,
 				AC1329BF176EA8F100140188 /* Frameworks */,
 				AC1329BE176EA8F100140188 /* Products */,
-				D61598BC7CAC09BC969A8FE5 /* Pods */,
+				9C11B7D48E2018F3B0AAB57F /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -147,7 +156,7 @@
 				17BEF4E117F0C5BA007ECF01 /* OpenGLES.framework */,
 				AC1329FE176EAA0A00140188 /* QuartzCore.framework */,
 				AC1329C0176EA8F100140188 /* UIKit.framework */,
-				5BECAA71302E537EAF43501C /* libPods-HelloRMVision.a */,
+				C8BD0DD7A33F2E7EFE832702 /* libPods-HelloRMVision.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -179,15 +188,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		D61598BC7CAC09BC969A8FE5 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				7794161E332A402BA53BFCB5 /* Pods-HelloRMVision.debug.xcconfig */,
-				BD642239868095A117931F0E /* Pods-HelloRMVision.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -195,12 +195,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AC1329E3176EA8F100140188 /* Build configuration list for PBXNativeTarget "HelloRMVision" */;
 			buildPhases = (
-				68304FA9BFBC8447C61A4A4D /* [CP] Check Pods Manifest.lock */,
+				7A97D9CC82AC468FCF9DE803 /* [CP] Check Pods Manifest.lock */,
 				AC1329B9176EA8F100140188 /* Sources */,
 				AC1329BA176EA8F100140188 /* Frameworks */,
 				AC1329BB176EA8F100140188 /* Resources */,
 				AFC5F0FB1F04ECF2005E9772 /* Embed Frameworks */,
-				61064930C39143ABE88E15BC /* [CP] Copy Pods Resources */,
+				C5302A7D2CA9827E7C936BA4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -257,7 +257,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		61064930C39143ABE88E15BC /* [CP] Copy Pods Resources */ = {
+		7A97D9CC82AC468FCF9DE803 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HelloRMVision-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5302A7D2CA9827E7C936BA4 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -287,28 +309,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HelloRMVision/Pods-HelloRMVision-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		68304FA9BFBC8447C61A4A4D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-HelloRMVision-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -445,7 +445,7 @@
 		};
 		AC1329E4176EA8F100140188 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7794161E332A402BA53BFCB5 /* Pods-HelloRMVision.debug.xcconfig */;
+			baseConfigurationReference = D663BF2205DF6196943381E7 /* Pods-HelloRMVision.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -475,7 +475,7 @@
 		};
 		AC1329E5176EA8F100140188 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BD642239868095A117931F0E /* Pods-HelloRMVision.release.xcconfig */;
+			baseConfigurationReference = 20A3D45D46C5A7722285237D /* Pods-HelloRMVision.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

@@ -2,7 +2,7 @@ Pod::Spec.new do |spec|
   spec.name         = 'RMCore'
   spec.summary      = 'RMCore'
   spec.homepage     = 'https://github.com/fotiDim/Romo'
-  spec.version      = '0.1.0'
+  spec.version      = '0.3.0'
   spec.authors      = { 'Foti Dim' => 'foti@navideck.com' }
   spec.source       = { :git => 'https://github.com/fotiDim/Romo', :tag => "RMCore_v#{spec.version}" }
   spec.source_files = 'Classes/**/*.{h,m,mm,pch}'

@@ -34,12 +34,14 @@ PODS:
   - RMShared (0.1.0):
     - CocoaLumberjack
     - SocketRocket
+    - UIDevice-Hardware
   - RMVision (0.1.0):
     - CocoaLumberjack
     - GPUImage
     - OpenCV (~> 2.0)
     - RMShared
   - SocketRocket (0.5.1)
+  - UIDevice-Hardware (0.1.13)
 
 DEPENDENCIES:
   - AFNetworking
@@ -56,6 +58,7 @@ SPEC REPOS:
     - GPUImage
     - OpenCV
     - SocketRocket
+    - UIDevice-Hardware
 
 EXTERNAL SOURCES:
   RMCharacter:
@@ -74,9 +77,10 @@ SPEC CHECKSUMS:
   OpenCV: cd36a3467c21572d658c2640488fe0d5a93ca192
   RMCharacter: a087edafb179fa52fe364e6ecd19b10c507eb295
   RMCore: 68ba559c5c064350480ec637481b422a270a7de6
-  RMShared: 7f820a63e76082d477a0883959dc6679689bf694
+  RMShared: 118b5244f000be821c11ba257dcfd7508b322244
   RMVision: 2fa52b28668b181c2a424e35a5cda52c21d48f25
   SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
+  UIDevice-Hardware: c10ce5703fa8de762079b84236c548cf31223531
 
 PODFILE CHECKSUM: bd495be9593c56e08850a5fbd697914a71afc7c4
 

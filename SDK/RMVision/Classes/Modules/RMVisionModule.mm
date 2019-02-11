@@ -7,7 +7,7 @@
 //
 
 #import "RMVisionModule.h"
-#import "UIDevice+VisionHardware.h"
+#import "UIDevice+Romo.h"
 
 @interface RMVisionModule ()
 
@@ -42,7 +42,7 @@
         _frameProcessed = NO;
         _scaleFactor = 1.0;
         
-        _isSlow = ![[UIDevice currentDevice] supportsAdvancedComputerVision];
+        _isSlow = ![[UIDevice currentDevice] isTelepresenceController];
     }
     return self;
 }

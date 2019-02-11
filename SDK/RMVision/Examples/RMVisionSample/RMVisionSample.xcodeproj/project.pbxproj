@@ -11,8 +11,6 @@
 		176E29E418402858007C4421 /* UIImageOpenCVCategoryTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 176E29E318402858007C4421 /* UIImageOpenCVCategoryTests.mm */; };
 		178874FA1819F10A0095AD12 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71FAB9121815C68700718ECB /* AssetsLibrary.framework */; };
 		178874FB1819F10A0095AD12 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94E0AEA6180286E100BAD339 /* ImageIO.framework */; };
-		2D08E10691FF5A4FBB959D95 /* libPods-Shows-RMVisionSampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B1E0249C5CE4897EE0728652 /* libPods-Shows-RMVisionSampleTests.a */; };
-		3609CD012A3627D5B15D85CF /* libPods-Shows-RMVisionSample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AF5DCF7684E80B89ED218D2 /* libPods-Shows-RMVisionSample.a */; };
 		4324F616181B10B500820505 /* RMVisionObjectTrackTests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4324F614181B10B500820505 /* RMVisionObjectTrackTests.mm */; };
 		432A34DB181ADD8300390E8B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC2A6970176E96E20057A289 /* UIKit.framework */; };
 		432A34DC181ADD8300390E8B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC2A6932176E92790057A289 /* Foundation.framework */; };
@@ -25,7 +23,7 @@
 		432A34E5181ADD8300390E8B /* downloadSupportFiles.bash in Resources */ = {isa = PBXBuildFile; fileRef = 432A34AA181AD99F00390E8B /* downloadSupportFiles.bash */; };
 		432A34EE181AE1CD00390E8B /* face.mov in Resources */ = {isa = PBXBuildFile; fileRef = 432A34EC181AE1CD00390E8B /* face.mov */; };
 		43B1E5BE181B112400533336 /* green_ball_cropped.png in Resources */ = {isa = PBXBuildFile; fileRef = 432A34AD181AD99F00390E8B /* green_ball_cropped.png */; };
-		544337065F49C51AB7EFC0FE /* libPods-Shows-RMVisionBenchmarks.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C1A03844D47A745CBF3CFE /* libPods-Shows-RMVisionBenchmarks.a */; };
+		5642965E3E1AAB767A73F7CF /* libPods-Shows-RMVisionSample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D55E215A47E9FC7E32CF2B /* libPods-Shows-RMVisionSample.a */; };
 		71FAB8AF1815B5DE00718ECB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC2A6932176E92790057A289 /* Foundation.framework */; };
 		71FAB8B01815B5DE00718ECB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC2A6969176E947B0057A289 /* CoreGraphics.framework */; };
 		71FAB8B11815B5DE00718ECB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC2A6970176E96E20057A289 /* UIKit.framework */; };
@@ -46,6 +44,8 @@
 		94DA2E23182828F1007EF7B5 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94DA2E22182828F1007EF7B5 /* CoreMedia.framework */; };
 		AF554F1022109EC600E8CE0A /* RMVisionBenchmarks.mm in Sources */ = {isa = PBXBuildFile; fileRef = 432A34A7181AD99F00390E8B /* RMVisionBenchmarks.mm */; };
 		AF65AFC221CAAECD00A3F26C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71FAB8BE1815B5DE00718ECB /* Images.xcassets */; };
+		B73324E15D2B3D349C24CC65 /* libPods-Shows-RMVisionSampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 35294DAA597211312A86DFB5 /* libPods-Shows-RMVisionSampleTests.a */; };
+		EF1D5D60503266B978B24928 /* libPods-Shows-RMVisionBenchmarks.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62F347456090465511004CC0 /* libPods-Shows-RMVisionBenchmarks.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,10 +79,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		118DD1CBFFB15C31DD35677B /* Pods-Shows-RMVisionSampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shows-RMVisionSampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shows-RMVisionSampleTests/Pods-Shows-RMVisionSampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		0E88CA3D650F690927992012 /* Pods-Shows-RMVisionSampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shows-RMVisionSampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shows-RMVisionSampleTests/Pods-Shows-RMVisionSampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		173E7767181993C700577523 /* RMVisionObjectsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMVisionObjectsTests.m; sourceTree = "<group>"; };
 		176E29E318402858007C4421 /* UIImageOpenCVCategoryTests.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = UIImageOpenCVCategoryTests.mm; sourceTree = "<group>"; };
 		1793DF82184F988D002566F5 /* LineTrainingBenchmarks.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = LineTrainingBenchmarks.mm; sourceTree = "<group>"; };
+		1FC6AED0E9342BD8C0A67112 /* Pods-Shows-RMVisionSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shows-RMVisionSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shows-RMVisionSample/Pods-Shows-RMVisionSample.debug.xcconfig"; sourceTree = "<group>"; };
+		35294DAA597211312A86DFB5 /* libPods-Shows-RMVisionSampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Shows-RMVisionSampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4324F614181B10B500820505 /* RMVisionObjectTrackTests.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RMVisionObjectTrackTests.mm; sourceTree = "<group>"; };
 		4324F615181B10B500820505 /* RMVisionTestHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMVisionTestHelpers.h; sourceTree = "<group>"; };
 		432A34A7181AD99F00390E8B /* RMVisionBenchmarks.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RMVisionBenchmarks.mm; sourceTree = "<group>"; };
@@ -94,8 +96,8 @@
 		432A34AF181AD99F00390E8B /* green_ball_notFast_ColorTracking.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = green_ball_notFast_ColorTracking.plist; sourceTree = "<group>"; };
 		432A34E9181ADD8300390E8B /* RMVisionBenchmarks.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RMVisionBenchmarks.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		432A34EC181AE1CD00390E8B /* face.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = face.mov; path = "../../../HelloRMVision/HelloRMVision/Test Videos/face.mov"; sourceTree = "<group>"; };
-		4EB462B47CD2ADF0AF75D871 /* Pods-Shows-RMVisionSampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shows-RMVisionSampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shows-RMVisionSampleTests/Pods-Shows-RMVisionSampleTests.release.xcconfig"; sourceTree = "<group>"; };
-		6D0AE5BAB86E96DA92C375FA /* Pods-Shows-RMVisionSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shows-RMVisionSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shows-RMVisionSample/Pods-Shows-RMVisionSample.debug.xcconfig"; sourceTree = "<group>"; };
+		43CB12048BC3423C0961E0F2 /* Pods-Shows-RMVisionSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shows-RMVisionSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shows-RMVisionSample/Pods-Shows-RMVisionSample.release.xcconfig"; sourceTree = "<group>"; };
+		62F347456090465511004CC0 /* libPods-Shows-RMVisionBenchmarks.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Shows-RMVisionBenchmarks.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		71FAB8AE1815B5DE00718ECB /* RMVisionSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RMVisionSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71FAB8B41815B5DE00718ECB /* RMVisionSample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RMVisionSample-Info.plist"; sourceTree = "<group>"; };
 		71FAB8B61815B5DE00718ECB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -108,19 +110,17 @@
 		71FAB8CF1815B5DF00718ECB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		71FAB8D11815B5DF00718ECB /* RMVisionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RMVisionTests.m; sourceTree = "<group>"; };
 		71FAB9121815C68700718ECB /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
-		8AF5DCF7684E80B89ED218D2 /* libPods-Shows-RMVisionSample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Shows-RMVisionSample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D8C2EF835123E35E40BBAFC /* Pods-Shows-RMVisionSampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shows-RMVisionSampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shows-RMVisionSampleTests/Pods-Shows-RMVisionSampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		7EB22BA5EBD18299E1282A32 /* Pods-Shows-RMVisionBenchmarks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shows-RMVisionBenchmarks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shows-RMVisionBenchmarks/Pods-Shows-RMVisionBenchmarks.debug.xcconfig"; sourceTree = "<group>"; };
+		89D55E215A47E9FC7E32CF2B /* libPods-Shows-RMVisionSample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Shows-RMVisionSample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94DA2E22182828F1007EF7B5 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		94E0AEA6180286E100BAD339 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
-		99CD31D5C921295EE00E6986 /* Pods-Shows-RMVisionBenchmarks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shows-RMVisionBenchmarks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shows-RMVisionBenchmarks/Pods-Shows-RMVisionBenchmarks.debug.xcconfig"; sourceTree = "<group>"; };
-		A0C1A03844D47A745CBF3CFE /* libPods-Shows-RMVisionBenchmarks.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Shows-RMVisionBenchmarks.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC2A6932176E92790057A289 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AC2A6969176E947B0057A289 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		AC2A696C176E95200057A289 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		AC2A6970176E96E20057A289 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AC4BA0B617821FC200AB2597 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
-		B1E0249C5CE4897EE0728652 /* libPods-Shows-RMVisionSampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Shows-RMVisionSampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CCBF12D7D0E594DDC8150B4B /* Pods-Shows-RMVisionBenchmarks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shows-RMVisionBenchmarks.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shows-RMVisionBenchmarks/Pods-Shows-RMVisionBenchmarks.release.xcconfig"; sourceTree = "<group>"; };
-		DD6B5A98DFFDD7122AD88513 /* Pods-Shows-RMVisionSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shows-RMVisionSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shows-RMVisionSample/Pods-Shows-RMVisionSample.release.xcconfig"; sourceTree = "<group>"; };
+		CE2927342A871A83E475F164 /* Pods-Shows-RMVisionBenchmarks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shows-RMVisionBenchmarks.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shows-RMVisionBenchmarks/Pods-Shows-RMVisionBenchmarks.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,7 +134,7 @@
 				94DA2E1E18282799007EF7B5 /* ImageIO.framework in Frameworks */,
 				432A34DB181ADD8300390E8B /* UIKit.framework in Frameworks */,
 				432A34DC181ADD8300390E8B /* Foundation.framework in Frameworks */,
-				544337065F49C51AB7EFC0FE /* libPods-Shows-RMVisionBenchmarks.a in Frameworks */,
+				EF1D5D60503266B978B24928 /* libPods-Shows-RMVisionBenchmarks.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,7 +149,7 @@
 				71FAB8B11815B5DE00718ECB /* UIKit.framework in Frameworks */,
 				71FAB8AF1815B5DE00718ECB /* Foundation.framework in Frameworks */,
 				71FAB8FD1815C4B300718ECB /* ImageIO.framework in Frameworks */,
-				3609CD012A3627D5B15D85CF /* libPods-Shows-RMVisionSample.a in Frameworks */,
+				5642965E3E1AAB767A73F7CF /* libPods-Shows-RMVisionSample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,7 +161,7 @@
 				178874FB1819F10A0095AD12 /* ImageIO.framework in Frameworks */,
 				71FAB8C81815B5DF00718ECB /* UIKit.framework in Frameworks */,
 				71FAB8C71815B5DF00718ECB /* Foundation.framework in Frameworks */,
-				2D08E10691FF5A4FBB959D95 /* libPods-Shows-RMVisionSampleTests.a in Frameworks */,
+				B73324E15D2B3D349C24CC65 /* libPods-Shows-RMVisionSampleTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,6 +175,19 @@
 				1793DF82184F988D002566F5 /* LineTrainingBenchmarks.mm */,
 			);
 			name = Benchmarks;
+			sourceTree = "<group>";
+		};
+		3790A670C4D35FF19D9F7E39 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7EB22BA5EBD18299E1282A32 /* Pods-Shows-RMVisionBenchmarks.debug.xcconfig */,
+				CE2927342A871A83E475F164 /* Pods-Shows-RMVisionBenchmarks.release.xcconfig */,
+				1FC6AED0E9342BD8C0A67112 /* Pods-Shows-RMVisionSample.debug.xcconfig */,
+				43CB12048BC3423C0961E0F2 /* Pods-Shows-RMVisionSample.release.xcconfig */,
+				0E88CA3D650F690927992012 /* Pods-Shows-RMVisionSampleTests.debug.xcconfig */,
+				7D8C2EF835123E35E40BBAFC /* Pods-Shows-RMVisionSampleTests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		432A34A8181AD99F00390E8B /* Test Videos */ = {
@@ -243,7 +256,7 @@
 				71FAB8CB1815B5DF00718ECB /* RMVisionSampleTests */,
 				AC2A6931176E92790057A289 /* Frameworks */,
 				AC2A6930176E92790057A289 /* Products */,
-				BFDBB199BCB03EF62C96856E /* Pods */,
+				3790A670C4D35FF19D9F7E39 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -268,24 +281,11 @@
 				AC2A6932176E92790057A289 /* Foundation.framework */,
 				AC2A6970176E96E20057A289 /* UIKit.framework */,
 				AC4BA0B617821FC200AB2597 /* CoreFoundation.framework */,
-				A0C1A03844D47A745CBF3CFE /* libPods-Shows-RMVisionBenchmarks.a */,
-				8AF5DCF7684E80B89ED218D2 /* libPods-Shows-RMVisionSample.a */,
-				B1E0249C5CE4897EE0728652 /* libPods-Shows-RMVisionSampleTests.a */,
+				62F347456090465511004CC0 /* libPods-Shows-RMVisionBenchmarks.a */,
+				89D55E215A47E9FC7E32CF2B /* libPods-Shows-RMVisionSample.a */,
+				35294DAA597211312A86DFB5 /* libPods-Shows-RMVisionSampleTests.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		BFDBB199BCB03EF62C96856E /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				99CD31D5C921295EE00E6986 /* Pods-Shows-RMVisionBenchmarks.debug.xcconfig */,
-				CCBF12D7D0E594DDC8150B4B /* Pods-Shows-RMVisionBenchmarks.release.xcconfig */,
-				6D0AE5BAB86E96DA92C375FA /* Pods-Shows-RMVisionSample.debug.xcconfig */,
-				DD6B5A98DFFDD7122AD88513 /* Pods-Shows-RMVisionSample.release.xcconfig */,
-				118DD1CBFFB15C31DD35677B /* Pods-Shows-RMVisionSampleTests.debug.xcconfig */,
-				4EB462B47CD2ADF0AF75D871 /* Pods-Shows-RMVisionSampleTests.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,12 +295,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 432A34E6181ADD8300390E8B /* Build configuration list for PBXNativeTarget "RMVisionBenchmarks" */;
 			buildPhases = (
-				F30E5B468DA677182CF9E464 /* [CP] Check Pods Manifest.lock */,
+				C6DE11C55B30E3D663B38AB4 /* [CP] Check Pods Manifest.lock */,
 				432A34EB181AE06800390E8B /* Run Script */,
 				432A34D4181ADD8300390E8B /* Sources */,
 				432A34D9181ADD8300390E8B /* Frameworks */,
 				432A34DD181ADD8300390E8B /* Resources */,
-				0730AC3E764A7C6EC3AB1DA6 /* [CP] Copy Pods Resources */,
+				B957E6B2588E306DD2791777 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -316,12 +316,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 71FAB8DA1815B5DF00718ECB /* Build configuration list for PBXNativeTarget "RMVisionSample" */;
 			buildPhases = (
-				6FA46B1E4FDB7D07721EF8B9 /* [CP] Check Pods Manifest.lock */,
+				8AB7B71D3F5B1556D8A3741D /* [CP] Check Pods Manifest.lock */,
 				71FAB8AA1815B5DE00718ECB /* Sources */,
 				71FAB8AB1815B5DE00718ECB /* Frameworks */,
 				71FAB8AC1815B5DE00718ECB /* Resources */,
 				AF2007811EFD3CB9007CF02C /* Embed Frameworks */,
-				8CB68A9498DB2955A21FC5AE /* [CP] Copy Pods Resources */,
+				8982B4C29C3D42DAA8706E89 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -336,11 +336,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 71FAB8DB1815B5DF00718ECB /* Build configuration list for PBXNativeTarget "RMVisionSampleTests" */;
 			buildPhases = (
-				C445499B21858402063AA013 /* [CP] Check Pods Manifest.lock */,
+				62153B8FC10474C111F4C48C /* [CP] Check Pods Manifest.lock */,
 				71FAB8C01815B5DE00718ECB /* Sources */,
 				71FAB8C11815B5DE00718ECB /* Frameworks */,
 				71FAB8C21815B5DE00718ECB /* Resources */,
-				2CBAB5BD60EE7A5799CDC171 /* [CP] Copy Pods Resources */,
+				7F2AC6E685E755F5C06D167A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -431,7 +431,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0730AC3E764A7C6EC3AB1DA6 /* [CP] Copy Pods Resources */ = {
+		432A34EB181AE06800390E8B /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd \"$SRCROOT/RMVisionSampleTests/Test Videos/\"\n./downloadSupportFiles.bash";
+		};
+		62153B8FC10474C111F4C48C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -439,31 +453,21 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Shows-RMVisionBenchmarks/Pods-Shows-RMVisionBenchmarks-resources.sh",
-				"${PODS_ROOT}/GPUImage/framework/Resources/lookup.png",
-				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_amatorka.png",
-				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_miss_etikate.png",
-				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_1.png",
-				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_2.png",
-				"${PODS_CONFIGURATION_BUILD_DIR}/RMVision/RMVision.bundle",
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_amatorka.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_miss_etikate.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_soft_elegance_1.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_soft_elegance_2.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RMVision.bundle",
+				"$(DERIVED_FILE_DIR)/Pods-Shows-RMVisionSampleTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Shows-RMVisionBenchmarks/Pods-Shows-RMVisionBenchmarks-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2CBAB5BD60EE7A5799CDC171 /* [CP] Copy Pods Resources */ = {
+		7F2AC6E685E755F5C06D167A /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -495,43 +499,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Shows-RMVisionSampleTests/Pods-Shows-RMVisionSampleTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		432A34EB181AE06800390E8B /* Run Script */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Run Script";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "cd \"$SRCROOT/RMVisionSampleTests/Test Videos/\"\n./downloadSupportFiles.bash";
-		};
-		6FA46B1E4FDB7D07721EF8B9 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Shows-RMVisionSample-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8CB68A9498DB2955A21FC5AE /* [CP] Copy Pods Resources */ = {
+		8982B4C29C3D42DAA8706E89 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -563,7 +531,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Shows-RMVisionSample/Pods-Shows-RMVisionSample-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C445499B21858402063AA013 /* [CP] Check Pods Manifest.lock */ = {
+		8AB7B71D3F5B1556D8A3741D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -578,14 +546,46 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Shows-RMVisionSampleTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Shows-RMVisionSample-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F30E5B468DA677182CF9E464 /* [CP] Check Pods Manifest.lock */ = {
+		B957E6B2588E306DD2791777 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Shows-RMVisionBenchmarks/Pods-Shows-RMVisionBenchmarks-resources.sh",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup.png",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_amatorka.png",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_miss_etikate.png",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_1.png",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_2.png",
+				"${PODS_CONFIGURATION_BUILD_DIR}/RMVision/RMVision.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_amatorka.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_miss_etikate.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_soft_elegance_1.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_soft_elegance_2.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RMVision.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Shows-RMVisionBenchmarks/Pods-Shows-RMVisionBenchmarks-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6DE11C55B30E3D663B38AB4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -675,7 +675,7 @@
 /* Begin XCBuildConfiguration section */
 		432A34E7181ADD8300390E8B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 99CD31D5C921295EE00E6986 /* Pods-Shows-RMVisionBenchmarks.debug.xcconfig */;
+			baseConfigurationReference = 7EB22BA5EBD18299E1282A32 /* Pods-Shows-RMVisionBenchmarks.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RMVisionSample.app/RMVisionSample";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -712,7 +712,7 @@
 		};
 		432A34E8181ADD8300390E8B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CCBF12D7D0E594DDC8150B4B /* Pods-Shows-RMVisionBenchmarks.release.xcconfig */;
+			baseConfigurationReference = CE2927342A871A83E475F164 /* Pods-Shows-RMVisionBenchmarks.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RMVisionSample.app/RMVisionSample";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -746,7 +746,7 @@
 		};
 		71FAB8D31815B5DF00718ECB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6D0AE5BAB86E96DA92C375FA /* Pods-Shows-RMVisionSample.debug.xcconfig */;
+			baseConfigurationReference = 1FC6AED0E9342BD8C0A67112 /* Pods-Shows-RMVisionSample.debug.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -783,7 +783,7 @@
 		};
 		71FAB8D41815B5DF00718ECB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DD6B5A98DFFDD7122AD88513 /* Pods-Shows-RMVisionSample.release.xcconfig */;
+			baseConfigurationReference = 43CB12048BC3423C0961E0F2 /* Pods-Shows-RMVisionSample.release.xcconfig */;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -817,7 +817,7 @@
 		};
 		71FAB8D51815B5DF00718ECB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 118DD1CBFFB15C31DD35677B /* Pods-Shows-RMVisionSampleTests.debug.xcconfig */;
+			baseConfigurationReference = 0E88CA3D650F690927992012 /* Pods-Shows-RMVisionSampleTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RMVisionSample.app/RMVisionSample";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -863,7 +863,7 @@
 		};
 		71FAB8D61815B5DF00718ECB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4EB462B47CD2ADF0AF75D871 /* Pods-Shows-RMVisionSampleTests.release.xcconfig */;
+			baseConfigurationReference = 7D8C2EF835123E35E40BBAFC /* Pods-Shows-RMVisionSampleTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RMVisionSample.app/RMVisionSample";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";

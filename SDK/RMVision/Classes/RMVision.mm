@@ -27,11 +27,12 @@
 
 #import "RMVisionDebugBroker.h"
 
-#import "UIDevice+VisionHardware.h"
 #import "UIImage+OpenCV.h"
 
 #import <GPUImage/GPUImageRawDataInput.h>
 #import "GPUImageRawDataInput+RMAdditions.h"
+
+#import "UIDevice+Romo.h"
 
 #ifdef VISION_DEBUG
 #define LOG(...) DDLogWarn(__VA_ARGS__)
@@ -152,7 +153,7 @@ NSString *const RMVisionModule_GPUImageExample  = @"GPUImageExample";
         LOG(@"Initializing...");
         _camera = camera;
         _quality = quality;
-        _isSlow = ![[UIDevice currentDevice] supportsAdvancedComputerVision];
+        _isSlow = ![[UIDevice currentDevice] isTelepresenceController];
         _targetFrameRate = _isSlow ? kVisionSlowFrameRate : kVisionFrameRate;
         _grayscaleMode = NO;
         

@@ -11,7 +11,6 @@
 
 #import "RMImageUtils.h"
 #import "UIView+VisionAdditions.h"
-#import "UIDevice+VisionHardware.h"
 #import "RMBorderView.h"
 
 // Some colors to use!

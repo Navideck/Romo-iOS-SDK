@@ -10,7 +10,7 @@
 #import <RMVision/RMVision.h>
 #import "RMFakeVision.h"
 #import "RMVisionObjects.h"
-#import "UIDevice+Hardware.h"
+#import "UIDevice+Romo.h"
 #import "RMVisionObjectTrackingModule.h"
 
 // Macro - Wait for condition to be NO/false in blocks and asynchronous calls

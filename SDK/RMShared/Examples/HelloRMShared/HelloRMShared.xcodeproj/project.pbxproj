@@ -7,18 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		55721FF2B1017021770A34D2 /* libPods-HelloRMShared.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 751845211E6A449AE6EFDE44 /* libPods-HelloRMShared.a */; };
 		AF80641A220D4177003ECCF2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF806419220D4177003ECCF2 /* AppDelegate.m */; };
 		AF80641D220D4177003ECCF2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF80641C220D4177003ECCF2 /* ViewController.m */; };
 		AF806420220D4177003ECCF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF80641E220D4177003ECCF2 /* Main.storyboard */; };
 		AF806422220D4179003ECCF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF806421220D4179003ECCF2 /* Assets.xcassets */; };
 		AF806425220D4179003ECCF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF806423220D4179003ECCF2 /* LaunchScreen.storyboard */; };
 		AF806428220D4179003ECCF2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF806427220D4179003ECCF2 /* main.m */; };
+		DE3F963C3FE5B1413FBAF926 /* libPods-HelloRMShared.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4640D6A6E37F23B7B635C9 /* libPods-HelloRMShared.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		30DF15A3FF144F81A69E1F75 /* Pods-HelloRMShared.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloRMShared.release.xcconfig"; path = "Pods/Target Support Files/Pods-HelloRMShared/Pods-HelloRMShared.release.xcconfig"; sourceTree = "<group>"; };
-		751845211E6A449AE6EFDE44 /* libPods-HelloRMShared.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HelloRMShared.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E4640D6A6E37F23B7B635C9 /* libPods-HelloRMShared.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HelloRMShared.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B2AB1D34EE0F0059590CE18 /* Pods-HelloRMShared.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloRMShared.release.xcconfig"; path = "Pods/Target Support Files/Pods-HelloRMShared/Pods-HelloRMShared.release.xcconfig"; sourceTree = "<group>"; };
 		AF806415220D4177003ECCF2 /* HelloRMShared.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloRMShared.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF806418220D4177003ECCF2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AF806419220D4177003ECCF2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -29,7 +29,7 @@
 		AF806424220D4179003ECCF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF806426220D4179003ECCF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF806427220D4179003ECCF2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		FCEE1E640C5A981C56686CC1 /* Pods-HelloRMShared.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloRMShared.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HelloRMShared/Pods-HelloRMShared.debug.xcconfig"; sourceTree = "<group>"; };
+		E34A17D59975E0C2A991E501 /* Pods-HelloRMShared.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloRMShared.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HelloRMShared/Pods-HelloRMShared.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,26 +37,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55721FF2B1017021770A34D2 /* libPods-HelloRMShared.a in Frameworks */,
+				DE3F963C3FE5B1413FBAF926 /* libPods-HelloRMShared.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		23FCB2C1414EE312F7D1289C /* Pods */ = {
+		075AC916BA9E58CBF1B220D5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FCEE1E640C5A981C56686CC1 /* Pods-HelloRMShared.debug.xcconfig */,
-				30DF15A3FF144F81A69E1F75 /* Pods-HelloRMShared.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		5E14B46EC2A96D34C3303FF0 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				751845211E6A449AE6EFDE44 /* libPods-HelloRMShared.a */,
+				3E4640D6A6E37F23B7B635C9 /* libPods-HelloRMShared.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -66,8 +57,8 @@
 			children = (
 				AF806417220D4177003ECCF2 /* HelloRMShared */,
 				AF806416220D4177003ECCF2 /* Products */,
-				23FCB2C1414EE312F7D1289C /* Pods */,
-				5E14B46EC2A96D34C3303FF0 /* Frameworks */,
+				E20194364C2F5C8D86F9EE52 /* Pods */,
+				075AC916BA9E58CBF1B220D5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,6 +86,15 @@
 			path = HelloRMShared;
 			sourceTree = "<group>";
 		};
+		E20194364C2F5C8D86F9EE52 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E34A17D59975E0C2A991E501 /* Pods-HelloRMShared.debug.xcconfig */,
+				4B2AB1D34EE0F0059590CE18 /* Pods-HelloRMShared.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -102,7 +102,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AF80642B220D4179003ECCF2 /* Build configuration list for PBXNativeTarget "HelloRMShared" */;
 			buildPhases = (
-				067059C423DC57F226B3FB65 /* [CP] Check Pods Manifest.lock */,
+				004A54C1711E212492F22672 /* [CP] Check Pods Manifest.lock */,
 				AF806411220D4177003ECCF2 /* Sources */,
 				AF806412220D4177003ECCF2 /* Frameworks */,
 				AF806413220D4177003ECCF2 /* Resources */,
@@ -162,7 +162,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		067059C423DC57F226B3FB65 /* [CP] Check Pods Manifest.lock */ = {
+		004A54C1711E212492F22672 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -333,7 +333,7 @@
 		};
 		AF80642C220D4179003ECCF2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FCEE1E640C5A981C56686CC1 /* Pods-HelloRMShared.debug.xcconfig */;
+			baseConfigurationReference = E34A17D59975E0C2A991E501 /* Pods-HelloRMShared.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -351,7 +351,7 @@
 		};
 		AF80642D220D4179003ECCF2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 30DF15A3FF144F81A69E1F75 /* Pods-HelloRMShared.release.xcconfig */;
+			baseConfigurationReference = 4B2AB1D34EE0F0059590CE18 /* Pods-HelloRMShared.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
