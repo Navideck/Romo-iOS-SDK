@@ -10,12 +10,11 @@
 #import "UIFont+RMFont.h"
 #import "UIButton+RMButtons.h"
 #import "UIImage+Tint.h"
-#import <RMShared/UIDevice+Hardware.h>
 #import "UIButton+SoundEffects.h"
 #import "RMSoundEffect.h"
 #import "RMGradientLabel.h"
 #import "RMAppDelegate.h"
-#import <RMShared/RMMath.h>
+#import <Romo/RMMath.h>
 #import "RMProgressManager.h"
 #import "RMMission.h"
 #import "RMMissionEditorVC.h"
@@ -29,11 +28,12 @@
 #import "RMDockingRequiredVC.h"
 #import "RMAction.h"
 #import "RMMissionsPageControl.h"
-#import <RMShared/RMDispatchTimer.h>
+#import <Romo/RMDispatchTimer.h>
 #import "RMFavoriteColorRobotController.h"
 #import "RMUnlockable.h"
 #import "RMSpriteView.h"
 #import "RMAlertView.h"
+#import <Romo/UIDevice+Romo.h>
 //#import "RMTelepresencePresence.h"
 
 /** Positions */

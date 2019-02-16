@@ -7,9 +7,9 @@
 //
 
 #import "RMAnalytics.h"
-#import <RMCore/RMCore.h>
+#import <Romo/RMCore.h>
 //#import <Analytics/Analytics.h>
-#import <RMShared/UIDevice+UDID.h>
+#import <Romo/UIDevice+UDID.h>
 #import "RMAppDelegate.h"
 #import "RMProgressManager.h"
 #import "RMRomoMemory.h"

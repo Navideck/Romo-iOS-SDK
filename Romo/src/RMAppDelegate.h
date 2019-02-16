@@ -3,7 +3,7 @@
 //  Romo
 //
 
-#import <RMCore/RMCore.h>
+#import <Romo/RMCore.h>
 
 @class RMRobotController;
 

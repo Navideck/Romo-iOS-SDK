@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ExternalAccessory/ExternalAccessory.h"
-#import <RMCore/RMCore.h>
+#import <Romo/RMCore.h>
 
 @class MasterViewController;
 

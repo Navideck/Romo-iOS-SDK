@@ -7,8 +7,8 @@
 #import "RMCoreDriveController.h"
 #import "RMCoreMovingAverage.h"
 #import "RMCoreControllerPID.h"
-#import <RMShared/RMMath.h>
-#import <RMShared/RMCircleMath.h>
+#import <Romo/RMMath.h>
+#import <Romo/RMCircleMath.h>
 #import "RMCoreMotor_Internal.h"
 
 @interface RMCoreDifferentialDrive ()

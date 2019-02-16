@@ -8,9 +8,9 @@
 
 #import "RMTracker.h"
 #import "RMRomo.h"
-#import <RMShared/RMMath.h>
-#import <RMShared/UIDevice+Hardware.h>
+#import <Romo/RMMath.h>
 #import "RMOrientationConfidenceModel.h"
+#import <Romo/UIDevice+Romo.h>
 
 #define kLookScalarX -0.20
 #define kLookScalarY -0.48

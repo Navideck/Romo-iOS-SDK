@@ -4,7 +4,7 @@
 //
 
 #import "RMRobotController.h"
-#import <RMShared/RMMath.h>
+#import <Romo/RMMath.h>
 
 #ifdef DEBUG_ROBOT_CONTROLLER
 #define LOG(...) DDLogWarn(__VA_ARGS__)

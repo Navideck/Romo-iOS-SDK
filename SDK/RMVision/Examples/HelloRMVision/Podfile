@@ -6,6 +6,6 @@ target 'HelloRMVision' do
   # use_frameworks!
 
   # Pods for HelloRMVision
-  pod 'RMVision', path: '../..'
-  pod 'RMShared', path: '../../../RMShared'
+  pod 'Romo', path: '../../..'
+  pod 'Romo/RMVision', path: '../../..'
 end

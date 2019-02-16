@@ -6,6 +6,6 @@ target 'RMCoreTest' do
   # use_frameworks!
 
   # Pods for HelloRomo
-  pod 'RMShared', path: '../../../RMShared'
-  pod 'RMCore', path: '../..'
+  pod 'Romo', path: '../../..'
+  pod 'Romo/RMCore', path: '../../..'
 end

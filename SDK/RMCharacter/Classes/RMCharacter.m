@@ -7,7 +7,7 @@
 #import "RMCharacterFace.h"
 #import "RMCharacterVoice.h"
 #import "RMCharacterPNS.h"
-#import <RMShared/RMMath.h>
+#import <Romo/RMMath.h>
 
 #define NUM_EMOTIONS    10
 #define NUM_EXPRESSIONS 32

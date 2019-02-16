@@ -11,7 +11,7 @@
 
 #import "RMSessionManager.h"
 #import "RMSession.h"
-#import <RMShared/UIApplication+Environment.h>
+#import <Romo/UIApplication+Environment.h>
 #import "RMWiFiDriveRemoteVC.h"
 #import "RMSoundEffect.h"
 #import "RMRealtimeAudio.h"

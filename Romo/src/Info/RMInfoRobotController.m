@@ -6,8 +6,7 @@
 #import "RMInfoRobotController.h"
 #import "UIView+Additions.h"
 #import "UIColor+RMColor.h"
-#import <RMShared/UIDevice+UDID.h>
-#import <RMShared/UIDevice+Hardware.h>
+#import <Romo/UIDevice+UDID.h>
 #import "UIFont+RMFont.h"
 #import "RMAppDelegate.h"
 #import "RMInfoRobotView.h"
@@ -21,6 +20,7 @@
 #import "RMNetworkUtilities.h"
 #import "RMSoundEffect.h"
 //#import "RMTelepresencePresence.h"
+#import <Romo/UIDevice+Romo.h>
 
 static NSString *telepresenceNumberKey = @"telepresenceNumberKey";
 

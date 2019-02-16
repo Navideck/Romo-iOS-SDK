@@ -5,7 +5,7 @@
 
 #import <UIKit/UIKit.h>
 #import "RMRobotController.h"
-#import <RMCharacter/RMCharacter.h>
+#import <Romo/RMCharacter.h>
 
 @protocol RMCharacterUnlockedDelegate;
 

@@ -6,9 +6,37 @@
 //
 
 #import "UIDevice+Romo.h"
-#import "UIDevice-Hardware.h"
+#include <sys/socket.h> // Per msqr
+#include <sys/sysctl.h>
+#include <net/if.h>
+#include <net/if_dl.h>
 
 @implementation UIDevice (Romo)
+
+#pragma mark sysctlbyname utils
+- (NSString *)getSysInfoByName:(char *)typeSpecifier
+{
+    size_t size;
+    sysctlbyname(typeSpecifier, NULL, &size, NULL, 0);
+
+    char *answer = malloc(size);
+    sysctlbyname(typeSpecifier, answer, &size, NULL, 0);
+
+    NSString *results = [NSString stringWithCString:answer encoding: NSUTF8StringEncoding];
+
+    free(answer);
+    return results;
+}
+
+#pragma mark sysctl utils
+- (NSUInteger)getSysInfo:(uint)typeSpecifier
+{
+    size_t size = sizeof(int);
+    int results;
+    int mib[2] = {CTL_HW, typeSpecifier};
+    sysctl(mib, 2, &results, &size, NULL, 0);
+    return (NSUInteger) results;
+}
 
 - (BOOL)isiPhone4OrOlder
 {

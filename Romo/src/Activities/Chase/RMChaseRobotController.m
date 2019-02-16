@@ -4,18 +4,18 @@
 //
 
 #import "RMChaseRobotController.h"
-#import <RMShared/UIDevice+Hardware.h>
-#import <RMShared/RMMath.h>
+#import <Romo/RMMath.h>
 #import "RMBehaviorArbiter.h"
 #import "RMAppDelegate.h"
 #import "RMColorTrainingHelpRobotController.h"
 #import "RMProgressManager.h"
 #import "RMUnlockable.h"
 #import "RMInteractionScriptRuntime.h"
-#import <RMVision/RMVisionObjectTrackingModule.h>
-#import <RMVision/RMVisionObjectTrackingModuleDebug.h>
+#import <Romo/RMVisionObjectTrackingModule.h>
+#import <Romo/RMVisionObjectTrackingModuleDebug.h>
 #import "RMSoundEffect.h"
 #import "RMChaseFillTrainingRobotController.h"
+#import <Romo/UIDevice+Romo.h>
 
 /** Amount of time between reacting to things being held over your head */
 //static const float minimumHeldOverHeadReactionDelay = 12.0; // sec

@@ -4,9 +4,7 @@
 //
 
 #import "RMActivityChooserRobotController.h"
-
-#import <RMShared/UIDevice+Hardware.h>
-
+#import <Romo/UIDevice+Romo.h>
 #import "RMActivityChooserView.h"
 #import "RMAppDelegate.h"
 #import "RMMissionRobotController.h"

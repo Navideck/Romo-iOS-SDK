@@ -4,7 +4,7 @@
 
 #import "RMCharacterAnimation.h"
 #import "RMCharacter.h"
-#import <RMShared/RMMath.h>
+#import <Romo/RMMath.h>
 
 typedef void (^BoolBlock)(BOOL);
 

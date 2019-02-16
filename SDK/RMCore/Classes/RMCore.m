@@ -8,7 +8,7 @@
 #import "RMCoreRobotDataTransport.h"
 #import <QuartzCore/QuartzCore.h>
 #import <UIKit/UIKit.h>
-#import <RMShared/RMMath.h>
+#import <Romo/RMMath.h>
 
 #ifdef DEBUG_CONNECTION
 //#define CONNECT_LOG(...) NSLog(__VA_ARGS__)

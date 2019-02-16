@@ -4,7 +4,8 @@
 //
 
 #import "RMSerializable.h"
-#import <RMShared/UIDevice+Hardware.h>
+#import <Romo/UIDevice+Romo.h>
+#import "UIDevice+Temporary.h"
 
 @class RMAddress;
 
@@ -30,6 +31,17 @@
 @property (nonatomic, copy) NSString *appVersion;
 
 /** Device hardware information */
+
+typedef enum {
+    UIDeviceColorWhite,
+    UIDeviceColorBlack,
+    UIDeviceColorSilver,
+    UIDeviceColorRed,
+    UIDeviceColorPink,
+    UIDeviceColorYellow,
+    UIDeviceColorBlue,
+} UIDeviceColor;
+
 @property (nonatomic) UIDevicePlatform devicePlatform;
 @property (nonatomic) UIDeviceColor deviceColor;
 

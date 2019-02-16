@@ -5,38 +5,56 @@ PODS:
   - CocoaLumberjack/Default (3.4.2)
   - CocoaLumberjack/Extensions (3.4.2):
     - CocoaLumberjack/Default
-  - RMCore (0.3.0):
-    - RMShared
-  - RMShared (0.3.0):
+  - GPUImage (0.1.7)
+  - OpenCV (2.4.13.6)
+  - Romo (0.3.0):
     - CocoaLumberjack
+    - Romo/RMCharacter (= 0.3.0)
+    - Romo/RMCore (= 0.3.0)
+    - Romo/RMVision (= 0.3.0)
+    - SocketRocket
+    - UIDevice-Hardware
+  - Romo/RMCharacter (0.3.0):
+    - CocoaLumberjack
+    - SocketRocket
+    - UIDevice-Hardware
+  - Romo/RMCore (0.3.0):
+    - CocoaLumberjack
+    - SocketRocket
+    - UIDevice-Hardware
+  - Romo/RMVision (0.3.0):
+    - CocoaLumberjack
+    - GPUImage
+    - OpenCV (~> 2.0)
     - SocketRocket
     - UIDevice-Hardware
   - SocketRocket (0.5.1)
   - UIDevice-Hardware (0.1.13)
 
 DEPENDENCIES:
-  - RMCore (from `../..`)
-  - RMShared (from `../../../RMShared`)
+  - Romo (from `../../..`)
+  - Romo/RMCore (from `../../..`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - CocoaLumberjack
+    - GPUImage
+    - OpenCV
     - SocketRocket
     - UIDevice-Hardware
 
 EXTERNAL SOURCES:
-  RMCore:
-    :path: "../.."
-  RMShared:
-    :path: "../../../RMShared"
+  Romo:
+    :path: "../../.."
 
 SPEC CHECKSUMS:
   CocoaLumberjack: db7cc9e464771f12054c22ff6947c5a58d43a0fd
-  RMCore: 3b89e1bc76c86707a31db8546b7c9a62b54c0743
-  RMShared: 5f560647371a1e14f3dfd081267062af9dd02a55
+  GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
+  OpenCV: cd36a3467c21572d658c2640488fe0d5a93ca192
+  Romo: fc33d3efdb121fdd228f796b08e0fdd812034cde
   SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
   UIDevice-Hardware: c10ce5703fa8de762079b84236c548cf31223531
 
-PODFILE CHECKSUM: eee0d14dd4e50c6a31b08bebb1d3f53ebe8d8d54
+PODFILE CHECKSUM: e1e1850afaf543d5f081ff4ced8acc936446c2ab
 
 COCOAPODS: 1.5.3

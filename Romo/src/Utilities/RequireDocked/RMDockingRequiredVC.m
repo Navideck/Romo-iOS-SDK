@@ -4,8 +4,7 @@
 //
 
 #import "RMDockingRequiredVC.h"
-#import <RMCore/RMCore.h>
-#import <RMShared/UIDevice+Hardware.h>
+#import <Romo/RMCore.h>
 #import "UIView+Additions.h"
 #import "UIFont+RMFont.h"
 #import "RMGradientLabel.h"
@@ -13,6 +12,7 @@
 #import "RMPopupWebview.h"
 #import "UIButton+RMButtons.h"
 #import "RMSoundEffect.h"
+#import <Romo/UIDevice+Romo.h>
 
 NSString *const RMRomoControlAppStoreURL = @"https://itunes.apple.com/us/app/romo-x-control/id1436338304";
 

@@ -4,7 +4,7 @@
 //
 
 #import "RMCoreBumpDetector.h"
-#import <RMShared/RMDispatchTimer.h>
+#import <Romo/RMDispatchTimer.h>
 
 @interface RMCoreBumpDetector()
 

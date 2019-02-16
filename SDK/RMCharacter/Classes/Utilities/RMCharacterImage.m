@@ -9,14 +9,7 @@
 #include <sys/sysctl.h>
 #include <net/if.h>
 #include <net/if_dl.h>
-
-typedef enum {
-    RMCharacterUIDeviceFamilyiPhone,
-    RMCharacterUIDeviceFamilyiPod,
-    RMCharacterUIDeviceFamilyiPad,
-    RMCharacterUIDeviceFamilyAppleTV,
-    RMCharacterUIDeviceFamilyUnknown,
-} RMCharacterUIDeviceFamily;
+#import <UIDevice-Hardware/UIDevice-Hardware.h>
 
 @implementation RMCharacterImage
 
@@ -113,7 +106,7 @@ static const int _maxCapacity = 3500000;
     
     if (flag) {
         flag = NO;
-        BOOL isRetinaiPad = (([self deviceFamily] == RMCharacterUIDeviceFamilyiPad) && ([UIScreen mainScreen].scale == 2.0f));
+        BOOL isRetinaiPad = (([self deviceFamily] == UIDeviceFamilyiPad) && ([UIScreen mainScreen].scale == 2.0f));
         BOOL isTelepresencePhoneOrPod = [self isFastDevice];
         usesRetina = isRetinaiPad || isTelepresencePhoneOrPod;
     }
@@ -128,8 +121,8 @@ static const int _maxCapacity = 3500000;
     if (flag) {
         flag = NO;
         
-        BOOL isiPod = [self deviceFamily] == RMCharacterUIDeviceFamilyiPod;
-        BOOL isiPhone = [self deviceFamily] == RMCharacterUIDeviceFamilyiPhone;
+        BOOL isiPod = [self deviceFamily] == UIDeviceFamilyiPod;
+        BOOL isiPhone = [self deviceFamily] == UIDeviceFamilyiPhone;
         isDockableTelepresenceDevice = (isiPod || isiPhone) && ![self isShortiPod] && ![self isiPhoneThreeOrOlder];
     }
     return isDockableTelepresenceDevice;
@@ -143,7 +136,7 @@ static const int _maxCapacity = 3500000;
     if (flag) {
         flag = NO;
         
-        BOOL isiPod = [self deviceFamily] == RMCharacterUIDeviceFamilyiPod;
+        BOOL isiPod = [self deviceFamily] == UIDeviceFamilyiPod;
         BOOL isShort = [[UIScreen mainScreen] bounds].size.height < 500;
         isShortiPod = isiPod && isShort;
     }
@@ -158,7 +151,7 @@ static const int _maxCapacity = 3500000;
     if (flag) {
         flag = NO;
         
-        BOOL isIphone = [self deviceFamily] == RMCharacterUIDeviceFamilyiPhone;
+        BOOL isIphone = [self deviceFamily] == UIDeviceFamilyiPhone;
         NSPredicate *iphoneTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", @"iPhone[0-3].*"];
         BOOL isThreeOrOld = [iphoneTest evaluateWithObject:[self getSysInfoByName:"hw.machine"]];
         isiPhoneThreeOrOlder = isIphone && isThreeOrOld;
@@ -166,15 +159,15 @@ static const int _maxCapacity = 3500000;
     return isiPhoneThreeOrOlder;
 }
 
-+ (RMCharacterUIDeviceFamily)deviceFamily
++ (UIDeviceFamily)deviceFamily
 {
     NSString *platform = [self getSysInfoByName:"hw.machine"];
-    if ([platform hasPrefix:@"iPhone"]) return RMCharacterUIDeviceFamilyiPhone;
-    if ([platform hasPrefix:@"iPod"]) return RMCharacterUIDeviceFamilyiPod;
-    if ([platform hasPrefix:@"iPad"]) return RMCharacterUIDeviceFamilyiPad;
-    if ([platform hasPrefix:@"AppleTV"]) return RMCharacterUIDeviceFamilyAppleTV;
+    if ([platform hasPrefix:@"iPhone"]) return UIDeviceFamilyiPhone;
+    if ([platform hasPrefix:@"iPod"]) return UIDeviceFamilyiPod;
+    if ([platform hasPrefix:@"iPad"]) return UIDeviceFamilyiPad;
+    if ([platform hasPrefix:@"AppleTV"]) return UIDeviceFamilyAppleTV;
     
-    return RMCharacterUIDeviceFamilyUnknown;
+    return UIDeviceFamilyUnknown;
 }
 
 + (NSUInteger)getSysInfo:(uint)typeSpecifier

@@ -8,7 +8,7 @@
 #import "UIView+Additions.h"
 #import "UIFont+RMFont.h"
 #import "RMProgressManager.h"
-#import <RMShared/RMMath.h>
+#import <Romo/RMMath.h>
 
 @interface RMFaceColorActionView ()
 

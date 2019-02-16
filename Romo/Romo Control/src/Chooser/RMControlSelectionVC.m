@@ -23,7 +23,6 @@
 #import "RMWifiToolbar.h"
 #import "Reachability.h"
 #import "RMNetworkUtilities.h"
-#import <RMShared/UIDevice+Hardware.h>
 
 NSString * const kWifiPeerReuseIdentifier = @"WifiPeerReuseIdentifier";
 NSString * const kTelepresencePeerReuseIdentifier = @"TelepresencePeerReuseIdentifier";

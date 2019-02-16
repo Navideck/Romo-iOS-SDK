@@ -7,8 +7,8 @@
 //
 #import "RMInteractionScriptRuntime.h"
 
-#import <RMCore/RMCoreRobot_Internal.h>
-#import <RMVision/RMVision.h>
+#import <Romo/RMCoreRobot_Internal.h>
+#import <Romo/RMVision.h>
 
 #import "RMDockingRequiredVC.h"
 #import "RMRomoMemory.h"
@@ -27,7 +27,7 @@
 
 
 #import <CocoaLumberjack/DDLog.h>
-#import <RMShared/RMMath.h>
+#import <Romo/RMMath.h>
 
 #define kAutoProgressTimeout 20.0
 

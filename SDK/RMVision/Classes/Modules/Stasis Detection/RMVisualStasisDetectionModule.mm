@@ -12,7 +12,7 @@
 #import <GPUImage/GPUImageAverageColor.h>
 #import <GPUImage/GPUImageTwoInputFilter.h>
 #import <GPUImage/GPUImageRawDataInput.h>
-#import <RMShared/RMMath.h>
+#import <Romo/RMMath.h>
 
 #ifdef VISUAL_STASIS_DEBUG
 #import "DDLog.h"

@@ -11,10 +11,9 @@
 #import "RMTelepresenceIncomingCallVC.h"
 #import "RMTelepresenceHostRobotController.h"
 #import "RMAnalytics.h"
-#import <RMShared/UIDevice+UDID.h>
-#import <RMShared/UIDevice+Hardware.h>
+#import <Romo/UIDevice+UDID.h>
 #import <SocketRocket/SRWebSocket.h>
-#import <RMShared/UIApplication+Environment.h>
+#import <Romo/UIApplication+Environment.h>
 
 static const int kAutoAnswerCallBackWithin = 120;
 

@@ -6,7 +6,7 @@
 #import "RMMotionDetectionModule.h"
 #import "RMVision_Internal.h"
 #import "RMMotionTriggeredColorTrainingModule.h"
-#import <RMShared/RMMath.h>
+#import <Romo/RMMath.h>
 #import <GPUImage/GPUImageMotionDetector.h>
 
 using namespace cv;

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import <RMVision/RMVision.h>
+#import <Romo/RMVision.h>
 
 @interface RMViewController : UIViewController <RMVisionDelegate>
 

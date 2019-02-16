@@ -5,7 +5,7 @@
 
 #import <CoreMotion/CMAttitude.h>
 #import "RMCorePlatformMotion.h"
-#import <RMShared/RMQuaternion.h>
+#import <Romo/RMQuaternion.h>
 
 @interface RMCorePlatformMotion()
 

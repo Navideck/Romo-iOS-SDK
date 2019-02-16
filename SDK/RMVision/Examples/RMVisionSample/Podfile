@@ -2,8 +2,8 @@
 platform :ios, '6.1.6'
 
 abstract_target 'Shows' do
-  pod 'RMVision', path: '../..'
-  pod 'RMShared', path: '../../../RMShared'
+  pod 'Romo', path: '../../..'
+  pod 'Romo/RMVision', path: '../../..'
   pod 'OpenCV', '~> 2.0'
 
   target 'RMVisionSample' do

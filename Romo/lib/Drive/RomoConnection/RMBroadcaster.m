@@ -4,7 +4,7 @@
 //
 
 #import "RMBroadcaster.h"
-#import <RMShared/UIDevice+UDID.h>
+#import <Romo/UIDevice+UDID.h>
 #import "RMPeer.h"
 #import "RMAddress.h"
 

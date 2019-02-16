@@ -5,7 +5,7 @@
 
 #import "RMCoreRobotCommunication.h"
 #import <UIKit/UIKit.h>
-#import <RMShared/RMMath.h>
+#import <Romo/RMMath.h>
 
 #define RPDEBUG                                   // Turn on RMCoreRobotCommunication Debugging (NSLogs)
 

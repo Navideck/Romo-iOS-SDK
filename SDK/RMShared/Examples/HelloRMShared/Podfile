@@ -6,5 +6,5 @@ target 'HelloRMShared' do
   # use_frameworks!
 
   # Pods for HelloRMShared
-  pod 'RMShared', path: '../..'
+  pod 'Romo', path: '../../..'
 end

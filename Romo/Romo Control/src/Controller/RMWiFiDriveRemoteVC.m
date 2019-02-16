@@ -7,7 +7,6 @@
 #import "RMCommandSubscriber.h"
 #import "RAVService.h"
 #import "Analytics/Analytics.h"
-#import <RMShared/UIDevice+Hardware.h>
 #import "RMAppDelegate.h"
 #import "RMAlertView.h"
 #import "UIColor+RMColor.h"

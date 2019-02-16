@@ -5,7 +5,7 @@
 
 #import "RMCompilingVC.h"
 #import <QuartzCore/QuartzCore.h>
-#import <RMShared/RMMath.h>
+#import <Romo/RMMath.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 #import "UIView+Additions.h"
 #import "UIFont+RMFont.h"

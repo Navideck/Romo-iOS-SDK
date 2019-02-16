@@ -10,7 +10,7 @@
 #import "RMTelepresence.h"
 #import "RMOpenTokManager.h"
 #import <Opentok/Opentok.h>
-#import <RMShared/RMDispatchTimer.h>
+#import <Romo/RMDispatchTimer.h>
 #import "UIAlertView+RMDismissAll.h"
 #import "RMAnalytics.h"
 

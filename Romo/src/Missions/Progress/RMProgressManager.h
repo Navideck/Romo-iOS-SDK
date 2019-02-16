@@ -5,7 +5,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <RMCharacter/RMCharacter.h>
+#import <Romo/RMCharacter.h>
 
 @class RMMission;
 @class RMUnlockable;

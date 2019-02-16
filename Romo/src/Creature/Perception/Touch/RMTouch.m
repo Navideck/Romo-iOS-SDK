@@ -5,8 +5,8 @@
 
 #import "RMTouch.h"
 #import "UIView+Additions.h"
-#import <RMShared/RMMath.h>
-#import <RMShared/RMDispatchTimer.h>
+#import <Romo/RMMath.h>
+#import <Romo/RMDispatchTimer.h>
 
 @interface RMTouch ()
 

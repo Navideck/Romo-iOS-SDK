@@ -9,7 +9,7 @@
 #import "RMVisionObjectTrackingModule.h"
 #import "UIImage+OpenCV.h"
 #import "RMVision.h"
-#import <RMShared/RMShared.h>
+#import <Romo/RMShared.h>
 #import "GPUImageNormalBayesFilter.h"
 #import <GPUImage/GPUImageRawDataOutput.h>
 #import <GPUImage/GPUImageBrightnessFilter.h>

@@ -6,6 +6,6 @@ target 'HelloRMCharacter' do
   # use_frameworks!
 
   # Pods for HelloRMCharacter
-  pod 'RMCharacter', path: '../..'
-  pod 'RMShared', path: '../../../RMShared'
+  pod 'Romo', path: '../../..'
+  pod 'Romo/RMCharacter', path: '../../..'
 end

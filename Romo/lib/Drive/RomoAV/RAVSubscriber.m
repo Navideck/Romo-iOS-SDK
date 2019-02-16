@@ -9,7 +9,7 @@
 #import "RAVVideoInput.h"
 #import <CocoaLumberjack/DDLog.h>
 #import "RMDataPacket.h"
-#import <RMShared/UIDevice+Hardware.h>
+#import <Romo/UIDevice+Romo.h>
 #define SUBSCRIBER_NAME        @"AVSubscriber"
 #define SUBSCRIBER_PORT        @"21345"
 #define SUBSCRIBER_PROTOCOL    PROTOCOL_UDP

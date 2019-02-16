@@ -7,7 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
-#import <RMVision/RMVision.h>
+#import <Romo/RMVision.h>
 #import "RMVisionModuleProtocol.h"
 #import "RMVisionTestHelpers.h"
 #import "RMVisionNaiveLineTrainingModule.h"

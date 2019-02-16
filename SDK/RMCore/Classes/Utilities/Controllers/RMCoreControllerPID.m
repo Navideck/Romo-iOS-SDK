@@ -7,7 +7,7 @@
 //
 
 #import "RMCoreControllerPID.h"
-#import <RMShared/RMDispatchTimer.h>
+#import <Romo/RMDispatchTimer.h>
 
 #pragma mark - Macros/Constants
 

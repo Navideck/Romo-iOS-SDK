@@ -5,7 +5,7 @@
 
 #import "RMCharacterEye.h"
 #import "RMCharacterImage.h"
-#import <RMShared/RMMath.h>
+#import <Romo/RMMath.h>
 
 @interface RMCharacterEye () {
     BOOL _left;

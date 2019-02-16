@@ -11,7 +11,7 @@
 #import "MotorTestViewController.h"
 #import "DriveTestViewController.h"
 #import "RMCoreTestAppDelegate.h"
-#import <RMCore/RMCoreRobot_Internal.h>
+#import <Romo/RMCoreRobot_Internal.h>
 
 @interface MasterViewController () {
     NSArray *_categories;

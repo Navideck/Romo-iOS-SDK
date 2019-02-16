@@ -4,7 +4,7 @@
 //
 
 #import "RMActionIcon.h"
-#import <RMCharacter/RMCharacter.h>
+#import <Romo/RMCharacter.h>
 
 @interface RMFaceActionIcon : RMActionIcon
 

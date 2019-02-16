@@ -4,7 +4,7 @@
 //
 
 #import "RMCharacterPupil.h"
-#import <RMShared/RMMath.h>
+#import <Romo/RMMath.h>
 #import <QuartzCore/QuartzCore.h>
 
 #define DEFAULT_PUPIL_SIZE  29.0

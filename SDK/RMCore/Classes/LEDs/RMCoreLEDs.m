@@ -7,7 +7,7 @@
 #import "RMCoreRobotCommunication.h"
 #import "RMCoreRobot.h"
 #import "RMCoreRobot_Internal.h"
-#import <RMShared/RMMath.h>
+#import <Romo/RMMath.h>
 
 @implementation RMCoreLEDs
 

@@ -5,7 +5,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import <RMCharacter/RMCharacter.h>
+#import <Romo/RMCharacter.h>
 
 @interface RMSpaceObject : UIImageView
 

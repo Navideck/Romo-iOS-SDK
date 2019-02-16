@@ -4,7 +4,7 @@
 //
 
 #import "RMCharacterPNS.h"
-#import <RMShared/RMMath.h>
+#import <Romo/RMMath.h>
 
 #define doubleBlinkPercentage 28.0
 

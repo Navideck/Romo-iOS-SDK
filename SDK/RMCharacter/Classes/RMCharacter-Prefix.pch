@@ -4,5 +4,5 @@
 
 #ifdef __OBJC__
     #import <Foundation/Foundation.h>
-    #import <RMShared/RMSharedDefines.h>
+    #import <Romo/RMSharedDefines.h>
 #endif

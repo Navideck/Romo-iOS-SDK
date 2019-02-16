@@ -8,10 +8,11 @@ target 'Romo X' do
   # Pods for Romo X
   pod 'CocoaLumberjack'
   pod 'AFNetworking'
-  pod 'RMCore', path: '../SDK/RMCore'
-  pod 'RMVision', path: '../SDK/RMVision'
-  pod 'RMCharacter', path: '../SDK/RMCharacter'
-  pod 'RMShared', path: '../SDK/RMShared'
+  pod 'Romo', path: '../SDK'
+  pod 'Romo/RMCore', path: '../SDK'
+  pod 'Romo/RMCharacter', path: '../SDK'
+  pod 'Romo/RMVision', path: '../SDK'
+
 end
 
 target 'Romo X Control' do
@@ -20,5 +21,5 @@ target 'Romo X Control' do
 
   # Pods for Romo X Control
   pod 'CocoaLumberjack'
-  pod 'RMShared', path: '../SDK/RMShared'
+  pod 'Romo', path: '../SDK'
 end

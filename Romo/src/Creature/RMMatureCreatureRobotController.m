@@ -8,14 +8,14 @@
 
 #import "RMMatureCreatureRobotController.h"
 
-#import <RMVision/RMVision.h>
-#import <RMVision/RMImageUtils.h>
-#import <RMVision/RMVisionDebugBroker.h>
-#import <RMVision/RMMotionDetectionModule.h>
+#import <Romo/RMVision.h>
+#import <Romo/RMImageUtils.h>
+#import <Romo/RMVisionDebugBroker.h>
+#import <Romo/RMMotionDetectionModule.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 
 #import "RMTracker.h"
-#import <RMShared/RMMath.h>
+#import <Romo/RMMath.h>
 
 #import "RMSoundEffect.h"
 #import "RMMissionRuntime.h"

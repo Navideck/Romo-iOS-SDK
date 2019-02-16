@@ -6,7 +6,7 @@
 #import "RMCoreHeadTilt.h"
 #import "RMCoreControllerPID.h"
 #import "RMCoreMotor_Internal.h"
-#import <RMShared/RMMath.h>
+#import <Romo/RMMath.h>
 
 // furthest we can be off from desired angle
 #define RM_TILT_TO_ANGLE_MAX_DISCREPANCY 2.0

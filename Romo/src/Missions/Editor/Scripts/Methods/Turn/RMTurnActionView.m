@@ -5,7 +5,7 @@
 
 #import "RMTurnActionView.h"
 #import <QuartzCore/QuartzCore.h>
-#import <RMShared/RMMath.h>
+#import <Romo/RMMath.h>
 #import "UIView+Additions.h"
 #import "UIFont+RMFont.h"
 

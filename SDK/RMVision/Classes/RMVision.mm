@@ -23,7 +23,7 @@
 #import "RMGPUImageExampleModule.h"
 #import "RMPictureModule.h"
 #import "RMVideoModule.h"
-#import <RMShared/RMMath.h>
+#import <Romo/RMMath.h>
 
 #import "RMVisionDebugBroker.h"
 
@@ -32,7 +32,7 @@
 #import <GPUImage/GPUImageRawDataInput.h>
 #import "GPUImageRawDataInput+RMAdditions.h"
 
-#import "UIDevice+Romo.h"
+#import <Romo/UIDevice+Romo.h>
 
 #ifdef VISION_DEBUG
 #define LOG(...) DDLogWarn(__VA_ARGS__)

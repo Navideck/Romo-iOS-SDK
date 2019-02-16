@@ -6,7 +6,7 @@ target 'HelloRomo' do
   # use_frameworks!
 
   # Pods for HelloRomo
-  pod 'RMCore', path: '../..'
-  pod 'RMShared', path: '../../../RMShared'
-  pod 'RMCharacter', path: '../../../RMCharacter'
+  pod 'Romo', path: '../../..'
+  pod 'Romo/RMCore', path: '../../..'
+  pod 'Romo/RMCharacter', path: '../../..'
 end

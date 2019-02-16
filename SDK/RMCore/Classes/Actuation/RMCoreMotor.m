@@ -9,7 +9,7 @@
 #import "RMCoreRobot_Internal.h"
 #import "RMCoreRobotCommunication.h"
 #import "RMCoreLeakyIntegrator.h"
-#import <RMShared/RMMath.h>
+#import <Romo/RMMath.h>
 
 @interface RMCoreMotor ()
 

@@ -4,7 +4,7 @@
 //
 
 #import "RMCharacterColorFill.h"
-#import <RMShared/RMShared.h>
+#import <Romo/RMShared.h>
 
 /** Universally scales time (thus, speed) of the system */
 static const float timeWarpFactor = 30.0;

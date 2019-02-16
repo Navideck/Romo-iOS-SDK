@@ -7,7 +7,7 @@
 //
 
 #import "RMVisionModule.h"
-#import "UIDevice+Romo.h"
+#import <Romo/UIDevice+Romo.h>
 
 @interface RMVisionModule ()
 

@@ -5,8 +5,8 @@
 
 #import "RMCoreRobotCommunicationOld.h"
 #import <UIKit/UIKit.h>
-#import <RMShared/RMShared.h>
-#import <RMShared/RMDispatchTimer.h>
+#import <Romo/RMShared.h>
+#import <Romo/RMDispatchTimer.h>
 #import "RMCore.h"
 
 //#define RPDEBUG                                   // Turn on RMCoreRobotCommunicationOld Debugging (NSLogs)

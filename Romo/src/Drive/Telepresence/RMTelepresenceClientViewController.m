@@ -13,8 +13,8 @@
 #import "RMDriveTiltSlider.h"
 #import "UIView+Additions.h"
 #import <Opentok/Opentok.h>
-#import <RMShared/UIDevice+UDID.h>
-#import <RMShared/UIApplication+Environment.h>
+#import <Romo/UIDevice+UDID.h>
+#import <Romo/UIApplication+Environment.h>
 #import "RMContactManager.h"
 #import "RMAlertView.h"
 #import "UIFont+RMFont.h"

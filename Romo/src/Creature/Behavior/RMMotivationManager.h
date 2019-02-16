@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <RMCharacter/RMCharacter.h>
+#import <Romo/RMCharacter.h>
 #import "RMBehaviorManager.h"
 #import "RMBehaviorMotivationTypes.h"
 

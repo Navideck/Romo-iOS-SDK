@@ -7,7 +7,7 @@
 //
 
 #import "RMVisionBrightHueSegmentationModule.h"
-#import <RMShared/RMMath.h>
+#import <Romo/RMMath.h>
 #import "RMVision_Internal.h"
 #import "GPUImageBrightHueSegmentation.h"
 #import <GPUImage/GPUImageFilter.h>

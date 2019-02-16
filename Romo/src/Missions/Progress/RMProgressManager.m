@@ -4,9 +4,9 @@
 //
 
 #import "RMProgressManager.h"
-#import <RMCharacter/RMCharacter.h>
-#import <RMShared/RMMath.h>
-#import <RMVision/RMPictureModule.h>
+#import <Romo/RMCharacter.h>
+#import <Romo/RMMath.h>
+#import <Romo/RMPictureModule.h>
 #import "RMMission.h"
 #import "RMUnlockable.h"
 #import "RMAction.h"

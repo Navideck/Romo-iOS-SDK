@@ -16,7 +16,7 @@
 //
 //==============================================================================
 #import <UIKit/UIKit.h>
-#import <RMCore/RMCore.h>
+#import <Romo/RMCore.h>
 
 @interface ViewController : UIViewController <RMCoreDelegate>
 

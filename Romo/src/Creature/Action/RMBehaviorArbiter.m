@@ -4,11 +4,11 @@
 //
 
 #import "RMBehaviorArbiter.h"
-#import <RMCore/RMCore.h>
-#import <RMVision/RMBrightnessMeteringModule.h>
-#import <RMShared/RMMath.h>
-#import <RMShared/RMDispatchTimer.h>
-#import <RMShared/UIDevice+Hardware.h>
+#import <Romo/RMCore.h>
+#import <Romo/RMBrightnessMeteringModule.h>
+#import <Romo/RMMath.h>
+#import <Romo/RMDispatchTimer.h>
+#import <Romo/UIDevice+Romo.h>
 #import "UIColor+RMColor.h"
 #import "UIView+Additions.h"
 #import "RMRomo.h"

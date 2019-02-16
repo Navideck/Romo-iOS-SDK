@@ -6,7 +6,7 @@
 #import "RMCoreRobotVitals.h"
 #import "RMCoreRobot_Internal.h"
 #import "RMCoreRobotCommunication.h"
-#import <RMShared/RMMath.h>
+#import <Romo/RMMath.h>
 
 #define BATTERY_FULL                860     // 5.589V
 #define BATTERY_EMPTY               685     // 4.3V

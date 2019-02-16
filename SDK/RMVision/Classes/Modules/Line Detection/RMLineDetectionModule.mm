@@ -20,7 +20,7 @@
 #import "RMImageUtils.h"
 #import "RMVisionDebugBroker.h"
 #import "RMVisionObjects.h"
-#import <RMShared/RMShared.h>
+#import <Romo/RMShared.h>
 #import <CocoaLumberjack/CocoaLumberjack.h>
 
 #ifdef DEBUG_LINE_DETECT

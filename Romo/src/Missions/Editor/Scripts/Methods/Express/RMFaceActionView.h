@@ -4,7 +4,7 @@
 //
 
 #import "RMActionView.h"
-#import <RMCharacter/RMCharacter.h>
+#import <Romo/RMCharacter.h>
 
 @interface RMFaceActionView : RMActionView
 

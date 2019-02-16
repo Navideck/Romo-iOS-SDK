@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 Romotive. All rights reserved.
 
 #import "RMCoreLeakyIntegrator.h"
-#import <RMShared/RMMath.h>
-#import <RMShared/RMDispatchTimer.h>
+#import <Romo/RMMath.h>
+#import <Romo/RMDispatchTimer.h>
 
 #pragma mark - "private interface"
 

@@ -4,7 +4,7 @@
 //
 
 #import "RMWiFiDriveRobotController.h"
-#import <RMShared/RMMath.h>
+#import <Romo/RMMath.h>
 #import "RMAppDelegate.h"
 #import "RMSessionManager.h"
 #import "RMRemoteControlSubscriber.h"

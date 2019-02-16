@@ -4,8 +4,8 @@
 //
 
 #import "RMRomotion.h"
-#import <RMShared/RMDispatchTimer.h>
-#import <RMShared/RMMath.h>
+#import <Romo/RMDispatchTimer.h>
+#import <Romo/RMMath.h>
 
 @interface RMRomotion ()
 

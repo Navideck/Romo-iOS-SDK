@@ -8,8 +8,8 @@
 
 #import "RMChaseTrainingRobotController.h"
 
-#import <RMVision/RMVision.h>
-#import <RMCharacter/RMCharacter.h>
+#import <Romo/RMVision.h>
+#import <Romo/RMCharacter.h>
 
 @interface RMChaseTrainingRobotController ()
 

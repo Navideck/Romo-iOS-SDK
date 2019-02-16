@@ -7,7 +7,7 @@
 //
 
 #import "RMInteractionScriptSelectorViewController.h"
-#import <RMShared/UIApplication+Environment.h>
+#import <Romo/UIApplication+Environment.h>
 
 @interface RMInteractionScriptSelectorViewController () <UITableViewDelegate, UITableViewDataSource>
 

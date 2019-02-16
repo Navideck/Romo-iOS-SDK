@@ -28,7 +28,7 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreMotion/CoreMotion.h>
-#import <RMShared/RMMath.h>
+#import <Romo/RMMath.h>
 
 @class RMCoreMotionInterface;
 

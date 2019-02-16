@@ -7,7 +7,7 @@
 #import "RAVService.h"
 #import "RAVSubscriber.h"
 #import "RMDataPacket.h"
-#import <RMShared/UIDevice+Hardware.h>
+#import <Romo/UIDevice+Romo.h>
 
 #define SERVICE_NAME        @"AVService"
 #define SERVICE_PORT        @"21345"
@@ -118,7 +118,7 @@
 
 - (void)sendDeviceInfo
 {
-    NSString *deviceType = [[UIDevice currentDevice] platform];
+    NSString *deviceType = [[UIDevice currentDevice] modelIdentifier];
     
     // Send the device name, then "##"
     // this is very hacky but needed for legacy support

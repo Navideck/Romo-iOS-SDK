@@ -4,11 +4,11 @@
 //
 
 #import "RMRuntimeRobotController.h"
-#import <RMVision/RMVision.h>
-#import <RMVision/RMBrightnessMeteringModule.h>
-#import <RMVision/RMMotionDetectionModule.h>
-#import <RMVision/RMVisionBrightHueSegmentationModule.h>
-#import <RMShared/RMMath.h>
+#import <Romo/RMVision.h>
+#import <Romo/RMBrightnessMeteringModule.h>
+#import <Romo/RMMotionDetectionModule.h>
+#import <Romo/RMVisionBrightHueSegmentationModule.h>
+#import <Romo/RMMath.h>
 #import "UIView+Additions.h"
 #import "UIFont+RMFont.h"
 #import "UIButton+RMButtons.h"

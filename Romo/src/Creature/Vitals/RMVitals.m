@@ -4,8 +4,8 @@
 //
 
 #import "RMVitals.h"
-#import <RMCore/RMCore.h>
-#import <RMShared/RMShared.h>
+#import <Romo/RMCore.h>
+#import <Romo/RMShared.h>
 
 // In 1 second @ (1.0,1.0), how many meters does Romo drive
 #define metersPerSecond 0.75
