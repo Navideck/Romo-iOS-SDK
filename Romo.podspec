@@ -7,13 +7,13 @@ Pod::Spec.new do |spec|
   spec.source       = { :git => 'https://github.com/navideck/Romo', :tag => "Romo_v#{spec.version}" }
   spec.ios.deployment_target = '6.0'
   spec.requires_arc = true
-  spec.documentation_url = 'http://www.example.com/docs.html'
-  spec.dependency 'CocoaLumberjack'
-  spec.dependency 'SocketRocket'
-  spec.dependency 'UIDevice-Hardware'
+  spec.static_framework = true
+  spec.license = { :file => 'LICENSE.md' }
 
   spec.subspec 'RMShared' do |sp|
     sp.source_files = 'RMShared/Classes/**/*.{h,m,mm,pch}'
+    sp.dependency 'CocoaLumberjack'
+    sp.dependency 'SocketRocket'
   end
 
   spec.subspec 'RMCore' do |sp|

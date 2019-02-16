@@ -13,12 +13,12 @@
 		AF806422220D4179003ECCF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF806421220D4179003ECCF2 /* Assets.xcassets */; };
 		AF806425220D4179003ECCF2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF806423220D4179003ECCF2 /* LaunchScreen.storyboard */; };
 		AF806428220D4179003ECCF2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF806427220D4179003ECCF2 /* main.m */; };
-		DE3F963C3FE5B1413FBAF926 /* libPods-HelloRMShared.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4640D6A6E37F23B7B635C9 /* libPods-HelloRMShared.a */; };
+		C975F93592EADA474203B7C6 /* libPods-HelloRMShared.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9E56CEB9238C25E4A78C4AA /* libPods-HelloRMShared.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3E4640D6A6E37F23B7B635C9 /* libPods-HelloRMShared.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HelloRMShared.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4B2AB1D34EE0F0059590CE18 /* Pods-HelloRMShared.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloRMShared.release.xcconfig"; path = "Pods/Target Support Files/Pods-HelloRMShared/Pods-HelloRMShared.release.xcconfig"; sourceTree = "<group>"; };
+		1D3BDC0BEEC723D478B4E192 /* Pods-HelloRMShared.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloRMShared.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HelloRMShared/Pods-HelloRMShared.debug.xcconfig"; sourceTree = "<group>"; };
+		8994EA98B926A2AB6F93841F /* Pods-HelloRMShared.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloRMShared.release.xcconfig"; path = "Pods/Target Support Files/Pods-HelloRMShared/Pods-HelloRMShared.release.xcconfig"; sourceTree = "<group>"; };
 		AF806415220D4177003ECCF2 /* HelloRMShared.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloRMShared.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF806418220D4177003ECCF2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AF806419220D4177003ECCF2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -29,7 +29,7 @@
 		AF806424220D4179003ECCF2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF806426220D4179003ECCF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF806427220D4179003ECCF2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E34A17D59975E0C2A991E501 /* Pods-HelloRMShared.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloRMShared.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HelloRMShared/Pods-HelloRMShared.debug.xcconfig"; sourceTree = "<group>"; };
+		F9E56CEB9238C25E4A78C4AA /* libPods-HelloRMShared.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HelloRMShared.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,19 +37,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE3F963C3FE5B1413FBAF926 /* libPods-HelloRMShared.a in Frameworks */,
+				C975F93592EADA474203B7C6 /* libPods-HelloRMShared.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		075AC916BA9E58CBF1B220D5 /* Frameworks */ = {
+		10918C98E6D8E69E352F3EF3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3E4640D6A6E37F23B7B635C9 /* libPods-HelloRMShared.a */,
+				1D3BDC0BEEC723D478B4E192 /* Pods-HelloRMShared.debug.xcconfig */,
+				8994EA98B926A2AB6F93841F /* Pods-HelloRMShared.release.xcconfig */,
 			);
-			name = Frameworks;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		AF80640C220D4177003ECCF2 = {
@@ -57,8 +58,8 @@
 			children = (
 				AF806417220D4177003ECCF2 /* HelloRMShared */,
 				AF806416220D4177003ECCF2 /* Products */,
-				E20194364C2F5C8D86F9EE52 /* Pods */,
-				075AC916BA9E58CBF1B220D5 /* Frameworks */,
+				10918C98E6D8E69E352F3EF3 /* Pods */,
+				DA1EA9E41998041BC3DD34AC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,13 +87,12 @@
 			path = HelloRMShared;
 			sourceTree = "<group>";
 		};
-		E20194364C2F5C8D86F9EE52 /* Pods */ = {
+		DA1EA9E41998041BC3DD34AC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E34A17D59975E0C2A991E501 /* Pods-HelloRMShared.debug.xcconfig */,
-				4B2AB1D34EE0F0059590CE18 /* Pods-HelloRMShared.release.xcconfig */,
+				F9E56CEB9238C25E4A78C4AA /* libPods-HelloRMShared.a */,
 			);
-			name = Pods;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,11 +102,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AF80642B220D4179003ECCF2 /* Build configuration list for PBXNativeTarget "HelloRMShared" */;
 			buildPhases = (
-				004A54C1711E212492F22672 /* [CP] Check Pods Manifest.lock */,
+				56CCAB0FB06751392F82DB5B /* [CP] Check Pods Manifest.lock */,
 				AF806411220D4177003ECCF2 /* Sources */,
 				AF806412220D4177003ECCF2 /* Frameworks */,
 				AF806413220D4177003ECCF2 /* Resources */,
-				3537505BBE333FEF6707CC75 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -163,7 +162,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		004A54C1711E212492F22672 /* [CP] Check Pods Manifest.lock */ = {
+		56CCAB0FB06751392F82DB5B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -183,40 +182,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3537505BBE333FEF6707CC75 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-HelloRMShared/Pods-HelloRMShared-resources.sh",
-				"${PODS_ROOT}/GPUImage/framework/Resources/lookup.png",
-				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_amatorka.png",
-				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_miss_etikate.png",
-				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_1.png",
-				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_2.png",
-				"${PODS_CONFIGURATION_BUILD_DIR}/Romo/RMCharacter.bundle",
-				"${PODS_CONFIGURATION_BUILD_DIR}/Romo/RMVision.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_amatorka.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_miss_etikate.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_soft_elegance_1.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_soft_elegance_2.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RMCharacter.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RMVision.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HelloRMShared/Pods-HelloRMShared-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -368,7 +333,7 @@
 		};
 		AF80642C220D4179003ECCF2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E34A17D59975E0C2A991E501 /* Pods-HelloRMShared.debug.xcconfig */;
+			baseConfigurationReference = 1D3BDC0BEEC723D478B4E192 /* Pods-HelloRMShared.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -386,7 +351,7 @@
 		};
 		AF80642D220D4179003ECCF2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4B2AB1D34EE0F0059590CE18 /* Pods-HelloRMShared.release.xcconfig */;
+			baseConfigurationReference = 8994EA98B926A2AB6F93841F /* Pods-HelloRMShared.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -9,7 +9,7 @@
 #include <sys/sysctl.h>
 #include <net/if.h>
 #include <net/if_dl.h>
-#import <UIDevice-Hardware/UIDevice-Hardware.h>
+#import <Romo/UIDevice+Romo.h>
 
 @implementation RMCharacterImage
 

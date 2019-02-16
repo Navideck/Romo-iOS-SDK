@@ -6,7 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <UIDevice-Hardware/UIDevice-Hardware.h>
+#import "UIDevice+Hardware.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
