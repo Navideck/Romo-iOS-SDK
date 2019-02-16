@@ -10,9 +10,9 @@
 #import "RMRomo.h"
 #import "RMSoundEffect.h"
 
-#import <RMShared/RMDispatchTimer.h>
-#import <RMShared/RMMath.h>
-#import <RMVision/RMMotionDetectionModule.h>
+#import <Romo/RMDispatchTimer.h>
+#import <Romo/RMMath.h>
+#import <Romo/RMMotionDetectionModule.h>
 
 #define kHeadCockAngle      11
 #define kBounceAngle        6

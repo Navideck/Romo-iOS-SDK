@@ -10,7 +10,7 @@
 #import "UIColor+RMColor.h"
 #import "UIButton+SoundEffects.h"
 #import "RMGradientLabel.h"
-#import <RMShared/RMMath.h>
+#import <Romo/RMMath.h>
 #import "RMMission.h"
 #import "RMProgressManager.h"
 #import "RMMissionToken.h"
@@ -23,7 +23,7 @@
 #import "RMSoundEffect.h"
 #import "RMFaceActionView.h"
 #import "RMFaceActionIcon.h"
-#import <RMShared/UIDevice+Hardware.h>
+#import <Romo/UIDevice+Romo.h>
 
 #define successSound @"Missions-Debriefing-Success-%d"
 #define failureSound @"Missions-Debriefing-Failure"

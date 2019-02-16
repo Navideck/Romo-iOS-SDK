@@ -9,13 +9,13 @@
 #import "RMChaseFillTrainingRobotController.h"
 #import "RMAppDelegate.h"
 #import "UIFont+RMFont.h"
-#import <RMShared/RMDispatchTimer.h>
-#import <RMVision/RMVision.h>
-#import <RMVision/RMVisionDebugBroker.h>
+#import <Romo/RMDispatchTimer.h>
+#import <Romo/RMVision.h>
+#import <Romo/RMVisionDebugBroker.h>
 #import "UIButton+RMButtons.h"
 #import "UIView+Additions.h"
 #import "UIImage+RoundedCorner.h"
-#import <RMVision/RMVisionObjectTrackingModule.h>
+#import <Romo/RMVisionObjectTrackingModule.h>
 #import "RMVoice.h"
 
 const int COUNTDOWN_TIMER_START = 11; // 10 second count down

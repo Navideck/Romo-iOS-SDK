@@ -4,16 +4,15 @@
 //
 
 #import "RMColorTrainingHelpRobotController.h"
-#import <RMVision/RMVision.h>
-#import <RMVision/RMThroughRomosEyesModule.h>
-#import <RMVision/RMMotionTriggeredColorTrainingModule.h>
-#import <RMshared/RMDispatchTimer.h>
-#import <RMShared/UIDevice+Hardware.h>
+#import <Romo/RMVision.h>
+#import <Romo/RMThroughRomosEyesModule.h>
+#import <Romo/RMMotionTriggeredColorTrainingModule.h>
+#import <Romo/RMDispatchTimer.h>
 #import "UIView+Additions.h"
 #import "UIColor+RMColor.h"
 #import "RMAppDelegate.h"
-#import <RMCharacter/RMCharacterColorFill.h>
-#import <RMShared/RMMath.h>
+#import <Romo/RMCharacterColorFill.h>
+#import <Romo/RMMath.h>
 #import "RMSoundEffect.h"
 #import "RMAudioUtils.h"
 

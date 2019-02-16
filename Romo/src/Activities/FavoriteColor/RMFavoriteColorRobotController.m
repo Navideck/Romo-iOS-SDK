@@ -4,8 +4,7 @@
 //
 
 #import "RMFavoriteColorRobotController.h"
-#import <RMVision/RMVision.h>
-#import <RMShared/UIDevice+Hardware.h>
+#import <Romo/RMVision.h>
 #import "UIView+Additions.h"
 #import "UIColor+RMColor.h"
 #import "UIFont+RMFont.h"
@@ -18,7 +17,6 @@
 #import "RMUnlockable.h"
 #import "RMBehaviorArbiter.h"
 #import "RMSoundEffect.h"
-#import <RMShared/UIDevice+Hardware.h>
 
 NSString *const favoriteColorKnowledgeKey = @"romoFavoriteColorHue";
 

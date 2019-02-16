@@ -3,7 +3,7 @@
 //
 
 #import "RMTiltController.h"
-#import <RMShared/RMMath.h>
+#import <Romo/RMMath.h>
 #import "UIView+Additions.h"
 #import "UIFont+RMFont.h"
 #import "UIColor+RMColor.h"

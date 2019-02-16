@@ -11,7 +11,7 @@
 #import "RMAppDelegate.h"
 #import "RMInteractionScriptRuntime.h"
 #import "RMMissionRuntime.h"
-#import <RMShared/RMMath.h>
+#import <Romo/RMMath.h>
 
 #define kBoredTimeout           19.0
 #define kMissionPromptTimeout   31.0

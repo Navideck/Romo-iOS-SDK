@@ -7,7 +7,7 @@
 #import "RMActivityRobotController.h"
 #import "RMMotivationManager.h"
 #import "RMProgressManager.h"
-#import <RMVision/RMVision.h>
+#import <Romo/RMVision.h>
 
 // Chapter 1 missions
 #define kCanDriveMission        1

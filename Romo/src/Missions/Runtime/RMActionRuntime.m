@@ -4,7 +4,7 @@
 //
 
 #import "RMActionRuntime.h"
-#import <RMCore/RMCore.h>
+#import <Romo/RMCore.h>
 #import "RMAction.h"
 #import "RMParameter.h"
 #import "RMActionRunner.h"

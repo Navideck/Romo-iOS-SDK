@@ -4,10 +4,9 @@
 //
 
 #import "RMLineFollowRobotController.h"
-#import <RMShared/UIDevice+Hardware.h>
-#import <RMShared/RMMath.h>
-#import <RMVision/RMVisionNaiveLineTrainingModule.h>
-#import <RMVision/RMVisionObjectTrackingModule.h>
+#import <Romo/RMMath.h>
+#import <Romo/RMVisionNaiveLineTrainingModule.h>
+#import <Romo/RMVisionObjectTrackingModule.h>
 #import "UIView+Additions.h"
 #import "UIColor+RMColor.h"
 #import "RMAppDelegate.h"
@@ -16,7 +15,8 @@
 #import "RMUnlockable.h"
 #import "RMInteractionScriptRuntime.h"
 #import "RMSoundEffect.h"
-#import <RMVision/RMVisionObjectTrackingModuleDebug.h>
+#import <Romo/RMVisionObjectTrackingModuleDebug.h>
+#import <Romo/UIDevice+Romo.h>
 
 /** Shows an extended intro the first time line follow is played */
 static NSString *hasSeenLineFollowExtendedIntroKey = @"seenLineFollowIntro";

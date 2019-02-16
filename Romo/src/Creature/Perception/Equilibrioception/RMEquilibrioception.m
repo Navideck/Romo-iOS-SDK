@@ -4,11 +4,11 @@
 //
 
 #import "RMEquilibrioception.h"
-#import <RMCore/RMCore.h>
-#import <RMCore/RMCoreMovingAverage.h>
-#import <RMShared/RMMath.h>
-#import <RMshared/RMDispatchTimer.h>
-#import <RMShared/UIDevice+Hardware.h>
+#import <Romo/RMCore.h>
+#import <Romo/RMCoreMovingAverage.h>
+#import <Romo/RMMath.h>
+#import <Romo/RMDispatchTimer.h>
+#import <Romo/UIDevice+Romo.h>
 
 NSString *const RMRobotDidFlipToOrientationNotification = @"RMRobotDidFlipToOrientationNotification";
 NSString *const RMRobotDidStartClimbingNotification = @"RMRobotDidStartClimbingNotification";

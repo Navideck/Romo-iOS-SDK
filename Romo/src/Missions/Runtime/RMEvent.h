@@ -4,7 +4,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <RMVision/RMVision.h>
+#import <Romo/RMVision.h>
 
 #define RMEventDidOccurNotification @"RMEventDidOccurNotification"
 

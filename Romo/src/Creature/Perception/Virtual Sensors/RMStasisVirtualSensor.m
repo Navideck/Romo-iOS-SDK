@@ -4,8 +4,8 @@
 //
 
 #import "RMStasisVirtualSensor.h"
-#import <RMVision/RMVisualStasisDetectionModule.h>
-#import <RMShared/RMMath.h>
+#import <Romo/RMVisualStasisDetectionModule.h>
+#import <Romo/RMMath.h>
 #import "RMRomo.h"
 
 /** When the robot is driving at speeds lower than this, we ignore stasis events */

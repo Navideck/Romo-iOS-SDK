@@ -5,16 +5,16 @@
 
 #import "RMFirmwareUpdatingRobotController.h"
 #import <QuartzCore/QuartzCore.h>
-#import <RMCore/RMProgrammingProtocol.h>
-#import <RMCore/RMCore.h>
-#import <RMCore/RMCoreRobot_Internal.h>
+#import <Romo/RMProgrammingProtocol.h>
+#import <Romo/RMCore.h>
+#import <Romo/RMCoreRobot_Internal.h>
 #import "RMAppDelegate.h"
 #import "RMRomo.h"
 #import "UIView+Additions.h"
 #import "UIFont+RMFont.h"
 #import "UIColor+RMColor.h"
-#import <RMShared/UIDevice+Hardware.h>
 #import "AFNetworking.h"
+#import <Romo/UIDevice+Romo.h>
 
 #ifdef DEBUG
 #define RM_FIRMWARE_URL @"tbd"

@@ -4,8 +4,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <RMCharacter/RMCharacter.h>
-#import <RMCore/RMCore.h>
+#import <Romo/RMCharacter.h>
+#import <Romo/RMCore.h>
 #import "RMRomotionAction.h"
 
 @interface RMRomotion : NSObject

@@ -7,7 +7,7 @@
 #import "UIView+Additions.h"
 #import "UIColor+RMColor.h"
 #import "UIFont+RMFont.h"
-#import <RMShared/RMMath.h>
+#import <Romo/RMMath.h>
 #import "RMAppDelegate.h"
 #import "RMRobotController.h"
 #import "RMProgressManager.h"

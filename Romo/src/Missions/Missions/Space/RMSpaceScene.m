@@ -1,9 +1,9 @@
 #import "RMSpaceScene.h"
 #import "UIView+Additions.h"
 #import "RMSpaceStar.h"
-#import <RMShared/RMMath.h>
-#import <RMShared/UIDevice+Hardware.h>
+#import <Romo/RMMath.h>
 #import "RMChapterPlanet.h"
+#import <Romo/UIDevice+Romo.h>
 
 static const CGFloat numberOfStarsForFastDevice = 72;
 static const CGFloat numberOfStarsForSlowDevice = 0;

@@ -5,7 +5,7 @@
 
 #import "RMPeerManager.h"
 #import <arpa/inet.h>
-#import <RMShared/UIDevice+UDID.h>
+#import <Romo/UIDevice+UDID.h>
 #import "RMAddress.h"
 #import "RMBroadcaster.h"
 #import "RMPeer.h"

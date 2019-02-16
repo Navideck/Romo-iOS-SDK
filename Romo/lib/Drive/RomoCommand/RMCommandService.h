@@ -5,7 +5,7 @@
 
 #import "RMService.h"
 #import "RMCommandMessage.h"
-#import <RMCharacter/RMCharacter.h>
+#import <Romo/RMCharacter.h>
 #import "RMSocket.h"
 
 @protocol RMCommandDelegate;

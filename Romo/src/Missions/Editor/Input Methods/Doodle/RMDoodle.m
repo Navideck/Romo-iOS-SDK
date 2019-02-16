@@ -4,7 +4,7 @@
 //
 
 #import "RMDoodle.h"
-#import <RMShared/RMMath.h>
+#import <Romo/RMMath.h>
 
 #define p(i) ([self.points[i] CGPointValue])
 

@@ -7,7 +7,7 @@
 //
 #import "RMMicLineView.h"
 
-#import <RMShared/RMMath.h>
+#import <Romo/RMMath.h>
 
 #import "UIColor+RMColor.h"
 #import "UIView+Additions.h"

@@ -4,15 +4,15 @@
 //
 
 #import "RMExploreBehavior.h"
-#import <RMShared/RMDispatchTimer.h>
-#import <RMShared/RMMath.h>
-#import <RMShared/UIDevice+Hardware.h>
-#import <RMShared/RMCircleMath.h>
+#import <Romo/RMDispatchTimer.h>
+#import <Romo/RMMath.h>
+#import <Romo/RMCircleMath.h>
 #import "RMAppDelegate.h"
 #import "RMStasisVirtualSensor.h"
 #import "RMRomo.h"
 #import "RMEvent.h"
 #import "RMEquilibrioception.h"
+#import <Romo/UIDevice+Romo.h>
 
 static const float exploreLoopFrequencyFastDevice = 30.0; // Hz
 static const float exploreLoopFrequencySlowDevice = 20.0; // Hz

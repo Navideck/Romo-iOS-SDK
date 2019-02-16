@@ -4,11 +4,11 @@
 //
 
 #import "RMObjectTrackingVirtualSensor.h"
-#import <RMVision/RMVision.h>
-#import <RMVision/RMMotionTriggeredColorTrainingModule.h>
-#import <RMVision/RMVisionObjectTrackingModule.h>
-#import <RMShared/UIDevice+Hardware.h>
+#import <Romo/RMVision.h>
+#import <Romo/RMMotionTriggeredColorTrainingModule.h>
+#import <Romo/RMVisionObjectTrackingModule.h>
 #import "RMRomo.h"
+#import <Romo/UIDevice+Romo.h>
 
 /** How many frames must be seen for training */
 static const float motionTriggeredDuration = 1.75; // seconds

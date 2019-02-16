@@ -44,8 +44,8 @@
 //==============================================================================
 #import "RMRealtimeAudio.h"
 
-#import <RMShared/RMMath.h>
-#import <RMShared/RMDispatchTimer.h>
+#import <Romo/RMMath.h>
+#import <Romo/RMDispatchTimer.h>
 
 #import "RMSoundEffect.h"
 

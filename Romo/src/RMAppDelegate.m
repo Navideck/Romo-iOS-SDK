@@ -11,9 +11,9 @@
 #import <CocoaLumberjack/DDASLLogger.h>
 #import <CocoaLumberjack/DDTTYLogger.h>
 #import <CocoaLumberjack/DDFileLogger.h>
-#import <RMShared/RMWebSocketLogger.h>
-#import <RMShared/RMLogFormatter.h>
-#import <RMShared/UIApplication+Environment.h>
+#import <Romo/RMWebSocketLogger.h>
+#import <Romo/RMLogFormatter.h>
+#import <Romo/UIApplication+Environment.h>
 #import "RMProgressRobotController.h"
 #import "RMCreatureRobotController.h"
 #import "RMRomo.h"
@@ -32,7 +32,7 @@
 #endif
 
 #ifdef SIMULATOR
-#import <RMVision/RMVision.h>
+#import <Romo/RMVision.h>
 #endif
 @interface RMAppDelegate ()
 

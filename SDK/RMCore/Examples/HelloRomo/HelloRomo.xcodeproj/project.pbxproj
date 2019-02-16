@@ -1,0 +1,406 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		942AC68416E81A520062CA8A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942AC68316E81A520062CA8A /* UIKit.framework */; };
+		942AC68616E81A520062CA8A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942AC68516E81A520062CA8A /* Foundation.framework */; };
+		942AC68816E81A520062CA8A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942AC68716E81A520062CA8A /* CoreGraphics.framework */; };
+		942AC68E16E81A520062CA8A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 942AC68C16E81A520062CA8A /* InfoPlist.strings */; };
+		942AC69016E81A520062CA8A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 942AC68F16E81A520062CA8A /* main.m */; };
+		942AC69416E81A520062CA8A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 942AC69316E81A520062CA8A /* AppDelegate.m */; };
+		942AC69616E81A520062CA8A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 942AC69516E81A520062CA8A /* Default.png */; };
+		942AC69816E81A520062CA8A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 942AC69716E81A520062CA8A /* Default@2x.png */; };
+		942AC69A16E81A520062CA8A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 942AC69916E81A520062CA8A /* Default-568h@2x.png */; };
+		942AC69D16E81A520062CA8A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 942AC69C16E81A520062CA8A /* ViewController.m */; };
+		942AC6AB16E81AC20062CA8A /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942AC6A716E81AC20062CA8A /* CoreMotion.framework */; };
+		942AC6AC16E81AC20062CA8A /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942AC6A816E81AC20062CA8A /* ExternalAccessory.framework */; };
+		942AC6AD16E81AC20062CA8A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942AC6A916E81AC20062CA8A /* QuartzCore.framework */; };
+		942AC6B416E81C410062CA8A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942AC6B316E81C410062CA8A /* AVFoundation.framework */; };
+		F936124E9AB0FEF396415F79 /* libPods-HelloRomo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2387923296EBC4B6CA0474F5 /* libPods-HelloRomo.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2387923296EBC4B6CA0474F5 /* libPods-HelloRomo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HelloRomo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		942AC68016E81A520062CA8A /* HelloRomo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloRomo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		942AC68316E81A520062CA8A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		942AC68516E81A520062CA8A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		942AC68716E81A520062CA8A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		942AC68B16E81A520062CA8A /* HelloRomo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HelloRomo-Info.plist"; sourceTree = "<group>"; };
+		942AC68D16E81A520062CA8A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		942AC68F16E81A520062CA8A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		942AC69116E81A520062CA8A /* HelloRomo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HelloRomo-Prefix.pch"; sourceTree = "<group>"; };
+		942AC69216E81A520062CA8A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		942AC69316E81A520062CA8A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		942AC69516E81A520062CA8A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		942AC69716E81A520062CA8A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		942AC69916E81A520062CA8A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		942AC69B16E81A520062CA8A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		942AC69C16E81A520062CA8A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		942AC6A716E81AC20062CA8A /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		942AC6A816E81AC20062CA8A /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
+		942AC6A916E81AC20062CA8A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		942AC6B316E81C410062CA8A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F45016F007B92BB1D76EE0E2 /* Pods-HelloRomo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloRomo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HelloRomo/Pods-HelloRomo.debug.xcconfig"; sourceTree = "<group>"; };
+		F4AC6670567655AA729EAD72 /* Pods-HelloRomo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloRomo.release.xcconfig"; path = "Pods/Target Support Files/Pods-HelloRomo/Pods-HelloRomo.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		942AC67D16E81A520062CA8A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				942AC6B416E81C410062CA8A /* AVFoundation.framework in Frameworks */,
+				942AC68416E81A520062CA8A /* UIKit.framework in Frameworks */,
+				942AC68616E81A520062CA8A /* Foundation.framework in Frameworks */,
+				942AC68816E81A520062CA8A /* CoreGraphics.framework in Frameworks */,
+				942AC6AB16E81AC20062CA8A /* CoreMotion.framework in Frameworks */,
+				942AC6AC16E81AC20062CA8A /* ExternalAccessory.framework in Frameworks */,
+				942AC6AD16E81AC20062CA8A /* QuartzCore.framework in Frameworks */,
+				F936124E9AB0FEF396415F79 /* libPods-HelloRomo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		942AC67716E81A520062CA8A = {
+			isa = PBXGroup;
+			children = (
+				942AC68916E81A520062CA8A /* HelloRomo */,
+				942AC68216E81A520062CA8A /* Frameworks */,
+				942AC68116E81A520062CA8A /* Products */,
+				D699F1EAB4A7371297247A60 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		942AC68116E81A520062CA8A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				942AC68016E81A520062CA8A /* HelloRomo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		942AC68216E81A520062CA8A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				942AC6A716E81AC20062CA8A /* CoreMotion.framework */,
+				942AC6B316E81C410062CA8A /* AVFoundation.framework */,
+				942AC6A816E81AC20062CA8A /* ExternalAccessory.framework */,
+				942AC6A916E81AC20062CA8A /* QuartzCore.framework */,
+				942AC68316E81A520062CA8A /* UIKit.framework */,
+				942AC68516E81A520062CA8A /* Foundation.framework */,
+				942AC68716E81A520062CA8A /* CoreGraphics.framework */,
+				2387923296EBC4B6CA0474F5 /* libPods-HelloRomo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		942AC68916E81A520062CA8A /* HelloRomo */ = {
+			isa = PBXGroup;
+			children = (
+				942AC69216E81A520062CA8A /* AppDelegate.h */,
+				942AC69316E81A520062CA8A /* AppDelegate.m */,
+				942AC69B16E81A520062CA8A /* ViewController.h */,
+				942AC69C16E81A520062CA8A /* ViewController.m */,
+				942AC68A16E81A520062CA8A /* Supporting Files */,
+			);
+			path = HelloRomo;
+			sourceTree = "<group>";
+		};
+		942AC68A16E81A520062CA8A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				942AC68B16E81A520062CA8A /* HelloRomo-Info.plist */,
+				942AC68C16E81A520062CA8A /* InfoPlist.strings */,
+				942AC68F16E81A520062CA8A /* main.m */,
+				942AC69116E81A520062CA8A /* HelloRomo-Prefix.pch */,
+				942AC69516E81A520062CA8A /* Default.png */,
+				942AC69716E81A520062CA8A /* Default@2x.png */,
+				942AC69916E81A520062CA8A /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D699F1EAB4A7371297247A60 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F45016F007B92BB1D76EE0E2 /* Pods-HelloRomo.debug.xcconfig */,
+				F4AC6670567655AA729EAD72 /* Pods-HelloRomo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		942AC67F16E81A520062CA8A /* HelloRomo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 942AC6A316E81A520062CA8A /* Build configuration list for PBXNativeTarget "HelloRomo" */;
+			buildPhases = (
+				1A273E0E8E9ED6366D9E2BCF /* [CP] Check Pods Manifest.lock */,
+				942AC67C16E81A520062CA8A /* Sources */,
+				942AC67D16E81A520062CA8A /* Frameworks */,
+				942AC67E16E81A520062CA8A /* Resources */,
+				D2E28BD38B2CA5AB09BCCB9D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HelloRomo;
+			productName = HelloRomo;
+			productReference = 942AC68016E81A520062CA8A /* HelloRomo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		942AC67816E81A520062CA8A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = Romotive;
+				TargetAttributes = {
+					942AC67F16E81A520062CA8A = {
+						DevelopmentTeam = 52RU2XXUH6;
+					};
+				};
+			};
+			buildConfigurationList = 942AC67B16E81A520062CA8A /* Build configuration list for PBXProject "HelloRomo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 942AC67716E81A520062CA8A;
+			productRefGroup = 942AC68116E81A520062CA8A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				942AC67F16E81A520062CA8A /* HelloRomo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		942AC67E16E81A520062CA8A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				942AC68E16E81A520062CA8A /* InfoPlist.strings in Resources */,
+				942AC69616E81A520062CA8A /* Default.png in Resources */,
+				942AC69816E81A520062CA8A /* Default@2x.png in Resources */,
+				942AC69A16E81A520062CA8A /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1A273E0E8E9ED6366D9E2BCF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HelloRomo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2E28BD38B2CA5AB09BCCB9D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HelloRomo/Pods-HelloRomo-resources.sh",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup.png",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_amatorka.png",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_miss_etikate.png",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_1.png",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_2.png",
+				"${PODS_CONFIGURATION_BUILD_DIR}/Romo/RMCharacter.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/Romo/RMVision.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_amatorka.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_miss_etikate.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_soft_elegance_1.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_soft_elegance_2.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RMCharacter.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RMVision.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HelloRomo/Pods-HelloRomo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		942AC67C16E81A520062CA8A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				942AC69016E81A520062CA8A /* main.m in Sources */,
+				942AC69416E81A520062CA8A /* AppDelegate.m in Sources */,
+				942AC69D16E81A520062CA8A /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		942AC68C16E81A520062CA8A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				942AC68D16E81A520062CA8A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		942AC6A116E81A520062CA8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		942AC6A216E81A520062CA8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		942AC6A416E81A520062CA8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F45016F007B92BB1D76EE0E2 /* Pods-HelloRomo.debug.xcconfig */;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 52RU2XXUH6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/HelloRomo/frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HelloRomo/HelloRomo-Prefix.pch";
+				INFOPLIST_FILE = "HelloRomo/HelloRomo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		942AC6A516E81A520062CA8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4AC6670567655AA729EAD72 /* Pods-HelloRomo.release.xcconfig */;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 52RU2XXUH6;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/HelloRomo/frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HelloRomo/HelloRomo-Prefix.pch";
+				INFOPLIST_FILE = "HelloRomo/HelloRomo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		942AC67B16E81A520062CA8A /* Build configuration list for PBXProject "HelloRomo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				942AC6A116E81A520062CA8A /* Debug */,
+				942AC6A216E81A520062CA8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		942AC6A316E81A520062CA8A /* Build configuration list for PBXNativeTarget "HelloRomo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				942AC6A416E81A520062CA8A /* Debug */,
+				942AC6A516E81A520062CA8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 942AC67816E81A520062CA8A /* Project object */;
+}

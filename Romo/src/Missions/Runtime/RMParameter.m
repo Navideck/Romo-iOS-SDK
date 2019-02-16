@@ -4,7 +4,7 @@
 //
 
 #import "RMParameter.h"
-#import <RMCharacter/RMCharacter.h>
+#import <Romo/RMCharacter.h>
 #import "RMProgressManager.h"
 #import "RMFaceActionView.h"
 #import "RMDoodle.h"

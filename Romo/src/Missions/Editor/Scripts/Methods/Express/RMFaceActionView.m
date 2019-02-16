@@ -5,11 +5,11 @@
 
 #import "RMFaceActionView.h"
 #import <QuartzCore/QuartzCore.h>
-#import <RMCharacter/RMCharacter.h>
+#import <Romo/RMCharacter.h>
 #import "UIView+Additions.h"
 #import "UIFont+RMFont.h"
 #import "RMProgressManager.h"
-#import <RMShared/RMMath.h>
+#import <Romo/RMMath.h>
 
 #define faceOptionTagUnlocked 1
 #define faceOptionTagLocked   -1

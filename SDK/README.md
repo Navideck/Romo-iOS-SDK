@@ -60,7 +60,7 @@ Now that we have a project that uses the Romotive SDK, it's time to start writin
 
 1. Import the frameworks
 
-        #import <RMCore/RMCore.h>
+        #import <Romo/RMCore.h>
 
 2. Implement the RMCoreDelegate interface
 

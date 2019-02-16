@@ -4,7 +4,7 @@
 //
 
 #import "RMMessage.h"
-#import <RMCharacter/RMCharacter.h>
+#import <Romo/RMCharacter.h>
 #import "RMJoystick.h"
 #import "RMTankSlider.h"
 #import "RMDpad.h"

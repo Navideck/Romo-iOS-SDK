@@ -7,7 +7,7 @@
 //
 
 #import "RMRobotController.h"
-#import <RMVision/RMVisionObjectTrackingModule.h>
+#import <Romo/RMVisionObjectTrackingModule.h>
 
 @class RMVisionTrainingData;
 

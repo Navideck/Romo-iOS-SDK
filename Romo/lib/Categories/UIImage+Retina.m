@@ -4,7 +4,8 @@
 //
 
 #import "UIImage+Retina.h"
-#import <RMShared/UIDevice+Hardware.h>
+#import <Romo/UIDevice+Romo.h>
+
 
 @implementation UIImage (Retina)
 

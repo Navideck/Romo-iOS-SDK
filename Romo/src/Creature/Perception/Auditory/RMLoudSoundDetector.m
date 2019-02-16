@@ -6,8 +6,8 @@
 #import "RMLoudSoundDetector.h"
 #import "RMRealtimeAudio.h"
 #import <UIKit/UIKit.h>
-#import <RMShared/RMDispatchTimer.h>
-#import <RMCharacter/RMCharacter.h>
+#import <Romo/RMDispatchTimer.h>
+#import <Romo/RMCharacter.h>
 #import "RMSoundEffect.h"
 
 #ifdef SOUND_DEBUG

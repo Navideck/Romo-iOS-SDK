@@ -10,11 +10,11 @@
 #import "RMLineView.h"
 #import "UIButton+RMButtons.h"
 
-#import <RMVision/RMVisionDebugBroker.h>
-#import <RMVision/RMImageUtils.h>
+#import <Romo/RMVisionDebugBroker.h>
+#import <Romo/RMImageUtils.h>
 
-#import <RMShared/RMMath.h>
-#import <RMShared/UIDevice+Hardware.h>
+#import <Romo/RMMath.h>
+#import <Romo/UIDevice+Hardware.h>
 
 typedef enum {
     RMLineFollowState_Streaming,

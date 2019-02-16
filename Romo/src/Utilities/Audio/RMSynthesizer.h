@@ -8,7 +8,7 @@
 #import <Foundation/Foundation.h>
 #import <AudioToolbox/AudioToolbox.h>
 
-#import <RMShared/RMDispatchTimer.h>
+#import <Romo/RMDispatchTimer.h>
 
 #import "RMRealtimeAudio.h"
 #import "RMMusicConstants.h"

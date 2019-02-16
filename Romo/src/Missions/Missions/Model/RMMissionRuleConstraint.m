@@ -4,7 +4,7 @@
 //
 
 #import "RMMissionRuleConstraint.h"
-#import <RMCharacter/RMCharacter.h>
+#import <Romo/RMCharacter.h>
 #import "RMMissionRuleValue.h"
 #import "RMAction.h"
 #import "RMDoodle.h"

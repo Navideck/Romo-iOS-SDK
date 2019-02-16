@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Romotive. All rights reserved.
 //
 #import "RMSynthesizer.h"
-
-#import <RMShared/RMMath.h>
-#import <RMShared/UIDevice+Hardware.h>
+#import <Romo/RMMath.h>
+#import <Romo/UIDevice+Romo.h>
+#import "UIDevice+Temporary.h"
 
 #ifdef SOUND_DEBUG
 #define LOG(...) DDLogWarn(__VA_ARGS__)

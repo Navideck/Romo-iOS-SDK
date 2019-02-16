@@ -4,8 +4,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <RMCore/RMCore.h>
-#import <RMVision/RMVision.h>
+#import <Romo/RMCore.h>
+#import <Romo/RMVision.h>
 
 @class RMAction;
 @class RMRomo;

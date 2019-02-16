@@ -9,7 +9,7 @@
 #import "UIFont+RMFont.h"
 #import "UIImage+Tint.h"
 #import "UIColor+RMColor.h"
-#import <RMShared/RMMath.h>
+#import <Romo/RMMath.h>
 #import "RMMission.h"
 #import "RMEventsView.h"
 #import "RMActionView.h"

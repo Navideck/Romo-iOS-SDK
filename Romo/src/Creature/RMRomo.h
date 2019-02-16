@@ -4,9 +4,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <RMCharacter/RMCharacter.h>
-#import <RMCore/RMCore.h>
-#import <RMVision/RMVision.h>
+#import <Romo/RMCharacter.h>
+#import <Romo/RMCore.h>
+#import <Romo/RMVision.h>
 #import "RMEquilibrioception.h"
 #import "RMLoudSoundDetector.h"
 #import "RMRomotion.h"

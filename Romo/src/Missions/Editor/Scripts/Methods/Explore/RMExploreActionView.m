@@ -5,8 +5,8 @@
 
 #import "RMExploreActionView.h"
 #import "UIView+Additions.h"
-#import <RMShared/RMDispatchTimer.h>
-#import <RMShared/RMMath.h>
+#import <Romo/RMDispatchTimer.h>
+#import <Romo/RMMath.h>
 
 @interface RMExploreActionView ()
 

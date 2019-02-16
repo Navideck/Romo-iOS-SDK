@@ -6,8 +6,8 @@
 #import "RMActionRunner.h"
 #import <MediaPlayer/MediaPlayer.h>
 #import <AVFoundation/AVFoundation.h>
-#import <RMVision/RMVision.h>
-#import <RMShared/RMMath.h>
+#import <Romo/RMVision.h>
+#import <Romo/RMMath.h>
 #import "RMAction.h"
 #import "RMRomo.h"
 #import "RMActionRuntime.h"

@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import <RMVision/RMVision.h>
-#import <RMCore/RMCore.h>
+#import <Romo/RMVision.h>
+#import <Romo/RMCore.h>
 #import "RMVoice.h"
 #import "RMRomo.h"
 

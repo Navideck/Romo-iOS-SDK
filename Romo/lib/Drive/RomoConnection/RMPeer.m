@@ -5,7 +5,7 @@
 //
 
 #import "RMPeer.h"
-#import <RMShared/UIDevice+UDID.h>
+#import <Romo/UIDevice+UDID.h>
 #import "RMAddress.h"
 
 #pragma mark - Constants

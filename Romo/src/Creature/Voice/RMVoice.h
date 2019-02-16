@@ -5,7 +5,7 @@
 
 #import <UIKit/UIKit.h>
 #ifndef ROMO_CONTROL_APP
-#import <RMCharacter/RMCharacter.h>
+#import <Romo/RMCharacter.h>
 #endif
 
 // Defines how each line's size should be
