@@ -2,7 +2,7 @@
 <a href="https://www.patreon.com/bePatron?u=5127277" target="_blank"><img alt="become a patron" src="https://c5.patreon.com/external/logo/become_a_patron_button.png" height="35px"></a>
 
 <p align="center">
-<img src="https://github.com/navideck/Romo-X/raw/master/Assets.xcassets/Missions/Editor/Actions/Turn/romoTurn28%401x.imageset/romoTurn28%401x.png"/>
+<img src="https://raw.githubusercontent.com/Navideck/Romo-X/master/Assets.xcassets/Missions/Editor/Actions/Turn/romoTurn28%401x.imageset/romoTurn28%401x.png"/>
 </p>
 
 <p align="center" >
