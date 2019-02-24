@@ -125,7 +125,6 @@
 				F9BCDBFA8EEC4B162D940621 /* Pods-HelloRMCharacter.debug.xcconfig */,
 				A557D5962CD1EB4FFAA58470 /* Pods-HelloRMCharacter.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -202,15 +201,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-HelloRMCharacter/Pods-HelloRMCharacter-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/Romo/RMCharacter.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RMCharacter.bundle",
 			);
@@ -224,15 +219,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-HelloRMCharacter-checkManifestLockResult.txt",
 			);
@@ -371,7 +362,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HelloRMCharacter/HelloRMCharacter-Prefix.pch";
 				INFOPLIST_FILE = "HelloRMCharacter/HelloRMCharacter-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Romotive.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -390,7 +381,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HelloRMCharacter/HelloRMCharacter-Prefix.pch";
 				INFOPLIST_FILE = "HelloRMCharacter/HelloRMCharacter-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Romotive.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

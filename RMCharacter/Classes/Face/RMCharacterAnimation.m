@@ -5,6 +5,7 @@
 #import "RMCharacterAnimation.h"
 #import "RMCharacter.h"
 #import <Romo/RMMath.h>
+#import <Romo/UIImage+Retina.h>
 
 typedef void (^BoolBlock)(BOOL);
 
