@@ -21,8 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (BOOL)isDockableTelepresenceDevice;
 - (BOOL)isTelepresenceController;
 - (BOOL)hasLightningConnector;
-- (BOOL)isIphoneThreeOrOlder;
-- (BOOL)hasRetinaDisplay;
+- (BOOL)usesRetinaGraphics;
+- (BOOL)isShortiPod;
 
 @end
 

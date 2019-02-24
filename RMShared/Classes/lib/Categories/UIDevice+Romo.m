@@ -13,31 +13,6 @@
 
 @implementation UIDevice (Romo)
 
-#pragma mark sysctlbyname utils
-- (NSString *)getSysInfoByName:(char *)typeSpecifier
-{
-    size_t size;
-    sysctlbyname(typeSpecifier, NULL, &size, NULL, 0);
-
-    char *answer = malloc(size);
-    sysctlbyname(typeSpecifier, answer, &size, NULL, 0);
-
-    NSString *results = [NSString stringWithCString:answer encoding: NSUTF8StringEncoding];
-
-    free(answer);
-    return results;
-}
-
-#pragma mark sysctl utils
-- (NSUInteger)getSysInfo:(uint)typeSpecifier
-{
-    size_t size = sizeof(int);
-    int results;
-    int mib[2] = {CTL_HW, typeSpecifier};
-    sysctl(mib, 2, &results, &size, NULL, 0);
-    return (NSUInteger) results;
-}
-
 - (BOOL)isiPhone4OrOlder
 {
     static BOOL flag = YES;
@@ -47,7 +22,7 @@
         flag = NO;
 
         BOOL isIphone = [self deviceFamily] == UIDeviceFamilyiPhone;
-        NSPredicate *iphoneTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", @"iPhone^(0|1|2|3)$.*"];
+        NSPredicate *iphoneTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", @"iPhone[0-3],.*"];
         BOOL isThreeOrOld = [iphoneTest evaluateWithObject:[self modelIdentifier]];
         isiPhone4OrOlder = isIphone && isThreeOrOld;
     }
@@ -63,7 +38,7 @@
         flag = NO;
 
         BOOL isIpad = [self deviceFamily] == UIDeviceFamilyiPad;
-        NSPredicate *ipadTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", @"iPad^(0|1)$.*"];
+        NSPredicate *ipadTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", @"iPad[0-1],.*"];
         BOOL isOneOrOld = [ipadTest evaluateWithObject:[self modelIdentifier]];
         isiPadOneOrOlder = isIpad && isOneOrOld;
     }
@@ -79,7 +54,7 @@
         flag = NO;
 
         BOOL isIpad = [self deviceFamily] == UIDeviceFamilyiPad;
-        NSPredicate *ipadTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", @"iPad^(0|1|2|3)$.*"];
+        NSPredicate *ipadTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", @"iPad[0-3],.*"];
         BOOL isThreeOrOlder = [ipadTest evaluateWithObject:[self modelIdentifier]];
         isiPadThreeOrOlder = isIpad && isThreeOrOlder;
     }
@@ -95,7 +70,7 @@
         flag = NO;
 
         BOOL isiPhone = [self deviceFamily] == UIDeviceFamilyiPhone;
-        NSPredicate *iphoneTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", @"iPhone^(0|1|2|3|4)$.*"];
+        NSPredicate *iphoneTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", @"iPhone[0-4],.*"];
         BOOL is4SOrOlder = [iphoneTest evaluateWithObject:[self modelIdentifier]];
         isiPhone4SOrOlder = isiPhone && is4SOrOlder;
     }
@@ -111,7 +86,7 @@
         flag = NO;
 
         BOOL isIpod = [self deviceFamily] == UIDeviceFamilyiPod;
-        NSPredicate *ipodTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", @"iPod^(0|1|2|3|4)$.*"];
+        NSPredicate *ipodTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", @"iPod[0-4],.*"];
         BOOL is4OrOlder = [ipodTest evaluateWithObject:[self modelIdentifier]];
         isiPod4OrOlder = isIpod && is4OrOlder;
     }
@@ -155,7 +130,7 @@
 
     if (flag) {
         flag = NO;
-        BOOL isRetinaiPad = (([self deviceFamily] == UIDeviceFamilyiPad) && [self hasRetinaDisplay]);
+        BOOL isRetinaiPad = (([self deviceFamily] == UIDeviceFamilyiPad) && [UIDevice currentDevice].usesRetinaGraphics);
         BOOL isTelepresencePhoneOrPod = [self isDockableTelepresenceDevice];
         usesRetina = isRetinaiPad || isTelepresencePhoneOrPod;
     }
@@ -177,18 +152,24 @@
     return hasLightningConnector;
 }
 
-- (BOOL)isIphoneThreeOrOlder
-{
-    BOOL isIphone = [self deviceFamily] == UIDeviceFamilyiPhone;
-    NSPredicate *iphoneTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", @"iPhone^(0|1|2|3)$.*"];
-    BOOL isThreeOrOld = [iphoneTest evaluateWithObject:[self modelIdentifier]];
-
-    return isIphone && isThreeOrOld;
-}
-
-- (BOOL)hasRetinaDisplay
+- (BOOL)usesRetinaGraphics
 {
     return ([UIScreen mainScreen].scale == 2.0f);
+}
+
+- (BOOL)isShortiPod
+{
+    static BOOL flag = YES;
+    static BOOL isShortiPod = NO;
+
+    if (flag) {
+        flag = NO;
+
+        BOOL isiPod = self.deviceFamily == UIDeviceFamilyiPod;
+        BOOL isShort = [[UIScreen mainScreen] bounds].size.height < 500;
+        isShortiPod = isiPod && isShort;
+    }
+    return isShortiPod;
 }
 
 @end
