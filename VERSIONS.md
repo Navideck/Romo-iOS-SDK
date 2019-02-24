@@ -2,6 +2,18 @@
 ---
 ## Version History
 
+### 0.3 (Public Beta)
+#### New in this version
+- **RMShared**: Duplicated logic from **RMCharacted** was moved to RMShared
+- **RMCharacter**: Duplicated logic was moved to **RMShared**
+- **RMCharacter**: Assets for all scales are generated
+- **RMCharacter**: All assets were moved in an Asset Catalog
+- **RMCharacter**: Reduce assets size
+
+#### Fixed in this version
+- **RMCore**: Fixed a threading issue that was causing robots to spin indefinitely
+- **RMCore** and **RMCharacterDelegate**: Naming conventions updated to align closer with Apple’s standards
+
 ### 0.2 (Public Beta)
 #### New in this version
 - **RMCore**: Robots post NSNotifications on connect and disconnect
