@@ -2,11 +2,11 @@
 <a href="https://www.patreon.com/bePatron?u=5127277" target="_blank"><img alt="become a patron" src="https://c5.patreon.com/external/logo/become_a_patron_button.png" height="35px"></a>
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/Navideck/Romo-X/master/Assets.xcassets/Missions/Editor/Actions/Turn/romoTurn28%401x.imageset/romoTurn28%401x.png"/>
+<img src="https://raw.githubusercontent.com/Navideck/Romo-X/master/Assets.xcassets/Missions/Editor/Actions/Turn/romoTurn28.imageset/romoTurn28%401x.png"/>
 </p>
 
 <p align="center" >
-<img src="https://img.shields.io/badge/platform-iOS%206,%207,%208,%209,%2010,%2011,%2012-blue.svg" alt="Platform: iOS 6, 7, 8, 9, 10, 11, 12" /> <img src="https://img.shields.io/gitter/room/nwjs/nw.js.svg" alt="chat on gitter" /></p>
+<img src="https://img.shields.io/badge/platform-iOS%206,%207,%208,%209,%2010,%2011,%2012-blue.svg" alt="Platform: iOS 6, 7, 8, 9, 10, 11, 12" /></p>
 
 Romo SDK gives you the power to write your own software for Romo robots. After downloading the SDK, this guide will help you get rolling so you can start developing apps for Romo.
 
@@ -231,6 +231,9 @@ Find the *Romo X* app on the [App Store](https://itunes.apple.com/us/app/romo-x/
 ### Is the Romo App open source?
 Find the *Romo X* app source code [here](https://github.com/Navideck/Romo-X)
 
+### Is firmware source code available?
+Find Romo's firmware source code [here](https://github.com/Navideck/Romo-Firmware)
+
 ### Where can I buy a Romo robot?
 There seems to be plenty of stock in online stores.
 
@@ -250,6 +253,7 @@ Romotive, the company behind Romo, after shutting down were kind enough to open 
 Issues and pull requests are always welcome!
 
 ## Patrons
+* Ryan Oksenhorn
 * Matt Duston
 * Suschman
 * Bruce Ownbey
