@@ -8,7 +8,7 @@
 @interface UIImage (Retina)
 
 /** Returns "name@1x.png" non-Retina version, always */
-+ (UIImage *)nonRetinaImageNamed:(NSString *)name;
+//+ (UIImage *)nonRetinaImageNamed:(NSString *)name;
 
 /** 
  If the device can't support Retina (either non-Retina display or weak device, according to [UIDevice+Romo usesRetinaGraphics]),

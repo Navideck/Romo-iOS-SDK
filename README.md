@@ -44,7 +44,7 @@ A complete `PodFile` with all frameworks would look like this:
 
 ```
 # Uncomment the next line to define a global platform for your project
-platform :ios, '6.0'
+platform :ios, '7.0'
 
 target 'My Cool Romo App' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks

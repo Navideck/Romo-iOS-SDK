@@ -120,38 +120,19 @@ DDLOG_ENABLE_DYNAMIC_LEVELS
     NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://%@?t=%.0f", [self serverURL], time]];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
 
-    if (@available(iOS 7.0, *)) {
-        NSURLSession *session = [[NSURLSession alloc] init];
-        [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-            if (error) {
-                if ([self.delegate respondsToSelector:@selector(webSocket:didReceiveError:)]) {
-                    [self.delegate webSocket:self didReceiveError:error];
-                }
-
-                self.state = RMWebSocketStateDisconnected;
-            } else {
-                NSString *token = [self webSocketHandshakeTokenFromData:data];
-                [self openWebSocketConnectionWithToken:token];
+    NSURLSession *session = [[NSURLSession alloc] init];
+    [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if (error) {
+            if ([self.delegate respondsToSelector:@selector(webSocket:didReceiveError:)]) {
+                [self.delegate webSocket:self didReceiveError:error];
             }
-        }];
-    } else {
-        // Fallback on earlier versions
-        [NSURLConnection
-         sendAsynchronousRequest:request
-         queue:[NSOperationQueue mainQueue]
-         completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-             if (connectionError) {
-                 if ([self.delegate respondsToSelector:@selector(webSocket:didReceiveError:)]) {
-                     [self.delegate webSocket:self didReceiveError:connectionError];
-                 }
 
-                 self.state = RMWebSocketStateDisconnected;
-             } else {
-                 NSString *token = [self webSocketHandshakeTokenFromData:data];
-                 [self openWebSocketConnectionWithToken:token];
-             }
-         }];
-    }
+            self.state = RMWebSocketStateDisconnected;
+        } else {
+            NSString *token = [self webSocketHandshakeTokenFromData:data];
+            [self openWebSocketConnectionWithToken:token];
+        }
+    }];
 }
 
 - (void)openWebSocketConnectionWithToken:(NSString *)token

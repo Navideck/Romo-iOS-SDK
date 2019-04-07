@@ -579,29 +579,11 @@ NSString *const RMVisionModule_GPUImageExample  = @"GPUImageExample";
 
 //------------------------------------------------------------------------------
 -(void)applyNewFrameRate:(int)frameRate
-{
-    NSError *error;
-    
-    if ( [self.device lockForConfiguration:&error] ) {
-        if (@available(iOS 7.0, *)) {
-            [self.device setActiveVideoMinFrameDuration:CMTimeMake(1, frameRate)];
-            [self.device setActiveVideoMaxFrameDuration:CMTimeMake(1, frameRate)];
-        } else {
-            // Fallback on earlier versions
-            for (AVCaptureConnection *connection in self.videoOutput.connections) {
-                if (connection.supportsVideoMinFrameDuration) {
-                    connection.videoMinFrameDuration = CMTimeMake(1, frameRate);
-                }
+{   
+    [self.device setActiveVideoMinFrameDuration:CMTimeMake(1, frameRate)];
+    [self.device setActiveVideoMaxFrameDuration:CMTimeMake(1, frameRate)];
+    [self.device unlockForConfiguration];
 
-                if (connection.supportsVideoMaxFrameDuration) {
-                    connection.videoMaxFrameDuration = CMTimeMake(1, frameRate);
-                }
-            }
-        }
-        [self.device unlockForConfiguration];
-    } else {
-        NSLog(@"Error: %@", error);
-    }
 }
 
 //------------------------------------------------------------------------------
