@@ -28,17 +28,17 @@ You have multiple options:
 ### Using CocoaPods
 The most easy way to include the Romo SDK in your app is using CocoaPods:
 
-    `pod 'Romo'`
+    pod 'Romo'
     
 Note that this will get you only `RMCore`. 
 
 If you additionally need `RMCharacter` add
 
-    `pod 'Romo/RMCharacter'`
+    pod 'Romo/RMCharacter'
 
 If you additionally need `RMVision` add
 
-    `pod 'Romo/RMVision'`
+    pod 'Romo/RMVision'
 
 A complete `PodFile` with all frameworks would look like this:
 
