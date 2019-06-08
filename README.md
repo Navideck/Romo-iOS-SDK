@@ -35,10 +35,12 @@ Note that this will get you only `RMCore`.
 If you additionally need `RMCharacter` add
 
     pod 'Romo/RMCharacter'
+Make sure to **comment out** `use_frameworks!` as you will face missing assets otherwise.
 
 If you additionally need `RMVision` add
 
     pod 'Romo/RMVision'
+Make sure to **comment out** `use_frameworks!` as you will face missing assets otherwise.
 
 A complete `PodFile` with all frameworks would look like this:
 
