@@ -203,7 +203,7 @@ typedef void (^BoolBlock)(BOOL);
         _crops = [NSMutableArray arrayWithCapacity:3];
         _frameCount = 0;
         while (1) {
-            RMCharacterImage* sprite = (RMCharacterImage *)[RMCharacterImage smartImageNamed:[NSString stringWithFormat:@"%@_%d",prefix,index]];
+            UIImage* sprite = [RMCharacterImage smartImageNamed:[NSString stringWithFormat:@"%@_%d",prefix,index]];
             if (sprite) {
                 NSString* cropFile = [NSString stringWithFormat:@"%@_%d",prefix,index];
                 
