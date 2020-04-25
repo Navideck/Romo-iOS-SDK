@@ -180,7 +180,7 @@ static const float kVerifySendRate = 0.1; // 10Hz loop rate for verifying connec
 
 - (void)applicationDidEnterBackground:(NSNotification *)notification
 {
-    if (self.session) {
+    if (self.session && !self.allowBackground) {
         self.shuttingDown = YES;
         [self accessoryDidDisconnect];
     }

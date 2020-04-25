@@ -51,6 +51,8 @@ typedef enum {
 @property (nonatomic, readonly) NSString *firmwareVersion;
 @property (nonatomic, readonly) NSString *hardwareVersion;
 @property (nonatomic, readonly) NSString *bootloaderVersion;
+@property (nonatomic) BOOL allowBackground;
+
 
 /**
  Called when the transport will be closing the session

@@ -68,6 +68,10 @@
  */
 + (NSArray *_Nullable)connectedRobots;
 
+/**
+ A method for defining wether Romo is allowed to stay connected while the app enters the background
+ */
++ (void)allowBackground:(BOOL)isBackgroundAllowed;
 
 /**
  To be used exclusively for development. It simulates the connection of a

@@ -70,6 +70,13 @@ void handleSigPipe(void);
     return instance.delegate;
 }
 
++ (void)allowBackground:(BOOL)isBackgroundAllowed
+{
+    if (instance) {
+        instance.transport.allowBackground = isBackgroundAllowed;
+    }
+}
+
 + (void)connectToSimulatedRobot
 {
     [instance robotDidConnect:@"SimulatedRomo"];
