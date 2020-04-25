@@ -52,21 +52,22 @@
  The delegate to which RMCore will send all events regarding robot
  connection and disconnection.
  */
-+ (void)setDelegate:(id<RMCoreDelegate>)delegate;
++ (void)setDelegate:(id<RMCoreDelegate>_Nonnull)delegate;
 
 /**
  A method for getting the delegate.
  
  @return RMCore's class-level delegate.
  */
-+ (id<RMCoreDelegate>)delegate;
++ (id<RMCoreDelegate>_Nullable)delegate;
 
 /**
  A method for getting a list of the currently connected robots.
  
  @return An array of the currently connected robots.
  */
-+ (NSArray *)connectedRobots;
++ (NSArray *_Nullable)connectedRobots;
+
 
 /**
  To be used exclusively for development. It simulates the connection of a
@@ -88,22 +89,22 @@
 /**
  Delegate method that is triggered when the iDevice is connected to a robot.
  */
-- (void)robotDidConnect:(RMCoreRobot *)robot;
+- (void)robotDidConnect:(nonnull RMCoreRobot *)robot;
 
 /**
  Delegate method that is triggered when the iDevice is disconnected from a
  robot.
  */
-- (void)robotDidDisconnect:(RMCoreRobot *)robot;
+- (void)robotDidDisconnect:(nonnull RMCoreRobot *)robot;
 
 @end
 
 /**
  NSNotification posted from a robot, when the robot disconnects.
  */
-extern NSString *const RMCoreRobotDidConnectNotification;
+extern NSString * _Nonnull const RMCoreRobotDidConnectNotification;
 
 /**
  NSNotification posted from a robot, when the robot disconnects.
  */
-extern NSString *const RMCoreRobotDidDisconnectNotification;
+extern NSString * _Nonnull const RMCoreRobotDidDisconnectNotification;
