@@ -289,6 +289,9 @@ Control your Romo's hardware through driving its motors and LEDs.
 
 This simple application presents three buttons on the screen when the iDevice is docked on a robot. Two of these buttons tilt the robot's head up and down when tapped. The third button tells the robot to drive in a circle and blink its LED.
 
+### HelloRMCoreSwift
+Same as HelloRMCore but in Swift
+
 ### HelloRMCharacter
 Cycle through Romo's expressions and emotions, and see how he can look around.
 

@@ -187,7 +187,7 @@
     // If we aren't connected to a robotic base, just show a label
     if (!self.unconnectedView) {
         self.unconnectedView = [[UIView alloc] initWithFrame:self.view.bounds];
-        self.unconnectedView.backgroundColor = [UIColor whiteColor];
+        self.unconnectedView.backgroundColor = [UIColor blackColor];
         
         UILabel *notConnectedLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, self.view.center.y, self.view.frame.size.width, 40)];
         notConnectedLabel.textAlignment = NSTextAlignmentCenter;

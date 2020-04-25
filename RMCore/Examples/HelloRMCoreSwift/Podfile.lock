@@ -1,0 +1,38 @@
+PODS:
+  - CocoaLumberjack (3.4.2):
+    - CocoaLumberjack/Default (= 3.4.2)
+    - CocoaLumberjack/Extensions (= 3.4.2)
+  - CocoaLumberjack/Default (3.4.2)
+  - CocoaLumberjack/Extensions (3.4.2):
+    - CocoaLumberjack/Default
+  - Romo (0.3.2):
+    - Romo/RMCore (= 0.3.2)
+  - Romo/RMCore (0.3.2):
+    - Romo/RMShared
+  - Romo/RMShared (0.3.2):
+    - CocoaLumberjack
+    - SocketRocket
+  - SocketRocket (0.5.1)
+
+DEPENDENCIES:
+  - CocoaLumberjack
+  - Romo (from `../../..`)
+  - Romo/RMCore (from `../../..`)
+
+SPEC REPOS:
+  trunk:
+    - CocoaLumberjack
+    - SocketRocket
+
+EXTERNAL SOURCES:
+  Romo:
+    :path: "../../.."
+
+SPEC CHECKSUMS:
+  CocoaLumberjack: db7cc9e464771f12054c22ff6947c5a58d43a0fd
+  Romo: dbcd468688a9b5f4c811c9535cb1b832d6454bf2
+  SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
+
+PODFILE CHECKSUM: 70b913e09c8dfdbe0945a7cb2a518bf4d04cfea7
+
+COCOAPODS: 1.9.1
