@@ -83,7 +83,7 @@ Now that we have a project that uses the Romo SDK, it's time to start writing so
 
 #### If you're using RMCore, you'll want to do the following...
 
-1. Import the frameworks
+1. Import the RMCore framework
 
        #import <Romo/RMCore.h>
 
@@ -101,7 +101,7 @@ Now that we have a project that uses the Romo SDK, it's time to start writing so
     
 5. Implement a connection delegate (triggered when a robot is connected).
 
-       - (void)didConnectToRobot:(RMCoreRobot *)robot
+       - (void)robotDidConnect:(nonnull RMCoreRobot *)robot
        {  
            // Currently the only kind of robot is Romo3, so this is just future-proofing
            if (robot.isDrivable && robot.isHeadTiltable && robot.isLEDEquipped) {
@@ -111,7 +111,7 @@ Now that we have a project that uses the Romo SDK, it's time to start writing so
     
 6. Implement disconnection delegate (triggered when a robot is disconnected).
 
-       - (void)didDisconnectFromRobot:(RMCoreRobot *)robot
+       - (void)robotDidDisconnect:(nonnull RMCoreRobot *)robot
        {
            if (robot == self.robot) {
                self.robot = nil;
@@ -152,6 +152,75 @@ Now you're ready to send the robot commands. Here are some examples:
 - Tell all motors to stop.
 
       [self.robot stopAllMotion];
+
+### For using RMCharacter with Swift...
+
+1. Create a bridging header for your project and in that file import the RMCore framework
+
+       #import <Romo/RMCore.h>
+
+2. Implement the RMCoreDelegate protocol
+
+       class ViewController: UIViewController, RMCoreDelegate {
+
+3. Add a property for the robot, with the protocols you'd like to use (here we're specifying that our robot can tilt its head, drive, and use an LED)
+        
+       var robot: RMCoreRobotRomo3?
+
+4. Initialize your delegacy to the robot (often in viewDidLoad).
+    
+       RMCore.setDelegate(self)
+    
+5. Implement a connection delegate (triggered when a robot is connected).
+
+        func robotDidConnect(_ robot: RMCoreRobot) 
+        {
+            // Currently the only kind of robot is Romo3, so this is just future-proofing
+            if robot.isDrivable && robot.isHeadTiltable && robot.isLEDEquipped {
+                self.robot = robot as? RMCoreRobotRomo3
+            }
+        }
+    
+6. Implement disconnection delegate (triggered when a robot is disconnected).
+
+        func robotDidDisconnect(_ robot: RMCoreRobot) {
+            print("Disconnected")
+            if robot == self.robot {
+                self.robot = nil
+            }
+        }
+    
+Now you're ready to send the robot commands. Here are some examples:
+                            
+- Tell the LED to blink every 1 second (where the LED will be on 40% of every second).
+
+        robot?.leds.blink(withPeriod: 1.0, dutyCycle: 0.4)
+    
+- Tell the base to tilt the phone to a specific angle in degrees (here, it's 110).
+
+        robot?.tilt(toAngle: 110, completion: { success in
+            if (success) {
+                print("Successfully tilted")
+            } else {
+                print("Couldn't tilt to the desired angle")
+            }
+        })
+    
+- Tell the base to move forward at approximately 1 meter/second.
+
+      let RM_DRIVE_RADIUS_STRAIGHT: Float = 9999
+        robot?.drive(withRadius: RM_DRIVE_RADIUS_STRAIGHT, speed: 1.0)
+       
+- Tell the robot to turn 90 degrees counter-clockwise.
+
+      let RM_DRIVE_RADIUS_TURN_IN_PLACE: Float = 9999
+        robot?.turn(byAngle: 90.0, withRadius: RM_DRIVE_RADIUS_TURN_IN_PLACE, completion: { (success, heading) in
+            print("Finished! Ended up at heading: %f", heading)
+        })
+        
+- Tell all motors to stop.
+
+      robot?.stopAllMotion()
 
 #### For using RMCharacter, a good start would be...
 
