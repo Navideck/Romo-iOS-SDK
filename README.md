@@ -27,24 +27,29 @@ Control Romo's hardware using your own apps! Using **RMCore**, you can drive all
 You have multiple options:
 ### Using CocoaPods
 The most easy way to include the Romo SDK in your app is using CocoaPods:
+```ruby
+pod 'Romo'
+```
 
-    pod 'Romo'
-    
 Note that this will get you only `RMCore`. 
 
 If you additionally need `RMCharacter` add
+```ruby
+pod 'Romo/RMCharacter'
+```
 
-    pod 'Romo/RMCharacter'
 Make sure to **comment out** `use_frameworks!` as you will face missing assets otherwise.
 
 If you additionally need `RMVision` add
+```ruby
+pod 'Romo/RMVision'
+```
 
-    pod 'Romo/RMVision'
 Make sure to **comment out** `use_frameworks!` as you will face missing assets otherwise.
 
 A complete `PodFile` with all frameworks would look like this:
 
-```
+```ruby
 # Uncomment the next line to define a global platform for your project
 platform :ios, '7.0'
 
@@ -81,206 +86,221 @@ Although not tested yet, the basic folder structure for Carthage is in place so 
 ## Getting started
 Now that we have a project that uses the Romo SDK, it's time to start writing some code!
 
-#### If you're using RMCore, you'll want to do the following...
+#### If you're using RMCore with ObjC, you'll want to do the following...
 
 1. Import the RMCore framework
-
-       #import <Romo/RMCore.h>
+```Objc
+#import <Romo/RMCore.h>
+```
 
 2. Implement the RMCoreDelegate interface
-
-       @interface YourVC : UIViewController <RMCoreDelegate>
+```Objc
+@interface YourVC : UIViewController <RMCoreDelegate>
+```
 
 3. Add a property for the robot, with the protocols you'd like to use (here we're specifying that our robot can tilt its head, drive, and use an LED)
-        
-       @property (nonatomic, strong) RMCoreRobot<HeadTiltProtocol, DriveProtocol, LEDProtocol> *robot;
+```Objc     
+@property (nonatomic, strong) RMCoreRobot<HeadTiltProtocol, DriveProtocol, LEDProtocol> *robot;
+```
 
 4. Initialize your delegacy to the robot (often in viewDidLoad).
-    
-       [RMCore setDelegate:self];
-    
-5. Implement a connection delegate (triggered when a robot is connected).
+```Objc
+[RMCore setDelegate:self];
+```
 
-       - (void)robotDidConnect:(nonnull RMCoreRobot *)robot
-       {  
-           // Currently the only kind of robot is Romo3, so this is just future-proofing
-           if (robot.isDrivable && robot.isHeadTiltable && robot.isLEDEquipped) {
-               self.robot = (RMCoreRobot<HeadTiltProtocol, DriveProtocol, LEDProtocol> *) robot;
-           }
-       }
+5. Implement a connection delegate (triggered when a robot is connected).
+```Objc
+- (void)robotDidConnect:(nonnull RMCoreRobot *)robot
+{  
+    // Currently the only kind of robot is Romo3, so this is just future-proofing
+    if (robot.isDrivable && robot.isHeadTiltable && robot.isLEDEquipped) {
+        self.robot = (RMCoreRobot<HeadTiltProtocol, DriveProtocol, LEDProtocol> *) robot;
+    }
+}
+```
     
 6. Implement disconnection delegate (triggered when a robot is disconnected).
+```Objc
+- (void)robotDidDisconnect:(nonnull RMCoreRobot *)robot
+{
+    if (robot == self.robot) {
+        self.robot = nil;
+    }
+}
+```
 
-       - (void)robotDidDisconnect:(nonnull RMCoreRobot *)robot
-       {
-           if (robot == self.robot) {
-               self.robot = nil;
-           }
-       }
-    
 Now you're ready to send the robot commands. Here are some examples:
                             
 - Tell the LED to blink every 1 second (where the LED will be on 40% of every second).
-
-      [self.robot.LEDs blinkWithPeriod:1.0 
-                              dutyCycle:.4];
-    
+```Objc
+[self.robot.LEDs blinkWithPeriod:1.0 dutyCycle:.4];
+```
 - Tell the base to tilt the phone to a specific angle in degrees (here, it's 110).
-
-      [self.robot tiltToAngle:110
-                   completion:^(BOOL success) {
-                       if (success) {
-                           NSLog(@"Successfully tilted");
-                       } else {
-                           NSLog(@"Couldn't tilt to the desired angle");
-                       }
-                   }];
-    
+```Objc
+[self.robot tiltToAngle:110 completion:^(BOOL success)
+{
+    if (success) {
+        NSLog(@"Successfully tilted");
+    } else {
+        NSLog(@"Couldn't tilt to the desired angle");
+    }
+}];
+```
 - Tell the base to move forward at approximately 1 meter/second.
-
-      [self.robot driveWithRadius:RM_DRIVE_RADIUS_STRAIGHT
-                            speed:1.0];
-       
+```Objc
+[self.robot driveWithRadius:RM_DRIVE_RADIUS_STRAIGHT speed:1.0];
+```
 - Tell the robot to turn 90 degrees counter-clockwise.
+```Objc
+[self.robot turnByAngle:90.0
+    withRadius:RM_DRIVE_RADIUS_TURN_IN_PLACE
+    completion:^(float heading) {
+        NSLog(@"Finished! Ended up at heading: %f", heading);
+    }
+];
+```
 
-      [self.robot turnByAngle:90.0
-                   withRadius:RM_DRIVE_RADIUS_TURN_IN_PLACE
-                   completion:^(float heading) {
-                       NSLog(@"Finished! Ended up at heading: %f", heading);
-                   }];
-        
 - Tell all motors to stop.
-
-      [self.robot stopAllMotion];
+```Objc
+[self.robot stopAllMotion];
+```
 
 - Allow the robot to be connected when app goes in background.
+```Objc
+[RMCore allowBackground:YES];
+```
 
-      [RMCore allowBackground:YES];
-
-### For using RMCharacter with Swift...
+###  If you're using RMCore with Swift, you'll want to do the following...
 
 1. Create a bridging header for your project and in that file import the RMCore framework
-
-       #import <Romo/RMCore.h>
+```Objc
+#import <Romo/RMCore.h>
+```
 
 2. Implement the RMCoreDelegate protocol
-
-       class ViewController: UIViewController, RMCoreDelegate {
+```Swift
+class ViewController: UIViewController, RMCoreDelegate {
+```
 
 3. Add a property for the robot, with the protocols you'd like to use (here we're specifying that our robot can tilt its head, drive, and use an LED)
-        
-       var robot: RMCoreRobotRomo3?
+```Swift     
+var robot: RMCoreRobotRomo3?
+```
 
 4. Initialize your delegacy to the robot (often in viewDidLoad).
-    
-       RMCore.setDelegate(self)
-    
+```Swift    
+RMCore.setDelegate(self)
+```
+
 5. Implement a connection delegate (triggered when a robot is connected).
-
-        func robotDidConnect(_ robot: RMCoreRobot) 
-        {
-            // Currently the only kind of robot is Romo3, so this is just future-proofing
-            if robot.isDrivable && robot.isHeadTiltable && robot.isLEDEquipped {
-                self.robot = robot as? RMCoreRobotRomo3
-            }
-        }
-    
+```Swift
+func robotDidConnect(_ robot: RMCoreRobot) 
+{
+    // Currently the only kind of robot is Romo3, so this is just future-proofing
+    if robot.isDrivable && robot.isHeadTiltable && robot.isLEDEquipped {
+        self.robot = robot as? RMCoreRobotRomo3
+    }
+}
+```    
 6. Implement disconnection delegate (triggered when a robot is disconnected).
+```Swift
+func robotDidDisconnect(_ robot: RMCoreRobot) {
+    print("Disconnected")
+    if robot == self.robot {
+        self.robot = nil
+    }
+}
+```
 
-        func robotDidDisconnect(_ robot: RMCoreRobot) {
-            print("Disconnected")
-            if robot == self.robot {
-                self.robot = nil
-            }
-        }
-    
 Now you're ready to send the robot commands. Here are some examples:
                             
 - Tell the LED to blink every 1 second (where the LED will be on 40% of every second).
+```Swift
+robot?.leds.blink(withPeriod: 1.0, dutyCycle: 0.4)
+```
 
-        robot?.leds.blink(withPeriod: 1.0, dutyCycle: 0.4)
-    
 - Tell the base to tilt the phone to a specific angle in degrees (here, it's 110).
-
-        robot?.tilt(toAngle: 110, completion: { success in
-            if (success) {
-                print("Successfully tilted")
-            } else {
-                print("Couldn't tilt to the desired angle")
-            }
-        })
-    
+```Swift
+robot?.tilt(toAngle: 110, completion: { success in
+    if (success) {
+        print("Successfully tilted")
+    } else {
+        print("Couldn't tilt to the desired angle")
+    }
+})
+```    
 - Tell the base to move forward at approximately 1 meter/second.
+```Swift
+let RM_DRIVE_RADIUS_STRAIGHT: Float = 9999
+robot?.drive(withRadius: RM_DRIVE_RADIUS_STRAIGHT, speed: 1.0)
+```
 
-      let RM_DRIVE_RADIUS_STRAIGHT: Float = 9999
-        robot?.drive(withRadius: RM_DRIVE_RADIUS_STRAIGHT, speed: 1.0)
-       
 - Tell the robot to turn 90 degrees counter-clockwise.
-
-      let RM_DRIVE_RADIUS_TURN_IN_PLACE: Float = 9999
-        robot?.turn(byAngle: 90.0, withRadius: RM_DRIVE_RADIUS_TURN_IN_PLACE, completion: { (success, heading) in
-            print("Finished! Ended up at heading: %f", heading)
-        })
-        
+```Swift
+let RM_DRIVE_RADIUS_TURN_IN_PLACE: Float = 9999
+robot?.turn(byAngle: 90.0, withRadius: RM_DRIVE_RADIUS_TURN_IN_PLACE, completion: { (success, heading) in
+    print("Finished! Ended up at heading: %f", heading)
+})
+```    
 - Tell all motors to stop.
-
-      robot?.stopAllMotion()
-
+```Swift
+robot?.stopAllMotion()
+```
 - Allow the robot to be connected when app goes in background.
-
-      RMCore.allowBackground(true)
-
-#### For using RMCharacter, a good start would be...
+```Swift
+RMCore.allowBackground(true)
+```
+#### For using RMCharacter with ObjC, a good start would be...
 
 1. Add a property for the character
-
-       @property (nonatomic, strong) RMCharacter *romo;
-
+```Objc
+@property (nonatomic, strong) RMCharacter *romo;
+```
 2. Initialize your character (often in viewDidLoad).
-
-       - (void)viewDidLoad
-       {
-           [super viewDidLoad];
-           
-           // Grab a shared instance of the Romo character
-           self.romo = [RMCharacter Romo];
-       }
-
-3. Add the character to a superview (often in viewWillAppear).
-
-       - (void)viewWillAppear:(BOOL)animated
-       {
-           [super viewWillAppear:animated];
-           
-           // Add Romo's face to self.view whenever the view will appear
-           [self.romo addToSuperview:self.view];
-       }
+```Objc
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
     
+    // Grab a shared instance of the Romo character
+    self.romo = [RMCharacter Romo];
+}
+```
+3. Add the character to a superview (often in viewWillAppear).
+```Objc
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    // Add Romo's face to self.view whenever the view will appear
+    [self.romo addToSuperview:self.view];
+}
+```
 4. Ensure you remove the character's view when you're done with it (often in viewDidDisappear).
-
-       - (void)viewDidDisappear:(BOOL)animated
-       {
-           [super viewDidDisappear:animated];
-           
-           // Removing Romo from the superview stops animations and sounds
-           [self.romo removeFromSuperview];
-       }
-        
+```Objc
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    
+    // Removing Romo from the superview stops animations and sounds
+    [self.romo removeFromSuperview];
+}
+```   
 Now you're ready to send the character commands. You can do things like:
 
 - Tell Romo to change his facial expression
-
-      self.romo.expression = RMCharacterExpressionCurious;
-                                    
+```Objc
+self.romo.expression = RMCharacterExpressionCurious;
+```                       
 - Tell Romo to change his emotion
-    
-      self.romo.emotion = RMCharacterEmotionScared;
-
+```Objc
+self.romo.emotion = RMCharacterEmotionScared;
+```
 - Tell Romo to look up and to the left:
-
-      [self.romo lookAtPoint:RMPoint3DMake(-1.0, -1.0, 0.5) 
-                      animated:YES];
-
+```Objc
+[self.romo lookAtPoint:RMPoint3DMake(-1.0, -1.0, 0.5) 
+animated:YES];
+```
 ## Sample Projects / Examples
 We've written a few sample applications to get you started using the Romotive SDK. Each framework has an `Examples` subfolder with one or more example projects. Some project you will find are:
 

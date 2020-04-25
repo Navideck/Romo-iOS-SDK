@@ -2,6 +2,37 @@
 ---
 ## Version History
 
+### 0.4 (RC)
+#### New in this version
+This is a significant upgrade that improves Swift support and adds background mode support! 
+
+- **RMCore**: Added `+ (void)allowBackground:(BOOL)isBackgroundAllowed` to allow Romo to stay connected when the app enters the background.
+
+Additionally, this beta release introduces the following sample application:
+
+- **HelloRMCoreSwift**: Illustrates the use of RMCore to move around your Romo using Swift.
+
+In addition the project's README was updated with the following changes:
+- Added Swift instructions for RMCore
+- Added background mode instructions for RMCore
+- Added syntax highlighting
+
+#### Fixed in this version
+- **RMCore**: RMCore's API now adheres more closely to Swift conventions. 
+- **README**: Outdated RMCore instructions were fixed.
+
+### 0.3.2 (Public Beta)
+#### Fixed in this version
+- **RMCharacter**: Fix incompatible pointers type for RMCharacterImage
+
+### 0.3.1 (Public Beta)
+#### New in this version
+Minimum supported iOS version is iOS 7 now.
+
+#### Fixed in this version
+- **RMShared** and **RMVision**: Removed iOS 6 related code
+- **RMCharacter**: Asset handling improvements
+
 ### 0.3 (Public Beta)
 #### New in this version
 - **RMShared**: Duplicated logic from **RMCharacted** was moved to RMShared
@@ -39,6 +70,3 @@ Additionally, this alpha release introduces the following sample applications:
 - **HelloRMCore**: Illustrates the use of RMCore to move around your Romo.
 - **HelloRMCharacter**: Shows how to interface with the Romo character through your app.
 - **HelloRomo**: Example of using both RMCore and RMCharacter to make Romo come to life!
-
-
-
