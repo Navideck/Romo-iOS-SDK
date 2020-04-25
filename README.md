@@ -153,6 +153,10 @@ Now you're ready to send the robot commands. Here are some examples:
 
       [self.robot stopAllMotion];
 
+- Allow the robot to be connected when app goes in background.
+
+      [RMCore allowBackground:YES];
+
 ### For using RMCharacter with Swift...
 
 1. Create a bridging header for your project and in that file import the RMCore framework
@@ -221,6 +225,10 @@ Now you're ready to send the robot commands. Here are some examples:
 - Tell all motors to stop.
 
       robot?.stopAllMotion()
+
+- Allow the robot to be connected when app goes in background.
+
+      RMCore.allowBackground(true)
 
 #### For using RMCharacter, a good start would be...
 
