@@ -2,6 +2,11 @@
 ---
 ## Version History
 
+### 0.4.1 (RC)
+#### Fixed in this version
+- **README**: Improved Swift instructions
+- **README**: Added `.plist` instructions for background mode
+
 ### 0.4 (RC)
 #### New in this version
 This is a significant upgrade that improves Swift support and adds background mode support! 

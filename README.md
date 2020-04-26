@@ -54,8 +54,8 @@ A complete `PodFile` with all frameworks would look like this:
 platform :ios, '7.0'
 
 target 'My Cool Romo App' do
-  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
-  # use_frameworks!
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
 
   # Pods for My Cool Romo App
   pod 'Romo'
@@ -170,9 +170,16 @@ Now you're ready to send the robot commands. Here are some examples:
 [RMCore allowBackground:YES];
 ```
 
+In your app's <code>Info.plist</code> add a new key with the text `Required background modes` and select the `App communicates with an accessory` value for the first item.
+
 ###  If you're using RMCore with Swift, you'll want to do the following...
 
-1. Create a bridging header for your project and in that file import the RMCore framework
+1. Import the RMCore framework
+```Swift
+import Romo
+```
+
+In case you don't use CocoaPods you need to import the  RMCore framework manually using a bridging header file `MyCoolRomoApp-Bridging-Header.h` with:
 ```Objc
 #import <Romo/RMCore.h>
 ```
@@ -250,6 +257,9 @@ robot?.stopAllMotion()
 ```Swift
 RMCore.allowBackground(true)
 ```
+
+In your app's <code>Info.plist</code> add a new key with the text `Required background modes` and select the `App communicates with an accessory` value for the first item.
+
 #### For using RMCharacter with ObjC, a good start would be...
 
 1. Add a property for the character
