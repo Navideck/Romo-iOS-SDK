@@ -2,10 +2,10 @@ Pod::Spec.new do |spec|
   spec.name         = 'Romo'
   spec.summary      = 'Romo SDK'
   spec.homepage     = 'https://github.com/navideck/Romo'
-  spec.version      = '0.4.1'
+  spec.version      = '0.5.0'
   spec.authors      = { 'Navideck' => 'team@navideck.com' }
   spec.source       = { :git => 'https://github.com/navideck/Romo', :tag => "Romo_v#{spec.version}" }
-  spec.ios.deployment_target = '7.0'
+  spec.ios.deployment_target = '9.0'
   spec.requires_arc = true
   spec.static_framework = true
   spec.license = { :file => 'LICENSE.md' }
@@ -23,8 +23,7 @@ Pod::Spec.new do |spec|
   
   spec.subspec 'RMCharacter' do |sp|
     sp.source_files = 'RMCharacter/Classes/**/*.{h,m,mm,pch}'
-    sp.resources = 'RMCharacter/Assets/**/*.*'
-    # sp.resource_bundle = { 'RMCharacter' => ['RMCharacter/Assets/**/*.xcassets'] }  //Replace the above line for iOS 8
+    sp.resource_bundle = { 'RMCharacter' => ['RMCharacter/Assets/**/*.xcassets'] }
     sp.dependency 'Romo/RMShared'
   end
 
