@@ -21,14 +21,10 @@
     }
 
     NSBundle* bundle = [NSBundle bundleForClass:self.classForCoder];
-    if (@available(iOS 8.0, *)) {
-        UIImage *image = [self imageNamed:name inBundle:bundle compatibleWithTraitCollection:nil];
-        return image;
-    } else {
-        NSString *file = [bundle pathForResource:resource ofType:@"png"];
-        UIImage *image = [[UIImage alloc]initWithContentsOfFile:file];
-        return image;
-    }
+    NSString *frameworkBundlePath = [[[bundle resourceURL] URLByAppendingPathComponent:@"RMCharacter.bundle"] path];
+    NSBundle* characterBundle = [NSBundle bundleWithPath:frameworkBundlePath];
+    UIImage *image = [self imageNamed:name inBundle:characterBundle compatibleWithTraitCollection:nil];
+    return image;
 }
 
 + (UIImage *)smartImageNamed:(NSString *)name

@@ -2,6 +2,11 @@
 ---
 ## Version History
 
+### 0.5.1 (RC)
+#### New in this version
+- **RMCharacter**: Migrate to using `resource_bundle` in CocoaPods
+- **RMCharacter**: Set iOS 9 as minimum to be able to use `NSDataAsset`
+
 ### 0.4.1 (RC)
 #### Fixed in this version
 - **README**: Improved Swift instructions

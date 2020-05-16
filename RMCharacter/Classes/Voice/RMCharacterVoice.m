@@ -45,10 +45,9 @@
     self = [super init];
     if (self) {
         _characterType = characterType;
-        NSBundle* bundle = [NSBundle mainBundle];
-        NSString *mainBundlePath = [[bundle resourceURL] path];
-
-        _characterBundle = [NSBundle bundleWithPath:mainBundlePath];
+        NSBundle* bundle = [NSBundle bundleForClass:self.classForCoder];
+        NSString *frameworkBundlePath = [[[bundle resourceURL] URLByAppendingPathComponent:@"RMCharacter.bundle"] path];
+        _characterBundle = [NSBundle bundleWithPath:frameworkBundlePath];
 
         self.initialized = YES;
     }
@@ -139,19 +138,18 @@
 - (void)_setExpression
 {
     
-    NSString *path;
+    NSDataAsset *audioDataAsset;
     
     // Special case for farting
     if (_expression == RMCharacterExpressionFart) {
         int randomSound = arc4random_uniform(kNumFarts);
-        path = [self.characterBundle pathForResource:[NSString stringWithFormat:@"%d-%02d",_expression, randomSound] ofType:@"caf"];
+        audioDataAsset = [[NSDataAsset alloc]initWithName:[NSString stringWithFormat:@"%d-%02d",_expression, randomSound] bundle: self.characterBundle];
     } else {
-        path = [self.characterBundle pathForResource:[NSString stringWithFormat:@"%d",_expression] ofType:@"caf"];
+        audioDataAsset = [[NSDataAsset alloc]initWithName:[NSString stringWithFormat:@"%d",_expression] bundle: self.characterBundle];
     }
-    path = [path stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLHostAllowedCharacterSet]];
 
     [self audioDidFinish];
-    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL URLWithString:path] error:nil];
+    self.audioPlayer = [[AVAudioPlayer alloc] initWithData:audioDataAsset.data error:nil];
     
     if (self.audioPlayer.duration) {
         [self.audioPlayer prepareToPlay];
@@ -179,12 +177,10 @@
             return;
         }
     }
-    
-    NSString *path = [self.characterBundle pathForResource:filename ofType:@"caf"];
-    path = [path stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLHostAllowedCharacterSet]];
-    
-    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL URLWithString:path] error:nil];
-    
+
+    NSDataAsset *audioDataAsset = [[NSDataAsset alloc]initWithName:filename bundle: self.characterBundle];
+    self.audioPlayer = [[AVAudioPlayer alloc] initWithData:audioDataAsset.data error:nil];
+
     self.playingAuxiliarySound = YES;
     if (self.audioPlayer.duration) {
         [self.audioPlayer prepareToPlay];
