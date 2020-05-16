@@ -203,13 +203,16 @@ typedef void (^BoolBlock)(BOOL);
         _crops = [NSMutableArray arrayWithCapacity:3];
         _frameCount = 0;
         while (1) {
-            UIImage* sprite = [RMCharacterImage smartImageNamed:[NSString stringWithFormat:@"%@_%d",prefix,index]];
+            UIImage* sprite = [RMCharacterImage smartImageNamed:[NSString stringWithFormat:@"%@_%d_img",prefix,index]];
             if (sprite) {
                 NSString* cropFile = [NSString stringWithFormat:@"%@_%d",prefix,index];
                 
-                NSBundle* bundle = [NSBundle mainBundle];
-                NSData* cropData = [NSData dataWithContentsOfFile:[bundle pathForResource:cropFile ofType:@"json"]];
-                NSArray* crop = [NSJSONSerialization JSONObjectWithData:cropData options:0 error:nil][@"frames"];
+                NSBundle* bundle = [NSBundle bundleForClass:self.classForCoder];
+                NSString *frameworkBundlePath = [[[bundle resourceURL] URLByAppendingPathComponent:@"RMCharacter.bundle"] path];
+                NSBundle* characterBundle = [NSBundle bundleWithPath:frameworkBundlePath];
+
+                NSDataAsset* cropData = [[NSDataAsset alloc]initWithName:cropFile bundle:characterBundle];
+                NSArray* crop = [NSJSONSerialization JSONObjectWithData:cropData.data options:0 error:nil][@"frames"];
                 _frameCount += crop.count;
                 [_crops addObject:crop];
                 [_sprites addObject:sprite];
