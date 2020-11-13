@@ -365,11 +365,9 @@ Romotive, the company behind Romo, after shutting down were kind enough to open 
 Issues and pull requests are always welcome!
 
 ## Patrons
-* Ryan Oksenhorn
-* Matt Duston
+* Miraenda
 * Suschman
-* Bruce Ownbey
-* Shreyas Gite
+* Matt Duston
 
 Support us by becoming a patron!
 
