@@ -353,10 +353,10 @@ There seems to be plenty of stock in online stores.
 Any Romo with either 30pin or lightning port. This includes Romo models 3A, 3B, 3L.
 
 ### Which iPhone works with Romo?
-iPhone 3GS and above. iPhone SE fits like a glove. iPhone 6, 7 and 8 need some squeezing but fit just fine. iPhone X is too big.
+iPhone 3GS and above. iPhone SE (1st gen) & iPhone 12 mini fit like a glove. iPhone 6, 7 and 8 need some squeezing but fit just fine. iPhone X and iPhone 12 (non mini) are too big.
 
 ### Which iOS versions are compatible with the SDK?
-The latest SDK works from **iOS 9.0** up to **iOS 13**! Older versiona of the SDK also work with iOS 6, 7 and 8. Use CocoaPods to automatically get the latest version compatible with your iOS target.
+The latest SDK works from **iOS 9.0** up to **iOS 14**! Older versiona of the SDK also work with iOS 6, 7 and 8. Use CocoaPods to automatically get the latest version compatible with your iOS target.
 
 ### How did this come to be?
 Romotive, the company behind Romo, after shutting down were kind enough to open source their code stating:
