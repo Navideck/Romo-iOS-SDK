@@ -2,7 +2,7 @@
 <a href="https://www.patreon.com/bePatron?u=5127277" target="_blank"><img alt="become a patron" src="https://c5.patreon.com/external/logo/become_a_patron_button.png" height="35px"></a>
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/Navideck/Romo-X/master/Assets.xcassets/Missions/Editor/Actions/Turn/romoTurn28.imageset/romoTurn28%401x.png"/>
+<img src="https://raw.githubusercontent.com/Navideck/Romo/master/Assets.xcassets/Missions/Editor/Actions/Turn/romoTurn28.imageset/romoTurn28%401x.png"/>
 </p>
 
 <p align="center" >
@@ -338,10 +338,10 @@ The documentation can be found in the "docs" folder that comes bundeled with the
 ## FAQ
 
 ### Is the Romo App on the App Store?
-Find the *Romo X* app on the [App Store](https://itunes.apple.com/us/app/romo-x/id1436292886)
+Find the *Romo* app on the [App Store](https://itunes.apple.com/us/app/romo/id1436292886)
 
 ### Is the Romo App open source?
-Find the *Romo X* app source code [here](https://github.com/Navideck/Romo-X)
+Find the *Romo* app source code [here](https://github.com/Navideck/Romo)
 
 ### Is firmware source code available?
 Find Romo's firmware source code [here](https://github.com/Navideck/Romo-Firmware)

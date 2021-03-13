@@ -2,6 +2,11 @@
 ---
 ## Version History
 
+### 0.5.2 (RC)
+#### Fixed in this version
+- **README**: Renamed app to *Romo* and SDK to*Romo iOS SDK*
+- **POD**: Switched to the new repo URL after renaming
+
 ### 0.5.1 (RC)
 #### New in this version
 - **RMCharacter**: Migrate to using `resource_bundle` in CocoaPods

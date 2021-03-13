@@ -1,10 +1,10 @@
 Pod::Spec.new do |spec|
   spec.name         = 'Romo'
   spec.summary      = 'Romo SDK'
-  spec.homepage     = 'https://github.com/navideck/Romo'
-  spec.version      = '0.5.1'
+  spec.homepage     = 'https://github.com/Navideck/Romo-iOS-SDK'
+  spec.version      = '0.5.2'
   spec.authors      = { 'Navideck' => 'team@navideck.com' }
-  spec.source       = { :git => 'https://github.com/navideck/Romo', :tag => "Romo_v#{spec.version}" }
+  spec.source       = { :git => 'https://github.com/Navideck/Romo-iOS-SDK', :tag => "Romo_v#{spec.version}" }
   spec.ios.deployment_target = '9.0'
   spec.requires_arc = true
   spec.static_framework = true
