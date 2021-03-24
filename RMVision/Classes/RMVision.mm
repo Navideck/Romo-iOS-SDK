@@ -579,11 +579,16 @@ NSString *const RMVisionModule_GPUImageExample  = @"GPUImageExample";
 
 //------------------------------------------------------------------------------
 -(void)applyNewFrameRate:(int)frameRate
-{   
-    [self.device setActiveVideoMinFrameDuration:CMTimeMake(1, frameRate)];
-    [self.device setActiveVideoMaxFrameDuration:CMTimeMake(1, frameRate)];
-    [self.device unlockForConfiguration];
+{
+    NSError *error;
 
+    if ([self.device lockForConfiguration:&error]) {
+        [self.device setActiveVideoMinFrameDuration:CMTimeMake(1, frameRate)];
+        [self.device setActiveVideoMaxFrameDuration:CMTimeMake(1, frameRate)];
+        [self.device unlockForConfiguration];
+    } else {
+        NSLog(@"Error: %@", error);
+    }
 }
 
 //------------------------------------------------------------------------------
