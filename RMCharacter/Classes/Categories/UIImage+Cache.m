@@ -39,17 +39,7 @@ static const int _maxCapacity = 3500000;
         extension = comps[1];
     }
 
-    NSBundle* bundle = [NSBundle bundleForClass:self.classForCoder];
-    NSString *frameworkBundlePath = [[[bundle resourceURL] URLByAppendingPathComponent:@"RMCharacter.bundle"] path];
-    NSBundle* characterBundle = [NSBundle bundleWithPath:frameworkBundlePath];
-
-    UIImage *image;
-    if (@available(iOS 8.0, *)) {
-        image = [UIImage imageNamed:comps[0] inBundle:characterBundle compatibleWithTraitCollection:nil];
-    }
-    else {
-        image = [UIImage imageNamed:comps[0]];
-    }
+    UIImage *image = [UIImage imageNamed:comps[0]];
     if (image) {
         _currentCapacity += image.size.width * image.size.height;
         if (_currentCapacity > _maxCapacity) {

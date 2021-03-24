@@ -16,7 +16,6 @@
 }
 
 @property (nonatomic, strong) AVAudioPlayer *audioPlayer;
-@property (nonatomic, strong) NSBundle *characterBundle;
 @property (atomic, getter=isInitialized) BOOL initialized;
 @property (nonatomic) BOOL playingAuxiliarySound;
 
@@ -45,10 +44,6 @@
     self = [super init];
     if (self) {
         _characterType = characterType;
-        NSBundle* bundle = [NSBundle bundleForClass:self.classForCoder];
-        NSString *frameworkBundlePath = [[[bundle resourceURL] URLByAppendingPathComponent:@"RMCharacter.bundle"] path];
-        _characterBundle = [NSBundle bundleWithPath:frameworkBundlePath];
-
         self.initialized = YES;
     }
     return self;
@@ -143,9 +138,9 @@ NSString *path;
 // Special case for farting
 if (_expression == RMCharacterExpressionFart) {
     int randomSound = arc4random_uniform(kNumFarts);
-    path = [self.characterBundle pathForResource:[NSString stringWithFormat:@"%d-%02d",_expression, randomSound] ofType:@"caf"];
+    path = [[NSBundle bundleForClass:self.classForCoder] pathForResource:[NSString stringWithFormat:@"%d-%02d",_expression, randomSound] ofType:@"caf"];
 } else {
-    path = [self.characterBundle pathForResource:[NSString stringWithFormat:@"%d",_expression] ofType:@"caf"];
+    path = [[NSBundle bundleForClass:self.classForCoder] pathForResource:[NSString stringWithFormat:@"%d",_expression] ofType:@"caf"];
 }
 path = [path stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLHostAllowedCharacterSet]];
 
@@ -180,7 +175,7 @@ self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL URLWithSt
         }
     }
 
-    NSString *path = [self.characterBundle pathForResource:filename ofType:@"caf"];
+    NSString *path = [[NSBundle bundleForClass:self.classForCoder] pathForResource:filename ofType:@"caf"];
     path = [path stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLHostAllowedCharacterSet]];
 
     self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL URLWithString:path] error:nil];
