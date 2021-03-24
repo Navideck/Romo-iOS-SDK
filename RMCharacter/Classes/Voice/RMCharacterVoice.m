@@ -137,20 +137,34 @@
 
 - (void)_setExpression
 {
-    
-    NSDataAsset *audioDataAsset;
-    
-    // Special case for farting
-    if (_expression == RMCharacterExpressionFart) {
-        int randomSound = arc4random_uniform(kNumFarts);
-        audioDataAsset = [[NSDataAsset alloc]initWithName:[NSString stringWithFormat:@"%d-%02d",_expression, randomSound] bundle: self.characterBundle];
+    if (@available(iOS 9.0, *)) {
+        NSDataAsset *audioDataAsset;
+
+        if (_expression == RMCharacterExpressionFart) {
+            int randomSound = arc4random_uniform(kNumFarts);
+            audioDataAsset = [[NSDataAsset alloc]initWithName:[NSString stringWithFormat:@"%d-%02d",_expression, randomSound] bundle: self.characterBundle];
+        } else {
+            audioDataAsset = [[NSDataAsset alloc]initWithName:[NSString stringWithFormat:@"%d",_expression] bundle: self.characterBundle];
+        }
+        [self audioDidFinish];
+        self.audioPlayer = [[AVAudioPlayer alloc] initWithData:audioDataAsset.data error:nil];
     } else {
-        audioDataAsset = [[NSDataAsset alloc]initWithName:[NSString stringWithFormat:@"%d",_expression] bundle: self.characterBundle];
+        NSString *path;
+
+        if (_expression == RMCharacterExpressionFart) {
+            int randomSound = arc4random_uniform(kNumFarts);
+            path = [self.characterBundle pathForResource:[NSString stringWithFormat:@"%d-%02d",_expression, randomSound] ofType:@"caf"];
+        } else {
+            path = [self.characterBundle pathForResource:[NSString stringWithFormat:@"%d",_expression] ofType:@"caf"];
+        }
+
+        [self audioDidFinish];
+        self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL URLWithString:path] error:nil];
+
     }
 
-    [self audioDidFinish];
-    self.audioPlayer = [[AVAudioPlayer alloc] initWithData:audioDataAsset.data error:nil];
-    
+
+
     if (self.audioPlayer.duration) {
         [self.audioPlayer prepareToPlay];
         self.audioPlayer.delegate = self;
@@ -178,8 +192,15 @@
         }
     }
 
-    NSDataAsset *audioDataAsset = [[NSDataAsset alloc]initWithName:filename bundle: self.characterBundle];
-    self.audioPlayer = [[AVAudioPlayer alloc] initWithData:audioDataAsset.data error:nil];
+    if (@available(iOS 9.0, *)) {
+        NSDataAsset *audioDataAsset = [[NSDataAsset alloc]initWithName:filename bundle: self.characterBundle];
+        self.audioPlayer = [[AVAudioPlayer alloc] initWithData:audioDataAsset.data error:nil];
+    } else {
+        NSString *path = [self.characterBundle pathForResource:filename ofType:@"caf"];
+        path = [path stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLHostAllowedCharacterSet]];
+
+        self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL URLWithString:path] error:nil];
+    }
 
     self.playingAuxiliarySound = YES;
     if (self.audioPlayer.duration) {

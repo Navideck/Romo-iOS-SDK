@@ -5,13 +5,13 @@ PODS:
   - CocoaLumberjack/Default (3.4.2)
   - CocoaLumberjack/Extensions (3.4.2):
     - CocoaLumberjack/Default
-  - Romo (0.3.1):
-    - Romo/RMCore (= 0.3.1)
-  - Romo/RMCharacter (0.3.1):
+  - Romo (0.5.3):
+    - Romo/RMCore (= 0.5.3)
+  - Romo/RMCharacter (0.5.3):
     - Romo/RMShared
-  - Romo/RMCore (0.3.1):
+  - Romo/RMCore (0.5.3):
     - Romo/RMShared
-  - Romo/RMShared (0.3.1):
+  - Romo/RMShared (0.5.3):
     - CocoaLumberjack
     - SocketRocket
   - SocketRocket (0.5.1)
@@ -21,7 +21,7 @@ DEPENDENCIES:
   - Romo/RMCharacter (from `../../..`)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - CocoaLumberjack
     - SocketRocket
 
@@ -31,9 +31,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   CocoaLumberjack: db7cc9e464771f12054c22ff6947c5a58d43a0fd
-  Romo: 08c7f7af874f740f293b8654ef95834a9a84b817
+  Romo: 6829b9cfc6e2c27dabbfcd4ac78efaf310449ba7
   SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
 
 PODFILE CHECKSUM: 23a648514d7a75d0a73147826496bccf229ea30b
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.10.1

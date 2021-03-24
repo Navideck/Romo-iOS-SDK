@@ -206,13 +206,20 @@ typedef void (^BoolBlock)(BOOL);
             UIImage* sprite = [RMCharacterImage smartImageNamed:[NSString stringWithFormat:@"%@_%d_img",prefix,index]];
             if (sprite) {
                 NSString* cropFile = [NSString stringWithFormat:@"%@_%d",prefix,index];
-                
-                NSBundle* bundle = [NSBundle bundleForClass:self.classForCoder];
-                NSString *frameworkBundlePath = [[[bundle resourceURL] URLByAppendingPathComponent:@"RMCharacter.bundle"] path];
-                NSBundle* characterBundle = [NSBundle bundleWithPath:frameworkBundlePath];
 
-                NSDataAsset* cropDataAsset = [[NSDataAsset alloc]initWithName:cropFile bundle:characterBundle];
-                NSArray* crop = [NSJSONSerialization JSONObjectWithData:cropDataAsset.data options:0 error:nil][@"frames"];
+                NSArray* crop;
+
+                if (@available(iOS 9.0, *)) {
+                    NSBundle* bundle = [NSBundle bundleForClass:self.classForCoder];
+                    NSString *frameworkBundlePath = [[[bundle resourceURL] URLByAppendingPathComponent:@"RMCharacter.bundle"] path];
+                    NSBundle* characterBundle = [NSBundle bundleWithPath:frameworkBundlePath];
+                    NSDataAsset* cropDataAsset = [[NSDataAsset alloc]initWithName:cropFile bundle:characterBundle];
+                    crop = [NSJSONSerialization JSONObjectWithData:cropDataAsset.data options:0 error:nil][@"frames"];
+                } else {
+                    NSBundle* bundle = [NSBundle mainBundle];
+                    NSData* cropData = [NSData dataWithContentsOfFile:[bundle pathForResource:cropFile ofType:@"json"]];
+                    crop = [NSJSONSerialization JSONObjectWithData:cropData options:0 error:nil][@"frames"];
+                }
                 _frameCount += crop.count;
                 [_crops addObject:crop];
                 [_sprites addObject:sprite];
