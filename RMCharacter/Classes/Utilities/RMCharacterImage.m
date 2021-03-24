@@ -47,17 +47,23 @@ static const int _maxCapacity = 3500000;
     NSString *frameworkBundlePath = [[[bundle resourceURL] URLByAppendingPathComponent:@"RMCharacter.bundle"] path];
     NSBundle* characterBundle = [NSBundle bundleWithPath:frameworkBundlePath];
 
-    RMCharacterImage *image = (RMCharacterImage *)[UIImage imageNamed:comps[0] inBundle:characterBundle compatibleWithTraitCollection:nil];
+    RMCharacterImage *image;
+    if (@available(iOS 8.0, *)) {
+        image = (RMCharacterImage *)[UIImage imageNamed:comps[0] inBundle:characterBundle compatibleWithTraitCollection:nil];
+    }
+    else {
+        image = (RMCharacterImage *)[UIImage imageNamed:comps[0]];
+    }
     if (image) {
-        _currentCapacity += image.size.width * image.size.height;
-        if (_currentCapacity > _maxCapacity) {
-            [self emptyCache];
-        }
-        
-        [_cache setObject:image forKey:[name lastPathComponent]];
+    _currentCapacity += image.size.width * image.size.height;
+    if (_currentCapacity > _maxCapacity) {
+        [self emptyCache];
     }
     
-    return image;
+    [_cache setObject:image forKey:[name lastPathComponent]];
+}
+
+return image;
 }
 
 @end

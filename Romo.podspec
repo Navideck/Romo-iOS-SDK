@@ -23,7 +23,8 @@ Pod::Spec.new do |spec|
   
   spec.subspec 'RMCharacter' do |sp|
     sp.source_files = 'RMCharacter/Classes/**/*.{h,m,mm,pch}'
-    sp.resource_bundle = { 'RMCharacter' => ['RMCharacter/Assets/**/*.xcassets'] }
+    # sp.resource_bundle = { 'RMCharacter' => ['RMCharacter/Assets/**/*.xcassets'] }
+    sp.resources = 'RMCharacter/Assets/**/*.*'
     sp.dependency 'Romo/RMShared'
   end
 

@@ -209,17 +209,9 @@ typedef void (^BoolBlock)(BOOL);
 
                 NSArray* crop;
 
-                if (@available(iOS 9.0, *)) {
-                    NSBundle* bundle = [NSBundle bundleForClass:self.classForCoder];
-                    NSString *frameworkBundlePath = [[[bundle resourceURL] URLByAppendingPathComponent:@"RMCharacter.bundle"] path];
-                    NSBundle* characterBundle = [NSBundle bundleWithPath:frameworkBundlePath];
-                    NSDataAsset* cropDataAsset = [[NSDataAsset alloc]initWithName:cropFile bundle:characterBundle];
-                    crop = [NSJSONSerialization JSONObjectWithData:cropDataAsset.data options:0 error:nil][@"frames"];
-                } else {
-                    NSBundle* bundle = [NSBundle mainBundle];
-                    NSData* cropData = [NSData dataWithContentsOfFile:[bundle pathForResource:cropFile ofType:@"json"]];
-                    crop = [NSJSONSerialization JSONObjectWithData:cropData options:0 error:nil][@"frames"];
-                }
+                NSBundle* bundle = [NSBundle mainBundle];
+                NSData* cropData = [NSData dataWithContentsOfFile:[bundle pathForResource:cropFile ofType:@"json"]];
+                crop = [NSJSONSerialization JSONObjectWithData:cropData options:0 error:nil][@"frames"];
                 _frameCount += crop.count;
                 [_crops addObject:crop];
                 [_sprites addObject:sprite];
