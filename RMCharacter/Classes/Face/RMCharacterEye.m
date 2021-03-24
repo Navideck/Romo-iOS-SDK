@@ -4,8 +4,8 @@
 //
 
 #import "RMCharacterEye.h"
-#import "RMCharacterImage.h"
 #import <Romo/RMMath.h>
+#import "UIImage+Cache.h"
 
 @interface RMCharacterEye () {
     BOOL _left;
@@ -68,7 +68,7 @@
 - (void)setEmotion:(RMCharacterEmotion)emotion
 {
     _emotion = emotion;
-    self.image = [RMCharacterImage imageNamed:[NSString stringWithFormat:@"Romo_Emotion_%@eye_%d.png",_left ? @"L" : @"R", emotion]];
+    self.image = [UIImage imageCacheNamed:[NSString stringWithFormat:@"Romo_Emotion_%@eye_%d.png",_left ? @"L" : @"R", emotion]];
     self.pupil.dilation = 1.0;
     [_mask addSubview:self.pupil];
     switch (emotion) {
@@ -202,14 +202,14 @@
         float height = _eyeFrame.size.height * close;
         if (close < 0.95) {
             if (_close >= 0.95) {
-                self.image = [RMCharacterImage imageNamed:[NSString stringWithFormat:@"Romo_Emotion_%@eye_%d.png",_left ? @"L" : @"R", _emotion]];
+                self.image = [UIImage imageCacheNamed:[NSString stringWithFormat:@"Romo_Emotion_%@eye_%d.png",_left ? @"L" : @"R", _emotion]];
                 self.clipsToBounds = YES;
             }
             self.frame = (CGRect){_eyeFrame.origin.x, _eyeFrame.origin.y + height, _eyeFrame.size.width, _eyeFrame.size.height - height};
             _mask.frame = (CGRect){_maskFrame.origin.x, _maskFrame.origin.y - height, _maskFrame.size};
             [self addSubview:_mask];
         } else {
-            self.image = [RMCharacterImage imageNamed:[NSString stringWithFormat:@"Romo_Emotion_%@eye_Closed.png",_left ? @"L" : @"R"]];
+            self.image = [UIImage imageCacheNamed:[NSString stringWithFormat:@"Romo_Emotion_%@eye_Closed.png",_left ? @"L" : @"R"]];
             self.clipsToBounds = NO;
             [_mask removeFromSuperview];
         }

@@ -47,7 +47,7 @@
         _characterType = characterType;
         NSBundle* bundle = [NSBundle bundleForClass:self.classForCoder];
         NSString *frameworkBundlePath = [[[bundle resourceURL] URLByAppendingPathComponent:@"RMCharacter.bundle"] path];
-        _characterBundle = bundle;
+        _characterBundle = [NSBundle bundleWithPath:frameworkBundlePath];
 
         self.initialized = YES;
     }

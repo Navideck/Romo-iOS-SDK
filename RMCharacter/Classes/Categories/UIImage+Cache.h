@@ -1,11 +1,11 @@
 //
-//  UIImage+Retina.h
+//  UIImage+Cache.h
 //  Romo
 //
 
 #import <UIKit/UIKit.h>
 
-@interface UIImage (Retina)
+@interface UIImage (Cache)
 
 /** Returns "name@1x.png" non-Retina version, always */
 //+ (UIImage *)nonRetinaImageNamed:(NSString *)name;
@@ -15,6 +15,10 @@
  tries to fetch the nonRetinaImageNamed: version
  Falls back to @2x version if no @1x is found.
  */
-+ (UIImage *)smartImageNamed:(NSString *)name;
+//+ (UIImage *)smartImageNamed:(NSString *)name;
+
++ (void)emptyCache;
+
++ (UIImage* )imageCacheNamed:(NSString*)name;
 
 @end

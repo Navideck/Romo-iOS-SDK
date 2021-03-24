@@ -10,6 +10,7 @@
 #import "RMCharacterFaceEmotion.h"
 #import <Romo/RMMath.h>
 #import "RMCharacterColorFill.h"
+#import "UIImage+Cache.h"
 
 #define romoBackgroundBlue ([UIColor colorWithHue:0.5361 saturation:1.0 brightness:0.93 alpha:1.0])
 
@@ -113,7 +114,7 @@ int _audioBreakpoints[33] = {
     
     _emotion = RMCharacterEmotionHappy;
     self.faceEmotion.emotion = RMCharacterEmotionHappy;
-    self.animation.image = [RMCharacterImage imageNamed:[NSString stringWithFormat:@"Romo_Emotion_%d.png",RMCharacterEmotionHappy]];
+    self.animation.image = [UIImage imageCacheNamed:[NSString stringWithFormat:@"Romo_Emotion_%d.png",RMCharacterEmotionHappy]];
     [_faceView addSubview:self.faceEmotion];
     [_hiddenView addSubview:_faceView];
     [self.animation removeFromSuperview];
@@ -127,7 +128,7 @@ int _audioBreakpoints[33] = {
         RMCharacterEmotion __block finalEmotion = emotion;
         
         self.emoting = YES;
-        self.animation.image = [RMCharacterImage imageNamed:[NSString stringWithFormat:@"Romo_Emotion_%d.png",emotion]];
+        self.animation.image = [UIImage imageCacheNamed:[NSString stringWithFormat:@"Romo_Emotion_%d.png",emotion]];
         [_faceView addSubview:self.animation];
         [self.faceEmotion removeFromSuperview];
         
