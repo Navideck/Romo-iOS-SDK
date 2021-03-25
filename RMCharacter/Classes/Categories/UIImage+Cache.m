@@ -1,9 +1,9 @@
 //
 //  UIImage+Retina.m
-//  Romo
+//  RMCharacter
 //
 
-#import "UIImage+Cache.h"
+#import <Romo/UIImage+Cache.h>
 #import <Romo/UIDevice+Romo.h>
 
 
@@ -18,7 +18,7 @@ static const int _maxCapacity = 3500000;
     _currentCapacity = 0;
 }
 
-+ imageCacheNamed:(NSString*)name {
++ cacheableImageNamed:(NSString*)name {
     if (!name.length) {
         return nil;
     }

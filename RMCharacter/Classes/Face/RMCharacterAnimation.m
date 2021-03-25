@@ -5,7 +5,7 @@
 #import "RMCharacterAnimation.h"
 #import "RMCharacter.h"
 #import <Romo/RMMath.h>
-#import "UIImage+Cache.h"
+#import <Romo/UIImage+Cache.h>
 
 typedef void (^BoolBlock)(BOOL);
 
@@ -203,7 +203,7 @@ typedef void (^BoolBlock)(BOOL);
         _crops = [NSMutableArray arrayWithCapacity:3];
         _frameCount = 0;
         while (1) {
-            UIImage* sprite = [UIImage imageCacheNamed:[NSString stringWithFormat:@"%@_%d_img",prefix,index]];
+            UIImage* sprite = [UIImage cacheableImageNamed:[NSString stringWithFormat:@"%@_%d_img",prefix,index]];
             if (sprite) {
                 NSString* cropFile = [NSString stringWithFormat:@"%@_%d",prefix,index];
 

@@ -8,7 +8,7 @@
 #import "RMCharacterVoice.h"
 #import "RMCharacterPNS.h"
 #import <Romo/RMMath.h>
-#import "UIImage+Cache.h"
+#import <Romo/UIImage+Cache.h>
 
 #define NUM_EMOTIONS    10
 #define NUM_EXPRESSIONS 32

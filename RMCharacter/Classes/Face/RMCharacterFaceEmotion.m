@@ -4,7 +4,7 @@
 //
 
 #import "RMCharacterFaceEmotion.h"
-#import "UIImage+Cache.h"
+#import <Romo/UIImage+Cache.h>
 #import "RMCharacterEye.h"
 #import "RMCharacterVoice.h"
 
@@ -64,48 +64,48 @@
     _emotion = emotion;
     switch (_emotion) {
         case RMCharacterEmotionBewildered:
-            _mouthView.image = [UIImage imageCacheNamed:[NSString stringWithFormat:@"Romo_Emotion_Mouth_%d.png",_emotion]];
+            _mouthView.image = [UIImage cacheableImageNamed:[NSString stringWithFormat:@"Romo_Emotion_Mouth_%d.png",_emotion]];
             _mouthView.frame = (CGRect){206.5, 218.5 + _h, _mouthView.image.size};
             break;
 
         case RMCharacterEmotionCurious:
-            _mouthView.image = [UIImage imageCacheNamed:[NSString stringWithFormat:@"Romo_Emotion_Mouth_%d.png",_emotion]];
+            _mouthView.image = [UIImage cacheableImageNamed:[NSString stringWithFormat:@"Romo_Emotion_Mouth_%d.png",_emotion]];
             _mouthView.frame = (CGRect){156.5, 285.0 + _h, _mouthView.image.size};
             break;
             
         case RMCharacterEmotionExcited:
-            _mouthView.image = [UIImage imageCacheNamed:[NSString stringWithFormat:@"Romo_Emotion_Mouth_%d.png",_emotion]];
+            _mouthView.image = [UIImage cacheableImageNamed:[NSString stringWithFormat:@"Romo_Emotion_Mouth_%d.png",_emotion]];
             _mouthView.frame = (CGRect){40.0, 266.0 + _h, _mouthView.image.size};
             break;
             
         case RMCharacterEmotionHappy:
-            _mouthView.image = [UIImage imageCacheNamed:[NSString stringWithFormat:@"Romo_Emotion_Mouth_%d.png",_emotion]];
+            _mouthView.image = [UIImage cacheableImageNamed:[NSString stringWithFormat:@"Romo_Emotion_Mouth_%d.png",_emotion]];
             _mouthView.frame = (CGRect){43.5, 252.5 + _h, _mouthView.image.size};
             break;
 
         case RMCharacterEmotionIndifferent:
-            _mouthView.image = [UIImage imageCacheNamed:[NSString stringWithFormat:@"Romo_Emotion_Mouth_%d.png",_emotion]];
+            _mouthView.image = [UIImage cacheableImageNamed:[NSString stringWithFormat:@"Romo_Emotion_Mouth_%d.png",_emotion]];
             _mouthView.frame = (CGRect){38.5, 261.0 + _h, _mouthView.image.size};
             break;
             
         case RMCharacterEmotionSad:
-            _mouthView.image = [UIImage imageCacheNamed:[NSString stringWithFormat:@"Romo_Emotion_Mouth_%d.png",_emotion]];
+            _mouthView.image = [UIImage cacheableImageNamed:[NSString stringWithFormat:@"Romo_Emotion_Mouth_%d.png",_emotion]];
             _mouthView.frame = (CGRect){114, 269.0 + _h, _mouthView.image.size};
             break;
             
         case RMCharacterEmotionScared:
-            _mouthView.image = [UIImage imageCacheNamed:[NSString stringWithFormat:@"Romo_Emotion_Mouth_%d.png",_emotion]];
+            _mouthView.image = [UIImage cacheableImageNamed:[NSString stringWithFormat:@"Romo_Emotion_Mouth_%d.png",_emotion]];
             _mouthView.frame = (CGRect){104.5, 264.0 + _h, _mouthView.image.size};
             break;
 
         case RMCharacterEmotionSleepy:
-            _mouthView.image = [UIImage imageCacheNamed:[NSString stringWithFormat:@"Romo_Emotion_Mouth_%d.png",RMCharacterEmotionHappy]];
+            _mouthView.image = [UIImage cacheableImageNamed:[NSString stringWithFormat:@"Romo_Emotion_Mouth_%d.png",RMCharacterEmotionHappy]];
             _mouthView.frame = (CGRect){43.5, 231.0 + _h, _mouthView.image.size};
             _mouthView.transform = CGAffineTransformMakeRotation(1.1 * M_PI/180.0);
             break;
             
         case RMCharacterEmotionSleeping: {
-            _mouthView.image = [UIImage imageCacheNamed:[NSString stringWithFormat:@"Romo_Emotion_Mouth_%d.png",_emotion]];
+            _mouthView.image = [UIImage cacheableImageNamed:[NSString stringWithFormat:@"Romo_Emotion_Mouth_%d.png",_emotion]];
             _mouthView.frame = (CGRect){96.0, 268.0 + _h, _mouthView.image.size};
             [UIView animateWithDuration:3.0
                                   delay:0.0
