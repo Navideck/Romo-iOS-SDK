@@ -1,14 +1,10 @@
-//
-//  UIView+VisionAdditions.m
-//  RMVision
-//
-//  Created on 6/19/13.
-//  Copyright (c) 2013 Romotive, Inc. All rights reserved.
-//
+#import <Romo/UIView+Additions.h>
 
-#import "UIView+VisionAdditions.h"
+/**
+ * Additions
+ */
 
-@implementation UIView (VisionAdditions)
+@implementation UIView (Additions)
 
 - (CGFloat)left {
     return self.frame.origin.x;
@@ -86,6 +82,11 @@
     self.frame = frame;
 }
 
+- (CGPoint)boundsCenter
+{
+    return CGPointMake(self.frame.size.width / 2.0, self.frame.size.height / 2.0);
+}
+
 - (CGPoint)origin {
     return self.frame.origin;
 }
@@ -113,6 +114,12 @@
     }
 }
 
+- (void)removeAllGestureRecognizers {
+    for (UIGestureRecognizer* gesture in self.gestureRecognizers) {
+        [self removeGestureRecognizer:gesture];
+    }
+}
+
 - (CGPoint)offsetFromView:(UIView*)otherView {
     CGFloat x = 0, y = 0;
     for (UIView* view = self; view && view != otherView; view = view.superview) {
@@ -123,4 +130,3 @@
 }
 
 @end
-
