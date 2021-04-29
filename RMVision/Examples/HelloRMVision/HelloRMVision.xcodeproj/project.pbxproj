@@ -231,6 +231,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = AC1329B4176EA8F100140188;
@@ -284,8 +285,6 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-HelloRMVision/Pods-HelloRMVision-resources.sh",
 				"${PODS_ROOT}/GPUImage/framework/Resources/lookup.png",
@@ -296,8 +295,6 @@
 				"${PODS_CONFIGURATION_BUILD_DIR}/Romo/RMVision.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_amatorka.png",
@@ -464,7 +461,7 @@
 					"$(SRCROOT)/../../RMVision/RMVision/src/**",
 				);
 				INFOPLIST_FILE = "HelloRMVision/HelloRMVision-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.navideck.HelloRMVision;
@@ -494,7 +491,7 @@
 					"$(SRCROOT)/../../RMVision/RMVision/src/**",
 				);
 				INFOPLIST_FILE = "HelloRMVision/HelloRMVision-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.navideck.HelloRMVision;

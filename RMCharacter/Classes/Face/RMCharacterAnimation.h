@@ -3,7 +3,6 @@
 //
 
 #import "RMCharacter.h"
-#import "RMCharacterImage.h"
 
 typedef enum {
     RMAnimatedActionIntro,

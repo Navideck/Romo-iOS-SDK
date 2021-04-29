@@ -5,7 +5,7 @@
 #import "RMCharacterAnimation.h"
 #import "RMCharacter.h"
 #import <Romo/RMMath.h>
-#import <Romo/UIImage+Retina.h>
+#import <Romo/UIImage+Cache.h>
 
 typedef void (^BoolBlock)(BOOL);
 
@@ -31,10 +31,10 @@ typedef void (^BoolBlock)(BOOL);
     int _index;
 }
 
-@property (nonatomic, strong) RMCharacterImage* staticImage;
+@property (nonatomic, strong) UIImage* staticImage;
 @property (nonatomic, copy)   BoolBlock completion;
 
-- (RMCharacterImage *)spriteSheet:(int)index withPrefix:(NSString *)prefix;
+- (UIImage *)spriteSheet:(int)index withPrefix:(NSString *)prefix;
 - (NSString *)prefixWithAction:(RMAnimatedAction)action forExpression:(RMCharacterExpression)expression;
 
 @end
@@ -45,7 +45,7 @@ typedef void (^BoolBlock)(BOOL);
 {
     [_timer invalidate];
     
-    self.staticImage = (RMCharacterImage *)self.image;
+    self.staticImage = (UIImage *)self.image;
     
     _index = 1;
     _sprite.image = [self spriteSheet:_index withPrefix:_prefix];
@@ -196,23 +196,20 @@ typedef void (^BoolBlock)(BOOL);
     [self startAnimating];
 }
 
-- (RMCharacterImage *)spriteSheet:(int)index withPrefix:(NSString *)prefix
+- (UIImage *)spriteSheet:(int)index withPrefix:(NSString *)prefix
 {
     if (index == 1) {
         _sprites = [NSMutableArray arrayWithCapacity:3];
         _crops = [NSMutableArray arrayWithCapacity:3];
         _frameCount = 0;
         while (1) {
-            UIImage* sprite = [RMCharacterImage smartImageNamed:[NSString stringWithFormat:@"%@_%d_img",prefix,index]];
+            UIImage* sprite = [UIImage cacheableImageNamed:[NSString stringWithFormat:@"%@_%d_img",prefix,index]];
             if (sprite) {
                 NSString* cropFile = [NSString stringWithFormat:@"%@_%d",prefix,index];
-                
-                NSBundle* bundle = [NSBundle bundleForClass:self.classForCoder];
-                NSString *frameworkBundlePath = [[[bundle resourceURL] URLByAppendingPathComponent:@"RMCharacter.bundle"] path];
-                NSBundle* characterBundle = [NSBundle bundleWithPath:frameworkBundlePath];
 
-                NSDataAsset* cropDataAsset = [[NSDataAsset alloc]initWithName:cropFile bundle:characterBundle];
-                NSArray* crop = [NSJSONSerialization JSONObjectWithData:cropDataAsset.data options:0 error:nil][@"frames"];
+                NSBundle* bundle = [NSBundle mainBundle];
+                NSData* cropData = [NSData dataWithContentsOfFile:[bundle pathForResource:cropFile ofType:@"json"]];
+                NSArray* crop = [NSJSONSerialization JSONObjectWithData:cropData options:0 error:nil][@"frames"];
                 _frameCount += crop.count;
                 [_crops addObject:crop];
                 [_sprites addObject:sprite];
@@ -226,7 +223,7 @@ typedef void (^BoolBlock)(BOOL);
         return _sprites[0];
     } else if (index > 0 && index <= _sprites.count) {
         _crop = _crops[index - 1];
-        RMCharacterImage *sprite = _sprites[index - 1];
+        UIImage *sprite = _sprites[index - 1];
         
         [_crops replaceObjectAtIndex:index - 1 withObject:[NSNull null]];
         [_sprites replaceObjectAtIndex:index - 1 withObject:[NSNull null]];
@@ -352,7 +349,7 @@ typedef void (^BoolBlock)(BOOL);
     return nil;
 }
 
-- (void)setImage:(RMCharacterImage *)image
+- (void)setImage:(UIImage *)image
 {
     if (_animating2) {
         self.staticImage = image;
@@ -363,7 +360,7 @@ typedef void (^BoolBlock)(BOOL);
 
 - (void)didReceiveMemoryWarning
 {
-    [RMCharacterImage emptyCache];
+    [UIImage emptyCache];
 }
 
 @end

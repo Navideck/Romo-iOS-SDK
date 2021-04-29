@@ -5,7 +5,6 @@
 
 #import <UIKit/UIKit.h>
 #import "RMCharacter.h"
-#import "RMCharacterImage.h"
 
 @protocol RMCharacterFaceDelegate;
 

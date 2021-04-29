@@ -1,10 +1,16 @@
-# Romotive SDK
+# Romo iOS SDK
 ---
 ## Version History
 
-### 0.5.2 (RC)
+### 0.5.3 (RC)
 #### Fixed in this version
-- **README**: Renamed app to *Romo* and SDK to*Romo iOS SDK*
+- **RMVision**: Fix not locking camera before frame rate adjustment
+- **RMCharacter**: Backport to iOS 7
+- **POD**: Set minimum iOS version to 7.0
+
+### 0.5.2 (RC)
+#### New in this version
+- **README**: Renamed app to *Romo* and SDK to *Romo iOS SDK*
 - **POD**: Switched to the new repo URL after renaming
 
 ### 0.5.1 (RC)

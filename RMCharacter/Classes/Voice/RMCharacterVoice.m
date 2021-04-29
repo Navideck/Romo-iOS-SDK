@@ -16,7 +16,6 @@
 }
 
 @property (nonatomic, strong) AVAudioPlayer *audioPlayer;
-@property (nonatomic, strong) NSBundle *characterBundle;
 @property (atomic, getter=isInitialized) BOOL initialized;
 @property (nonatomic) BOOL playingAuxiliarySound;
 
@@ -45,10 +44,6 @@
     self = [super init];
     if (self) {
         _characterType = characterType;
-        NSBundle* bundle = [NSBundle bundleForClass:self.classForCoder];
-        NSString *frameworkBundlePath = [[[bundle resourceURL] URLByAppendingPathComponent:@"RMCharacter.bundle"] path];
-        _characterBundle = [NSBundle bundleWithPath:frameworkBundlePath];
-
         self.initialized = YES;
     }
     return self;
@@ -137,20 +132,22 @@
 
 - (void)_setExpression
 {
-    
-    NSDataAsset *audioDataAsset;
-    
-    // Special case for farting
-    if (_expression == RMCharacterExpressionFart) {
-        int randomSound = arc4random_uniform(kNumFarts);
-        audioDataAsset = [[NSDataAsset alloc]initWithName:[NSString stringWithFormat:@"%d-%02d",_expression, randomSound] bundle: self.characterBundle];
-    } else {
-        audioDataAsset = [[NSDataAsset alloc]initWithName:[NSString stringWithFormat:@"%d",_expression] bundle: self.characterBundle];
-    }
 
-    [self audioDidFinish];
-    self.audioPlayer = [[AVAudioPlayer alloc] initWithData:audioDataAsset.data error:nil];
-    
+NSString *path;
+
+// Special case for farting
+if (_expression == RMCharacterExpressionFart) {
+    int randomSound = arc4random_uniform(kNumFarts);
+    path = [[NSBundle bundleForClass:self.classForCoder] pathForResource:[NSString stringWithFormat:@"%d-%02d",_expression, randomSound] ofType:@"caf"];
+} else {
+    path = [[NSBundle bundleForClass:self.classForCoder] pathForResource:[NSString stringWithFormat:@"%d",_expression] ofType:@"caf"];
+}
+path = [path stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLHostAllowedCharacterSet]];
+
+[self audioDidFinish];
+self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL URLWithString:path] error:nil];
+
+
     if (self.audioPlayer.duration) {
         [self.audioPlayer prepareToPlay];
         self.audioPlayer.delegate = self;
@@ -178,8 +175,10 @@
         }
     }
 
-    NSDataAsset *audioDataAsset = [[NSDataAsset alloc]initWithName:filename bundle: self.characterBundle];
-    self.audioPlayer = [[AVAudioPlayer alloc] initWithData:audioDataAsset.data error:nil];
+    NSString *path = [[NSBundle bundleForClass:self.classForCoder] pathForResource:filename ofType:@"caf"];
+    path = [path stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLHostAllowedCharacterSet]];
+
+    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL URLWithString:path] error:nil];
 
     self.playingAuxiliarySound = YES;
     if (self.audioPlayer.duration) {

@@ -1,14 +1,7 @@
-//
-//  UIView+VisionAdditions.h
-//  RMVision
-//
-//  Created on 6/19/13.
-//  Copyright (c) 2013 Romotive, Inc. All rights reserved.
-//
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface UIView (VisionAdditions)
+@interface UIView (Additions)
 
 /**
  * Shortcut for frame.origin.x.
@@ -67,6 +60,12 @@
 @property (nonatomic) CGFloat centerY;
 
 /**
+ * Shortcut for CGPointMake(self.width / 2.0, self.height / 2.0)
+ * Returns the center of the bounds
+ */
+@property (nonatomic, readonly) CGPoint boundsCenter;
+
+/**
  * Shortcut for frame.origin
  */
 @property (nonatomic) CGPoint origin;
@@ -80,6 +79,11 @@
  * Removes all subviews.
  */
 - (void)removeAllSubviews;
+
+/**
+ * Removes all gesture recognizers.
+ */
+- (void)removeAllGestureRecognizers;
 
 /**
  * Calculates the offset of this view from another view in screen coordinates.

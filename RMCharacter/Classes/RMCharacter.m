@@ -8,6 +8,7 @@
 #import "RMCharacterVoice.h"
 #import "RMCharacterPNS.h"
 #import <Romo/RMMath.h>
+#import <Romo/UIImage+Cache.h>
 
 #define NUM_EMOTIONS    10
 #define NUM_EXPRESSIONS 32
@@ -333,7 +334,7 @@ NSString *const RMCharacterDidFinishAudioNotification = @"RMCharacterDidFinishAu
     [self.face.view removeFromSuperview];
     self.voice.fading = YES;
     [self.pns stop];
-    [RMCharacterImage emptyCache];
+    [UIImage emptyCache];
 }
 
 - (void)say:(NSString *)utterance
