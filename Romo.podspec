@@ -5,7 +5,7 @@ Pod::Spec.new do |spec|
   spec.version      = '0.5.3'
   spec.authors      = { 'Navideck' => 'team@navideck.com' }
   spec.source       = { :git => 'https://github.com/Navideck/Romo-iOS-SDK', :tag => "Romo_v#{spec.version}" }
-  spec.ios.deployment_target = '7.0'
+  spec.ios.deployment_target = '6.0'
   spec.requires_arc = true
   spec.static_framework = true
   spec.license = { :file => 'LICENSE.md' }
@@ -40,4 +40,10 @@ Pod::Spec.new do |spec|
   end
 
   spec.default_subspec = "RMCore"
+
+  # Fix for "building for iOS Simulator, but linking in object file built for iOS" when doing pod trunk push
+  spec.pod_target_xcconfig = {
+    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
+  }
+  spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 end
