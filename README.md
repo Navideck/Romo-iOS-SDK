@@ -37,25 +37,27 @@ If you additionally need `RMCharacter` add
 ```ruby
 pod 'Romo/RMCharacter'
 ```
-
 Make sure to **comment out** `use_frameworks!` as you will face missing assets otherwise.
+You will also need to add
+
+```install! 'cocoapods', :disable_input_output_paths => true```
+on top of your Podfile.
 
 If you additionally need `RMVision` add
 ```ruby
 pod 'Romo/RMVision'
 ```
 
-Make sure to **comment out** `use_frameworks!` as you will face missing assets otherwise.
-
 A complete `PodFile` with all frameworks would look like this:
 
 ```ruby
 # Uncomment the next line to define a global platform for your project
 platform :ios, '6.0'
+install! 'cocoapods', :disable_input_output_paths => true
 
 target 'My Cool Romo App' do
   # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
+  # use_frameworks!
 
   # Pods for My Cool Romo App
   pod 'Romo'
