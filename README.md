@@ -6,7 +6,7 @@
 </p>
 
 <p align="center" >
-<img src="https://img.shields.io/badge/platform-iOS%206,%207,%208,%209,%2010,%2011,%2012,%2013,%2014,%2015,%2016-blue.svg" alt="Platform: iOS 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16" /></p>
+<img src="https://img.shields.io/badge/platform-iOS%206,%207,%208,%209,%2010,%2011,%2012,%2013,%2014,%2015,%2016,%2017-blue.svg" alt="Platform: iOS 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17" /></p>
 
 Romo SDK gives you the power to write your own software for Romo robots. After downloading the SDK, this guide will help you get rolling so you can start developing apps for Romo.
 
