@@ -93,7 +93,7 @@ typedef enum {
     RMCharacterExpressionExcited         = 6,
     /// The character becomes exhausted
     RMCharacterExpressionExhausted       = 7,
-    /// The character becomes exhausted
+    /// The character lets out a fart
     RMCharacterExpressionFart            = 26,
     /// The character gets happy
     RMCharacterExpressionHappy           = 8,
