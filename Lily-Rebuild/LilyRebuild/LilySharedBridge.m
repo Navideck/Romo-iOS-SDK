@@ -1,4 +1,4 @@
-#import "LilySharedBridge.h"
+﻿#import "LilySharedBridge.h"
 #import <objc/message.h>
 #import <Romo/RMCore.h>
 #import <sys/socket.h>
@@ -333,6 +333,31 @@ static uintptr_t gLilyNativeRegisterToolsAddress = 0;
 static uintptr_t gLilyNativeRegisterToolsTrampoline = 0;
 static uint8_t gLilyOriginalRegisterToolsBytes[16];
 static void *gLilyRomoInjectedServer = NULL;
+
+/*
+ * IMPORTANT:
+ *
+ * SharedMcpTool is an Objective-C wrapper.
+ * McpServer#addTool expects the underlying Kotlin/Native McpTool.
+ *
+ * Keep the Objective-C wrappers alive because their callbacks are
+ * owned by the wrapper object.
+ */
+static NSMutableArray *gLilyRomoToolWrappers = nil;
+
+static void LilyRetainRomoToolWrapper(id tool) {
+    if (!tool) {
+        return;
+    }
+
+    @synchronized ([NSObject class]) {
+        if (!gLilyRomoToolWrappers) {
+            gLilyRomoToolWrappers = [[NSMutableArray alloc] init];
+        }
+
+        [gLilyRomoToolWrappers addObject:tool];
+    }
+}
 static pthread_mutex_t gLilyNativeHookLock = PTHREAD_MUTEX_INITIALIZER;
 
 static void LilyRomoForwardNoArgs(void) {
@@ -390,70 +415,197 @@ static uintptr_t LilyFindSharedImageSlide(void);
 
 typedef void (*LilyMcpAddToolFn)(void *server, void *tool);
 
+/*
+ * Shared_toKotlin: ABI verified from the Lily Shared framework.
+ *
+ * type encoding:
+ *
+ *     ^{ObjHeader=^{TypeInfo}}24@0:8^^{ObjHeader}16
+ *
+ * Therefore:
+ *
+ *     x0 = Objective-C wrapper
+ *     x1 = selector
+ *     x2 = ObjHeader **
+ *
+ * return:
+ *
+ *     x0 = ObjHeader *
+ *
+ * The implementation was verified statically at:
+ *
+ *     Shared + 0x32D06F0
+ *
+ * IMPORTANT:
+ *
+ * SharedMcpTool is NOT itself the native Kotlin McpTool pointer.
+ * We must convert it through Shared_toKotlin: before calling
+ * McpServer#addTool.
+ */
+typedef void *(*LilySharedToKotlinFn)(id self, SEL _cmd, void **outNative);
+
+static void *LilySharedMcpToolToKotlin(id tool) {
+    if (!tool) {
+        LilyMCPWrite(@"MCP-ROMO TOKOTLIN: tool=NULL");
+        return NULL;
+    }
+
+    SEL toKotlinSel = sel_registerName("Shared_toKotlin:");
+
+    if (![tool respondsToSelector:toKotlinSel]) {
+        LilyMCPWrite(@"MCP-ROMO TOKOTLIN: Shared_toKotlin: NOT FOUND");
+        return NULL;
+    }
+
+    Class cls = object_getClass(tool);
+
+    IMP imp = class_getMethodImplementation(cls, toKotlinSel);
+
+    if (!imp) {
+        LilyMCPWrite(@"MCP-ROMO TOKOTLIN: IMP NOT FOUND");
+        return NULL;
+    }
+
+    LilySharedToKotlinFn fn =
+        (LilySharedToKotlinFn)imp;
+
+    void *outNative = NULL;
+
+    void *returnNative =
+        fn(tool, toKotlinSel, &outNative);
+
+    /*
+     * Verified implementation writes the native pointer through x2
+     * and also returns a native pointer.
+     *
+     * Prefer the explicit out parameter when present.
+     */
+    void *nativeTool =
+        outNative ? outNative : returnNative;
+
+    LilyMCPWrite([NSString stringWithFormat:
+        @"MCP-ROMO TOKOTLIN: objc=%p native=%p return=%p out=%p",
+        tool,
+        nativeTool,
+        returnNative,
+        outNative]);
+
+    return nativeTool;
+}
+
 /* BUILD #70: real Kotlin/Native call to McpServer#addTool.
    Verified ABI: x0 = McpServer*, x1 = McpTool*.
    Verified symbol: Shared + 0x126CC88. */
-static void LilyAddRomoToolNative(void *server, id tool) {
-    if (!server || !tool) {
-        LilyMCPWrite(@"MCP-ROMO #73 ADDTOOL: missing server/tool");
+static void LilyAddRomoToolNative(void *server, id objcTool) {
+    if (!server || !objcTool) {
+        LilyMCPWrite(@"MCP-ROMO #73 ADDTOOL: missing server/objcTool");
         return;
     }
 
+    /*
+     * objcTool is SharedMcpTool.
+     *
+     * DO NOT pass:
+     *
+     *     (__bridge void *)objcTool
+     *
+     * directly to Kotlin/Native.
+     *
+     * McpServer#addTool expects:
+     *
+     *     McpTool *
+     *
+     * Convert the Objective-C wrapper to its underlying Kotlin object.
+     */
+    void *nativeTool = LilySharedMcpToolToKotlin(objcTool);
+
+    if (!nativeTool) {
+        LilyMCPWrite(@"MCP-ROMO #73 ADDTOOL: Shared_toKotlin returned NULL");
+        return;
+    }
+
+    /*
+     * Keep the Objective-C wrapper alive.
+     *
+     * The wrapper owns/bridges the callback used by the MCP tool.
+     */
+    LilyRetainRomoToolWrapper(objcTool);
+
     uintptr_t slide = LilyFindSharedImageSlide();
+
     if (!slide) {
         LilyMCPWrite(@"MCP-ROMO #73 ADDTOOL: Shared.framework slide NOT FOUND");
         return;
     }
 
     uintptr_t target = slide + 0x126CC88;
+
     pthread_t tid = pthread_self();
     int isMain = pthread_main_np();
-    LilyMCPWrite([NSString stringWithFormat:
-        @"MCP-ROMO #73 ADDTOOL NATIVE ENTER server=%p tool=%p target=0x%llx pthread=%p main=%d",
-        server, tool, (unsigned long long)target, (void *)tid, isMain]);
 
-    /* Pure raw-memory probe: no ObjC messaging/getters.
-       Verified McpTool native layout:
-         +0x08 name
-         +0x10 description
-         +0x18 properties
-         +0x20 callback
-         +0x28 userOnly
-    */
-    uintptr_t t = (uintptr_t)tool;
+    LilyMCPWrite([NSString stringWithFormat:
+        @"MCP-ROMO #73 ADDTOOL NATIVE ENTER server=%p objcTool=%p nativeTool=%p target=0x%llx pthread=%p main=%d",
+        server,
+        objcTool,
+        nativeTool,
+        (unsigned long long)target,
+        (void *)tid,
+        isMain]);
+
+    /*
+     * Raw dump of the REAL Kotlin McpTool.
+     *
+     * Verified layout:
+     *
+     * +0x00 typeinfo
+     * +0x08 name
+     * +0x10 description
+     * +0x18 properties
+     * +0x20 callback
+     * +0x28 userOnly
+     *
+     * We intentionally do NOT dereference the fields beyond reading
+     * their pointer values.
+     */
+    uintptr_t t = (uintptr_t)nativeTool;
+
+    uintptr_t v00 = *(uintptr_t *)(t + 0x00);
     uintptr_t v08 = *(uintptr_t *)(t + 0x08);
-    LilyMCPWrite([NSString stringWithFormat:
-        @"MCP-ROMO #73 TOOL +08 name=0x%llx",
-        (unsigned long long)v08]);
-
     uintptr_t v10 = *(uintptr_t *)(t + 0x10);
-    LilyMCPWrite([NSString stringWithFormat:
-        @"MCP-ROMO #73 TOOL +10 description=0x%llx",
-        (unsigned long long)v10]);
-
     uintptr_t v18 = *(uintptr_t *)(t + 0x18);
-    LilyMCPWrite([NSString stringWithFormat:
-        @"MCP-ROMO #73 TOOL +18 properties=0x%llx",
-        (unsigned long long)v18]);
-
     uintptr_t v20 = *(uintptr_t *)(t + 0x20);
-    LilyMCPWrite([NSString stringWithFormat:
-        @"MCP-ROMO #73 TOOL +20 callback=0x%llx",
-        (unsigned long long)v20]);
+    uintptr_t v28 = *(uintptr_t *)(t + 0x28);
 
-    uint8_t v28 = *(uint8_t *)(t + 0x28);
     LilyMCPWrite([NSString stringWithFormat:
-        @"MCP-ROMO #73 TOOL +28 userOnly=%u", (unsigned)v28]);
+        @"MCP-ROMO #73 NATIVE TOOL native=%p +00=0x%llx +08=0x%llx +10=0x%llx +18=0x%llx +20=0x%llx +28=0x%llx",
+        nativeTool,
+        (unsigned long long)v00,
+        (unsigned long long)v08,
+        (unsigned long long)v10,
+        (unsigned long long)v18,
+        (unsigned long long)v20,
+        (unsigned long long)v28]);
 
     LilyMCPWrite(@"MCP-ROMO #73 CALL ADDTOOL BEGIN");
-    ((LilyMcpAddToolFn)target)(server, (__bridge void *)tool);
+
+    /*
+     * CRITICAL:
+     *
+     * x0 = McpServer *
+     * x1 = Kotlin/Native McpTool *
+     *
+     * NOT the Objective-C SharedMcpTool wrapper.
+     */
+    ((LilyMcpAddToolFn)target)(server, nativeTool);
+
     LilyMCPWrite(@"MCP-ROMO #73 CALL ADDTOOL RETURNED");
 
     LilyMCPWrite([NSString stringWithFormat:
-        @"MCP-ROMO #73 ADDTOOL NATIVE RETURN server=%p tool=%p",
-        server, tool]);
+        @"MCP-ROMO #73 ADDTOOL NATIVE RETURN server=%p objcTool=%p nativeTool=%p",
+        server,
+        objcTool,
+        nativeTool]);
 }
-
 static void LilyDumpToolRaw73(id tool, const char *tag) {
     if (!tool) return;
 
@@ -783,7 +935,7 @@ static void LilyNativeRegisterToolsHook(void *server) {
        This is intentionally different from BUILD #47: #47 injected while
        already executing inside addTool(). Here registerTools() has fully
        returned first. We also do NOT bridge/capture McpServer as an
-       Objective-C id; the native addTool ABI takes the raw pointer directly. */
+       Objective-C id; the native addTool ABI takes the underlying Kotlin McpTool pointer returned by Shared_toKotlin:. */
     if (server) {
         pthread_t tid = pthread_self();
         int isMain = pthread_main_np();
@@ -854,4 +1006,5 @@ static void LilyInstallMCPRomoHook(void) {
 }
 
 @end
+
 
