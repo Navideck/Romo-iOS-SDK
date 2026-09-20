@@ -532,7 +532,7 @@ static id LilyCreateDistanceProperty(NSString *name) {
     id type = LilyMcpIntegerPropertyType();
     if (!type) return nil;
 
-    typedef id (*PropertyInitFn)(id, SEL, id, id, id, id, BOOL);
+    typedef id (*PropertyInitFn)(id, SEL, id, id, id, id, id, BOOL);
     PropertyInitFn initFn = (PropertyInitFn)objc_msgSend;
 
     id property =
