@@ -229,193 +229,32 @@ static const int kLilyRomoHTTPPort = 5000;
     if (romo) [romo stopDriving];
 }
 
-- (void)drivePower:(float)power durationMs:(NSInteger)durationMs {
-    RMCoreRobot<DifferentialDriveProtocol> *romo =
-        (RMCoreRobot<DifferentialDriveProtocol> *)self.robot;
+- (NSString *)statusText {
+    RMCoreRobot *romo = self.robot;
     if (!romo) {
-        NSLog(@"[Lily][Romo] DRIVE_POWER ignored: no robot");
-        return;
+        NSLog(@"[Lily][Romo] STATUS -> disconnected");
+        return @"Romo is not connected";
     }
 
-    if (!isfinite(power)) power = 0.0f;
-    power = fmaxf(-1.0f, fminf(1.0f, power));
-    durationMs = MAX(100, MIN(10000, durationMs));
+    float batteryLevel = romo.vitals.batteryLevel;
+    int batteryPercent = (int)lroundf(batteryLevel * 100.0f);
+    if (batteryPercent < 0) batteryPercent = 0;
+    if (batteryPercent > 100) batteryPercent = 100;
 
-    [romo driveWithPower:power];
-    NSLog(@"[Lily][Romo] DRIVE_POWER power=%.3f duration=%ldms",
-          power, (long)durationMs);
+    BOOL charging = romo.vitals.isCharging;
 
-    dispatch_after(
-        dispatch_time(DISPATCH_TIME_NOW,
-                      (int64_t)durationMs * NSEC_PER_MSEC),
-        dispatch_get_main_queue(), ^{
-            RMCoreRobot<DifferentialDriveProtocol> *r =
-                (RMCoreRobot<DifferentialDriveProtocol> *)self.robot;
-            if (r) [r stopDriving];
-            NSLog(@"[Lily][Romo] DRIVE_POWER -> STOP");
-        });
-}
+    NSString *status = [NSString stringWithFormat:
+        @"Romo is connected. Battery: %d%%. Charging: %@. Drivable: %@. Head tiltable: %@. LED equipped: %@. IMU equipped: %@.",
+        batteryPercent,
+        charging ? @"yes" : @"no",
+        romo.isDrivable ? @"yes" : @"no",
+        romo.isHeadTiltable ? @"yes" : @"no",
+        romo.isLEDEquipped ? @"yes" : @"no",
+        romo.isIMUEquipped ? @"yes" : @"no"];
 
-- (void)driveLeftPower:(float)left rightPower:(float)right durationMs:(NSInteger)durationMs {
-    RMCoreRobot<DifferentialDriveProtocol> *romo =
-        (RMCoreRobot<DifferentialDriveProtocol> *)self.robot;
-    if (!romo) {
-        NSLog(@"[Lily][Romo] DRIVE_MOTORS ignored: no robot");
-        return;
-    }
-
-    if (!isfinite(left)) left = 0.0f;
-    if (!isfinite(right)) right = 0.0f;
-    left = fmaxf(-1.0f, fminf(1.0f, left));
-    right = fmaxf(-1.0f, fminf(1.0f, right));
-    durationMs = MAX(100, MIN(10000, durationMs));
-
-    [romo driveWithLeftMotorPower:left rightMotorPower:right];
-    NSLog(@"[Lily][Romo] DRIVE_MOTORS left=%.3f right=%.3f duration=%ldms",
-          left, right, (long)durationMs);
-
-    dispatch_after(
-        dispatch_time(DISPATCH_TIME_NOW,
-                      (int64_t)durationMs * NSEC_PER_MSEC),
-        dispatch_get_main_queue(), ^{
-            RMCoreRobot<DifferentialDriveProtocol> *r =
-                (RMCoreRobot<DifferentialDriveProtocol> *)self.robot;
-            if (r) [r stopDriving];
-            NSLog(@"[Lily][Romo] DRIVE_MOTORS -> STOP");
-        });
-}
-
-- (void)turnToHeading:(float)heading {
-    RMCoreRobot<DriveProtocol> *romo =
-        (RMCoreRobot<DriveProtocol> *)self.robot;
-    if (!romo) {
-        NSLog(@"[Lily][Romo] TURN_HEADING ignored: no robot");
-        return;
-    }
-
-    if (!isfinite(heading)) {
-        NSLog(@"[Lily][Romo] TURN_HEADING ignored: invalid heading");
-        return;
-    }
-
-    while (heading > 180.0f) heading -= 360.0f;
-    while (heading < -180.0f) heading += 360.0f;
-
-    [romo turnToHeading:heading
-             withRadius:RM_DRIVE_RADIUS_TURN_IN_PLACE
-        finishingAction:RMCoreTurnFinishingActionStopDriving
-             completion:^(BOOL success, float finalHeading) {
-        [romo stopDriving];
-        NSLog(@"[Lily][Romo] TURN_HEADING target=%.2f final=%.2f success=%d",
-              heading, finalHeading, success);
-    }];
-}
-
-
-/*
- * Distance control follows the verified RMActionRunner algorithm:
- *
- *   topSpeedMetersPerSecond = 0.67
- *   speed = 0.5
- *
- * The requested distance is in centimeters.
- * The same normalization/timing formula used by RMActionRunner is applied,
- * then the robot is stopped automatically after the calculated duration.
- */
-- (void)forwardDistanceCm:(float)distanceCm {
-    RMCoreRobot<DriveProtocol> *romo =
-        (RMCoreRobot<DriveProtocol> *)self.robot;
-
-    if (!romo) {
-        NSLog(@"[Lily][Romo] FORWARD_DISTANCE ignored: no robot");
-        return;
-    }
-
-    if (!(distanceCm > 0.0f)) {
-        NSLog(@"[Lily][Romo] FORWARD_DISTANCE ignored: invalid distance=%f", distanceCm);
-        return;
-    }
-
-    const float speed = 0.5f;
-    const float topSpeedMetersPerSecond = 0.67f;
-
-    float normalizeForSpeed =
-        (powf(0.06f * ((100.0f * speed) - 50.0f), 3.0f) + 85.0f) / 112.0f;
-
-    float distanceInMeters = (distanceCm / 100.0f) * normalizeForSpeed;
-    float metersPerSecondAtSpeed = topSpeedMetersPerSecond * speed;
-    float secondsAtSpeed = distanceInMeters / metersPerSecondAtSpeed;
-
-    if (!(secondsAtSpeed > 0.0f) || !isfinite(secondsAtSpeed)) {
-        NSLog(@"[Lily][Romo] FORWARD_DISTANCE invalid duration=%f", secondsAtSpeed);
-        return;
-    }
-
-    [romo driveForwardWithSpeed:speed];
-
-    NSLog(@"[Lily][Romo] FORWARD_DISTANCE %.2f cm -> %.3f sec",
-          distanceCm, secondsAtSpeed);
-
-    dispatch_after(
-        dispatch_time(DISPATCH_TIME_NOW,
-                      (int64_t)(secondsAtSpeed * NSEC_PER_SEC)),
-        dispatch_get_main_queue(), ^{
-            RMCoreRobot<DriveProtocol> *r =
-                (RMCoreRobot<DriveProtocol> *)self.robot;
-            if (r) {
-                [r stopDriving];
-            }
-            NSLog(@"[Lily][Romo] FORWARD_DISTANCE %.2f cm -> STOP",
-                  distanceCm);
-        });
-}
-
-- (void)backwardDistanceCm:(float)distanceCm {
-    RMCoreRobot<DriveProtocol> *romo =
-        (RMCoreRobot<DriveProtocol> *)self.robot;
-
-    if (!romo) {
-        NSLog(@"[Lily][Romo] BACKWARD_DISTANCE ignored: no robot");
-        return;
-    }
-
-    if (!(distanceCm > 0.0f)) {
-        NSLog(@"[Lily][Romo] BACKWARD_DISTANCE ignored: invalid distance=%f", distanceCm);
-        return;
-    }
-
-    const float speed = 0.5f;
-    const float topSpeedMetersPerSecond = 0.67f;
-
-    float normalizeForSpeed =
-        (powf(0.06f * ((100.0f * speed) - 50.0f), 3.0f) + 85.0f) / 112.0f;
-
-    float distanceInMeters = (distanceCm / 100.0f) * normalizeForSpeed;
-    float metersPerSecondAtSpeed = topSpeedMetersPerSecond * speed;
-    float secondsAtSpeed = distanceInMeters / metersPerSecondAtSpeed;
-
-    if (!(secondsAtSpeed > 0.0f) || !isfinite(secondsAtSpeed)) {
-        NSLog(@"[Lily][Romo] BACKWARD_DISTANCE invalid duration=%f", secondsAtSpeed);
-        return;
-    }
-
-    [romo driveBackwardWithSpeed:speed];
-
-    NSLog(@"[Lily][Romo] BACKWARD_DISTANCE %.2f cm -> %.3f sec",
-          distanceCm, secondsAtSpeed);
-
-    dispatch_after(
-        dispatch_time(DISPATCH_TIME_NOW,
-                      (int64_t)(secondsAtSpeed * NSEC_PER_SEC)),
-        dispatch_get_main_queue(), ^{
-            RMCoreRobot<DriveProtocol> *r =
-                (RMCoreRobot<DriveProtocol> *)self.robot;
-            if (r) {
-                [r stopDriving];
-            }
-            NSLog(@"[Lily][Romo] BACKWARD_DISTANCE %.2f cm -> STOP",
-                  distanceCm);
-        });
+    NSLog(@"[Lily][Romo] STATUS -> %@", status);
+    LilyMCPWrite([NSString stringWithFormat:@"MCP-ROMO STATUS RESULT: %@", status]);
+    return status;
 }
 
 - (void)sendHTTPResponse:(int)clientSocket status:(const char *)status body:(NSString *)body {
@@ -562,286 +401,8 @@ static void LilyRomoStopNoArgs(void) {
     [[LilyRomoController sharedController] stopDriving];
 }
 
-
-/*
- * SharedMcpProperty is exported by Kotlin/Native.
- *
- * Verified constructor encoding:
- *   initWithName:type:min:max:value:hasDefault:
- *   @57@0:8@16@24@32@40@48c56
- *
- * Verified enum metadata contains:
- *   SharedMcpProperty
- *   string
- *   integer
- *   boolean
- *
- * We resolve the enum value dynamically so this bridge does not depend on
- * generated Swift/ObjC enum symbol spelling.
- */
-static id LilyMcpIntegerPropertyType(void) {
-    Class typeClass = NSClassFromString(@"SharedMcpPropertyType");
-    if (!typeClass) {
-        LilyMCPWrite(@"MCP-ROMO DISTANCE: SharedMcpPropertyType NOT FOUND");
-        return nil;
-    }
-
-    SEL sel = NSSelectorFromString(@"integer");
-    if (![typeClass respondsToSelector:sel]) {
-        LilyMCPWrite(@"MCP-ROMO DISTANCE: SharedMcpPropertyType.integer NOT FOUND");
-        return nil;
-    }
-
-    typedef id (*EnumGetterFn)(id, SEL);
-    return ((EnumGetterFn)objc_msgSend)(typeClass, sel);
-}
-
-static id LilyCreateIntegerProperty(NSString *name, NSInteger minValue, NSInteger maxValue, NSInteger defaultValue) {
-    Class propertyClass = NSClassFromString(@"SharedMcpProperty");
-    if (!propertyClass) {
-        LilyMCPWrite(@"MCP-ROMO PROPERTY: SharedMcpProperty NOT FOUND");
-        return nil;
-    }
-
-    SEL initSel = NSSelectorFromString(@"initWithName:type:min:max:value:hasDefault:");
-    if (![propertyClass instancesRespondToSelector:initSel]) {
-        LilyMCPWrite(@"MCP-ROMO PROPERTY: initializer NOT FOUND");
-        return nil;
-    }
-
-    id type = LilyMcpIntegerPropertyType();
-    if (!type) return nil;
-
-    typedef id (*PropertyInitFn)(id, SEL, id, id, id, id, id, BOOL);
-    PropertyInitFn initFn = (PropertyInitFn)objc_msgSend;
-
-    return initFn([propertyClass alloc], initSel,
-                  name, type,
-                  @(minValue), @(maxValue), @(defaultValue), YES);
-}
-
-static id LilyCreateDistanceProperty(NSString *name) {
-    Class propertyClass = NSClassFromString(@"SharedMcpProperty");
-    if (!propertyClass) {
-        LilyMCPWrite(@"MCP-ROMO DISTANCE: SharedMcpProperty NOT FOUND");
-        return nil;
-    }
-
-    SEL initSel =
-        NSSelectorFromString(@"initWithName:type:min:max:value:hasDefault:");
-
-    if (![propertyClass instancesRespondToSelector:initSel]) {
-        LilyMCPWrite(@"MCP-ROMO DISTANCE: property initializer NOT FOUND");
-        return nil;
-    }
-
-    id type = LilyMcpIntegerPropertyType();
-    if (!type) return nil;
-
-    typedef id (*PropertyInitFn)(id, SEL, id, id, id, id, id, BOOL);
-    PropertyInitFn initFn = (PropertyInitFn)objc_msgSend;
-
-    id property =
-        initFn([propertyClass alloc],
-               initSel,
-               name,
-               type,
-               @1,
-               @500,
-               @1,
-               YES);
-
-    LilyMCPWrite([NSString stringWithFormat:
-        @"MCP-ROMO DISTANCE PROPERTY: %@ %@",
-        name,
-        property ? @"CREATED" : @"FAILED"]);
-
-    return property;
-}
-
-static id LilyCreateDistanceRomoTool(NSString *name,
-                                     NSString *description,
-                                     id (^callback)(id)) {
-    id property = LilyCreateDistanceProperty(@"distance_cm");
-    if (!property) {
-        return nil;
-    }
-
-    NSArray *properties = @[property];
-
-    Class toolClass = NSClassFromString(@"SharedMcpTool");
-    if (!toolClass) {
-        LilyMCPWrite(@"MCP-ROMO DISTANCE: SharedMcpTool NOT FOUND");
-        return nil;
-    }
-
-    SEL initSel =
-        NSSelectorFromString(@"initWithName:description:properties:userOnly:callback:");
-
-    if (![toolClass instancesRespondToSelector:initSel]) {
-        LilyMCPWrite(@"MCP-ROMO DISTANCE: tool initializer NOT FOUND");
-        return nil;
-    }
-
-    typedef id (*ToolInitFn)(id, SEL, id, id, id, BOOL, id);
-    ToolInitFn initFn = (ToolInitFn)objc_msgSend;
-
-    id tool =
-        initFn([toolClass alloc],
-               initSel,
-               name,
-               description,
-               properties,
-               NO,
-               callback);
-
-    LilyMCPWrite([NSString stringWithFormat:
-        @"MCP-ROMO DISTANCE TOOL: %@ %@",
-        name,
-        tool ? @"CREATED" : @"FAILED"]);
-
-    return tool;
-}
-
-static id LilyCreateParameterizedRomoTool(NSString *name,
-                                             NSString *description,
-                                             NSArray *properties,
-                                             id (^callback)(id)) {
-    Class toolClass = NSClassFromString(@"SharedMcpTool");
-    if (!toolClass) {
-        LilyMCPWrite(@"MCP-ROMO PARAM TOOL: SharedMcpTool NOT FOUND");
-        return nil;
-    }
-
-    SEL initSel = NSSelectorFromString(@"initWithName:description:properties:userOnly:callback:");
-    if (![toolClass instancesRespondToSelector:initSel]) {
-        LilyMCPWrite(@"MCP-ROMO PARAM TOOL: initializer NOT FOUND");
-        return nil;
-    }
-
-    typedef id (*ToolInitFn)(id, SEL, id, id, id, BOOL, id);
-    ToolInitFn initFn = (ToolInitFn)objc_msgSend;
-
-    id tool = initFn([toolClass alloc], initSel, name, description, properties, NO, callback);
-
-    LilyMCPWrite([NSString stringWithFormat:@"MCP-ROMO PARAM TOOL: %@ %@",
-        name, tool ? @"CREATED" : @"FAILED"]);
-    return tool;
-}
-
-static NSInteger LilyIntegerArgument(id args, NSString *key, NSInteger fallback) {
-    if (![args isKindOfClass:[NSDictionary class]]) return fallback;
-    id value = [(NSDictionary *)args objectForKey:key];
-    if ([value respondsToSelector:@selector(integerValue)]) return [value integerValue];
-    return fallback;
-}
-
-static float LilyDistanceArgumentCm(id args) {
-    if (![args isKindOfClass:[NSDictionary class]]) {
-        LilyMCPWrite(@"MCP-ROMO DISTANCE CALLBACK: args is not NSDictionary");
-        return 0.0f;
-    }
-
-    id value = [(NSDictionary *)args objectForKey:@"distance_cm"];
-
-    if ([value respondsToSelector:@selector(floatValue)]) {
-        return [value floatValue];
-    }
-
-    /* Accept the common alternate spelling too, without changing the schema. */
-    value = [(NSDictionary *)args objectForKey:@"distance"];
-    if ([value respondsToSelector:@selector(floatValue)]) {
-        return [value floatValue];
-    }
-
-    return 0.0f;
-}
-
-static id LilyRomoForwardDistanceCallback(id args) {
-    float distanceCm = LilyDistanceArgumentCm(args);
-
-    LilyMCPWrite([NSString stringWithFormat:
-        @"MCP-ROMO DISTANCE CALLBACK: forward distance_cm=%.2f",
-        distanceCm]);
-
-    if (distanceCm <= 0.0f) {
-        return @"Invalid distance_cm";
-    }
-
-    [[LilyRomoController sharedController] forwardDistanceCm:distanceCm];
-
-    return [NSString stringWithFormat:
-        @"Romo moved forward %.2f cm", distanceCm];
-}
-
-static id LilyRomoBackwardDistanceCallback(id args) {
-    float distanceCm = LilyDistanceArgumentCm(args);
-
-    LilyMCPWrite([NSString stringWithFormat:
-        @"MCP-ROMO DISTANCE CALLBACK: backward distance_cm=%.2f",
-        distanceCm]);
-
-    if (distanceCm <= 0.0f) {
-        return @"Invalid distance_cm";
-    }
-
-    [[LilyRomoController sharedController] backwardDistanceCm:distanceCm];
-
-    return [NSString stringWithFormat:
-        @"Romo moved backward %.2f cm", distanceCm];
-}
-
-static id LilyRomoDrivePowerCallback(id args) {
-    NSInteger powerPercent = LilyIntegerArgument(args, @"power", 0);
-    NSInteger durationMs = LilyIntegerArgument(args, @"duration_ms", 1000);
-    powerPercent = MAX(-100, MIN(100, powerPercent));
-    durationMs = MAX(100, MIN(10000, durationMs));
-
-    LilyMCPWrite([NSString stringWithFormat:
-        @"MCP-ROMO CALLBACK: robot.drive_power power=%ld duration_ms=%ld",
-        (long)powerPercent, (long)durationMs]);
-
-    [[LilyRomoController sharedController]
-        drivePower:(float)powerPercent / 100.0f
-        durationMs:durationMs];
-
-    return [NSString stringWithFormat:@"Romo drive power %ld%% for %ld ms",
-            (long)powerPercent, (long)durationMs];
-}
-
-static id LilyRomoDriveMotorsCallback(id args) {
-    NSInteger leftPercent = LilyIntegerArgument(args, @"left", 0);
-    NSInteger rightPercent = LilyIntegerArgument(args, @"right", 0);
-    NSInteger durationMs = LilyIntegerArgument(args, @"duration_ms", 1000);
-    leftPercent = MAX(-100, MIN(100, leftPercent));
-    rightPercent = MAX(-100, MIN(100, rightPercent));
-    durationMs = MAX(100, MIN(10000, durationMs));
-
-    LilyMCPWrite([NSString stringWithFormat:
-        @"MCP-ROMO CALLBACK: robot.drive_motors left=%ld right=%ld duration_ms=%ld",
-        (long)leftPercent, (long)rightPercent, (long)durationMs]);
-
-    [[LilyRomoController sharedController]
-        driveLeftPower:(float)leftPercent / 100.0f
-        rightPower:(float)rightPercent / 100.0f
-        durationMs:durationMs];
-
-    return [NSString stringWithFormat:@"Romo motors left %ld%% right %ld%% for %ld ms",
-            (long)leftPercent, (long)rightPercent, (long)durationMs];
-}
-
-static id LilyRomoTurnHeadingCallback(id args) {
-    NSInteger heading = LilyIntegerArgument(args, @"heading", 0);
-    heading = MAX(-180, MIN(180, heading));
-
-    LilyMCPWrite([NSString stringWithFormat:
-        @"MCP-ROMO CALLBACK: robot.turn_heading heading=%ld",
-        (long)heading]);
-
-    [[LilyRomoController sharedController] turnToHeading:(float)heading];
-
-    return [NSString stringWithFormat:@"Romo turning to heading %ld degrees",
-            (long)heading];
+static NSString *LilyRomoStatusNoArgs(void) {
+    return [[LilyRomoController sharedController] statusText];
 }
 
 static id LilyCreateSimpleRomoTool(NSString *name,
@@ -1112,11 +673,12 @@ static void LilyDumpToolRaw73(id tool, const char *tag) {
  *   3 = forward then backward
  *   4 = backward then forward
  *   5 = forward, backward, stop (original #70 sequence)
+ *   6 = robot.status only (battery/charging/capabilities test)
  *
  * Change this one constant and rebuild for each experiment.
  */
 #ifndef LILY73_MODE
-#define LILY73_MODE 1
+#define LILY73_MODE 6
 #endif
 
 static void LilyInjectRobotToolsIntoServer(void *server) {
@@ -1134,6 +696,7 @@ static void LilyInjectRobotToolsIntoServer(void *server) {
     id forwardTool = nil;
     id backwardTool = nil;
     id stopTool = nil;
+    id statusTool = nil;
 
 #if LILY73_MODE == 1 || LILY73_MODE == 3 || LILY73_MODE == 4 || LILY73_MODE == 5
     forwardTool = LilyCreateSimpleRomoTool(
@@ -1168,10 +731,24 @@ static void LilyInjectRobotToolsIntoServer(void *server) {
         });
 #endif
 
+#if LILY73_MODE == 6
+    statusTool = LilyCreateSimpleRomoTool(
+        @"robot.status",
+        @"Read the physical Romo robot status. Use this when the user asks about Romo battery percentage, charging state, connection, whether it can drive, head tilt support, LED support, or IMU support.",
+        ^id(id args) {
+            (void)args;
+            LilyMCPWrite(@"MCP-ROMO STATUS CALLBACK ENTER");
+            NSString *result = LilyRomoStatusNoArgs();
+            LilyMCPWrite([NSString stringWithFormat:@"MCP-ROMO STATUS CALLBACK RETURN: %@", result]);
+            return result;
+        });
+#endif
+
     /* Dump before any native insertion. */
     if (forwardTool)  LilyDumpToolRaw73(forwardTool,  "FORWARD BEFORE");
     if (backwardTool) LilyDumpToolRaw73(backwardTool, "BACKWARD BEFORE");
     if (stopTool)     LilyDumpToolRaw73(stopTool,     "STOP BEFORE");
+    if (statusTool)   LilyDumpToolRaw73(statusTool,   "STATUS BEFORE");
 
 #if LILY73_MODE == 1
     if (forwardTool) {
@@ -1214,112 +791,12 @@ static void LilyInjectRobotToolsIntoServer(void *server) {
         LilyAddRomoToolNative(server, stopTool);
         LilyDumpToolRaw73(stopTool, "STOP AFTER");
     }
+#elif LILY73_MODE == 6
+    if (statusTool) {
+        LilyAddRomoToolNative(server, statusTool);
+        LilyDumpToolRaw73(statusTool, "STATUS AFTER");
+    }
 #endif
-
-
-    /*
-     * Parameterized Romo distance tools.
-     *
-     * These are intentionally added after the proven no-argument forward tool.
-     * The schema exposes distance_cm as an integer, so Lily can produce:
-     *
-     *     robot.forward_distance({ "distance_cm": 20 })
-     *
-     * instead of treating "20 cm" as plain text.
-     */
-    id forwardDistanceTool = LilyCreateDistanceRomoTool(
-        @"robot.forward_distance",
-        @"Move the physical Romo robot forward by the requested distance in centimeters. The argument distance_cm is a number of centimeters. Example: 20 means exactly 20 cm.",
-        ^id(id args) {
-            return LilyRomoForwardDistanceCallback(args);
-        });
-
-    id backwardDistanceTool = LilyCreateDistanceRomoTool(
-        @"robot.backward_distance",
-        @"Move the physical Romo robot backward by the requested distance in centimeters. The argument distance_cm is a number of centimeters. Example: 30 means exactly 30 cm.",
-        ^id(id args) {
-            return LilyRomoBackwardDistanceCallback(args);
-        });
-
-    if (forwardDistanceTool) {
-        LilyDumpToolRaw73(forwardDistanceTool, "FORWARD_DISTANCE BEFORE");
-        LilyAddRomoToolNative(server, forwardDistanceTool);
-        LilyDumpToolRaw73(forwardDistanceTool, "FORWARD_DISTANCE AFTER");
-    }
-
-    if (backwardDistanceTool) {
-        LilyDumpToolRaw73(backwardDistanceTool, "BACKWARD_DISTANCE BEFORE");
-        LilyAddRomoToolNative(server, backwardDistanceTool);
-        LilyDumpToolRaw73(backwardDistanceTool, "BACKWARD_DISTANCE AFTER");
-    }
-
-    /* ============================================================
-       HelloRomo / RMCore DriveProtocol expansion
-
-       robot.drive_power
-           DifferentialDriveProtocol::driveWithPower:
-
-       robot.drive_motors
-           DifferentialDriveProtocol::driveWithLeftMotorPower:rightMotorPower:
-
-       robot.turn_heading
-           DriveProtocol::turnToHeading:withRadius:finishingAction:completion:
-       ============================================================ */
-    id powerProperty = LilyCreateIntegerProperty(@"power", -100, 100, 0);
-    id durationProperty = LilyCreateIntegerProperty(@"duration_ms", 100, 10000, 1000);
-
-    if (powerProperty && durationProperty) {
-        id drivePowerTool = LilyCreateParameterizedRomoTool(
-            @"robot.drive_power",
-            @"Drive Romo using one normalized differential-drive power value from -100 to 100 for duration_ms milliseconds. Positive is forward, negative is backward.",
-            @[powerProperty, durationProperty],
-            ^id(id args) {
-                return LilyRomoDrivePowerCallback(args);
-            });
-
-        if (drivePowerTool) {
-            LilyDumpToolRaw73(drivePowerTool, "DRIVE_POWER BEFORE");
-            LilyAddRomoToolNative(server, drivePowerTool);
-            LilyDumpToolRaw73(drivePowerTool, "DRIVE_POWER AFTER");
-        }
-    }
-
-    id leftProperty = LilyCreateIntegerProperty(@"left", -100, 100, 0);
-    id rightProperty = LilyCreateIntegerProperty(@"right", -100, 100, 0);
-
-    if (leftProperty && rightProperty && durationProperty) {
-        id driveMotorsTool = LilyCreateParameterizedRomoTool(
-            @"robot.drive_motors",
-            @"Drive Romo left and right motors independently from -100 to 100 for duration_ms milliseconds. Use this for differential steering or direct wheel control.",
-            @[leftProperty, rightProperty, durationProperty],
-            ^id(id args) {
-                return LilyRomoDriveMotorsCallback(args);
-            });
-
-        if (driveMotorsTool) {
-            LilyDumpToolRaw73(driveMotorsTool, "DRIVE_MOTORS BEFORE");
-            LilyAddRomoToolNative(server, driveMotorsTool);
-            LilyDumpToolRaw73(driveMotorsTool, "DRIVE_MOTORS AFTER");
-        }
-    }
-
-    id headingProperty = LilyCreateIntegerProperty(@"heading", -180, 180, 0);
-
-    if (headingProperty) {
-        id turnHeadingTool = LilyCreateParameterizedRomoTool(
-            @"robot.turn_heading",
-            @"Turn Romo to an absolute heading in degrees from -180 to 180. The turn uses RMCore turn-in-place mode and stops when the heading operation completes.",
-            @[headingProperty],
-            ^id(id args) {
-                return LilyRomoTurnHeadingCallback(args);
-            });
-
-        if (turnHeadingTool) {
-            LilyDumpToolRaw73(turnHeadingTool, "TURN_HEADING BEFORE");
-            LilyAddRomoToolNative(server, turnHeadingTool);
-            LilyDumpToolRaw73(turnHeadingTool, "TURN_HEADING AFTER");
-        }
-    }
 
     /* Mark only after every selected native addTool call has returned. */
     gLilyRomoInjectedServer = server;
