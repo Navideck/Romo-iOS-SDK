@@ -258,8 +258,10 @@ static const int kLilyRomoHTTPPort = 5000;
           withRadius:RM_DRIVE_RADIUS_TURN_IN_PLACE
                speed:0.3
      finishingAction:RMCoreTurnFinishingActionStopDriving
-           completion:^(BOOL success) {
-        NSLog(@"[Lily][Romo] TURN ANGLE completion success=%d", success);
+           completion:^(BOOL success, float completedAngle) {
+        NSLog(@"[Lily][Romo] TURN ANGLE completion success=%d angle=%f",
+              success,
+              completedAngle);
     }];
 }
 
@@ -568,12 +570,11 @@ static id LilyCreateHeadUpRomoTool(void) {
     id property = LilyCreateHeadRelativeProperty(@"angle_deg");
     NSArray *properties = property ? @[property] : @[];
 
-    return [[NSClassFromString(@"SharedMcpTool") alloc]
-        initWithName:@"robot.head_up"
-        description:@"Raise the Romo robot head by a relative angle in degrees."
-        properties:properties
-        userOnly:NO
-        callback:^id(id args) {
+    return LilyCreateRomoToolWithProperties(
+        @"robot.head_up",
+        @"Raise the Romo robot head by a relative angle in degrees.",
+        properties,
+        ^id(id args) {
             NSNumber *value = [args isKindOfClass:[NSDictionary class]] ? args[@"angle_deg"] : nil;
             if (!value) return @"Missing required argument: angle_deg";
             float degrees = value.floatValue;
@@ -588,12 +589,11 @@ static id LilyCreateHeadDownRomoTool(void) {
     id property = LilyCreateHeadRelativeProperty(@"angle_deg");
     NSArray *properties = property ? @[property] : @[];
 
-    return [[NSClassFromString(@"SharedMcpTool") alloc]
-        initWithName:@"robot.head_down"
-        description:@"Lower the Romo robot head by a relative angle in degrees."
-        properties:properties
-        userOnly:NO
-        callback:^id(id args) {
+    return LilyCreateRomoToolWithProperties(
+        @"robot.head_down",
+        @"Lower the Romo robot head by a relative angle in degrees.",
+        properties,
+        ^id(id args) {
             NSNumber *value = [args isKindOfClass:[NSDictionary class]] ? args[@"angle_deg"] : nil;
             if (!value) return @"Missing required argument: angle_deg";
             float degrees = value.floatValue;
@@ -608,12 +608,11 @@ static id LilyCreateHeadToRomoTool(void) {
     id property = LilyCreateHeadAbsoluteProperty(@"angle_deg");
     NSArray *properties = property ? @[property] : @[];
 
-    return [[NSClassFromString(@"SharedMcpTool") alloc]
-        initWithName:@"robot.head_to"
-        description:@"Move the Romo robot head to an absolute angle in degrees."
-        properties:properties
-        userOnly:NO
-        callback:^id(id args) {
+    return LilyCreateRomoToolWithProperties(
+        @"robot.head_to",
+        @"Move the Romo robot head to an absolute angle in degrees.",
+        properties,
+        ^id(id args) {
             NSNumber *value = [args isKindOfClass:[NSDictionary class]] ? args[@"angle_deg"] : nil;
             if (!value) return @"Missing required argument: angle_deg";
             float angle = value.floatValue;
@@ -628,12 +627,11 @@ static id LilyCreateTurnAngleRomoTool(void) {
     id property = LilyCreateAngleProperty(@"angle_deg");
     NSArray *properties = property ? @[property] : @[];
 
-    return [[NSClassFromString(@"SharedMcpTool") alloc]
-        initWithName:@"robot.turn_angle"
-        description:@"Turn the physical Romo robot by an exact angle in degrees. Positive angle turns left/counter-clockwise; negative angle turns right/clockwise. Range -180 to 180 degrees."
-        properties:properties
-        userOnly:NO
-        callback:^id(id args) {
+    return LilyCreateRomoToolWithProperties(
+        @"robot.turn_angle",
+        @"Turn the physical Romo robot by an exact angle in degrees. Positive angle turns left/counter-clockwise; negative angle turns right/clockwise. Range -180 to 180 degrees.",
+        properties,
+        ^id(id args) {
             NSNumber *angle = nil;
             if ([args isKindOfClass:[NSDictionary class]]) {
                 id value = [(NSDictionary *)args objectForKey:@"angle_deg"];
@@ -660,9 +658,10 @@ static id LilyCreateTurnAngleRomoTool(void) {
         }];
 }
 
-static id LilyCreateSimpleRomoTool(NSString *name,
-                                   NSString *description,
-                                   id (^callback)(id)) {
+static id LilyCreateRomoToolWithProperties(NSString *name,
+                                              NSString *description,
+                                              NSArray *properties,
+                                              id (^callback)(id)) {
     Class toolClass = NSClassFromString(@"SharedMcpTool");
     if (!toolClass) {
         LilyMCPWrite(@"MCP-ROMO #73 TOOL: SharedMcpTool NOT FOUND");
@@ -677,6 +676,12 @@ static id LilyCreateSimpleRomoTool(NSString *name,
         return nil;
     }
 
+    /*
+     * Use the same verified SharedMcpTool initializer ABI as the
+     * already-working robot.forward tool:
+     *
+     * self, _cmd, name, description, properties, userOnly, callback
+     */
     typedef id (*ToolInitFn)(id, SEL, id, id, id, BOOL, id);
     ToolInitFn initFn = (ToolInitFn)objc_msgSend;
 
@@ -684,7 +689,7 @@ static id LilyCreateSimpleRomoTool(NSString *name,
                      initSel,
                      name,
                      description,
-                     @[],
+                     properties ?: @[],
                      NO,
                      callback);
 
@@ -692,6 +697,12 @@ static id LilyCreateSimpleRomoTool(NSString *name,
         @"MCP-ROMO #73 TOOL: %@ %@", name,
         tool ? @"CREATED" : @"FAILED"]);
     return tool;
+}
+
+static id LilyCreateSimpleRomoTool(NSString *name,
+                                   NSString *description,
+                                   id (^callback)(id)) {
+    return LilyCreateRomoToolWithProperties(name, description, @[], callback);
 }
 
 typedef void (*LilyMcpRegisterToolsFn)(void *server);
