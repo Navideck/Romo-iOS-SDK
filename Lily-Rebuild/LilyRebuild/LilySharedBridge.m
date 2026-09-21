@@ -1,6 +1,9 @@
 ﻿#import "LilySharedBridge.h"
 #import <objc/message.h>
 #import <Romo/RMCore.h>
+#import <Romo/RMCharacter.h>
+#import <Romo/RMCharacterFace.h>
+#import <WebKit/WebKit.h>
 #import <sys/socket.h>
 #import <netinet/in.h>
 #import <arpa/inet.h>
@@ -162,6 +165,134 @@ static void LilyDumpMethods(NSString *className) {
 
 
 static const int kLilyRomoHTTPPort = 5000;
+// ============================================================
+// Lily -> Romo Character Face
+//
+// Test phase:
+//   Live2D WKWebView -> hidden
+//   RMCharacterFace  -> displayed
+//
+// Deliberately uses RMCharacterFace directly instead of
+// RMCharacter, so Romo's character voice/CAF playback is not
+// introduced. Lily's existing TTS remains unchanged.
+// ============================================================
+
+static RMCharacterFace *gLilyRomoFace = nil;
+static BOOL gLilyRomoFaceInstalled = NO;
+
+static void LilyHideLive2DViews(UIView *root) {
+    if (!root) {
+        return;
+    }
+
+    Class wkClass = NSClassFromString(@"WKWebView");
+
+    if (wkClass && [root isKindOfClass:wkClass]) {
+        WKWebView *web = (WKWebView *)root;
+        NSURL *url = web.URL;
+
+        if (url &&
+            [[url.scheme lowercaseString] isEqualToString:@"live2dasset"]) {
+
+            NSLog(@"[Lily][RomoFace] Hiding Live2D WKWebView: %@",
+                  url.absoluteString);
+
+            web.alpha = 0.0;
+            web.hidden = YES;
+        }
+
+        return;
+    }
+
+    NSArray<UIView *> *subviews = [root.subviews copy];
+
+    for (UIView *subview in subviews) {
+        LilyHideLive2DViews(subview);
+    }
+}
+
+static void LilyInstallRomoFace(UIViewController *hostVC) {
+    if (!hostVC) {
+        NSLog(@"[Lily][RomoFace] hostVC is nil");
+        return;
+    }
+
+    dispatch_async(dispatch_get_main_queue(), ^{
+
+        if (gLilyRomoFaceInstalled) {
+            return;
+        }
+
+        UIView *hostView = hostVC.view;
+
+        if (!hostView) {
+            NSLog(@"[Lily][RomoFace] host view is nil");
+            return;
+        }
+
+        NSLog(@"[Lily][RomoFace] Installing RMCharacterFace");
+
+        /*
+         * Hide the actual Live2D Tororo WKWebView.
+         */
+        LilyHideLive2DViews(hostView);
+
+        /*
+         * Create the actual Romo face renderer.
+         */
+        gLilyRomoFace =
+            [RMCharacterFace faceWithCharacterType:RMCharacterRomo];
+
+        if (!gLilyRomoFace) {
+            NSLog(@"[Lily][RomoFace] ERROR: faceWithCharacterType returned nil");
+            return;
+        }
+
+        /*
+         * Add RMCharacterFace as a real child view controller.
+         */
+        [hostVC addChildViewController:gLilyRomoFace];
+
+        UIView *faceView = gLilyRomoFace.view;
+
+        if (!faceView) {
+            NSLog(@"[Lily][RomoFace] ERROR: face view is nil");
+
+            [gLilyRomoFace removeFromParentViewController];
+            gLilyRomoFace = nil;
+
+            return;
+        }
+
+        /*
+         * First test:
+         * use the same full-screen area as the existing Live2D canvas.
+         */
+        faceView.frame = hostView.bounds;
+        faceView.autoresizingMask =
+            UIViewAutoresizingFlexibleWidth |
+            UIViewAutoresizingFlexibleHeight;
+
+        [hostView addSubview:faceView];
+
+        [gLilyRomoFace didMoveToParentViewController:hostVC];
+
+        /*
+         * Initial neutral/happy state.
+         * Emotion/mouth mapping comes later.
+         */
+        gLilyRomoFace.emotion = RMCharacterEmotionHappy;
+
+        gLilyRomoFace.expression = RMCharacterExpressionHappy;
+
+        gLilyRomoFaceInstalled = YES;
+
+        NSLog(@"[Lily][RomoFace] RMCharacterFace INSTALLED");
+        NSLog(@"[Lily][RomoFace] frame = %@",
+              NSStringFromCGRect(faceView.frame));
+    });
+}
+
 
 @interface LilyRomoController : NSObject <RMCoreDelegate>
 @property (nonatomic, strong) RMCoreRobot *robot;
@@ -1329,7 +1460,23 @@ static void LilyInstallMCPRomoHook(void) {
 
     typedef UIViewController *(*MainFn)(id, SEL);
     MainFn fn = (MainFn)objc_msgSend;
-    return fn(cls, sel);
+
+    UIViewController *vc = fn(cls, sel);
+
+    if (!vc) {
+        NSLog(@"[Lily][RomoFace] MainViewController returned nil");
+        return nil;
+    }
+
+    /*
+     * Give Compose/Live2D a moment to finish creating its WKWebView,
+     * then replace the visual layer with RMCharacterFace.
+     */
+    dispatch_async(dispatch_get_main_queue(), ^{
+        LilyInstallRomoFace(vc);
+    });
+
+    return vc;
 }
 
 @end
