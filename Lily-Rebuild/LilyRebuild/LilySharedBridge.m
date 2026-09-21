@@ -566,6 +566,12 @@ static id LilyCreateHeadAbsoluteProperty(NSString *name) {
                   name, type, @-90, @90, @0, YES);
 }
 
+/* Forward declaration: head/turn tool factories use this helper before its full definition. */
+static id LilyCreateRomoToolWithProperties(NSString *name,
+                                           NSString *description,
+                                           NSArray *properties,
+                                           id (^callback)(id));
+
 static id LilyCreateHeadUpRomoTool(void) {
     id property = LilyCreateHeadRelativeProperty(@"angle_deg");
     NSArray *properties = property ? @[property] : @[];
