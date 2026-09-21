@@ -228,6 +228,106 @@ static const int kLilyRomoHTTPPort = 5000;
     if (romo) [romo stopDriving];
 }
 
+- (void)turnLeft {
+    RMCoreRobot<DriveProtocol> *romo = (RMCoreRobot<DriveProtocol> *)self.robot;
+    if (!romo) { NSLog(@"[Lily][Romo] LEFT ignored: no robot"); return; }
+    [romo driveWithRadius:0.0 speed:0.5];
+    NSLog(@"[Lily][Romo] LEFT -> driveWithRadius:0 speed:0.5");
+}
+
+- (void)turnRight {
+    RMCoreRobot<DriveProtocol> *romo = (RMCoreRobot<DriveProtocol> *)self.robot;
+    if (!romo) { NSLog(@"[Lily][Romo] RIGHT ignored: no robot"); return; }
+    [romo driveWithRadius:0.0 speed:-0.5];
+    NSLog(@"[Lily][Romo] RIGHT -> driveWithRadius:0 speed:-0.5");
+}
+
+- (void)turnByAngleDegrees:(float)angle {
+    RMCoreRobot<DriveProtocol> *romo = (RMCoreRobot<DriveProtocol> *)self.robot;
+    if (!romo) {
+        NSLog(@"[Lily][Romo] TURN ANGLE ignored: no robot");
+        return;
+    }
+
+    if (angle > 180.0f) angle = 180.0f;
+    if (angle < -180.0f) angle = -180.0f;
+
+    NSLog(@"[Lily][Romo] TURN ANGLE -> %.2f deg", angle);
+
+    [romo turnByAngle:angle
+          withRadius:RM_DRIVE_RADIUS_TURN_IN_PLACE
+               speed:0.3
+     finishingAction:RMCoreTurnFinishingActionStopDriving
+           completion:^(BOOL success) {
+        NSLog(@"[Lily][Romo] TURN ANGLE completion success=%d", success);
+    }];
+}
+
+- (void)headUpByDegrees:(float)degrees {
+    RMCoreRobot<HeadTiltProtocol> *romo = (RMCoreRobot<HeadTiltProtocol> *)self.robot;
+    if (!romo) { NSLog(@"[Lily][Romo] HEAD UP ignored: no robot"); return; }
+
+    if (degrees < 0.0f) degrees = -degrees;
+
+    float current = romo.headAngle;
+    float maxAngle = romo.maximumHeadTiltAngle;
+    float allowed = maxAngle - current;
+    if (allowed < 0.0f) allowed = 0.0f;
+    if (degrees > allowed) degrees = allowed;
+
+    NSLog(@"[Lily][Romo] HEAD UP -> tiltByAngle:+%.2f current=%.2f max=%.2f",
+          degrees, current, maxAngle);
+
+    if (degrees > 0.0f) {
+        [romo tiltByAngle:degrees completion:^(BOOL success) {
+            NSLog(@"[Lily][Romo] HEAD UP completion success=%d angle=%.2f",
+                  success, romo.headAngle);
+        }];
+    }
+}
+
+- (void)headDownByDegrees:(float)degrees {
+    RMCoreRobot<HeadTiltProtocol> *romo = (RMCoreRobot<HeadTiltProtocol> *)self.robot;
+    if (!romo) { NSLog(@"[Lily][Romo] HEAD DOWN ignored: no robot"); return; }
+
+    if (degrees < 0.0f) degrees = -degrees;
+
+    float current = romo.headAngle;
+    float minAngle = romo.minimumHeadTiltAngle;
+    float allowed = current - minAngle;
+    if (allowed < 0.0f) allowed = 0.0f;
+    if (degrees > allowed) degrees = allowed;
+
+    NSLog(@"[Lily][Romo] HEAD DOWN -> tiltByAngle:-%.2f current=%.2f min=%.2f",
+          degrees, current, minAngle);
+
+    if (degrees > 0.0f) {
+        [romo tiltByAngle:-degrees completion:^(BOOL success) {
+            NSLog(@"[Lily][Romo] HEAD DOWN completion success=%d angle=%.2f",
+                  success, romo.headAngle);
+        }];
+    }
+}
+
+- (void)headToAngleDegrees:(float)angle {
+    RMCoreRobot<HeadTiltProtocol> *romo = (RMCoreRobot<HeadTiltProtocol> *)self.robot;
+    if (!romo) { NSLog(@"[Lily][Romo] HEAD TO ignored: no robot"); return; }
+
+    float minAngle = romo.minimumHeadTiltAngle;
+    float maxAngle = romo.maximumHeadTiltAngle;
+
+    if (angle < minAngle) angle = minAngle;
+    if (angle > maxAngle) angle = maxAngle;
+
+    NSLog(@"[Lily][Romo] HEAD TO -> tiltToAngle:%.2f range=[%.2f, %.2f]",
+          angle, minAngle, maxAngle);
+
+    [romo tiltToAngle:angle completion:^(BOOL success) {
+        NSLog(@"[Lily][Romo] HEAD TO completion success=%d angle=%.2f",
+              success, romo.headAngle);
+    }];
+}
+
 - (NSString *)statusText {
     RMCoreRobot *robot = self.robot;
     if (!robot) return @"Romo is not connected.";
@@ -239,7 +339,7 @@ static const int kLilyRomoHTTPPort = 5000;
         charging = robot.vitals.isCharging;
     }
 
-    int percent = (int)lroundf(MAX(0.0f, MIN(1.0f, battery)) * 100.0f);
+    int percent = (int)(MAX(0.0f, MIN(1.0f, battery)) * 100.0f);
 
     return [NSString stringWithFormat:
         @"Romo is connected. Battery: %d%%. Charging: %@.",
@@ -388,6 +488,176 @@ static void LilyRomoBackwardNoArgs(void) {
 
 static void LilyRomoStopNoArgs(void) {
     [[LilyRomoController sharedController] stopDriving];
+}
+
+
+static id LilyCreateAngleProperty(NSString *name) {
+    Class propertyClass = NSClassFromString(@"SharedMcpProperty");
+    if (!propertyClass) return nil;
+
+    SEL typeSel = NSSelectorFromString(@"integer");
+    Class typeClass = NSClassFromString(@"SharedMcpPropertyType");
+    if (!typeClass || ![typeClass respondsToSelector:typeSel]) return nil;
+
+    typedef id (*EnumGetterFn)(id, SEL);
+    id type = ((EnumGetterFn)objc_msgSend)(typeClass, typeSel);
+    if (!type) return nil;
+
+    SEL initSel = NSSelectorFromString(@"initWithName:type:min:max:value:hasDefault:");
+    if (![propertyClass instancesRespondToSelector:initSel]) return nil;
+
+    typedef id (*PropertyInitFn)(id, SEL, id, id, id, id, id, BOOL);
+    PropertyInitFn initFn = (PropertyInitFn)objc_msgSend;
+
+    return initFn([propertyClass alloc],
+                  initSel,
+                  name,
+                  type,
+                  @-180,
+                  @180,
+                  @0,
+                  YES);
+}
+
+
+static id LilyCreateHeadRelativeProperty(NSString *name) {
+    Class propertyClass = NSClassFromString(@"SharedMcpProperty");
+    Class typeClass = NSClassFromString(@"SharedMcpPropertyType");
+    if (!propertyClass || !typeClass) return nil;
+
+    SEL typeSel = NSSelectorFromString(@"integer");
+    if (![typeClass respondsToSelector:typeSel]) return nil;
+
+    typedef id (*EnumGetterFn)(id, SEL);
+    id type = ((EnumGetterFn)objc_msgSend)(typeClass, typeSel);
+    if (!type) return nil;
+
+    SEL initSel = NSSelectorFromString(@"initWithName:type:min:max:value:hasDefault:");
+    if (![propertyClass instancesRespondToSelector:initSel]) return nil;
+
+    typedef id (*PropertyInitFn)(id, SEL, id, id, id, id, id, BOOL);
+    PropertyInitFn initFn = (PropertyInitFn)objc_msgSend;
+
+    return initFn([propertyClass alloc], initSel,
+                  name, type, @1, @90, @10, YES);
+}
+
+static id LilyCreateHeadAbsoluteProperty(NSString *name) {
+    Class propertyClass = NSClassFromString(@"SharedMcpProperty");
+    Class typeClass = NSClassFromString(@"SharedMcpPropertyType");
+    if (!propertyClass || !typeClass) return nil;
+
+    SEL typeSel = NSSelectorFromString(@"integer");
+    if (![typeClass respondsToSelector:typeSel]) return nil;
+
+    typedef id (*EnumGetterFn)(id, SEL);
+    id type = ((EnumGetterFn)objc_msgSend)(typeClass, typeSel);
+    if (!type) return nil;
+
+    SEL initSel = NSSelectorFromString(@"initWithName:type:min:max:value:hasDefault:");
+    if (![propertyClass instancesRespondToSelector:initSel]) return nil;
+
+    typedef id (*PropertyInitFn)(id, SEL, id, id, id, id, id, BOOL);
+    PropertyInitFn initFn = (PropertyInitFn)objc_msgSend;
+
+    return initFn([propertyClass alloc], initSel,
+                  name, type, @-90, @90, @0, YES);
+}
+
+static id LilyCreateHeadUpRomoTool(void) {
+    id property = LilyCreateHeadRelativeProperty(@"angle_deg");
+    NSArray *properties = property ? @[property] : @[];
+
+    return [[NSClassFromString(@"SharedMcpTool") alloc]
+        initWithName:@"robot.head_up"
+        description:@"Raise the Romo robot head by a relative angle in degrees."
+        properties:properties
+        userOnly:NO
+        callback:^id(id args) {
+            NSNumber *value = [args isKindOfClass:[NSDictionary class]] ? args[@"angle_deg"] : nil;
+            if (!value) return @"Missing required argument: angle_deg";
+            float degrees = value.floatValue;
+            if (degrees <= 0.0f) return @"angle_deg must be greater than 0";
+            if (degrees > 90.0f) degrees = 90.0f;
+            [[LilyRomoController sharedController] headUpByDegrees:degrees];
+            return [NSString stringWithFormat:@"Romo head up %.0f degrees", degrees];
+        }];
+}
+
+static id LilyCreateHeadDownRomoTool(void) {
+    id property = LilyCreateHeadRelativeProperty(@"angle_deg");
+    NSArray *properties = property ? @[property] : @[];
+
+    return [[NSClassFromString(@"SharedMcpTool") alloc]
+        initWithName:@"robot.head_down"
+        description:@"Lower the Romo robot head by a relative angle in degrees."
+        properties:properties
+        userOnly:NO
+        callback:^id(id args) {
+            NSNumber *value = [args isKindOfClass:[NSDictionary class]] ? args[@"angle_deg"] : nil;
+            if (!value) return @"Missing required argument: angle_deg";
+            float degrees = value.floatValue;
+            if (degrees <= 0.0f) return @"angle_deg must be greater than 0";
+            if (degrees > 90.0f) degrees = 90.0f;
+            [[LilyRomoController sharedController] headDownByDegrees:degrees];
+            return [NSString stringWithFormat:@"Romo head down %.0f degrees", degrees];
+        }];
+}
+
+static id LilyCreateHeadToRomoTool(void) {
+    id property = LilyCreateHeadAbsoluteProperty(@"angle_deg");
+    NSArray *properties = property ? @[property] : @[];
+
+    return [[NSClassFromString(@"SharedMcpTool") alloc]
+        initWithName:@"robot.head_to"
+        description:@"Move the Romo robot head to an absolute angle in degrees."
+        properties:properties
+        userOnly:NO
+        callback:^id(id args) {
+            NSNumber *value = [args isKindOfClass:[NSDictionary class]] ? args[@"angle_deg"] : nil;
+            if (!value) return @"Missing required argument: angle_deg";
+            float angle = value.floatValue;
+            if (angle < -90.0f) angle = -90.0f;
+            if (angle > 90.0f) angle = 90.0f;
+            [[LilyRomoController sharedController] headToAngleDegrees:angle];
+            return [NSString stringWithFormat:@"Romo head to %.0f degrees", angle];
+        }];
+}
+
+static id LilyCreateTurnAngleRomoTool(void) {
+    id property = LilyCreateAngleProperty(@"angle_deg");
+    NSArray *properties = property ? @[property] : @[];
+
+    return [[NSClassFromString(@"SharedMcpTool") alloc]
+        initWithName:@"robot.turn_angle"
+        description:@"Turn the physical Romo robot by an exact angle in degrees. Positive angle turns left/counter-clockwise; negative angle turns right/clockwise. Range -180 to 180 degrees."
+        properties:properties
+        userOnly:NO
+        callback:^id(id args) {
+            NSNumber *angle = nil;
+            if ([args isKindOfClass:[NSDictionary class]]) {
+                id value = [(NSDictionary *)args objectForKey:@"angle_deg"];
+                if ([value respondsToSelector:@selector(floatValue)]) {
+                    angle = @([value floatValue]);
+                }
+            }
+
+            if (!angle) {
+                return @"Missing required argument: angle_deg";
+            }
+
+            float degrees = angle.floatValue;
+            if (degrees == 0.0f) {
+                return @"Angle must not be 0 degrees";
+            }
+
+            if (degrees > 180.0f) degrees = 180.0f;
+            if (degrees < -180.0f) degrees = -180.0f;
+
+            [[LilyRomoController sharedController] turnByAngleDegrees:degrees];
+
+            return [NSString stringWithFormat:@"Romo turning %.0f degrees", degrees];
+        }];
 }
 
 static id LilyCreateSimpleRomoTool(NSString *name,
@@ -704,10 +974,41 @@ static void LilyInjectRobotToolsIntoServer(void *server) {
             return @"Romo stopped";
         });
 
+    id leftTool = LilyCreateSimpleRomoTool(
+        @"robot.turn_left",
+        @"Turn the physical Romo robot left in place. Use this when the user asks Romo to turn left, go left, or quay trai.",
+        ^id(id args) {
+            (void)args;
+            [[LilyRomoController sharedController] turnLeft];
+            return @"Romo turned left";
+        });
+
+    id rightTool = LilyCreateSimpleRomoTool(
+        @"robot.turn_right",
+        @"Turn the physical Romo robot right in place. Use this when the user asks Romo to turn right, go right, or quay phai.",
+        ^id(id args) {
+            (void)args;
+            [[LilyRomoController sharedController] turnRight];
+            return @"Romo turned right";
+        });
+
+    id headUpTool = LilyCreateHeadUpRomoTool();
+    id headDownTool = LilyCreateHeadDownRomoTool();
+    id headToTool = LilyCreateHeadToRomoTool();
+
+    id turnAngleTool = LilyCreateTurnAngleRomoTool();
+
     if (statusTool)   LilyDumpToolRaw73(statusTool, "STATUS BEFORE");
     if (forwardTool)  LilyDumpToolRaw73(forwardTool, "FORWARD BEFORE");
     if (backwardTool) LilyDumpToolRaw73(backwardTool, "BACKWARD BEFORE");
     if (stopTool)     LilyDumpToolRaw73(stopTool, "STOP BEFORE");
+    if (leftTool)     LilyDumpToolRaw73(leftTool, "LEFT BEFORE");
+    if (rightTool)    LilyDumpToolRaw73(rightTool, "RIGHT BEFORE");
+    if (headUpTool)   LilyDumpToolRaw73(headUpTool, "HEAD UP BEFORE");
+    if (headDownTool) LilyDumpToolRaw73(headDownTool, "HEAD DOWN BEFORE");
+    if (headToTool)   LilyDumpToolRaw73(headToTool, "HEAD TO BEFORE");
+
+    if (turnAngleTool) LilyDumpToolRaw73(turnAngleTool, "TURN ANGLE BEFORE");
 
     if (statusTool) {
         LilyAddRomoToolNative(server, statusTool);
@@ -725,11 +1026,36 @@ static void LilyInjectRobotToolsIntoServer(void *server) {
         LilyAddRomoToolNative(server, stopTool);
         LilyDumpToolRaw73(stopTool, "STOP AFTER");
     }
+    if (leftTool) {
+        LilyAddRomoToolNative(server, leftTool);
+        LilyDumpToolRaw73(leftTool, "LEFT AFTER");
+    }
+    if (rightTool) {
+        LilyAddRomoToolNative(server, rightTool);
+        LilyDumpToolRaw73(rightTool, "RIGHT AFTER");
+    }
+    if (headUpTool) {
+        LilyAddRomoToolNative(server, headUpTool);
+        LilyDumpToolRaw73(headUpTool, "HEAD UP AFTER");
+    }
+    if (headDownTool) {
+        LilyAddRomoToolNative(server, headDownTool);
+        LilyDumpToolRaw73(headDownTool, "HEAD DOWN AFTER");
+    }
+        if (headToTool) {
+        LilyAddRomoToolNative(server, headToTool);
+        LilyDumpToolRaw73(headToTool, "HEAD TO AFTER");
+    }
+
+if (turnAngleTool) {
+        LilyAddRomoToolNative(server, turnAngleTool);
+        LilyDumpToolRaw73(turnAngleTool, "TURN ANGLE AFTER");
+    }
 
     gLilyRomoInjectedServer = server;
 
     LilyMCPWrite([NSString stringWithFormat:
-        @"MCP-ROMO #74 INJECT RETURNED server=%p; tools=status,forward,backward,stop",
+        @"MCP-ROMO #74 INJECT RETURNED server=%p; tools=status,forward,backward,stop,turn_left,turn_right,head_up,head_down,turn_angle",
         server]);
 }
 
