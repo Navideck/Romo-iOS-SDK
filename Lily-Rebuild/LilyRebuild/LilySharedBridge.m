@@ -1,4 +1,4 @@
-#import "LilySharedBridge.h"
+﻿#import "LilySharedBridge.h"
 #import <objc/message.h>
 #import <Romo/RMCore.h>
 #import <sys/socket.h>
@@ -12,6 +12,7 @@
 #import <mach-o/dyld.h>
 #import <mach-o/loader.h>
 #import <pthread.h>
+#import <math.h>
 
 
 static void LilyMCPWrite(NSString *line) {
@@ -419,7 +420,7 @@ static const int kLilyRomoHTTPPort = 5000;
 @end
 
 /* ============================================================
-   Native Lily MCP -> Romo bridge — BUILD #73
+   Native Lily MCP -> Romo bridge â€” BUILD #73
 
    Correct lifecycle:
        WebsocketProtocol.openAudioChannel
@@ -936,7 +937,7 @@ static void LilyDumpToolRaw73(id tool, const char *tag) {
         (unsigned long long)v30, (unsigned long long)v38]);
 }
 
-/* BUILD #74 — MERGED STATUS + ROMO CONTROLS */
+/* BUILD #74 â€” MERGED STATUS + ROMO CONTROLS */
 
 static id LilyCreateStatusRomoTool(void) {
     return LilyCreateSimpleRomoTool(
@@ -1332,5 +1333,6 @@ static void LilyInstallMCPRomoHook(void) {
 }
 
 @end
+
 
 
