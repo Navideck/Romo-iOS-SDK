@@ -588,7 +588,7 @@ static id LilyCreateHeadUpRomoTool(void) {
             if (degrees > 90.0f) degrees = 90.0f;
             [[LilyRomoController sharedController] headUpByDegrees:degrees];
             return [NSString stringWithFormat:@"Romo head up %.0f degrees", degrees];
-        }];
+        });
 }
 
 static id LilyCreateHeadDownRomoTool(void) {
@@ -607,7 +607,7 @@ static id LilyCreateHeadDownRomoTool(void) {
             if (degrees > 90.0f) degrees = 90.0f;
             [[LilyRomoController sharedController] headDownByDegrees:degrees];
             return [NSString stringWithFormat:@"Romo head down %.0f degrees", degrees];
-        }];
+        });
 }
 
 static id LilyCreateHeadToRomoTool(void) {
@@ -626,7 +626,7 @@ static id LilyCreateHeadToRomoTool(void) {
             if (angle > 90.0f) angle = 90.0f;
             [[LilyRomoController sharedController] headToAngleDegrees:angle];
             return [NSString stringWithFormat:@"Romo head to %.0f degrees", angle];
-        }];
+        });
 }
 
 static id LilyCreateTurnAngleRomoTool(void) {
@@ -661,7 +661,7 @@ static id LilyCreateTurnAngleRomoTool(void) {
             [[LilyRomoController sharedController] turnByAngleDegrees:degrees];
 
             return [NSString stringWithFormat:@"Romo turning %.0f degrees", degrees];
-        }];
+        });
 }
 
 static id LilyCreateRomoToolWithProperties(NSString *name,
