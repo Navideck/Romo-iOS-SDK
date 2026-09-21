@@ -12,7 +12,6 @@
 #import <mach-o/dyld.h>
 #import <mach-o/loader.h>
 #import <pthread.h>
-#import <math.h>
 
 
 static void LilyMCPWrite(NSString *line) {
@@ -230,31 +229,21 @@ static const int kLilyRomoHTTPPort = 5000;
 }
 
 - (NSString *)statusText {
-    RMCoreRobot *romo = self.robot;
-    if (!romo) {
-        NSLog(@"[Lily][Romo] STATUS -> disconnected");
-        return @"Romo is not connected";
+    RMCoreRobot *robot = self.robot;
+    if (!robot) return @"Romo is not connected.";
+
+    float battery = 0.0f;
+    BOOL charging = NO;
+    if (robot.vitals) {
+        battery = robot.vitals.batteryLevel;
+        charging = robot.vitals.isCharging;
     }
 
-    float batteryLevel = romo.vitals.batteryLevel;
-    int batteryPercent = (int)lroundf(batteryLevel * 100.0f);
-    if (batteryPercent < 0) batteryPercent = 0;
-    if (batteryPercent > 100) batteryPercent = 100;
+    int percent = (int)lroundf(MAX(0.0f, MIN(1.0f, battery)) * 100.0f);
 
-    BOOL charging = romo.vitals.isCharging;
-
-    NSString *status = [NSString stringWithFormat:
-        @"Romo is connected. Battery: %d%%. Charging: %@. Drivable: %@. Head tiltable: %@. LED equipped: %@. IMU equipped: %@.",
-        batteryPercent,
-        charging ? @"yes" : @"no",
-        romo.isDrivable ? @"yes" : @"no",
-        romo.isHeadTiltable ? @"yes" : @"no",
-        romo.isLEDEquipped ? @"yes" : @"no",
-        romo.isIMUEquipped ? @"yes" : @"no"];
-
-    NSLog(@"[Lily][Romo] STATUS -> %@", status);
-    LilyMCPWrite([NSString stringWithFormat:@"MCP-ROMO STATUS RESULT: %@", status]);
-    return status;
+    return [NSString stringWithFormat:
+        @"Romo is connected. Battery: %d%%. Charging: %@.",
+        percent, charging ? @"yes" : @"no"];
 }
 
 - (void)sendHTTPResponse:(int)clientSocket status:(const char *)status body:(NSString *)body {
@@ -399,10 +388,6 @@ static void LilyRomoBackwardNoArgs(void) {
 
 static void LilyRomoStopNoArgs(void) {
     [[LilyRomoController sharedController] stopDriving];
-}
-
-static NSString *LilyRomoStatusNoArgs(void) {
-    return [[LilyRomoController sharedController] statusText];
 }
 
 static id LilyCreateSimpleRomoTool(NSString *name,
@@ -664,42 +649,35 @@ static void LilyDumpToolRaw73(id tool, const char *tag) {
         (unsigned long long)v30, (unsigned long long)v38]);
 }
 
-/*
- * BUILD #73 — isolation experiment.
- *
- * MODE selects exactly what is inserted after registerTools returns:
- *   1 = forward only
- *   2 = backward only
- *   3 = forward then backward
- *   4 = backward then forward
- *   5 = forward, backward, stop (original #70 sequence)
- *   6 = robot.status only (battery/charging/capabilities test)
- *
- * Change this one constant and rebuild for each experiment.
- */
-#ifndef LILY73_MODE
-#define LILY73_MODE 6
-#endif
+/* BUILD #74 — MERGED STATUS + ROMO CONTROLS */
+
+static id LilyCreateStatusRomoTool(void) {
+    return LilyCreateSimpleRomoTool(
+        @"robot.status",
+        @"Read the physical Romo robot status, including connection, battery percentage, and charging state.",
+        ^id(id args) {
+            (void)args;
+            NSString *status = [[LilyRomoController sharedController] statusText];
+            LilyMCPWrite([NSString stringWithFormat:@"MCP-ROMO #74 STATUS CALLBACK: %@", status]);
+            return status;
+        });
+}
 
 static void LilyInjectRobotToolsIntoServer(void *server) {
     if (!server) return;
 
     if (gLilyRomoInjectedServer == server) {
         LilyMCPWrite([NSString stringWithFormat:
-            @"MCP-ROMO #73 INJECT: already injected server=%p", server]);
+            @"MCP-ROMO #74 INJECT: already injected server=%p", server]);
         return;
     }
 
     LilyMCPWrite([NSString stringWithFormat:
-        @"MCP-ROMO #73 INJECT ENTER live McpServer=%p MODE=%d", server, LILY73_MODE]);
+        @"MCP-ROMO #74 INJECT ENTER live McpServer=%p", server]);
 
-    id forwardTool = nil;
-    id backwardTool = nil;
-    id stopTool = nil;
-    id statusTool = nil;
+    id statusTool = LilyCreateStatusRomoTool();
 
-#if LILY73_MODE == 1 || LILY73_MODE == 3 || LILY73_MODE == 4 || LILY73_MODE == 5
-    forwardTool = LilyCreateSimpleRomoTool(
+    id forwardTool = LilyCreateSimpleRomoTool(
         @"robot.forward",
         @"Move the physical Romo robot connected to Lily forward. Use this when the user asks Romo to move forward, go forward, drive forward, or tien len.",
         ^id(id args) {
@@ -707,10 +685,8 @@ static void LilyInjectRobotToolsIntoServer(void *server) {
             LilyRomoForwardNoArgs();
             return @"Romo moved forward";
         });
-#endif
 
-#if LILY73_MODE == 2 || LILY73_MODE == 3 || LILY73_MODE == 4 || LILY73_MODE == 5
-    backwardTool = LilyCreateSimpleRomoTool(
+    id backwardTool = LilyCreateSimpleRomoTool(
         @"robot.backward",
         @"Move the physical Romo robot connected to Lily backward. Use this when the user asks Romo to move backward, reverse, or lui lai.",
         ^id(id args) {
@@ -718,10 +694,8 @@ static void LilyInjectRobotToolsIntoServer(void *server) {
             LilyRomoBackwardNoArgs();
             return @"Romo moved backward";
         });
-#endif
 
-#if LILY73_MODE == 5
-    stopTool = LilyCreateSimpleRomoTool(
+    id stopTool = LilyCreateSimpleRomoTool(
         @"robot.stop",
         @"Stop the physical Romo robot connected to Lily immediately.",
         ^id(id args) {
@@ -729,56 +703,16 @@ static void LilyInjectRobotToolsIntoServer(void *server) {
             LilyRomoStopNoArgs();
             return @"Romo stopped";
         });
-#endif
 
-#if LILY73_MODE == 6
-    statusTool = LilyCreateSimpleRomoTool(
-        @"robot.status",
-        @"Read the physical Romo robot status. Use this when the user asks about Romo battery percentage, charging state, connection, whether it can drive, head tilt support, LED support, or IMU support.",
-        ^id(id args) {
-            (void)args;
-            LilyMCPWrite(@"MCP-ROMO STATUS CALLBACK ENTER");
-            NSString *result = LilyRomoStatusNoArgs();
-            LilyMCPWrite([NSString stringWithFormat:@"MCP-ROMO STATUS CALLBACK RETURN: %@", result]);
-            return result;
-        });
-#endif
-
-    /* Dump before any native insertion. */
-    if (forwardTool)  LilyDumpToolRaw73(forwardTool,  "FORWARD BEFORE");
+    if (statusTool)   LilyDumpToolRaw73(statusTool, "STATUS BEFORE");
+    if (forwardTool)  LilyDumpToolRaw73(forwardTool, "FORWARD BEFORE");
     if (backwardTool) LilyDumpToolRaw73(backwardTool, "BACKWARD BEFORE");
-    if (stopTool)     LilyDumpToolRaw73(stopTool,     "STOP BEFORE");
-    if (statusTool)   LilyDumpToolRaw73(statusTool,   "STATUS BEFORE");
+    if (stopTool)     LilyDumpToolRaw73(stopTool, "STOP BEFORE");
 
-#if LILY73_MODE == 1
-    if (forwardTool) {
-        LilyAddRomoToolNative(server, forwardTool);
-        LilyDumpToolRaw73(forwardTool, "FORWARD AFTER");
+    if (statusTool) {
+        LilyAddRomoToolNative(server, statusTool);
+        LilyDumpToolRaw73(statusTool, "STATUS AFTER");
     }
-#elif LILY73_MODE == 2
-    if (backwardTool) {
-        LilyAddRomoToolNative(server, backwardTool);
-        LilyDumpToolRaw73(backwardTool, "BACKWARD AFTER");
-    }
-#elif LILY73_MODE == 3
-    if (forwardTool) {
-        LilyAddRomoToolNative(server, forwardTool);
-        LilyDumpToolRaw73(forwardTool, "FORWARD AFTER");
-    }
-    if (backwardTool) {
-        LilyAddRomoToolNative(server, backwardTool);
-        LilyDumpToolRaw73(backwardTool, "BACKWARD AFTER");
-    }
-#elif LILY73_MODE == 4
-    if (backwardTool) {
-        LilyAddRomoToolNative(server, backwardTool);
-        LilyDumpToolRaw73(backwardTool, "BACKWARD AFTER");
-    }
-    if (forwardTool) {
-        LilyAddRomoToolNative(server, forwardTool);
-        LilyDumpToolRaw73(forwardTool, "FORWARD AFTER");
-    }
-#elif LILY73_MODE == 5
     if (forwardTool) {
         LilyAddRomoToolNative(server, forwardTool);
         LilyDumpToolRaw73(forwardTool, "FORWARD AFTER");
@@ -791,17 +725,12 @@ static void LilyInjectRobotToolsIntoServer(void *server) {
         LilyAddRomoToolNative(server, stopTool);
         LilyDumpToolRaw73(stopTool, "STOP AFTER");
     }
-#elif LILY73_MODE == 6
-    if (statusTool) {
-        LilyAddRomoToolNative(server, statusTool);
-        LilyDumpToolRaw73(statusTool, "STATUS AFTER");
-    }
-#endif
 
-    /* Mark only after every selected native addTool call has returned. */
     gLilyRomoInjectedServer = server;
+
     LilyMCPWrite([NSString stringWithFormat:
-        @"MCP-ROMO #73 INJECT RETURNED server=%p MODE=%d", server, LILY73_MODE]);
+        @"MCP-ROMO #74 INJECT RETURNED server=%p; tools=status,forward,backward,stop",
+        server]);
 }
 
 static BOOL LilyProtectCodePage(void *address, BOOL writable) {
