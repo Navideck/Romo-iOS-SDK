@@ -3,7 +3,7 @@
 //  RMCharacter
 //
 
-#import <Romo/UIImage+Cache.h>
+#import "UIImage+Cache.h"
 #import <Romo/UIDevice+Romo.h>
 
 
@@ -39,7 +39,11 @@ static const int _maxCapacity = 3500000;
         extension = comps[1];
     }
 
+#ifdef SWIFTPM_MODULE_BUNDLE
+    UIImage *image = [UIImage imageNamed:comps[0] inBundle:SWIFTPM_MODULE_BUNDLE compatibleWithTraitCollection:nil];
+#else
     UIImage *image = [UIImage imageNamed:comps[0]];
+#endif
     if (image) {
         _currentCapacity += image.size.width * image.size.height;
         if (_currentCapacity > _maxCapacity) {

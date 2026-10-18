@@ -4,7 +4,7 @@
 //
 
 #import "RMCharacterFaceEmotion.h"
-#import <Romo/UIImage+Cache.h>
+#import "UIImage+Cache.h"
 #import "RMCharacterEye.h"
 #import "RMCharacterVoice.h"
 
