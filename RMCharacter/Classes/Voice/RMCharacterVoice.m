@@ -116,6 +116,19 @@
 
 #pragma mark - Private Methods
 
+- (AVAudioPlayer *)audioPlayerForSoundNamed:(NSString *)name
+{
+#ifdef SWIFTPM_MODULE_BUNDLE
+    // SwiftPM compiles the sounds into the asset catalog of RMCharacter's resource bundle
+    NSData *data = [[NSDataAsset alloc] initWithName:name bundle:SWIFTPM_MODULE_BUNDLE].data;
+    return data ? [[AVAudioPlayer alloc] initWithData:data fileTypeHint:AVFileTypeCoreAudioFormat error:nil] : nil;
+#else
+    NSString *path = [[NSBundle bundleForClass:self.classForCoder] pathForResource:name ofType:@"caf"];
+    path = [path stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLHostAllowedCharacterSet]];
+    return [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL URLWithString:path] error:nil];
+#endif
+}
+
 - (void)audioDidFinish
 {
     if (self.postedAudioBeganNotification) {
@@ -133,19 +146,18 @@
 - (void)_setExpression
 {
 
-NSString *path;
+NSString *soundName;
 
 // Special case for farting
 if (_expression == RMCharacterExpressionFart) {
     int randomSound = arc4random_uniform(kNumFarts);
-    path = [[NSBundle bundleForClass:self.classForCoder] pathForResource:[NSString stringWithFormat:@"%d-%02d",_expression, randomSound] ofType:@"caf"];
+    soundName = [NSString stringWithFormat:@"%d-%02d",_expression, randomSound];
 } else {
-    path = [[NSBundle bundleForClass:self.classForCoder] pathForResource:[NSString stringWithFormat:@"%d",_expression] ofType:@"caf"];
+    soundName = [NSString stringWithFormat:@"%d",_expression];
 }
-path = [path stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLHostAllowedCharacterSet]];
 
 [self audioDidFinish];
-self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL URLWithString:path] error:nil];
+self.audioPlayer = [self audioPlayerForSoundNamed:soundName];
 
 
     if (self.audioPlayer.duration) {
@@ -175,10 +187,7 @@ self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL URLWithSt
         }
     }
 
-    NSString *path = [[NSBundle bundleForClass:self.classForCoder] pathForResource:filename ofType:@"caf"];
-    path = [path stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLHostAllowedCharacterSet]];
-
-    self.audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL URLWithString:path] error:nil];
+    self.audioPlayer = [self audioPlayerForSoundNamed:filename];
 
     self.playingAuxiliarySound = YES;
     if (self.audioPlayer.duration) {

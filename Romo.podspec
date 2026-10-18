@@ -2,10 +2,10 @@ Pod::Spec.new do |spec|
   spec.name         = 'Romo'
   spec.summary      = 'Romo iOS SDK'
   spec.homepage     = 'https://github.com/Navideck/Romo-iOS-SDK'
-  spec.version      = '0.5.3'
+  spec.version      = '0.6.0'
   spec.authors      = { 'Navideck' => 'team@navideck.com' }
   spec.source       = { :git => 'https://github.com/Navideck/Romo-iOS-SDK', :tag => "Romo_v#{spec.version}" }
-  spec.ios.deployment_target = '6.0'
+  spec.ios.deployment_target = '15.5'
   spec.requires_arc = true
   spec.static_framework = true
   spec.license = { :file => 'LICENSE.md' }
@@ -28,22 +28,7 @@ Pod::Spec.new do |spec|
     sp.dependency 'Romo/RMShared'
   end
 
-  spec.subspec 'RMVision' do |sp|
-    sp.source_files = 'RMVision/Classes/**/*.{h,m,mm,pch}'
-    sp.exclude_files = ['RMVisionSample','RMVisionSampleTests']
-    sp.resource_bundle = { 'RMVision' => ['RMVision/Assets/**/*.*'] }
-    sp.dependency 'Romo/RMShared'
-    sp.dependency 'CocoaLumberjack'
-    sp.dependency 'GPUImage'
-    # spec.dependency 'NMSSH', '>=2.2.8'
-    sp.dependency 'OpenCV', '~> 2.0'
-  end
+  # RMVision is now the RomoVision pod (https://github.com/bwake2012/Romo-iOS-SDK-Vision)
 
   spec.default_subspec = "RMCore"
-
-  # Fix for "building for iOS Simulator, but linking in object file built for iOS" when doing pod trunk push
-  spec.pod_target_xcconfig = {
-    'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
-  }
-  spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 end

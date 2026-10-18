@@ -6,7 +6,7 @@
 </p>
 
 <p align="center" >
-<img src="https://img.shields.io/badge/platform-iOS%206,%207,%208,%209,%2010,%2011,%2012,%2013,%2014,%2015,%2016,%2017-blue.svg" alt="Platform: iOS 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17" /></p>
+<img src="https://img.shields.io/badge/platform-iOS%2015.5,%2016,%2017-blue.svg" alt="Platform: iOS 15.5, 16, 17" /></p>
 
 Romo SDK gives you the power to write your own software for Romo robots. After downloading the SDK, this guide will help you get rolling so you can start developing apps for Romo.
 
@@ -22,6 +22,8 @@ Control Romo's hardware using your own apps! Using **RMCore**, you can drive all
 
 #### RMVision
 **RMVision** allows you to use the iPhone's camera to allow Romo to see but also understand the world using computer vision.
+
+RMVision lives in its own repository, [Romo-iOS-SDK-Vision](https://github.com/bwake2012/Romo-iOS-SDK-Vision), so that apps that don't need it don't have to download OpenCV.
 
 ## Setting up a project
 You have multiple options:
@@ -45,14 +47,15 @@ on top of your Podfile.
 
 If you additionally need `RMVision` add
 ```ruby
-pod 'Romo/RMVision'
+pod 'RomoVision'
 ```
+This replaces the former `pod 'Romo/RMVision'`.
 
 A complete `PodFile` with all frameworks would look like this:
 
 ```ruby
 # Uncomment the next line to define a global platform for your project
-platform :ios, '6.0'
+platform :ios, '15.5'
 install! 'cocoapods', :disable_input_output_paths => true
 
 target 'My Cool Romo App' do
@@ -62,10 +65,21 @@ target 'My Cool Romo App' do
   # Pods for My Cool Romo App
   pod 'Romo'
   pod 'Romo/RMCharacter'
-  pod 'Romo/RMVision'
+  pod 'RomoVision'
   
 end
 ```
+
+### Swift Package Manager
+In Xcode, choose *File > Add Package Dependencies…*, enter `https://github.com/Navideck/Romo-iOS-SDK` and add the `RMCore` and/or `RMCharacter` libraries to your target. In a `Package.swift`:
+
+```swift
+.package(url: "https://github.com/Navideck/Romo-iOS-SDK", from: "0.6.0")
+```
+
+With Swift Package Manager, Swift code imports each library by name (`import RMCore`, `import RMCharacter`) instead of `import Romo`. ObjC code can keep using `#import <Romo/RMCore.h>`.
+
+For `RMVision`, add the [Romo-iOS-SDK-Vision](https://github.com/bwake2012/Romo-iOS-SDK-Vision) package. `RMWebSocketLogger` is currently only available through CocoaPods.
 
 ### Carthage
 Although not tested yet, the basic folder structure for Carthage is in place so it should theoretically already be working.
@@ -181,7 +195,9 @@ In your app's <code>Info.plist</code> add a new key with the text `Required back
 import Romo
 ```
 
-In case you don't use CocoaPods you need to import the  RMCore framework manually using a bridging header file `MyCoolRomoApp-Bridging-Header.h` with:
+If you're using Swift Package Manager, use `import RMCore` instead.
+
+In case you don't use CocoaPods or Swift Package Manager you need to import the  RMCore framework manually using a bridging header file `MyCoolRomoApp-Bridging-Header.h` with:
 ```Objc
 #import <Romo/RMCore.h>
 ```
@@ -358,7 +374,7 @@ Any Romo with either 30pin or lightning port. This includes Romo models 3A, 3B, 
 iPhone 3GS and above. iPhone SE (1st gen) & iPhone 12 mini fit like a glove. iPhone 6, 7 and 8 need some squeezing but fit just fine. iPhone X and iPhone 12 (non mini) are too big.
 
 ### Which iOS versions are compatible with the SDK?
-The latest SDK works from **iOS 6.0** up to **iOS 17**!
+The latest SDK works from **iOS 15.5** up to **iOS 17**!
 
 ### How did this come to be?
 Romotive, the company behind Romo, after shutting down were kind enough to open source their code stating:
