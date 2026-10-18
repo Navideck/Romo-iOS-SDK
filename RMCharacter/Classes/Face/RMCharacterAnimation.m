@@ -5,7 +5,7 @@
 #import "RMCharacterAnimation.h"
 #import "RMCharacter.h"
 #import <Romo/RMMath.h>
-#import <Romo/UIImage+Cache.h>
+#import "UIImage+Cache.h"
 
 typedef void (^BoolBlock)(BOOL);
 
@@ -207,8 +207,12 @@ typedef void (^BoolBlock)(BOOL);
             if (sprite) {
                 NSString* cropFile = [NSString stringWithFormat:@"%@_%d",prefix,index];
 
+#ifdef SWIFTPM_MODULE_BUNDLE
+                NSData* cropData = [[NSDataAsset alloc] initWithName:cropFile bundle:SWIFTPM_MODULE_BUNDLE].data;
+#else
                 NSBundle* bundle = [NSBundle mainBundle];
                 NSData* cropData = [NSData dataWithContentsOfFile:[bundle pathForResource:cropFile ofType:@"json"]];
+#endif
                 NSArray* crop = [NSJSONSerialization JSONObjectWithData:cropData options:0 error:nil][@"frames"];
                 _frameCount += crop.count;
                 [_crops addObject:crop];

@@ -5,7 +5,7 @@
 
 #import "RMCharacterEye.h"
 #import <Romo/RMMath.h>
-#import <Romo/UIImage+Cache.h>
+#import "UIImage+Cache.h"
 
 @interface RMCharacterEye () {
     BOOL _left;

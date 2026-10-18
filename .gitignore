@@ -36,3 +36,7 @@ Carthage/Build
 #
 Pods/
 .vscode/
+# Swift Package Manager
+.build/
+.swiftpm/
+/Package.resolved
