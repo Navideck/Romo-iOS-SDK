@@ -10,7 +10,7 @@
 #import "RMCharacterFaceEmotion.h"
 #import <Romo/RMMath.h>
 #import "RMCharacterColorFill.h"
-#import <Romo/UIImage+Cache.h>
+#import "UIImage+Cache.h"
 
 #define romoBackgroundBlue ([UIColor colorWithHue:0.5361 saturation:1.0 brightness:0.93 alpha:1.0])
 

@@ -2,6 +2,12 @@
 ---
 ## Version History
 
+### 0.6.0 (RC)
+#### New in this version
+- **SwiftPM**: Added Swift Package Manager support for `RMShared`, `RMCore` and `RMCharacter`. `RMVision` and `RMWebSocketLogger` remain CocoaPods-only
+- **POD**: Set minimum iOS version to 15.5
+- **README**: Added Swift Package Manager instructions
+
 ### 0.5.3 (RC)
 #### Fixed in this version
 - **RMVision**: Fix not locking camera before frame rate adjustment
